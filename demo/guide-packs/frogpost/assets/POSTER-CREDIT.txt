@@ -1,0 +1,11 @@
+nasa-earth-poster.jpg is a typographic credit card, not NASA footage.
+
+It credits the public NASA / NASA Johnson film
+“Ultra High Definition (4K) View of Planet Earth (2016)”
+https://www.youtube.com/watch?v=oFDeNcu3mnc
+The background wash is from this demo's own end still (assets/a4-outro.jpg),
+dimmed, not a frame of the NASA video.
+
+The live YouTube nocookie embed is used when it plays. In recordings, and
+when the embed is unavailable (for example YouTube Error 153 in headless
+Chrome), the demo shows this credited still instead of an error screen.

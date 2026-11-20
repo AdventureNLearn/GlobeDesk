@@ -1,0 +1,12 @@
+All sounds in this folder were generated for this local GlobeDesk demo with
+ffmpeg lavfi (sine, anoisesrc, filters). They are original, not copied from
+a commercial library, a song, or a paid pack.
+
+- ambience-ship.wav — brown-noise rumble + slow sub pulse (ship bed)
+- ui-click.wav, ui-blip.wav, hint-tick.wav — short UI tones
+- ui-boot.wav, sector-whoosh.wav — filtered noise sweeps
+- success-chime.wav, rank-up.wav — stacked sine chimes
+- telemetry-bed.wav — pre-recorded sound overlay used as local episode audio
+
+No third-party sample packs were used. Treat as CC0 / public-domain original
+for AdventureNLearn's local demo.

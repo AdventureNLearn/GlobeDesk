@@ -1,6 +1,13 @@
 # Open items
 
-Audit of what v0.3 shipped versus the v0.4 production desk, and what is still open.
+Audit of what has shipped, and what is still open.
+
+## Closed in v0.5.0
+
+- Interactive mission demo in `demo/`, with the frog as a swappable example guide pack.
+- Temporary voice lab off by default.
+- NASA embed fallback still and radio credits (links only; no song files in the repo).
+- `demo/` excluded from the Grok.me upload manifest so the kit stays in budget.
 
 ## Closed in v0.4.2
 

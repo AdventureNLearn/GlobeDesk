@@ -3,3 +3,9 @@ node_modules/
 .env.*
 *.webm
 *.local.json
+
+# Mission demo artifacts (the guide pack and source stay in demo/)
+demo/work/
+demo/*.mp4
+demo/short-v1/
+demo/shots/

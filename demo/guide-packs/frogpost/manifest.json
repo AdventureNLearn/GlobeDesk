@@ -1,0 +1,377 @@
+{
+  "id": "frogpost",
+  "title": "Frogpost guide (example)",
+  "version": "1.0",
+  "character": {
+    "shortName": "Guide",
+    "commsWho": "GUIDE \u00b7 MISSION CONTROL",
+    "commsTag": "COMMS",
+    "portrait": "assets/frog/idle.jpg",
+    "poses": {
+      "idle": "assets/frog/idle.jpg",
+      "talk": "assets/frog/talk.jpg",
+      "success": "assets/frog/thumbs-up.jpg",
+      "hint": "assets/frog/hint.jpg",
+      "salute": "assets/frog/salute.jpg"
+    }
+  },
+  "voice": {
+    "enabled": true,
+    "default": "hfc_male",
+    "name": "en_US-hfc_male-medium",
+    "note": "Example bank: Piper en_US-hfc_male-medium, clarity chain, natural pitch. Swap the files in this pack to use your own voice."
+  },
+  "voices": [
+    {
+      "id": "hfc_male",
+      "label": "US",
+      "name": "en_US-hfc_male-medium",
+      "dir": "assets/vo/"
+    },
+    {
+      "id": "alan",
+      "label": "British",
+      "name": "en_GB-alan-medium",
+      "dir": "assets/vo/alan/"
+    }
+  ],
+  "voiceDir": "assets/vo/",
+  "sfxDir": "assets/sfx/",
+  "assets": {
+    "startStill": "assets/a1-console.jpg",
+    "completeStill": "assets/a4-outro.jpg",
+    "coldOpen": "assets/v1-cold-open.mp4",
+    "portrait": "assets/frog/idle.jpg",
+    "telemetryBed": "assets/sfx/telemetry-bed.wav",
+    "mediaStill": "assets/a1-console.jpg",
+    "embedPoster": "assets/nasa-earth-poster.jpg"
+  },
+  "poseMap": {
+    "finale": "salute",
+    "debrief": "salute",
+    "success": "success",
+    "hint": "hint",
+    "default": "talk"
+  },
+  "lamps": {
+    "live": "#30A1C3",
+    "liveGlow": "#A3D8E0",
+    "clear": "#4DA151",
+    "hint": "#CE9E49",
+    "radio": "#D9A441",
+    "idle": "transparent"
+  },
+  "theme": {
+    "void": "#000408",
+    "console": "#091924",
+    "jacket": "#161B1E",
+    "space": "#030F18",
+    "green": "#4DA151",
+    "greenDim": "#447F45",
+    "greenLit": "#58A053",
+    "cyan": "#30A1C3",
+    "cyanMid": "#359FC8",
+    "cyanGlow": "#A3D8E0",
+    "earth": "#134F88",
+    "type": "#E8E8E8",
+    "gold": "#CE9E49",
+    "goldLit": "#E1AF4D",
+    "goldShadow": "#65421C",
+    "skin": "#3D582E",
+    "detectRed": "#4F0605"
+  },
+  "radio": {
+    "enabled": true,
+    "widgetTitle": "SHIP RADIO",
+    "recordCaption": "Cool Rock \u2014 Kevin MacLeod (incompetech.com) \u00b7 CC BY 4.0",
+    "unknown": "[UNKNOWN]",
+    "liveLabel": "live",
+    "volume": 0.42,
+    "duckVolume": 0.11,
+    "fadeMs": 700,
+    "stations": [
+      {
+        "id": "exclusive-ccr",
+        "name": "Exclusively Creedence Clearwater Revival",
+        "url": "https://streaming.exclusive.radio/er/creedence/icecast.audio",
+        "homepage": "https://play.exclusive.radio/",
+        "credit": "Exclusive Radio",
+        "kind": "ccr"
+      },
+      {
+        "id": "0n-classic-rock",
+        "name": "0 N \u2014 Classic Rock on Radio",
+        "url": "https://0n-classicrock.radionetz.de/0n-classicrock.aac",
+        "homepage": "https://www.0nradio.com/",
+        "credit": "0 N Radio",
+        "kind": "classic-rock",
+        "nowPlaying": {
+          "type": "icecast-status",
+          "url": "https://0n-classicrock.radionetz.de/status-json.xsl",
+          "mount": "classicrock"
+        }
+      },
+      {
+        "id": "somafm-seventies",
+        "name": "Left Coast 70s (SomaFM)",
+        "url": "https://ice2.somafm.com/seventies-128-mp3",
+        "homepage": "https://somafm.com/seventies/",
+        "credit": "SomaFM",
+        "kind": "classic-rock",
+        "nowPlaying": {
+          "type": "somafm",
+          "url": "https://somafm.com/songs/seventies.json"
+        }
+      }
+    ],
+    "recordBed": {
+      "title": "Cool Rock",
+      "artist": "Kevin MacLeod",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cool%20Rock.mp3",
+      "attribution": "\"Cool Rock\" by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0. https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "bootLines": [
+    "COMMS LINK \u2026\u2026\u2026\u2026\u2026\u2026 ONLINE",
+    "DESK KERNEL \u2026\u2026\u2026\u2026\u2026 WARM",
+    "TILE CACHE \u2026\u2026\u2026\u2026\u2026\u2026 STANDBY",
+    "GUIDE CHANNEL \u2026\u2026\u2026\u2026 OPEN",
+    "MISSION CLOCK \u2026\u2026\u2026\u2026 SET"
+  ],
+  "lines": {
+    "boot": {
+      "text": "Comms coming up. Desk is warming.",
+      "spoken": "Comms coming up. Desk is warming."
+    },
+    "start": {
+      "text": "GM frens. Desk is online. This is mission control. Ready when you are.",
+      "spoken": "G.M., frens. Desk is online. This is mission control. Ready when you are."
+    },
+    "coldopen": {
+      "text": "Strap in. We build \u2014 we don't just watch.",
+      "spoken": "Strap in. We build. We don't just watch."
+    },
+    "assist": {
+      "text": "Copy. I'll fly this one. Watch the desk.",
+      "spoken": "Copy. I'll fly this one. Watch the desk."
+    },
+    "finale": {
+      "text": "Mission complete. That's the whole desk, fren. Now go build.",
+      "spoken": "Mission complete. That's the whole desk, fren. Now go build."
+    },
+    "debrief": {
+      "text": "Debrief is on your screen. The desk is yours.",
+      "spoken": "Debrief is on your screen. The desk is yours."
+    }
+  },
+  "levels": {
+    "spin": {
+      "brief": {
+        "text": "Sector one. Spin that globe, fren. Feel the orbit.",
+        "spoken": "Sector one. Spin that globe, fren. Feel the orbit."
+      },
+      "hint": {
+        "text": "Drag the globe, or hit Show me and I'll take the helm.",
+        "spoken": "Drag the globe, or hit Show me and I'll take the helm."
+      },
+      "success": {
+        "text": "Nice work. Orbit badge unlocked.",
+        "spoken": "Nice work. Orbit badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: every story on this desk starts in orbit.",
+        "spoken": "Why it matters: every story on this desk starts in orbit."
+      }
+    },
+    "dive": {
+      "brief": {
+        "text": "Sector two. Take us down to the street. Watch the buildings rise. Terrain stays opt-in \u2014 we'll light it.",
+        "spoken": "Sector two. Take us down to the street. Watch the buildings rise. Terrain stays opt-in. We'll light it."
+      },
+      "hint": {
+        "text": "Show me will dive us in and turn terrain on. Give the tiles a moment to land.",
+        "spoken": "Show me will dive us in and turn terrain on. Give the tiles a moment to land."
+      },
+      "success": {
+        "text": "Streets are live. Terrain is on. Street-level badge is yours.",
+        "spoken": "Streets are live. Terrain is on. Street-level badge is yours."
+      },
+      "why": {
+        "text": "Why it matters: at street zoom the roads and 3D buildings carry the detail. Terrain is yours to enable.",
+        "spoken": "Why it matters: at street zoom the roads and 3D buildings carry the detail. Terrain is yours to enable."
+      }
+    },
+    "open": {
+      "brief": {
+        "text": "An episode is the show. Open one and the desk is yours to run.",
+        "spoken": "An episode is the show. Open one and the desk is yours to run."
+      },
+      "hint": {
+        "text": "Hit Show me to open the practice episode. You can also open a .globedesk file of your own.",
+        "spoken": "Hit Show me to open the practice episode. You can also open a GlobeDesk file of your own."
+      },
+      "success": {
+        "text": "Episode is on the desk. That's the show, fren.",
+        "spoken": "Episode is on the desk. That's the show, fren."
+      },
+      "why": {
+        "text": "Why it matters: GlobeDesk keeps the show as a local episode, not a locked cloud file.",
+        "spoken": "Why it matters: GlobeDesk keeps the show as a local episode, not a locked cloud file."
+      }
+    },
+    "edit": {
+      "brief": {
+        "text": "Change the title. Rewrite the card. Nothing fills in the unknowns for you.",
+        "spoken": "Change the title. Rewrite the card. Nothing fills in the unknowns for you."
+      },
+      "hint": {
+        "text": "Show me will retitle the episode and tighten the practice card.",
+        "spoken": "Show me will retitle the episode and tighten the practice card."
+      },
+      "success": {
+        "text": "Title and card are updated. You stayed in charge of every line.",
+        "spoken": "Title and card are updated. You stayed in charge of every line."
+      },
+      "why": {
+        "text": "Why it matters: unknown facts stay unknown. The desk will not invent them.",
+        "spoken": "Why it matters: unknown facts stay unknown. The desk will not invent them."
+      }
+    },
+    "pins": {
+      "brief": {
+        "text": "Drop a pin. Add a data layer for event sites \u2014 as reported, not invented.",
+        "spoken": "Drop a pin. Add a data layer for event sites, as reported, not invented."
+      },
+      "hint": {
+        "text": "Show me will plant a practice pin and light the mission-sites layer.",
+        "spoken": "Show me will plant a practice pin and light the mission-sites layer."
+      },
+      "success": {
+        "text": "Pin is down and the layer is live. Approximate only, fren.",
+        "spoken": "Pin is down and the layer is live. Approximate only, fren."
+      },
+      "why": {
+        "text": "Why it matters: pins and layers sit on the content layer. The base map stays its own.",
+        "spoken": "Why it matters: pins and layers sit on the content layer. The base map stays its own."
+      }
+    },
+    "media": {
+      "brief": {
+        "text": "Upload a still \u2014 local only. Set it as a card on the desk.",
+        "spoken": "Upload a still, local only. Set it as a card on the desk."
+      },
+      "hint": {
+        "text": "Show me will add a local console still and pin it as card media.",
+        "spoken": "Show me will add a local console still and pin it as card media."
+      },
+      "success": {
+        "text": "Media is on the card. It never left this device.",
+        "spoken": "Media is on the card. It never left this device."
+      },
+      "why": {
+        "text": "Why it matters: media stays on this device. Nothing is uploaded to a server.",
+        "spoken": "Why it matters: media stays on this device. Nothing is uploaded to a server."
+      }
+    },
+    "embed": {
+      "brief": {
+        "text": "Overlay your media, or embed a credited YouTube window. The globe stays the globe.",
+        "spoken": "Overlay your media, or embed a credited YouTube window. The globe stays the globe."
+      },
+      "hint": {
+        "text": "Show me will place a credited NASA Earth embed on the content layer.",
+        "spoken": "Show me will place a credited NASA Earth embed on the content layer."
+      },
+      "success": {
+        "text": "Overlay and embed are up. Credit travels with the clip.",
+        "spoken": "Overlay and embed are up. Credit travels with the clip."
+      },
+      "why": {
+        "text": "Why it matters: only allowlisted embeds, with credit required. The map is never replaced.",
+        "spoken": "Why it matters: only allowlisted embeds, with credit required. The map is never replaced."
+      }
+    },
+    "sound": {
+      "brief": {
+        "text": "Lay a sound under the story. A pre-recorded bed, mixed on the desk.",
+        "spoken": "Lay a sound under the story. A pre-recorded bed, mixed on the desk."
+      },
+      "hint": {
+        "text": "Show me will mix a short telemetry bed onto this story.",
+        "spoken": "Show me will mix a short telemetry bed onto this story."
+      },
+      "success": {
+        "text": "Sound overlay is in the mix.",
+        "spoken": "Sound overlay is in the mix."
+      },
+      "why": {
+        "text": "Why it matters: sound is timed to the episode, not baked into the map.",
+        "spoken": "Why it matters: sound is timed to the episode, not baked into the map."
+      }
+    },
+    "captions": {
+      "brief": {
+        "text": "Captions on, always, for this desk. And a readable view of every card.",
+        "spoken": "Captions on, always, for this desk. And a readable view of every card."
+      },
+      "hint": {
+        "text": "Show me will cue captions and open the readable view.",
+        "spoken": "Show me will cue captions and open the readable view."
+      },
+      "success": {
+        "text": "Captions and readable cards are up. Nobody gets left behind.",
+        "spoken": "Captions and readable cards are up. Nobody gets left behind."
+      },
+      "why": {
+        "text": "Why it matters: if you can't hear the VO, you can still follow the brief.",
+        "spoken": "Why it matters: if you can't hear the VO, you can still follow the brief."
+      }
+    },
+    "assist": {
+      "brief": {
+        "text": "Copy the prompt, paste JSON, or import a same-origin episode. The desk validates before it loads.",
+        "spoken": "Copy the prompt, paste JSON, or import a same-origin episode. The desk validates before it loads."
+      },
+      "hint": {
+        "text": "Show me will open the assist panel, paste a valid episode, and validate it.",
+        "spoken": "Show me will open the assist panel, paste a valid episode, and validate it."
+      },
+      "success": {
+        "text": "Prompt is on the panel and the JSON checked out. Clean import.",
+        "spoken": "Prompt is on the panel and the JSON checked out. Clean import."
+      },
+      "why": {
+        "text": "Why it matters: your assistant drafts. GlobeDesk checks the schema. Paid keys stay off.",
+        "spoken": "Why it matters: your assistant drafts. GlobeDesk checks the schema. Paid keys stay off."
+      }
+    },
+    "grokme": {
+      "brief": {
+        "text": "This is the Grok.me build kit \u2014 brief, prompts, and a file manifest. Rebuild the desk from the repo.",
+        "spoken": "This is the Grok.me build kit: brief, prompts, and a file manifest. Rebuild the desk from the repo."
+      },
+      "hint": {
+        "text": "Show me will open the kit from this repo. How Grok.me itself works is still marked unknown.",
+        "spoken": "Show me will open the kit from this repo. How Grok.me itself works is still marked unknown."
+      },
+      "success": {
+        "text": "Kit is open. That's the production app, not a throwaway demo.",
+        "spoken": "Kit is open. That's the production app, not a throwaway demo."
+      },
+      "why": {
+        "text": "Why it matters: the builder prompt and manifest are how someone rebuilds GlobeDesk on Grok.me.",
+        "spoken": "Why it matters: the builder prompt and manifest are how someone rebuilds GlobeDesk on Grok.me."
+      }
+    }
+  },
+  "embed": {
+    "url": "https://www.youtube-nocookie.com/embed/oFDeNcu3mnc",
+    "title": "Earth from the ISS",
+    "credit": "NASA / NASA Johnson \u2014 Ultra High Definition (4K) View of Planet Earth (2016)",
+    "page": "https://www.youtube.com/watch?v=oFDeNcu3mnc",
+    "poster": "assets/nasa-earth-poster.jpg"
+  },
+  "description": "Example guide pack shipped with the GlobeDesk mission demo. The frog, the voice, the script, the lamp colors, the radio stations and the theme all live here so you can edit or replace them. This is AdventureNLearn's example, not a locked character layer."
+}

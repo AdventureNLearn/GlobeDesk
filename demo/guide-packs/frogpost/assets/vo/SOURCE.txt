@@ -1,0 +1,11 @@
+Spoken lines for the full mission were synthesized with Piper,
+voice en_US-hfc_male-medium (https://huggingface.co/rhasspy/piper-voices).
+
+Clarity chain (2026-11-20): no rubberband pitch/tempo, no aecho/reverb,
+gentle presence EQ at 3 kHz (+1.5 dB), lowpass 10 kHz, loudnorm -17 LUFS
+(TP -2 dB, LRA 7) to avoid pumping. Output 44.1 kHz mono. Natural pitch
+is preserved. See tools/make-vo.py.
+
+The Onnx model is not stored in this folder — only the short demo WAVs.
+Exact voice-model license: see the piper-voices model card. [UNKNOWN]
+if a more specific dataset license applies.

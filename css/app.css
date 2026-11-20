@@ -57,8 +57,9 @@ textarea { min-height:80px; resize:vertical; }
 .segments i { position:absolute; top:0; bottom:0; width:2px; background:var(--hl); }
 .readable { max-height:150px; overflow:auto; }
 .readable .cap { font-size:18px; font-weight:700; }
-.tabs { display:flex; flex-wrap:wrap; gap:2px; padding:6px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg); z-index:2; }
-.tabs button { padding:4px 8px; font-size:12px; }
+.tabs { display:flex; flex-wrap:nowrap; gap:2px; padding:6px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg); z-index:2; overflow-x:auto; overflow-y:hidden; scrollbar-width:thin; }
+.tabs button { padding:4px 8px; font-size:12px; flex:0 0 auto; white-space:nowrap; }
+@media (max-width: 1360px) { .desk { grid-template-columns: 220px 1fr 300px; } }
 .inspector { padding:10px 12px; }
 .inspector label { display:block; margin:0 0 8px; font-size:12px; color:var(--muted); }
 .inspector label > input, .inspector label > select, .inspector label > textarea { margin-top:3px; color:var(--ink); }

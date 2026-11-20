@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",
@@ -11,13 +11,18 @@
   "files": [
     {
       "path": ".gitignore",
-      "size": 46,
-      "sha256": "383761a21aa7fcd25e7a7c6a4fe1e0caa45e65512176fd2cc873ad79b32aae32"
+      "size": 163,
+      "sha256": "f9a0cc45d2ab99813b962992d42aa6b98948ce899ef91d1b0d08ac13c47c9457"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 1925,
+      "sha256": "cdd6f0930dd2c3256db2b63c0de2ff25d8a9e6132cfa2d5235009e770e3a7ed7"
     },
     {
       "path": "GROK-ME-BUILD.md",
-      "size": 4303,
-      "sha256": "f00c824f54e455fe423c9c39a5df7fb1fd413c201efd7e52a3938512c7a4b543"
+      "size": 4384,
+      "sha256": "974b3ca24e66adcb5a41a636e9abd680ddc7d5834cea54ca0522303c026a8b2c"
     },
     {
       "path": "LICENSE",
@@ -26,13 +31,13 @@
     },
     {
       "path": "OPEN-ITEMS.md",
-      "size": 4593,
-      "sha256": "9599d879aae47c0058dc5ae2eb813982f9f81e39473d52bed86339b8080154e6"
+      "size": 4875,
+      "sha256": "5be01c24917e0f945f77e8ed834b3ee1254f330a491f455269d5d93dbd09c15b"
     },
     {
       "path": "README.md",
-      "size": 22377,
-      "sha256": "9768715d1f302e0ace69712cb554a348f11456cc2157c55bbf6d2ae97711c23d"
+      "size": 24459,
+      "sha256": "dca2a4d2bb07c35f7210a5bc904fc343efd6a7b2604d3f2fac7069c56b260a13"
     },
     {
       "path": "START-GLOBEDESK.bat",
@@ -47,12 +52,12 @@
     {
       "path": "WINDOWS-RUN.md",
       "size": 2082,
-      "sha256": "c5a6aa236f689be308027bf3961b6a5ce51743a88b77e9fa093ba1d654eb87a9"
+      "sha256": "150b41ac6b96c4004fe2791b1b0f67c83a61f2e638dc8042f441e471a616954d"
     },
     {
       "path": "css/app.css",
-      "size": 9972,
-      "sha256": "9e38021fec2892911a4799bc95a4f03d30c58ad952499704ed171f49e5e631fa"
+      "size": 10148,
+      "sha256": "78a19b6b8b269524b3af28b00d1664473bb885130405def03985f09484eb5239"
     },
     {
       "path": "data/land.js",
@@ -106,8 +111,8 @@
     },
     {
       "path": "grokme/FEATURES.txt",
-      "size": 925,
-      "sha256": "5780fcd7c443680819d19ff4753a5fd15ffe8518d1b4af39376c2b7fa553143c"
+      "size": 996,
+      "sha256": "39c73190e1c1d22d5ed8f45af37ec14df9e082cc590129376b4de436c389a95f"
     },
     {
       "path": "grokme/UPDATE-PROMPT.txt",
@@ -216,13 +221,13 @@
     },
     {
       "path": "js/ui.js",
-      "size": 52510,
-      "sha256": "c13764e655ae8d3113469944cd7e997fa8dac979c2b739506cdbc05958443258"
+      "size": 53045,
+      "sha256": "de9bf4bbd3f99ce43cec516f47a20524cfde0873ae80eb75e172a55c490826e1"
     },
     {
       "path": "js/version.js",
       "size": 749,
-      "sha256": "5c76139f11daa46afe91694caf24ae1e6f4792d9f09139dd1405f8740261047d"
+      "sha256": "f33d9b8d7ecc92b661d38979606c870a246320153e1cda94ae804f26bf170e00"
     },
     {
       "path": "js/zip.js",
@@ -232,7 +237,7 @@
     {
       "path": "package.json",
       "size": 421,
-      "sha256": "48a1b4173e98e05ae712a42a5c82a5899fd303934451f5d4ea80eb7b897f7c08"
+      "sha256": "5b25d3c06c4ac7d7af3b60145275195bd980420e516eb367232ce2b3a6ac9f85"
     },
     {
       "path": "schema/globedesk-story.schema.json",
@@ -271,8 +276,8 @@
     },
     {
       "path": "tools/make_grokme_manifest.py",
-      "size": 4491,
-      "sha256": "2dbd2bc43973435af36d8f2884aee88c3ace36ebd7a78342d5bfac5cc7820749"
+      "size": 4565,
+      "sha256": "861cbbf5e380266159b2a7c6e83c0fd587ecf2951cb86be604b6cb46a2a8339f"
     },
     {
       "path": "tools/serve.ps1",
@@ -281,8 +286,8 @@
     },
     {
       "path": "tools/serve.py",
-      "size": 2543,
-      "sha256": "3c92dc47fb471f9e583f915c979821ae68c4b0a288cf9a878a03d6fda9da9e1f"
+      "size": 2896,
+      "sha256": "571e1feea89f2341d797a63812e190b4e02aec5bd5d7bea95a24f7d2f6deb340"
     },
     {
       "path": "vendor/LICENSE-maplibre.txt",
@@ -301,7 +306,7 @@
     }
   ],
   "totals": {
-    "files": 58,
-    "bytes": 2393711
+    "files": 59,
+    "bytes": 2399407
   }
 }

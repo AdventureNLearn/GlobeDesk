@@ -13,6 +13,7 @@ Exactly the files listed in `grokme/manifest.json` (path, size, SHA-256), copied
 Left out of the kit (keep them in the git repo, do not upload unless you choose to):
 
 - `shots/` (smoke screenshots)
+- `demo/` (interactive mission tour and guide packs; over the 20 MiB kit budget)
 - `.git/`
 - zip artifacts outside this folder
 
@@ -58,7 +59,7 @@ Offline, the bundled Natural Earth globe still runs (`?base=offline` or Layers â
 
 ## GROK-ME-UPDATE
 
-1. Each copy can show its local version from `js/version.js` (`0.4.2`). A remote version-check host is [UNKNOWN] and disabled.
+1. Each copy can show its local version from `js/version.js` (`0.5.0`). A remote version-check host is [UNKNOWN] and disabled.
 2. When the owner has published a new release (an approved push), paste `grokme/UPDATE-PROMPT.txt` into the builder.
 3. The builder rebuilds from that release's `grokme/manifest.json` and changes nothing else.
 4. If the copy looks wrong, roll back with the builder's own history (how Grok.me keeps history is [UNKNOWN]).

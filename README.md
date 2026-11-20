@@ -4,7 +4,7 @@ A local, free newsdesk and video-editing studio built on a talking globe. You pi
 
 The bundled **Sample** episode is a removable template inspired by the public format of **@TheCriticalDri1** ("CTD's Geopolitics Update"). The default **CTD** look follows that public 47-second vertical cut as an example use case only. Claims in the sample are not verified and are not GlobeDesk's reporting. Start from **New blank** to make your own show.
 
-> **Status:** v0.4.2. Local only. No backend, no account, no required API key. Media you add stays on this device.
+> **Status:** v0.5.0. Local only. No backend, no account, no required API key. Media you add stays on this device.
 
 ## Risks / read first
 
@@ -48,6 +48,21 @@ python3 tools/make_grokme_manifest.py --check   # Grok.me kit manifest
 ```
 
 
+
+
+## Interactive mission demo
+
+The frog-guided mission under [`demo/`](demo/) is **AdventureNLearn’s example tour** of the desk. The frog, the voice, the script, the lamps, the radio and the theme all live in a swappable **guide pack** (`demo/guide-packs/frogpost/`). Any user can edit that pack or load their own — see `demo/guide-packs/README.md`.
+
+Run it from this repository:
+
+```bash
+python3 demo/tools/serve.py          # http://127.0.0.1:8765/
+```
+
+The temporary voice lab is **off** in production (`tempVoiceLab.enabled` in `demo/js/config.js`). Live internet radio, when you turn it on, is streamed from the station — this repo does not vendor song files. Share-video recordings mix a credited CC BY 4.0 bed (“Cool Rock” by Kevin MacLeod, incompetech.com) under the boot and debrief; the widget shows that credit. The MP3 is kept out of the repo.
+
+The demo folder is **not** part of the Grok.me upload kit (it is over the kit’s 20 MiB budget, mostly voice WAVs). Clone the repo to run it locally.
 
 ## Base map and user content
 
@@ -172,7 +187,11 @@ Keys are typed into **Optional paid** and stored **only in this browser's `local
 - **OpenFreeMap** © OpenMapTiles, data © OpenStreetMap contributors (ODbL). The public tiles are free, need no key, and are provided as-is (see [OpenFreeMap terms](https://openfreemap.org/tos/)). Attribution is required: OpenFreeMap, OpenMapTiles, and OpenStreetMap contributors. MapLibre shows this on the map; it is also listed in the Layers tab.
 - **Terrain**: Tilezen/Mapzen terrain tiles on AWS Open Data (Terrarium). The upstream sources require credit; the canonical list is the [Tilezen joerd attribution notes](https://github.com/tilezen/joerd/blob/master/docs/attribution.md).
 - **NASA GIBS** Blue Marble imagery.
-- Credits are shown on the map (the attribution control) and in the Layers tab.
+- **NASA / NASA Johnson** — [Ultra High Definition (4K) View of Planet Earth (2016)](https://www.youtube.com/watch?v=oFDeNcu3mnc), used as an allowlisted example embed in the mission demo. A typographic credit still is shown when the live embed cannot play.
+- **Live radio stations** in the mission demo (links only; no song files are in this repository): [Exclusive Radio — Exclusively Creedence Clearwater Revival](https://play.exclusive.radio/), [0 N Radio — Classic Rock](https://www.0nradio.com/), [SomaFM Left Coast 70s](https://somafm.com/seventies/).
+- **Recording bed** (share videos only; the MP3 is not in this repository): “Cool Rock” by Kevin MacLeod, [incompetech.com](https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cool%20Rock.mp3), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- **Piper** example voices in the frog guide pack. Models are not stored in the tree. Dataset licenses: [UNKNOWN] beyond the piper-voices model card.
+- Credits are shown on the map (the attribution control) and in the Layers tab. Demo radio and embed credits also appear on the guide pack and in `demo/CREDITS.md`.
 
 ## Roadmap
 

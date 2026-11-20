@@ -1,0 +1,8 @@
+These fonts are bundled for this local demo only.
+
+- Orbitron (variable) — Copyright The Orbitron Project Authors
+- Rajdhani (Regular, Medium, SemiBold, Bold) — Copyright Indian Type Foundry
+- Cinzel (variable) — Copyright The Cinzel Project Authors
+
+All three are SIL Open Font License, Version 1.1, as distributed with
+Google Fonts. The full OFL text is at https://scripts.sil.org/OFL

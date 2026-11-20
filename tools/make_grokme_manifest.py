@@ -16,7 +16,7 @@ MANIFEST = ROOT / "grokme" / "manifest.json"
 TOTAL = 20 * 1024 * 1024
 PER = 5 * 1024 * 1024
 MAX_FILES = 600
-SKIP_DIRS = {".git", "shots", "node_modules"}
+SKIP_DIRS = {".git", "shots", "node_modules", "demo"}
 SKIP_NAMES = {".DS_Store"}
 
 
@@ -96,7 +96,7 @@ def write() -> list[dict]:
     errs = budget(rows)
     payload = {
         "name": "GlobeDesk",
-        "version": "0.4.2",
+        "version": json.loads((ROOT / "package.json").read_text()).get("version") or "0.5.0",
         "entry": "index.html",
         "limits": {
             "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",

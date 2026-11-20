@@ -1,0 +1,312 @@
+{
+  "id": "template",
+  "title": "Blank guide template",
+  "version": "1.0",
+  "description": "A minimal starting pack. Swap the portrait, write your own lines, add a voice bank, and point config.guidePack at this folder name.",
+  "character": {
+    "shortName": "Guide",
+    "commsWho": "GUIDE \u00b7 YOUR NAME",
+    "commsTag": "COMMS",
+    "portrait": "assets/portrait.jpg",
+    "poses": {
+      "idle": "assets/idle.jpg",
+      "talk": "assets/talk.jpg",
+      "success": "assets/success.jpg",
+      "hint": "assets/hint.jpg",
+      "salute": "assets/salute.jpg"
+    }
+  },
+  "voice": {
+    "enabled": false,
+    "default": null,
+    "name": "",
+    "note": "Add WAV files and set voices[] to enable narration."
+  },
+  "voices": [],
+  "voiceDir": "assets/vo/",
+  "sfxDir": "",
+  "assets": {
+    "startStill": "",
+    "completeStill": "",
+    "coldOpen": "",
+    "portrait": "assets/portrait.jpg",
+    "telemetryBed": "",
+    "mediaStill": "",
+    "embedPoster": ""
+  },
+  "poseMap": {
+    "finale": "salute",
+    "debrief": "salute",
+    "success": "success",
+    "hint": "hint",
+    "default": "talk"
+  },
+  "lamps": {
+    "live": "#30A1C3",
+    "liveGlow": "#A3D8E0",
+    "clear": "#4DA151",
+    "hint": "#CE9E49",
+    "radio": "#D9A441",
+    "idle": "transparent"
+  },
+  "theme": {
+    "void": "#000408",
+    "console": "#091924",
+    "jacket": "#161B1E",
+    "space": "#030F18",
+    "green": "#4DA151",
+    "greenDim": "#447F45",
+    "greenLit": "#58A053",
+    "cyan": "#30A1C3",
+    "cyanMid": "#359FC8",
+    "cyanGlow": "#A3D8E0",
+    "earth": "#134F88",
+    "type": "#E8E8E8",
+    "gold": "#CE9E49",
+    "goldLit": "#E1AF4D",
+    "goldShadow": "#65421C",
+    "skin": "#3D582E",
+    "detectRed": "#4F0605"
+  },
+  "radio": {
+    "enabled": false,
+    "stations": []
+  },
+  "bootLines": [
+    "COMMS LINK \u2026\u2026\u2026\u2026\u2026\u2026 OPEN",
+    "GUIDE PACK \u2026\u2026\u2026\u2026\u2026\u2026 TEMPLATE"
+  ],
+  "lines": {
+    "boot": {
+      "text": "Your guide pack is loaded. Edit these lines.",
+      "spoken": "Your guide pack is loaded. Edit these lines."
+    },
+    "start": {
+      "text": "Desk is online. This is your guide. Ready when you are.",
+      "spoken": "Desk is online. This is your guide. Ready when you are."
+    },
+    "coldopen": {
+      "text": "Strap in. We build \u2014 we don't just watch.",
+      "spoken": "Strap in. We build. We don't just watch."
+    },
+    "assist": {
+      "text": "Copy. I'll fly this one.",
+      "spoken": "Copy. I'll fly this one."
+    },
+    "finale": {
+      "text": "Mission complete. The desk is yours.",
+      "spoken": "Mission complete. The desk is yours."
+    },
+    "debrief": {
+      "text": "Debrief is on your screen.",
+      "spoken": "Debrief is on your screen."
+    }
+  },
+  "levels": {
+    "spin": {
+      "brief": {
+        "text": "This is the spin brief. Rewrite it in your pack.",
+        "spoken": "This is the spin brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    },
+    "dive": {
+      "brief": {
+        "text": "This is the dive brief. Rewrite it in your pack.",
+        "spoken": "This is the dive brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    },
+    "open": {
+      "brief": {
+        "text": "This is the open brief. Rewrite it in your pack.",
+        "spoken": "This is the open brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    },
+    "edit": {
+      "brief": {
+        "text": "This is the edit brief. Rewrite it in your pack.",
+        "spoken": "This is the edit brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    },
+    "pins": {
+      "brief": {
+        "text": "This is the pins brief. Rewrite it in your pack.",
+        "spoken": "This is the pins brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    },
+    "media": {
+      "brief": {
+        "text": "This is the media brief. Rewrite it in your pack.",
+        "spoken": "This is the media brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    },
+    "embed": {
+      "brief": {
+        "text": "This is the embed brief. Rewrite it in your pack.",
+        "spoken": "This is the embed brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    },
+    "sound": {
+      "brief": {
+        "text": "This is the sound brief. Rewrite it in your pack.",
+        "spoken": "This is the sound brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    },
+    "captions": {
+      "brief": {
+        "text": "This is the captions brief. Rewrite it in your pack.",
+        "spoken": "This is the captions brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    },
+    "assist": {
+      "brief": {
+        "text": "This is the assist brief. Rewrite it in your pack.",
+        "spoken": "This is the assist brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    },
+    "grokme": {
+      "brief": {
+        "text": "This is the grokme brief. Rewrite it in your pack.",
+        "spoken": "This is the grokme brief. Rewrite it in your pack."
+      },
+      "hint": {
+        "text": "Hit Show me if you want a hand.",
+        "spoken": "Hit Show me if you want a hand."
+      },
+      "success": {
+        "text": "Nice work. Badge unlocked.",
+        "spoken": "Nice work. Badge unlocked."
+      },
+      "why": {
+        "text": "Why it matters: rewrite this line for your guide.",
+        "spoken": "Why it matters: rewrite this line for your guide."
+      }
+    }
+  },
+  "embed": {
+    "url": "https://www.youtube-nocookie.com/embed/oFDeNcu3mnc",
+    "title": "Earth from the ISS",
+    "credit": "NASA / NASA Johnson \u2014 Ultra High Definition (4K) View of Planet Earth (2016)",
+    "page": "https://www.youtube.com/watch?v=oFDeNcu3mnc",
+    "poster": ""
+  }
+}

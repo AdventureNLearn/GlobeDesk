@@ -1,0 +1,198 @@
+{
+  "schema": "globedesk.episode/2",
+  "id": "ep-mwpemk5v-1",
+  "show": "GlobeDesk Mission",
+  "title": "Desk Online — Mission 01",
+  "date": "2026-11-20",
+  "lede": "A practice episode for the desk. Locations are approximate sample cities. No news claims are made.",
+  "cta": "Build on your own desk.",
+  "links": [
+    {
+      "label": "AdventureNLearn",
+      "url": "https://x.com/AdventureNLearn"
+    }
+  ],
+  "demo": true,
+  "sample": false,
+  "look": {
+    "label": "CTD (default) — header, citation boxes, bold captions, no music",
+    "theme": "ctd",
+    "header": true,
+    "headerBadge": "NOW COVERING",
+    "headerHeightPct": 15,
+    "citations": true,
+    "captionsOn": true,
+    "captionStyle": "shadow",
+    "captionSize": "large",
+    "captionLines": 2,
+    "captionZonePct": 15,
+    "lowerThird": false,
+    "ticker": false,
+    "music": false,
+    "coldOpen": true,
+    "shotSec": 8,
+    "palette": {
+      "bg": "#151618",
+      "ink": "#ffffff",
+      "accent": "#e0242f",
+      "highlight": "#ff8a1f",
+      "panel": "rgba(70,72,76,0.62)",
+      "outroBg": "#0b1530"
+    },
+    "map": {
+      "base": "sat-hybrid",
+      "softBorders": true,
+      "highlightGlow": true,
+      "countryLabels": "flat-white"
+    },
+    "safeArea": true
+  },
+  "handle": "@AdventureNLearn",
+  "outro": {
+    "enabled": true,
+    "durationSec": 5,
+    "line1": "GlobeDesk by AdventureNLearn",
+    "link": "https://github.com/AdventureNLearn/GlobeDesk",
+    "handle": "@AdventureNLearn",
+    "showXLogo": true
+  },
+  "output": {
+    "aspect": "16:9",
+    "fps": 30
+  },
+  "stories": [
+    {
+      "id": "story-mwpemk5w-2",
+      "slug": "street-practice",
+      "title": "Street-level practice",
+      "durationSec": 32,
+      "location": {
+        "name": "Midtown Manhattan (sample city, approximate)",
+        "lat": 40.758,
+        "lon": -73.9855,
+        "precision": "approximate",
+        "verified": false,
+        "note": "demo city, approximate"
+      },
+      "camera": [],
+      "cards": [
+        {
+          "id": "card-mwpemk5w-3",
+          "kind": "topic",
+          "title": "Practice card",
+          "body": "A topic card on the globe. Facts that are not known stay [UNKNOWN].",
+          "why": "Practice only. This is not a news claim.",
+          "facts": [
+            {
+              "label": "Claim status",
+              "value": "Practice card; not a news claim"
+            },
+            {
+              "label": "Exact site",
+              "value": "[UNKNOWN]"
+            },
+            {
+              "label": "Precision",
+              "value": "approximate city center"
+            }
+          ],
+          "sourceIds": [],
+          "pin": null,
+          "at": 0,
+          "dur": 32,
+          "position": "right",
+          "verified": false
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-mwpemk5w-4",
+          "label": "Demo structure",
+          "url": "",
+          "status": "unverified",
+          "note": "Practice episode. No primary news source."
+        }
+      ],
+      "script": "This is a practice story on the desk. The pin is an approximate city center, not a precise address.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 13.47,
+          "text": "This is a practice story on the desk."
+        },
+        {
+          "start": 13.47,
+          "end": 32,
+          "text": "The pin is an approximate city center, not a precise address."
+        }
+      ],
+      "summary": "Practice pin at an approximate city center. Not a news claim.",
+      "date": "",
+      "credit": "AdventureNLearn",
+      "creditUrl": "",
+      "asReported": true,
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "USA",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    }
+  ],
+  "eventLayers": [
+    {
+      "id": "evl-mwpemk5w-1",
+      "name": "Mission sites (demo)",
+      "color": "#30A1C3",
+      "icon": "●",
+      "visible": true,
+      "labels": true,
+      "styleByCategory": true,
+      "scope": "all",
+      "note": "Practice points only. Approximate.",
+      "features": [
+        {
+          "type": "Feature",
+          "id": "ev-mwpemk5w-2",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -73.9855,
+              40.758
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "Midtown practice pin",
+            "eventTime": "",
+            "eventEnd": "",
+            "timeApprox": true,
+            "datePrecision": "unknown",
+            "category": "other",
+            "verification": "not verified",
+            "sources": [],
+            "citation": {
+              "type": "[UNKNOWN]",
+              "date": "[UNKNOWN]",
+              "credit": "[UNKNOWN]",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "Approximate city center for the mission demo.",
+            "precisionLabel": "Precision: approximate city center, not an event fix",
+            "radiusKm": null,
+            "cardId": null,
+            "storyId": null,
+            "example": true
+          }
+        }
+      ]
+    }
+  ],
+  "mediaBin": []
+}

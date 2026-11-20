@@ -1,0 +1,13 @@
+Frog comms poses for the GlobeDesk demo. Same original character as
+assets/frog-portrait.jpg and assets/a1-console.jpg.
+
+  idle.jpg       — existing portrait (copy)
+  talk.jpg       — mid-sentence, mouth open, cyan console glow
+  thumbs-up.jpg  — level-clear success
+  hint.jpg       — curious head tilt, pointing
+  salute.jpg     — mission-complete salute
+
+Palette: void #000408 / #091924, jacket #161B1E, green #4DA151,
+cyan #30A1C3 / #A3D8E0, sparing gold #CE9E49.
+
+Generated locally as stills for this box-only demo. Not published.

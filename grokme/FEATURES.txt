@@ -11,3 +11,4 @@
 - Autosave; .globedesk project pack; .globedesk.json; local WebM at 16:9 or 9:16
 - CSP, sanitizer, https-only links, credit required for others' work and embeds
 - Optional paid MapTiler / voice / AI off by default
+- Interactive mission demo (demo/) with a swappable example guide pack

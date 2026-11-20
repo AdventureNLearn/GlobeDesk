@@ -591,16 +591,34 @@
 
   // ---------- Aspect / stage sizing ----------
   function applyAspect(a) {
-    S.episode.output.aspect = a;
-    $("asp169").classList.toggle("on", a === "16:9"); $("asp916").classList.toggle("on", a === "9:16");
-    const wrap = $("stageWrap"), stg = $("stage"), r = wrap.getBoundingClientRect();
-    const ar = a === "9:16" ? 9 / 16 : 16 / 9;
-    let w = r.width - 24, h = w / ar;
-    if (h > r.height - 24) { h = r.height - 24; w = h * ar; }
-    stg.style.width = `${Math.floor(w)}px`; stg.style.height = `${Math.floor(h)}px`; stg.dataset.aspect = a;
-    const z = GD.themes.SAFE[a];
-    stg.style.setProperty("--safe-top", z.top * 100 + "%"); stg.style.setProperty("--safe-bottom", z.bottom * 100 + "%"); stg.style.setProperty("--safe-side", z.side * 100 + "%");
-    if (GD.globe.st.map) GD.globe.st.map.resize();
+    a = a || "16:9";
+    if (S.episode && S.episode.output) S.episode.output.aspect = a;
+    const asp169 = $("asp169"), asp916 = $("asp916");
+    if (asp169) asp169.classList.toggle("on", a === "16:9");
+    if (asp916) asp916.classList.toggle("on", a === "9:16");
+    const wrap = $("stageWrap"), stg = $("stage");
+    if (!wrap || !stg) return;
+    const kiosk = /(?:^|\s)kiosk-/.test(document.documentElement.className);
+    if (!kiosk) {
+      const r = wrap.getBoundingClientRect();
+      const ar = a === "9:16" ? 9 / 16 : 16 / 9;
+      let w = r.width - 24, h = w / ar;
+      if (h > r.height - 24) { h = r.height - 24; w = h * ar; }
+      if (w < 16) w = 16;
+      if (h < 16) h = 16;
+      stg.style.width = `${Math.floor(w)}px`; stg.style.height = `${Math.floor(h)}px`;
+    } else {
+      stg.style.width = "";
+      stg.style.height = "";
+    }
+    stg.dataset.aspect = a;
+    const z = (GD.themes && GD.themes.SAFE && (GD.themes.SAFE[a] || GD.themes.SAFE["16:9"])) || null;
+    if (z) {
+      stg.style.setProperty("--safe-top", z.top * 100 + "%");
+      stg.style.setProperty("--safe-bottom", z.bottom * 100 + "%");
+      stg.style.setProperty("--safe-side", z.side * 100 + "%");
+    }
+    if (GD.globe && GD.globe.st && GD.globe.st.map) GD.globe.st.map.resize();
     renderOverlays();
   }
 

@@ -1,0 +1,9 @@
+British voice bank for the GlobeDesk frog mission.
+
+Voice: Piper en_GB-alan-medium
+Clarity chain (same as the US bank, 2026-11-20):
+  no rubberband, no aecho, highpass 80 Hz, light 3 kHz presence,
+  lowpass 10 kHz, loudnorm -17 LUFS (TP -2, LRA 7), 44.1 kHz mono.
+  Natural pitch is preserved.
+Rendered locally with tools/make-vo-alan.py
+Free tools only. Not published. Exact Piper dataset license: [UNKNOWN].

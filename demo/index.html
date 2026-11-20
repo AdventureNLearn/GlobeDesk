@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>GlobeDesk — Mission</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%227%22 fill=%22%234DA151%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+  <div class="parallax" aria-hidden="true"></div>
+
+  <div id="boot">
+    <p class="boot-kicker">AdventureNLearn · GlobeDesk</p>
+    <ol class="boot-lines" id="bootLines"></ol>
+    <div class="boot-bar"><span id="bootBar"></span></div>
+  </div>
+
+  <div id="app" class="app">
+    <header class="mission-bar" id="missionBar">
+      <span class="brand-mark">GLOBEDESK</span>
+      <span class="sep">|</span>
+      <span class="lvl" id="lvlLabel">MISSION STANDBY</span>
+      <span class="rank" id="rankLabel">RECRUIT</span>
+      <span class="xp" id="xpLabel">XP 0000</span>
+      <span class="badges" id="badgeRow" aria-label="Badges"></span>
+      <span class="obj-slot empty" id="objective"></span>
+      <span class="sep">|</span>
+      <span class="studio">AdventureNLearn</span>
+    </header>
+
+    <div class="viewport">
+      <iframe id="desk" title="GlobeDesk" src="globedesk/index.html?blank=1&amp;base=sat-hybrid" allow="autoplay"></iframe>
+
+      <section id="screen-start" class="screen" aria-label="Start screen">
+        <div class="screen-dim"></div>
+        <div class="start-copy">
+          <p class="kicker">AdventureNLearn</p>
+          <h1 class="title-gold">GlobeDesk</h1>
+          <p class="sub">Full mission</p>
+          <button type="button" id="btnBegin">Begin mission</button>
+        </div>
+      </section>
+
+      <section id="screen-cold" class="screen hidden" aria-label="Cold open">
+        <video id="v1" playsinline preload="auto"></video>
+      </section>
+
+      <section id="screen-complete" class="screen hidden" aria-label="Mission complete">
+        <div class="screen-dim"></div>
+        <div class="complete-copy">
+          <p class="kicker">Mission complete</p>
+          <h2 class="title-gold" style="font-size:52px">GlobeDesk</h2>
+          <p class="tag" id="completeTag"></p>
+        </div>
+        <div id="debrief" aria-label="Mission debrief"></div>
+      </section>
+
+      <div id="wipe" aria-hidden="true"></div>
+      <div id="sector" aria-hidden="true">
+        <p class="sec-id" id="sectorId"></p>
+        <h2 id="sectorTitle"></h2>
+      </div>
+
+      <div class="hud-frame" aria-hidden="true"></div>
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="scanlines" aria-hidden="true"></div>
+
+      <div class="rail-left" id="railLeft">
+      <aside id="log" aria-label="Mission log">
+        <h3>Mission log</h3>
+        <ol id="logList"></ol>
+      </aside>
+
+      <aside id="shipRadio" class="ship-radio standby" aria-label="Ship radio">
+      <header>
+        <span class="radio-lamp" id="radioLamp" aria-hidden="true"></span>
+        <h2>SHIP RADIO</h2>
+        <span class="radio-status" id="radioStatus">OFF</span>
+        <button type="button" id="radioPower" aria-pressed="false" title="Turn ship radio on">PWR</button>
+      </header>
+      <div class="radio-body">
+        <div class="radio-dial" id="radioDial" aria-hidden="true"><span></span></div>
+        <div class="radio-meta">
+          <p class="radio-name" id="radioName">SHIP RADIO</p>
+          <p class="radio-now" id="radioNow">STANDBY</p>
+          <a class="radio-credit" id="radioCredit" href="#" target="_blank" rel="noopener noreferrer">Station</a>
+        </div>
+      </div>
+      <label class="radio-vol-row">
+        <span>VOL</span>
+        <input id="radioVol" type="range" min="0" max="1" step="0.01" value="0.42">
+      </label>
+      <p class="radio-caption" id="radioCaption" hidden>live radio plays here</p>
+    </aside>
+
+      <aside class="comms" id="comms" aria-label="Guide comms">
+        <div class="portrait-wrap" id="portraitWrap">
+          <img id="frog" alt="GlobeDesk frog guide at the console">
+          <div class="blink" id="blink" aria-hidden="true"></div>
+          <div class="glow" aria-hidden="true"></div>
+          <span class="comms-tag" id="commsTag">COMMS</span>
+          <span class="comms-legend" id="commsLegend" hidden>COMMS LIVE</span>
+        </div>
+        <div class="bubble">
+          <div class="who">GUIDE · MISSION CONTROL</div>
+          <p id="speech" aria-live="polite"></p>
+        </div>
+      </aside>
+      </div>
+
+      <div class="caption" id="caption" aria-live="polite"></div>
+
+      <div id="kitBackdrop" class="kit-backdrop" hidden></div>
+      <section id="kit" aria-label="Grok.me build kit"></section>
+    </div>
+
+    <footer class="lower-third">
+      <span class="lt-mission" id="ltMission">STANDBY</span>
+      <span class="lt-green">GLOBEDESK</span>
+      <span class="dash">—</span>
+      <span class="lt-cyan">DESK ONLINE</span>
+      <span class="lt-status" id="linkStatus">LINK: STABLE</span>
+    </footer>
+
+
+    <aside id="voiceLab" class="voice-lab" hidden aria-label="Temporary voice lab">
+      <header>
+        <span class="lab-kicker">TEMPORARY</span>
+        <h2>Voice lab</h2>
+      </header>
+      <p class="lab-help">For trying the British desk voice and live pitch. Hide by setting <code>tempVoiceLab.enabled</code> to <code>false</code> in <code>js/config.js</code>.</p>
+      <label>
+        <span>Voice</span>
+        <span class="lab-ends"><em>US</em><input id="labVoice" type="range" min="0" max="1" step="1" value="0"><em>British</em></span>
+        <strong id="labVoiceLabel">US</strong>
+      </label>
+      <label>
+        <span>Pitch</span>
+        <input id="labPitch" type="range" min="-6" max="6" step="0.5" value="0">
+        <strong id="labPitchLabel">0.0 st</strong>
+      </label>
+      <label>
+        <span>Speed</span>
+        <input id="labSpeed" type="range" min="0.7" max="1.3" step="0.05" value="1">
+        <strong id="labSpeedLabel">1.00×</strong>
+      </label>
+      <p class="lab-note">Pitch and speed are live on the current line. Voice switches on the next line. Native playbackRate cannot split pitch from speed, so both sliders share one tape-style rate.</p>
+      <button type="button" id="labPreview">Preview line</button>
+    </aside>
+
+
+    <div class="controls">
+      <button type="button" id="btnHint" disabled>Hint</button>
+      <button type="button" id="btnAssist" disabled>Show me</button>
+      <button type="button" id="btnContinue" disabled>Continue</button>
+      <button type="button" id="btnSkip" title="Skip this beat">Skip</button>
+      <button type="button" id="btnMute" aria-pressed="false" title="Mute voice and bed. Captions stay on.">Mute</button>
+      <button type="button" id="btnReplay" title="Replay from the start">Replay</button>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/guidepack.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/radio.js"></script>
+  <script src="js/voicelab.js"></script>
+  <script src="js/frog.js"></script>
+  <script src="js/desk.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

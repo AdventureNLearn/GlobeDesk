@@ -3,7 +3,7 @@
 (function () {
   "use strict";
   const GD = (window.GD = window.GD || {});
-  const APP = "0.4.2";
+  const APP = "0.5.0";
   // Intended post-release check URL is not confirmed. Do not invent a host.
   const URL = null; // [UNKNOWN]
 
