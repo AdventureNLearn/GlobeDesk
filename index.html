@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com; connect-src 'self' https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com; font-src 'self' data: https://tiles.openfreemap.org; media-src 'self' blob: data:; frame-src https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <title>GlobeDesk — globe newsdesk studio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%227%22 fill=%22%23ff8a1f%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">◍</span> GlobeDesk <span class="pill">local • free</span></div>
+    <input id="epTitle" class="ep-title" aria-label="Episode title" placeholder="Episode title">
+    <div class="tools">
+      <button id="btnNew" title="New blank episode">New blank</button>
+      <button id="btnDemo" title="Load the removable sample episode">Sample</button>
+      <label class="btn">Open<input id="fileOpen" type="file" accept=".globedesk,.globedesk.json,.gobedesk.json,.json,application/json,application/zip" hidden></label>
+      <button id="btnSave" title="Episode JSON without media">Save JSON</button>
+      <button id="btnSaveProject" title="Project pack: JSON plus local media">Save project</button>
+      <button id="btnVtt">VTT</button>
+      <button id="btnSrt">SRT</button>
+      <div class="seg" role="group" aria-label="Output format">
+        <button id="asp169" data-aspect="16:9">16:9</button><button id="asp916" data-aspect="9:16">9:16</button>
+      </div>
+      <button id="btnRecord" class="rec">● Record WebM</button>
+      <button id="btnSettings">Optional paid</button>
+    </div>
+  </header>
+
+  <main class="desk">
+    <aside class="col left">
+      <section class="panel" id="rundownPanel">
+        <h2>Rundown <button id="addStory" class="mini">+ story</button></h2>
+        <ol id="rundown" class="rundown"></ol>
+      </section>
+      <section class="panel" id="binPanel">
+        <h2>Media bin</h2>
+        <div id="drop" class="drop" tabindex="0">Drop audio, video or images here<br><span class="muted small">Local files only. They stay on this device and are never uploaded to a server.</span>
+          <label class="btn small">Browse<input id="fileMedia" type="file" multiple accept="audio/*,video/*,image/*,.vtt,.srt" hidden></label>
+        </div>
+        <ul id="bin" class="bin"></ul>
+      </section>
+    </aside>
+
+    <section class="col center">
+      <div id="stageWrap" class="stage-wrap">
+        <div id="stage" class="stage" data-aspect="16:9">
+          <div id="map" class="map"></div>
+          <div id="mediaLayer" class="media-layer"></div>
+          <div id="contentLayer" class="content-layer" aria-label="User content layer"></div>
+          <canvas id="ov" class="ov" aria-hidden="true"></canvas>
+          <div id="gdHits" class="gd-hits"></div>
+          <div id="safe" class="safe" aria-hidden="true"><div class="safe-top"></div><div class="safe-bottom"></div><div class="safe-side l"></div><div class="safe-side r"></div></div>
+          <div id="gdFull" class="gd-full" hidden></div>
+        </div>
+      </div>
+      <div class="transport">
+        <button id="btnPlay" class="play" aria-label="Play">▶</button>
+        <span id="time" class="time">0:00 / 0:00</span>
+        <div class="scrub-wrap">
+          <div id="segments" class="segments"></div>
+          <input id="scrub" type="range" min="0" max="100" step="0.05" value="0" aria-label="Episode position">
+        </div>
+        <label class="small"><input id="browserVoice" type="checkbox"> Browser voice (free preview)</label>
+        <label class="small"><input id="showSafe" type="checkbox" checked> Safe zones</label>
+      </div>
+      <section class="panel readable" aria-live="polite" aria-label="Readable view of cards and captions">
+        <h2>Readable view <span class="muted small">(for hard-of-hearing viewers and screen readers)</span></h2>
+        <div id="readable"></div>
+      </section>
+    </section>
+
+    <aside class="col right">
+      <nav class="tabs" role="tablist">
+        <button data-tab="story" class="on">Story</button><button data-tab="camera">Camera</button><button data-tab="cards">Cards</button><button data-tab="sources">Sources</button>
+        <button data-tab="events">Events</button><button data-tab="captions">Captions</button><button data-tab="sound">Sound</button><button data-tab="place">Place</button><button data-tab="assist">Assist</button>
+        <button data-tab="shots">Shots</button><button data-tab="look">Look</button><button data-tab="layers">Layers</button>
+      </nav>
+      <div id="inspector" class="inspector"></div>
+    </aside>
+  </main>
+
+  <dialog id="settings"><form method="dialog"><h2>Optional paid features</h2><div id="settingsBody"></div><button>Close</button></form></dialog>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="vendor/maplibre-gl.js"></script>
+  <script src="data/land.js"></script>
+  <script src="data/world.js"></script>
+  <script src="data/towns.js"></script>
+  <script src="js/themes.js"></script>
+  <script src="js/captions.js"></script>
+  <script src="js/events-model.js"></script>
+  <script src="js/sanitize.js"></script>
+  <script src="js/zip.js"></script>
+  <script src="js/schema.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/layers.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/media.js"></script>
+  <script src="js/audio-mix.js"></script>
+  <script src="js/content-layer.js"></script>
+  <script src="js/assistant.js"></script>
+  <script src="js/project-io.js"></script>
+  <script src="js/version.js"></script>
+  <script src="js/globe.js"></script>
+  <script src="js/events-map.js"></script>
+  <script src="js/recorder.js"></script>
+  <script src="js/playback.js"></script>
+  <script src="js/events-ui.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

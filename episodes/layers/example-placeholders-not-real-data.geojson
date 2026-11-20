@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "name": "EXAMPLE PLACEHOLDERS (not real data)",
+  "globedesk_layer": {
+    "id": "evl-mwp7mexg-5",
+    "name": "EXAMPLE PLACEHOLDERS (not real data)",
+    "color": "#9ca3af",
+    "icon": "●",
+    "labels": true,
+    "styleByCategory": true,
+    "note": "Shapes only, to show the tools. Not events."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ev-mwp7mexg-6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.25,
+          26.57
+        ]
+      },
+      "properties": {
+        "kind": "ring",
+        "title": "EXAMPLE PLACEHOLDER ring — not an event extent",
+        "eventTime": "2026-11-20",
+        "eventEnd": "",
+        "timeApprox": true,
+        "datePrecision": "unknown",
+        "category": "blockade",
+        "verification": "not verified",
+        "sources": [],
+        "citation": {
+          "type": "[UNKNOWN]",
+          "date": "[UNKNOWN]",
+          "credit": "[UNKNOWN]",
+          "license": "[UNKNOWN]"
+        },
+        "notes": "Example only. Source [UNKNOWN]. Radius is arbitrary.",
+        "precisionLabel": "Example placeholder",
+        "radiusKm": 25,
+        "cardId": null,
+        "storyId": "story-mwp7mexe-9",
+        "example": true
+      }
+    }
+  ]
+}

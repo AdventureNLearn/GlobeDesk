@@ -1,0 +1,9 @@
+Update this GlobeDesk copy to the owner's newly published release.
+
+- Use that release's grokme/manifest.json and copy every listed file unchanged.
+- Do not change behaviour that the manifest does not change.
+- Keep the safety rules in GROK-ME-BUILD.md and grokme/BUILDER-PROMPT.txt (local-only media, sanitizing, no keys in files, credit, not-verified labels, CSP hosts, base map vs content split).
+- Leave the version-check URL unset unless the new release documents a confirmed host.
+- Official Grok.me size limits and history behaviour are [UNKNOWN]. If the update looks wrong, roll back with the builder's own history.
+
+Then run the test checklist in GROK-ME-BUILD.md.

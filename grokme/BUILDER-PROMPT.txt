@@ -1,0 +1,25 @@
+You are rebuilding GlobeDesk, a local, free globe newsdesk and video studio by AdventureNLearn.
+
+Paste and follow this prompt in the builder. Do not publish, sign in, or call paid APIs unless the owner later asks you to, separately.
+
+What to build
+- Recreate the app from this repository using exactly the files in grokme/manifest.json, copied unchanged.
+- Entry page: index.html. Keep vendor/ and data/ as-is. Do not swap MapLibre for a CDN.
+- GlobeDesk is a production desk: visitors create their own stories, upload media (stored only in the browser), place that media on the globe, mix sound, and export a .globedesk project or a local WebM. There is no required account, server, or API key.
+
+Architecture
+- The base map and globe are a separate core layer.
+- User content (stories, media, overlays, geo panels, embeds, event layers) is a plugin layer on top and must never modify the base map code, style, or tiles.
+
+Safety (do not weaken)
+- Sanitize all user text and imported files. No unsanitized innerHTML.
+- Validate imported JSON against globedesk.episode/2 (legacy /1 is still accepted).
+- https-only links with rel=noopener. Embeds only from the allowlisted YouTube / X URLs, credit required.
+- Keep the Content-Security-Policy hosts exactly as in index.html.
+- Uploads stay on the device. The user is responsible for rights to what they upload and share.
+- Credit other people's work. Keep "as reported, not verified" and [UNKNOWN] labels. Do not invent facts or sources.
+- Optional paid features (MapTiler, cloud voice, cloud AI) stay off by default. Keys, if the visitor pastes one, stay in localStorage only. Cloud voice/AI request shapes are [UNKNOWN] — do not invent them.
+- A public version-check URL is [UNKNOWN]; leave js/version.js URL null.
+- Official Grok.me size limits are [UNKNOWN]. Stay within 20 MiB total, 5 MiB per file, 600 files.
+
+When you are done, follow the test checklist in GROK-ME-BUILD.md.

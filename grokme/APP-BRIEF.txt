@@ -1,0 +1,7 @@
+GlobeDesk is a local, free newsdesk and video studio on a talking globe, built by AdventureNLearn.
+
+People create their own stories, drop pins on a free street-level globe, write cards and captions, attach their own video, images and audio (kept in the browser, never uploaded to a server), place that media as cards, popups, screen overlays or geo-anchored panels, mix sound, and export a .globedesk project or a local WebM recording.
+
+No account, no required API key, MIT license. The bundled Sample episode is an example look inspired by a public creator format; claims in it are not verified and the sample is removable.
+
+The base map is a separate core layer. User content never modifies the map style or tiles.

@@ -1,0 +1,1338 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globedesk.local/schema/globedesk-story.schema.json",
+  "title": "GlobeDesk episode (globedesk.episode/2)",
+  "description": "Machine-readable copy of the keys, types and LIMITS enforced at runtime by js/schema.js, which is the authoritative check used on import and load.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "stories"
+  ],
+  "properties": {
+    "schema": {
+      "type": "string",
+      "enum": [
+        "globedesk.episode/2",
+        "globedesk.episode/1",
+        "gobedesk.episode/1"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "show": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "date": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "lede": {
+      "type": "string",
+      "maxLength": 8000
+    },
+    "cta": {
+      "type": "string",
+      "maxLength": 8000
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/link"
+      },
+      "maxItems": 40
+    },
+    "demo": {
+      "type": "boolean"
+    },
+    "sample": {
+      "type": "boolean"
+    },
+    "look": {
+      "$ref": "#/$defs/look"
+    },
+    "handle": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "outro": {
+      "$ref": "#/$defs/outro"
+    },
+    "output": {
+      "$ref": "#/$defs/output"
+    },
+    "stories": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/story"
+      },
+      "maxItems": 80
+    },
+    "eventLayers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evLayer"
+      },
+      "maxItems": 24
+    },
+    "mediaBin": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/mediaBin"
+      },
+      "maxItems": 80
+    }
+  },
+  "$defs": {
+    "httpsUrl": {
+      "type": "string",
+      "maxLength": 2000,
+      "pattern": "^https://[^@/]+(?:[/:].*)?$"
+    },
+    "citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "date": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "credit": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "license": {
+          "type": "string",
+          "maxLength": 500
+        }
+      }
+    },
+    "pin": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lat": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lon": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "locLook": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lat": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lon": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 8000
+        }
+      }
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "lat": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lon": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "precision": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "verified": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "a3": {
+          "type": "string",
+          "maxLength": 8
+        },
+        "look": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "lat": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "minimum": -90,
+                  "maximum": 90
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "lon": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "minimum": -180,
+                  "maximum": 180
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "name": {
+              "type": "string",
+              "maxLength": 500
+            },
+            "note": {
+              "type": "string",
+              "maxLength": 8000
+            }
+          }
+        }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "orbit",
+            "dive",
+            "street",
+            "cinematic",
+            "close",
+            "overview"
+          ]
+        },
+        "at": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "center": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "zoom": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 24
+        },
+        "pitch": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 85
+        },
+        "bearing": {
+          "type": "number",
+          "minimum": -360,
+          "maximum": 360
+        },
+        "durationSec": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "ease": {
+          "type": "string",
+          "enum": [
+            "cinematic",
+            "smooth",
+            "linear"
+          ]
+        },
+        "cut": {
+          "type": "boolean"
+        },
+        "citation": {
+          "$ref": "#/$defs/citation"
+        }
+      }
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 8000
+        }
+      }
+    },
+    "card": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "topic",
+            "stat",
+            "quote",
+            "timeline",
+            "insight"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "body": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "why": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "facts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fact"
+          },
+          "maxItems": 24
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "maxItems": 40
+        },
+        "pin": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/pin"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "at": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "dur": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "position": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right",
+            "center"
+          ]
+        },
+        "verified": {
+          "type": "boolean"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "url": {
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 0
+            },
+            {
+              "type": "string",
+              "maxLength": 2000,
+              "pattern": "^https://[^@/]+(?:[/:].*)?$"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "unverified"
+          ]
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 8000
+        }
+      }
+    },
+    "caption": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "end": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 8000
+        }
+      }
+    },
+    "mediaShot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mediaRef": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "broll",
+            "still",
+            "voiceover",
+            "music"
+          ]
+        },
+        "at": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "dur": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "citation": {
+          "$ref": "#/$defs/citation"
+        },
+        "caption": {
+          "type": "string",
+          "maxLength": 8000
+        }
+      }
+    },
+    "audio": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "mediaRef": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "volume": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "offset": {
+          "type": "number",
+          "minimum": -3600,
+          "maximum": 3600
+        },
+        "loop": {
+          "type": "boolean"
+        },
+        "at": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "dur": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 3600
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mediaDur": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 3600
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "mediaRef"
+      ]
+    },
+    "overlay": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "full"
+          ]
+        },
+        "x": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "height": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "opacity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "card",
+            "pin-popup",
+            "overlay",
+            "geo-panel",
+            "embed"
+          ]
+        },
+        "mediaRef": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "embedUrl": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "credit": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "caption": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "at": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "dur": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "order": {
+          "type": "number",
+          "minimum": -1000,
+          "maximum": 1000
+        },
+        "pin": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/pin"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "overlay": {
+          "$ref": "#/$defs/overlay"
+        }
+      },
+      "required": [
+        "id",
+        "kind"
+      ]
+    },
+    "highlight": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "a3": {
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 8
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "geojson": {
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "eventWindow": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "end": {
+          "type": "string",
+          "maxLength": 500
+        }
+      }
+    },
+    "story": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "slug": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "durationSec": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 3600
+        },
+        "location": {
+          "$ref": "#/$defs/location"
+        },
+        "camera": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/camera"
+          },
+          "maxItems": 40
+        },
+        "cards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/card"
+          },
+          "maxItems": 40
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "maxItems": 40
+        },
+        "script": {
+          "type": "string",
+          "maxLength": 50000
+        },
+        "captions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/caption"
+          },
+          "maxItems": 500
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "date": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "credit": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "creditUrl": {
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 0
+            },
+            {
+              "type": "string",
+              "maxLength": 2000,
+              "pattern": "^https://[^@/]+(?:[/:].*)?$"
+            }
+          ]
+        },
+        "asReported": {
+          "type": "boolean"
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/mediaShot"
+          },
+          "maxItems": 40
+        },
+        "audioOverlays": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/audio"
+          },
+          "maxItems": 24
+        },
+        "content": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/content"
+          },
+          "maxItems": 40
+        },
+        "highlight": {
+          "$ref": "#/$defs/highlight"
+        },
+        "voiceover": {
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "eventWindow": {
+          "$ref": "#/$defs/eventWindow"
+        }
+      },
+      "required": [
+        "id",
+        "location"
+      ]
+    },
+    "lookMap": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "softBorders": {
+          "type": "boolean"
+        },
+        "highlightGlow": {
+          "type": "boolean"
+        },
+        "countryLabels": {
+          "type": "string",
+          "maxLength": 500
+        }
+      }
+    },
+    "palette": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bg": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "ink": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "accent": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "highlight": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "panel": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "outroBg": {
+          "type": "string",
+          "maxLength": 64
+        }
+      }
+    },
+    "look": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "ctd",
+            "newsdesk"
+          ]
+        },
+        "header": {
+          "type": "boolean"
+        },
+        "headerBadge": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "headerHeightPct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 40
+        },
+        "citations": {
+          "type": "boolean"
+        },
+        "captionsOn": {
+          "type": "boolean"
+        },
+        "captionStyle": {
+          "type": "string",
+          "enum": [
+            "shadow",
+            "box"
+          ]
+        },
+        "captionSize": {
+          "type": "string",
+          "enum": [
+            "small",
+            "medium",
+            "large"
+          ]
+        },
+        "captionLines": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "captionZonePct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 40
+        },
+        "lowerThird": {
+          "type": "boolean"
+        },
+        "ticker": {
+          "type": "boolean"
+        },
+        "music": {
+          "type": "boolean"
+        },
+        "coldOpen": {
+          "type": "boolean"
+        },
+        "shotSec": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 120
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "map": {
+          "$ref": "#/$defs/lookMap"
+        },
+        "safeArea": {
+          "type": "boolean"
+        }
+      }
+    },
+    "outro": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "durationSec": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 3600
+        },
+        "line1": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "link": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "handle": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "showXLogo": {
+          "type": "boolean"
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "aspect": {
+          "type": "string",
+          "enum": [
+            "16:9",
+            "9:16"
+          ]
+        },
+        "fps": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 60
+        }
+      }
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "url": {
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 0
+            },
+            {
+              "type": "string",
+              "maxLength": 2000,
+              "pattern": "^https://[^@/]+(?:[/:].*)?$"
+            }
+          ]
+        }
+      }
+    },
+    "mediaBin": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ref": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "video",
+            "audio",
+            "image",
+            "caption"
+          ]
+        },
+        "local": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "size": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 536870912
+        },
+        "type": {
+          "type": "string",
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "ref",
+        "name",
+        "kind"
+      ]
+    },
+    "evSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "url": {
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 0
+            },
+            {
+              "type": "string",
+              "maxLength": 2000,
+              "pattern": "^https://[^@/]+(?:[/:].*)?$"
+            }
+          ]
+        },
+        "status": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "id": {
+          "type": "string",
+          "maxLength": 200
+        }
+      }
+    },
+    "evProps": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "eventTime": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "eventEnd": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "timeApprox": {
+          "type": "boolean"
+        },
+        "datePrecision": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "category": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "verification": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evSource"
+          },
+          "maxItems": 40
+        },
+        "citation": {
+          "$ref": "#/$defs/citation"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "precisionLabel": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "radiusKm": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 20000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cardId": {
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "storyId": {
+          "oneOf": [
+            {
+              "type": "string",
+              "maxLength": 200
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "example": {
+          "type": "boolean"
+        }
+      }
+    },
+    "evGeom": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "coordinates": {
+          "type": "array"
+        }
+      }
+    },
+    "evFeature": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "id": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/evGeom"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "properties": {
+          "$ref": "#/$defs/evProps"
+        }
+      }
+    },
+    "evLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "color": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "icon": {
+          "type": "string",
+          "maxLength": 8
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "labels": {
+          "type": "boolean"
+        },
+        "styleByCategory": {
+          "type": "boolean"
+        },
+        "scope": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evFeature"
+          },
+          "maxItems": 400
+        }
+      }
+    }
+  }
+}

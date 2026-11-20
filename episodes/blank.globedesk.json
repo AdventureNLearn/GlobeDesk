@@ -1,0 +1,126 @@
+{
+  "schema": "globedesk.episode/2",
+  "id": "ep-mwp7mexe-1",
+  "show": "[UNKNOWN]",
+  "title": "[UNKNOWN]",
+  "date": "YYYY-MM-DD",
+  "lede": "[UNKNOWN]",
+  "cta": "[UNKNOWN]",
+  "links": [],
+  "demo": false,
+  "sample": false,
+  "look": {
+    "label": "CTD (default) — header, citation boxes, bold captions, no music",
+    "theme": "ctd",
+    "header": true,
+    "headerBadge": "NOW COVERING",
+    "headerHeightPct": 15,
+    "citations": true,
+    "captionsOn": true,
+    "captionStyle": "shadow",
+    "captionSize": "large",
+    "captionLines": 2,
+    "captionZonePct": 15,
+    "lowerThird": false,
+    "ticker": false,
+    "music": false,
+    "coldOpen": true,
+    "shotSec": 8,
+    "palette": {
+      "bg": "#151618",
+      "ink": "#ffffff",
+      "accent": "#e0242f",
+      "highlight": "#ff8a1f",
+      "panel": "rgba(70,72,76,0.62)",
+      "outroBg": "#0b1530"
+    },
+    "map": {
+      "base": "sat-hybrid",
+      "softBorders": true,
+      "highlightGlow": true,
+      "countryLabels": "flat-white"
+    },
+    "safeArea": true
+  },
+  "handle": "@[handle]",
+  "outro": {
+    "enabled": true,
+    "durationSec": 5,
+    "line1": "Full brief on the channel",
+    "link": "[channel link]",
+    "handle": "@[handle]",
+    "showXLogo": true
+  },
+  "output": {
+    "aspect": "16:9",
+    "fps": 30
+  },
+  "stories": [
+    {
+      "id": "story-mwp7mexe-2",
+      "slug": "story-1",
+      "title": "[UNKNOWN]",
+      "durationSec": 24,
+      "location": {
+        "name": "[UNKNOWN]",
+        "lat": null,
+        "lon": null,
+        "precision": "unset",
+        "verified": false,
+        "note": "[UNKNOWN]"
+      },
+      "camera": [],
+      "cards": [
+        {
+          "id": "card-mwp7mexe-3",
+          "kind": "topic",
+          "title": "[UNKNOWN]",
+          "body": "[UNKNOWN]",
+          "why": "[UNKNOWN]",
+          "facts": [
+            {
+              "label": "[UNKNOWN]",
+              "value": "[UNKNOWN]"
+            }
+          ],
+          "sourceIds": [],
+          "pin": null,
+          "at": 2,
+          "dur": 8,
+          "position": "right",
+          "verified": false
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-mwp7mexe-4",
+          "label": "[UNKNOWN]",
+          "url": "",
+          "status": "unverified",
+          "note": "[UNKNOWN]"
+        }
+      ],
+      "script": "",
+      "captions": [],
+      "summary": "",
+      "date": "",
+      "credit": "",
+      "creditUrl": "",
+      "asReported": true,
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": null,
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    }
+  ],
+  "eventLayers": [],
+  "mediaBin": []
+}
