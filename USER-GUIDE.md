@@ -6,7 +6,7 @@ GlobeDesk is a local studio. There is no account and no server. Everything you c
 
 1. Put the app folder somewhere convenient, for example `C:\GlobeDesk`, so that `index.html` is in that folder.
 2. Windows: double-click `START-GLOBEDESK.bat`. Any OS: run `python3 tools/serve.py` (or `python3 -m http.server 8080 --bind 127.0.0.1`) and open <http://127.0.0.1:8080>.
-3. The first visit may open the labelled **Sample** episode so you can see the desk. It is removable. Click **New blank** to start your own show. Later visits restore the project this browser autosaved.
+3. The first visit opens **Frogpost**, the labelled sample show by @AdventureNLearn (50 stories, approximate locations, as reported, not verified). It is removable. Click **New blank** to start your own show. Later visits restore the project this browser autosaved. Click **Archive** to see a card for every show and story that has ever been in the desk and bring any of them back.
 
 Do not open `index.html` as a `file://` URL. The browser will block parts of the app.
 
@@ -60,7 +60,7 @@ The default spoken voice is the browser's free speech synthesis.
 
 ## Captions and accessibility
 
-Captions can be auto-built from the script, imported as SRT or WebVTT, and optionally burned into the recording (they are on by default in the CTD look). The Readable view shows full titles, citations, cards and captions as text. Truncated titles and citations on the stage show their full text on hover or click. Controls are keyboard reachable and labelled.
+Captions can be auto-built from the script, imported as SRT or WebVTT, and optionally burned into the recording (they are on by default in the Frogpost look). The Readable view shows full titles, citations, cards and captions as text. Truncated titles and citations on the stage show their full text on hover or click. Controls are keyboard reachable and labelled.
 
 ## Grok.me
 

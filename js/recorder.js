@@ -46,12 +46,42 @@
 
   // Paints the theme overlays for the current playback state. Shared shape with the DOM preview.
   // proj(lngLat) -> [x, y] in this canvas's pixels, or null (off-screen / far side of the globe).
-  function paintEventLabels(ctx, W, H, u, proj, font) {
+  // Greedy label placement: each label tries four spots around its anchor and is kept only
+  // where it overlaps no earlier label and no blocked box (header, captions, cards, citations).
+  // Items earlier in the list win, so the active story's label goes first. Pure; unit-tested.
+  function placeLabels(items, blocked, W, H, pad) {
+    const g = pad || 4;
+    const hit = (a, b) => a.x < b.x + b.w + g && b.x < a.x + a.w + g && a.y < b.y + b.h + g && b.y < a.y + a.h + g;
+    const placed = [];
+    items.forEach((it) => {
+      const off = it.off || 12;
+      const cands = [
+        { x: it.ax + off, y: it.ay - it.h - off },
+        { x: it.ax - it.w - off, y: it.ay - it.h - off },
+        { x: it.ax + off, y: it.ay + off },
+        { x: it.ax - it.w - off, y: it.ay + off }
+      ];
+      for (const c of cands) {
+        const r = { x: c.x, y: c.y, w: it.w, h: it.h };
+        if (r.x < 0 || r.y < 0 || r.x + r.w > W || r.y + r.h > H) continue;
+        if (blocked.some((b) => hit(r, b)) || placed.some((p) => hit(r, p.box))) continue;
+        placed.push({ item: it, box: r });
+        return;
+      }
+    });
+    return placed;
+  }
+
+  function paintEventLabels(ctx, W, H, u, proj, font, blocked) {
     if (!proj || !GD.eventsMap) return;
     const map = GD.globe.st.map, z = map.getZoom(), c = map.getCenter();
+    let bounds = null; try { bounds = map.getBounds(); } catch (e) { bounds = null; }
+    const S = GD.state, cur = S.episode && S.episode.stories[S.storyIdx];
+    const items = [];
     GD.eventsMap.labels().forEach((lb) => {
       if (!lb.lngLat) return;
       if (z < 5 && GD.globe.haversine(c.lat, c.lng, lb.lngLat[1], lb.lngLat[0]) > 7000) return; // hidden behind the globe
+      if (z >= 3 && bounds && !bounds.contains(lb.lngLat)) return; // far side of the globe can still project on-screen when zoomed in
       const xy = proj(lb.lngLat); if (!xy) return;
       const [x, y] = xy; if (x < 0 || y < 0 || x > W || y > H) return;
       const tag = lb.verification === "verified" ? "VERIFIED" : lb.verification === "disputed" ? "DISPUTED" : "NOT VERIFIED";
@@ -59,15 +89,47 @@
       const t1 = `${lb.icon} ${lb.title}`.slice(0, 60), w1 = ctx.measureText(t1).width;
       ctx.font = font(500, 17);
       const t2 = `${lb.time} • ${tag}${lb.example ? " • EXAMPLE" : ""}`, w2 = ctx.measureText(t2).width;
-      const bw = Math.max(w1, w2) + 24 * u, bh = 58 * u, bx = Math.min(W - bw - 6 * u, x + 14 * u), by = Math.max(6 * u, y - bh - 10 * u);
-      ctx.strokeStyle = lb.color; ctx.lineWidth = 2 * u; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(bx, by + bh); ctx.stroke();
+      items.push({ lb, t1, t2, ax: x, ay: y, w: Math.max(w1, w2) + 24 * u, h: 58 * u, off: 12 * u, active: !!(cur && lb.storyId === cur.id) });
+    });
+    items.sort((a, b) => (b.active ? 1 : 0) - (a.active ? 1 : 0));
+    placeLabels(items, blocked || [], W, H, 4 * u).forEach(({ item, box }) => {
+      const lb = item.lb, { x: bx, y: by, w: bw, h: bh } = box;
+      ctx.strokeStyle = lb.color; ctx.lineWidth = 2 * u; ctx.beginPath(); ctx.moveTo(item.ax, item.ay);
+      ctx.lineTo(bx < item.ax ? bx + bw : bx, by < item.ay ? by + bh : by); ctx.stroke();
       ctx.fillStyle = "rgba(12,12,14,0.78)"; roundRect(ctx, bx, by, bw, bh, 6 * u); ctx.fill();
       ctx.fillStyle = lb.color; ctx.fillRect(bx, by, 4 * u, bh);
-      ctx.fillStyle = "#fff"; ctx.font = font(700, 22); ctx.fillText(t1, bx + 12 * u, by + 25 * u);
-      ctx.fillStyle = lb.verification === "verified" ? "#6ee7a8" : "#ffd166"; ctx.font = font(500, 17); ctx.fillText(t2, bx + 12 * u, by + 48 * u);
+      ctx.fillStyle = "#fff"; ctx.font = font(700, 22); ctx.fillText(item.t1, bx + 12 * u, by + 25 * u);
+      ctx.fillStyle = lb.verification === "verified" ? "#6ee7a8" : "#ffd166"; ctx.font = font(500, 17); ctx.fillText(item.t2, bx + 12 * u, by + 48 * u);
+    });
+    rec.labelsPlaced = items.length;
+  }
+
+  // Card boxes for the active cards (shared by the label blocker and the painter).
+  function cardBoxes(ctx, W, H, u, font, cards, headerBottom, reserveRight) {
+    return cards.map((c, i) => {
+      const cw = W > H ? Math.min(620 * u, W * 0.34) : W - 96 * u;
+      const right = W > H ? Math.max(48 * u, reserveRight || 0) : 48 * u;
+      const x = W > H ? W - cw - right : 48 * u, y = Math.max(headerBottom + 20 * u, 120 * u) + (W > H ? 0 : 150 * u) + i * 300 * u;
+      ctx.font = font(400, 24);
+      const lines = wrap(ctx, c.body, cw - 48 * u).slice(0, 5);
+      const ch = (110 + lines.length * 32) * u;
+      return { c, x, y, w: cw, h: ch, lines };
     });
   }
 
+  // Citation boxes, top-left under the header.
+  function citationBoxes(ctx, W, u, font, citations, headerBottom) {
+    let y = headerBottom + 16 * u;
+    return citations.filter((c) => c && String(c).trim()).map((c) => {
+      ctx.font = font(500, 20);
+      const all = wrap(ctx, c, Math.min(W * 0.52, 640 * u));
+      const lines = all.slice(0, 3);
+      const w = Math.max(...lines.map((l) => ctx.measureText(l).width)) + 28 * u, h = lines.length * 26 * u + 18 * u;
+      const box = { c, all, lines, x: 28 * u, y, w, h };
+      y += h + 10 * u;
+      return box;
+    });
+  }
 
   // Title starts to the right of the "NOW COVERING" badge, inside the header band only.
   // Returned box is used by paintOverlays (and unit-tested) so citations never cover the headline.
@@ -93,7 +155,17 @@
     return { hh, badge, badgeX, badgeY, badgeW, badgeH, titleX, titleMaxW, titleSize, titleLines, titleY0, titleLineH, lowerBarTop, headerBottom: hh, titleFull: title || "", titleTruncated };
   }
 
-  function paintOverlays(ctx, W, H, proj) {
+  // Dark ink on light accents, white on dark accents (badge text contrast).
+  function badgeInk(hex) {
+    const m = /^#?([0-9a-f]{6})$/i.exec(String(hex || ""));
+    if (!m) return "#fff";
+    const n = parseInt(m[1], 16), ch = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+    const Lm = 0.2126 * ch[0] + 0.7152 * ch[1] + 0.0722 * ch[2];
+    return (1.05 / (Lm + 0.05)) >= 4.5 ? "#fff" : "#07140c";
+  }
+
+  function paintOverlays(ctx, W, H, proj, opts) {
+    opts = opts || {};
     const S = GD.state, ep = S.episode, story = ep.stories[S.storyIdx], L = ep.look || {}, P = L.palette || {};
     const u = Math.min(W, H) / 1080;
     const font = (w, px) => `${w} ${px * u}px Inter, "Helvetica Neue", Arial, sans-serif`;
@@ -108,37 +180,44 @@
       ctx.textAlign = "left";
       return;
     }
-    paintEventLabels(ctx, W, H, u, proj, font);
+    const headerOn = !!(L.header && story);
+    const hhPre = headerOn ? H * (L.headerHeightPct || 15) / 100 : 0;
+    const cits = L.citations !== false && S.ov.citations ? citationBoxes(ctx, W, u, font, S.ov.citations, hhPre) : [];
+    const cards = cardBoxes(ctx, W, H, u, font, S.ov.cards || [], hhPre, opts.reserveRight || 0);
+    const zone = H * (L.captionZonePct || 15) / 100;
+    const blocked = [{ x: 0, y: 0, w: W, h: hhPre }, { x: 0, y: H - zone, w: W, h: zone }]
+      .concat(cits.map((b) => ({ x: b.x, y: b.y, w: b.w, h: b.h })), cards.map((b) => ({ x: b.x, y: b.y, w: b.w, h: b.h })));
+    paintEventLabels(ctx, W, H, u, proj, font, blocked);
     // Header layout: title sits to the right of the badge so a left-side citation box
     // cannot clip the first letters. Citations always start below the header band.
     let headerBottom = 0;
-    if (L.header && story) {
-      const lay = layoutHeader(W, H, L, u, ctx, font, L.headerBadge || "NOW COVERING", story.title);
+    if (headerOn) {
+      const lay = layoutHeader(W, H, L, u, ctx, font, L.headerBadge || "FROGPOST", story.title);
       headerBottom = lay.hh;
       ctx.fillStyle = "rgba(12,12,14,0.86)"; ctx.fillRect(0, 0, W, lay.lowerBarTop);
       ctx.fillStyle = "rgba(40,41,44,0.92)"; ctx.fillRect(0, lay.lowerBarTop, W, lay.hh - lay.lowerBarTop);
-      ctx.fillStyle = P.accent || "#e0242f"; roundRect(ctx, lay.badgeX, lay.badgeY, lay.badgeW, lay.badgeH, 6 * u); ctx.fill();
-      ctx.fillStyle = "#fff"; ctx.font = font(800, 26); ctx.fillText(lay.badge, lay.badgeX + 18 * u, lay.badgeY + 29 * u);
+      ctx.fillStyle = P.accent || "#3dbe6a"; roundRect(ctx, lay.badgeX, lay.badgeY, lay.badgeW, lay.badgeH, 6 * u); ctx.fill();
+      ctx.fillStyle = badgeInk(P.accent || "#3dbe6a"); ctx.font = font(800, 26); ctx.fillText(lay.badge, lay.badgeX + 18 * u, lay.badgeY + 29 * u);
       ctx.font = font(800, lay.titleSize); ctx.fillStyle = "#fff";
       lay.titleLines.forEach((l, k) => ctx.fillText(l, lay.titleX, lay.titleY0 + k * lay.titleLineH));
       rec.hits = rec.hits || { title: null, citations: [] };
       rec.hits.title = { full: story.title || "", truncated: !!lay.titleTruncated, x: lay.titleX, y: lay.titleY0 - 32 * u, w: lay.titleMaxW, h: lay.titleLines.length * lay.titleLineH + 16 * u };
       ctx.font = font(600, 24); ctx.fillStyle = "#e6e6e6";
-      ctx.fillText(`${ep.show}   •   ${ep.date}   •   ${ep.handle || ""}`, 36 * u, lay.lowerBarTop + (lay.hh - lay.lowerBarTop) * 0.68);
+      const lead = `${ep.show}   •   ${ep.date}   •   `, by = lay.lowerBarTop + (lay.hh - lay.lowerBarTop) * 0.68;
+      ctx.fillText(lead + (ep.handle || ""), 36 * u, by);
+      if (ep.handle) {
+        const hx = 36 * u + ctx.measureText(lead).width, hw = ctx.measureText(ep.handle).width;
+        rec.hits.handle = { text: ep.handle, x: hx, y: lay.lowerBarTop, w: hw, h: lay.hh - lay.lowerBarTop };
+      }
     }
-    if (L.citations !== false && S.ov.citations && S.ov.citations.length) {
-      let y = headerBottom + 16 * u;
+    if (cits.length) {
       rec.hits = rec.hits || { title: null, citations: [] };
       rec.hits.citations = [];
-      S.ov.citations.forEach((c) => {
+      cits.forEach((b) => {
         ctx.font = font(500, 20);
-        const all = wrap(ctx, c, Math.min(W * 0.52, 640 * u));
-        const lines = all.slice(0, 3);
-        const w = Math.max(...lines.map((l) => ctx.measureText(l).width)) + 28 * u, h = lines.length * 26 * u + 18 * u;
-        ctx.fillStyle = P.panel || "rgba(70,72,76,0.62)"; roundRect(ctx, 28 * u, y, w, h, 6 * u); ctx.fill();
-        ctx.fillStyle = "#f2f2f2"; lines.forEach((l, k) => ctx.fillText(l, 42 * u, y + (30 + k * 26) * u));
-        rec.hits.citations.push({ full: c, truncated: all.length > 3, x: 28 * u, y, w, h });
-        y += h + 10 * u;
+        ctx.fillStyle = P.panel || "rgba(70,72,76,0.62)"; roundRect(ctx, b.x, b.y, b.w, b.h, 6 * u); ctx.fill();
+        ctx.fillStyle = "#f2f2f2"; b.lines.forEach((l, k) => ctx.fillText(l, 42 * u, b.y + (30 + k * 26) * u));
+        rec.hits.citations.push({ full: b.c, truncated: b.all.length > 3, x: b.x, y: b.y, w: b.w, h: b.h });
       });
     }
     if (L.lowerThird && story) {
@@ -148,18 +227,14 @@
       ctx.fillStyle = "#9fc3ff"; ctx.font = font(600, 24); ctx.fillText(`${ep.show}  •  ${S.storyIdx + 1}/${ep.stories.length}`, 76 * u, y0 + 38 * u);
       ctx.fillStyle = "#fff"; ctx.font = font(700, 38); ctx.fillText(wrap(ctx, story.title, W - 160 * u)[0] || "", 76 * u, y0 + 90 * u);
     }
-    S.ov.cards.forEach((c, i) => {
-      const cw = W > H ? Math.min(620 * u, W * 0.34) : W - 96 * u;
-      const x = W > H ? W - cw - 48 * u : 48 * u, y = Math.max(headerBottom + 20 * u, 120 * u) + (W > H ? 0 : 150 * u) + i * 300 * u;
-      ctx.font = font(400, 24);
-      const lines = wrap(ctx, c.body, cw - 48 * u).slice(0, 5);
-      const ch = (110 + lines.length * 32) * u;
+    cards.forEach(({ c, x, y, w: cw, h: ch, lines }) => {
       ctx.fillStyle = "rgba(14,15,17,0.84)"; roundRect(ctx, x, y, cw, ch, 12 * u); ctx.fill();
-      ctx.fillStyle = P.accent || "#e0242f"; ctx.fillRect(x, y, 6 * u, ch);
+      ctx.fillStyle = P.accent || "#3dbe6a"; ctx.fillRect(x, y, 6 * u, ch);
       ctx.fillStyle = c.verified ? "#6ee7a8" : "#ffd166"; ctx.font = font(700, 18); ctx.fillText(c.verified ? "VERIFIED" : "UNVERIFIED", x + 24 * u, y + 34 * u);
       ctx.fillStyle = "#fff"; ctx.font = font(700, 30); ctx.fillText(wrap(ctx, c.title, cw - 48 * u)[0] || "", x + 24 * u, y + 74 * u);
       ctx.fillStyle = "#e4e4e4"; ctx.font = font(400, 24); lines.forEach((l, k) => ctx.fillText(l, x + 24 * u, y + (112 + k * 32) * u));
     });
+    rec.cardBoxes = cards.map(({ x, y, w, h }) => ({ x, y, w, h }));
     if (L.captionsOn !== false && S.ov.captions.length) {
       const size = { small: 40, medium: 50, large: 60 }[L.captionSize] || 60;
       ctx.font = font(800, size);
@@ -246,5 +321,5 @@
     });
   }
 
-  GD.recorder = { supported, start, stop, connectMedia, paintOverlays, layoutHeader, SIZES, _rec: rec, hits: () => rec.hits || { title: null, citations: [] } };
+  GD.recorder = { supported, start, stop, connectMedia, paintOverlays, layoutHeader, placeLabels, badgeInk, SIZES, _rec: rec, hits: () => rec.hits || { title: null, citations: [] } };
 })();

@@ -194,7 +194,7 @@
   function labels() {
     return visibleFeatures().filter(({ l }) => l.labels).map(({ f, color }) => {
       const p = f.properties, cat = E().CATEGORIES[p.category] || E().CATEGORIES.other;
-      return { lngLat: E().anchor(f), icon: cat.icon, color, title: p.title, time: E().timeLabel(p), verification: p.verification, example: p.example };
+      return { lngLat: E().anchor(f), icon: cat.icon, color, title: p.title, time: E().timeLabel(p), verification: p.verification, example: p.example, storyId: p.storyId || null };
     });
   }
   function readable() {

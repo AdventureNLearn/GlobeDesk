@@ -1,7 +1,7 @@
 {
   "schema": "globedesk.episode/2",
-  "id": "ep-mwp7mexe-1",
-  "show": "[UNKNOWN]",
+  "id": "ep-mwpmy709-1",
+  "show": "Frogpost",
   "title": "[UNKNOWN]",
   "date": "YYYY-MM-DD",
   "lede": "[UNKNOWN]",
@@ -10,10 +10,10 @@
   "demo": false,
   "sample": false,
   "look": {
-    "label": "CTD (default) — header, citation boxes, bold captions, no music",
-    "theme": "ctd",
+    "label": "Frogpost (default) — pond green, header, citation boxes, bold captions, no music",
+    "theme": "frog",
     "header": true,
-    "headerBadge": "NOW COVERING",
+    "headerBadge": "FROGPOST",
     "headerHeightPct": 15,
     "citations": true,
     "captionsOn": true,
@@ -27,12 +27,12 @@
     "coldOpen": true,
     "shotSec": 8,
     "palette": {
-      "bg": "#151618",
-      "ink": "#ffffff",
-      "accent": "#e0242f",
-      "highlight": "#ff8a1f",
-      "panel": "rgba(70,72,76,0.62)",
-      "outroBg": "#0b1530"
+      "bg": "#0c1610",
+      "ink": "#f3f7ef",
+      "accent": "#3dbe6a",
+      "highlight": "#d6f25c",
+      "panel": "rgba(16,42,28,0.78)",
+      "outroBg": "#07140c"
     },
     "map": {
       "base": "sat-hybrid",
@@ -42,13 +42,13 @@
     },
     "safeArea": true
   },
-  "handle": "@[handle]",
+  "handle": "@AdventureNLearn",
   "outro": {
     "enabled": true,
     "durationSec": 5,
     "line1": "Full brief on the channel",
-    "link": "[channel link]",
-    "handle": "@[handle]",
+    "link": "https://x.com/AdventureNLearn",
+    "handle": "@AdventureNLearn",
     "showXLogo": true
   },
   "output": {
@@ -57,7 +57,7 @@
   },
   "stories": [
     {
-      "id": "story-mwp7mexe-2",
+      "id": "story-mwpmy709-2",
       "slug": "story-1",
       "title": "[UNKNOWN]",
       "durationSec": 24,
@@ -72,7 +72,7 @@
       "camera": [],
       "cards": [
         {
-          "id": "card-mwp7mexe-3",
+          "id": "card-mwpmy709-3",
           "kind": "topic",
           "title": "[UNKNOWN]",
           "body": "[UNKNOWN]",
@@ -93,7 +93,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwp7mexe-4",
+          "id": "src-mwpmy709-4",
           "label": "[UNKNOWN]",
           "url": "",
           "status": "unverified",

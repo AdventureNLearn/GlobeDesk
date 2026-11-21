@@ -4,18 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com; connect-src 'self' https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com; font-src 'self' data: https://tiles.openfreemap.org; media-src 'self' blob: data:; frame-src https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';">
-  <title>GlobeDesk — globe newsdesk studio</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%227%22 fill=%22%23ff8a1f%22/%3E%3C/svg%3E">
+  <title>Frogpost — GlobeDesk</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%227%22 fill=%22%233dbe6a%22/%3E%3C/svg%3E">
   <link rel="stylesheet" href="vendor/maplibre-gl.css">
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><span class="logo">◍</span> GlobeDesk <span class="pill">local • free</span></div>
+    <div class="brand"><span class="logo" aria-hidden="true">🐸</span> <span class="brand-name">Frogpost</span>
+      <span class="brand-sub"><a id="handleLink" href="https://x.com/AdventureNLearn" target="_blank" rel="noopener noreferrer">@AdventureNLearn</a> · <span id="appVersion" class="ver">v0.5.1 · AdventureNLearn Edition</span></span></div>
     <input id="epTitle" class="ep-title" aria-label="Episode title" placeholder="Episode title">
-    <div class="tools">
+    <button id="btnMenu" class="menu-btn" type="button" aria-expanded="false" aria-controls="tools">☰ Menu</button>
+    <div class="tools" id="tools">
+      <button id="btnArchive" title="Every show and story ever added. Open one to bring it back.">Archive</button>
       <button id="btnNew" title="New blank episode">New blank</button>
-      <button id="btnDemo" title="Load the removable sample episode">Sample</button>
+      <button id="btnDemo" title="Load the Frogpost sample (removable)">Sample</button>
       <label class="btn">Open<input id="fileOpen" type="file" accept=".globedesk,.globedesk.json,.gobedesk.json,.json,application/json,application/zip" hidden></label>
       <button id="btnSave" title="Episode JSON without media">Save JSON</button>
       <button id="btnSaveProject" title="Project pack: JSON plus local media">Save project</button>
@@ -56,6 +59,7 @@
           <div id="gdFull" class="gd-full" hidden></div>
         </div>
       </div>
+      <p id="stageCredit" class="stage-credit small" aria-label="Map credits"></p>
       <div class="transport">
         <button id="btnPlay" class="play" aria-label="Play">▶</button>
         <span id="time" class="time">0:00 / 0:00</span>
@@ -66,22 +70,29 @@
         <label class="small"><input id="browserVoice" type="checkbox"> Browser voice (free preview)</label>
         <label class="small"><input id="showSafe" type="checkbox" checked> Safe zones</label>
       </div>
-      <section class="panel readable" aria-live="polite" aria-label="Readable view of cards and captions">
+      <section class="panel readable" id="readablePanel" aria-live="polite" aria-label="Readable view of cards and captions">
         <h2>Readable view <span class="muted small">(for hard-of-hearing viewers and screen readers)</span></h2>
         <div id="readable"></div>
       </section>
     </section>
 
     <aside class="col right">
-      <nav class="tabs" role="tablist">
-        <button data-tab="story" class="on">Story</button><button data-tab="camera">Camera</button><button data-tab="cards">Cards</button><button data-tab="sources">Sources</button>
-        <button data-tab="events">Events</button><button data-tab="captions">Captions</button><button data-tab="sound">Sound</button><button data-tab="place">Place</button><button data-tab="assist">Assist</button>
-        <button data-tab="shots">Shots</button><button data-tab="look">Look</button><button data-tab="layers">Layers</button>
+      <section class="panel inspector-panel" id="inspectorPanel">
+      <h2>Inspector</h2>
+      <nav class="tabs" role="tablist" aria-label="Inspector">
+        <button role="tab" id="tab-story" data-tab="story" class="on" aria-selected="true" aria-controls="inspector">Story</button><button role="tab" id="tab-camera" data-tab="camera" aria-selected="false" aria-controls="inspector">Camera</button><button role="tab" id="tab-cards" data-tab="cards" aria-selected="false" aria-controls="inspector">Cards</button><button role="tab" id="tab-sources" data-tab="sources" aria-selected="false" aria-controls="inspector">Sources</button>
+        <button role="tab" id="tab-events" data-tab="events" aria-selected="false" aria-controls="inspector">Events</button><button role="tab" id="tab-captions" data-tab="captions" aria-selected="false" aria-controls="inspector">Captions</button><button role="tab" id="tab-sound" data-tab="sound" aria-selected="false" aria-controls="inspector">Sound</button><button role="tab" id="tab-place" data-tab="place" aria-selected="false" aria-controls="inspector">Place</button><button role="tab" id="tab-assist" data-tab="assist" aria-selected="false" aria-controls="inspector">Assist</button>
+        <button role="tab" id="tab-shots" data-tab="shots" aria-selected="false" aria-controls="inspector">Shots</button><button role="tab" id="tab-look" data-tab="look" aria-selected="false" aria-controls="inspector">Look</button><button role="tab" id="tab-layers" data-tab="layers" aria-selected="false" aria-controls="inspector">Layers</button>
       </nav>
-      <div id="inspector" class="inspector"></div>
+      <div id="inspector" class="inspector" role="tabpanel" aria-labelledby="tab-story"></div>
+      </section>
     </aside>
   </main>
 
+  <dialog id="archive" class="archive" aria-labelledby="archiveTitle">
+    <div class="archive-head"><h2 id="archiveTitle">Archive</h2><p class="muted small">Every show and story ever added keeps a card here, and nothing is pruned. Open a card to bring it back.</p><button id="archiveClose" type="button">Close</button></div>
+    <div id="archiveBody" class="archive-body"></div>
+  </dialog>
   <dialog id="settings"><form method="dialog"><h2>Optional paid features</h2><div id="settingsBody"></div><button>Close</button></form></dialog>
   <div id="toast" class="toast" role="status"></div>
 
@@ -95,7 +106,9 @@
   <script src="js/sanitize.js"></script>
   <script src="js/zip.js"></script>
   <script src="js/schema.js"></script>
+  <script src="js/frog-rundown.js"></script>
   <script src="js/model.js"></script>
+  <script src="js/archive.js"></script>
   <script src="js/layers.js"></script>
   <script src="js/settings.js"></script>
   <script src="js/store.js"></script>

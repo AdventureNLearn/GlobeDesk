@@ -75,6 +75,16 @@
     if (typeof indexedDB === "undefined") return Promise.resolve(mem.rejected);
     return tx("kv", "readonly", (s) => s.get(REJECTED_KEY));
   }
+  // Generic kv access (used by the append-only archive index, GD.archive).
+  function getKv(key) {
+    if (typeof indexedDB === "undefined") return Promise.resolve(mem[key] || null);
+    return tx("kv", "readonly", (s) => s.get(key));
+  }
+  function putKv(key, value) {
+    const json = JSON.parse(JSON.stringify(value));
+    if (typeof indexedDB === "undefined") { mem[key] = json; return Promise.resolve(json); }
+    return tx("kv", "readwrite", (s) => s.put(json, key));
+  }
   function putMedia(rec) {
     return tx("media", "readwrite", (s) => s.put(rec));
   }
@@ -95,12 +105,14 @@
       });
     });
   }
+  // Clears the saved episode and media. The archive index is kept on purpose.
   function clearAll() {
     return open().then((db) => {
       if (!db) return;
       return new Promise((resolve, reject) => {
         const t = db.transaction(["kv", "media"], "readwrite");
-        t.objectStore("kv").clear();
+        t.objectStore("kv").delete(EPISODE_KEY);
+        t.objectStore("kv").delete(REJECTED_KEY);
         t.objectStore("media").clear();
         t.oncomplete = () => resolve();
         t.onerror = () => reject(t.error);
@@ -116,5 +128,5 @@
     }, 800);
   }
 
-  GD.store = { open, saveEpisode, loadEpisode, keepRejected, loadRejected, reviewRestore, rejectedBackup, putMedia, getMedia, deleteMedia, allMedia, clearAll, schedule, DB_NAME, EPISODE_KEY, REJECTED_KEY, _mem: mem };
+  GD.store = { open, saveEpisode, loadEpisode, keepRejected, loadRejected, reviewRestore, rejectedBackup, putMedia, getMedia, deleteMedia, allMedia, clearAll, schedule, getKv, putKv, DB_NAME, EPISODE_KEY, REJECTED_KEY, _mem: mem };
 })();

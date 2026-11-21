@@ -16,7 +16,7 @@
   const SOURCE_STATUS = ["verified", "unverified"];
   const CAP_STYLES = ["shadow", "box"];
   const CAP_SIZES = ["small", "medium", "large"];
-  const THEMES = ["ctd", "newsdesk"];
+  const THEMES = ["frog", "ctd", "newsdesk"];
   const POSITIONS = ["left", "right", "center"];
   const MEDIA_ROLES = ["broll", "still", "voiceover", "music"];
   const OVERLAY_MODES = ["pip", "full"];
@@ -179,7 +179,7 @@
     if (L.label != null) isStr(L.label, path + ".label", LIMITS.str.medium, errs);
     if (L.theme != null) {
       isStr(L.theme, path + ".theme", LIMITS.str.short, errs);
-      if (THEMES.indexOf(L.theme) < 0) errs.push(path + ".theme must be ctd|newsdesk");
+      if (THEMES.indexOf(L.theme) < 0) errs.push(path + ".theme must be frog|ctd|newsdesk");
     }
     ["header", "citations", "captionsOn", "lowerThird", "ticker", "music", "coldOpen", "safeArea"].forEach((k) => {
       if (L[k] != null) isBool(L[k], path + "." + k, errs);

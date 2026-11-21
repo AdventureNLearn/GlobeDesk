@@ -5,7 +5,7 @@ const ctx = { window: {}, Date, console, Uint8Array, ArrayBuffer, TextEncoder, T
 // URL in vm may need global
 vm.createContext(ctx);
 vm.runInContext(fs.readFileSync(path.join(root, "data", "land.js"), "utf8"), ctx);
-for (const f of ["themes", "captions", "events-model", "sanitize", "zip", "schema", "model", "media", "audio-mix", "content-layer", "project-io", "assistant", "store"]) {
+for (const f of ["themes", "captions", "events-model", "sanitize", "zip", "schema", "frog-rundown", "model", "media", "audio-mix", "content-layer", "project-io", "assistant", "store"]) {
   vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
 }
 const GD = ctx.window.GD;
@@ -30,7 +30,7 @@ t("project pack round-trip of episode JSON", async () => {
   const bytes = await GD.project.buildPack(ep, {});
   const pack = await GD.project.parsePack(bytes);
   assert.equal(pack.episode.title, ep.title);
-  assert.equal(pack.episode.stories.length, 3);
+  assert.equal(pack.episode.stories.length, 50);
   assert.deepEqual(GD.schema.validate(pack.episode), []);
 });
 

@@ -16,8 +16,8 @@ MANIFEST = ROOT / "grokme" / "manifest.json"
 TOTAL = 20 * 1024 * 1024
 PER = 5 * 1024 * 1024
 MAX_FILES = 600
-SKIP_DIRS = {".git", "shots", "node_modules", "demo"}
-SKIP_NAMES = {".DS_Store"}
+SKIP_DIRS = {".git", "shots", "node_modules", "demo", "tests", "tools"}
+SKIP_NAMES = {".DS_Store", ".gitignore", "START-GLOBEDESK.bat", "OPEN-ITEMS.md"}
 
 
 def git_tracked() -> list[str] | None:

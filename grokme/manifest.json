@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",
@@ -10,19 +10,14 @@
   },
   "files": [
     {
-      "path": ".gitignore",
-      "size": 163,
-      "sha256": "f9a0cc45d2ab99813b962992d42aa6b98948ce899ef91d1b0d08ac13c47c9457"
-    },
-    {
       "path": "CHANGELOG.md",
-      "size": 1925,
-      "sha256": "cdd6f0930dd2c3256db2b63c0de2ff25d8a9e6132cfa2d5235009e770e3a7ed7"
+      "size": 4383,
+      "sha256": "e9d940571c5fe7caf645dd10cdec9ba1ffbb9d177a2d09b577302d6ed2ac58f4"
     },
     {
       "path": "GROK-ME-BUILD.md",
-      "size": 4384,
-      "sha256": "974b3ca24e66adcb5a41a636e9abd680ddc7d5834cea54ca0522303c026a8b2c"
+      "size": 4848,
+      "sha256": "a79a75feba53e78920c2cfdf424b487a3099d904ecf968bb7597500c8d663665"
     },
     {
       "path": "LICENSE",
@@ -30,34 +25,24 @@
       "sha256": "33390350bc52b2e93b2b5c789eda9db01bb7e4a28207ee842525d6ea5d81bdf2"
     },
     {
-      "path": "OPEN-ITEMS.md",
-      "size": 4875,
-      "sha256": "5be01c24917e0f945f77e8ed834b3ee1254f330a491f455269d5d93dbd09c15b"
-    },
-    {
       "path": "README.md",
-      "size": 24459,
-      "sha256": "dca2a4d2bb07c35f7210a5bc904fc343efd6a7b2604d3f2fac7069c56b260a13"
-    },
-    {
-      "path": "START-GLOBEDESK.bat",
-      "size": 1001,
-      "sha256": "1089292427ddc516949036ff9b088e488444af7f81cb77a9088eef3cfd905fc7"
+      "size": 25445,
+      "sha256": "5a64d5132bb299ed5f49e96b50f8ca1e19d5e66ff4cf6d1075e9faa312508bbf"
     },
     {
       "path": "USER-GUIDE.md",
-      "size": 4436,
-      "sha256": "e23a2f75d9a2b6fde0ac7f1e15603e9a55da73c744a634c198dbaf65c152996d"
+      "size": 4620,
+      "sha256": "136d3937a24d029b7195e1b46e8741da3d00a87511f84cc3ae7cace8211c7d5e"
     },
     {
       "path": "WINDOWS-RUN.md",
       "size": 2082,
-      "sha256": "150b41ac6b96c4004fe2791b1b0f67c83a61f2e638dc8042f441e471a616954d"
+      "sha256": "41ea2f2d1f37f10ffabdee05f59c23b61b796f0a5e2f2e7b15e5d2447636b95a"
     },
     {
       "path": "css/app.css",
-      "size": 10148,
-      "sha256": "78a19b6b8b269524b3af28b00d1664473bb885130405def03985f09484eb5239"
+      "size": 14179,
+      "sha256": "64b06cfe5fc38d927b1fa400d5b27ab1ea64b2dd736bf1764a582bc7f572cf32"
     },
     {
       "path": "data/land.js",
@@ -76,18 +61,23 @@
     },
     {
       "path": "docs/STORY-FORMAT.md",
-      "size": 3901,
-      "sha256": "51c4af7b7d8075a85d70405c7fb3e4248b0d94711033e73d828688923cc1f636"
+      "size": 3902,
+      "sha256": "35669fcafb4ca7fbd3737b137969005897b0ed773766a47980a62d81f2c90f94"
     },
     {
       "path": "episodes/blank.globedesk.json",
-      "size": 2760,
-      "sha256": "3234fcb22df52ba8dc8911247b4d2c25044440ab5fe327d3b54825f53fdfdeb8"
+      "size": 2802,
+      "sha256": "88641c58f37f82f860cf086b130e1548feef9b7c46c7cf284ca427eaa5943fbc"
     },
     {
       "path": "episodes/demo-2026-11-20.globedesk.json",
-      "size": 22028,
-      "sha256": "2b5a1ef0df21df59bfe7b41d41eb0c99577477a1fc78674d5f4985c474d613da"
+      "size": 21727,
+      "sha256": "9b9cad9c364320d07483c1e78a22b94c026fb8ea1a2a97cb88012bc382a29325"
+    },
+    {
+      "path": "episodes/frogpost-2026-11-20.globedesk.json",
+      "size": 283180,
+      "sha256": "8673f2020316d4423b9165d10479adb8099c19bb7edb057d4eb551dae05d5c63"
     },
     {
       "path": "episodes/layers/demo-event-places-demo-not-verified.geojson",
@@ -100,9 +90,14 @@
       "sha256": "bb300df9ff1045365a647beb4e2aa35366007280ccff0208abbd4a904cf84632"
     },
     {
+      "path": "episodes/layers/frogpost-sample-story-places-approximate-not-verified.geojson",
+      "size": 50963,
+      "sha256": "1526c195b0cce0f36d6431e6ed96159900f1f5fb0aa13af39c626bd151e54847"
+    },
+    {
       "path": "grokme/APP-BRIEF.txt",
-      "size": 717,
-      "sha256": "6818184b48e88f88cb87ae94daa61f4d86911f935244d24c785ff1cdd1a67af9"
+      "size": 789,
+      "sha256": "d61badb2509004c0bc645a7612bbc109546bdd66c9de6b031f7bf70fe91228e3"
     },
     {
       "path": "grokme/BUILDER-PROMPT.txt",
@@ -121,8 +116,13 @@
     },
     {
       "path": "index.html",
-      "size": 6641,
-      "sha256": "64eaba0431ec1c5639f12c0d289de42f9580ba234d1cb27477efaf2d42649259"
+      "size": 8768,
+      "sha256": "a611e3d04cf177e5fa5aeff415a96950961c385b47e426be7095cbeaa48efcd1"
+    },
+    {
+      "path": "js/archive.js",
+      "size": 11259,
+      "sha256": "9fe7aedc254e63d5f9505da63a7a016bcf19eaffc19134f99d5057db4d0fd6fe"
     },
     {
       "path": "js/assistant.js",
@@ -146,13 +146,13 @@
     },
     {
       "path": "js/events-map.js",
-      "size": 13173,
-      "sha256": "d77578d28ceac2c091980a86d8f21b8acec81f732e9ef5a1e41a0e437159b6bf"
+      "size": 13201,
+      "sha256": "7328cc4f99ab76247d1926ca8c39bdf25a691192158dbafc66cebae9baf0d1d7"
     },
     {
       "path": "js/events-model.js",
-      "size": 20459,
-      "sha256": "5309e3f32814c5481f2a0ac3aa9cabf12e7bab0eab683af2e5cc1a770e012363"
+      "size": 20672,
+      "sha256": "899cf961f2cf1d3bfb62c20b8e04b1a2336652feabb60d0e22f816921d3b161b"
     },
     {
       "path": "js/events-ui.js",
@@ -160,9 +160,14 @@
       "sha256": "373ba11f2febf2a15a9b5d20df8cca072fca3ff43e2b9243b2a79dd0d8f15eec"
     },
     {
+      "path": "js/frog-rundown.js",
+      "size": 18229,
+      "sha256": "859ce67e6faf2a1d21d83ef543e5f9891c17fa2f616943382f6040dfa2de0e39"
+    },
+    {
       "path": "js/globe.js",
-      "size": 26087,
-      "sha256": "db137255c53336b4cc9221478e07233843c7ae26d37028cc35d3fb0c0176ff95"
+      "size": 26398,
+      "sha256": "b8d2d40ab258409dc303ddd79edc840baf3621a554c7d100f291e1cd98ca365c"
     },
     {
       "path": "js/layers.js",
@@ -176,8 +181,8 @@
     },
     {
       "path": "js/model.js",
-      "size": 17165,
-      "sha256": "c2b8ae2d3dcba8d595cbbc141e7b4be8048f27845d17f89a45322806c6f433d9"
+      "size": 15962,
+      "sha256": "e5a54d2255aca37838f55404929e74df21c840e57e57030782910e0c4f2fc937"
     },
     {
       "path": "js/playback.js",
@@ -191,8 +196,8 @@
     },
     {
       "path": "js/recorder.js",
-      "size": 14943,
-      "sha256": "26c1cbc621da2e721526d7dba0347c0c7ff7f882169ad1a974d4f886d137d283"
+      "size": 18874,
+      "sha256": "d759065ba37b28ad0ece77188dd73cf6bafb323c925c5d70c09820924411bda2"
     },
     {
       "path": "js/sanitize.js",
@@ -201,8 +206,8 @@
     },
     {
       "path": "js/schema.js",
-      "size": 32660,
-      "sha256": "90309a71b91a6c2f681673f6f5b5bc3aebc0c1c026f72d350b2e9b357700486c"
+      "size": 32673,
+      "sha256": "282f7079b8d2adcf5237b45915e696b7b5caa8da277874b49de6c1fd871e984f"
     },
     {
       "path": "js/settings.js",
@@ -211,23 +216,23 @@
     },
     {
       "path": "js/store.js",
-      "size": 4429,
-      "sha256": "0d75fde5db4c4144b9120ecddb67f1b2566dd38d11827cdf8b9ea7f170c9a032"
+      "size": 5063,
+      "sha256": "4ad68b59a84f6e4c9af1d9a7e6e2d761b979cd84c116fd81d5c3724c381dd2c6"
     },
     {
       "path": "js/themes.js",
-      "size": 2134,
-      "sha256": "c25a28c95b418ee66aac9f6d627aaf037332287912c6abe3566eaaab761d39d8"
+      "size": 2923,
+      "sha256": "726ac73e75c55ce7e18c8f80dd843b896060c94be63b716dcb23a6a269467991"
     },
     {
       "path": "js/ui.js",
-      "size": 53045,
-      "sha256": "de9bf4bbd3f99ce43cec516f47a20524cfde0873ae80eb75e172a55c490826e1"
+      "size": 63658,
+      "sha256": "245e7a8fa48da20da38c6d7ca01930b81055c6e3832efa71fce94117219bd726"
     },
     {
       "path": "js/version.js",
-      "size": 749,
-      "sha256": "f33d9b8d7ecc92b661d38979606c870a246320153e1cda94ae804f26bf170e00"
+      "size": 803,
+      "sha256": "f50fc70fab9a2092856dde5f954d795794e291ca7676e90cb2d99fd7e30e1efe"
     },
     {
       "path": "js/zip.js",
@@ -236,58 +241,13 @@
     },
     {
       "path": "package.json",
-      "size": 421,
-      "sha256": "5b25d3c06c4ac7d7af3b60145275195bd980420e516eb367232ce2b3a6ac9f85"
+      "size": 476,
+      "sha256": "fd114a7dcd081e66a87383f6a270265735f3ce4fc66c78995c4691bafb7d5362"
     },
     {
       "path": "schema/globedesk-story.schema.json",
-      "size": 27648,
-      "sha256": "bbead0a012c53c4bd18ba3b3519b4c027918fae2eb7d13f033db83a221c5ac30"
-    },
-    {
-      "path": "tests/build-templates.mjs",
-      "size": 1621,
-      "sha256": "e550c70525742cc9cfd8a62bd62853eb0d566144a1674e6ae14031c56ad1081e"
-    },
-    {
-      "path": "tests/events.unit.mjs",
-      "size": 6987,
-      "sha256": "dad6cd2e613059815c0cd1f991bb350b716a24839403733fe3cc3992730f9ef0"
-    },
-    {
-      "path": "tests/smoke-events.mjs",
-      "size": 8606,
-      "sha256": "e898750eeaec61b6bab83d15e1d7d0da44ae2ad052ce6d90c94d8b0ab70d5c12"
-    },
-    {
-      "path": "tests/smoke.mjs",
-      "size": 14028,
-      "sha256": "4fa5a253dade8fb6491cf32d4ff7ce9e243153072758a71bcf945b3f574f7e39"
-    },
-    {
-      "path": "tests/unit.mjs",
-      "size": 12765,
-      "sha256": "afa2f5e912d30f1d1634da10a217859008a295911222ac1abee7ec944755ed53"
-    },
-    {
-      "path": "tests/v04.unit.mjs",
-      "size": 9486,
-      "sha256": "d4eee7d39d26b1b279ecea51de96cf4cecae163696d36cdf55fe7daa390614e3"
-    },
-    {
-      "path": "tools/make_grokme_manifest.py",
-      "size": 4565,
-      "sha256": "861cbbf5e380266159b2a7c6e83c0fd587ecf2951cb86be604b6cb46a2a8339f"
-    },
-    {
-      "path": "tools/serve.ps1",
-      "size": 2808,
-      "sha256": "8dc78a829f699a6ee88e6227e7c4414635328f5b5a373c99455d469927fe73e2"
-    },
-    {
-      "path": "tools/serve.py",
-      "size": 2896,
-      "sha256": "571e1feea89f2341d797a63812e190b4e02aec5bd5d7bea95a24f7d2f6deb340"
+      "size": 27668,
+      "sha256": "2df9c689ef5660f8255bec28d93d260306ba92a99346a390c3e4f5140b3fd2c5"
     },
     {
       "path": "vendor/LICENSE-maplibre.txt",
@@ -306,7 +266,7 @@
     }
   ],
   "totals": {
-    "files": 59,
-    "bytes": 2399407
+    "files": 51,
+    "bytes": 2718759
   }
 }

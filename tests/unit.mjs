@@ -3,15 +3,15 @@ import fs from "node:fs"; import vm from "node:vm"; import path from "node:path"
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ctx = { window: {}, Date, URL, TextEncoder, TextDecoder, Uint8Array, ArrayBuffer, DataView, console }; vm.createContext(ctx);
 vm.runInContext(fs.readFileSync(path.join(root, "data", "land.js"), "utf8"), ctx);
-for (const f of ["themes", "captions", "events-model", "sanitize", "zip", "schema", "model", "layers", "audio-mix", "recorder"]) vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
-const { model, captions, themes, recorder, sanitize, zip, schema, layers, audioMix } = ctx.window.GD;
+for (const f of ["themes", "captions", "events-model", "sanitize", "zip", "schema", "frog-rundown", "model", "archive", "layers", "audio-mix", "recorder"]) vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
+const { model, captions, themes, recorder, sanitize, zip, schema, layers, audioMix, archive } = ctx.window.GD;
 const land = ctx.window.GD_LAND;
 const J = (v) => JSON.parse(JSON.stringify(v));
 assert.deepEqual = ((orig) => (a, b, m) => orig(J(a), J(b), m))(assert.deepEqual);
 let n = 0; const t = (name, fn) => { fn(); n++; console.log("ok -", name); };
 
-t("demo has 3 stories, CTD look, outro, unverified approximate locations", () => {
-  const ep = model.demoEpisode();
+t("archived CTD show: 3 stories, CTD look, outro, unverified approximate locations, creator credited", () => {
+  const ep = archive.ctdEpisode();
   assert.equal(ep.stories.length, 3);
   assert.equal(ep.look.theme, "ctd");
   assert.equal(ep.look.lowerThird, false);
@@ -21,6 +21,9 @@ t("demo has 3 stories, CTD look, outro, unverified approximate locations", () =>
     assert.equal(s.location.note, "demo, not verified");
     assert.ok(s.sources.every((x) => x.status === "unverified"));
     assert.ok(s.sources.every((x) => !x.url || /^https:\/\/x\.com\/TheCriticalDri1\/status\//.test(x.url)), "only crit's posts linked");
+    assert.equal(s.sources.length, 1, "one source box, no blank source");
+    assert.equal(s.credit, "@TheCriticalDri1");
+    assert.equal(s.creditUrl, s.sources[0].url);
   }
   assert.deepEqual(model.validate(ep), []);
 });
@@ -63,8 +66,8 @@ t("citation layout: title starts to the right of the badge and stays inside the 
   assert.ok(lay.headerBottom <= 1080 * 0.16);
   assert.ok(lay.titleLines.length >= 1);
 });
-t("pacing: demo is ~6 shots in ~48 s plus outro", () => {
-  const ep = model.demoEpisode();
+t("pacing: archived CTD show is ~6 shots in ~48 s plus outro", () => {
+  const ep = archive.ctdEpisode();
   const shots = ep.stories.reduce((a, s) => a + s.camera.filter((k) => k.cut).length, 0);
   assert.equal(shots, 6);
   assert.equal(model.storiesDuration(ep), 48);

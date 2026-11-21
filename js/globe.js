@@ -215,9 +215,11 @@
     map.setPaintProperty("gd-countries", "line-blur", soft ? 1.2 : 0);
     map.setPaintProperty("gd-countries", "line-color", soft ? "#ffffff" : "#4d8fd0");
     setOrUpdate("gd-highlight", highlightGeoJSON());
-    if (!map.getLayer("gd-hl-fill")) map.addLayer({ id: "gd-hl-fill", type: "fill", source: "gd-highlight", paint: { "fill-color": hl, "fill-opacity": 0.22 } });
-    if (!map.getLayer("gd-hl-glow")) map.addLayer({ id: "gd-hl-glow", type: "line", source: "gd-highlight", paint: { "line-color": hl, "line-width": 12, "line-blur": 8, "line-opacity": 0.85 } });
-    if (!map.getLayer("gd-hl-line")) map.addLayer({ id: "gd-hl-line", type: "line", source: "gd-highlight", paint: { "line-color": hl, "line-width": 2.6, "line-opacity": 1 } });
+    // The bundled outlines are coarse, so the focus glow fades out by region zoom (~z7.5)
+    // instead of drawing a misplaced border over city streets.
+    if (!map.getLayer("gd-hl-fill")) map.addLayer({ id: "gd-hl-fill", type: "fill", source: "gd-highlight", paint: { "fill-color": hl, "fill-opacity": ["interpolate", ["linear"], ["zoom"], 5.5, 0.22, 7.5, 0] } });
+    if (!map.getLayer("gd-hl-glow")) map.addLayer({ id: "gd-hl-glow", type: "line", source: "gd-highlight", paint: { "line-color": hl, "line-width": 12, "line-blur": 8, "line-opacity": ["interpolate", ["linear"], ["zoom"], 5.5, 0.85, 7.5, 0] } });
+    if (!map.getLayer("gd-hl-line")) map.addLayer({ id: "gd-hl-line", type: "line", source: "gd-highlight", paint: { "line-color": hl, "line-width": 2.6, "line-opacity": ["interpolate", ["linear"], ["zoom"], 5.5, 1, 7.5, 0] } });
     ["gd-hl-fill"].forEach((id) => map.setPaintProperty(id, "fill-color", hl));
     ["gd-hl-glow", "gd-hl-line"].forEach((id) => map.setPaintProperty(id, "line-color", hl));
     ["gd-hl-fill", "gd-hl-glow", "gd-hl-line"].forEach((id) => map.setLayoutProperty(id, "visibility", vis(ov.highlight !== false)));

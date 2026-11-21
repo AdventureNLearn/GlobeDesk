@@ -930,6 +930,7 @@
         "theme": {
           "type": "string",
           "enum": [
+            "frog",
             "ctd",
             "newsdesk"
           ]

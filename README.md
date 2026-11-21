@@ -2,13 +2,15 @@
 
 A local, free newsdesk and video-editing studio built on a talking globe. You pick the stories, and the globe flies from orbit all the way down to street level for each one. Topic cards pin to the place, sources carry a verified or unverified label, captions are always on, and you drop in your own pre-recorded voiceover and media. Create your own stories, drop pins, import event layers, attach local video, images and audio, place them on the globe, and export a shareable `.globedesk` project or a local WebM at 16:9 or 9:16.
 
-The bundled **Sample** episode is a removable template inspired by the public format of **@TheCriticalDri1** ("CTD's Geopolitics Update"). The default **CTD** look follows that public 47-second vertical cut as an example use case only. Claims in the sample are not verified and are not GlobeDesk's reporting. Start from **New blank** to make your own show.
+**AdventureNLearn Edition (v0.5.1).** GlobeDesk opens on **Frogpost**, the show by **[@AdventureNLearn](https://x.com/AdventureNLearn)**: a frog-narrated rundown of 50 things being built, flooded, filed or mapped, in five fixed groups (Build it, Globe encyclopedia, Water and works, Receipts, Frogpost). The frog is the narrator, not the subject. The rundown is a sample: locations are approximate, and claims are as reported, not verified. Start from **New blank** to make your own show.
 
-> **Status:** v0.5.0. Local only. No backend, no account, no required API key. Media you add stays on this device.
+Every show and story that has ever gone into the desk stays in the **Archive**, with its own card and its creator credit, and can be opened again at any time.
+
+> **Status:** v0.5.1 · AdventureNLearn Edition. Local only. No backend, no account, no required API key. Media you add stays on this device.
 
 ## Risks / read first
 
-- **Demo data is approximate and not verified.** Pins, zones, scripts and cards in the bundled demo are placeholders restated from public posts. They are not independently checked. Every claim should be treated as "as reported, not verified" unless you check it yourself.
+- **Sample data is approximate and not verified.** Pins, scripts and cards in the bundled shows are restated from public posts and the linked sources. They are not independently checked. Every claim should be treated as "as reported, not verified" unless you check it yourself.
 - **Third-party tile services have no uptime guarantee.** The free satellite and street maps come from EOX, OpenFreeMap (and, if you turn them on, terrain tiles and NASA GIBS). They can be slow, incomplete, or unavailable. If a street or satellite *style* fails to load, GlobeDesk falls back to the bundled offline globe (coastlines, countries and towns only). If tiles fail later, use Layers → Offline globe; the app will prompt you.
 - **Recording is local.** WebM capture, JSON, project packs, captions and layer exports stay in your browser or your Downloads folder. Nothing is uploaded by GlobeDesk.
 - **Uploads stay on this device.** Audio, video and images you drop in are stored in this browser's IndexedDB only. They are never sent to a GlobeDesk server (there isn't one). You are responsible for having the rights to anything you upload, record, or share with someone else.
@@ -33,7 +35,7 @@ npx serve .
 
 Then open <http://127.0.0.1:8080>. Use a local server rather than `file://`.
 
-URL options: `?blank=1` (start from the blank template), `?sample=1` (load the removable sample), `?base=offline` (bundled globe, no network), `?aspect=9:16`, `?t=25` (seek, in seconds), `?import=/episodes/....json` (same-origin episode only).
+URL options: `?blank=1` (start from the blank template), `?sample=1` (load the Frogpost sample), `?archive=<show id>` (open an archived show, e.g. `frogpost-2026-11-20`), `?base=offline` (bundled globe, no network), `?aspect=9:16`, `?t=25` (seek, in seconds), `?import=/episodes/....json` (same-origin episode only).
 
 Tests (Node 20+, plus Google Chrome for the smoke test):
 
@@ -103,7 +105,7 @@ Truncated titles and citations on the stage show their full text on hover or cli
 | **Sources tab** | Label, https link, a **verified or unverified** status, and a note. Anything unknown is marked `[UNKNOWN]`. |
 | **Captions tab** | Auto cues from the script, SRT/VTT import, and per-cue editing. Export SRT or VTT for the whole episode from the top bar. |
 | **Shots tab** | Media from the bin: b-roll or still, timing, and a per-shot citation. Pick the story's voiceover track here. |
-| **Look tab** | Theme preset (CTD / Newsdesk), show name, date, handle, header badge, caption size and style, citation boxes, lower third, shot length, colors, and the **editable outro card**. |
+| **Look tab** | Theme preset (Frogpost / CTD / Newsdesk), show name, date, handle, header badge, caption size and style, citation boxes, lower third, shot length, colors, and the **editable outro card**. |
 | **Layers tab** | Base maps and overlays, each with its credit and terms (see below). |
 | **Sound tab** | Your own audio tracks per story: volume, offset into the file, loop, start time. Mixed into playback and the local WebM recording. Pre-recorded voiceover still lives on the Shots tab. |
 | **Place tab** | Put uploaded media on the desk as a card, a pin popup, a screen overlay (picture-in-picture or full frame, with position, size and opacity), a geo-anchored panel that moves with the map, or an allowlisted https embed (YouTube / X) with credit required. Each element is clickable, can be shown or hidden, and has timing and order. |
@@ -112,19 +114,28 @@ Truncated titles and citations on the stage show their full text on hover or cli
 | **Save project** | Export a `.globedesk` pack (JSON plus media) you can move to another machine, or a `.globedesk.json` episode without media. The desk also autosaves in this browser. |
 | **Optional paid** | Settings for features that cost money, all off by default (see below). |
 
-### CTD preset (default)
+### Frogpost preset (default)
 
-This is built from the creator's public 47-second vertical cut, and everything in it can be changed in the Look tab.
+The `frog` look is first in the Look menu and is what a new file, the **Sample** button, `?sample=1` and a missing save use. Everything in it can be changed in the Look tab.
 
-- **Voiceover over maps and file media, no music, cold open.** The episode starts speaking over the map at t = 0.
-- **Persistent header (top 15%).** A red `NOW COVERING` badge and a white headline to the right of the badge, with a second bar for show, date and handle.
-- **Source citation boxes.** Small, semi-transparent grey boxes in the upper left, **under the header**, in the form `File photo (Apr 2026) / Photo: … / …; Public domain`. Each shot (map keyframe cut or media shot) has its own citation. Map shots set to `auto` take the credit of whichever base map is on.
-- **Captions always on.** Bottom center (the bottom 15%), large bold white sans-serif, 1–2 lines, no box, with a drop shadow. No lower third and no ticker.
-- **Maps.** Satellite at low zoom, blending into OpenFreeMap streets, place labels and 3D buildings at street zoom; soft white borders; the focus country with a **glowing orange border and a translucent fill**; and flat white country labels.
-- **Pacing.** About 6 cuts in about 47 s: the auto path makes two ~8 s shots per story, cut on topic shifts. Water pins without a land street-level target stay at a regional close instead of an empty-sea street dive.
-- **Outro.** A solid dark navy card with "Full brief on the channel", the channel link, and the X mark with the handle. All three are editable placeholders.
-- **Palette.** Neutral dark grey, black and white, with red accents and orange map highlights.
-- **9:16 safe zones.** Header 15% at the top, captions 15% at the bottom, 6% side margins (toggle the guides under the stage).
+- **Palette.** Background `#0c1610`, ink `#f3f7ef`, accent `#3dbe6a`, highlight `#d6f25c`, panel `rgba(16,42,28,0.78)`, outro `#07140c`. The page chrome uses the same pond green.
+- **Persistent header (top 15%).** A green `FROGPOST` badge and a white headline to the right of the badge, with a second bar for show, date and handle. The handle on the stage is a link.
+- **Source citation boxes.** Small panels in the upper left, **under the header**. Each shot (map keyframe cut or media shot) has its own citation. Map shots set to `auto` take the credit of whichever base map is on. A story shows one source box per real source; empty sources are not shown.
+- **Captions always on.** Bottom center (the bottom 15%), large bold white, 1–2 lines, drop shadow. No lower third, no ticker, no music.
+- **Maps.** Satellite plus streets (`sat-hybrid`), soft borders, focus-country glow, flat white country labels.
+- **Pacing.** 8 s shots; each Frogpost story is 16 s with one card. Stories with no single place have no pin and no camera move.
+- **9:16 safe zones.** Header 15% at the top, captions 15% at the bottom, 6% side margins.
+
+Other looks: **CTD** (red header, optional) and **Newsdesk** (lower third, boxed captions). Neither is the default.
+
+### Archive
+
+The **Archive** button opens a page with a card for every story that has ever been in the desk:
+
+- the bundled shows: **Frogpost** (50 stories) and the archived **CTD** geopolitics show from 20 Nov 2026 (3 stories, credited and linked to its creator);
+- every story you add or load, saved on this device (IndexedDB key `archive`).
+
+The archive only grows. Deleting a story from the rundown, starting a new blank episode, or opening another file never removes a card. **Open** loads a bundled show at that story. **Bring back into this episode** puts the story back into the current rundown exactly as it was saved.
 
 ### Episode model (`globedesk.episode/1`)
 
@@ -145,9 +156,9 @@ citation: {type, date, credit, license}
 
 `location` is the story pin. `location.look` is an optional camera / street-level target (a land point can be used even when the pin is in open water). If `look` is omitted, the camera uses the pin. Street zoom (about z16–17, pitched) is applied only when that target is on land.
 
-Templates: `episodes/blank.globedesk.json` and `episodes/demo-2026-11-20.globedesk.json`. The app also builds both in memory with the **New blank** and **Demo** buttons. Older `.gobedesk.json` files and the legacy `gobedesk.episode/1` schema still open.
+Templates: `episodes/blank.globedesk.json` and `episodes/frogpost-2026-11-20.globedesk.json` (the default show). `episodes/demo-2026-11-20.globedesk.json` is the archived CTD show; it is kept and never regenerated. The app also builds these in memory (**New blank**, **Sample**, **Archive**). Older `.gobedesk.json` files and the legacy `gobedesk.episode/1` schema still open.
 
-**About the demo:** it uses three Nov 20 '26 stories from the creator's public posts as *placeholder structure only*. Locations are approximate (a strait center, a city center; the Riyadh tower is deliberately not pinned) and labeled "demo, not verified". The only links are the creator's two public X posts, marked unverified. Every other fact, vessel, bridge and building is `[UNKNOWN]`. Credits use the public handle **@TheCriticalDri1** only.
+**About the Frogpost sample:** the 50 rows in `js/frog-rundown.js` come from @AdventureNLearn's posts and the sources linked on each card. Card text is used as written. Each story is unverified and "as reported". Pins are approximate stand-ins (a city, a port, a strait); six stories have no single place and no pin. Where a detail is not in the source, the card says `[UNKNOWN]`. Where a source link is missing, the card says so.
 
 ## Event Layers (v0.2)
 
@@ -160,8 +171,8 @@ These are data layers you build to show **where events took place**, right on th
 - **Event clock:** *Follow playback* sweeps each story's event window (start → end, in ISO) over the story's duration. Features appear when their date is reached, and routes draw from their start time to their end time. *Manual* gives a slider when paused; *Show all* turns it off.
 - **Auto-frame:** **Frame** on a layer or a feature flies the camera to fit it. **+ Camera keyframe framing this layer** adds that view as a cut at the playhead.
 - **On-globe visuals** (all in the map canvas, so recordings capture them): pulsing markers, routes with a glow and a moving head, glowing zone fills (dashed edge when *disputed*), and radius rings with ripples. Labels show title, time, verification and an EXAMPLE tag where it applies. The shared overlay painter draws them, so the preview and the WebM match. The **Readable view** lists every visible event as text.
-- **Import / export:** GeoJSON (with the layer's style kept under `globedesk_layer`), CSV (`title,lat,lon,event_time,event_end,time_approx,category,verification,source_label,source_url,radius_km,notes`) and KML. Layers are saved inside the episode JSON, and each one can also be saved as a standalone `.geojson`. The demo's layers are in `episodes/layers/`.
-- **Demo data:** "Demo event places (demo, not verified)" puts one point at each demo story's existing approximate location, linked only to the creator's post. "EXAMPLE PLACEHOLDERS (not real data)" holds one 25 km ring that is marked as an example, with its source `[UNKNOWN]`. No events, coordinates or sources were invented.
+- **Import / export:** GeoJSON (with the layer's style kept under `globedesk_layer`), CSV (`title,lat,lon,event_time,event_end,time_approx,category,verification,source_label,source_url,radius_km,notes`) and KML. Layers are saved inside the episode JSON, and each one can also be saved as a standalone `.geojson`. The sample layers are in `episodes/layers/`.
+- **Sample data:** "Sample story places (approximate, not verified)" puts one point at each pinned Frogpost story's approximate location, linked to that story's own source. The six stories with no single place are left off the layer. The archived CTD show keeps its own layer plus "EXAMPLE PLACEHOLDERS (not real data)", one 25 km ring marked as an example with its source `[UNKNOWN]`. No events, coordinates or sources were invented.
 
 ## Free vs optional paid
 

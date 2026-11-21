@@ -26,12 +26,12 @@
   }
 
   // ---------- Episode lifecycle ----------
-  function loadEpisode(ep, why) {
+  function loadEpisode(ep, why, opts) {
     if (GD.model.normalizeEpisode) GD.model.normalizeEpisode(ep);
     const errs = (GD.schema && GD.schema.validate) ? GD.schema.validate(ep) : GD.model.validate(ep);
     if (errs.length) { toast("Episode not loaded: " + errs[0]); console.warn("validate:", errs); return false; }
     // Fill look/outro defaults for older files.
-    ep.look = Object.assign(GD.themes.lookFor((ep.look && ep.look.theme) || "ctd"), ep.look || {});
+    ep.look = Object.assign(GD.themes.lookFor((ep.look && ep.look.theme) || GD.themes.DEFAULT || "frog"), ep.look || {});
     ep.outro = Object.assign({ enabled: true, durationSec: 5, line1: "Full brief on the channel", link: "[channel link]", handle: "@[handle]", showXLogo: true }, ep.outro || {});
     ep.mediaBin = ep.mediaBin || [];
     ep.eventLayers = ep.eventLayers || [];
@@ -47,8 +47,36 @@
     if (!(ep.stories[0].camera || []).length && GD.globe.st.map) GD.globe.st.map.jumpTo({ center: [40, 28], zoom: 1.6, pitch: 0, bearing: 0 });
     if (GD.content) { GD.content.clear(); GD.content.render(); }
     if (GD.store) GD.store.schedule(ep);
+    rememberSoon((opts && opts.showId) || null);
+    renderBrand();
     if (why) toast(why);
     return true;
+  }
+
+  // Every story that is loaded or added is snapshotted into the append-only archive.
+  let archTimer = 0, archShow = null;
+  function rememberSoon(showId) {
+    if (!GD.archive || !S.episode) return;
+    if (showId !== undefined) archShow = showId || null;
+    clearTimeout(archTimer);
+    archTimer = setTimeout(() => {
+      const ep = S.episode;
+      const bundled = (ep.sample || ep.demo) ? GD.archive.SHOWS.find((x) => x.show === ep.show) : null;
+      GD.archive.rememberEpisode(ep, archShow || (bundled && bundled.id) || ep.id).catch((e) => console.warn("archive save failed", e && e.message));
+    }, 600);
+  }
+
+  // Handle -> https://x.com/<name> only when the handle is a plain @name.
+  function handleUrl(h) {
+    const m = /^@([A-Za-z0-9_]{1,15})$/.exec(String(h || "").trim());
+    return m ? "https://x.com/" + m[1] : "";
+  }
+  function renderBrand() {
+    const a = $("handleLink"); if (!a || !S.episode) return;
+    const h = S.episode.handle, url = handleUrl(h);
+    if (url) { a.textContent = h; a.href = url; a.hidden = false; } else { a.hidden = true; }
+    const name = document.querySelector(".brand-name");
+    if (name) name.textContent = S.episode.show && S.episode.show !== U ? S.episode.show : "GlobeDesk";
   }
 
   function download(name, text, type) {
@@ -112,6 +140,8 @@
     renderRundown(); renderInspector(); renderTransport(); renderOverlays();
     if (GD.content) GD.content.render();
     if (GD.store) GD.store.schedule(S.episode);
+    rememberSoon();
+    renderBrand();
   }
 
   function renderTransport() {
@@ -143,7 +173,10 @@
     ctx.clearRect(0, 0, cv.width, cv.height);
     const map = GD.globe.st.map, k = map ? cv.width / (map.getContainer().clientWidth || cv.width) : 1;
     const proj = map ? (ll) => { const p = map.project(ll); return [p.x * k, p.y * k]; } : null;
-    if (cv.width && S.episode) GD.recorder.paintOverlays(ctx, cv.width, cv.height, proj);
+    // Preview only: keep the topic card clear of the map's zoom/compass buttons (not in recordings).
+    const ctrl = document.querySelector("#stage .maplibregl-ctrl-top-right");
+    const reserveRight = ctrl && ctrl.offsetWidth ? (ctrl.offsetWidth + 14) * dpr : 0;
+    if (cv.width && S.episode) GD.recorder.paintOverlays(ctx, cv.width, cv.height, proj, { reserveRight });
     renderMediaLayer();
     if (GD.content) GD.content.render();
     syncHits();
@@ -151,7 +184,8 @@
     const box = $("readable"), s = story();
     if (S.ov.outro) { const o = S.episode.outro; box.innerHTML = `<p><strong>${esc(o.line1)}</strong><br>${esc(o.link)}<br>${esc(o.handle)}</p>`; }
     else box.innerHTML = `<p class="muted small">${esc(S.episode.look.headerBadge || "")} — <span title="${esc(s.title)}">${esc(s.title)}</span>${S.episode.sample || S.episode.demo ? ' <span class="pill warn">Sample</span>' : ""}</p>` +
-      S.ov.citations.map((c) => `<p class="small" title="${esc(c)}">Source box: ${esc(c)}</p>`).join("") +
+      creditLine(s) +
+      S.ov.citations.filter((c) => c && c.trim()).map((c) => `<p class="small" title="${esc(c)}">Source box: ${esc(c)}</p>`).join("") +
       S.ov.cards.map((c) => `<article><strong>${esc(c.title)}</strong> <span class="pill ${c.verified ? "ok" : "warn"}">${c.verified ? "verified" : "unverified"}</span><p>${esc(c.body)}</p>${c.why && c.why !== U ? `<p><em>Why it matters:</em> ${esc(c.why)}</p>` : ""}</article>`).join("") +
       (S.ov.captions.length ? `<p class="cap">${esc(S.ov.captions.join(" "))}</p>` : "") +
       (GD.eventsMap ? (() => { const r = GD.eventsMap.readable(); return r.length ? `<p class="small"><strong>Events on the globe (${r.length}):</strong></p><ul class="small">${r.map((e) => `<li>${esc(e.title)} — ${esc(e.time)} — ${esc(e.category)} — <strong>${esc(e.verification)}</strong> — ${esc(e.precision)}${e.example ? " — EXAMPLE PLACEHOLDER" : ""}</li>`).join("")}</ul>` : ""; })() : "");
@@ -160,6 +194,16 @@
       renderOverlays._idx = S.storyIdx; renderRundown(); renderTransport();
       if (!$("inspector").contains(document.activeElement)) renderInspector();
     }
+  }
+
+  // Creator credit and story sources as real links. Blank sources are skipped.
+  function creditLine(s) {
+    const parts = [];
+    if (s.credit) parts.push(s.creditUrl && httpsOk(s.creditUrl) ? `Credit: <a href="${esc(s.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(s.credit)}</a>` : `Credit: ${esc(s.credit)}`);
+    const srcs = (s.sources || []).filter((x) => x && x.url && httpsOk(x.url) && x.url !== s.creditUrl);
+    srcs.forEach((x) => parts.push(`Source: <a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.label && x.label !== U ? x.label : x.url)}</a> <span class="pill warn">${esc(x.status)}</span>`));
+    if (!s.credit && !srcs.length && !(s.sources || []).some((x) => x && x.url)) parts.push(`Source: missing ${esc(U)}`);
+    return parts.length ? `<p class="small credit">${parts.join(" · ")}</p>` : "";
   }
 
   const mediaEls = {};
@@ -186,8 +230,14 @@
   }
 
   function renderInspector() {
-    document.querySelectorAll(".tabs button").forEach((b) => b.classList.toggle("on", b.dataset.tab === S.tab));
+    document.querySelectorAll(".tabs button").forEach((b) => {
+      const on = b.dataset.tab === S.tab;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+    });
     const el = $("inspector"), s = story();
+    el.setAttribute("aria-labelledby", "tab-" + S.tab);
     const R = { story: tabStory, camera: tabCamera, cards: tabCards, sources: tabSources, captions: tabCaptions, shots: tabShots, look: tabLook, layers: tabLayers, events: (root) => GD.eventsUI.render(root), sound: tabSound, place: (root, st) => GD.content.tab(root, st), assist: (root) => GD.assistant.tab(root) }[S.tab];
     el.innerHTML = "";
     R(el, s);
@@ -303,7 +353,7 @@
 
   function tabCamera(el, s) {
     const P = GD.model.PRESETS;
-    el.innerHTML = `<p class="muted small">Keyframes fire at their start time. A <strong>cut</strong> starts a new shot (CTD pacing: 7–9 s per shot, cut on topic shifts). Each shot carries its own source-citation box. The street-level preset (about z16–17, pitched) is used only when the story's street-level target — or the pin, if no target is set — is on land.</p>
+    el.innerHTML = `<p class="muted small">Keyframes fire at their start time. A <strong>cut</strong> starts a new shot (default pacing: 7–9 s per shot, cut on topic shifts). Each shot carries its own source-citation box. The street-level preset (about z16–17, pitched) is used only when the story's street-level target — or the pin, if no target is set — is on land.</p>
       <div class="actions"><button id="kfAdd">+ Keyframe from current view</button><button id="kfAuto">Auto path</button><button id="kfStreet">Go to street level</button></div>
       ${(s.camera || []).map((k, i) => `<div class="item"><h3><span class="sp">${i + 1}. ${esc((P[k.preset] || {}).label || k.preset)}</span><button data-go="${i}" class="small">Preview</button><button data-set="${i}" class="small">Set = view</button><button data-del="${i}" class="small">✕</button></h3>
         <div class="row3">${field("At (s)", k.at, `data-f="${i}.at" type="number" step="0.1"`)}${field("Move (s)", k.durationSec, `data-f="${i}.durationSec" type="number" step="0.1"`)}
@@ -401,7 +451,7 @@
   }
 
   function tabCaptions(el, s) {
-    el.innerHTML = `<p class="muted small">Captions are on by default (CTD style: bottom center, bold white, drop shadow). Times are seconds from the story start.</p>
+    el.innerHTML = `<p class="muted small">Captions are on by default (bottom center, bold white, drop shadow). Times are seconds from the story start.</p>
       <div class="actions"><button id="capAuto">Auto from script</button><label class="btn">Import SRT/VTT<input id="capFile" type="file" accept=".srt,.vtt,text/vtt" hidden></label><button id="capAdd">+ Cue</button><button id="capClear">Clear</button></div>
       ${(s.captions || []).map((c, i) => `<div class="item"><div class="row3">${field("Start", c.start, `data-f="${i}.start" type="number" step="0.05"`)}${field("End", c.end, `data-f="${i}.end" type="number" step="0.05"`)}<button data-del="${i}" class="small">✕</button></div>
         <label>Text<input data-f="${i}.text" value="${esc(c.text)}"></label></div>`).join("") || "<p>No cues.</p>"}`;
@@ -420,7 +470,7 @@
 
   function tabShots(el, s) {
     const bin = S.episode.mediaBin;
-    el.innerHTML = `<p class="muted small">Drop files into the bin, then add them here (or drag a bin item onto the stage). Each shot has its own citation box. Voiceover plays from the story start; music is off in the CTD look.</p>
+    el.innerHTML = `<p class="muted small">Drop files into the bin, then add them here (or drag a bin item onto the stage). Each shot has its own citation box. Voiceover plays from the story start; music is off in the Frogpost look.</p>
       <label>Voiceover for this story<select id="vo"><option value="">None (silent / browser voice)</option>${bin.filter((b) => b.kind === "audio").map((b) => `<option value="${esc(b.ref)}" ${s.voiceover === b.ref ? "selected" : ""}>${esc(b.name)}</option>`).join("")}</select></label>
       ${(s.media || []).map((m, i) => { const b = bin.find((x) => x.ref === m.mediaRef); return `<div class="item"><h3><span class="sp">${esc(b ? b.name : m.mediaRef)}</span>${S.blobs[m.mediaRef] ? "" : '<span class="pill warn">relink file</span>'}<button data-del="${i}" class="small">✕</button></h3>
         <div class="row3">${field("At (s)", m.at, `data-f="${i}.at" type="number" step="0.1"`)}${field("For (s)", m.dur, `data-f="${i}.dur" type="number" step="0.1"`)}
@@ -479,7 +529,7 @@
         <label>Style<select data-l="captionStyle">${["shadow", "box"].map((z) => `<option ${z === L.captionStyle ? "selected" : ""}>${z}</option>`).join("")}</select></label></div></div>
       <div class="item"><h3>Overlays</h3>
         <label><input type="checkbox" data-l="citations" ${L.citations !== false ? "checked" : ""}> Source citation boxes</label>
-        <label><input type="checkbox" data-l="lowerThird" ${L.lowerThird ? "checked" : ""}> Lower third (off in CTD)</label>
+        <label><input type="checkbox" data-l="lowerThird" ${L.lowerThird ? "checked" : ""}> Lower third (off in Frogpost)</label>
         ${field("Default shot length (s)", L.shotSec, 'data-l="shotSec" type="number" step="0.5"')}
         <div class="row3">${field("Accent", P.accent, 'data-p="accent" type="color"')}${field("Map highlight", P.highlight, 'data-p="highlight" type="color"')}${field("Outro bg", P.outroBg, 'data-p="outroBg" type="color"')}</div></div>
       <div class="item"><h3>Outro card</h3>
@@ -586,6 +636,19 @@
       host.appendChild(d);
     };
     if (hits.title) box(hits.title, "Title");
+    if (hits.handle && hits.handle.text) {
+      const url = handleUrl(hits.handle.text);
+      if (url) {
+        const a = document.createElement("a");
+        a.className = "gd-hit gd-hit-link";
+        a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
+        a.style.left = (hits.handle.x * sx) + "px"; a.style.top = (hits.handle.y * sy) + "px";
+        a.style.width = Math.max(12, hits.handle.w * sx) + "px"; a.style.height = Math.max(12, hits.handle.h * sy) + "px";
+        a.title = hits.handle.text + " on X";
+        a.setAttribute("aria-label", hits.handle.text + " on X (opens in a new tab)");
+        host.appendChild(a);
+      }
+    }
     (hits.citations || []).forEach((c) => box(c, "Citation"));
   }
 
@@ -593,6 +656,7 @@
   function applyAspect(a) {
     a = a || "16:9";
     if (S.episode && S.episode.output) S.episode.output.aspect = a;
+    document.body.classList.toggle("aspect-916", a === "9:16");
     const asp169 = $("asp169"), asp916 = $("asp916");
     if (asp169) asp169.classList.toggle("on", a === "16:9");
     if (asp916) asp916.classList.toggle("on", a === "9:16");
@@ -626,7 +690,20 @@
   function wire() {
     $("epTitle").addEventListener("change", (e) => { S.episode.title = e.target.value; changed(); });
     $("btnNew").addEventListener("click", () => loadEpisode(GD.model.blankEpisode(), "New blank episode."));
-    $("btnDemo").addEventListener("click", () => loadEpisode(GD.model.demoEpisode(), "Sample loaded. Removable. Locations approximate, not verified."));
+    $("btnDemo").addEventListener("click", () => loadEpisode(GD.model.demoEpisode(), "Frogpost sample loaded. Removable. Locations approximate, claims as reported, not verified.", { showId: "frogpost-2026-11-20" }));
+    $("btnArchive").addEventListener("click", openArchive);
+    $("archiveClose").addEventListener("click", () => $("archive").close());
+    $("btnMenu").addEventListener("click", () => {
+      const open = !document.body.classList.contains("menu-open");
+      document.body.classList.toggle("menu-open", open);
+      $("btnMenu").setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    $("tools").addEventListener("click", (e) => {
+      if (e.target.closest("button") && document.body.classList.contains("menu-open") && e.target.id !== "btnMenu") {
+        document.body.classList.remove("menu-open"); $("btnMenu").setAttribute("aria-expanded", "false");
+      }
+    });
+    wireCollapsibles();
     $("fileOpen").addEventListener("change", async (e) => {
       const f = e.target.files[0]; if (!f) return;
       try {
@@ -651,7 +728,12 @@
     $("showSafe").addEventListener("change", (e) => $("safe").classList.toggle("on", e.target.checked));
     $("safe").classList.add("on");
     $("addStory").addEventListener("click", () => { S.episode.stories.push(GD.model.blankStory(S.episode.stories.length + 1)); S.storyIdx = S.episode.stories.length - 1; changed(); });
-    document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => { S.tab = b.dataset.tab; renderInspector(); }));
+    const tabBtns = Array.from(document.querySelectorAll(".tabs button"));
+    tabBtns.forEach((b) => b.addEventListener("click", () => { S.tab = b.dataset.tab; renderInspector(); }));
+    tabBtns.forEach((b, i) => b.addEventListener("keydown", (e) => {
+      const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0; if (!d) return;
+      e.preventDefault(); const n = tabBtns[(i + d + tabBtns.length) % tabBtns.length]; n.focus(); n.click();
+    }));
     $("btnSettings").addEventListener("click", () => { GD.settings.render($("settingsBody")); $("settings").showModal(); });
     $("btnRecord").addEventListener("click", toggleRecord);
     const drop = $("drop");
@@ -677,6 +759,77 @@
       a.setAttribute("open", "");
     };
     GD.globe.st.map.on("load", revealAttrib); GD.globe.st.map.on("styledata", revealAttrib);
+    // Phones: the same map credits are mirrored into a line under the globe (CSS hides the
+    // in-stage box under 760 px), so the credit stays fully readable without covering the globe.
+    const mirrorCredit = () => {
+      const inner = document.querySelector("#stage .maplibregl-ctrl-attrib-inner"), out = $("stageCredit");
+      if (!inner || !out) return;
+      if (out._html === inner.innerHTML) return;
+      out._html = inner.innerHTML;
+      const c = inner.cloneNode(true);
+      c.querySelectorAll("a").forEach((x) => { x.target = "_blank"; x.rel = "noopener noreferrer"; });
+      out.replaceChildren(...c.childNodes);
+    };
+    ["load", "styledata", "sourcedata", "idle"].forEach((ev) => GD.globe.st.map.on(ev, mirrorCredit));
+  }
+
+  // ---------- Phone layout: collapsible sections ----------
+  function wireCollapsibles() {
+    const closedOnPhone = { binPanel: true, readablePanel: true };
+    document.querySelectorAll(".desk .panel").forEach((p) => {
+      const h = p.querySelector(":scope > h2"); if (!h || h.querySelector(".fold")) return;
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "fold";
+      const label = (h.firstChild && h.firstChild.textContent || "section").trim();
+      b.setAttribute("aria-label", "Show or hide " + label);
+      const set = (closed) => { p.classList.toggle("closed", closed); b.setAttribute("aria-expanded", closed ? "false" : "true"); b.textContent = closed ? "▸" : "▾"; };
+      set(window.matchMedia && window.matchMedia("(max-width: 760px)").matches && !!closedOnPhone[p.id]);
+      b.addEventListener("click", (e) => { e.stopPropagation(); set(!p.classList.contains("closed")); applyAspect(S.episode.output.aspect); });
+      h.insertBefore(b, h.firstChild);
+    });
+  }
+
+  // ---------- Archive (selection page) ----------
+  async function openArchive() {
+    const dlg = $("archive"), body = $("archiveBody");
+    body.innerHTML = '<p class="muted small">Loading the archive…</p>';
+    if (!dlg.open) dlg.showModal();
+    let local = null;
+    try { local = await GD.archive.load(); } catch (e) { local = null; }
+    const idx = GD.archive.all(local);
+    const cards = GD.archive.list(idx);
+    const inEp = new Set((S.episode.stories || []).map((x) => x.id));
+    const link = (url, text) => url && httpsOk(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(text)}</a>` : esc(text);
+    const groups = [];
+    GD.archive.SHOWS.forEach((sh) => groups.push({ id: sh.id, title: sh.label, handle: sh.handle, handleUrl: sh.handleUrl, bundled: true, file: sh.file }));
+    const localIds = Array.from(new Set(cards.filter((c) => !c.bundled).map((c) => c.showId)));
+    localIds.forEach((id) => { const c = cards.find((x) => x.showId === id); groups.push({ id, title: (c.show && c.show !== U ? c.show : "Your stories") + " (saved on this device)", handle: c.handle, handleUrl: handleUrl(c.handle), bundled: false }); });
+    body.innerHTML = groups.map((g) => {
+      const list = cards.filter((c) => c.showId === g.id);
+      return `<section class="arch-show" data-show="${esc(g.id)}"><h3>${esc(g.title)} <span class="muted small">${escNum(list.length)} card(s)</span></h3>
+        <p class="small">${g.handle ? "Creator: " + link(g.handleUrl, g.handle) : ""}${g.bundled ? ` · <button class="small" data-open-show="${esc(g.id)}">Open this show</button>` : ""}</p>
+        <div class="arch-grid">${list.map((c) => `<article class="arch-card" data-key="${esc(c.key)}">
+          <h4>${esc(c.title || U)}</h4>
+          <p class="muted small">${[c.summary, c.place].filter(Boolean).map(esc).join(" · ")}${c.pinned ? "" : ' <span class="pill">no pin</span>'}</p>
+          <p class="small">${c.credit ? "Credit: " + link(c.creditUrl, c.credit) : (c.source ? "Source: " + link(c.source.url, c.source.label || c.source.url) : "Source: missing " + esc(U))}</p>
+          <div class="actions">${c.bundled ? `<button class="small" data-open="${esc(c.key)}">Open</button>` : ""}<button class="small" data-back="${esc(c.key)}">${inEp.has(c.storyId) ? "Go to story" : "Bring back into this episode"}</button></div>
+        </article>`).join("")}</div></section>`;
+    }).join("");
+    body.querySelectorAll("[data-open-show]").forEach((b) => b.addEventListener("click", () => {
+      const sh = GD.archive.show(b.dataset.openShow); if (!sh) return;
+      dlg.close(); loadEpisode(sh.build(), sh.label + " opened from the archive.", { showId: sh.id });
+    }));
+    body.querySelectorAll("[data-open]").forEach((b) => b.addEventListener("click", () => {
+      const r = GD.archive.openShow(b.dataset.open, idx); if (!r) return;
+      const sh = GD.archive.show(idx.cards[b.dataset.open].showId);
+      dlg.close();
+      if (loadEpisode(r.episode, "Opened from the archive.", { showId: sh && sh.id })) selectStory(r.storyIdx, { fly: true });
+    }));
+    body.querySelectorAll("[data-back]").forEach((b) => b.addEventListener("click", () => {
+      const i = GD.archive.bringBack(idx, b.dataset.back, S.episode);
+      if (i < 0) return toast("That card could not be opened.");
+      dlg.close(); S.storyIdx = i; changed(); selectStory(i, { fly: true }); toast("Story brought back from the archive.");
+    }));
   }
 
   async function toggleRecord() {
@@ -703,9 +856,10 @@
     S.episode = GD.model.blankEpisode();
     wire();
     if (GD.assistant && GD.assistant.listen) GD.assistant.listen();
-    let ep = null;
+    let ep = null, showId;
     if (params.get("blank")) ep = GD.model.blankEpisode();
-    else if (params.get("sample")) ep = GD.model.demoEpisode();
+    else if (params.get("sample")) { ep = GD.model.demoEpisode(); showId = "frogpost-2026-11-20"; }
+    else if (params.get("archive") && GD.archive && GD.archive.show(params.get("archive"))) { showId = params.get("archive"); ep = GD.archive.show(showId).build(); }
     else if (GD.store) {
       try { ep = await GD.store.loadEpisode(); } catch (e) { ep = null; }
       if (ep) {
@@ -718,8 +872,15 @@
       }
       if (ep && GD.media) { try { await GD.media.hydrateBlobs(); } catch (e) { /* ignore */ } }
     }
-    if (!ep) ep = GD.model.demoEpisode();
-    loadEpisode(ep);
+    // A saved copy of the old CTD sample is replaced by Frogpost (it stays in the Archive).
+    if (ep && GD.model.isLegacyCtdSample && GD.model.isLegacyCtdSample(ep)) {
+      if (GD.archive) { try { await GD.archive.rememberEpisode(ep, "ctd-geopolitics-2026-11-20"); } catch (e) { /* bundled copy still in the archive */ } }
+      ep = null;
+    }
+    if (!ep) { ep = GD.model.demoEpisode(); showId = "frogpost-2026-11-20"; }
+    loadEpisode(ep, undefined, { showId });
+    const ver = $("appVersion");
+    if (ver && GD.version) ver.textContent = "v" + GD.version.APP + " · " + GD.version.EDITION;
     const imp = params.get("import");
     if (imp && GD.assistant) {
       try {
@@ -736,6 +897,6 @@
     window.__globedesk = window.__gobedesk = { ready: true }; // smoke-test hook (legacy alias kept)
   }
 
-  GD.ui = { toast, selectStory, renderOverlays, renderTransport, onPlaybackEnd, loadEpisode, changed, renderInspector, download, esc, field, num, slug, addFiles, showFull };
+  GD.ui = { toast, openArchive, handleUrl, creditLine, selectStory, renderOverlays, renderTransport, onPlaybackEnd, loadEpisode, changed, renderInspector, download, esc, field, num, slug, addFiles, showFull };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();

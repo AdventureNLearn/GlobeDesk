@@ -3,7 +3,8 @@
 (function () {
   "use strict";
   const GD = (window.GD = window.GD || {});
-  const APP = "0.5.0";
+  const APP = "0.5.1";
+  const EDITION = "AdventureNLearn Edition";
   // Intended post-release check URL is not confirmed. Do not invent a host.
   const URL = null; // [UNKNOWN]
 
@@ -18,5 +19,5 @@
     }
   }
 
-  GD.version = { APP, URL, check };
+  GD.version = { APP, EDITION, URL, check };
 })();

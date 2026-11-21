@@ -2,14 +2,14 @@
 import fs from "node:fs"; import vm from "node:vm"; import path from "node:path"; import assert from "node:assert/strict"; import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ctx = { window: {}, Date }; vm.createContext(ctx);
-for (const f of ["themes", "captions", "events-model", "model"]) vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
-const { events: E, model } = ctx.window.GD;
+for (const f of ["themes", "captions", "events-model", "frog-rundown", "model", "archive"]) vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
+const { events: E, model, archive } = ctx.window.GD;
 const J = (v) => JSON.parse(JSON.stringify(v));
 let n = 0; const t = (name, fn) => { fn(); n++; console.log("ok -", name); };
 const POST = "https://x.com/TheCriticalDri1/status/2123762612571886024";
 
-t("demo layers use only the demo story locations, labeled demo/not verified; example is marked", () => {
-  const ep = model.demoEpisode();
+t("archived CTD layers use only its story locations and each story's own source; example is marked", () => {
+  const ep = archive.ctdEpisode();
   assert.equal(ep.eventLayers.length, 2);
   const [demo, ex] = ep.eventLayers;
   assert.equal(demo.features.length, 3);
@@ -17,7 +17,7 @@ t("demo layers use only the demo story locations, labeled demo/not verified; exa
     const f = demo.features[i];
     assert.deepEqual(J(f.geometry.coordinates), [s.location.lon, s.location.lat]);
     assert.equal(f.properties.verification, "not verified");
-    assert.match(f.properties.notes, /^demo, not verified/);
+    assert.match(f.properties.notes, /^sample, not verified/);
     assert.deepEqual(J(f.properties.sources.map((x) => x.url)), [POST]);
     assert.equal(f.properties.storyId, s.id);
   });

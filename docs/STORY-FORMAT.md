@@ -23,7 +23,7 @@ A machine-readable copy of the same keys, types and LIMITS lives in [schema/glob
   "lede": "string",
   "handle": "@handle",
   "sample": false,
-  "look": { "theme": "ctd" },
+  "look": { "theme": "frog" },
   "outro": { "enabled": true, "durationSec": 5, "line1": "", "link": "", "handle": "", "showXLogo": true },
   "output": { "aspect": "16:9", "fps": 30 },
   "stories": [ /* Story */ ],
