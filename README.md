@@ -4,7 +4,7 @@
 
 Pick your stories and the globe flies from orbit down to street level for each one. Cards pin to the place, every source carries a verified or unverified label, captions are always on, and you can record the result as a 16:9 or 9:16 video. It runs in your browser. You don't need an account, a server or an API key.
 
-> **v1.0.0 · Official Release** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · Live copy: [globedesk.grok.me](https://globedesk.grok.me)
+> **v1.0.1 · Official Release** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · Live copy: [globedesk.grok.me](https://globedesk.grok.me)
 
 ![GlobeDesk desk view: the Frogpost show on the globe](shots/01-desk-globe-16x9.png)
 
@@ -64,7 +64,7 @@ Useful URL options:
 
 ## Make your own show (starter kit)
 
-The [`starter/`](starter/) folder is a clean baseline to take away. It also ships as **`globedesk-starter-v1.0.0.zip`** on the GitHub release.
+The [`starter/`](starter/) folder is a clean baseline to take away. It also ships as **`globedesk-starter-v1.0.1.zip`** on the GitHub release.
 
 | File | Use it for |
 |---|---|

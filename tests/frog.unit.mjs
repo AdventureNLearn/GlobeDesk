@@ -209,13 +209,13 @@ t("archive: the UI has an Archive page with open / bring-back actions", () => {
 });
 
 // ---------- Layout and release fixes ----------
-t("version is 1.0.0 · Official Release everywhere and shown in the UI", () => {
+t("version is 1.0.1 · Official Release everywhere and shown in the UI", () => {
   const pkg = JSON.parse(read("package.json"));
-  assert.equal(GD.version.APP, "1.0.0"); assert.equal(pkg.version, "1.0.0");
+  assert.equal(GD.version.APP, "1.0.1"); assert.equal(pkg.version, "1.0.1");
   assert.equal(GD.version.EDITION, "Official Release");
-  assert.match(read("index.html"), /id="appVersion"[^>]*>v1\.0\.0 · Official Release</);
-  assert.equal(JSON.parse(read("grokme/manifest.json")).version, "1.0.0");
-  assert.match(read("README.md"), /v1\.0\.0 · Official Release/); assert.match(read("CHANGELOG.md"), /1\.0\.0.*Official Release/);
+  assert.match(read("index.html"), /id="appVersion"[^>]*>v1\.0\.1 · Official Release</);
+  assert.equal(JSON.parse(read("grokme/manifest.json")).version, "1.0.1");
+  assert.match(read("README.md"), /v1\.0\.1 · Official Release/); assert.match(read("CHANGELOG.md"), /1\.0\.1/); assert.match(read("CHANGELOG.md"), /1\.0\.0.*Official Release/);
 });
 t("inspector: 12 tabs with role=tab / aria-selected, in a 4 x 3 grid instead of a hidden sideways scroll", () => {
   const html = read("index.html");

@@ -39,4 +39,4 @@ Everything below belongs to its creators and keeps its own terms.
 
 The voice-clip **scripts** (the words) are AdventureNLearn's and are CC BY 4.0.
 
-**Still open:** the 8-second cold-open clip (`demo/guide-packs/frogpost/assets/v1-cold-open.mp4`) has a quiet ambient audio track (no speech) that came with the AI-generated video. Its audio license is [UNKNOWN]; the clip is left unchanged so its C2PA content credentials stay intact.
+The 8-second cold-open clip (`demo/guide-packs/frogpost/assets/v1-cold-open.mp4`) had a quiet ambient audio track (no speech) of [UNKNOWN] license that came with the AI-generated video. In v1.0.1 that audio was stripped with `ffmpeg -an` (video stream copied, no re-encode). The picture is AdventureNLearn content under CC BY 4.0. Remuxing the container removed the C2PA content credentials that were in the original file; those credentials would not have validated after the audio was removed anyway.

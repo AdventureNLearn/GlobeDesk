@@ -2,6 +2,10 @@
 
 Audit of what has shipped, and what is still open.
 
+## Closed in v1.0.1
+
+- The unlicensed ambient audio track was stripped from the Frogpost cold-open clip (`demo/guide-packs/frogpost/assets/v1-cold-open.mp4`) with `ffmpeg -an`, copying the video stream. The original audio license remains [UNKNOWN]; the picture is unchanged.
+
 ## Closed in v1.0.0
 
 - License decided: MIT for code, CC BY 4.0 for content made for GlobeDesk (credited to "AdventureNLearn").
@@ -57,7 +61,6 @@ Audit of what has shipped, and what is still open.
 - OpenHistoricalMap period view: not wired.
 - Windows launcher on a real PC: please re-test v0.4 the same way v0.3 was tested. The built-in servers bind `127.0.0.1` only.
 - The US demo voice clips are non-commercial only (CC BY-NC-SA 4.0 dataset). Swap them for a permissively licensed voice before any commercial use.
-- The cold-open clip's quiet ambient audio track came with the AI-generated video: license [UNKNOWN]. Left unchanged to keep its C2PA credentials.
 - Callouts on a phone preview are a scaled view of the 1080p video frame, so their text is small in the preview; it is full size in recordings.
 - Nominatim / other online geocoders were not added (terms are a poor fit for an unrestricted app geocoder).
 

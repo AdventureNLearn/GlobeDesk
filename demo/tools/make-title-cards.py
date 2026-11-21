@@ -34,7 +34,7 @@ def title_img():
     center(d, "GLOBEDESK", 340, font("Cinzel.ttf", 110), (206, 158, 73))
     center(d, "by AdventureNLearn", 480, font("Rajdhani-SemiBold.ttf", 42), (163, 216, 224))
     center(d, "A free newsdesk studio on a talking globe", 560, font("Rajdhani-Medium.ttf", 32), (232, 232, 232))
-    center(d, "Interactive mission demo  |  v1.0.0", 640, font("Orbitron.ttf", 22), (77, 161, 81))
+    center(d, "Interactive mission demo  |  v1.0.1", 640, font("Orbitron.ttf", 22), (77, 161, 81))
     return im
 
 def end_img():

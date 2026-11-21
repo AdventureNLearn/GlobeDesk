@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",
@@ -11,8 +11,8 @@
   "files": [
     {
       "path": "CHANGELOG.md",
-      "size": 7577,
-      "sha256": "1776f8da4d8e173df6ae17e1ac1ac31bc2f8109505699a1016f39812730b446b"
+      "size": 8129,
+      "sha256": "f0fbd8bb29ab2d05ef399b285a4005a430f027815291ee644c81fee540837757"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -21,13 +21,13 @@
     },
     {
       "path": "CREDITS.md",
-      "size": 5049,
-      "sha256": "61c55b3dee65a286e64749cedb20511a03071b056335626654ddd7f79e02d98d"
+      "size": 5266,
+      "sha256": "c33c70557fda9876a261582e80a9bbf048ec435a7ea58a8429e777002b093dee"
     },
     {
       "path": "GROK-ME-BUILD.md",
       "size": 4948,
-      "sha256": "6274899a954b27df19317e5a67abbe8b08e77a1acae32c7bf00664da9305f0df"
+      "sha256": "bec0755caa2abfb69366c5d54159f35d7be72dacd684df7e32dd8b57f8832cb0"
     },
     {
       "path": "LICENSE",
@@ -36,13 +36,13 @@
     },
     {
       "path": "LICENSE-CONTENT",
-      "size": 21624,
-      "sha256": "7102b0bc74c21bc96d527ffc26724c2a2b3cde04e4aade5c37c0e0c82232bb5f"
+      "size": 21834,
+      "sha256": "42f6d027f439e7f1618ce56e5f382f7b8e617bd681875dba30a8900b5ac48b50"
     },
     {
       "path": "README.md",
       "size": 8140,
-      "sha256": "d3e807cc7b85c96eae53394e3881e4568e1d0601f34f15019460baeb8095e2bf"
+      "sha256": "19577f474c7f6422ca658a4134524e8229325daa8e2acca92a1cf6e154701486"
     },
     {
       "path": "SECURITY.md",
@@ -57,7 +57,7 @@
     {
       "path": "WINDOWS-RUN.md",
       "size": 2082,
-      "sha256": "a0d486070c8a25f93f01177de4351fb1e445d9affdeb7032598c6000817144b5"
+      "sha256": "7c56fae80d241338a68118d2f1c4c013969c446600e7c8f83fa5c650fbe6c916"
     },
     {
       "path": "css/app.css",
@@ -122,7 +122,7 @@
     {
       "path": "grokme/APP-BRIEF.txt",
       "size": 827,
-      "sha256": "735571c352f62ae5940bfc7f86cd444bc6464aaf513fde17641eae284de14f80"
+      "sha256": "52332c0a8a387306e8fd39be92c23360768b81e5668cd7e9ac1c25101924b7d9"
     },
     {
       "path": "grokme/BUILDER-PROMPT.txt",
@@ -142,7 +142,7 @@
     {
       "path": "index.html",
       "size": 8802,
-      "sha256": "8bc3968dc89c1371917d25abf77589f3e3300489e52722863c2edfe4642a8e2c"
+      "sha256": "08ac4a05d205c93db414889be7273114f68056ab39d527b2de867b78d279e4d5"
     },
     {
       "path": "js/archive.js",
@@ -262,7 +262,7 @@
     {
       "path": "js/version.js",
       "size": 792,
-      "sha256": "99884f47c5b4679af21cc089ed92b4c4f3c7c6c0cf05a07c42a2b7e8d9da0d4a"
+      "sha256": "d4fe6ecbf5b26cc391e0aa037e1841673f3e6606233e3d480f80750ef4ad4953"
     },
     {
       "path": "js/zip.js",
@@ -272,7 +272,7 @@
     {
       "path": "package.json",
       "size": 515,
-      "sha256": "3f2851afcb63780690d9b32b23de117d60cb37605c938b10ea63d24f625e69b2"
+      "sha256": "c7b225431af8f2c5925eb4327b6ddb9b8efdeebe123c9d9b56335a6bc1c1ffbb"
     },
     {
       "path": "schema/globedesk-story.schema.json",
@@ -297,6 +297,6 @@
   ],
   "totals": {
     "files": 57,
-    "bytes": 2768046
+    "bytes": 2769025
   }
 }

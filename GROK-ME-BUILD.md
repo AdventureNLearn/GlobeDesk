@@ -13,7 +13,7 @@ Exactly the files listed in `grokme/manifest.json` (path, size, SHA-256), copied
 Left out of the kit (keep them in the git repo, do not upload unless you choose to):
 
 - `shots/` (screenshots)
-- `starter/` (the take-away starter kit; it ships as `globedesk-starter-v1.0.0.zip` on the GitHub release)
+- `starter/` (the take-away starter kit; it ships as `globedesk-starter-v1.0.1.zip` on the GitHub release)
 - `demo/` (interactive mission tour and guide packs; over the 20 MiB kit budget)
 - `.git/`
 - zip artifacts outside this folder
@@ -60,7 +60,7 @@ Offline, the bundled Natural Earth globe still runs (`?base=offline` or Layers �
 
 ## GROK-ME-UPDATE
 
-1. Each copy can show its local version from `js/version.js` (`1.0.0`). A remote version-check host is [UNKNOWN] and disabled.
+1. Each copy can show its local version from `js/version.js` (`1.0.1`). A remote version-check host is [UNKNOWN] and disabled.
 2. When a new GlobeDesk release is published, paste `grokme/UPDATE-PROMPT.txt` into the builder.
 3. The builder rebuilds from that release's `grokme/manifest.json` and changes nothing else.
 4. If the copy looks wrong, roll back with the builder's own history (how Grok.me keeps history is [UNKNOWN]).
@@ -79,6 +79,6 @@ After a Grok.me (or local) build:
 - [ ] Assist tab rejects invalid JSON and accepts a valid episode.
 - [ ] CSP is present; no unpaid keys in the tree.
 - [ ] Sample is labelled Sample and is removable.
-- [ ] A fresh open (empty save) shows Frogpost: FROGPOST badge, @AdventureNLearn, 48 stories, version "v1.0.0 · Official Release" in the top bar.
+- [ ] A fresh open (empty save) shows Frogpost: FROGPOST badge, @AdventureNLearn, 48 stories, version "v1.0.1 · Official Release" in the top bar.
 - [ ] Archive opens a card for every story (Frogpost 48, CTD archive 3 with its creator link). A story deleted from the rundown is still in the Archive and **Bring back** restores it.
 - [ ] At phone width (about 390 px) the globe shows first at full width; the ☰ Menu opens the top-bar buttons; panels fold.

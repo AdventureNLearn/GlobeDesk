@@ -27,8 +27,10 @@ Covered by CC BY 4.0 (to the extent AdventureNLearn holds rights in it)
   demo/guide-packs/frogpost/assets/*.jpg, demo/guide-packs/frogpost/assets/frog/,
   demo/guide-packs/frogpost/assets/v1-cold-open.mp4, demo/poster/*.jpg and
   the template placeholder stills in demo/guide-packs/template/assets/.
-  These were made with an AI image tool (C2PA content credentials are in the
-  files).
+  These were made with an AI image tool. C2PA content credentials remain in
+  the stills. The cold-open video is picture-only as of v1.0.1 (its ambient
+  audio, license [UNKNOWN], was stripped with ffmpeg -an); remuxing the
+  file removed the C2PA credentials that were in the original container.
 - AdventureNLearn's voice-clip scripts: the line text in
   demo/guide-packs/frogpost/manifest.json and the durations.json files.
 - Screenshots in shots/. Map imagery visible in a screenshot keeps its own

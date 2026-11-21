@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.1 — Official Release — 2026-11-21
+
+- **Cold-open audio stripped.** The 8-second Frogpost cold-open clip (`demo/guide-packs/frogpost/assets/v1-cold-open.mp4`) no longer has an audio stream. The quiet ambient track that came with the AI-generated video had a license of [UNKNOWN]; it was removed with `ffmpeg -an`, copying the video stream (no re-encode). Credits and `LICENSE-CONTENT` are updated. Remuxing the container dropped the C2PA content credentials that were in the original file.
+- Version shown as "v1.0.1 · Official Release".
+
 ## v1.0.0 — Official Release — 2026-11-20
 
 - **Licenses.** Code is MIT (`LICENSE`). Content made for GlobeDesk (episode text, our frog art, our voice clips, screenshots, docs) is CC BY 4.0, credited to "AdventureNLearn" (`LICENSE-CONTENT`). Third-party items keep their own terms.
