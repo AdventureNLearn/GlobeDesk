@@ -1,11 +1,20 @@
-Spoken lines for the full mission were synthesized with Piper,
-voice en_US-hfc_male-medium (https://huggingface.co/rhasspy/piper-voices).
+US voice bank for the GlobeDesk frog mission (voice id "hfc_male", label "US").
 
-Clarity chain (2026-11-20): no rubberband pitch/tempo, no aecho/reverb,
-gentle presence EQ at 3 kHz (+1.5 dB), lowpass 10 kHz, loudnorm -17 LUFS
-(TP -2 dB, LRA 7) to avoid pumping. Output 44.1 kHz mono. Natural pitch
-is preserved. See tools/make-vo.py.
+NON-COMMERCIAL USE ONLY. These clips are excluded from the CC BY 4.0 content
+grant in LICENSE-CONTENT.
 
-The Onnx model is not stored in this folder — only the short demo WAVs.
-Exact voice-model license: see the piper-voices model card. [UNKNOWN]
-if a more specific dataset license applies.
+Voice:   Piper voice en_US-hfc_male-medium
+         https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_US/hfc_male/medium
+         The model file is not stored here, only the short demo WAVs.
+Chain (2026-11-20): no rubberband pitch/tempo, no aecho/reverb, gentle presence
+         EQ at 3 kHz (+1.5 dB), lowpass 10 kHz, loudnorm -17 LUFS (TP -2 dB,
+         LRA 7). Output 44.1 kHz mono. Natural pitch preserved. See tools/make-vo.py.
+
+License (from the piper-voices model card, read 2026-11-20)
+- Dataset: Hi-Fi-Captain, CC BY-NC-SA 4.0 (non-commercial, share-alike).
+- Model: fine-tuned from the Piper lessac voice, whose dataset is under the
+  Blizzard 2013 license.
+- So these clips are for non-commercial use only. If you share them, keep the
+  same terms and give credit. For commercial use, swap in a voice with a
+  permissive license (for example the British "gb" bank in vo/gb/).
+The line text (the words) is AdventureNLearn's, CC BY 4.0.

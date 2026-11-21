@@ -46,7 +46,7 @@ def main():
     print(f"GlobeDesk demo: http://{args.bind}:{args.port}/")
     print(f"Demo root: {DEMO_ROOT}")
     print(f"App root (/globedesk/): {APP_ROOT}")
-    print("Box / local only. Not published.")
+    print("Runs locally. Nothing is uploaded.")
     try:
         server.serve_forever()
     except KeyboardInterrupt:

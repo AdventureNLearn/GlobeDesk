@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """QA a finalized mission video: STT word-match per line, overlap, loudness, frames."""
 from __future__ import annotations
-import difflib, json, re, subprocess, sys, wave
+import difflib, json, os, re, subprocess, sys, tempfile, wave
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = Path("/tmp/final-qa")
-MODEL = Path("/tmp/stt/vosk-model-small-en-us-0.15")
-VENV_PY = Path("/tmp/stt/venv/bin/python")
+TMP = Path(os.environ.get("GLOBEDESK_TMP") or tempfile.gettempdir())
+OUT_DIR = TMP / "final-qa"
+# Speech-to-text QA needs a local Vosk model and a venv with vosk installed.
+STT = Path(os.environ.get("GLOBEDESK_STT_DIR") or (TMP / "stt"))
+MODEL = STT / "vosk-model-small-en-us-0.15"
+VENV_PY = STT / "venv" / "bin" / "python"
 MANIFEST = ROOT / "guide-packs" / "frogpost" / "manifest.json"
 
 LEVEL_ORDER = [

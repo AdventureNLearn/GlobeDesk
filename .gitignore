@@ -9,3 +9,5 @@ demo/work/
 demo/*.mp4
 demo/short-v1/
 demo/shots/
+dist/
+__pycache__/

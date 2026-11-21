@@ -26,13 +26,15 @@
       "id": "hfc_male",
       "label": "US",
       "name": "en_US-hfc_male-medium",
+      "license": "Non-commercial: dataset CC BY-NC-SA 4.0; fine-tuned from lessac (Blizzard 2013 license)",
       "dir": "assets/vo/"
     },
     {
-      "id": "alan",
+      "id": "gb",
       "label": "British",
-      "name": "en_GB-alan-medium",
-      "dir": "assets/vo/alan/"
+      "name": "en_GB-vctk-medium (speaker p226)",
+      "license": "CC BY 4.0 data (CSTR VCTK 0.92, University of Edinburgh); clips CC BY 4.0, credit AdventureNLearn",
+      "dir": "assets/vo/gb/"
     }
   ],
   "voiceDir": "assets/vo/",

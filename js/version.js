@@ -1,10 +1,10 @@
-/* Optional version check. The public URL is [UNKNOWN] until the owner publishes one.
+/* Optional version check. The public URL is [UNKNOWN] until a host is confirmed.
    Off by default; fails silent. Never blocks the desk. window.GD.version */
 (function () {
   "use strict";
   const GD = (window.GD = window.GD || {});
-  const APP = "0.5.1";
-  const EDITION = "AdventureNLearn Edition";
+  const APP = "1.0.0";
+  const EDITION = "Official Release";
   // Intended post-release check URL is not confirmed. Do not invent a host.
   const URL = null; // [UNKNOWN]
 

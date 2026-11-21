@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "0.5.1",
+  "version": "1.0.0",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",
@@ -11,33 +11,53 @@
   "files": [
     {
       "path": "CHANGELOG.md",
-      "size": 4383,
-      "sha256": "e9d940571c5fe7caf645dd10cdec9ba1ffbb9d177a2d09b577302d6ed2ac58f4"
+      "size": 7577,
+      "sha256": "1776f8da4d8e173df6ae17e1ac1ac31bc2f8109505699a1016f39812730b446b"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 1949,
+      "sha256": "510cd50946bf1384ede910a592e5b98d6f390614df0a610096c997a8dd547d17"
+    },
+    {
+      "path": "CREDITS.md",
+      "size": 5049,
+      "sha256": "61c55b3dee65a286e64749cedb20511a03071b056335626654ddd7f79e02d98d"
     },
     {
       "path": "GROK-ME-BUILD.md",
-      "size": 4848,
-      "sha256": "a79a75feba53e78920c2cfdf424b487a3099d904ecf968bb7597500c8d663665"
+      "size": 4948,
+      "sha256": "6274899a954b27df19317e5a67abbe8b08e77a1acae32c7bf00664da9305f0df"
     },
     {
       "path": "LICENSE",
-      "size": 1072,
-      "sha256": "33390350bc52b2e93b2b5c789eda9db01bb7e4a28207ee842525d6ea5d81bdf2"
+      "size": 1300,
+      "sha256": "a6227442509c3f5d685ab12bed20015fc2a3a1045f02b7dd3faa88a0158976b3"
+    },
+    {
+      "path": "LICENSE-CONTENT",
+      "size": 21624,
+      "sha256": "7102b0bc74c21bc96d527ffc26724c2a2b3cde04e4aade5c37c0e0c82232bb5f"
     },
     {
       "path": "README.md",
-      "size": 25445,
-      "sha256": "5a64d5132bb299ed5f49e96b50f8ca1e19d5e66ff4cf6d1075e9faa312508bbf"
+      "size": 8140,
+      "sha256": "d3e807cc7b85c96eae53394e3881e4568e1d0601f34f15019460baeb8095e2bf"
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 1165,
+      "sha256": "00f7c1d09e17d4f29acdf9581bc1433038a7344f65872ddf7578f2b8ed7df924"
     },
     {
       "path": "USER-GUIDE.md",
       "size": 4620,
-      "sha256": "136d3937a24d029b7195e1b46e8741da3d00a87511f84cc3ae7cace8211c7d5e"
+      "sha256": "b29b39707100aaeec91c6a973bd0b03d0e908eb40be930d543355faba93e05d1"
     },
     {
       "path": "WINDOWS-RUN.md",
       "size": 2082,
-      "sha256": "41ea2f2d1f37f10ffabdee05f59c23b61b796f0a5e2f2e7b15e5d2447636b95a"
+      "sha256": "a0d486070c8a25f93f01177de4351fb1e445d9affdeb7032598c6000817144b5"
     },
     {
       "path": "css/app.css",
@@ -60,6 +80,11 @@
       "sha256": "d0745375a2b75061d71a3ffdca5babe5dde5141a109ecdbe75b7493a110aa361"
     },
     {
+      "path": "docs/REFERENCE.md",
+      "size": 19189,
+      "sha256": "81badd1bf9c2377b08b36e98d7cc3050a51a378e679eea0873d5f658f8372ab2"
+    },
+    {
       "path": "docs/STORY-FORMAT.md",
       "size": 3902,
       "sha256": "35669fcafb4ca7fbd3737b137969005897b0ed773766a47980a62d81f2c90f94"
@@ -76,8 +101,8 @@
     },
     {
       "path": "episodes/frogpost-2026-11-20.globedesk.json",
-      "size": 283180,
-      "sha256": "8673f2020316d4423b9165d10479adb8099c19bb7edb057d4eb551dae05d5c63"
+      "size": 273797,
+      "sha256": "5a46bd525b1e8e37053f6b18442ce78317f5deda8908bd5edfd00f020088d170"
     },
     {
       "path": "episodes/layers/demo-event-places-demo-not-verified.geojson",
@@ -91,18 +116,18 @@
     },
     {
       "path": "episodes/layers/frogpost-sample-story-places-approximate-not-verified.geojson",
-      "size": 50963,
-      "sha256": "1526c195b0cce0f36d6431e6ed96159900f1f5fb0aa13af39c626bd151e54847"
+      "size": 49309,
+      "sha256": "4a22662cfd146a5f9eeca2ed9367ab8aba2daaa77bc9ba8e730b438973e24fb2"
     },
     {
       "path": "grokme/APP-BRIEF.txt",
-      "size": 789,
-      "sha256": "d61badb2509004c0bc645a7612bbc109546bdd66c9de6b031f7bf70fe91228e3"
+      "size": 827,
+      "sha256": "735571c352f62ae5940bfc7f86cd444bc6464aaf513fde17641eae284de14f80"
     },
     {
       "path": "grokme/BUILDER-PROMPT.txt",
-      "size": 1933,
-      "sha256": "96adc43bb51d2adf94964f7e7f4bd644dbaaf461f73bb73905e09b16641c4aa1"
+      "size": 2048,
+      "sha256": "fc57f56daa927c2a78a53e56be7134fbe704796f9a1e2c8946ff0c63e6832e5d"
     },
     {
       "path": "grokme/FEATURES.txt",
@@ -111,13 +136,13 @@
     },
     {
       "path": "grokme/UPDATE-PROMPT.txt",
-      "size": 674,
-      "sha256": "254e27128b99d8b1da4e95afd9357e7930dd41acd436dfb7e48f43d8b734c05f"
+      "size": 676,
+      "sha256": "ba191a9dcfec04865a2678c8ae04e36e5e6380742b8f32ddef23b2c9acb89cac"
     },
     {
       "path": "index.html",
-      "size": 8768,
-      "sha256": "a611e3d04cf177e5fa5aeff415a96950961c385b47e426be7095cbeaa48efcd1"
+      "size": 8802,
+      "sha256": "8bc3968dc89c1371917d25abf77589f3e3300489e52722863c2edfe4642a8e2c"
     },
     {
       "path": "js/archive.js",
@@ -133,6 +158,11 @@
       "path": "js/audio-mix.js",
       "size": 2759,
       "sha256": "f1083bb5a2faffd79928fd908bc5c16c0bb0ec402d7dcc86d1c918defd359a54"
+    },
+    {
+      "path": "js/callouts.js",
+      "size": 22194,
+      "sha256": "91335a462c00d443f2ae12acad52b677a972bb9fd9ae6239d606b8b5a36a341a"
     },
     {
       "path": "js/captions.js",
@@ -161,13 +191,13 @@
     },
     {
       "path": "js/frog-rundown.js",
-      "size": 18229,
-      "sha256": "859ce67e6faf2a1d21d83ef543e5f9891c17fa2f616943382f6040dfa2de0e39"
+      "size": 18268,
+      "sha256": "fa56cb8ce67d8942de7cd088bcb035c10541c12eed82a446e46946f4378ed07e"
     },
     {
       "path": "js/globe.js",
-      "size": 26398,
-      "sha256": "b8d2d40ab258409dc303ddd79edc840baf3621a554c7d100f291e1cd98ca365c"
+      "size": 26880,
+      "sha256": "fd50fb87c290814ae96958b2d1e22dacfb52d53e58d666e9bfc574d749e404ac"
     },
     {
       "path": "js/layers.js",
@@ -181,8 +211,8 @@
     },
     {
       "path": "js/model.js",
-      "size": 15962,
-      "sha256": "e5a54d2255aca37838f55404929e74df21c840e57e57030782910e0c4f2fc937"
+      "size": 15956,
+      "sha256": "a63c57385febe061c24d97287fcf559b91eceffcda4ed4fc79bb32126f305b93"
     },
     {
       "path": "js/playback.js",
@@ -196,8 +226,8 @@
     },
     {
       "path": "js/recorder.js",
-      "size": 18874,
-      "sha256": "d759065ba37b28ad0ece77188dd73cf6bafb323c925c5d70c09820924411bda2"
+      "size": 19151,
+      "sha256": "2d8c63761ba2bad95dc9dadda6043a09d405998f1b5e857a6341b948d237949c"
     },
     {
       "path": "js/sanitize.js",
@@ -226,13 +256,13 @@
     },
     {
       "path": "js/ui.js",
-      "size": 63658,
-      "sha256": "245e7a8fa48da20da38c6d7ca01930b81055c6e3832efa71fce94117219bd726"
+      "size": 65586,
+      "sha256": "f012ea7b55f8a52a9d0e1a50bf98b0aaafd4a1b1cce70647d7279fdacc95ca33"
     },
     {
       "path": "js/version.js",
-      "size": 803,
-      "sha256": "f50fc70fab9a2092856dde5f954d795794e291ca7676e90cb2d99fd7e30e1efe"
+      "size": 792,
+      "sha256": "99884f47c5b4679af21cc089ed92b4c4f3c7c6c0cf05a07c42a2b7e8d9da0d4a"
     },
     {
       "path": "js/zip.js",
@@ -241,8 +271,8 @@
     },
     {
       "path": "package.json",
-      "size": 476,
-      "sha256": "fd114a7dcd081e66a87383f6a270265735f3ce4fc66c78995c4691bafb7d5362"
+      "size": 515,
+      "sha256": "3f2851afcb63780690d9b32b23de117d60cb37605c938b10ea63d24f625e69b2"
     },
     {
       "path": "schema/globedesk-story.schema.json",
@@ -266,7 +296,7 @@
     }
   ],
   "totals": {
-    "files": 51,
-    "bytes": 2718759
+    "files": 57,
+    "bytes": 2768046
   }
 }

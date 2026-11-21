@@ -3,13 +3,15 @@
 import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
+import os from "node:os";
+const TMP = process.env.GLOBEDESK_TMP || os.tmpdir();
 import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
-const outDir = "/tmp/final-qa/layout/after";
+const outDir = path.join(TMP, "final-qa/layout/after");
 const PORT = 8770, DBG = 9480, DISPLAY = ":98";
-const PROFILE = "/tmp/globedesk-layout-chrome";
+const PROFILE = path.join(TMP, "globedesk-layout-chrome");
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const kids = [];
 let c;

@@ -1,4 +1,4 @@
-Update this GlobeDesk copy to the owner's newly published release.
+Update this GlobeDesk copy to the newly published GlobeDesk release.
 
 - Use that release's grokme/manifest.json and copy every listed file unchanged.
 - Do not change behaviour that the manifest does not change.

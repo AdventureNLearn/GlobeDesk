@@ -30,7 +30,8 @@ t("project pack round-trip of episode JSON", async () => {
   const bytes = await GD.project.buildPack(ep, {});
   const pack = await GD.project.parsePack(bytes);
   assert.equal(pack.episode.title, ep.title);
-  assert.equal(pack.episode.stories.length, 50);
+  assert.equal(pack.episode.stories.length, ep.stories.length);
+  assert.ok(ep.stories.length >= 45);
   assert.deepEqual(GD.schema.validate(pack.episode), []);
 });
 

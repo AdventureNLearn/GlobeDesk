@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Headless smoke: serve the folder, load in Chrome, fail on console errors, save screenshots to shots/.
-// Usage: node tests/smoke.mjs   (needs google-chrome; CHROME env var overrides)
+// Usage: node tests/smoke.mjs   (needs google-chrome; CHROME env var overrides; SHOTS_DIR overrides shots/)
+// Stories are found by slug, never by position, so the rundown order can change.
 import { spawn } from "node:child_process"; import fs from "node:fs/promises"; import path from "node:path"; import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PORT = 8099, DBG = 9339, W = 1600, H = 960;
@@ -14,10 +15,11 @@ class Cdp { constructor(u) { this.ws = new WebSocket(u); this.id = 0; this.p = n
   on(m, f) { this.h[m] = f; } send(method, params = {}) { const id = ++this.id; return new Promise((r, j) => { this.p.set(id, { r, j }); this.ws.send(JSON.stringify({ id, method, params })); }); } }
 let c;
 const ev = async (expr) => { const r = await c.send("Runtime.evaluate", { expression: expr, awaitPromise: true, returnByValue: true }); if (r.exceptionDetails) throw new Error(r.exceptionDetails.exception?.description || r.exceptionDetails.text); return r.result.value; };
-const shot = async (name) => { const r = await c.send("Page.captureScreenshot", { format: "png" }); await fs.writeFile(path.join(root, "shots", name), Buffer.from(r.data, "base64")); console.log("shot", name); };
+const SHOTS = process.env.SHOTS_DIR ? path.resolve(process.env.SHOTS_DIR) : path.join(root, "shots");
+const shot = async (name) => { const r = await c.send("Page.captureScreenshot", { format: "png" }); await fs.writeFile(path.join(SHOTS, name), Buffer.from(r.data, "base64")); console.log("shot", name); };
 const idle = () => until(() => ev("GD.globe.st.map.loaded() && GD.globe.st.map.areTilesLoaded()"), 45000, "tiles").catch(() => console.log("note: tiles still loading at timeout"));
 try {
-  await fs.mkdir(path.join(root, "shots"), { recursive: true });
+  await fs.mkdir(SHOTS, { recursive: true });
   await until(async () => (await fetch(`http://127.0.0.1:${DBG}/json/version`)).ok, 15000, "chrome");
   await until(async () => (await fetch(`http://127.0.0.1:${PORT}/`)).ok, 10000, "server");
   const page = await (await fetch(`http://127.0.0.1:${DBG}/json/new?about:blank`, { method: "PUT" })).json();
@@ -31,15 +33,17 @@ try {
   await until(() => ev("window.__globedesk && window.__globedesk.ready && GD.globe.st.status === 'ready'"), 30000, "app ready");
   console.log("base:", await ev("GD.globe.st.baseId"), "recorder supported:", await ev("GD.recorder.supported()"));
   await idle(); await sleep(1500); await shot("01-desk-globe-16x9.png");
-  // Street-level cinematic shot of story 2 (Kyiv), via seek (jumps camera to that keyframe).
-  await ev("GD.ui.selectStory(1); GD.playback.seek(16 + 13); true");
+  // Street-level cinematic shot of the Kyiv story (slug dnipro-bridges), via seek (jumps camera to that keyframe).
+  const KI = await ev("GD.state.episode.stories.findIndex((s) => s.slug === 'dnipro-bridges')");
+  if (!(KI >= 0)) throw new Error("Kyiv story (slug dnipro-bridges) not found in the default show");
+  await ev(`GD.ui.selectStory(${KI}); GD.playback.seek(GD.model.storyStarts(GD.state.episode)[${KI}] + 13); true`);
   await idle(); await sleep(2500); await shot("02-street-cinematic-16x9.png");
   // Dedicated street-level still of the Kyiv land pin (about z16–17, pitched).
   const street = await ev(`(() => {
-    const s = GD.state.episode.stories[1];
+    const s = GD.state.episode.stories[${KI}];
     const sv = GD.globe.streetView(s);
     if (!sv) return { ok: false };
-    GD.ui.selectStory(1);
+    GD.ui.selectStory(${KI});
     GD.globe.st.map.jumpTo({ center: sv.center, zoom: sv.zoom, pitch: sv.pitch, bearing: sv.bearing });
     return { ok: true, zoom: GD.globe.st.map.getZoom(), land: GD.globe.isLand(s.location.lat, s.location.lon) };
   })()`);
@@ -52,13 +56,16 @@ try {
     return { layers, n: m.queryRenderedFeatures({ layers }).length, zoom: Number(m.getZoom().toFixed(2)) };
   })()`);
   console.log("street features:", JSON.stringify(feats));
-  await ev("document.getElementById('asp916').click(); GD.playback.seek(1.2); true");
+  // 9:16 frame on the Hormuz story (slug hormuz-cloud): header, citation box and focus-region glow in view.
+  const HI = await ev("GD.state.episode.stories.findIndex((s) => s.slug === 'hormuz-cloud')");
+  if (!(HI >= 0)) throw new Error("Hormuz story (slug hormuz-cloud) not found in the default show");
+  await ev(`document.getElementById('asp916').click(); GD.ui.selectStory(${HI}); GD.playback.seek(GD.model.storyStarts(GD.state.episode)[${HI}] + 1.2); true`);
   await ev("GD.globe.st.map.jumpTo({center:[56.25,26.57],zoom:4.6,pitch:30,bearing:-10}); true");
   await idle(); await sleep(1500); await shot("03-vertical-9x16-header-citation.png");
   const hl = await ev("({active: GD.globe.st.active, a3: GD.state.episode.stories[GD.globe.st.active].highlight.a3, feats: GD.globe.st.map.querySourceFeatures('gd-highlight').length, layer: !!GD.globe.st.map.getLayer('gd-hl-glow'), vis: GD.globe.st.map.getLayoutProperty('gd-hl-glow','visibility')})");
   console.log("highlight:", JSON.stringify(hl));
   if (!(hl.feats > 0)) errors.push("focus-region highlight has no features");
-  await ev("GD.playback.seek(50); true"); await sleep(600); await shot("04-outro-9x16.png");
+  await ev("GD.playback.seek(GD.model.totalDuration(GD.state.episode) - 2); true"); await sleep(600); await shot("04-outro-9x16.png");
   // Short real playback run (camera fly, cards, captions), then stop.
   await ev("document.getElementById('asp169').click(); GD.playback.seek(0); GD.playback.play(); true");
   await sleep(4000);
@@ -154,6 +161,12 @@ try {
   const rec2 = await ev(`(async () => { await GD.recorder.start('16:9'); await new Promise(r => setTimeout(r, 2000)); const rec = GD.recorder._rec; cancelAnimationFrame(rec.raf); return await new Promise(res => { rec.mr.onstop = () => res(rec.chunks.reduce((a, b) => a + b.size, 0)); rec.mr.stop(); rec.mr = null; }); })()`);
   console.log("recorder bytes after reimport (2 s):", rec2);
   if (!(rec2 > 0)) errors.push("recorder after reimport produced no data");
+  // Phone width (390 x 844): the globe comes first; screenshot for the README.
+  await c.send("Emulation.setDeviceMetricsOverride", { width: 390, height: 844, deviceScaleFactor: 2, mobile: true });
+  await c.send("Page.navigate", { url: `http://127.0.0.1:${PORT}/index.html?sample=1` });
+  await sleep(1500);
+  await until(() => ev("window.__globedesk && window.__globedesk.ready && GD.globe.st.status === 'ready'"), 30000, "app ready (phone)");
+  await idle(); await sleep(1500); await shot("16-mobile-home.png");
 } catch (e) { errors.push("SMOKE: " + e.message); }
 finally {
   console.log("warnings:", warnings.length, warnings.slice(0, 5));

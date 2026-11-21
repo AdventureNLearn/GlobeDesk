@@ -1,9 +1,11 @@
 #!/usr/bin/env node
-// Short test of poses + temporary voice lab. Box only.
+// Short test of poses + temporary voice lab. Runs locally.
 import { spawn, execFileSync } from "node:child_process";
 import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "node:path";
+import os from "node:os";
+const TMP = process.env.GLOBEDESK_TMP || os.tmpdir();
 import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -12,7 +14,7 @@ const work = path.join(root, "work");
 const shots = path.join(root, "shots");
 const PORT = 8767, DBG = 9477, DISPLAY = ":95";
 const W = 1920, H = 1080;
-const PROFILE = "/tmp/globedesk-voicelab-chrome";
+const PROFILE = path.join(TMP, "globedesk-voicelab-chrome");
 const OUT = path.join(root, "GlobeDesk-voice-lab-30s.mp4");
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const kids = [];
@@ -275,11 +277,11 @@ async function main() {
 
   // 1) US default preview (talk pose), natural pitch
   await ev("window.DemoAudio.setVoice('hfc_male'); window.DemoAudio.setPitch(0); window.DemoAudio.setSpeed(1); window.DemoVoiceLab.refreshLabels();");
-  await playLine("window.__demo.speak('start')", path.join(root, "assets/vo/start.wav"), { midShot: "10-voice-lab.png", midAt: 1600 });
+  await playLine("window.__demo.speak('start')", path.join(root, "guide-packs/frogpost/assets/vo/start.wav"), { midShot: "10-voice-lab.png", midAt: 1600 });
 
   // 2) Switch to British at natural pitch (no asetrate; pitch 0 preserves clarity)
   await ev(`(function(){
-    window.DemoAudio.setVoice('alan');
+    window.DemoAudio.setVoice('gb');
     window.DemoAudio.setPitch(0);
     window.DemoAudio.setSpeed(1);
     window.DemoVoiceLab.refreshLabels();
@@ -288,16 +290,16 @@ async function main() {
   })()`);
   const switched = await ev(`({ voice: DemoAudio.voiceId, lab: DemoAudio.getLab(), src: (DemoAudio.voiceOf(DemoAudio.voiceId) || {}).dir })`);
   log("switched", JSON.stringify(switched));
-  if (switched.voice !== "alan") throw new Error("voice did not switch to alan");
-  await playLine("window.__demo.speak('start')", path.join(root, "assets/vo/alan/start.wav"));
+  if (switched.voice !== "gb") throw new Error("voice did not switch to gb");
+  await playLine("window.__demo.speak('start')", path.join(root, "guide-packs/frogpost/assets/vo/gb/start.wav"));
 
   // 3) Success pose
-  await playLine("window.DemoFrog.setExpression('success'); window.__demo.speak('spin-success')", path.join(root, "assets/vo/alan/spin-success.wav"), { midShot: "11-pose-success.png", midAt: 900 });
+  await playLine("window.DemoFrog.setExpression('success'); window.__demo.speak('spin-success')", path.join(root, "guide-packs/frogpost/assets/vo/gb/spin-success.wav"), { midShot: "11-pose-success.png", midAt: 900 });
 
   // 4) Hint then salute
   await ev("window.DemoFrog.setExpression('hint')");
   await sleep(700);
-  await playLine("window.DemoFrog.setExpression('salute'); window.__demo.speak('finale')", path.join(root, "assets/vo/alan/finale.wav"), { midShot: "12-pose-salute.png", midAt: 900 });
+  await playLine("window.DemoFrog.setExpression('salute'); window.__demo.speak('finale')", path.join(root, "guide-packs/frogpost/assets/vo/gb/finale.wav"), { midShot: "12-pose-salute.png", midAt: 900 });
   await sleep(800);
 
   const elapsed = (Date.now() - recT0) / 1000;

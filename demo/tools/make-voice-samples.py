@@ -12,8 +12,10 @@ LINE_TEXT = "GM frens. Desk is online. This is mission control. Ready when you a
 
 # Deeper, slightly slower, radio/comms presence, short room. Free ffmpeg only.
 # rubberband pitch is a multiplier (1 = unchanged).
+# Only en_GB-vctk-medium (speaker p226, CC BY 4.0 data) ships in the demo; the others are for comparison only.
+SPEAKERS = {"en_GB-vctk-medium": "p226"}
 CHAIN = {
-    "en_GB-alan-medium": "rubberband=pitch=0.94:tempo=0.97,highpass=f=90,equalizer=f=220:t=q:w=0.7:g=-2,equalizer=f=1300:t=q:w=0.9:g=2,equalizer=f=2600:t=q:w=1.0:g=3,lowpass=f=5000,aecho=0.8:0.85:42:0.16,loudnorm=I=-16:TP=-1.5:LRA=11",
+    "en_GB-vctk-medium": "rubberband=pitch=0.94:tempo=0.97,highpass=f=90,equalizer=f=220:t=q:w=0.7:g=-2,equalizer=f=1300:t=q:w=0.9:g=2,equalizer=f=2600:t=q:w=1.0:g=3,lowpass=f=5000,aecho=0.8:0.85:42:0.16,loudnorm=I=-16:TP=-1.5:LRA=11",
     "en_US-hfc_male-medium": "rubberband=pitch=0.90:tempo=0.97,highpass=f=90,equalizer=f=220:t=q:w=0.7:g=-2,equalizer=f=1300:t=q:w=0.9:g=2,equalizer=f=2600:t=q:w=1.0:g=3,lowpass=f=5000,aecho=0.8:0.85:42:0.16,loudnorm=I=-16:TP=-1.5:LRA=11",
     "en_US-lessac-medium": "rubberband=pitch=0.90:tempo=0.97,highpass=f=90,equalizer=f=220:t=q:w=0.7:g=-2,equalizer=f=1300:t=q:w=0.9:g=2,equalizer=f=2600:t=q:w=1.0:g=3,lowpass=f=5000,aecho=0.8:0.85:42:0.16,loudnorm=I=-16:TP=-1.5:LRA=11",
     "en_US-joe-medium": "rubberband=pitch=0.86:tempo=0.96,highpass=f=90,equalizer=f=220:t=q:w=0.7:g=-2,equalizer=f=1300:t=q:w=0.9:g=2,equalizer=f=2600:t=q:w=1.0:g=3,lowpass=f=5000,aecho=0.8:0.85:42:0.16,loudnorm=I=-16:TP=-1.5:LRA=11",
@@ -72,7 +74,8 @@ def main():
         dest = OUT / f"{name}.wav"
         print("piper", name)
         p = subprocess.run(
-            [str(PIPER), "-m", str(model), "-f", str(raw), "--length-scale", "1.06"],
+            [str(PIPER), "-m", str(model), "-f", str(raw), "--length-scale", "1.06"]
+            + (["-s", str(json.loads(Path(str(model) + ".json").read_text())["speaker_id_map"][SPEAKERS[name]])] if name in SPEAKERS else []),
             input=LINE_SPOKEN + "\n", text=True, capture_output=True,
         )
         if p.returncode != 0 or not raw.exists():

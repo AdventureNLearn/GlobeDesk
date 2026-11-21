@@ -99,7 +99,7 @@
     S.episode.stories.forEach((s, i) => {
       const li = document.createElement("li");
       li.className = i === S.storyIdx ? "on" : "";
-      li.innerHTML = `<span class="ops"><button data-op="up" title="Move up">↑</button><button data-op="down" title="Move down">↓</button><button data-op="dup" title="Duplicate">⧉</button><button data-op="del" title="Delete">✕</button></span>
+      li.innerHTML = `<span class="ops"><button data-op="up" title="Move up">↑</button><button data-op="down" title="Move down">↓</button><button data-op="pin" title="Open this card on the globe (several can be open)" aria-pressed="${GD.callouts && GD.callouts.isOpen(s.id) ? "true" : "false"}"${s.location && s.location.lat != null ? "" : " disabled"}>◎</button><button data-op="dup" title="Duplicate">⧉</button><button data-op="del" title="Delete">✕</button></span>
         <span class="n">${escNum(i + 1)}</span><strong title="${esc(s.title)}">${esc(s.title)}</strong>
         <div class="meta" title="${esc(s.location.name)}">${esc(s.location.name)} • ${escNum(s.durationSec)}s • ${escNum((s.cards || []).length)} card(s) • ${escNum((s.camera || []).filter((k) => k.cut !== false).length)} shot(s)
         ${s.location.verified ? '<span class="pill ok">location verified</span>' : '<span class="pill warn">not verified</span>'}
@@ -117,6 +117,7 @@
     const arr = S.episode.stories;
     if (op === "up" && i > 0) [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]];
     if (op === "down" && i < arr.length - 1) [arr[i + 1], arr[i]] = [arr[i], arr[i + 1]];
+    if (op === "pin") { if (GD.callouts) GD.callouts.toggle(arr[i].id); renderRundown(); renderOverlays(); return; }
     if (op === "dup") { arr.splice(i + 1, 0, GD.model.duplicateStory(arr[i])); S.storyIdx = i + 1; changed(); return; }
     if (op === "del") { if (arr.length === 1) return toast("An episode needs at least one story."); arr.splice(i, 1); }
     S.storyIdx = Math.min(S.storyIdx, arr.length - 1);
@@ -176,7 +177,10 @@
     // Preview only: keep the topic card clear of the map's zoom/compass buttons (not in recordings).
     const ctrl = document.querySelector("#stage .maplibregl-ctrl-top-right");
     const reserveRight = ctrl && ctrl.offsetWidth ? (ctrl.offsetWidth + 14) * dpr : 0;
-    if (cv.width && S.episode) GD.recorder.paintOverlays(ctx, cv.width, cv.height, proj, { reserveRight });
+    // Map buttons and the on-stage attribution are DOM, not canvas: globe callouts keep clear of them.
+    const uiBoxes = [ctrl, document.querySelector("#stage .maplibregl-ctrl-attrib")].filter((el) => el && el.offsetWidth && el.offsetHeight)
+      .map((el) => { const cr = el.getBoundingClientRect(); return { x: (cr.left - r.left) * dpr, y: (cr.top - r.top) * dpr, w: cr.width * dpr, h: cr.height * dpr }; });
+    if (cv.width && S.episode) GD.recorder.paintOverlays(ctx, cv.width, cv.height, proj, { reserveRight, uiBoxes });
     renderMediaLayer();
     if (GD.content) GD.content.render();
     syncHits();
@@ -650,6 +654,18 @@
       }
     }
     (hits.citations || []).forEach((c) => box(c, "Citation"));
+    // Globe callouts: hover or tap a chip to expand it; click a full card to go to its story.
+    if (GD.callouts) GD.callouts.hits().forEach((h) => {
+      const d = document.createElement("button");
+      d.type = "button"; d.className = "gd-hit gd-hit-callout";
+      d.style.left = (h.box.x * sx) + "px"; d.style.top = (h.box.y * sy) + "px";
+      d.style.width = Math.max(12, h.box.w * sx) + "px"; d.style.height = Math.max(12, h.box.h * sy) + "px";
+      d.setAttribute("aria-label", (h.count > 1 ? h.count + " stories: " : "Card: ") + h.slugs.join(", ") + (h.mode === "chip" ? " (tap to expand)" : ""));
+      d.addEventListener("mouseenter", () => GD.callouts.setHover(h.id));
+      d.addEventListener("mouseleave", () => GD.callouts.setHover(null));
+      d.addEventListener("click", (ev) => { ev.preventDefault(); ev.stopPropagation(); GD.callouts.tap(h.id); });
+      host.appendChild(d);
+    });
   }
 
   // ---------- Aspect / stage sizing ----------
@@ -893,10 +909,12 @@
     }
     if (params.get("aspect")) applyAspect(params.get("aspect"));
     if (params.get("t")) GD.playback.seek(Number(params.get("t")));
+    // ?callouts=slug-a,slug-b opens several cards on the globe at once.
+    if (params.get("callouts") && GD.callouts) { GD.callouts.openSlugs(params.get("callouts").split(",").map((x) => x.trim()).filter(Boolean)); renderRundown(); }
     GD.globe.st.onReady.push(() => { GD.globe.setEpisode(S.episode); renderOverlays(); });
     window.__globedesk = window.__gobedesk = { ready: true }; // smoke-test hook (legacy alias kept)
   }
 
-  GD.ui = { toast, openArchive, handleUrl, creditLine, selectStory, renderOverlays, renderTransport, onPlaybackEnd, loadEpisode, changed, renderInspector, download, esc, field, num, slug, addFiles, showFull };
+  GD.ui = { toast, openArchive, handleUrl, creditLine, selectStory, renderOverlays, renderRundown, renderTransport, onPlaybackEnd, loadEpisode, changed, renderInspector, download, esc, field, num, slug, addFiles, showFull };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();

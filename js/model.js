@@ -220,7 +220,7 @@
     };
   }
 
-  // Frogpost identity (the default show). See js/frog-rundown.js for the 50 rows.
+  // Frogpost identity (the default show). See js/frog-rundown.js for the rows.
   const FROG = {
     show: "Frogpost",
     title: "Frogpost",
@@ -271,7 +271,7 @@
     return s;
   }
 
-  // Default show: Frogpost, 50 stories in 5 fixed buckets. Rows come from GD.frogRundown.
+  // Default show: Frogpost, stories in 5 fixed buckets. Rows come from GD.frogRundown.
   function demoEpisode() {
     const rows = (GD.frogRundown || []);
     const ep = blankEpisode();

@@ -187,7 +187,10 @@
     const zone = H * (L.captionZonePct || 15) / 100;
     const blocked = [{ x: 0, y: 0, w: W, h: hhPre }, { x: 0, y: H - zone, w: W, h: zone }]
       .concat(cits.map((b) => ({ x: b.x, y: b.y, w: b.w, h: b.h })), cards.map((b) => ({ x: b.x, y: b.y, w: b.w, h: b.h })));
-    paintEventLabels(ctx, W, H, u, proj, font, blocked);
+    // Multi-card callouts go first (they win over event labels), then event labels avoid them.
+    if (opts.uiBoxes) opts.uiBoxes.forEach((b) => blocked.push(b));
+    const calloutBoxes = GD.callouts ? GD.callouts.paint(ctx, W, H, u, proj, blocked) : [];
+    paintEventLabels(ctx, W, H, u, proj, font, blocked.concat(calloutBoxes));
     // Header layout: title sits to the right of the badge so a left-side citation box
     // cannot clip the first letters. Citations always start below the header band.
     let headerBottom = 0;

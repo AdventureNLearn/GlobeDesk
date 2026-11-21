@@ -3,14 +3,16 @@
 import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
+import os from "node:os";
+const TMP = process.env.GLOBEDESK_TMP || os.tmpdir();
 import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
-const outDir = "/tmp/final-qa/caption-test";
+const outDir = path.join(TMP, "final-qa/caption-test");
 const PORT = 8769, DBG = 9479, DISPLAY = ":97";
 const W = 1920, H = 1080;
-const PROFILE = "/tmp/globedesk-caption-chrome";
+const PROFILE = path.join(TMP, "globedesk-caption-chrome");
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const kids = [];
 let c;

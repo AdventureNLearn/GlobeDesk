@@ -1,0 +1,177 @@
+{
+  "type": "FeatureCollection",
+  "name": "My layer (placeholders, not real data)",
+  "globedesk_layer": {
+    "id": "evl-mwpp6mp5-18",
+    "name": "My layer (placeholders, not real data)",
+    "color": "#ff8a1f",
+    "icon": "●",
+    "labels": true,
+    "styleByCategory": true,
+    "note": ""
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "ev-mwpp6mp5-19",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1,
+          1
+        ]
+      },
+      "properties": {
+        "kind": "point",
+        "title": "PLACEHOLDER point",
+        "eventTime": "",
+        "eventEnd": "",
+        "timeApprox": true,
+        "datePrecision": "unknown",
+        "category": "other",
+        "verification": "not verified",
+        "sources": [],
+        "citation": {
+          "type": "[UNKNOWN]",
+          "date": "[UNKNOWN]",
+          "credit": "[UNKNOWN]",
+          "license": "[UNKNOWN]"
+        },
+        "notes": "Placeholder shape near 0°, 0° in the open ocean. Replace it.",
+        "precisionLabel": "Precision: [UNKNOWN]",
+        "radiusKm": null,
+        "cardId": null,
+        "storyId": null,
+        "example": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ev-mwpp6mp5-1a",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -2,
+            -1
+          ],
+          [
+            2,
+            1.5
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "line",
+        "title": "PLACEHOLDER route",
+        "eventTime": "",
+        "eventEnd": "",
+        "timeApprox": true,
+        "datePrecision": "unknown",
+        "category": "convoy",
+        "verification": "not verified",
+        "sources": [],
+        "citation": {
+          "type": "[UNKNOWN]",
+          "date": "[UNKNOWN]",
+          "credit": "[UNKNOWN]",
+          "license": "[UNKNOWN]"
+        },
+        "notes": "Placeholder shape near 0°, 0° in the open ocean. Replace it.",
+        "precisionLabel": "Precision: [UNKNOWN]",
+        "radiusKm": null,
+        "cardId": null,
+        "storyId": null,
+        "example": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ev-mwpp6mp5-1b",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.5,
+              -1.5
+            ],
+            [
+              1.5,
+              -1.5
+            ],
+            [
+              1.5,
+              0.5
+            ],
+            [
+              -1.5,
+              0.5
+            ],
+            [
+              -1.5,
+              -1.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "kind": "polygon",
+        "title": "PLACEHOLDER area",
+        "eventTime": "",
+        "eventEnd": "",
+        "timeApprox": true,
+        "datePrecision": "unknown",
+        "category": "other",
+        "verification": "not verified",
+        "sources": [],
+        "citation": {
+          "type": "[UNKNOWN]",
+          "date": "[UNKNOWN]",
+          "credit": "[UNKNOWN]",
+          "license": "[UNKNOWN]"
+        },
+        "notes": "Placeholder shape near 0°, 0° in the open ocean. Replace it.",
+        "precisionLabel": "Precision: [UNKNOWN]",
+        "radiusKm": null,
+        "cardId": null,
+        "storyId": null,
+        "example": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ev-mwpp6mp5-1c",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1,
+          2
+        ]
+      },
+      "properties": {
+        "kind": "ring",
+        "title": "PLACEHOLDER ring",
+        "eventTime": "",
+        "eventEnd": "",
+        "timeApprox": true,
+        "datePrecision": "unknown",
+        "category": "other",
+        "verification": "not verified",
+        "sources": [],
+        "citation": {
+          "type": "[UNKNOWN]",
+          "date": "[UNKNOWN]",
+          "credit": "[UNKNOWN]",
+          "license": "[UNKNOWN]"
+        },
+        "notes": "Placeholder shape near 0°, 0° in the open ocean. Replace it.",
+        "precisionLabel": "Precision: [UNKNOWN]",
+        "radiusKm": 50,
+        "cardId": null,
+        "storyId": null,
+        "example": true
+      }
+    }
+  ]
+}

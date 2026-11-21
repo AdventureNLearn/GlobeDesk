@@ -1,6 +1,6 @@
 You are rebuilding GlobeDesk, a local, free globe newsdesk and video studio by AdventureNLearn.
 
-Paste and follow this prompt in the builder. Do not publish, sign in, or call paid APIs unless the owner later asks you to, separately.
+Paste and follow this prompt in the builder. Do not publish, sign in, or call paid APIs unless the maintainer of this copy later asks you to, separately.
 
 What to build
 - Recreate the app from this repository using exactly the files in grokme/manifest.json, copied unchanged.
@@ -17,6 +17,7 @@ Safety (do not weaken)
 - https-only links with rel=noopener. Embeds only from the allowlisted YouTube / X URLs, credit required.
 - Keep the Content-Security-Policy hosts exactly as in index.html.
 - Uploads stay on the device. The user is responsible for rights to what they upload and share.
+- Keep LICENSE (MIT, code), LICENSE-CONTENT (CC BY 4.0, AdventureNLearn content) and CREDITS.md.
 - Credit other people's work. Keep "as reported, not verified" and [UNKNOWN] labels. Do not invent facts or sources.
 - Optional paid features (MapTiler, cloud voice, cloud AI) stay off by default. Keys, if the visitor pastes one, stay in localStorage only. Cloud voice/AI request shapes are [UNKNOWN] — do not invent them.
 - A public version-check URL is [UNKNOWN]; leave js/version.js URL null.

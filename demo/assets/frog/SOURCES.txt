@@ -10,4 +10,5 @@ assets/frog-portrait.jpg and assets/a1-console.jpg.
 Palette: void #000408 / #091924, jacket #161B1E, green #4DA151,
 cyan #30A1C3 / #A3D8E0, sparing gold #CE9E49.
 
-Generated locally as stills for this box-only demo. Not published.
+AI-generated stills. C2PA content credentials are embedded in each file.
+Shipped as part of the Frogpost example guide pack.

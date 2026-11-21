@@ -1,6 +1,6 @@
 {
   "schema": "globedesk.episode/2",
-  "id": "ep-mwpmy709-5",
+  "id": "ep-mwpp6mol-5",
   "show": "Frogpost",
   "title": "Frogpost",
   "date": "2026-11-20",
@@ -62,7 +62,7 @@
   },
   "stories": [
     {
-      "id": "story-mwpmy709-9",
+      "id": "story-mwpp6mol-9",
       "slug": "infraex",
       "title": "Hong Kong InfraEX and the Northern Metropolis",
       "durationSec": 16,
@@ -77,7 +77,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70b-c",
+          "id": "kf-mwpp6mon-c",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -98,7 +98,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70b-d",
+          "id": "kf-mwpp6mon-d",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -119,7 +119,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70b-e",
+          "id": "kf-mwpp6mon-e",
           "preset": "street",
           "at": 8,
           "center": [
@@ -140,7 +140,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70b-f",
+          "id": "kf-mwpp6mon-f",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -163,7 +163,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70b-h",
+          "id": "card-mwpp6mon-h",
           "kind": "topic",
           "title": "Build it",
           "body": "The government news site says InfraEX Week opened 20 Nov 2026, tied to the Northern Metropolis and future-ready infrastructure.",
@@ -183,7 +183,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70b-g"
+            "src-mwpp6mon-g"
           ],
           "pin": {
             "lat": 22.32,
@@ -197,7 +197,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70b-g",
+          "id": "src-mwpp6mon-g",
           "label": "news.gov.hk",
           "url": "https://www.news.gov.hk/eng/2026/11/20261120/20261120_194010_745.html",
           "status": "unverified",
@@ -241,7 +241,7 @@
       }
     },
     {
-      "id": "story-mwpmy70b-i",
+      "id": "story-mwpp6mon-i",
       "slug": "qiongzhou",
       "title": "Qiongzhou Strait intelligent-ferry trials",
       "durationSec": 16,
@@ -256,7 +256,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70b-l",
+          "id": "kf-mwpp6mon-l",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -277,7 +277,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70b-m",
+          "id": "kf-mwpp6mon-m",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -298,7 +298,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70b-n",
+          "id": "kf-mwpp6mon-n",
           "preset": "street",
           "at": 8,
           "center": [
@@ -319,7 +319,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70b-o",
+          "id": "kf-mwpp6mon-o",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -342,7 +342,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70b-q",
+          "id": "card-mwpp6mon-q",
           "kind": "topic",
           "title": "Build it",
           "body": "A demonstration project for intelligent shipping on the Hainan–mainland ferry route was reported launched in Haikou.",
@@ -362,7 +362,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70b-p"
+            "src-mwpp6mon-p"
           ],
           "pin": {
             "lat": 20.04,
@@ -376,7 +376,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70b-p",
+          "id": "src-mwpp6mon-p",
           "label": "Smart Maritime Network",
           "url": "https://smartmaritimenetwork.com/2026/11/20/qiongzhou-strait-intelligent-shipping-project-launched/",
           "status": "unverified",
@@ -420,7 +420,7 @@
       }
     },
     {
-      "id": "story-mwpmy70b-r",
+      "id": "story-mwpp6mon-r",
       "slug": "subsea-cables",
       "title": "New Americas subsea cables",
       "durationSec": 16,
@@ -435,7 +435,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70b-u",
+          "id": "kf-mwpp6mon-u",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -456,7 +456,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70b-v",
+          "id": "kf-mwpp6mon-v",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -477,7 +477,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70b-w",
+          "id": "kf-mwpp6mon-w",
           "preset": "street",
           "at": 8,
           "center": [
@@ -498,7 +498,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70b-x",
+          "id": "kf-mwpp6mon-x",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -521,7 +521,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70b-z",
+          "id": "card-mwpp6mon-z",
           "kind": "topic",
           "title": "Build it",
           "body": "Reported systems include Alisios, Canoa, OlaLuz, Humboldt and Synapse. This pin is one landing, not the routes.",
@@ -541,7 +541,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70b-y"
+            "src-mwpp6mon-y"
           ],
           "pin": {
             "lat": 8.98,
@@ -555,7 +555,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70b-y",
+          "id": "src-mwpp6mon-y",
           "label": "Telecom Review Americas",
           "url": "https://www.telecomreviewamericas.com/articles/reports-and-coverage/the-new-internet-highways-subsea-cables-satellites-and-digital-sovereignty/",
           "status": "unverified",
@@ -599,7 +599,7 @@
       }
     },
     {
-      "id": "story-mwpmy70b-10",
+      "id": "story-mwpp6moo-10",
       "slug": "permitting-bill",
       "title": "US permitting reform for housing, lines and plants",
       "durationSec": 16,
@@ -614,7 +614,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-13",
+          "id": "kf-mwpp6moo-13",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -635,7 +635,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-14",
+          "id": "kf-mwpp6moo-14",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -656,7 +656,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-15",
+          "id": "kf-mwpp6moo-15",
           "preset": "street",
           "at": 8,
           "center": [
@@ -677,7 +677,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-16",
+          "id": "kf-mwpp6moo-16",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -700,7 +700,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-18",
+          "id": "card-mwpp6moo-18",
           "kind": "topic",
           "title": "Build it",
           "body": "The Senate was reported to have passed a permitting bill covering housing, roads, energy and data centers. Tribal objections were also reported.",
@@ -720,7 +720,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-17"
+            "src-mwpp6moo-17"
           ],
           "pin": {
             "lat": 38.89,
@@ -734,7 +734,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-17",
+          "id": "src-mwpp6moo-17",
           "label": "Democracy Now! headlines, 20 Nov 2026",
           "url": "https://www.democracynow.org/2026/11/20/headlines",
           "status": "unverified",
@@ -783,7 +783,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-19",
+      "id": "story-mwpp6moo-19",
       "slug": "green-corridor",
       "title": "Singapore–Los Angeles–Long Beach green corridor",
       "durationSec": 16,
@@ -798,7 +798,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-1c",
+          "id": "kf-mwpp6moo-1c",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -819,7 +819,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-1d",
+          "id": "kf-mwpp6moo-1d",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -840,7 +840,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-1e",
+          "id": "kf-mwpp6moo-1e",
           "preset": "street",
           "at": 8,
           "center": [
@@ -861,7 +861,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-1f",
+          "id": "kf-mwpp6moo-1f",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -884,7 +884,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-1h",
+          "id": "card-mwpp6moo-1h",
           "kind": "topic",
           "title": "Build it",
           "body": "The three ports were reported to have renewed a green and digital shipping corridor. The page's own dates should be checked before this is treated as new.",
@@ -904,7 +904,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-1g"
+            "src-mwpp6moo-1g"
           ],
           "pin": {
             "lat": 1.26,
@@ -918,7 +918,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-1g",
+          "id": "src-mwpp6moo-1g",
           "label": "World Ports Organization",
           "url": "https://www.worldports.org/ports-of-singapore-long-beach-and-los-angeles-renew-agreement-on-green-and-digital-shipping-corridor/",
           "status": "unverified",
@@ -972,7 +972,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-1i",
+      "id": "story-mwpp6moo-1i",
       "slug": "development-road",
       "title": "Iraq Development Road and Grand Faw",
       "durationSec": 16,
@@ -987,7 +987,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-1l",
+          "id": "kf-mwpp6moo-1l",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -1008,7 +1008,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-1m",
+          "id": "kf-mwpp6moo-1m",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -1029,7 +1029,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-1n",
+          "id": "kf-mwpp6moo-1n",
           "preset": "street",
           "at": 8,
           "center": [
@@ -1050,7 +1050,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-1o",
+          "id": "kf-mwpp6moo-1o",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -1073,7 +1073,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-1q",
+          "id": "card-mwpp6moo-1q",
           "kind": "topic",
           "title": "Build it",
           "body": "Iraq's Development Road was described as a dry canal from the Grand Faw Port toward Europe. Engineering status beyond that report: [UNKNOWN].",
@@ -1093,7 +1093,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-1p"
+            "src-mwpp6moo-1p"
           ],
           "pin": {
             "lat": 29.98,
@@ -1107,7 +1107,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-1p",
+          "id": "src-mwpp6moo-1p",
           "label": "Blitz via Qoshe",
           "url": "https://qoshe.com/blitz/sonjib-chandra-das/middle-east-transport-corridors-could-reshape-global-trade/189552711",
           "status": "unverified",
@@ -1156,7 +1156,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-1r",
+      "id": "story-mwpp6moo-1r",
       "slug": "imec-gcc",
       "title": "IMEC and the GCC rail network",
       "durationSec": 16,
@@ -1171,7 +1171,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-1u",
+          "id": "kf-mwpp6moo-1u",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -1192,7 +1192,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-1v",
+          "id": "kf-mwpp6moo-1v",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -1213,7 +1213,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-1w",
+          "id": "kf-mwpp6moo-1w",
           "preset": "street",
           "at": 8,
           "center": [
@@ -1234,7 +1234,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-1x",
+          "id": "kf-mwpp6moo-1x",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -1257,7 +1257,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-1z",
+          "id": "card-mwpp6moo-1z",
           "kind": "topic",
           "title": "Build it",
           "body": "The same report covers IMEC and a restated GCC rail commitment. No single site is the project.",
@@ -1277,7 +1277,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-1y"
+            "src-mwpp6moo-1y"
           ],
           "pin": {
             "lat": 25.2,
@@ -1291,7 +1291,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-1y",
+          "id": "src-mwpp6moo-1y",
           "label": "Blitz via Qoshe",
           "url": "https://qoshe.com/blitz/sonjib-chandra-das/middle-east-transport-corridors-could-reshape-global-trade/189552711",
           "status": "unverified",
@@ -1335,7 +1335,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-20",
+      "id": "story-mwpp6moo-20",
       "slug": "syria-jordan-rail",
       "title": "Syria–Jordan rail talks",
       "durationSec": 16,
@@ -1350,7 +1350,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-23",
+          "id": "kf-mwpp6moo-23",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -1371,7 +1371,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-24",
+          "id": "kf-mwpp6moo-24",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -1392,7 +1392,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-25",
+          "id": "kf-mwpp6moo-25",
           "preset": "street",
           "at": 8,
           "center": [
@@ -1413,7 +1413,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-26",
+          "id": "kf-mwpp6moo-26",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -1436,7 +1436,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-28",
+          "id": "card-mwpp6moo-28",
           "kind": "topic",
           "title": "Build it",
           "body": "Syria and Jordan were reported to be exploring railway rehabilitation. What has actually been rebuilt: [UNKNOWN].",
@@ -1456,7 +1456,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-27"
+            "src-mwpp6moo-27"
           ],
           "pin": {
             "lat": 31.95,
@@ -1470,7 +1470,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-27",
+          "id": "src-mwpp6moo-27",
           "label": "Blitz via Qoshe",
           "url": "https://qoshe.com/blitz/sonjib-chandra-das/middle-east-transport-corridors-could-reshape-global-trade/189552711",
           "status": "unverified",
@@ -1514,7 +1514,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-29",
+      "id": "story-mwpp6moo-29",
       "slug": "jordan-desal",
       "title": "Jordan desalination plant",
       "durationSec": 16,
@@ -1529,7 +1529,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-2c",
+          "id": "kf-mwpp6mop-2c",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -1550,7 +1550,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-2d",
+          "id": "kf-mwpp6mop-2d",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -1571,7 +1571,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-2e",
+          "id": "kf-mwpp6mop-2e",
           "preset": "street",
           "at": 8,
           "center": [
@@ -1592,7 +1592,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-2f",
+          "id": "kf-mwpp6mop-2f",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -1615,7 +1615,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-2h",
+          "id": "card-mwpp6mop-2h",
           "kind": "topic",
           "title": "Build it",
           "body": "A Jordan desalination project was reported to have drawn $6.7 billion, with similar talks named for Syria and Yemen. The city is not in that blurb.",
@@ -1635,7 +1635,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-2g"
+            "src-mwpp6mop-2g"
           ],
           "pin": {
             "lat": 31.24,
@@ -1649,7 +1649,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-2g",
+          "id": "src-mwpp6mop-2g",
           "label": "Reuters Water Management",
           "url": "https://www.reuters.com/sustainability/water-management/",
           "status": "unverified",
@@ -1698,7 +1698,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-2i",
+      "id": "story-mwpp6mop-2i",
       "slug": "port-builds",
       "title": "Port builds listed this week",
       "durationSec": 16,
@@ -1713,7 +1713,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-2l",
+          "id": "kf-mwpp6mop-2l",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -1734,7 +1734,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-2m",
+          "id": "kf-mwpp6mop-2m",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -1755,7 +1755,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-2n",
+          "id": "kf-mwpp6mop-2n",
           "preset": "street",
           "at": 8,
           "center": [
@@ -1776,7 +1776,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-2o",
+          "id": "kf-mwpp6mop-2o",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -1799,7 +1799,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-2q",
+          "id": "card-mwpp6mop-2q",
           "kind": "topic",
           "title": "Build it",
           "body": "That page listed Tianjin robot trucks, a battery bulker and a gate-rudder reefer. Each item was not opened here. Details: [UNKNOWN].",
@@ -1819,7 +1819,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-2p"
+            "src-mwpp6mop-2p"
           ],
           "pin": {
             "lat": 38.98,
@@ -1833,7 +1833,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-2p",
+          "id": "src-mwpp6mop-2p",
           "label": "Splash247 listings, 20 Nov 2026",
           "url": "https://splash247.com/shippings-next-big-chokepoint-is-in-the-cloud/",
           "status": "unverified",
@@ -1887,7 +1887,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-2r",
+      "id": "story-mwpp6mop-2r",
       "slug": "icj-rohingya",
       "title": "World Court Rohingya judgment",
       "durationSec": 16,
@@ -1902,7 +1902,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-2u",
+          "id": "kf-mwpp6mop-2u",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -1923,7 +1923,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-2v",
+          "id": "kf-mwpp6mop-2v",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -1944,7 +1944,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-2w",
+          "id": "kf-mwpp6mop-2w",
           "preset": "street",
           "at": 8,
           "center": [
@@ -1965,7 +1965,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-2x",
+          "id": "kf-mwpp6mop-2x",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -1988,7 +1988,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-2z",
+          "id": "card-mwpp6mop-2z",
           "kind": "topic",
           "title": "Globe encyclopedia",
           "body": "A headline says the World Court ruled Burma guilty of genocide against the Rohingya. The judgment text is not attached here.",
@@ -2008,7 +2008,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-2y"
+            "src-mwpp6mop-2y"
           ],
           "pin": {
             "lat": 52.09,
@@ -2022,7 +2022,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-2y",
+          "id": "src-mwpp6mop-2y",
           "label": "Democracy Now! headlines, 20 Nov 2026",
           "url": "https://www.democracynow.org/2026/11/20/headlines",
           "status": "unverified",
@@ -2071,7 +2071,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-30",
+      "id": "story-mwpp6mop-30",
       "slug": "cop31",
       "title": "COP31 in Antalya",
       "durationSec": 16,
@@ -2086,7 +2086,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-33",
+          "id": "kf-mwpp6mop-33",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -2107,7 +2107,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-34",
+          "id": "kf-mwpp6mop-34",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -2128,7 +2128,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-35",
+          "id": "kf-mwpp6mop-35",
           "preset": "street",
           "at": 8,
           "center": [
@@ -2149,7 +2149,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-36",
+          "id": "kf-mwpp6mop-36",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -2172,7 +2172,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-38",
+          "id": "card-mwpp6mop-38",
           "kind": "topic",
           "title": "Globe encyclopedia",
           "body": "The talks were reported to have made no progress on a fossil phaseout or climate finance. 'COP of betrayal' is that headline's characterization, not a finding.",
@@ -2192,7 +2192,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-37"
+            "src-mwpp6mop-37"
           ],
           "pin": {
             "lat": 36.9,
@@ -2206,7 +2206,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-37",
+          "id": "src-mwpp6mop-37",
           "label": "Democracy Now! headlines, 20 Nov 2026",
           "url": "https://www.democracynow.org/2026/11/20/headlines",
           "status": "unverified",
@@ -2255,7 +2255,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-39",
+      "id": "story-mwpp6mop-39",
       "slug": "dnipro-bridges",
       "title": "Kyiv's Dnipro bridges",
       "durationSec": 16,
@@ -2270,7 +2270,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-3c",
+          "id": "kf-mwpp6mop-3c",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -2291,7 +2291,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-3d",
+          "id": "kf-mwpp6mop-3d",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -2312,7 +2312,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-3e",
+          "id": "kf-mwpp6mop-3e",
           "preset": "street",
           "at": 8,
           "center": [
@@ -2333,7 +2333,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-3f",
+          "id": "kf-mwpp6mop-3f",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -2356,7 +2356,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-3h",
+          "id": "card-mwpp6mop-3h",
           "kind": "topic",
           "title": "Globe encyclopedia",
           "body": "Overnight strikes were reported in Kyiv, including three bridges over the Dnipro. Which bridges, and the damage: [UNKNOWN].",
@@ -2376,7 +2376,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-3g"
+            "src-mwpp6mop-3g"
           ],
           "pin": {
             "lat": 50.45,
@@ -2390,7 +2390,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-3g",
+          "id": "src-mwpp6mop-3g",
           "label": "Democracy Now! headlines, 20 Nov 2026",
           "url": "https://www.democracynow.org/2026/11/20/headlines",
           "status": "unverified",
@@ -2434,7 +2434,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-3i",
+      "id": "story-mwpp6mop-3i",
       "slug": "crimea-link",
       "title": "The bridge link to occupied Crimea",
       "durationSec": 16,
@@ -2448,7 +2448,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-3l",
+          "id": "kf-mwpp6mop-3l",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -2469,7 +2469,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-3m",
+          "id": "kf-mwpp6mop-3m",
           "preset": "close",
           "at": 2.8,
           "center": [
@@ -2492,7 +2492,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-3o",
+          "id": "card-mwpp6mop-3o",
           "kind": "topic",
           "title": "Globe encyclopedia",
           "body": "A headline says Ukraine bombed the bridge connecting Russia to occupied Crimea, and that Russian attacks then killed 8. Damage and the exact span: [UNKNOWN].",
@@ -2512,7 +2512,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-3n"
+            "src-mwpp6mop-3n"
           ],
           "pin": {
             "lat": 45.31,
@@ -2526,7 +2526,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-3n",
+          "id": "src-mwpp6mop-3n",
           "label": "Democracy Now! headlines, 20 Nov 2026",
           "url": "https://www.democracynow.org/2026/11/20/headlines",
           "status": "unverified",
@@ -2575,7 +2575,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-3p",
+      "id": "story-mwpp6mop-3p",
       "slug": "hormuz-cloud",
       "title": "Hormuz, where the port and the data centers meet",
       "durationSec": 16,
@@ -2590,7 +2590,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-3s",
+          "id": "kf-mwpp6mop-3s",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -2611,7 +2611,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-3t",
+          "id": "kf-mwpp6mop-3t",
           "preset": "close",
           "at": 2.8,
           "center": [
@@ -2634,7 +2634,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-3v",
+          "id": "card-mwpp6mop-3v",
           "kind": "topic",
           "title": "Globe encyclopedia",
           "body": "The report describes a March 2026 fire at a Jebel Ali berth and strikes on data centers in the UAE and Bahrain. This pin is the strait, not those sites.",
@@ -2654,7 +2654,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-3u"
+            "src-mwpp6mop-3u"
           ],
           "pin": {
             "lat": 26.57,
@@ -2668,7 +2668,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-3u",
+          "id": "src-mwpp6mop-3u",
           "label": "Splash247",
           "url": "https://splash247.com/shippings-next-big-chokepoint-is-in-the-cloud/",
           "status": "unverified",
@@ -2717,7 +2717,7 @@
       }
     },
     {
-      "id": "story-mwpmy70c-3w",
+      "id": "story-mwpp6mop-3w",
       "slug": "war-powers",
       "title": "Senate war-powers vote on Iran",
       "durationSec": 16,
@@ -2732,7 +2732,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70c-3z",
+          "id": "kf-mwpp6mop-3z",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -2753,7 +2753,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-40",
+          "id": "kf-mwpp6mop-40",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -2774,7 +2774,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-41",
+          "id": "kf-mwpp6mop-41",
           "preset": "street",
           "at": 8,
           "center": [
@@ -2795,7 +2795,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70c-42",
+          "id": "kf-mwpp6mop-42",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -2818,7 +2818,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70c-44",
+          "id": "card-mwpp6mop-44",
           "kind": "topic",
           "title": "Globe encyclopedia",
           "body": "A war-powers resolution on further attacks on Iran was reported to have failed 51–48. The roll call is not attached.",
@@ -2838,7 +2838,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70c-43"
+            "src-mwpp6mop-43"
           ],
           "pin": {
             "lat": 38.89,
@@ -2852,7 +2852,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70c-43",
+          "id": "src-mwpp6mop-43",
           "label": "Democracy Now! headlines, 20 Nov 2026",
           "url": "https://www.democracynow.org/2026/11/20/headlines",
           "status": "unverified",
@@ -2901,7 +2901,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-45",
+      "id": "story-mwpp6mop-45",
       "slug": "western-cape",
       "title": "Western Cape dams and allocation cuts",
       "durationSec": 16,
@@ -2916,7 +2916,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-48",
+          "id": "kf-mwpp6mop-48",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -2937,7 +2937,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-49",
+          "id": "kf-mwpp6mop-49",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -2958,7 +2958,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-4a",
+          "id": "kf-mwpp6mop-4a",
           "preset": "street",
           "at": 8,
           "center": [
@@ -2979,7 +2979,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-4b",
+          "id": "kf-mwpp6mop-4b",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -3002,7 +3002,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-4d",
+          "id": "card-mwpp6mop-4d",
           "kind": "topic",
           "title": "Globe encyclopedia",
           "body": "South Africa was reported to have cut Western Cape water: 7% domestic and industrial, 15% irrigation, after poor rainfall.",
@@ -3022,7 +3022,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-4c"
+            "src-mwpp6mop-4c"
           ],
           "pin": {
             "lat": -33.92,
@@ -3036,7 +3036,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-4c",
+          "id": "src-mwpp6mop-4c",
           "label": "Reuters Water Management",
           "url": "https://www.reuters.com/sustainability/water-management/",
           "status": "unverified",
@@ -3080,7 +3080,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-4e",
+      "id": "story-mwpp6mop-4e",
       "slug": "indonesia-hydro",
       "title": "Indonesia's same-week wet and dry disasters",
       "durationSec": 16,
@@ -3095,7 +3095,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-4h",
+          "id": "kf-mwpp6mop-4h",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -3116,7 +3116,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-4i",
+          "id": "kf-mwpp6mop-4i",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -3137,7 +3137,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-4j",
+          "id": "kf-mwpp6mop-4j",
           "preset": "street",
           "at": 8,
           "center": [
@@ -3158,7 +3158,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-4k",
+          "id": "kf-mwpp6mop-4k",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -3181,7 +3181,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-4m",
+          "id": "card-mwpp6mop-4m",
           "kind": "topic",
           "title": "Globe encyclopedia",
           "body": "BNPB was reported to have logged floods and whirlwinds from 18–19 Nov across several provinces, plus dry hazards. This pin is the capital, not each town.",
@@ -3201,7 +3201,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-4l"
+            "src-mwpp6mop-4l"
           ],
           "pin": {
             "lat": -6.21,
@@ -3215,7 +3215,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-4l",
+          "id": "src-mwpp6mop-4l",
           "label": "RRI / Voice of Indonesia",
           "url": "https://rri.co.id/en/environment/2911814/indonesia-reports-wet-and-dry-hydrometeorological-disasters",
           "status": "unverified",
@@ -3264,14 +3264,14 @@
       }
     },
     {
-      "id": "story-mwpmy70d-4n",
-      "slug": "seafloor-lease",
-      "title": "California seafloor lease auction",
+      "id": "story-mwpp6mop-4n",
+      "slug": "socal-lease-call",
+      "title": "Southern California offshore lease call",
       "durationSec": 16,
       "location": {
-        "name": "California coast (site UNKNOWN)",
-        "lat": 34.4,
-        "lon": -120.5,
+        "name": "Southern California offshore planning area (region, approx.)",
+        "lat": 33.5,
+        "lon": -119.5,
         "precision": "approximate",
         "verified": false,
         "note": "sample, approximate, not verified",
@@ -3279,12 +3279,12 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-4q",
+          "id": "kf-mwpp6mop-4q",
           "preset": "orbit",
           "at": 0,
           "center": [
-            -120.5,
-            34.4
+            -119.5,
+            33.5
           ],
           "zoom": 1.7,
           "pitch": 0,
@@ -3300,12 +3300,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-4r",
+          "id": "kf-mwpp6mop-4r",
           "preset": "close",
           "at": 2.8,
           "center": [
-            -120.5,
-            34.4
+            -119.5,
+            33.5
           ],
           "zoom": 6.8,
           "pitch": 38,
@@ -3323,10 +3323,10 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-4s",
+          "id": "card-mwpp6mop-4t",
           "kind": "topic",
-          "title": "Globe encyclopedia · source missing",
-          "body": "A public reply said the seafloor was being auctioned off California. No primary notice is attached. Treat the claim as [UNKNOWN].",
+          "title": "Globe encyclopedia",
+          "body": "BOEM published a Call for Information and Nominations for Southern California offshore oil and gas. The notice says it is not a final decision to lease. BOEM's California leasing page says the first sale is tentatively scheduled for 2027. This pin is the planning area, not a lease site.",
           "why": "[UNKNOWN]",
           "facts": [
             {
@@ -3335,17 +3335,19 @@
             },
             {
               "label": "Place",
-              "value": "California coast (site UNKNOWN)"
+              "value": "Southern California offshore planning area (region, approx.)"
             },
             {
               "label": "Source",
-              "value": "Missing [UNKNOWN]"
+              "value": "Federal Register (BOEM), 27 Jan 2026"
             }
           ],
-          "sourceIds": [],
+          "sourceIds": [
+            "src-mwpp6mop-4s"
+          ],
           "pin": {
-            "lat": 34.4,
-            "lon": -120.5
+            "lat": 33.5,
+            "lon": -119.5
           },
           "at": 2,
           "dur": 12,
@@ -3353,34 +3355,57 @@
           "verified": false
         }
       ],
-      "sources": [],
-      "script": "California seafloor lease auction. A public reply said the seafloor was being auctioned off California. No primary notice is attached. Treat the claim as [UNKNOWN].",
+      "sources": [
+        {
+          "id": "src-mwpp6mop-4s",
+          "label": "Federal Register (BOEM), 27 Jan 2026",
+          "url": "https://www.federalregister.gov/documents/2026/01/27/2026-01568/call-for-information-and-nominations-for-southern-california-outer-continental-shelf-oil-and-gas",
+          "status": "unverified",
+          "note": "As reported. Not independently checked."
+        }
+      ],
+      "script": "Southern California offshore lease call. BOEM published a Call for Information and Nominations for Southern California offshore oil and gas. The notice says it is not a final decision to lease. BOEM's California leasing page says the first sale is tentatively scheduled for 2027. This pin is the planning area, not a lease site.",
       "captions": [
         {
           "start": 0,
-          "end": 2.56,
-          "text": "California seafloor lease auction."
+          "end": 1.48,
+          "text": "Southern California offshore lease call."
         },
         {
-          "start": 2.56,
-          "end": 9.6,
-          "text": "A public reply said the seafloor was being auctioned off California."
+          "start": 1.48,
+          "end": 5.04,
+          "text": "BOEM published a Call for Information and Nominations for Southern California offshore"
         },
         {
-          "start": 9.6,
-          "end": 12.8,
-          "text": "No primary notice is attached."
+          "start": 5.04,
+          "end": 5.93,
+          "text": "oil and gas."
         },
         {
-          "start": 12.8,
+          "start": 5.93,
+          "end": 9.19,
+          "text": "The notice says it is not a final decision to lease."
+        },
+        {
+          "start": 9.19,
+          "end": 12.74,
+          "text": "BOEM's California leasing page says the first sale is tentatively scheduled for"
+        },
+        {
+          "start": 12.74,
+          "end": 13.04,
+          "text": "2027."
+        },
+        {
+          "start": 13.04,
           "end": 16,
-          "text": "Treat the claim as [UNKNOWN]."
+          "text": "This pin is the planning area, not a lease site."
         }
       ],
       "summary": "Globe encyclopedia, as reported. Not verified.",
       "date": "",
-      "credit": "",
-      "creditUrl": "",
+      "credit": "Federal Register (BOEM), 27 Jan 2026",
+      "creditUrl": "https://www.federalregister.gov/documents/2026/01/27/2026-01568/call-for-information-and-nominations-for-southern-california-outer-continental-shelf-oil-and-gas",
       "asReported": true,
       "media": [],
       "audioOverlays": [],
@@ -3396,7 +3421,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-4t",
+      "id": "story-mwpp6mop-4u",
       "slug": "gaza-basin",
       "title": "Gaza's damaged water basin",
       "durationSec": 16,
@@ -3411,7 +3436,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-4w",
+          "id": "kf-mwpp6mop-4x",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -3432,7 +3457,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-4x",
+          "id": "kf-mwpp6mop-4y",
           "preset": "close",
           "at": 2.8,
           "center": [
@@ -3455,7 +3480,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-4z",
+          "id": "card-mwpp6mop-50",
           "kind": "topic",
           "title": "Globe encyclopedia",
           "body": "UNICEF was reported to say Israel blocked equipment to repair a water basin, with a flood and disease warning. The basin's coordinates: [UNKNOWN].",
@@ -3475,7 +3500,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-4y"
+            "src-mwpp6mop-4z"
           ],
           "pin": {
             "lat": 31.5,
@@ -3489,7 +3514,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-4y",
+          "id": "src-mwpp6mop-4z",
           "label": "Reuters Water Management",
           "url": "https://www.reuters.com/sustainability/water-management/",
           "status": "unverified",
@@ -3538,14 +3563,14 @@
       }
     },
     {
-      "id": "story-mwpmy70d-50",
+      "id": "story-mwpp6mop-51",
       "slug": "st-johns",
       "title": "St. Johns River past the 1953 mark",
       "durationSec": 16,
       "location": {
-        "name": "Cocoa, St. Johns River (approx.)",
-        "lat": 28.38,
-        "lon": -80.74,
+        "name": "Florida (state-level, approx.)",
+        "lat": 28,
+        "lon": -81.7,
         "precision": "approximate",
         "verified": false,
         "note": "sample, approximate, not verified",
@@ -3553,12 +3578,12 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-53",
+          "id": "kf-mwpp6mop-54",
           "preset": "orbit",
           "at": 0,
           "center": [
-            -80.74,
-            28.38
+            -81.7,
+            28
           ],
           "zoom": 1.7,
           "pitch": 0,
@@ -3574,12 +3599,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-54",
+          "id": "kf-mwpp6mop-55",
           "preset": "dive",
           "at": 0.8,
           "center": [
-            -80.74,
-            28.38
+            -81.7,
+            28
           ],
           "zoom": 8.5,
           "pitch": 35,
@@ -3595,12 +3620,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-55",
+          "id": "kf-mwpp6mop-56",
           "preset": "street",
           "at": 8,
           "center": [
-            -80.74,
-            28.38
+            -81.7,
+            28
           ],
           "zoom": 16.4,
           "pitch": 62,
@@ -3616,12 +3641,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-56",
+          "id": "kf-mwpp6mop-57",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
-            -80.74,
-            28.38
+            -81.7,
+            28
           ],
           "zoom": 15.6,
           "pitch": 76,
@@ -3639,10 +3664,10 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-58",
+          "id": "card-mwpp6mop-59",
           "kind": "topic",
           "title": "Water and works",
-          "body": "CBS reported the river near Cocoa above 18 feet, past a record set about 70 years ago, with more than 100 water rescues in Brevard.",
+          "body": "CBS reported the St. Johns River in Florida above 18 feet, past a record set about 70 years ago, with more than 100 water rescues.",
           "why": "[UNKNOWN]",
           "facts": [
             {
@@ -3651,7 +3676,7 @@
             },
             {
               "label": "Place",
-              "value": "Cocoa, St. Johns River (approx.)"
+              "value": "Florida (state-level, approx.)"
             },
             {
               "label": "Source",
@@ -3659,11 +3684,11 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-57"
+            "src-mwpp6mop-58"
           ],
           "pin": {
-            "lat": 28.38,
-            "lon": -80.74
+            "lat": 28,
+            "lon": -81.7
           },
           "at": 2,
           "dur": 12,
@@ -3673,14 +3698,14 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-57",
+          "id": "src-mwpp6mop-58",
           "label": "CBS News",
           "url": "https://www.cbsnews.com/news/florida-flooding-rain-brevard-county/",
           "status": "unverified",
           "note": "As reported. Not independently checked."
         }
       ],
-      "script": "St. Johns River past the 1953 mark. CBS reported the river near Cocoa above 18 feet, past a record set about 70 years ago, with more than 100 water rescues in Brevard.",
+      "script": "St. Johns River past the 1953 mark. CBS reported the St. Johns River in Florida above 18 feet, past a record set about 70 years ago, with more than 100 water rescues.",
       "captions": [
         {
           "start": 0,
@@ -3694,18 +3719,18 @@
         },
         {
           "start": 3.5,
-          "end": 9.5,
-          "text": "CBS reported the river near Cocoa above 18 feet, past a record"
+          "end": 5.5,
+          "text": "CBS reported the St."
         },
         {
-          "start": 9.5,
-          "end": 15.5,
-          "text": "set about 70 years ago, with more than 100 water rescues in"
+          "start": 5.5,
+          "end": 11.5,
+          "text": "Johns River in Florida above 18 feet, past a record set about"
         },
         {
-          "start": 15.5,
+          "start": 11.5,
           "end": 16,
-          "text": "Brevard."
+          "text": "70 years ago, with more than 100 water rescues."
         }
       ],
       "summary": "Water and works, as reported. Not verified.",
@@ -3727,14 +3752,14 @@
       }
     },
     {
-      "id": "story-mwpmy70d-59",
-      "slug": "brevard-soils",
-      "title": "Brevard and Volusia, soils already full",
+      "id": "story-mwpp6mop-5a",
+      "slug": "florida-soils",
+      "title": "Florida soils already full",
       "durationSec": 16,
       "location": {
-        "name": "Merritt Island (approx.)",
-        "lat": 28.32,
-        "lon": -80.67,
+        "name": "Florida (state-level, approx.)",
+        "lat": 28,
+        "lon": -81.7,
         "precision": "approximate",
         "verified": false,
         "note": "sample, approximate, not verified",
@@ -3742,12 +3767,12 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-5c",
+          "id": "kf-mwpp6mop-5d",
           "preset": "orbit",
           "at": 0,
           "center": [
-            -80.67,
-            28.32
+            -81.7,
+            28
           ],
           "zoom": 1.7,
           "pitch": 0,
@@ -3763,12 +3788,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-5d",
+          "id": "kf-mwpp6mop-5e",
           "preset": "dive",
           "at": 0.8,
           "center": [
-            -80.67,
-            28.32
+            -81.7,
+            28
           ],
           "zoom": 8.5,
           "pitch": 35,
@@ -3784,12 +3809,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-5e",
+          "id": "kf-mwpp6mop-5f",
           "preset": "street",
           "at": 8,
           "center": [
-            -80.67,
-            28.32
+            -81.7,
+            28
           ],
           "zoom": 16.4,
           "pitch": 62,
@@ -3805,12 +3830,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-5f",
+          "id": "kf-mwpp6mop-5g",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
-            -80.67,
-            28.32
+            -81.7,
+            28
           ],
           "zoom": 15.6,
           "pitch": 76,
@@ -3828,10 +3853,10 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-5h",
+          "id": "card-mwpp6mop-5i",
           "kind": "topic",
           "title": "Water and works",
-          "body": "The weather service was quoted: soils are saturated, so more rain has nowhere to go. Schools in Brevard and Volusia were reported closed.",
+          "body": "The weather service was quoted: soils are saturated, so more rain has nowhere to go. Some Florida schools were reported closed.",
           "why": "[UNKNOWN]",
           "facts": [
             {
@@ -3840,7 +3865,7 @@
             },
             {
               "label": "Place",
-              "value": "Merritt Island (approx.)"
+              "value": "Florida (state-level, approx.)"
             },
             {
               "label": "Source",
@@ -3848,11 +3873,11 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-5g"
+            "src-mwpp6mop-5h"
           ],
           "pin": {
-            "lat": 28.32,
-            "lon": -80.67
+            "lat": 28,
+            "lon": -81.7
           },
           "at": 2,
           "dur": 12,
@@ -3862,34 +3887,34 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-5g",
+          "id": "src-mwpp6mop-5h",
           "label": "Palm Beach Post",
           "url": "https://www.palmbeachpost.com/story/news/state/2026/11/20/florida-rainfall-hits-records-more-flooding/92875728007/",
           "status": "unverified",
           "note": "As reported. Not independently checked."
         }
       ],
-      "script": "Brevard and Volusia, soils already full. The weather service was quoted: soils are saturated, so more rain has nowhere to go. Schools in Brevard and Volusia were reported closed.",
+      "script": "Florida soils already full. The weather service was quoted: soils are saturated, so more rain has nowhere to go. Some Florida schools were reported closed.",
       "captions": [
         {
           "start": 0,
-          "end": 3.31,
-          "text": "Brevard and Volusia, soils already full."
+          "end": 2.56,
+          "text": "Florida soils already full."
         },
         {
-          "start": 3.31,
-          "end": 9.93,
+          "start": 2.56,
+          "end": 10.24,
           "text": "The weather service was quoted: soils are saturated, so more rain has"
         },
         {
-          "start": 9.93,
-          "end": 11.59,
+          "start": 10.24,
+          "end": 12.16,
           "text": "nowhere to go."
         },
         {
-          "start": 11.59,
+          "start": 12.16,
           "end": 16,
-          "text": "Schools in Brevard and Volusia were reported closed."
+          "text": "Some Florida schools were reported closed."
         }
       ],
       "summary": "Water and works, as reported. Not verified.",
@@ -3911,14 +3936,14 @@
       }
     },
     {
-      "id": "story-mwpmy70d-5i",
+      "id": "story-mwpp6mop-5j",
       "slug": "fort-lauderdale",
       "title": "Fort Lauderdale's drainage versus a 17-inch day",
       "durationSec": 16,
       "location": {
-        "name": "Fort Lauderdale (approx.)",
-        "lat": 26.12,
-        "lon": -80.14,
+        "name": "Florida (state-level, approx.)",
+        "lat": 28,
+        "lon": -81.7,
         "precision": "approximate",
         "verified": false,
         "note": "sample, approximate, not verified",
@@ -3926,12 +3951,12 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-5l",
+          "id": "kf-mwpp6mop-5m",
           "preset": "orbit",
           "at": 0,
           "center": [
-            -80.14,
-            26.12
+            -81.7,
+            28
           ],
           "zoom": 1.7,
           "pitch": 0,
@@ -3947,12 +3972,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-5m",
+          "id": "kf-mwpp6mop-5n",
           "preset": "dive",
           "at": 0.8,
           "center": [
-            -80.14,
-            26.12
+            -81.7,
+            28
           ],
           "zoom": 8.5,
           "pitch": 35,
@@ -3968,12 +3993,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-5n",
+          "id": "kf-mwpp6mop-5o",
           "preset": "street",
           "at": 8,
           "center": [
-            -80.14,
-            26.12
+            -81.7,
+            28
           ],
           "zoom": 16.4,
           "pitch": 62,
@@ -3989,12 +4014,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-5o",
+          "id": "kf-mwpp6mop-5p",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
-            -80.14,
-            26.12
+            -81.7,
+            28
           ],
           "zoom": 15.6,
           "pitch": 76,
@@ -4012,7 +4037,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-5q",
+          "id": "card-mwpp6mop-5r",
           "kind": "topic",
           "title": "Water and works",
           "body": "A local official was reported saying even a $2 billion drainage plan is not designed for 17 inches in 24 hours.",
@@ -4024,7 +4049,7 @@
             },
             {
               "label": "Place",
-              "value": "Fort Lauderdale (approx.)"
+              "value": "Florida (state-level, approx.)"
             },
             {
               "label": "Source",
@@ -4032,11 +4057,11 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-5p"
+            "src-mwpp6mop-5q"
           ],
           "pin": {
-            "lat": 26.12,
-            "lon": -80.14
+            "lat": 28,
+            "lon": -81.7
           },
           "at": 2,
           "dur": 12,
@@ -4046,7 +4071,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-5p",
+          "id": "src-mwpp6mop-5q",
           "label": "South Florida Sun Sentinel",
           "url": "https://www.sun-sentinel.com/2026/11/20/south-florida-assesses-damage-from-flooding-storms/",
           "status": "unverified",
@@ -4090,14 +4115,14 @@
       }
     },
     {
-      "id": "story-mwpmy70d-5r",
-      "slug": "palm-bay-bridge",
-      "title": "Palm Bay bridge, repaired, then gone",
+      "id": "story-mwpp6mop-5s",
+      "slug": "florida-bridge",
+      "title": "A Florida bridge, repaired, then gone",
       "durationSec": 16,
       "location": {
-        "name": "Palm Bay (approx.)",
-        "lat": 28.03,
-        "lon": -80.59,
+        "name": "Florida (state-level, approx.)",
+        "lat": 28,
+        "lon": -81.7,
         "precision": "approximate",
         "verified": false,
         "note": "sample, approximate, not verified",
@@ -4105,12 +4130,12 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-5u",
+          "id": "kf-mwpp6mop-5v",
           "preset": "orbit",
           "at": 0,
           "center": [
-            -80.59,
-            28.03
+            -81.7,
+            28
           ],
           "zoom": 1.7,
           "pitch": 0,
@@ -4126,12 +4151,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-5v",
+          "id": "kf-mwpp6mop-5w",
           "preset": "dive",
           "at": 0.8,
           "center": [
-            -80.59,
-            28.03
+            -81.7,
+            28
           ],
           "zoom": 8.5,
           "pitch": 35,
@@ -4147,12 +4172,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-5w",
+          "id": "kf-mwpp6mop-5x",
           "preset": "street",
           "at": 8,
           "center": [
-            -80.59,
-            28.03
+            -81.7,
+            28
           ],
           "zoom": 16.4,
           "pitch": 62,
@@ -4168,12 +4193,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-5x",
+          "id": "kf-mwpp6mop-5y",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
-            -80.59,
-            28.03
+            -81.7,
+            28
           ],
           "zoom": 15.6,
           "pitch": 76,
@@ -4191,10 +4216,10 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-5z",
+          "id": "card-mwpp6mop-60",
           "kind": "topic",
           "title": "Water and works",
-          "body": "ABC reported a Palm Bay roadway bridge, just repaired after an earlier storm, washed out again. Which span: [UNKNOWN].",
+          "body": "ABC reported a Florida roadway bridge, just repaired after an earlier storm, washed out again. Which span: [UNKNOWN].",
           "why": "[UNKNOWN]",
           "facts": [
             {
@@ -4203,7 +4228,7 @@
             },
             {
               "label": "Place",
-              "value": "Palm Bay (approx.)"
+              "value": "Florida (state-level, approx.)"
             },
             {
               "label": "Source",
@@ -4211,11 +4236,11 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-5y"
+            "src-mwpp6mop-5z"
           ],
           "pin": {
-            "lat": 28.03,
-            "lon": -80.59
+            "lat": 28,
+            "lon": -81.7
           },
           "at": 2,
           "dur": 12,
@@ -4225,32 +4250,32 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-5y",
+          "id": "src-mwpp6mop-5z",
           "label": "ABC News",
           "url": "https://www.youtube.com/watch?v=Ny1fnW_HCtA",
           "status": "unverified",
           "note": "As reported. Not independently checked."
         }
       ],
-      "script": "Palm Bay bridge, repaired, then gone. ABC reported a Palm Bay roadway bridge, just repaired after an earlier storm, washed out again. Which span: [UNKNOWN].",
+      "script": "A Florida bridge, repaired, then gone. ABC reported a Florida roadway bridge, just repaired after an earlier storm, washed out again. Which span: [UNKNOWN].",
       "captions": [
         {
           "start": 0,
-          "end": 3.84,
-          "text": "Palm Bay bridge, repaired, then gone."
+          "end": 4,
+          "text": "A Florida bridge, repaired, then gone."
         },
         {
-          "start": 3.84,
-          "end": 11.52,
-          "text": "ABC reported a Palm Bay roadway bridge, just repaired after an earlier"
+          "start": 4,
+          "end": 12,
+          "text": "ABC reported a Florida roadway bridge, just repaired after an earlier storm,"
         },
         {
-          "start": 11.52,
-          "end": 14.08,
-          "text": "storm, washed out again."
+          "start": 12,
+          "end": 14,
+          "text": "washed out again."
         },
         {
-          "start": 14.08,
+          "start": 14,
           "end": 16,
           "text": "Which span: [UNKNOWN]."
         }
@@ -4274,7 +4299,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-60",
+      "id": "story-mwpp6mop-61",
       "slug": "sherman-oaks",
       "title": "California atmospheric river",
       "durationSec": 16,
@@ -4289,7 +4314,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-63",
+          "id": "kf-mwpp6mop-64",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -4310,7 +4335,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-64",
+          "id": "kf-mwpp6mop-65",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -4331,7 +4356,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-65",
+          "id": "kf-mwpp6mop-66",
           "preset": "street",
           "at": 8,
           "center": [
@@ -4352,7 +4377,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-66",
+          "id": "kf-mwpp6mop-67",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -4375,7 +4400,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-68",
+          "id": "card-mwpp6mop-69",
           "kind": "topic",
           "title": "Water and works",
           "body": "After San Francisco, the same system was reported in Southern California, with sewer overflow in Sherman Oaks and mountain rescues.",
@@ -4395,7 +4420,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-67"
+            "src-mwpp6mop-68"
           ],
           "pin": {
             "lat": 34.15,
@@ -4409,7 +4434,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-67",
+          "id": "src-mwpp6mop-68",
           "label": "ABC News",
           "url": "https://www.youtube.com/watch?v=Ny1fnW_HCtA",
           "status": "unverified",
@@ -4453,7 +4478,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-69",
+      "id": "story-mwpp6mop-6a",
       "slug": "hat-yai",
       "title": "Hat Yai and Songkhla floods",
       "durationSec": 16,
@@ -4468,7 +4493,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-6c",
+          "id": "kf-mwpp6mop-6d",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -4489,7 +4514,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-6d",
+          "id": "kf-mwpp6mop-6e",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -4510,7 +4535,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-6e",
+          "id": "kf-mwpp6mop-6f",
           "preset": "street",
           "at": 8,
           "center": [
@@ -4531,7 +4556,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-6f",
+          "id": "kf-mwpp6mop-6g",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -4554,7 +4579,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-6h",
+          "id": "card-mwpp6mop-6i",
           "kind": "topic",
           "title": "Water and works",
           "body": "Southern flooding was reported in Hat Yai and Songkhla. A separate monsoon account used a different death toll. Do not treat either number as settled.",
@@ -4574,7 +4599,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-6g"
+            "src-mwpp6mop-6h"
           ],
           "pin": {
             "lat": 7.01,
@@ -4588,7 +4613,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-6g",
+          "id": "src-mwpp6mop-6h",
           "label": "Thai Times",
           "url": "https://thaitimes.com/southern-thailand-floods-claim-at-least-145-lives-as-water-recedes-in-hat-yai",
           "status": "unverified",
@@ -4637,186 +4662,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-6i",
-      "slug": "bangkok-clay",
-      "title": "Bangkok on soft clay, ahead of the IMF",
-      "durationSec": 16,
-      "location": {
-        "name": "Bangkok (approx.)",
-        "lat": 13.76,
-        "lon": 100.5,
-        "precision": "approximate",
-        "verified": false,
-        "note": "sample, approximate, not verified",
-        "a3": "THA"
-      },
-      "camera": [
-        {
-          "id": "kf-mwpmy70d-6l",
-          "preset": "orbit",
-          "at": 0,
-          "center": [
-            100.5,
-            13.76
-          ],
-          "zoom": 1.7,
-          "pitch": 0,
-          "bearing": 335,
-          "durationSec": 3.5,
-          "ease": "cinematic",
-          "cut": true,
-          "citation": {
-            "type": "Map",
-            "date": "auto",
-            "credit": "auto",
-            "license": "auto"
-          }
-        },
-        {
-          "id": "kf-mwpmy70d-6m",
-          "preset": "dive",
-          "at": 0.8,
-          "center": [
-            100.5,
-            13.76
-          ],
-          "zoom": 8.5,
-          "pitch": 35,
-          "bearing": 0,
-          "durationSec": 6.6,
-          "ease": "cinematic",
-          "cut": false,
-          "citation": {
-            "type": "Map",
-            "date": "auto",
-            "credit": "auto",
-            "license": "auto"
-          }
-        },
-        {
-          "id": "kf-mwpmy70d-6n",
-          "preset": "street",
-          "at": 8,
-          "center": [
-            100.5,
-            13.76
-          ],
-          "zoom": 16.4,
-          "pitch": 62,
-          "bearing": 20,
-          "durationSec": 4,
-          "ease": "cinematic",
-          "cut": true,
-          "citation": {
-            "type": "Map",
-            "date": "auto",
-            "credit": "auto",
-            "license": "auto"
-          }
-        },
-        {
-          "id": "kf-mwpmy70d-6o",
-          "preset": "cinematic",
-          "at": 12.4,
-          "center": [
-            100.5,
-            13.76
-          ],
-          "zoom": 15.6,
-          "pitch": 76,
-          "bearing": 305,
-          "durationSec": 5,
-          "ease": "cinematic",
-          "cut": false,
-          "citation": {
-            "type": "Map",
-            "date": "auto",
-            "credit": "auto",
-            "license": "auto"
-          }
-        }
-      ],
-      "cards": [
-        {
-          "id": "card-mwpmy70d-6p",
-          "kind": "topic",
-          "title": "Water and works · source missing",
-          "body": "A 20 Nov 2026 report, summarized in search and attributed to Bloomberg, described monsoon flooding, a sinking city on soft clay, and IMF meetings next week. Direct link: [UNKNOWN].",
-          "why": "[UNKNOWN]",
-          "facts": [
-            {
-              "label": "Claim status",
-              "value": "As reported; not verified"
-            },
-            {
-              "label": "Place",
-              "value": "Bangkok (approx.)"
-            },
-            {
-              "label": "Source",
-              "value": "Missing [UNKNOWN]"
-            }
-          ],
-          "sourceIds": [],
-          "pin": {
-            "lat": 13.76,
-            "lon": 100.5
-          },
-          "at": 2,
-          "dur": 12,
-          "position": "right",
-          "verified": false
-        }
-      ],
-      "sources": [],
-      "script": "Bangkok on soft clay, ahead of the IMF. A 20 Nov 2026 report, summarized in search and attributed to Bloomberg, described monsoon flooding, a sinking city on soft clay, and IMF meetings next week. Direct link: [UNKNOWN].",
-      "captions": [
-        {
-          "start": 0,
-          "end": 3.46,
-          "text": "Bangkok on soft clay, ahead of the IMF."
-        },
-        {
-          "start": 3.46,
-          "end": 8.65,
-          "text": "A 20 Nov 2026 report, summarized in search and attributed to Bloomberg,"
-        },
-        {
-          "start": 8.65,
-          "end": 13.84,
-          "text": "described monsoon flooding, a sinking city on soft clay, and IMF meetings"
-        },
-        {
-          "start": 13.84,
-          "end": 14.7,
-          "text": "next week."
-        },
-        {
-          "start": 14.7,
-          "end": 16,
-          "text": "Direct link: [UNKNOWN]."
-        }
-      ],
-      "summary": "Water and works, as reported. Not verified.",
-      "date": "",
-      "credit": "",
-      "creditUrl": "",
-      "asReported": true,
-      "media": [],
-      "audioOverlays": [],
-      "content": [],
-      "highlight": {
-        "a3": "THA",
-        "geojson": null
-      },
-      "voiceover": null,
-      "eventWindow": {
-        "start": "",
-        "end": ""
-      }
-    },
-    {
-      "id": "story-mwpmy70d-6q",
+      "id": "story-mwpp6mop-6j",
       "slug": "kinshasa",
       "title": "Kinshasa street rivers",
       "durationSec": 16,
@@ -4831,7 +4677,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-6t",
+          "id": "kf-mwpp6mop-6m",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -4852,7 +4698,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-6u",
+          "id": "kf-mwpp6mop-6n",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -4873,7 +4719,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-6v",
+          "id": "kf-mwpp6mop-6o",
           "preset": "street",
           "at": 8,
           "center": [
@@ -4894,7 +4740,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-6w",
+          "id": "kf-mwpp6mop-6p",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -4917,7 +4763,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-6y",
+          "id": "card-mwpp6mop-6r",
           "kind": "topic",
           "title": "Water and works",
           "body": "Heavy rain was reported to have flooded Gombe, burst the Makelele River in Bandalungwa, and washed out homes in Mont-Ngafula.",
@@ -4937,7 +4783,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-6x"
+            "src-mwpp6mop-6q"
           ],
           "pin": {
             "lat": -4.32,
@@ -4951,7 +4797,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-6x",
+          "id": "src-mwpp6mop-6q",
           "label": "Broadcast Media Africa",
           "url": "https://news.broadcastmediaafrica.com/2026/11/19/bma-feature-torrential-rain-sparks-widespread-flooding-and-displaces-families-across-kinshasa/",
           "status": "unverified",
@@ -4995,7 +4841,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-6z",
+      "id": "story-mwpp6mop-6s",
       "slug": "cyclone-akvan",
       "title": "Cyclone Akvan on India's east coast",
       "durationSec": 16,
@@ -5010,7 +4856,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-72",
+          "id": "kf-mwpp6mop-6v",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -5031,7 +4877,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-73",
+          "id": "kf-mwpp6mop-6w",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -5052,7 +4898,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-74",
+          "id": "kf-mwpp6mop-6x",
           "preset": "street",
           "at": 8,
           "center": [
@@ -5073,7 +4919,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-75",
+          "id": "kf-mwpp6mop-6y",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -5096,7 +4942,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-77",
+          "id": "card-mwpp6mop-70",
           "kind": "topic",
           "title": "Water and works",
           "body": "Cyclone Akvan was reported as the third cyclone on India's east coast in under a month. The exact landfall town is not in that blurb.",
@@ -5116,7 +4962,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-76"
+            "src-mwpp6mop-6z"
           ],
           "pin": {
             "lat": 20.27,
@@ -5130,7 +4976,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-76",
+          "id": "src-mwpp6mop-6z",
           "label": "Reuters Water Management",
           "url": "https://www.reuters.com/sustainability/water-management/",
           "status": "unverified",
@@ -5179,7 +5025,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-78",
+      "id": "story-mwpp6mop-71",
       "slug": "fiji-nepal",
       "title": "Fiji drought and Nepal's hydropower",
       "durationSec": 16,
@@ -5194,7 +5040,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-7b",
+          "id": "kf-mwpp6mop-74",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -5215,7 +5061,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-7c",
+          "id": "kf-mwpp6mop-75",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -5236,7 +5082,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-7d",
+          "id": "kf-mwpp6mop-76",
           "preset": "street",
           "at": 8,
           "center": [
@@ -5257,7 +5103,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-7e",
+          "id": "kf-mwpp6mop-77",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -5280,7 +5126,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-7g",
+          "id": "card-mwpp6mop-79",
           "kind": "topic",
           "title": "Water and works",
           "body": "Fiji was reported in a drought disaster. A separate page says Nepal floods knocked out hydropower. That page's dates disagree with each other, so treat the Nepal line as unverified. Suva is not this pin.",
@@ -5300,7 +5146,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-7f"
+            "src-mwpp6mop-78"
           ],
           "pin": {
             "lat": 27.7,
@@ -5314,7 +5160,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-7f",
+          "id": "src-mwpp6mop-78",
           "label": "Reuters Water Management",
           "url": "https://www.reuters.com/sustainability/water-management/",
           "status": "unverified",
@@ -5373,7 +5219,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-7h",
+      "id": "story-mwpp6mop-7a",
       "slug": "fepa-atlanta",
       "title": "First Foreign Extortion Prevention Act case",
       "durationSec": 16,
@@ -5388,7 +5234,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-7k",
+          "id": "kf-mwpp6mop-7d",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -5409,7 +5255,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-7l",
+          "id": "kf-mwpp6mop-7e",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -5430,7 +5276,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-7m",
+          "id": "kf-mwpp6mop-7f",
           "preset": "street",
           "at": 8,
           "center": [
@@ -5451,7 +5297,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-7n",
+          "id": "kf-mwpp6mop-7g",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -5474,7 +5320,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-7p",
+          "id": "card-mwpp6mop-7i",
           "kind": "topic",
           "title": "Receipts",
           "body": "Prosecutors were reported to have charged a former Honduran consul in Atlanta under FEPA. Alleged bribes over $375,000. A charge is not a conviction.",
@@ -5494,7 +5340,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-7o"
+            "src-mwpp6mop-7h"
           ],
           "pin": {
             "lat": 33.75,
@@ -5508,7 +5354,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-7o",
+          "id": "src-mwpp6mop-7h",
           "label": "Transparency International US",
           "url": "https://us.transparency.org/wp-content/uploads/2026/11/TI-US-Statement%E2%80%94First-FEPA-Case.pdf",
           "status": "unverified",
@@ -5562,7 +5408,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-7q",
+      "id": "story-mwpp6mop-7j",
       "slug": "cyprus-aca",
       "title": "Cyprus anti-corruption investigators",
       "durationSec": 16,
@@ -5577,7 +5423,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-7t",
+          "id": "kf-mwpp6mop-7m",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -5598,7 +5444,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-7u",
+          "id": "kf-mwpp6mop-7n",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -5619,7 +5465,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-7v",
+          "id": "kf-mwpp6mop-7o",
           "preset": "street",
           "at": 8,
           "center": [
@@ -5640,7 +5486,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-7w",
+          "id": "kf-mwpp6mop-7p",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -5663,7 +5509,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-7y",
+          "id": "card-mwpp6mop-7r",
           "kind": "topic",
           "title": "Receipts",
           "body": "The justice minister was reported to be aiming for a draft this month that lets the authority appoint criminal investigators, including from abroad on senior cases.",
@@ -5683,7 +5529,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-7x"
+            "src-mwpp6mop-7q"
           ],
           "pin": {
             "lat": 35.17,
@@ -5697,7 +5543,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-7x",
+          "id": "src-mwpp6mop-7q",
           "label": "Cyprus Mail",
           "url": "https://cyprus-mail.com/2026/11/20/anti-corruption-authoritys-investigative-powers-bill-expected-by-end-of-november",
           "status": "unverified",
@@ -5746,7 +5592,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-7z",
+      "id": "story-mwpp6mop-7s",
       "slug": "korea-files",
       "title": "Korea: two bodies, three files",
       "durationSec": 16,
@@ -5761,7 +5607,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-82",
+          "id": "kf-mwpp6mop-7v",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -5782,7 +5628,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-83",
+          "id": "kf-mwpp6mop-7w",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -5803,7 +5649,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-84",
+          "id": "kf-mwpp6mop-7x",
           "preset": "street",
           "at": 8,
           "center": [
@@ -5824,7 +5670,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-85",
+          "id": "kf-mwpp6mop-7y",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -5847,7 +5693,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-87",
+          "id": "card-mwpp6mop-80",
           "kind": "topic",
           "title": "Receipts",
           "body": "A special-counsel law and a prosecution future committee were both reported to be on the Wirye case, a statistics allegation, and the 2020 fisheries-official killing. No conclusion is claimed here.",
@@ -5867,7 +5713,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-86"
+            "src-mwpp6mop-7z"
           ],
           "pin": {
             "lat": 37.43,
@@ -5881,7 +5727,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-86",
+          "id": "src-mwpp6mop-7z",
           "label": "Financial News",
           "url": "https://en.fnnews.com/news/202611201317586601",
           "status": "unverified",
@@ -5935,7 +5781,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-88",
+      "id": "story-mwpp6moq-81",
       "slug": "deutsche-aml",
       "title": "Deutsche Bank money-laundering allegations",
       "durationSec": 16,
@@ -5950,7 +5796,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-8b",
+          "id": "kf-mwpp6moq-84",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -5971,7 +5817,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-8c",
+          "id": "kf-mwpp6moq-85",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -5992,7 +5838,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-8d",
+          "id": "kf-mwpp6moq-86",
           "preset": "street",
           "at": 8,
           "center": [
@@ -6013,7 +5859,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-8e",
+          "id": "kf-mwpp6moq-87",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -6036,7 +5882,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-8g",
+          "id": "card-mwpp6moq-89",
           "kind": "topic",
           "title": "Receipts",
           "body": "TI called for investigations into alleged anti-money-laundering failures at Deutsche Bank. Allegations, not a finding on this desk.",
@@ -6056,7 +5902,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-8f"
+            "src-mwpp6moq-88"
           ],
           "pin": {
             "lat": 50.11,
@@ -6070,7 +5916,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-8f",
+          "id": "src-mwpp6moq-88",
           "label": "Transparency International press",
           "url": "https://www.transparency.org/en/press",
           "status": "unverified",
@@ -6114,7 +5960,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-8h",
+      "id": "story-mwpp6moq-8a",
       "slug": "cop-integrity",
       "title": "COP31 integrity rules",
       "durationSec": 16,
@@ -6129,7 +5975,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-8k",
+          "id": "kf-mwpp6moq-8d",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -6150,7 +5996,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-8l",
+          "id": "kf-mwpp6moq-8e",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -6171,7 +6017,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-8m",
+          "id": "kf-mwpp6moq-8f",
           "preset": "street",
           "at": 8,
           "center": [
@@ -6192,7 +6038,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-8n",
+          "id": "kf-mwpp6moq-8g",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -6215,7 +6061,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-8p",
+          "id": "card-mwpp6moq-8i",
           "kind": "topic",
           "title": "Receipts",
           "body": "TI said COP31 opened with conflict-of-interest safeguards still missing. That is their assessment.",
@@ -6235,7 +6081,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-8o"
+            "src-mwpp6moq-8h"
           ],
           "pin": {
             "lat": 36.9,
@@ -6249,7 +6095,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-8o",
+          "id": "src-mwpp6moq-8h",
           "label": "Transparency International press",
           "url": "https://www.transparency.org/en/press",
           "status": "unverified",
@@ -6293,7 +6139,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-8q",
+      "id": "story-mwpp6moq-8j",
       "slug": "jammeh-return",
       "title": "Jammeh assets returned to The Gambia",
       "durationSec": 16,
@@ -6308,7 +6154,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-8t",
+          "id": "kf-mwpp6moq-8m",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -6329,7 +6175,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-8u",
+          "id": "kf-mwpp6moq-8n",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -6350,7 +6196,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-8v",
+          "id": "kf-mwpp6moq-8o",
           "preset": "street",
           "at": 8,
           "center": [
@@ -6371,7 +6217,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-8w",
+          "id": "kf-mwpp6moq-8p",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -6394,7 +6240,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-8y",
+          "id": "card-mwpp6moq-8r",
           "kind": "topic",
           "title": "Receipts",
           "body": "About $2.5 million from confiscated assets was reported returned to The Gambia. The press note points at a September announcement.",
@@ -6414,7 +6260,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-8x"
+            "src-mwpp6moq-8q"
           ],
           "pin": {
             "lat": 13.45,
@@ -6428,7 +6274,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-8x",
+          "id": "src-mwpp6moq-8q",
           "label": "Transparency International press",
           "url": "https://www.transparency.org/en/press",
           "status": "unverified",
@@ -6472,7 +6318,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-8z",
+      "id": "story-mwpp6moq-8s",
       "slug": "uncac",
       "title": "UN Convention against Corruption, second cycle",
       "durationSec": 16,
@@ -6487,7 +6333,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-92",
+          "id": "kf-mwpp6moq-8v",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -6508,7 +6354,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-93",
+          "id": "kf-mwpp6moq-8w",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -6529,7 +6375,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-94",
+          "id": "kf-mwpp6moq-8x",
           "preset": "street",
           "at": 8,
           "center": [
@@ -6550,7 +6396,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-95",
+          "id": "kf-mwpp6moq-8y",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -6573,7 +6419,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-97",
+          "id": "card-mwpp6moq-90",
           "kind": "topic",
           "title": "Receipts",
           "body": "The EU said states are ready for the second review cycle, with lots to be drawn in May 2027. This is a diplomatic statement, not an audit.",
@@ -6593,7 +6439,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-96"
+            "src-mwpp6moq-8z"
           ],
           "pin": {
             "lat": 48.23,
@@ -6607,7 +6453,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-96",
+          "id": "src-mwpp6moq-8z",
           "label": "EU statement, 2 Nov 2026",
           "url": "https://www.eeas.europa.eu/delegations/vienna-international-organisations/eu-statement-performance-mechanism-review-implementation-un-convention-against-corruption-2-november_en?s=66",
           "status": "unverified",
@@ -6656,7 +6502,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-98",
+      "id": "story-mwpp6moq-91",
       "slug": "tribal-sites",
       "title": "Permitting text versus tribal sites",
       "durationSec": 16,
@@ -6671,7 +6517,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-9b",
+          "id": "kf-mwpp6moq-94",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -6692,7 +6538,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-9c",
+          "id": "kf-mwpp6moq-95",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -6713,7 +6559,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-9d",
+          "id": "kf-mwpp6moq-96",
           "preset": "street",
           "at": 8,
           "center": [
@@ -6734,7 +6580,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-9e",
+          "id": "kf-mwpp6moq-97",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -6757,7 +6603,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-9g",
+          "id": "card-mwpp6moq-99",
           "kind": "topic",
           "title": "Receipts",
           "body": "Native leaders were reported to oppose the permitting bill as a threat to tribal sovereignty and sacred sites. Which sites: [UNKNOWN].",
@@ -6777,7 +6623,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-9f"
+            "src-mwpp6moq-98"
           ],
           "pin": {
             "lat": 38.89,
@@ -6791,7 +6637,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-9f",
+          "id": "src-mwpp6moq-98",
           "label": "Democracy Now! headlines, 20 Nov 2026",
           "url": "https://www.democracynow.org/2026/11/20/headlines",
           "status": "unverified",
@@ -6840,7 +6686,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-9h",
+      "id": "story-mwpp6moq-9a",
       "slug": "gaza-paper",
       "title": "The paperwork on Gaza's repair gear",
       "durationSec": 16,
@@ -6855,7 +6701,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-9k",
+          "id": "kf-mwpp6moq-9d",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -6876,7 +6722,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-9l",
+          "id": "kf-mwpp6moq-9e",
           "preset": "close",
           "at": 2.8,
           "center": [
@@ -6899,7 +6745,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-9n",
+          "id": "card-mwpp6moq-9g",
           "kind": "topic",
           "title": "Receipts",
           "body": "The receipt is UNICEF's statement that repair equipment was refused. The refusal document itself is not in this rundown.",
@@ -6919,7 +6765,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-9m"
+            "src-mwpp6moq-9f"
           ],
           "pin": {
             "lat": 31.5,
@@ -6933,7 +6779,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-9m",
+          "id": "src-mwpp6moq-9f",
           "label": "Reuters Water Management",
           "url": "https://www.reuters.com/sustainability/water-management/",
           "status": "unverified",
@@ -6977,7 +6823,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-9o",
+      "id": "story-mwpp6moq-9h",
       "slug": "iowa-plant",
       "title": "Iowa plant detonation, moved to 23 November",
       "durationSec": 16,
@@ -6992,7 +6838,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-9r",
+          "id": "kf-mwpp6moq-9k",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -7013,7 +6859,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-9s",
+          "id": "kf-mwpp6moq-9l",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -7034,7 +6880,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-9t",
+          "id": "kf-mwpp6moq-9m",
           "preset": "street",
           "at": 8,
           "center": [
@@ -7055,7 +6901,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-9u",
+          "id": "kf-mwpp6moq-9n",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -7078,10 +6924,10 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-9w",
+          "id": "card-mwpp6moq-9p",
           "kind": "topic",
           "title": "Receipts",
-          "body": "A public post says the Army postponed a controlled detonation of degraded lead azide at the Iowa Army Ammunition Plant to 23 Nov. The Army's own notice: [UNKNOWN].",
+          "body": "The Acting Secretary of the Army posted that he had directed Army Materiel Command to postpone the controlled detonation at the Iowa Army Ammunition Plant in Middletown, Iowa until Monday, 23 November.",
           "why": "[UNKNOWN]",
           "facts": [
             {
@@ -7094,11 +6940,11 @@
             },
             {
               "label": "Source",
-              "value": "OSINTdefender on X"
+              "value": "Acting Secretary of the Army (@SecArmy) on X, 19 Nov 2026"
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-9v"
+            "src-mwpp6moq-9o"
           ],
           "pin": {
             "lat": 40.96,
@@ -7112,40 +6958,40 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-9v",
-          "label": "OSINTdefender on X",
-          "url": "https://x.com/sentdefender/status/2123629675717034482",
+          "id": "src-mwpp6moq-9o",
+          "label": "Acting Secretary of the Army (@SecArmy) on X, 19 Nov 2026",
+          "url": "https://x.com/SecArmy/status/2123574872559493304",
           "status": "unverified",
           "note": "As reported. Not independently checked."
         }
       ],
-      "script": "Iowa plant detonation, moved to 23 November. A public post says the Army postponed a controlled detonation of degraded lead azide at the Iowa Army Ammunition Plant to 23 Nov. The Army's own notice: [UNKNOWN].",
+      "script": "Iowa plant detonation, moved to 23 November. The Acting Secretary of the Army posted that he had directed Army Materiel Command to postpone the controlled detonation at the Iowa Army Ammunition Plant in Middletown, Iowa until Monday, 23 November.",
       "captions": [
         {
           "start": 0,
-          "end": 3.2,
+          "end": 2.87,
           "text": "Iowa plant detonation, moved to 23 November."
         },
         {
-          "start": 3.2,
-          "end": 8.69,
-          "text": "A public post says the Army postponed a controlled detonation of degraded"
+          "start": 2.87,
+          "end": 7.79,
+          "text": "The Acting Secretary of the Army posted that he had directed Army"
         },
         {
-          "start": 8.69,
-          "end": 13.71,
-          "text": "lead azide at the Iowa Army Ammunition Plant to 23 Nov."
+          "start": 7.79,
+          "end": 12.72,
+          "text": "Materiel Command to postpone the controlled detonation at the Iowa Army Ammunition"
         },
         {
-          "start": 13.71,
+          "start": 12.72,
           "end": 16,
-          "text": "The Army's own notice: [UNKNOWN]."
+          "text": "Plant in Middletown, Iowa until Monday, 23 November."
         }
       ],
       "summary": "Receipts, as reported. Not verified.",
       "date": "",
-      "credit": "OSINTdefender on X",
-      "creditUrl": "https://x.com/sentdefender/status/2123629675717034482",
+      "credit": "Acting Secretary of the Army (@SecArmy) on X, 19 Nov 2026",
+      "creditUrl": "https://x.com/SecArmy/status/2123574872559493304",
       "asReported": true,
       "media": [],
       "audioOverlays": [],
@@ -7161,7 +7007,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-9x",
+      "id": "story-mwpp6moq-9q",
       "slug": "paid-attention",
       "title": "Paid attention",
       "durationSec": 16,
@@ -7176,10 +7022,10 @@
       "camera": [],
       "cards": [
         {
-          "id": "card-mwpmy70d-a1",
+          "id": "card-mwpp6moq-9u",
           "kind": "topic",
           "title": "Frogpost",
-          "body": "Your public line: people are paying to have their attention wasted. That is the beat. It is not a dateline.",
+          "body": "The @AdventureNLearn line: people are paying to have their attention wasted. That is the beat. It is not a dateline.",
           "why": "[UNKNOWN]",
           "facts": [
             {
@@ -7196,7 +7042,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-a0"
+            "src-mwpp6moq-9t"
           ],
           "pin": null,
           "at": 2,
@@ -7207,14 +7053,14 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-a0",
+          "id": "src-mwpp6moq-9t",
           "label": "@AdventureNLearn",
           "url": "https://x.com/AdventureNLearn",
           "status": "unverified",
           "note": "As reported. Not independently checked."
         }
       ],
-      "script": "Paid attention. Your public line: people are paying to have their attention wasted. That is the beat. It is not a dateline.",
+      "script": "Paid attention. The @AdventureNLearn line: people are paying to have their attention wasted. That is the beat. It is not a dateline.",
       "captions": [
         {
           "start": 0,
@@ -7224,7 +7070,7 @@
         {
           "start": 1.45,
           "end": 9.45,
-          "text": "Your public line: people are paying to have their attention wasted."
+          "text": "The @AdventureNLearn line: people are paying to have their attention wasted."
         },
         {
           "start": 9.45,
@@ -7256,14 +7102,14 @@
       }
     },
     {
-      "id": "story-mwpmy70d-a2",
+      "id": "story-mwpp6moq-9v",
       "slug": "neighbor-boats",
       "title": "Neighbor boats when the pumps are late",
       "durationSec": 16,
       "location": {
-        "name": "Edgewater, Florida (approx.)",
-        "lat": 28.99,
-        "lon": -80.9,
+        "name": "Florida (state-level, approx.)",
+        "lat": 28,
+        "lon": -81.7,
         "precision": "approximate",
         "verified": false,
         "note": "sample, approximate, not verified",
@@ -7271,12 +7117,12 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-a5",
+          "id": "kf-mwpp6moq-9y",
           "preset": "orbit",
           "at": 0,
           "center": [
-            -80.9,
-            28.99
+            -81.7,
+            28
           ],
           "zoom": 1.7,
           "pitch": 0,
@@ -7292,12 +7138,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-a6",
+          "id": "kf-mwpp6moq-9z",
           "preset": "dive",
           "at": 0.8,
           "center": [
-            -80.9,
-            28.99
+            -81.7,
+            28
           ],
           "zoom": 8.5,
           "pitch": 35,
@@ -7313,12 +7159,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-a7",
+          "id": "kf-mwpp6moq-a0",
           "preset": "street",
           "at": 8,
           "center": [
-            -80.9,
-            28.99
+            -81.7,
+            28
           ],
           "zoom": 16.4,
           "pitch": 62,
@@ -7334,12 +7180,12 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-a8",
+          "id": "kf-mwpp6moq-a1",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
-            -80.9,
-            28.99
+            -81.7,
+            28
           ],
           "zoom": 15.6,
           "pitch": 76,
@@ -7357,10 +7203,10 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-aa",
+          "id": "card-mwpp6moq-a3",
           "kind": "topic",
           "title": "Frogpost",
-          "body": "Police were reported pulling a boat through knee-deep water in Edgewater to get people to dry ground. The neighbors are the story, not the press conference.",
+          "body": "Police were reported pulling a boat through knee-deep water in Florida to get people to dry ground. The neighbors are the story, not the press conference.",
           "why": "[UNKNOWN]",
           "facts": [
             {
@@ -7369,7 +7215,7 @@
             },
             {
               "label": "Place",
-              "value": "Edgewater, Florida (approx.)"
+              "value": "Florida (state-level, approx.)"
             },
             {
               "label": "Source",
@@ -7377,11 +7223,11 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-a9"
+            "src-mwpp6moq-a2"
           ],
           "pin": {
-            "lat": 28.99,
-            "lon": -80.9
+            "lat": 28,
+            "lon": -81.7
           },
           "at": 2,
           "dur": 12,
@@ -7391,14 +7237,14 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-a9",
+          "id": "src-mwpp6moq-a2",
           "label": "WSVN",
           "url": "https://wsvn.com/news/local/florida/florida-coast-flooding-rescues/",
           "status": "unverified",
           "note": "As reported. Not independently checked."
         }
       ],
-      "script": "Neighbor boats when the pumps are late. Police were reported pulling a boat through knee-deep water in Edgewater to get people to dry ground. The neighbors are the story, not the press conference.",
+      "script": "Neighbor boats when the pumps are late. Police were reported pulling a boat through knee-deep water in Florida to get people to dry ground. The neighbors are the story, not the press conference.",
       "captions": [
         {
           "start": 0,
@@ -7408,7 +7254,7 @@
         {
           "start": 3.39,
           "end": 9.21,
-          "text": "Police were reported pulling a boat through knee-deep water in Edgewater to"
+          "text": "Police were reported pulling a boat through knee-deep water in Florida to"
         },
         {
           "start": 9.21,
@@ -7440,7 +7286,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-ab",
+      "id": "story-mwpp6moq-a4",
       "slug": "meme-skin",
       "title": "Serious work in a meme skin",
       "durationSec": 16,
@@ -7455,7 +7301,7 @@
       "camera": [],
       "cards": [
         {
-          "id": "card-mwpmy70d-af",
+          "id": "card-mwpp6moq-a8",
           "kind": "topic",
           "title": "Frogpost",
           "body": "The frog does not replace the source. It is how the card gets read. Facts stay as reported.",
@@ -7475,7 +7321,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-ae"
+            "src-mwpp6moq-a7"
           ],
           "pin": null,
           "at": 2,
@@ -7486,7 +7332,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-ae",
+          "id": "src-mwpp6moq-a7",
           "label": "@AdventureNLearn",
           "url": "https://x.com/AdventureNLearn",
           "status": "unverified",
@@ -7535,7 +7381,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-ag",
+      "id": "story-mwpp6moq-a9",
       "slug": "pirarucu",
       "title": "Pirarucu-bone water filters",
       "durationSec": 16,
@@ -7550,7 +7396,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-aj",
+          "id": "kf-mwpp6moq-ac",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -7571,7 +7417,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-ak",
+          "id": "kf-mwpp6moq-ad",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -7592,7 +7438,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-al",
+          "id": "kf-mwpp6moq-ae",
           "preset": "street",
           "at": 8,
           "center": [
@@ -7613,7 +7459,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-am",
+          "id": "kf-mwpp6moq-af",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -7636,7 +7482,7 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-ao",
+          "id": "card-mwpp6moq-ah",
           "kind": "topic",
           "title": "Frogpost",
           "body": "Brazilian students were reported to be making charcoal filters from pirarucu bones for remote drinking water. A built thing, not a take.",
@@ -7656,7 +7502,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70d-an"
+            "src-mwpp6moq-ag"
           ],
           "pin": {
             "lat": -3.12,
@@ -7670,7 +7516,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70d-an",
+          "id": "src-mwpp6moq-ag",
           "label": "Reuters Water Management",
           "url": "https://www.reuters.com/sustainability/water-management/",
           "status": "unverified",
@@ -7719,7 +7565,7 @@
       }
     },
     {
-      "id": "story-mwpmy70d-ap",
+      "id": "story-mwpp6moq-ai",
       "slug": "robocalls",
       "title": "Robocalls pointed at a regulator",
       "durationSec": 16,
@@ -7734,7 +7580,7 @@
       },
       "camera": [
         {
-          "id": "kf-mwpmy70d-as",
+          "id": "kf-mwpp6moq-al",
           "preset": "orbit",
           "at": 0,
           "center": [
@@ -7755,7 +7601,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-at",
+          "id": "kf-mwpp6moq-am",
           "preset": "dive",
           "at": 0.8,
           "center": [
@@ -7776,7 +7622,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-au",
+          "id": "kf-mwpp6moq-an",
           "preset": "street",
           "at": 8,
           "center": [
@@ -7797,7 +7643,7 @@
           }
         },
         {
-          "id": "kf-mwpmy70d-av",
+          "id": "kf-mwpp6moq-ao",
           "preset": "cinematic",
           "at": 12.4,
           "center": [
@@ -7820,10 +7666,10 @@
       ],
       "cards": [
         {
-          "id": "card-mwpmy70d-aw",
+          "id": "card-mwpp6moq-aq",
           "kind": "topic",
-          "title": "Frogpost · source missing",
-          "body": "A public post said spam calls go to an agent and then to the FCC as a complaint. The post is not attached. Not checked.",
+          "title": "Frogpost",
+          "body": "An unofficial public post claimed that any spam call gets routed to an agent and sent to the FCC as a formal complaint. This is a public claim. It was not checked.",
           "why": "[UNKNOWN]",
           "facts": [
             {
@@ -7836,10 +7682,12 @@
             },
             {
               "label": "Source",
-              "value": "Missing [UNKNOWN]"
+              "value": "@Shaughnessy119 on X (unofficial), 5 Nov 2026"
             }
           ],
-          "sourceIds": [],
+          "sourceIds": [
+            "src-mwpp6moq-ap"
+          ],
           "pin": {
             "lat": 38.88,
             "lon": -77.03
@@ -7850,39 +7698,47 @@
           "verified": false
         }
       ],
-      "sources": [],
-      "script": "Robocalls pointed at a regulator. A public post said spam calls go to an agent and then to the FCC as a complaint. The post is not attached. Not checked.",
+      "sources": [
+        {
+          "id": "src-mwpp6moq-ap",
+          "label": "@Shaughnessy119 on X (unofficial), 5 Nov 2026",
+          "url": "https://x.com/Shaughnessy119/status/2118504294290780434",
+          "status": "unverified",
+          "note": "As reported. Not independently checked."
+        }
+      ],
+      "script": "Robocalls pointed at a regulator. An unofficial public post claimed that any spam call gets routed to an agent and sent to the FCC as a formal complaint. This is a public claim. It was not checked.",
       "captions": [
         {
           "start": 0,
-          "end": 2.67,
+          "end": 2.16,
           "text": "Robocalls pointed at a regulator."
         },
         {
-          "start": 2.67,
-          "end": 9.07,
-          "text": "A public post said spam calls go to an agent and then"
+          "start": 2.16,
+          "end": 7.35,
+          "text": "An unofficial public post claimed that any spam call gets routed to"
         },
         {
-          "start": 9.07,
-          "end": 12.27,
-          "text": "to the FCC as a complaint."
+          "start": 7.35,
+          "end": 12.11,
+          "text": "an agent and sent to the FCC as a formal complaint."
         },
         {
-          "start": 12.27,
-          "end": 14.93,
-          "text": "The post is not attached."
+          "start": 12.11,
+          "end": 14.27,
+          "text": "This is a public claim."
         },
         {
-          "start": 14.93,
+          "start": 14.27,
           "end": 16,
-          "text": "Not checked."
+          "text": "It was not checked."
         }
       ],
       "summary": "Frogpost, as reported. Not verified.",
       "date": "",
-      "credit": "",
-      "creditUrl": "",
+      "credit": "@Shaughnessy119 on X (unofficial), 5 Nov 2026",
+      "creditUrl": "https://x.com/Shaughnessy119/status/2118504294290780434",
       "asReported": true,
       "media": [],
       "audioOverlays": [],
@@ -7898,7 +7754,7 @@
       }
     },
     {
-      "id": "story-mwpmy70e-ax",
+      "id": "story-mwpp6moq-ar",
       "slug": "open-maps",
       "title": "Open maps versus paywalled briefs",
       "durationSec": 16,
@@ -7913,7 +7769,7 @@
       "camera": [],
       "cards": [
         {
-          "id": "card-mwpmy70e-b0",
+          "id": "card-mwpp6moq-au",
           "kind": "topic",
           "title": "Frogpost · source missing",
           "body": "If the brief is behind a wall and the link is not on the card, it does not go on the globe. Open map, or it stays [UNKNOWN].",
@@ -7983,7 +7839,7 @@
       }
     },
     {
-      "id": "story-mwpmy70e-b1",
+      "id": "story-mwpp6moq-av",
       "slug": "shill-map",
       "title": "A public drawing of who gets paid",
       "durationSec": 16,
@@ -7998,10 +7854,10 @@
       "camera": [],
       "cards": [
         {
-          "id": "card-mwpmy70e-b5",
+          "id": "card-mwpp6moq-az",
           "kind": "topic",
           "title": "Frogpost",
-          "body": "You called one of these a map of the shills. A name goes on the map only with a receipt.",
+          "body": "@AdventureNLearn called one of these a map of the shills. A name goes on the map only with a receipt.",
           "why": "[UNKNOWN]",
           "facts": [
             {
@@ -8018,7 +7874,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70e-b4"
+            "src-mwpp6moq-ay"
           ],
           "pin": null,
           "at": 2,
@@ -8029,14 +7885,14 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70e-b4",
+          "id": "src-mwpp6moq-ay",
           "label": "@AdventureNLearn",
           "url": "https://x.com/AdventureNLearn/status/2123357664734237105",
           "status": "unverified",
           "note": "As reported. Not independently checked."
         }
       ],
-      "script": "A public drawing of who gets paid. You called one of these a map of the shills. A name goes on the map only with a receipt.",
+      "script": "A public drawing of who gets paid. @AdventureNLearn called one of these a map of the shills. A name goes on the map only with a receipt.",
       "captions": [
         {
           "start": 0,
@@ -8046,7 +7902,7 @@
         {
           "start": 4.15,
           "end": 10.07,
-          "text": "You called one of these a map of the shills."
+          "text": "@AdventureNLearn called one of these a map of the shills."
         },
         {
           "start": 10.07,
@@ -8073,191 +7929,7 @@
       }
     },
     {
-      "id": "story-mwpmy70e-b6",
-      "slug": "school-river",
-      "title": "Kids out because the street is a river",
-      "durationSec": 16,
-      "location": {
-        "name": "Melbourne, Florida (approx.)",
-        "lat": 28.08,
-        "lon": -80.61,
-        "precision": "approximate",
-        "verified": false,
-        "note": "sample, approximate, not verified",
-        "a3": "USA"
-      },
-      "camera": [
-        {
-          "id": "kf-mwpmy70e-b9",
-          "preset": "orbit",
-          "at": 0,
-          "center": [
-            -80.61,
-            28.08
-          ],
-          "zoom": 1.7,
-          "pitch": 0,
-          "bearing": 335,
-          "durationSec": 3.5,
-          "ease": "cinematic",
-          "cut": true,
-          "citation": {
-            "type": "Map",
-            "date": "auto",
-            "credit": "auto",
-            "license": "auto"
-          }
-        },
-        {
-          "id": "kf-mwpmy70e-ba",
-          "preset": "dive",
-          "at": 0.8,
-          "center": [
-            -80.61,
-            28.08
-          ],
-          "zoom": 8.5,
-          "pitch": 35,
-          "bearing": 0,
-          "durationSec": 6.6,
-          "ease": "cinematic",
-          "cut": false,
-          "citation": {
-            "type": "Map",
-            "date": "auto",
-            "credit": "auto",
-            "license": "auto"
-          }
-        },
-        {
-          "id": "kf-mwpmy70e-bb",
-          "preset": "street",
-          "at": 8,
-          "center": [
-            -80.61,
-            28.08
-          ],
-          "zoom": 16.4,
-          "pitch": 62,
-          "bearing": 20,
-          "durationSec": 4,
-          "ease": "cinematic",
-          "cut": true,
-          "citation": {
-            "type": "Map",
-            "date": "auto",
-            "credit": "auto",
-            "license": "auto"
-          }
-        },
-        {
-          "id": "kf-mwpmy70e-bc",
-          "preset": "cinematic",
-          "at": 12.4,
-          "center": [
-            -80.61,
-            28.08
-          ],
-          "zoom": 15.6,
-          "pitch": 76,
-          "bearing": 305,
-          "durationSec": 5,
-          "ease": "cinematic",
-          "cut": false,
-          "citation": {
-            "type": "Map",
-            "date": "auto",
-            "credit": "auto",
-            "license": "auto"
-          }
-        }
-      ],
-      "cards": [
-        {
-          "id": "card-mwpmy70e-be",
-          "kind": "topic",
-          "title": "Frogpost",
-          "body": "Brevard and Volusia schools were reported closed 19–20 Nov, with a return date reported as 30 Nov. Confirm before treating that date as current.",
-          "why": "[UNKNOWN]",
-          "facts": [
-            {
-              "label": "Claim status",
-              "value": "As reported; not verified"
-            },
-            {
-              "label": "Place",
-              "value": "Melbourne, Florida (approx.)"
-            },
-            {
-              "label": "Source",
-              "value": "Palm Beach Post"
-            }
-          ],
-          "sourceIds": [
-            "src-mwpmy70e-bd"
-          ],
-          "pin": {
-            "lat": 28.08,
-            "lon": -80.61
-          },
-          "at": 2,
-          "dur": 12,
-          "position": "right",
-          "verified": false
-        }
-      ],
-      "sources": [
-        {
-          "id": "src-mwpmy70e-bd",
-          "label": "Palm Beach Post",
-          "url": "https://www.palmbeachpost.com/story/news/state/2026/11/20/florida-rainfall-hits-records-more-flooding/92875728007/",
-          "status": "unverified",
-          "note": "As reported. Not independently checked."
-        }
-      ],
-      "script": "Kids out because the street is a river. Brevard and Volusia schools were reported closed 19–20 Nov, with a return date reported as 30 Nov. Confirm before treating that date as current.",
-      "captions": [
-        {
-          "start": 0,
-          "end": 4,
-          "text": "Kids out because the street is a river."
-        },
-        {
-          "start": 4,
-          "end": 10,
-          "text": "Brevard and Volusia schools were reported closed 19–20 Nov, with a return"
-        },
-        {
-          "start": 10,
-          "end": 12.5,
-          "text": "date reported as 30 Nov."
-        },
-        {
-          "start": 12.5,
-          "end": 16,
-          "text": "Confirm before treating that date as current."
-        }
-      ],
-      "summary": "Frogpost, as reported. Not verified.",
-      "date": "",
-      "credit": "Palm Beach Post",
-      "creditUrl": "https://www.palmbeachpost.com/story/news/state/2026/11/20/florida-rainfall-hits-records-more-flooding/92875728007/",
-      "asReported": true,
-      "media": [],
-      "audioOverlays": [],
-      "content": [],
-      "highlight": {
-        "a3": "USA",
-        "geojson": null
-      },
-      "voiceover": null,
-      "eventWindow": {
-        "start": "",
-        "end": ""
-      }
-    },
-    {
-      "id": "story-mwpmy70e-bf",
+      "id": "story-mwpp6moq-b0",
       "slug": "builder-streak",
       "title": "Show the thing you finished",
       "durationSec": 16,
@@ -8272,7 +7944,7 @@
       "camera": [],
       "cards": [
         {
-          "id": "card-mwpmy70e-bj",
+          "id": "card-mwpp6moq-b4",
           "kind": "topic",
           "title": "Frogpost",
           "body": "Day counts only count if something got built. The post asked what people built on day 53. The answer is the object, not the take.",
@@ -8292,7 +7964,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70e-bi"
+            "src-mwpp6moq-b3"
           ],
           "pin": null,
           "at": 2,
@@ -8303,7 +7975,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70e-bi",
+          "id": "src-mwpp6moq-b3",
           "label": "@AdventureNLearn",
           "url": "https://x.com/AdventureNLearn/status/2121573830418366842",
           "status": "unverified",
@@ -8352,7 +8024,7 @@
       }
     },
     {
-      "id": "story-mwpmy70e-bk",
+      "id": "story-mwpp6moq-b5",
       "slug": "frog-narrator",
       "title": "The frog is the narrator, not the subject",
       "durationSec": 16,
@@ -8367,10 +8039,10 @@
       "camera": [],
       "cards": [
         {
-          "id": "card-mwpmy70e-bo",
+          "id": "card-mwpp6moq-b9",
           "kind": "topic",
           "title": "Frogpost",
-          "body": "The other forty-nine are the subjects. The frog introduces them. Objective thinking is the process. Growth is the goal.",
+          "body": "The other cards are the subjects. The frog introduces them. Objective thinking is the process. Growth is the goal.",
           "why": "[UNKNOWN]",
           "facts": [
             {
@@ -8387,7 +8059,7 @@
             }
           ],
           "sourceIds": [
-            "src-mwpmy70e-bn"
+            "src-mwpp6moq-b8"
           ],
           "pin": null,
           "at": 2,
@@ -8398,14 +8070,14 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy70e-bn",
+          "id": "src-mwpp6moq-b8",
           "label": "@AdventureNLearn",
           "url": "https://x.com/AdventureNLearn",
           "status": "unverified",
           "note": "As reported. Not independently checked."
         }
       ],
-      "script": "The frog is the narrator, not the subject. The other forty-nine are the subjects. The frog introduces them. Objective thinking is the process. Growth is the goal.",
+      "script": "The frog is the narrator, not the subject. The other cards are the subjects. The frog introduces them. Objective thinking is the process. Growth is the goal.",
       "captions": [
         {
           "start": 0,
@@ -8415,7 +8087,7 @@
         {
           "start": 4.74,
           "end": 8.3,
-          "text": "The other forty-nine are the subjects."
+          "text": "The other cards are the subjects."
         },
         {
           "start": 8.3,
@@ -8454,7 +8126,7 @@
   ],
   "eventLayers": [
     {
-      "id": "evl-mwpmy70e-1",
+      "id": "evl-mwpp6moq-1",
       "name": "Sample story places (approximate, not verified)",
       "color": "#3dbe6a",
       "icon": "●",
@@ -8466,7 +8138,7 @@
       "features": [
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-2",
+          "id": "ev-mwpp6moq-2",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8498,14 +8170,14 @@
             "notes": "sample, not verified. Hong Kong (city, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70b-h",
-            "storyId": "story-mwpmy709-9",
+            "cardId": "card-mwpp6mon-h",
+            "storyId": "story-mwpp6mol-9",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-3",
+          "id": "ev-mwpp6moq-3",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8537,14 +8209,14 @@
             "notes": "sample, not verified. Haikou, Qiongzhou Strait (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70b-q",
-            "storyId": "story-mwpmy70b-i",
+            "cardId": "card-mwpp6mon-q",
+            "storyId": "story-mwpp6mon-i",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-4",
+          "id": "ev-mwpp6moq-4",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8576,14 +8248,14 @@
             "notes": "sample, not verified. Panama City (one landing among several, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70b-z",
-            "storyId": "story-mwpmy70b-r",
+            "cardId": "card-mwpp6mon-z",
+            "storyId": "story-mwpp6mon-r",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-5",
+          "id": "ev-mwpp6moq-5",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8615,14 +8287,14 @@
             "notes": "sample, not verified. Washington, DC (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-18",
-            "storyId": "story-mwpmy70b-10",
+            "cardId": "card-mwpp6moo-18",
+            "storyId": "story-mwpp6moo-10",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-6",
+          "id": "ev-mwpp6moq-6",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8654,14 +8326,14 @@
             "notes": "sample, not verified. Port of Singapore (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-1h",
-            "storyId": "story-mwpmy70c-19",
+            "cardId": "card-mwpp6moo-1h",
+            "storyId": "story-mwpp6moo-19",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-7",
+          "id": "ev-mwpp6moq-7",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8693,14 +8365,14 @@
             "notes": "sample, not verified. Grand Faw / Basra coast (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-1q",
-            "storyId": "story-mwpmy70c-1i",
+            "cardId": "card-mwpp6moo-1q",
+            "storyId": "story-mwpp6moo-1i",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-8",
+          "id": "ev-mwpp6moq-8",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8732,14 +8404,14 @@
             "notes": "sample, not verified. Dubai (corridor hub, not the whole route)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-1z",
-            "storyId": "story-mwpmy70c-1r",
+            "cardId": "card-mwpp6moo-1z",
+            "storyId": "story-mwpp6moo-1r",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-9",
+          "id": "ev-mwpp6moq-9",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8771,14 +8443,14 @@
             "notes": "sample, not verified. Amman (talks, not a rebuilt track)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-28",
-            "storyId": "story-mwpmy70c-20",
+            "cardId": "card-mwpp6moo-28",
+            "storyId": "story-mwpp6moo-20",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-a",
+          "id": "ev-mwpp6moq-a",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8810,14 +8482,14 @@
             "notes": "sample, not verified. Jordan (site not named in the report)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-2h",
-            "storyId": "story-mwpmy70c-29",
+            "cardId": "card-mwpp6mop-2h",
+            "storyId": "story-mwpp6moo-29",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-b",
+          "id": "ev-mwpp6moq-b",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8849,14 +8521,14 @@
             "notes": "sample, not verified. Tianjin port (one of the listings, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-2q",
-            "storyId": "story-mwpmy70c-2i",
+            "cardId": "card-mwpp6mop-2q",
+            "storyId": "story-mwpp6mop-2i",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-c",
+          "id": "ev-mwpp6moq-c",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8888,14 +8560,14 @@
             "notes": "sample, not verified. The Hague (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-2z",
-            "storyId": "story-mwpmy70c-2r",
+            "cardId": "card-mwpp6mop-2z",
+            "storyId": "story-mwpp6mop-2r",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-d",
+          "id": "ev-mwpp6moq-d",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8927,14 +8599,14 @@
             "notes": "sample, not verified. Antalya (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-38",
-            "storyId": "story-mwpmy70c-30",
+            "cardId": "card-mwpp6mop-38",
+            "storyId": "story-mwpp6mop-30",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-e",
+          "id": "ev-mwpp6moq-e",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -8966,14 +8638,14 @@
             "notes": "sample, not verified. Kyiv, Dnipro crossings (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-3h",
-            "storyId": "story-mwpmy70c-39",
+            "cardId": "card-mwpp6mop-3h",
+            "storyId": "story-mwpp6mop-39",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-f",
+          "id": "ev-mwpp6moq-f",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9005,14 +8677,14 @@
             "notes": "sample, not verified. Kerch Strait (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-3o",
-            "storyId": "story-mwpmy70c-3i",
+            "cardId": "card-mwpp6mop-3o",
+            "storyId": "story-mwpp6mop-3i",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-g",
+          "id": "ev-mwpp6moq-g",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9044,14 +8716,14 @@
             "notes": "sample, not verified. Strait of Hormuz (approx. center)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-3v",
-            "storyId": "story-mwpmy70c-3p",
+            "cardId": "card-mwpp6mop-3v",
+            "storyId": "story-mwpp6mop-3p",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-h",
+          "id": "ev-mwpp6moq-h",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9083,14 +8755,14 @@
             "notes": "sample, not verified. US Capitol (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70c-44",
-            "storyId": "story-mwpmy70c-3w",
+            "cardId": "card-mwpp6mop-44",
+            "storyId": "story-mwpp6mop-3w",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-i",
+          "id": "ev-mwpp6moq-i",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9122,14 +8794,14 @@
             "notes": "sample, not verified. Cape Town (province stand-in, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-4d",
-            "storyId": "story-mwpmy70d-45",
+            "cardId": "card-mwpp6mop-4d",
+            "storyId": "story-mwpp6mop-45",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-j",
+          "id": "ev-mwpp6moq-j",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9161,48 +8833,53 @@
             "notes": "sample, not verified. Jakarta (not every affected province)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-4m",
-            "storyId": "story-mwpmy70d-4e",
+            "cardId": "card-mwpp6mop-4m",
+            "storyId": "story-mwpp6mop-4e",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-k",
+          "id": "ev-mwpp6moq-k",
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -120.5,
-              34.4
+              -119.5,
+              33.5
             ]
           },
           "properties": {
             "kind": "point",
-            "title": "California seafloor lease auction",
+            "title": "Southern California offshore lease call",
             "eventTime": "2026-11-20",
             "eventEnd": "",
             "timeApprox": true,
             "datePrecision": "day (episode date; event time [UNKNOWN])",
             "category": "other",
             "verification": "not verified",
-            "sources": [],
+            "sources": [
+              {
+                "label": "Federal Register (BOEM), 27 Jan 2026",
+                "url": "https://www.federalregister.gov/documents/2026/01/27/2026-01568/call-for-information-and-nominations-for-southern-california-outer-continental-shelf-oil-and-gas"
+              }
+            ],
             "citation": {
               "type": "Map pin",
               "date": "2026-11-20",
               "credit": "Approximate location, sample",
               "license": "n/a"
             },
-            "notes": "sample, not verified. California coast (site UNKNOWN)",
+            "notes": "sample, not verified. Southern California offshore planning area (region, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-4s",
-            "storyId": "story-mwpmy70d-4n",
+            "cardId": "card-mwpp6mop-4t",
+            "storyId": "story-mwpp6mop-4n",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-l",
+          "id": "ev-mwpp6moq-l",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9234,19 +8911,19 @@
             "notes": "sample, not verified. Gaza (area, approx.; basin not pinned)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-4z",
-            "storyId": "story-mwpmy70d-4t",
+            "cardId": "card-mwpp6mop-50",
+            "storyId": "story-mwpp6mop-4u",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-m",
+          "id": "ev-mwpp6moq-m",
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -80.74,
-              28.38
+              -81.7,
+              28
             ]
           },
           "properties": {
@@ -9270,27 +8947,27 @@
               "credit": "Approximate location, sample",
               "license": "n/a"
             },
-            "notes": "sample, not verified. Cocoa, St. Johns River (approx.)",
+            "notes": "sample, not verified. Florida (state-level, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-58",
-            "storyId": "story-mwpmy70d-50",
+            "cardId": "card-mwpp6mop-59",
+            "storyId": "story-mwpp6mop-51",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-n",
+          "id": "ev-mwpp6moq-n",
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -80.67,
-              28.32
+              -81.7,
+              28
             ]
           },
           "properties": {
             "kind": "point",
-            "title": "Brevard and Volusia, soils already full",
+            "title": "Florida soils already full",
             "eventTime": "2026-11-20",
             "eventEnd": "",
             "timeApprox": true,
@@ -9309,22 +8986,22 @@
               "credit": "Approximate location, sample",
               "license": "n/a"
             },
-            "notes": "sample, not verified. Merritt Island (approx.)",
+            "notes": "sample, not verified. Florida (state-level, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-5h",
-            "storyId": "story-mwpmy70d-59",
+            "cardId": "card-mwpp6mop-5i",
+            "storyId": "story-mwpp6mop-5a",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-o",
+          "id": "ev-mwpp6moq-o",
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -80.14,
-              26.12
+              -81.7,
+              28
             ]
           },
           "properties": {
@@ -9348,27 +9025,27 @@
               "credit": "Approximate location, sample",
               "license": "n/a"
             },
-            "notes": "sample, not verified. Fort Lauderdale (approx.)",
+            "notes": "sample, not verified. Florida (state-level, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-5q",
-            "storyId": "story-mwpmy70d-5i",
+            "cardId": "card-mwpp6mop-5r",
+            "storyId": "story-mwpp6mop-5j",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-p",
+          "id": "ev-mwpp6moq-p",
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -80.59,
-              28.03
+              -81.7,
+              28
             ]
           },
           "properties": {
             "kind": "point",
-            "title": "Palm Bay bridge, repaired, then gone",
+            "title": "A Florida bridge, repaired, then gone",
             "eventTime": "2026-11-20",
             "eventEnd": "",
             "timeApprox": true,
@@ -9387,17 +9064,17 @@
               "credit": "Approximate location, sample",
               "license": "n/a"
             },
-            "notes": "sample, not verified. Palm Bay (approx.)",
+            "notes": "sample, not verified. Florida (state-level, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-5z",
-            "storyId": "story-mwpmy70d-5r",
+            "cardId": "card-mwpp6mop-60",
+            "storyId": "story-mwpp6mop-5s",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-q",
+          "id": "ev-mwpp6moq-q",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9429,14 +9106,14 @@
             "notes": "sample, not verified. Sherman Oaks (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-68",
-            "storyId": "story-mwpmy70d-60",
+            "cardId": "card-mwpp6mop-69",
+            "storyId": "story-mwpp6mop-61",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-r",
+          "id": "ev-mwpp6moq-r",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9468,48 +9145,14 @@
             "notes": "sample, not verified. Hat Yai (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-6h",
-            "storyId": "story-mwpmy70d-69",
+            "cardId": "card-mwpp6mop-6i",
+            "storyId": "story-mwpp6mop-6a",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-s",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              100.5,
-              13.76
-            ]
-          },
-          "properties": {
-            "kind": "point",
-            "title": "Bangkok on soft clay, ahead of the IMF",
-            "eventTime": "2026-11-20",
-            "eventEnd": "",
-            "timeApprox": true,
-            "datePrecision": "day (episode date; event time [UNKNOWN])",
-            "category": "other",
-            "verification": "not verified",
-            "sources": [],
-            "citation": {
-              "type": "Map pin",
-              "date": "2026-11-20",
-              "credit": "Approximate location, sample",
-              "license": "n/a"
-            },
-            "notes": "sample, not verified. Bangkok (approx.)",
-            "precisionLabel": "Precision: approximate (sample)",
-            "radiusKm": null,
-            "cardId": "card-mwpmy70d-6p",
-            "storyId": "story-mwpmy70d-6i",
-            "example": false
-          }
-        },
-        {
-          "type": "Feature",
-          "id": "ev-mwpmy70e-t",
+          "id": "ev-mwpp6moq-s",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9541,14 +9184,14 @@
             "notes": "sample, not verified. Kinshasa, Boulevard du 30 Juin (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-6y",
-            "storyId": "story-mwpmy70d-6q",
+            "cardId": "card-mwpp6mop-6r",
+            "storyId": "story-mwpp6mop-6j",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-u",
+          "id": "ev-mwpp6moq-t",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9580,14 +9223,14 @@
             "notes": "sample, not verified. India east coast (landfall city UNKNOWN)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-77",
-            "storyId": "story-mwpmy70d-6z",
+            "cardId": "card-mwpp6mop-70",
+            "storyId": "story-mwpp6mop-6s",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-v",
+          "id": "ev-mwpp6moq-u",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9619,14 +9262,14 @@
             "notes": "sample, not verified. Bagmati, Nepal (Fiji is the second site)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-7g",
-            "storyId": "story-mwpmy70d-78",
+            "cardId": "card-mwpp6mop-79",
+            "storyId": "story-mwpp6mop-71",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-w",
+          "id": "ev-mwpp6moq-v",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9658,14 +9301,14 @@
             "notes": "sample, not verified. Atlanta (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-7p",
-            "storyId": "story-mwpmy70d-7h",
+            "cardId": "card-mwpp6mop-7i",
+            "storyId": "story-mwpp6mop-7a",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-x",
+          "id": "ev-mwpp6moq-w",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9697,14 +9340,14 @@
             "notes": "sample, not verified. Nicosia (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-7y",
-            "storyId": "story-mwpmy70d-7q",
+            "cardId": "card-mwpp6mop-7r",
+            "storyId": "story-mwpp6mop-7j",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-y",
+          "id": "ev-mwpp6moq-x",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9736,14 +9379,14 @@
             "notes": "sample, not verified. Gwacheon (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-87",
-            "storyId": "story-mwpmy70d-7z",
+            "cardId": "card-mwpp6mop-80",
+            "storyId": "story-mwpp6mop-7s",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-z",
+          "id": "ev-mwpp6moq-y",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9775,14 +9418,14 @@
             "notes": "sample, not verified. Frankfurt (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-8g",
-            "storyId": "story-mwpmy70d-88",
+            "cardId": "card-mwpp6moq-89",
+            "storyId": "story-mwpp6moq-81",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-10",
+          "id": "ev-mwpp6moq-z",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9814,14 +9457,14 @@
             "notes": "sample, not verified. Antalya (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-8p",
-            "storyId": "story-mwpmy70d-8h",
+            "cardId": "card-mwpp6moq-8i",
+            "storyId": "story-mwpp6moq-8a",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-11",
+          "id": "ev-mwpp6moq-10",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9853,14 +9496,14 @@
             "notes": "sample, not verified. Banjul (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-8y",
-            "storyId": "story-mwpmy70d-8q",
+            "cardId": "card-mwpp6moq-8r",
+            "storyId": "story-mwpp6moq-8j",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-12",
+          "id": "ev-mwpp6moq-11",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9892,14 +9535,14 @@
             "notes": "sample, not verified. Vienna (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-97",
-            "storyId": "story-mwpmy70d-8z",
+            "cardId": "card-mwpp6moq-90",
+            "storyId": "story-mwpp6moq-8s",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-13",
+          "id": "ev-mwpp6moq-12",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9931,14 +9574,14 @@
             "notes": "sample, not verified. Washington, DC (bill text, not a sacred site)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-9g",
-            "storyId": "story-mwpmy70d-98",
+            "cardId": "card-mwpp6moq-99",
+            "storyId": "story-mwpp6moq-91",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-14",
+          "id": "ev-mwpp6moq-13",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9970,14 +9613,14 @@
             "notes": "sample, not verified. Gaza (area, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-9n",
-            "storyId": "story-mwpmy70d-9h",
+            "cardId": "card-mwpp6moq-9g",
+            "storyId": "story-mwpp6moq-9a",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-15",
+          "id": "ev-mwpp6moq-14",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -9996,8 +9639,8 @@
             "verification": "not verified",
             "sources": [
               {
-                "label": "OSINTdefender on X",
-                "url": "https://x.com/sentdefender/status/2123629675717034482"
+                "label": "Acting Secretary of the Army (@SecArmy) on X, 19 Nov 2026",
+                "url": "https://x.com/SecArmy/status/2123574872559493304"
               }
             ],
             "citation": {
@@ -10009,19 +9652,19 @@
             "notes": "sample, not verified. Middletown, Iowa (approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-9w",
-            "storyId": "story-mwpmy70d-9o",
+            "cardId": "card-mwpp6moq-9p",
+            "storyId": "story-mwpp6moq-9h",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-16",
+          "id": "ev-mwpp6moq-15",
           "geometry": {
             "type": "Point",
             "coordinates": [
-              -80.9,
-              28.99
+              -81.7,
+              28
             ]
           },
           "properties": {
@@ -10045,17 +9688,17 @@
               "credit": "Approximate location, sample",
               "license": "n/a"
             },
-            "notes": "sample, not verified. Edgewater, Florida (approx.)",
+            "notes": "sample, not verified. Florida (state-level, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-aa",
-            "storyId": "story-mwpmy70d-a2",
+            "cardId": "card-mwpp6moq-a3",
+            "storyId": "story-mwpp6moq-9v",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-17",
+          "id": "ev-mwpp6moq-16",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -10087,14 +9730,14 @@
             "notes": "sample, not verified. Manaus (Amazon stand-in, approx.)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-ao",
-            "storyId": "story-mwpmy70d-ag",
+            "cardId": "card-mwpp6moq-ah",
+            "storyId": "story-mwpp6moq-a9",
             "example": false
           }
         },
         {
           "type": "Feature",
-          "id": "ev-mwpmy70e-18",
+          "id": "ev-mwpp6moq-17",
           "geometry": {
             "type": "Point",
             "coordinates": [
@@ -10111,7 +9754,12 @@
             "datePrecision": "day (episode date; event time [UNKNOWN])",
             "category": "other",
             "verification": "not verified",
-            "sources": [],
+            "sources": [
+              {
+                "label": "@Shaughnessy119 on X (unofficial), 5 Nov 2026",
+                "url": "https://x.com/Shaughnessy119/status/2118504294290780434"
+              }
+            ],
             "citation": {
               "type": "Map pin",
               "date": "2026-11-20",
@@ -10121,47 +9769,8 @@
             "notes": "sample, not verified. Washington, DC (regulator's city, office not pinned)",
             "precisionLabel": "Precision: approximate (sample)",
             "radiusKm": null,
-            "cardId": "card-mwpmy70d-aw",
-            "storyId": "story-mwpmy70d-ap",
-            "example": false
-          }
-        },
-        {
-          "type": "Feature",
-          "id": "ev-mwpmy70e-19",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -80.61,
-              28.08
-            ]
-          },
-          "properties": {
-            "kind": "point",
-            "title": "Kids out because the street is a river",
-            "eventTime": "2026-11-20",
-            "eventEnd": "",
-            "timeApprox": true,
-            "datePrecision": "day (episode date; event time [UNKNOWN])",
-            "category": "other",
-            "verification": "not verified",
-            "sources": [
-              {
-                "label": "Palm Beach Post",
-                "url": "https://www.palmbeachpost.com/story/news/state/2026/11/20/florida-rainfall-hits-records-more-flooding/92875728007/"
-              }
-            ],
-            "citation": {
-              "type": "Map pin",
-              "date": "2026-11-20",
-              "credit": "Approximate location, sample",
-              "license": "n/a"
-            },
-            "notes": "sample, not verified. Melbourne, Florida (approx.)",
-            "precisionLabel": "Precision: approximate (sample)",
-            "radiusKm": null,
-            "cardId": "card-mwpmy70e-be",
-            "storyId": "story-mwpmy70e-b6",
+            "cardId": "card-mwpp6moq-aq",
+            "storyId": "story-mwpp6moq-ai",
             "example": false
           }
         }

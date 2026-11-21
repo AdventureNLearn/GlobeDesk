@@ -1,0 +1,352 @@
+[
+  {
+    "id": "boot",
+    "file": "boot.wav",
+    "duration": 2.856,
+    "spoken": "Comms coming up. Desk is warming.",
+    "text": "Comms coming up. Desk is warming."
+  },
+  {
+    "id": "start",
+    "file": "start.wav",
+    "duration": 5.944,
+    "spoken": "G.M., frens. Desk is online. This is mission control. Ready when you are.",
+    "text": "GM frens. Desk is online. This is mission control. Ready when you are."
+  },
+  {
+    "id": "coldopen",
+    "file": "coldopen.wav",
+    "duration": 3.959,
+    "spoken": "Strap in. We build. We don't just watch.",
+    "text": "Strap in. We build \u2014 we don't just watch."
+  },
+  {
+    "id": "assist",
+    "file": "assist.wav",
+    "duration": 3.947,
+    "spoken": "Copy. I'll fly this one. Watch the desk.",
+    "text": "Copy. I'll fly this one. Watch the desk."
+  },
+  {
+    "id": "finale",
+    "file": "finale.wav",
+    "duration": 4.957,
+    "spoken": "Mission complete. That's the whole desk, fren. Now go build.",
+    "text": "Mission complete. That's the whole desk, fren. Now go build."
+  },
+  {
+    "id": "debrief",
+    "file": "debrief.wav",
+    "duration": 3.413,
+    "spoken": "Debrief is on your screen. The desk is yours.",
+    "text": "Debrief is on your screen. The desk is yours."
+  },
+  {
+    "id": "spin-brief",
+    "file": "spin-brief.wav",
+    "duration": 4.516,
+    "spoken": "Sector one. Spin that globe, fren. Feel the orbit.",
+    "text": "Sector one. Spin that globe, fren. Feel the orbit."
+  },
+  {
+    "id": "spin-hint",
+    "file": "spin-hint.wav",
+    "duration": 3.181,
+    "spoken": "Drag the globe, or hit Show me and I'll take the helm.",
+    "text": "Drag the globe, or hit Show me and I'll take the helm."
+  },
+  {
+    "id": "spin-success",
+    "file": "spin-success.wav",
+    "duration": 2.914,
+    "spoken": "Nice work. Orbit badge unlocked.",
+    "text": "Nice work. Orbit badge unlocked."
+  },
+  {
+    "id": "spin-why",
+    "file": "spin-why.wav",
+    "duration": 3.646,
+    "spoken": "Why it matters: every story on this desk starts in orbit.",
+    "text": "Why it matters: every story on this desk starts in orbit."
+  },
+  {
+    "id": "dive-brief",
+    "file": "dive-brief.wav",
+    "duration": 7.93,
+    "spoken": "Sector two. Take us down to the street. Watch the buildings rise. Terrain stays opt-in. We'll light it.",
+    "text": "Sector two. Take us down to the street. Watch the buildings rise. Terrain stays opt-in \u2014 we'll light it."
+  },
+  {
+    "id": "dive-hint",
+    "file": "dive-hint.wav",
+    "duration": 4.865,
+    "spoken": "Show me will dive us in and turn terrain on. Give the tiles a moment to land.",
+    "text": "Show me will dive us in and turn terrain on. Give the tiles a moment to land."
+  },
+  {
+    "id": "dive-success",
+    "file": "dive-success.wav",
+    "duration": 4.992,
+    "spoken": "Streets are live. Terrain is on. Street-level badge is yours.",
+    "text": "Streets are live. Terrain is on. Street-level badge is yours."
+  },
+  {
+    "id": "dive-why",
+    "file": "dive-why.wav",
+    "duration": 6.49,
+    "spoken": "Why it matters: at street zoom the roads and 3D buildings carry the detail. Terrain is yours to enable.",
+    "text": "Why it matters: at street zoom the roads and 3D buildings carry the detail. Terrain is yours to enable."
+  },
+  {
+    "id": "open-brief",
+    "file": "open-brief.wav",
+    "duration": 4.342,
+    "spoken": "An episode is the show. Open one and the desk is yours to run.",
+    "text": "An episode is the show. Open one and the desk is yours to run."
+  },
+  {
+    "id": "open-hint",
+    "file": "open-hint.wav",
+    "duration": 5.677,
+    "spoken": "Hit Show me to open the practice episode. You can also open a GlobeDesk file of your own.",
+    "text": "Hit Show me to open the practice episode. You can also open a .globedesk file of your own."
+  },
+  {
+    "id": "open-success",
+    "file": "open-success.wav",
+    "duration": 3.518,
+    "spoken": "Episode is on the desk. That's the show, fren.",
+    "text": "Episode is on the desk. That's the show, fren."
+  },
+  {
+    "id": "open-why",
+    "file": "open-why.wav",
+    "duration": 5.817,
+    "spoken": "Why it matters: GlobeDesk keeps the show as a local episode, not a locked cloud file.",
+    "text": "Why it matters: GlobeDesk keeps the show as a local episode, not a locked cloud file."
+  },
+  {
+    "id": "edit-brief",
+    "file": "edit-brief.wav",
+    "duration": 5.259,
+    "spoken": "Change the title. Rewrite the card. Nothing fills in the unknowns for you.",
+    "text": "Change the title. Rewrite the card. Nothing fills in the unknowns for you."
+  },
+  {
+    "id": "edit-hint",
+    "file": "edit-hint.wav",
+    "duration": 3.773,
+    "spoken": "Show me will retitle the episode and tighten the practice card.",
+    "text": "Show me will retitle the episode and tighten the practice card."
+  },
+  {
+    "id": "edit-success",
+    "file": "edit-success.wav",
+    "duration": 4.098,
+    "spoken": "Title and card are updated. You stayed in charge of every line.",
+    "text": "Title and card are updated. You stayed in charge of every line."
+  },
+  {
+    "id": "edit-why",
+    "file": "edit-why.wav",
+    "duration": 4.528,
+    "spoken": "Why it matters: unknown facts stay unknown. The desk will not invent them.",
+    "text": "Why it matters: unknown facts stay unknown. The desk will not invent them."
+  },
+  {
+    "id": "pins-brief",
+    "file": "pins-brief.wav",
+    "duration": 5.399,
+    "spoken": "Drop a pin. Add a data layer for event sites, as reported, not invented.",
+    "text": "Drop a pin. Add a data layer for event sites \u2014 as reported, not invented."
+  },
+  {
+    "id": "pins-hint",
+    "file": "pins-hint.wav",
+    "duration": 3.704,
+    "spoken": "Show me will plant a practice pin and light the mission-sites layer.",
+    "text": "Show me will plant a practice pin and light the mission-sites layer."
+  },
+  {
+    "id": "pins-success",
+    "file": "pins-success.wav",
+    "duration": 3.971,
+    "spoken": "Pin is down and the layer is live. Approximate only, fren.",
+    "text": "Pin is down and the layer is live. Approximate only, fren."
+  },
+  {
+    "id": "pins-why",
+    "file": "pins-why.wav",
+    "duration": 5.236,
+    "spoken": "Why it matters: pins and layers sit on the content layer. The base map stays its own.",
+    "text": "Why it matters: pins and layers sit on the content layer. The base map stays its own."
+  },
+  {
+    "id": "media-brief",
+    "file": "media-brief.wav",
+    "duration": 4.574,
+    "spoken": "Upload a still, local only. Set it as a card on the desk.",
+    "text": "Upload a still \u2014 local only. Set it as a card on the desk."
+  },
+  {
+    "id": "media-hint",
+    "file": "media-hint.wav",
+    "duration": 3.878,
+    "spoken": "Show me will add a local console still and pin it as card media.",
+    "text": "Show me will add a local console still and pin it as card media."
+  },
+  {
+    "id": "media-success",
+    "file": "media-success.wav",
+    "duration": 3.831,
+    "spoken": "Media is on the card. It never left this device.",
+    "text": "Media is on the card. It never left this device."
+  },
+  {
+    "id": "media-why",
+    "file": "media-why.wav",
+    "duration": 4.899,
+    "spoken": "Why it matters: media stays on this device. Nothing is uploaded to a server.",
+    "text": "Why it matters: media stays on this device. Nothing is uploaded to a server."
+  },
+  {
+    "id": "embed-brief",
+    "file": "embed-brief.wav",
+    "duration": 5.642,
+    "spoken": "Overlay your media, or embed a credited YouTube window. The globe stays the globe.",
+    "text": "Overlay your media, or embed a credited YouTube window. The globe stays the globe."
+  },
+  {
+    "id": "embed-hint",
+    "file": "embed-hint.wav",
+    "duration": 3.762,
+    "spoken": "Show me will place a credited NASA Earth embed on the content layer.",
+    "text": "Show me will place a credited NASA Earth embed on the content layer."
+  },
+  {
+    "id": "embed-success",
+    "file": "embed-success.wav",
+    "duration": 3.657,
+    "spoken": "Overlay and embed are up. Credit travels with the clip.",
+    "text": "Overlay and embed are up. Credit travels with the clip."
+  },
+  {
+    "id": "embed-why",
+    "file": "embed-why.wav",
+    "duration": 5.608,
+    "spoken": "Why it matters: only allowlisted embeds, with credit required. The map is never replaced.",
+    "text": "Why it matters: only allowlisted embeds, with credit required. The map is never replaced."
+  },
+  {
+    "id": "sound-brief",
+    "file": "sound-brief.wav",
+    "duration": 4.586,
+    "spoken": "Lay a sound under the story. A pre-recorded bed, mixed on the desk.",
+    "text": "Lay a sound under the story. A pre-recorded bed, mixed on the desk."
+  },
+  {
+    "id": "sound-hint",
+    "file": "sound-hint.wav",
+    "duration": 3.402,
+    "spoken": "Show me will mix a short telemetry bed onto this story.",
+    "text": "Show me will mix a short telemetry bed onto this story."
+  },
+  {
+    "id": "sound-success",
+    "file": "sound-success.wav",
+    "duration": 2.032,
+    "spoken": "Sound overlay is in the mix.",
+    "text": "Sound overlay is in the mix."
+  },
+  {
+    "id": "sound-why",
+    "file": "sound-why.wav",
+    "duration": 4.714,
+    "spoken": "Why it matters: sound is timed to the episode, not baked into the map.",
+    "text": "Why it matters: sound is timed to the episode, not baked into the map."
+  },
+  {
+    "id": "captions-brief",
+    "file": "captions-brief.wav",
+    "duration": 4.783,
+    "spoken": "Captions on, always, for this desk. And a readable view of every card.",
+    "text": "Captions on, always, for this desk. And a readable view of every card."
+  },
+  {
+    "id": "captions-hint",
+    "file": "captions-hint.wav",
+    "duration": 3.251,
+    "spoken": "Show me will cue captions and open the readable view.",
+    "text": "Show me will cue captions and open the readable view."
+  },
+  {
+    "id": "captions-success",
+    "file": "captions-success.wav",
+    "duration": 4.319,
+    "spoken": "Captions and readable cards are up. Nobody gets left behind.",
+    "text": "Captions and readable cards are up. Nobody gets left behind."
+  },
+  {
+    "id": "captions-why",
+    "file": "captions-why.wav",
+    "duration": 4.04,
+    "spoken": "Why it matters: if you can't hear the VO, you can still follow the brief.",
+    "text": "Why it matters: if you can't hear the VO, you can still follow the brief."
+  },
+  {
+    "id": "assist-brief",
+    "file": "assist-brief.wav",
+    "duration": 7.233,
+    "spoken": "Copy the prompt, paste JSON, or import a same-origin episode. The desk validates before it loads.",
+    "text": "Copy the prompt, paste JSON, or import a same-origin episode. The desk validates before it loads."
+  },
+  {
+    "id": "assist-hint",
+    "file": "assist-hint.wav",
+    "duration": 5.12,
+    "spoken": "Show me will open the assist panel, paste a valid episode, and validate it.",
+    "text": "Show me will open the assist panel, paste a valid episode, and validate it."
+  },
+  {
+    "id": "assist-success",
+    "file": "assist-success.wav",
+    "duration": 4.296,
+    "spoken": "Prompt is on the panel and the JSON checked out. Clean import.",
+    "text": "Prompt is on the panel and the JSON checked out. Clean import."
+  },
+  {
+    "id": "assist-why",
+    "file": "assist-why.wav",
+    "duration": 6.084,
+    "spoken": "Why it matters: your assistant drafts. GlobeDesk checks the schema. Paid keys stay off.",
+    "text": "Why it matters: your assistant drafts. GlobeDesk checks the schema. Paid keys stay off."
+  },
+  {
+    "id": "grokme-brief",
+    "file": "grokme-brief.wav",
+    "duration": 6.699,
+    "spoken": "This is the Grok.me build kit: brief, prompts, and a file manifest. Rebuild the desk from the repo.",
+    "text": "This is the Grok.me build kit \u2014 brief, prompts, and a file manifest. Rebuild the desk from the repo."
+  },
+  {
+    "id": "grokme-hint",
+    "file": "grokme-hint.wav",
+    "duration": 5.642,
+    "spoken": "Show me will open the kit from this repo. How Grok.me itself works is still marked unknown.",
+    "text": "Show me will open the kit from this repo. How Grok.me itself works is still marked unknown."
+  },
+  {
+    "id": "grokme-success",
+    "file": "grokme-success.wav",
+    "duration": 4.133,
+    "spoken": "Kit is open. That's the production app, not a throwaway demo.",
+    "text": "Kit is open. That's the production app, not a throwaway demo."
+  },
+  {
+    "id": "grokme-why",
+    "file": "grokme-why.wav",
+    "duration": 5.468,
+    "spoken": "Why it matters: the builder prompt and manifest are how someone rebuilds GlobeDesk on Grok.me.",
+    "text": "Why it matters: the builder prompt and manifest are how someone rebuilds GlobeDesk on Grok.me."
+  }
+]

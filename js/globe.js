@@ -247,7 +247,7 @@
     setOrUpdate("gd-rings", geo.rings);
     setOrUpdate("gd-arcs", geo.arcs);
     setOrUpdate("gd-pins", geo.pins);
-    if (!map.getLayer("gd-rings")) map.addLayer({ id: "gd-rings", type: "line", source: "gd-rings", paint: { "line-color": "#ffd166", "line-dasharray": [2, 2], "line-width": 1.2, "line-opacity": ["case", ["==", ["get", "active"], 1], 0.85, 0.18] } });
+    if (!map.getLayer("gd-rings")) map.addLayer({ id: "gd-rings", type: "line", source: "gd-rings", paint: { "line-color": "#ffd166", "line-dasharray": [2, 2], "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.6, 6, 1.2, 12, 2], "line-opacity": ["case", ["==", ["get", "active"], 1], 0.85, 0.18] } });
     if (!map.getLayer("gd-arcs")) map.addLayer({ id: "gd-arcs", type: "line", source: "gd-arcs", paint: { "line-color": "#5ee6ff", "line-width": 2, "line-opacity": 0.7, "line-blur": 0.5 } });
     if (!map.getLayer("gd-pins-halo")) map.addLayer({ id: "gd-pins-halo", type: "circle", source: "gd-pins", paint: { "circle-radius": ["case", ["==", ["get", "active"], 1], 22, 12], "circle-color": "#ff3b5c", "circle-opacity": 0.18, "circle-pitch-alignment": "map" } });
     if (!map.getLayer("gd-pins")) map.addLayer({ id: "gd-pins", type: "circle", source: "gd-pins", paint: { "circle-radius": ["case", ["==", ["get", "active"], 1], 8, 6], "circle-color": "#ff3b5c", "circle-stroke-color": "#fff", "circle-stroke-width": 2 } });
@@ -346,6 +346,13 @@
     map.on("click", "gd-pins", (e) => {
       if (GD.eventsMap && GD.eventsMap.em.mode !== "select") return; // drawing, not picking
       const f = e.features && e.features[0];
+      // Shift-, Ctrl- or Cmd-click opens or closes that story's card on the globe (several can be open).
+      const oe = e.originalEvent || {};
+      if (f && GD.callouts && (oe.shiftKey || oe.ctrlKey || oe.metaKey)) {
+        const s = st.episode && st.episode.stories[Number(f.properties.idx)];
+        if (s) { GD.callouts.toggle(s.id); if (GD.ui && GD.ui.renderRundown) GD.ui.renderRundown(); }
+        return;
+      }
       if (f && GD.ui) GD.ui.selectStory(Number(f.properties.idx), { fly: true });
     });
     // Click an empty point on the globe to drop or move the current story pin.

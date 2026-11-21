@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "name": "Sample story places (approximate, not verified)",
   "globedesk_layer": {
-    "id": "evl-mwpmy70e-1",
+    "id": "evl-mwpp6moq-1",
     "name": "Sample story places (approximate, not verified)",
     "color": "#3dbe6a",
     "icon": "●",
@@ -13,7 +13,7 @@
   "features": [
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-2",
+      "id": "ev-mwpp6moq-2",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -45,14 +45,14 @@
         "notes": "sample, not verified. Hong Kong (city, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70b-h",
-        "storyId": "story-mwpmy709-9",
+        "cardId": "card-mwpp6mon-h",
+        "storyId": "story-mwpp6mol-9",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-3",
+      "id": "ev-mwpp6moq-3",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -84,14 +84,14 @@
         "notes": "sample, not verified. Haikou, Qiongzhou Strait (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70b-q",
-        "storyId": "story-mwpmy70b-i",
+        "cardId": "card-mwpp6mon-q",
+        "storyId": "story-mwpp6mon-i",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-4",
+      "id": "ev-mwpp6moq-4",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -123,14 +123,14 @@
         "notes": "sample, not verified. Panama City (one landing among several, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70b-z",
-        "storyId": "story-mwpmy70b-r",
+        "cardId": "card-mwpp6mon-z",
+        "storyId": "story-mwpp6mon-r",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-5",
+      "id": "ev-mwpp6moq-5",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -162,14 +162,14 @@
         "notes": "sample, not verified. Washington, DC (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-18",
-        "storyId": "story-mwpmy70b-10",
+        "cardId": "card-mwpp6moo-18",
+        "storyId": "story-mwpp6moo-10",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-6",
+      "id": "ev-mwpp6moq-6",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -201,14 +201,14 @@
         "notes": "sample, not verified. Port of Singapore (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-1h",
-        "storyId": "story-mwpmy70c-19",
+        "cardId": "card-mwpp6moo-1h",
+        "storyId": "story-mwpp6moo-19",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-7",
+      "id": "ev-mwpp6moq-7",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -240,14 +240,14 @@
         "notes": "sample, not verified. Grand Faw / Basra coast (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-1q",
-        "storyId": "story-mwpmy70c-1i",
+        "cardId": "card-mwpp6moo-1q",
+        "storyId": "story-mwpp6moo-1i",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-8",
+      "id": "ev-mwpp6moq-8",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -279,14 +279,14 @@
         "notes": "sample, not verified. Dubai (corridor hub, not the whole route)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-1z",
-        "storyId": "story-mwpmy70c-1r",
+        "cardId": "card-mwpp6moo-1z",
+        "storyId": "story-mwpp6moo-1r",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-9",
+      "id": "ev-mwpp6moq-9",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -318,14 +318,14 @@
         "notes": "sample, not verified. Amman (talks, not a rebuilt track)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-28",
-        "storyId": "story-mwpmy70c-20",
+        "cardId": "card-mwpp6moo-28",
+        "storyId": "story-mwpp6moo-20",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-a",
+      "id": "ev-mwpp6moq-a",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -357,14 +357,14 @@
         "notes": "sample, not verified. Jordan (site not named in the report)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-2h",
-        "storyId": "story-mwpmy70c-29",
+        "cardId": "card-mwpp6mop-2h",
+        "storyId": "story-mwpp6moo-29",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-b",
+      "id": "ev-mwpp6moq-b",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -396,14 +396,14 @@
         "notes": "sample, not verified. Tianjin port (one of the listings, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-2q",
-        "storyId": "story-mwpmy70c-2i",
+        "cardId": "card-mwpp6mop-2q",
+        "storyId": "story-mwpp6mop-2i",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-c",
+      "id": "ev-mwpp6moq-c",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -435,14 +435,14 @@
         "notes": "sample, not verified. The Hague (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-2z",
-        "storyId": "story-mwpmy70c-2r",
+        "cardId": "card-mwpp6mop-2z",
+        "storyId": "story-mwpp6mop-2r",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-d",
+      "id": "ev-mwpp6moq-d",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -474,14 +474,14 @@
         "notes": "sample, not verified. Antalya (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-38",
-        "storyId": "story-mwpmy70c-30",
+        "cardId": "card-mwpp6mop-38",
+        "storyId": "story-mwpp6mop-30",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-e",
+      "id": "ev-mwpp6moq-e",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -513,14 +513,14 @@
         "notes": "sample, not verified. Kyiv, Dnipro crossings (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-3h",
-        "storyId": "story-mwpmy70c-39",
+        "cardId": "card-mwpp6mop-3h",
+        "storyId": "story-mwpp6mop-39",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-f",
+      "id": "ev-mwpp6moq-f",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -552,14 +552,14 @@
         "notes": "sample, not verified. Kerch Strait (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-3o",
-        "storyId": "story-mwpmy70c-3i",
+        "cardId": "card-mwpp6mop-3o",
+        "storyId": "story-mwpp6mop-3i",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-g",
+      "id": "ev-mwpp6moq-g",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -591,14 +591,14 @@
         "notes": "sample, not verified. Strait of Hormuz (approx. center)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-3v",
-        "storyId": "story-mwpmy70c-3p",
+        "cardId": "card-mwpp6mop-3v",
+        "storyId": "story-mwpp6mop-3p",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-h",
+      "id": "ev-mwpp6moq-h",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -630,14 +630,14 @@
         "notes": "sample, not verified. US Capitol (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70c-44",
-        "storyId": "story-mwpmy70c-3w",
+        "cardId": "card-mwpp6mop-44",
+        "storyId": "story-mwpp6mop-3w",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-i",
+      "id": "ev-mwpp6moq-i",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -669,14 +669,14 @@
         "notes": "sample, not verified. Cape Town (province stand-in, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-4d",
-        "storyId": "story-mwpmy70d-45",
+        "cardId": "card-mwpp6mop-4d",
+        "storyId": "story-mwpp6mop-45",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-j",
+      "id": "ev-mwpp6moq-j",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -708,48 +708,53 @@
         "notes": "sample, not verified. Jakarta (not every affected province)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-4m",
-        "storyId": "story-mwpmy70d-4e",
+        "cardId": "card-mwpp6mop-4m",
+        "storyId": "story-mwpp6mop-4e",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-k",
+      "id": "ev-mwpp6moq-k",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -120.5,
-          34.4
+          -119.5,
+          33.5
         ]
       },
       "properties": {
         "kind": "point",
-        "title": "California seafloor lease auction",
+        "title": "Southern California offshore lease call",
         "eventTime": "2026-11-20",
         "eventEnd": "",
         "timeApprox": true,
         "datePrecision": "day (episode date; event time [UNKNOWN])",
         "category": "other",
         "verification": "not verified",
-        "sources": [],
+        "sources": [
+          {
+            "label": "Federal Register (BOEM), 27 Jan 2026",
+            "url": "https://www.federalregister.gov/documents/2026/01/27/2026-01568/call-for-information-and-nominations-for-southern-california-outer-continental-shelf-oil-and-gas"
+          }
+        ],
         "citation": {
           "type": "Map pin",
           "date": "2026-11-20",
           "credit": "Approximate location, sample",
           "license": "n/a"
         },
-        "notes": "sample, not verified. California coast (site UNKNOWN)",
+        "notes": "sample, not verified. Southern California offshore planning area (region, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-4s",
-        "storyId": "story-mwpmy70d-4n",
+        "cardId": "card-mwpp6mop-4t",
+        "storyId": "story-mwpp6mop-4n",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-l",
+      "id": "ev-mwpp6moq-l",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -781,19 +786,19 @@
         "notes": "sample, not verified. Gaza (area, approx.; basin not pinned)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-4z",
-        "storyId": "story-mwpmy70d-4t",
+        "cardId": "card-mwpp6mop-50",
+        "storyId": "story-mwpp6mop-4u",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-m",
+      "id": "ev-mwpp6moq-m",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.74,
-          28.38
+          -81.7,
+          28
         ]
       },
       "properties": {
@@ -817,27 +822,27 @@
           "credit": "Approximate location, sample",
           "license": "n/a"
         },
-        "notes": "sample, not verified. Cocoa, St. Johns River (approx.)",
+        "notes": "sample, not verified. Florida (state-level, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-58",
-        "storyId": "story-mwpmy70d-50",
+        "cardId": "card-mwpp6mop-59",
+        "storyId": "story-mwpp6mop-51",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-n",
+      "id": "ev-mwpp6moq-n",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.67,
-          28.32
+          -81.7,
+          28
         ]
       },
       "properties": {
         "kind": "point",
-        "title": "Brevard and Volusia, soils already full",
+        "title": "Florida soils already full",
         "eventTime": "2026-11-20",
         "eventEnd": "",
         "timeApprox": true,
@@ -856,22 +861,22 @@
           "credit": "Approximate location, sample",
           "license": "n/a"
         },
-        "notes": "sample, not verified. Merritt Island (approx.)",
+        "notes": "sample, not verified. Florida (state-level, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-5h",
-        "storyId": "story-mwpmy70d-59",
+        "cardId": "card-mwpp6mop-5i",
+        "storyId": "story-mwpp6mop-5a",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-o",
+      "id": "ev-mwpp6moq-o",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.14,
-          26.12
+          -81.7,
+          28
         ]
       },
       "properties": {
@@ -895,27 +900,27 @@
           "credit": "Approximate location, sample",
           "license": "n/a"
         },
-        "notes": "sample, not verified. Fort Lauderdale (approx.)",
+        "notes": "sample, not verified. Florida (state-level, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-5q",
-        "storyId": "story-mwpmy70d-5i",
+        "cardId": "card-mwpp6mop-5r",
+        "storyId": "story-mwpp6mop-5j",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-p",
+      "id": "ev-mwpp6moq-p",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.59,
-          28.03
+          -81.7,
+          28
         ]
       },
       "properties": {
         "kind": "point",
-        "title": "Palm Bay bridge, repaired, then gone",
+        "title": "A Florida bridge, repaired, then gone",
         "eventTime": "2026-11-20",
         "eventEnd": "",
         "timeApprox": true,
@@ -934,17 +939,17 @@
           "credit": "Approximate location, sample",
           "license": "n/a"
         },
-        "notes": "sample, not verified. Palm Bay (approx.)",
+        "notes": "sample, not verified. Florida (state-level, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-5z",
-        "storyId": "story-mwpmy70d-5r",
+        "cardId": "card-mwpp6mop-60",
+        "storyId": "story-mwpp6mop-5s",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-q",
+      "id": "ev-mwpp6moq-q",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -976,14 +981,14 @@
         "notes": "sample, not verified. Sherman Oaks (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-68",
-        "storyId": "story-mwpmy70d-60",
+        "cardId": "card-mwpp6mop-69",
+        "storyId": "story-mwpp6mop-61",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-r",
+      "id": "ev-mwpp6moq-r",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1015,48 +1020,14 @@
         "notes": "sample, not verified. Hat Yai (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-6h",
-        "storyId": "story-mwpmy70d-69",
+        "cardId": "card-mwpp6mop-6i",
+        "storyId": "story-mwpp6mop-6a",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-s",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          100.5,
-          13.76
-        ]
-      },
-      "properties": {
-        "kind": "point",
-        "title": "Bangkok on soft clay, ahead of the IMF",
-        "eventTime": "2026-11-20",
-        "eventEnd": "",
-        "timeApprox": true,
-        "datePrecision": "day (episode date; event time [UNKNOWN])",
-        "category": "other",
-        "verification": "not verified",
-        "sources": [],
-        "citation": {
-          "type": "Map pin",
-          "date": "2026-11-20",
-          "credit": "Approximate location, sample",
-          "license": "n/a"
-        },
-        "notes": "sample, not verified. Bangkok (approx.)",
-        "precisionLabel": "Precision: approximate (sample)",
-        "radiusKm": null,
-        "cardId": "card-mwpmy70d-6p",
-        "storyId": "story-mwpmy70d-6i",
-        "example": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "ev-mwpmy70e-t",
+      "id": "ev-mwpp6moq-s",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1088,14 +1059,14 @@
         "notes": "sample, not verified. Kinshasa, Boulevard du 30 Juin (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-6y",
-        "storyId": "story-mwpmy70d-6q",
+        "cardId": "card-mwpp6mop-6r",
+        "storyId": "story-mwpp6mop-6j",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-u",
+      "id": "ev-mwpp6moq-t",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1127,14 +1098,14 @@
         "notes": "sample, not verified. India east coast (landfall city UNKNOWN)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-77",
-        "storyId": "story-mwpmy70d-6z",
+        "cardId": "card-mwpp6mop-70",
+        "storyId": "story-mwpp6mop-6s",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-v",
+      "id": "ev-mwpp6moq-u",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1166,14 +1137,14 @@
         "notes": "sample, not verified. Bagmati, Nepal (Fiji is the second site)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-7g",
-        "storyId": "story-mwpmy70d-78",
+        "cardId": "card-mwpp6mop-79",
+        "storyId": "story-mwpp6mop-71",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-w",
+      "id": "ev-mwpp6moq-v",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1205,14 +1176,14 @@
         "notes": "sample, not verified. Atlanta (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-7p",
-        "storyId": "story-mwpmy70d-7h",
+        "cardId": "card-mwpp6mop-7i",
+        "storyId": "story-mwpp6mop-7a",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-x",
+      "id": "ev-mwpp6moq-w",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1244,14 +1215,14 @@
         "notes": "sample, not verified. Nicosia (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-7y",
-        "storyId": "story-mwpmy70d-7q",
+        "cardId": "card-mwpp6mop-7r",
+        "storyId": "story-mwpp6mop-7j",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-y",
+      "id": "ev-mwpp6moq-x",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1283,14 +1254,14 @@
         "notes": "sample, not verified. Gwacheon (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-87",
-        "storyId": "story-mwpmy70d-7z",
+        "cardId": "card-mwpp6mop-80",
+        "storyId": "story-mwpp6mop-7s",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-z",
+      "id": "ev-mwpp6moq-y",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1322,14 +1293,14 @@
         "notes": "sample, not verified. Frankfurt (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-8g",
-        "storyId": "story-mwpmy70d-88",
+        "cardId": "card-mwpp6moq-89",
+        "storyId": "story-mwpp6moq-81",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-10",
+      "id": "ev-mwpp6moq-z",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1361,14 +1332,14 @@
         "notes": "sample, not verified. Antalya (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-8p",
-        "storyId": "story-mwpmy70d-8h",
+        "cardId": "card-mwpp6moq-8i",
+        "storyId": "story-mwpp6moq-8a",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-11",
+      "id": "ev-mwpp6moq-10",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1400,14 +1371,14 @@
         "notes": "sample, not verified. Banjul (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-8y",
-        "storyId": "story-mwpmy70d-8q",
+        "cardId": "card-mwpp6moq-8r",
+        "storyId": "story-mwpp6moq-8j",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-12",
+      "id": "ev-mwpp6moq-11",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1439,14 +1410,14 @@
         "notes": "sample, not verified. Vienna (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-97",
-        "storyId": "story-mwpmy70d-8z",
+        "cardId": "card-mwpp6moq-90",
+        "storyId": "story-mwpp6moq-8s",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-13",
+      "id": "ev-mwpp6moq-12",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1478,14 +1449,14 @@
         "notes": "sample, not verified. Washington, DC (bill text, not a sacred site)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-9g",
-        "storyId": "story-mwpmy70d-98",
+        "cardId": "card-mwpp6moq-99",
+        "storyId": "story-mwpp6moq-91",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-14",
+      "id": "ev-mwpp6moq-13",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1517,14 +1488,14 @@
         "notes": "sample, not verified. Gaza (area, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-9n",
-        "storyId": "story-mwpmy70d-9h",
+        "cardId": "card-mwpp6moq-9g",
+        "storyId": "story-mwpp6moq-9a",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-15",
+      "id": "ev-mwpp6moq-14",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1543,8 +1514,8 @@
         "verification": "not verified",
         "sources": [
           {
-            "label": "OSINTdefender on X",
-            "url": "https://x.com/sentdefender/status/2123629675717034482"
+            "label": "Acting Secretary of the Army (@SecArmy) on X, 19 Nov 2026",
+            "url": "https://x.com/SecArmy/status/2123574872559493304"
           }
         ],
         "citation": {
@@ -1556,19 +1527,19 @@
         "notes": "sample, not verified. Middletown, Iowa (approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-9w",
-        "storyId": "story-mwpmy70d-9o",
+        "cardId": "card-mwpp6moq-9p",
+        "storyId": "story-mwpp6moq-9h",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-16",
+      "id": "ev-mwpp6moq-15",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.9,
-          28.99
+          -81.7,
+          28
         ]
       },
       "properties": {
@@ -1592,17 +1563,17 @@
           "credit": "Approximate location, sample",
           "license": "n/a"
         },
-        "notes": "sample, not verified. Edgewater, Florida (approx.)",
+        "notes": "sample, not verified. Florida (state-level, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-aa",
-        "storyId": "story-mwpmy70d-a2",
+        "cardId": "card-mwpp6moq-a3",
+        "storyId": "story-mwpp6moq-9v",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-17",
+      "id": "ev-mwpp6moq-16",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1634,14 +1605,14 @@
         "notes": "sample, not verified. Manaus (Amazon stand-in, approx.)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-ao",
-        "storyId": "story-mwpmy70d-ag",
+        "cardId": "card-mwpp6moq-ah",
+        "storyId": "story-mwpp6moq-a9",
         "example": false
       }
     },
     {
       "type": "Feature",
-      "id": "ev-mwpmy70e-18",
+      "id": "ev-mwpp6moq-17",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -1658,7 +1629,12 @@
         "datePrecision": "day (episode date; event time [UNKNOWN])",
         "category": "other",
         "verification": "not verified",
-        "sources": [],
+        "sources": [
+          {
+            "label": "@Shaughnessy119 on X (unofficial), 5 Nov 2026",
+            "url": "https://x.com/Shaughnessy119/status/2118504294290780434"
+          }
+        ],
         "citation": {
           "type": "Map pin",
           "date": "2026-11-20",
@@ -1668,47 +1644,8 @@
         "notes": "sample, not verified. Washington, DC (regulator's city, office not pinned)",
         "precisionLabel": "Precision: approximate (sample)",
         "radiusKm": null,
-        "cardId": "card-mwpmy70d-aw",
-        "storyId": "story-mwpmy70d-ap",
-        "example": false
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "ev-mwpmy70e-19",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.61,
-          28.08
-        ]
-      },
-      "properties": {
-        "kind": "point",
-        "title": "Kids out because the street is a river",
-        "eventTime": "2026-11-20",
-        "eventEnd": "",
-        "timeApprox": true,
-        "datePrecision": "day (episode date; event time [UNKNOWN])",
-        "category": "other",
-        "verification": "not verified",
-        "sources": [
-          {
-            "label": "Palm Beach Post",
-            "url": "https://www.palmbeachpost.com/story/news/state/2026/11/20/florida-rainfall-hits-records-more-flooding/92875728007/"
-          }
-        ],
-        "citation": {
-          "type": "Map pin",
-          "date": "2026-11-20",
-          "credit": "Approximate location, sample",
-          "license": "n/a"
-        },
-        "notes": "sample, not verified. Melbourne, Florida (approx.)",
-        "precisionLabel": "Precision: approximate (sample)",
-        "radiusKm": null,
-        "cardId": "card-mwpmy70e-be",
-        "storyId": "story-mwpmy70e-b6",
+        "cardId": "card-mwpp6moq-aq",
+        "storyId": "story-mwpp6moq-ai",
         "example": false
       }
     }

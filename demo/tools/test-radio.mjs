@@ -1,9 +1,11 @@
 #!/usr/bin/env node
-// Box-only test: ship radio + comms lights. No MP4 capture of live radio.
+// Local test: ship radio + comms lights. No MP4 capture of live radio.
 import { spawn, execFileSync } from "node:child_process";
 import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "node:path";
+import os from "node:os";
+const TMP = process.env.GLOBEDESK_TMP || os.tmpdir();
 import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -11,7 +13,7 @@ const root = path.resolve(here, "..");
 const shots = path.join(root, "shots");
 const PORT = 8768, DBG = 9478, DISPLAY = ":96";
 const W = 1920, H = 1080;
-const PROFILE = "/tmp/globedesk-radio-chrome";
+const PROFILE = path.join(TMP, "globedesk-radio-chrome");
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const kids = [];
 const consoleErrors = [];
@@ -95,7 +97,7 @@ with urllib.request.urlopen(req, timeout=10, context=ctx) as r:
     print(r.status, len(data), ct, r.geturl())
     sys.exit(0 if r.status == 200 and len(data) >= 2048 else 2)
 `;
-  const tmp = "/tmp/radio-verify.py";
+  const tmp = path.join(TMP, "radio-verify.py");
   fsSync.writeFileSync(tmp, script);
   const out = execFileSync("python3", [tmp, url], { encoding: "utf8", timeout: 15000 }).trim();
   log("stream", name, out);

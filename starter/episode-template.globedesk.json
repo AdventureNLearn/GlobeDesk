@@ -1,0 +1,126 @@
+{
+  "schema": "globedesk.episode/2",
+  "id": "ep-mwpp6mp5-ba",
+  "show": "My Show",
+  "title": "[UNKNOWN] episode title",
+  "date": "YYYY-MM-DD",
+  "lede": "[UNKNOWN] one-line summary of this episode.",
+  "cta": "[UNKNOWN] call to action, e.g. Follow @your_handle.",
+  "links": [],
+  "demo": false,
+  "sample": false,
+  "look": {
+    "label": "Newsdesk — lower third, boxed captions",
+    "theme": "newsdesk",
+    "header": false,
+    "headerBadge": "MY SHOW",
+    "headerHeightPct": 12,
+    "citations": true,
+    "captionsOn": true,
+    "captionStyle": "box",
+    "captionSize": "medium",
+    "captionLines": 2,
+    "captionZonePct": 15,
+    "lowerThird": true,
+    "ticker": false,
+    "music": true,
+    "coldOpen": false,
+    "shotSec": 10,
+    "palette": {
+      "bg": "#04101f",
+      "ink": "#ffffff",
+      "accent": "#ff3b5c",
+      "highlight": "#5ee6ff",
+      "panel": "rgba(6,18,38,0.85)",
+      "outroBg": "#04101f"
+    },
+    "map": {
+      "base": "ofm-dark",
+      "softBorders": false,
+      "highlightGlow": true,
+      "countryLabels": "style"
+    },
+    "safeArea": true
+  },
+  "handle": "@your_handle",
+  "outro": {
+    "enabled": true,
+    "durationSec": 5,
+    "line1": "[UNKNOWN] closing line",
+    "link": "https://example.com/",
+    "handle": "@your_handle",
+    "showXLogo": true
+  },
+  "output": {
+    "aspect": "16:9",
+    "fps": 30
+  },
+  "stories": [
+    {
+      "id": "story-mwpp6mp5-bb",
+      "slug": "story-1",
+      "title": "[UNKNOWN] story headline",
+      "durationSec": 24,
+      "location": {
+        "name": "[UNKNOWN]",
+        "lat": null,
+        "lon": null,
+        "precision": "unset",
+        "verified": false,
+        "note": "[UNKNOWN]"
+      },
+      "camera": [],
+      "cards": [
+        {
+          "id": "card-mwpp6mp5-bc",
+          "kind": "topic",
+          "title": "[UNKNOWN]",
+          "body": "[UNKNOWN]",
+          "why": "[UNKNOWN]",
+          "facts": [
+            {
+              "label": "[UNKNOWN]",
+              "value": "[UNKNOWN]"
+            }
+          ],
+          "sourceIds": [],
+          "pin": null,
+          "at": 2,
+          "dur": 8,
+          "position": "right",
+          "verified": false
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-mwpp6mp5-bd",
+          "label": "[UNKNOWN]",
+          "url": "",
+          "status": "unverified",
+          "note": "[UNKNOWN]"
+        }
+      ],
+      "script": "",
+      "captions": [],
+      "summary": "[UNKNOWN] what happened, as reported.",
+      "date": "",
+      "credit": "",
+      "creditUrl": "",
+      "asReported": true,
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": null,
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    }
+  ],
+  "eventLayers": [],
+  "mediaBin": []
+}

@@ -26,15 +26,16 @@ The temporary voice lab is **off** unless you set `tempVoiceLab.enabled` to `tru
 
 ## Credits
 
-- GlobeDesk and this demo: AdventureNLearn. License: MIT (see the GlobeDesk `LICENSE`).
+- GlobeDesk and this demo: AdventureNLearn. Code: MIT (`LICENSE`). AdventureNLearn content (frog art, scripts, docs): CC BY 4.0 (`LICENSE-CONTENT`). British voice WAVs and sound effects: CC BY 4.0. US voice WAVs: non-commercial only, excluded from CC BY (see `CREDITS.md`).
 - NASA / NASA Johnson — [Ultra High Definition (4K) View of Planet Earth (2016)](https://www.youtube.com/watch?v=oFDeNcu3mnc). The live embed is used when it plays; otherwise a typographic credit still is shown. The still is not a frame of the film.
 - Live radio (links only, no song files in this repo): [Exclusive Radio — Exclusively Creedence Clearwater Revival](https://play.exclusive.radio/), [0 N Radio — Classic Rock](https://www.0nradio.com/), [SomaFM Left Coast 70s](https://somafm.com/seventies/).
 - Recording bed (used only when muxing a share video, not stored in this repo): “Cool Rock” by Kevin MacLeod, [incompetech.com](https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cool%20Rock.mp3), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Credit appears on the radio widget and the end card.
-- Example voices: Piper `en_US-hfc_male-medium` and `en_GB-alan-medium`. Onnx models are not stored here. Dataset licenses: [UNKNOWN] beyond the piper-voices model card.
+- Example voices: Piper `en_US-hfc_male-medium` ("US", non-commercial only: CC BY-NC-SA 4.0 dataset, fine-tuned from lessac under the Blizzard 2013 license) and `en_GB-vctk-medium` speaker p226 ("British", CC BY 4.0 data: CSTR VCTK Corpus and Hi-Fi TTS). Onnx models are not stored here. See `CREDITS.md`.
+- Sound effects: synthesized from scratch by `tools/make-sfx.py` (CC BY 4.0).
 
 You are responsible for rights in any pack, image, voice, or stream you add.
 
 ## Demo video
 
-The shareable ~4.5 minute mission video is not stored in git (it is large). A title poster is at [`poster/title.jpg`](poster/title.jpg). After the owner approves it, the final file lives on the build machine as `GlobeDesk-frog-mission-FINAL.mp4`.
+The shareable ~4.5 minute mission video is not stored in git (it is large). A title poster is at [`poster/title.jpg`](poster/title.jpg). The finished video is shared separately from the repository (file name `GlobeDesk-frog-mission-FINAL.mp4`).
 

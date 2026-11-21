@@ -1,12 +1,12 @@
 {
   "name": "globedesk",
-  "version": "0.5.1",
+  "version": "1.0.0",
   "private": true,
-  "description": "Local, free globe newsdesk and video studio (v0.5.1 · AdventureNLearn Edition).",
-  "license": "MIT",
+  "description": "Local, free globe newsdesk and video studio (v1.0.0 · Official Release).",
+  "license": "MIT AND CC-BY-4.0",
   "scripts": {
     "start": "python3 -m http.server 8080 --bind 127.0.0.1",
-    "test": "node tests/unit.mjs && node tests/events.unit.mjs && node tests/v04.unit.mjs && node tests/frog.unit.mjs",
+    "test": "node tests/unit.mjs && node tests/events.unit.mjs && node tests/v04.unit.mjs && node tests/frog.unit.mjs && node tests/callouts.unit.mjs",
     "smoke": "node tests/smoke.mjs",
     "templates": "node tests/build-templates.mjs"
   }

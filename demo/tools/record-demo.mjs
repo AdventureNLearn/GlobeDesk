@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 // Headless 1920x1080 auto playthrough of the full GlobeDesk frog mission.
-// Xvfb + kiosk Chrome + ffmpeg x11grab. Box only; nothing is published.
+// Xvfb + kiosk Chrome + ffmpeg x11grab. Runs locally; it uploads nothing.
 import { spawn, execFileSync } from "node:child_process";
 import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "node:path";
+import os from "node:os";
+const TMP = process.env.GLOBEDESK_TMP || os.tmpdir();
 import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -15,7 +17,7 @@ const voDir = path.join(root, "assets", "vo");
 const sfxDir = path.join(root, "assets", "sfx");
 const PORT = 8766, DBG = 9476, DISPLAY = ":94";
 const W = 1920, H = 1080;
-const PROFILE = "/tmp/globedesk-demo-chrome";
+const PROFILE = path.join(TMP, "globedesk-demo-chrome");
 const OUT = path.join(root, "GlobeDesk-frog-mission-full.mp4");
 const MAX_MS = 9 * 60 * 1000;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

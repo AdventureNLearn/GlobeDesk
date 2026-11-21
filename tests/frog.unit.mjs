@@ -1,5 +1,5 @@
-// v0.5.1 AdventureNLearn Edition: Frogpost default show (Build's kit "Done when"), the archive
-// rule (every story ever added keeps a card and can be brought back), and the live-review fixes
+// v1.0.0 Official Release: Frogpost default show (release acceptance checks), the archive
+// rule (every story ever added keeps a card and can be brought back), and the layout fixes
 // that are testable without a browser. No network.
 import fs from "node:fs"; import vm from "node:vm"; import path from "node:path"; import assert from "node:assert/strict"; import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -13,10 +13,12 @@ const J = (v) => JSON.parse(JSON.stringify(v));
 const read = (p) => fs.readFileSync(path.join(root, p), "utf8");
 const BUCKETS = ["Build it", "Globe encyclopedia", "Water and works", "Receipts", "Frogpost"];
 const CTD_RE = /TheCriticalDri1|CTD's Geopolitics/;
+// v1.0.0: school-river and bangkok-clay were dropped (no backing source / owner privacy rule).
+const EXPECTED = 48;
 let n = 0; const tests = []; const t = (name, fn) => tests.push({ name, fn });
 
-// ---------- Build's kit: Done when ----------
-t("empty save opens Frogpost: badge FROGPOST, handle @AdventureNLearn, 50 stories, theme frog", () => {
+// ---------- Release acceptance: Frogpost default show ----------
+t("empty save opens Frogpost: badge FROGPOST, handle @AdventureNLearn, 48 stories, theme frog", () => {
   const ep = model.demoEpisode();
   assert.equal(ep.show, "Frogpost");
   assert.equal(ep.title, "Frogpost");
@@ -24,7 +26,7 @@ t("empty save opens Frogpost: badge FROGPOST, handle @AdventureNLearn, 50 storie
   assert.equal(ep.outro.handle, "@AdventureNLearn");
   assert.equal(ep.look.theme, "frog");
   assert.equal(ep.look.headerBadge, "FROGPOST");
-  assert.equal(ep.stories.length, 50);
+  assert.equal(ep.stories.length, EXPECTED);
   assert.equal(ep.lede, "The rundown is a sample. Locations are approximate. Claims are as reported, not verified.");
   assert.deepEqual(J(model.validate(ep)), []);
   // Boot path: an empty save (null) or a saved CTD sample both fall through to demoEpisode().
@@ -65,12 +67,12 @@ t("stories with null coordinates have no pin, no camera, and are absent from the
   const feats = ep.eventLayers.flatMap((l) => l.features);
   const ids = new Set(feats.map((f) => f.properties.storyId));
   nopin.forEach((s) => assert.equal(ids.has(s.id), false, s.slug));
-  assert.equal(feats.length, 44);
+  assert.equal(feats.length, 42);
   feats.forEach((f) => { const s = ep.stories.find((x) => x.id === f.properties.storyId); assert.deepEqual(J(f.geometry.coordinates), [s.location.lon, s.location.lat]); });
 });
 t("no new facts, no new buckets, no rewritten card copy; [UNKNOWN] kept; 16 s, unverified, asReported", () => {
   const ep = model.demoEpisode();
-  assert.equal(ROWS.length, 50);
+  assert.equal(ROWS.length, EXPECTED);
   const counts = {};
   ep.stories.forEach((s, i) => {
     const [slug, bucket, title, place, lat, lon, a3, url, label, body] = ROWS[i];
@@ -96,7 +98,7 @@ t("no new facts, no new buckets, no rewritten card copy; [UNKNOWN] kept; 16 s, u
     }
     if (a3) assert.equal(s.location.a3, a3); else assert.equal(s.location.a3, undefined);
   });
-  assert.deepEqual(J(counts), { "Build it": 10, "Globe encyclopedia": 10, "Water and works": 10, "Receipts": 10, "Frogpost": 10 });
+  assert.deepEqual(J(counts), { "Build it": 10, "Globe encyclopedia": 10, "Water and works": 9, "Receipts": 10, "Frogpost": 9 });
   // The bundled Frogpost file matches the code.
   const file = JSON.parse(read("episodes/frogpost-2026-11-20.globedesk.json"));
   assert.deepEqual(file.stories.map((s) => s.cards[0].body), J(ROWS.map((r) => r[9])));
@@ -111,11 +113,42 @@ t("page chrome: title, brand, frog-rundown.js loads before model.js, archive.js 
   assert.match(read("css/app.css"), /--accent:#3dbe6a/);
 });
 
-// ---------- Owner rule (t2861u): every story ever added keeps a card and can be brought back ----------
+t("Florida stories share one state-level pin; no town names; school-river is gone", () => {
+  const ep = model.demoEpisode();
+  const fl = ep.stories.filter((s) => s.location.lat != null && s.location.lat > 24 && s.location.lat < 31.1 && s.location.lon > -87.7 && s.location.lon < -79.8);
+  assert.deepEqual(J(fl.map((s) => s.slug).sort()), ["florida-bridge", "florida-soils", "fort-lauderdale", "neighbor-boats", "st-johns"]);
+  fl.forEach((s) => { assert.equal(s.location.name, "Florida (state-level, approx.)"); assert.equal(s.location.lat, 28.0); assert.equal(s.location.lon, -81.7); });
+  assert.equal(ep.stories.some((s) => s.slug === "school-river"), false);
+  const towns = /Melbourne|Edgewater|Palm Bay|Merritt Island|Cocoa|Brevard|Volusia/;
+  for (const f of ["js/frog-rundown.js", "episodes/frogpost-2026-11-20.globedesk.json", "episodes/layers/frogpost-sample-story-places-approximate-not-verified.geojson"]) {
+    const txt = read(f).replace(/https:\/\/[^"\s]+/g, ""); // source URLs are kept as published
+    assert.doesNotMatch(txt, towns, f); assert.doesNotMatch(txt, /school-river/, f);
+  }
+});
+t("sourced claims (v1.0.0): every card except the open-maps opinion card has an https source; dropped cards are gone", () => {
+  const ep = model.demoEpisode();
+  assert.deepEqual(J(ep.stories.filter((s) => !s.sources.length).map((s) => s.slug)), ["open-maps"]);
+  for (const gone of ["school-river", "bangkok-clay", "seafloor-lease"]) {
+    assert.equal(ep.stories.some((s) => s.slug === gone), false, gone);
+    for (const f of ["js/frog-rundown.js", "episodes/frogpost-2026-11-20.globedesk.json", "episodes/layers/frogpost-sample-story-places-approximate-not-verified.geojson"]) assert.doesNotMatch(read(f), new RegExp(gone), f);
+  }
+  const by = (slug) => ep.stories.find((s) => s.slug === slug);
+  assert.equal(by("iowa-plant").sources[0].url, "https://x.com/SecArmy/status/2123574872559493304");
+  assert.equal(by("robocalls").sources[0].url, "https://x.com/Shaughnessy119/status/2118504294290780434");
+  assert.match(by("robocalls").sources[0].label, /unofficial/); assert.match(by("robocalls").cards[0].body, /not checked/);
+  const sc = by("socal-lease-call");
+  assert.equal(sc.title, "Southern California offshore lease call");
+  assert.match(sc.sources[0].url, /^https:\/\/www\.federalregister\.gov\/documents\/2026\/01\/27\/2026-01568\//);
+  assert.match(sc.cards[0].body, /not a final decision to lease/); assert.doesNotMatch(sc.cards[0].body, /auction/i);
+  assert.equal(sc.location.precision, "approximate");
+  ROWS.forEach((r) => assert.doesNotMatch(r[9], /\b(Your|You called)\b/, r[0]));
+});
+
+// ---------- Archive rule: every story ever added keeps a card and can be brought back ----------
 t("archive: every story in every bundled show and every /episodes file has a card", () => {
   const all = archive.all(null);
   const cards = archive.list(all);
-  assert.equal(archive.list(all, "frogpost-2026-11-20").length, 50);
+  assert.equal(archive.list(all, "frogpost-2026-11-20").length, EXPECTED);
   assert.equal(archive.list(all, "ctd-geopolitics-2026-11-20").length, 3);
   const slugs = new Set(cards.map((c) => c.slug));
   for (const f of fs.readdirSync(path.join(root, "episodes"))) {
@@ -175,14 +208,14 @@ t("archive: the UI has an Archive page with open / bring-back actions", () => {
   assert.match(ui, /rememberSoon\(\);/, "every change is remembered");
 });
 
-// ---------- Live-review fixes ----------
-t("version is 0.5.1 · AdventureNLearn Edition everywhere and shown in the UI", () => {
+// ---------- Layout and release fixes ----------
+t("version is 1.0.0 · Official Release everywhere and shown in the UI", () => {
   const pkg = JSON.parse(read("package.json"));
-  assert.equal(GD.version.APP, "0.5.1"); assert.equal(pkg.version, "0.5.1");
-  assert.equal(GD.version.EDITION, "AdventureNLearn Edition");
-  assert.match(read("index.html"), /id="appVersion"[^>]*>v0\.5\.1 · AdventureNLearn Edition</);
-  assert.equal(JSON.parse(read("grokme/manifest.json")).version, "0.5.1");
-  assert.match(read("README.md"), /AdventureNLearn Edition/); assert.match(read("CHANGELOG.md"), /0\.5\.1.*AdventureNLearn Edition/);
+  assert.equal(GD.version.APP, "1.0.0"); assert.equal(pkg.version, "1.0.0");
+  assert.equal(GD.version.EDITION, "Official Release");
+  assert.match(read("index.html"), /id="appVersion"[^>]*>v1\.0\.0 · Official Release</);
+  assert.equal(JSON.parse(read("grokme/manifest.json")).version, "1.0.0");
+  assert.match(read("README.md"), /v1\.0\.0 · Official Release/); assert.match(read("CHANGELOG.md"), /1\.0\.0.*Official Release/);
 });
 t("inspector: 12 tabs with role=tab / aria-selected, in a 4 x 3 grid instead of a hidden sideways scroll", () => {
   const html = read("index.html");
@@ -236,11 +269,49 @@ t("toast is fully hidden when idle (no invisible overlap)", () => {
   const css = read("css/app.css");
   assert.match(css, /\.toast \{[^}]*visibility:hidden/);
 });
-t("grokme manifest leaves out tests/, tools/, .gitignore, START-GLOBEDESK.bat, OPEN-ITEMS.md and demo/", () => {
+t("grokme manifest leaves out tests/, tools/, starter/, .gitignore, START-GLOBEDESK.bat, OPEN-ITEMS.md and demo/; it serves callouts.js", () => {
   const m = JSON.parse(read("grokme/manifest.json"));
   const paths = m.files.map((f) => f.path);
   assert.ok(paths.includes("index.html") && paths.includes("js/frog-rundown.js") && paths.includes("js/archive.js"));
-  for (const p of paths) assert.doesNotMatch(p, /^(tests\/|tools\/|demo\/|\.gitignore$|START-GLOBEDESK\.bat$|OPEN-ITEMS\.md$)/, p);
+  for (const p of paths) assert.doesNotMatch(p, /^(tests\/|tools\/|demo\/|starter\/|\.gitignore$|START-GLOBEDESK\.bat$|OPEN-ITEMS\.md$)/, p);
+  assert.ok(paths.includes("js/callouts.js") && paths.includes("LICENSE") && paths.includes("LICENSE-CONTENT"));
+});
+t("demo voices and sounds: British = Piper en_GB-vctk-medium (CC BY 4.0 data), US labeled non-commercial, sfx synthesized by our script; no alan, no CC0 claim", () => {
+  const pack = JSON.parse(read("demo/guide-packs/frogpost/manifest.json"));
+  const ids = pack.voices.map((v) => v.id);
+  assert.deepEqual(ids, ["hfc_male", "gb"]);
+  const gb = pack.voices.find((v) => v.id === "gb");
+  assert.equal(gb.dir, "assets/vo/gb/"); assert.match(gb.name, /en_GB-vctk-medium/);
+  assert.match(pack.voices[0].license, /Non-commercial/);
+  const vo = path.join(root, "demo/guide-packs/frogpost/assets/vo");
+  assert.equal(fs.existsSync(path.join(vo, "alan")), false, "alan bank removed");
+  const dur = JSON.parse(read("demo/guide-packs/frogpost/assets/vo/gb/durations.json"));
+  assert.equal(dur.length, 50);
+  dur.forEach((r) => assert.ok(fs.statSync(path.join(vo, "gb", r.file)).size > 1000, r.file));
+  const gbSrc = read("demo/guide-packs/frogpost/assets/vo/gb/SOURCE.txt");
+  assert.match(gbSrc, /datashare\.ed\.ac\.uk\/handle\/10283\/3443/); assert.match(gbSrc, /openslr\.org\/109/); assert.match(gbSrc, /CC BY 4\.0/);
+  const usSrc = read("demo/guide-packs/frogpost/assets/vo/SOURCE.txt");
+  assert.match(usSrc, /NON-COMMERCIAL/); assert.match(usSrc, /CC BY-NC-SA 4\.0/); assert.match(usSrc, /Blizzard 2013/);
+  for (const f of ["CREDITS.md", "README.md"]) { const t = read(f); assert.match(t, /CC BY-NC-SA 4\.0/, f); assert.match(t, /lessac/, f); assert.match(t, /non-commercial/i, f); }
+  for (const d of ["demo/assets/sfx", "demo/guide-packs/frogpost/assets/sfx"]) {
+    const src = read(d + "/SOURCES.txt");
+    assert.match(src, /make-sfx\.py/); assert.match(src, /CC BY 4\.0/); assert.doesNotMatch(src, /CC0|UNKNOWN/);
+  }
+  const sfxScript = read("demo/tools/make-sfx.py");
+  for (const f of fs.readdirSync(path.join(root, "demo/assets/sfx")).filter((x) => x.endsWith(".wav"))) assert.ok(sfxScript.includes(`"${f}"`), "make-sfx.py makes " + f);
+  const all = ["CREDITS.md", "README.md", "LICENSE-CONTENT", "demo/README.md", "demo/CREDITS.md", "demo/guide-packs/frogpost/README.md", "demo/guide-packs/frogpost/manifest.json"].map(read).join("\n");
+  assert.doesNotMatch(all, /en_GB-alan|mimic3|Treat as CC0/);
+});
+t("license files and starter kit: MIT + CC BY 4.0, a valid blank episode template, guide-pack template matches the demo template", () => {
+  assert.match(read("LICENSE"), /MIT License/); assert.match(read("LICENSE"), /AdventureNLearn/);
+  const lc = read("LICENSE-CONTENT"); assert.match(lc, /Attribution 4\.0 International/); assert.match(lc, /AdventureNLearn/);
+  assert.match(lc, /NON-COMMERCIAL/); assert.match(lc, /en_GB-vctk-medium/);
+  const st = JSON.parse(read("starter/episode-template.globedesk.json"));
+  assert.deepEqual(J(model.validate(st)), []);
+  assert.doesNotMatch(JSON.stringify(st), /AdventureNLearn|Frogpost|frogpost/);
+  const lay = JSON.parse(read("starter/layer-template.geojson"));
+  assert.equal(lay.type, "FeatureCollection"); assert.ok(lay.features.length >= 3 && lay.features.every((f) => f.properties.example === true));
+  assert.deepEqual(JSON.parse(read("starter/guide-pack-template/manifest.json")), JSON.parse(read("demo/guide-packs/template/manifest.json")));
 });
 
 for (const { name, fn } of tests) { await fn(); n++; console.log("ok -", name); }

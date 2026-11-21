@@ -2,6 +2,15 @@
 
 Audit of what has shipped, and what is still open.
 
+## Closed in v1.0.0
+
+- License decided: MIT for code, CC BY 4.0 for content made for GlobeDesk (credited to "AdventureNLearn").
+- Unbacked Frogpost cards dropped; the rest carry a source (only the "open maps" note has none, by design).
+- Florida pins widened to one state-level approximate point.
+- Multi-card callouts on the globe: scale with zoom, no overlaps, leaders follow their rings, clustering with hysteresis.
+- Starter kit, scrub scan and starter zip script.
+- British voice swapped to Piper en_GB-vctk-medium (CC BY 4.0 data); sound effects re-synthesized from scratch by our own script (CC BY 4.0); US voice labeled non-commercial.
+
 ## Closed in v0.5.0
 
 - Interactive mission demo in `demo/`, with the frog as a swappable example guide pack.
@@ -37,7 +46,7 @@ Audit of what has shipped, and what is still open.
 - Media placements: card, pin popup, screen overlay, geo-anchored panel, allowlisted embeds with credit. Base map stays a separate core layer.
 - Sample episode labelled Sample and removable. Street level, offline fallback and the MIT license kept.
 - Accessibility: keyboard-reachable controls, labels, contrast, full title/citation text on hover or click.
-- Grok.me build kit (`GROK-ME-BUILD.md`, `grokme/`). The owner loads it; this repo does not publish to Grok.me.
+- Grok.me build kit (`GROK-ME-BUILD.md`, `grokme/`). You load it into the builder yourself; this repo does not publish to Grok.me.
 - v0.3 review must-fixes: no private folder names in the tree; 3D terrain defaults off (opt-in); python `http.server` fallbacks bind `127.0.0.1`; offline-fallback wording matches behaviour; truncated titles/citations expandable.
 
 ## Still open / [UNKNOWN]
@@ -47,10 +56,11 @@ Audit of what has shipped, and what is still open.
 - Optional cloud TTS / AI request shapes (including xAI): [UNKNOWN], adapters not wired.
 - OpenHistoricalMap period view: not wired.
 - Windows launcher on a real PC: please re-test v0.4 the same way v0.3 was tested. The built-in servers bind `127.0.0.1` only.
+- The US demo voice clips are non-commercial only (CC BY-NC-SA 4.0 dataset). Swap them for a permissively licensed voice before any commercial use.
+- The cold-open clip's quiet ambient audio track came with the AI-generated video: license [UNKNOWN]. Left unchanged to keep its C2PA credentials.
+- Callouts on a phone preview are a scaled view of the 1080p video frame, so their text is small in the preview; it is full size in recordings.
 - Nominatim / other online geocoders were not added (terms are a poor fit for an unrestricted app geocoder).
 
-## Owner decisions still needed before a public push
+## Decisions still open
 
-- Confirm a public repository name and whether the published history should be a single squashed commit (recommended: the existing local history is not a clean public squash).
-- Confirm any version-check host, if you want one.
-- Say YES before anything is pushed or published.
+- A version-check host, if one is wanted: [UNKNOWN].
