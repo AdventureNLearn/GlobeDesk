@@ -4,7 +4,7 @@
   const GD = (window.GD = window.GD || {});
   const R_KM = 6371.0088;
   const TERRAIN_MIN_ZOOM = 11;
-  const st = { map: null, baseId: "offline", overlays: {}, onReady: [], terrainOn: false, episode: null, active: -1, labelMarkers: [], status: "init" };
+  const st = { map: null, container: null, baseId: "offline", overlays: {}, onReady: [], terrainOn: false, episode: null, active: -1, labelMarkers: [], status: "init", preserveDrawingBuffer: false, recreating: false };
 
   function offlineStyle() {
     return {
@@ -235,13 +235,16 @@
     setOrUpdate("gd-towns", townsGeoJSON());
     if (!map.getLayer("gd-towns")) map.addLayer({ id: "gd-towns", type: "circle", source: "gd-towns", minzoom: 3, paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 3, 1.2, 10, 3.5], "circle-color": "#9cc9ff", "circle-opacity": ["interpolate", ["linear"], ["zoom"], 3, 0.4, 12, 0.2] } });
 
-    if (ov.bluemarble && !map.getSource("gd-bluemarble")) {
+    // Never stack GIBS Blue Marble with the EOX satellite raster.
+    const showBlue = !!(ov.bluemarble && GD.render && !GD.render.rastersStacked(st.baseId, ov));
+    if (showBlue && !map.getSource("gd-bluemarble")) {
       const L = GD.layers.OVERLAYS.find((o) => o.id === "bluemarble");
-      map.addSource("gd-bluemarble", { type: "raster", tiles: [L.tiles], tileSize: 256, maxzoom: L.maxzoom, attribution: L.credit });
+      const tiles = (GD.layers.blueMarbleTiles && GD.layers.blueMarbleTiles()) || L.tiles;
+      map.addSource("gd-bluemarble", { type: "raster", tiles: [tiles], tileSize: 256, maxzoom: L.maxzoom, attribution: L.credit });
       const before = map.getLayer("gd-countries") ? "gd-countries" : undefined;
       map.addLayer({ id: "gd-bluemarble", type: "raster", source: "gd-bluemarble", paint: { "raster-opacity": ["interpolate", ["linear"], ["zoom"], 5, 1, 9, 0] } }, before);
     }
-    if (map.getLayer("gd-bluemarble")) map.setLayoutProperty("gd-bluemarble", "visibility", vis(ov.bluemarble));
+    if (map.getLayer("gd-bluemarble")) map.setLayoutProperty("gd-bluemarble", "visibility", vis(showBlue));
 
     const geo = st.episode ? episodeGeo(st.episode) : episodeGeo({ stories: [] });
     setOrUpdate("gd-rings", geo.rings);
@@ -308,39 +311,45 @@
     return b.style;
   }
 
-  function setBase(baseId) {
-    const style = styleFor(baseId);
-    if (!style) { GD.ui && GD.ui.toast("That base map needs your own key in Settings (optional, paid). Staying on the current map."); return false; }
-    st.baseId = baseId;
-    st.status = "style-loading";
-    localStorage.setItem("globedesk.base", baseId);
-    st.map.setStyle(style);
-    return true;
+  function renderPrefs() {
+    const R = GD.render;
+    return {
+      antialias: R ? R.readAntialias() : false,
+      pixelRatioCap: R ? R.readPixelRatioCap() : 1.5
+    };
   }
 
-  function init(container, opts) {
-    st.overlays = {};
-    GD.layers.OVERLAYS.forEach((o) => (st.overlays[o.id] = o.status === "unknown" ? false : o.default));
-    try { Object.assign(st.overlays, JSON.parse(localStorage.getItem("globedesk.overlays") || localStorage.getItem("gobedesk.overlays") || "{}")); } catch (e) { /* ignore */ }
-    st.overlays.ohm = false;
-    const saved = (opts && opts.base) || localStorage.getItem("globedesk.base") || localStorage.getItem("gobedesk.base") || (navigator.onLine ? "sat-hybrid" : "offline");
-    st.baseId = GD.layers.base(saved) && styleFor(saved) ? saved : "offline";
-    const map = new maplibregl.Map({
-      container,
+  function mapConstructorOptions(cam) {
+    const prefs = renderPrefs();
+    const R = GD.render;
+    const dpr = (typeof window !== "undefined" && window.devicePixelRatio) || 1;
+    const attrs = R
+      ? R.canvasContextAttributes({ recording: st.preserveDrawingBuffer, antialias: prefs.antialias })
+      : { antialias: !!prefs.antialias, preserveDrawingBuffer: !!st.preserveDrawingBuffer };
+    return {
+      container: st.container,
       style: styleFor(st.baseId),
-      center: [40, 28], zoom: 1.6, pitch: 0, bearing: 0,
+      center: cam.center, zoom: cam.zoom, pitch: cam.pitch, bearing: cam.bearing,
       maxPitch: 85, maxZoom: 18.5, minZoom: 0.5,
+      pixelRatio: R ? R.pixelRatio(dpr, prefs.pixelRatioCap) : Math.min(dpr, prefs.pixelRatioCap),
       attributionControl: { compact: false, customAttribution: "Made with Natural Earth" },
-      canvasContextAttributes: { antialias: true, preserveDrawingBuffer: true }
-    });
-    st.map = map;
+      canvasContextAttributes: attrs
+    };
+  }
+
+  function bindMapEvents(map) {
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
     map.on("style.load", () => {
       try { map.setProjection({ type: "globe" }); } catch (e) { /* ignore */ }
-      addOverlays();
       st.tileErrors = 0;
-      st.status = "ready";
-      st.onReady.forEach((f) => f());
+      const finish = () => {
+        addOverlays();
+        st.status = "ready";
+        flushStyleReady();
+        st.onReady.forEach((f) => f());
+      };
+      const probe = (GD.layers && GD.layers.probeLocalTileProxy) ? GD.layers.probeLocalTileProxy() : Promise.resolve();
+      Promise.resolve(probe).then(finish, finish);
     });
     map.on("zoom", terrainForZoom);
     map.on("click", "gd-pins", (e) => {
@@ -395,13 +404,134 @@
       }
       console.warn("map warning:", msg);
     });
+    if (GD.ui && GD.ui.attachMap) GD.ui.attachMap(map);
     return map;
   }
 
+  function storeOverlays() {
+    try { localStorage.setItem("globedesk.overlays", JSON.stringify(st.overlays)); } catch (e) { /* ignore */ }
+  }
+
+  function setBase(baseId) {
+    const pol = GD.render ? GD.render.policyOnSetBase(baseId, st.overlays) : { baseId, overlays: st.overlays, toast: "" };
+    st.overlays = pol.overlays;
+    storeOverlays();
+    const style = styleFor(pol.baseId);
+    if (!style) { GD.ui && GD.ui.toast("That base map needs your own key in Settings (optional, paid). Staying on the current map."); return false; }
+    st.baseId = pol.baseId;
+    st.status = "style-loading";
+    try { localStorage.setItem("globedesk.base", st.baseId); } catch (e) { /* ignore */ }
+    if (st.map) st.map.setStyle(style);
+    if (pol.toast) GD.ui && GD.ui.toast(pol.toast);
+    return true;
+  }
+
+  function init(container, opts) {
+    st.container = container;
+    st.preserveDrawingBuffer = false;
+    st.overlays = {};
+    GD.layers.OVERLAYS.forEach((o) => (st.overlays[o.id] = o.status === "unknown" ? false : o.default));
+    try { Object.assign(st.overlays, JSON.parse(localStorage.getItem("globedesk.overlays") || localStorage.getItem("gobedesk.overlays") || "{}")); } catch (e) { /* ignore */ }
+    st.overlays.ohm = false;
+    const saved = (opts && opts.base) || localStorage.getItem("globedesk.base") || localStorage.getItem("gobedesk.base") || (navigator.onLine ? "sat-hybrid" : "offline");
+    let baseId = GD.layers.base(saved) && styleFor(saved) ? saved : "offline";
+    const start = GD.render ? GD.render.normalizeStartup(baseId, st.overlays) : { baseId, overlays: st.overlays };
+    st.overlays = start.overlays;
+    st.baseId = start.baseId;
+    const map = new maplibregl.Map(mapConstructorOptions({ center: [40, 28], zoom: 1.6, pitch: 0, bearing: 0 }));
+    st.map = map;
+    bindMapEvents(map);
+    return map;
+  }
+
+  function defaultCam() {
+    return st.map ? camera() : { center: [40, 28], zoom: 1.6, pitch: 0, bearing: 0 };
+  }
+
+  function recreateMap() {
+    if (!st.container) return Promise.resolve();
+    if (st.recreating) return st.recreating;
+    const cam = defaultCam();
+    const ep = st.episode;
+    const active = st.active;
+    if (st.map) {
+      if (GD.eventsMap && GD.eventsMap.detach) GD.eventsMap.detach(st.map);
+      try { st.map.remove(); } catch (e) { /* ignore */ }
+      st.map = null;
+    }
+    st.status = "style-loading";
+    const map = new maplibregl.Map(mapConstructorOptions(cam));
+    st.map = map;
+    bindMapEvents(map);
+    st.recreating = new Promise((resolve) => {
+      const done = () => {
+        try { map.jumpTo({ center: cam.center, zoom: cam.zoom, pitch: cam.pitch, bearing: cam.bearing }); } catch (e) { /* ignore */ }
+        if (ep) setEpisode(ep, active);
+        st.recreating = null;
+        resolve();
+      };
+      if (map.loaded()) done();
+      else map.once("load", done);
+    });
+    return st.recreating;
+  }
+
+  function isDrawingBufferPreserved() {
+    if (!st.map) return !!st.preserveDrawingBuffer;
+    try {
+      const canvas = st.map.getCanvas();
+      const gl = canvas.getContext("webgl2") || canvas.getContext("webgl");
+      if (gl && gl.getContextAttributes) return !!gl.getContextAttributes().preserveDrawingBuffer;
+    } catch (e) { /* ignore */ }
+    return !!st.preserveDrawingBuffer;
+  }
+
+  function setPreserveDrawingBuffer(on) {
+    on = !!on;
+    if (st.preserveDrawingBuffer === on && st.map && isDrawingBufferPreserved() === on) return Promise.resolve();
+    st.preserveDrawingBuffer = on;
+    return recreateMap();
+  }
+
+  function prepareForExport() { return setPreserveDrawingBuffer(true); }
+  function endExport() { return setPreserveDrawingBuffer(false); }
+
+  function setRenderOptions(opts) {
+    const R = GD.render;
+    if (!R) return Promise.resolve();
+    const o = opts || {};
+    if ("antialias" in o) R.writeAntialias(!!o.antialias);
+    if ("pixelRatioCap" in o && Number(o.pixelRatioCap) > 0) R.writePixelRatioCap(Number(o.pixelRatioCap));
+    if (st.preserveDrawingBuffer) return Promise.resolve();
+    return recreateMap();
+  }
+
+  const styleReadyWaiters = [];
+
+  function flushStyleReady() {
+    const fns = styleReadyWaiters.splice(0);
+    fns.forEach((fn) => { try { fn(); } catch (e) { /* ignore */ } });
+  }
+
+  function afterStyleReady(fn) {
+    const map = st.map;
+    if (!map) return;
+    if (st.status === "ready" && map.isStyleLoaded()) { fn(); return; }
+    styleReadyWaiters.push(fn);
+  }
+
   function setOverlay(id, on) {
-    st.overlays[id] = !!on;
-    localStorage.setItem("globedesk.overlays", JSON.stringify(st.overlays));
-    if (st.map && st.map.isStyleLoaded()) addOverlays();
+    const pol = GD.render ? GD.render.policyOnSetOverlay(st.baseId, st.overlays, id, on) : { baseId: st.baseId, overlays: Object.assign({}, st.overlays, { [id]: !!on }), toast: "" };
+    st.overlays = pol.overlays;
+    storeOverlays();
+    if (pol.baseId !== st.baseId) {
+      const ok = setBase(pol.baseId);
+      if (pol.toast) GD.ui && GD.ui.toast(pol.toast);
+      return ok;
+    }
+    afterStyleReady(() => { if (st.map && st.map.isStyleLoaded()) addOverlays(); });
+    if (pol.toast) GD.ui && GD.ui.toast(pol.toast);
+    return true;
   }
 
   function setEpisode(ep, activeIdx) {
@@ -452,5 +582,5 @@
     else st.map.flyTo(Object.assign(opts, { curve: 1.6 }));
   }
 
-  GD.globe = { st, init, setBase, setOverlay, setEpisode, flyTo, camera, insight, searchPlaces, haversine, bearingTo, towns, updateLabels, countryList, isLand, streetView, refresh: () => st.map && st.map.isStyleLoaded() && addOverlays() };
+  GD.globe = { st, init, setBase, setOverlay, setEpisode, flyTo, camera, insight, searchPlaces, haversine, bearingTo, towns, updateLabels, countryList, isLand, streetView, prepareForExport, endExport, isDrawingBufferPreserved, setRenderOptions, renderPrefs, refresh: () => st.map && st.map.isStyleLoaded() && addOverlays() };
 })();

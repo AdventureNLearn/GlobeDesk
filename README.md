@@ -6,10 +6,22 @@ Pick your stories and the globe flies from orbit down to street level for each o
 
 > **v1.0.1 · Official Release** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · Live copy: [globedesk.grok.me](https://globedesk.grok.me)
 
+## Risks (read first)
+
+- **This is a local desktop app, not a sandbox.** `tools/serve.py` binds only to `127.0.0.1` and serves files from the app folder. That is the network boundary. It is not a VM or a separate OS user. Anything running as the same user, or in the same browser profile, can read the app's `localStorage` and IndexedDB.
+- **Optional cloud tiles leave your machine.** The default hybrid map loads Sentinel-2 2016 imagery from EOX and streets from OpenFreeMap. Terrain, if you turn it on, loads from AWS. Blue Marble, if you turn it on, loads from NASA GIBS unless a local pack is being served by `tools/serve.py`. Those hosts have no SLA. If they fail, use **Layers → Offline globe**.
+- **No account or key is required, and paid features stay off.** If you later paste an optional key (MapTiler, etc.), it stays in this browser only and is never written into episode files or this repository. Do not commit keys.
+- **Treat episodes from other people as untrusted input.** Text is sanitized, links must be https, embeds are allowlisted, and JSON is schema-checked, but that is not a hard security boundary.
+- **The NASA Blue Marble tile pack is not in this repository.** If you want globe-level imagery offline, you download it yourself from public NASA GIBS with `tools/fetch_bluemarble_pack.py` (see [Quick start](#quick-start)). A complete z0–8 pack is 475,246,592 bytes and takes many HTTP requests; skip the script if you do not want a local copy. The local pack and the size-capped disk cache are served only by `tools/serve.py` (used by `START-GLOBEDESK` when Python is available). If `/tiles` is missing — for example under the PowerShell fallback, `python -m http.server`, or `npm start` — the Blue Marble overlay uses NASA GIBS directly.
+- **You are responsible** for the rights to anything you open, record or share. Credit other people's work.
+
+Found a security issue? See [SECURITY.md](SECURITY.md).
+
 ![GlobeDesk desk view: the Frogpost show on the globe](shots/01-desk-globe-16x9.png)
 
 ## Contents
 
+- [Risks (read first)](#risks-read-first)
 - [What you get](#what-you-get)
 - [Quick start](#quick-start)
 - [Make your own show (starter kit)](#make-your-own-show-starter-kit)
@@ -49,6 +61,20 @@ python3 tools/serve.py        # opens http://127.0.0.1:8080
 ```
 
 Use a local server, not `file://`.
+
+**Optional local Blue Marble pack** (public-domain NASA imagery, not stored in this repo):
+
+```bash
+# Writes a single MBTiles file under the clone (gitignored):
+python3 tools/fetch_bluemarble_pack.py
+# or: python3 tools/fetch_bluemarble_pack.py --out ./globedesk-data/bluemarble
+```
+
+The script is rate-limited and resumable. It pulls Web Mercator z0–8 JPEGs of NASA GIBS `BlueMarble_ShadedRelief_Bathymetry` and writes:
+
+`./globedesk-data/bluemarble/BlueMarble_ShadedRelief_Bathymetry-z0-8.mbtiles`
+
+(or the `--out` directory you chose). The default parent folder is `./globedesk-data` under the repo; set `GLOBEDESK_DATA` to use a different parent. A complete z0–8 pack is 475,246,592 bytes. The Python server then uses **local pack → disk cache (capped at 256 MiB) → GIBS**. `*.mbtiles` and `globedesk-data/` are gitignored. If you run without `tools/serve.py`, the overlay uses NASA GIBS directly and does not read the local pack. More detail: [WINDOWS-RUN.md](WINDOWS-RUN.md).
 
 Useful URL options:
 

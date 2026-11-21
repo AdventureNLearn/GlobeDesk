@@ -6,6 +6,8 @@ cd /d "%~dp0"
 set "PORT=%~1"
 if "%PORT%"=="" set "PORT=8080"
 
+REM Optional pack lives in .\globedesk-data under this folder, or in GLOBEDESK_DATA if set.
+
 REM 1) Python launcher (py), 2) python on PATH (skips the Microsoft Store stub), 3) built-in PowerShell server.
 where py >nul 2>nul && (
   py -3 --version >nul 2>nul && (

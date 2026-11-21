@@ -559,9 +559,16 @@
         <div class="layer-credit">${b.credit}${b.note ? "<br>" + esc(b.note) : ""}${b.streetLevel ? "" : "<br>No street detail in this view."}</div>`).join("")}
       <h3 class="small">Overlays</h3>
       ${GD.layers.OVERLAYS.map((o) => `<label><input type="checkbox" data-ov="${o.id}" ${st.overlays[o.id] ? "checked" : ""} ${o.status === "unknown" ? "disabled" : ""}> ${esc(o.label)}</label>
-        <div class="layer-credit">${o.status === "unknown" ? esc(o.reason) : o.credit}</div>`).join("")}`;
-    bind(el, "input[name=base]", (t) => { if (!GD.globe.setBase(t.value)) renderInspector(); });
-    bind(el, "[data-ov]", (t) => GD.globe.setOverlay(t.dataset.ov, t.checked));
+        <div class="layer-credit">${o.status === "unknown" ? esc(o.reason) : o.credit}${o.note ? "<br>" + esc(o.note) : ""}</div>`).join("")}
+      <h3 class="small">Display (this device)</h3>
+      <label><input type="checkbox" id="renderAA" ${GD.render && GD.render.readAntialias() ? "checked" : ""}> Smooth edges (antialias). Off by default; changing it recreates the globe.</label>
+      <label>Pixel-ratio cap <select id="renderCap">${["1","1.5","2"].map((v) => `<option value="${v}" ${(GD.render ? String(GD.render.readPixelRatioCap()) : "1.5") === v ? "selected" : ""}>${v}</option>`).join("")}</select> (default 1.5). Changing it recreates the globe.</label>
+      <p class="muted small">The WebGL drawing buffer is kept only while Record WebM is running, so ordinary viewing does not pay the readback cost.</p>`;
+    bind(el, "input[name=base]", (t) => { if (!GD.globe.setBase(t.value)) renderInspector(); else tabLayers(el); });
+    bind(el, "[data-ov]", (t) => { GD.globe.setOverlay(t.dataset.ov, t.checked); tabLayers(el); });
+    const aa = el.querySelector("#renderAA"), cap = el.querySelector("#renderCap");
+    if (aa) aa.addEventListener("change", () => { if (GD.globe.setRenderOptions) GD.globe.setRenderOptions({ antialias: aa.checked }); });
+    if (cap) cap.addEventListener("change", () => { if (GD.globe.setRenderOptions) GD.globe.setRenderOptions({ pixelRatioCap: Number(cap.value) }); });
   }
 
   // ---------- Media bin ----------
@@ -765,7 +772,14 @@
       if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return;
       if (e.code === "Space") { e.preventDefault(); $("btnPlay").click(); }
     });
-    GD.globe.st.map.on("render", () => { if (!S.playing) renderOverlays(); });
+    attachMap(GD.globe.st.map);
+  }
+
+  let hookedMap = null;
+  function attachMap(map) {
+    if (!map || hookedMap === map) return;
+    hookedMap = map;
+    map.on("render", () => { if (!S.playing) renderOverlays(); });
     // Keep MapLibre attribution expanded and sitting above the caption band (see CSS).
     const revealAttrib = () => {
       const a = document.querySelector(".maplibregl-ctrl-attrib");
@@ -774,7 +788,7 @@
       a.classList.add("maplibregl-compact-show");
       a.setAttribute("open", "");
     };
-    GD.globe.st.map.on("load", revealAttrib); GD.globe.st.map.on("styledata", revealAttrib);
+    map.on("load", revealAttrib); map.on("styledata", revealAttrib);
     // Phones: the same map credits are mirrored into a line under the globe (CSS hides the
     // in-stage box under 760 px), so the credit stays fully readable without covering the globe.
     const mirrorCredit = () => {
@@ -786,7 +800,9 @@
       c.querySelectorAll("a").forEach((x) => { x.target = "_blank"; x.rel = "noopener noreferrer"; });
       out.replaceChildren(...c.childNodes);
     };
-    ["load", "styledata", "sourcedata", "idle"].forEach((ev) => GD.globe.st.map.on(ev, mirrorCredit));
+    ["load", "styledata", "sourcedata", "idle"].forEach((ev) => map.on(ev, mirrorCredit));
+    revealAttrib();
+    mirrorCredit();
   }
 
   // ---------- Phone layout: collapsible sections ----------
@@ -915,6 +931,6 @@
     window.__globedesk = window.__gobedesk = { ready: true }; // smoke-test hook (legacy alias kept)
   }
 
-  GD.ui = { toast, openArchive, handleUrl, creditLine, selectStory, renderOverlays, renderRundown, renderTransport, onPlaybackEnd, loadEpisode, changed, renderInspector, download, esc, field, num, slug, addFiles, showFull };
+  GD.ui = { toast, openArchive, handleUrl, creditLine, selectStory, renderOverlays, renderRundown, renderTransport, onPlaybackEnd, loadEpisode, changed, renderInspector, download, esc, field, num, slug, addFiles, showFull, attachMap };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();

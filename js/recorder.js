@@ -282,6 +282,8 @@
 
   async function start(aspect) {
     if (!supported()) throw new Error("MediaRecorder canvas capture is not supported in this browser.");
+    try {
+    if (GD.globe && GD.globe.prepareForExport) await GD.globe.prepareForExport();
     const [w, h] = SIZES[aspect] || SIZES["16:9"];
     rec.canvas = document.createElement("canvas");
     rec.canvas.width = w; rec.canvas.height = h;
@@ -303,22 +305,34 @@
     rec.mr.ondataavailable = (e) => e.data && e.data.size && rec.chunks.push(e.data);
     rec.mr.start(1000);
     drawFrame();
+    } catch (err) {
+      if (GD.globe && GD.globe.endExport) {
+        try { await GD.globe.endExport(); } catch (e) { /* ignore */ }
+      }
+      throw err;
+    }
   }
 
-  function stop(filename) {
+  function stop(filename, opts) {
+    const download = !(opts && opts.download === false);
     return new Promise((resolve) => {
       if (!rec.mr) return resolve(null);
       cancelAnimationFrame(rec.raf);
       rec.mr.onstop = () => {
         const blob = new Blob(rec.chunks, { type: "video/webm" });
-        const a = document.createElement("a");
-        const url = URL.createObjectURL(blob);
-        a.href = url;
-        a.download = filename || "globedesk-episode.webm";
-        document.body.appendChild(a); a.click(); a.remove();
-        setTimeout(() => { try { URL.revokeObjectURL(url); } catch (e) { /* ignore */ } }, 2000);
+        if (download) {
+          const a = document.createElement("a");
+          const url = URL.createObjectURL(blob);
+          a.href = url;
+          a.download = filename || "globedesk-episode.webm";
+          document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(() => { try { URL.revokeObjectURL(url); } catch (e) { /* ignore */ } }, 2000);
+        }
         rec.mr = null;
-        resolve(blob);
+        const finish = () => resolve(blob);
+        if (GD.globe && GD.globe.endExport) {
+          Promise.resolve(GD.globe.endExport()).then(finish, finish);
+        } else finish();
       };
       rec.mr.stop();
     });

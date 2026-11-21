@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased — P1 local Blue Marble pack (2026-11-21)
+
+- **Local NASA Blue Marble pack (z0–8), not shipped in the repo.** A single MBTiles file of the public-domain *Blue Marble (August 2004, Shaded Relief and Bathymetry)* layer is downloaded on request from public NASA GIBS by `tools/fetch_bluemarble_pack.py` and stored under `./globedesk-data/bluemarble/` in the clone (gitignored; override the parent folder with `GLOBEDESK_DATA`). A complete z0–8 pack measures 475,246,592 bytes. The Python server (`tools/serve.py`, used by `START-GLOBEDESK` when Python is available) serves tiles at `/tiles/bluemarble/{z}/{x}/{y}.jpeg` with fallback **local pack → disk cache (capped at 256 MiB, overridable with `GLOBEDESK_CACHE_MAX_BYTES`) → GIBS stream**. Set `GLOBEDESK_BLOCK_GIBS=1` or `GLOBEDESK_OFFLINE=1` to refuse the stream. Fetch or resume the pack with `tools/fetch_bluemarble_pack.py`. If the `/tiles` route is missing (PowerShell fallback, `python -m http.server`, or `npm start`), the overlay uses NASA GIBS directly.
+- Credit: NASA Earth Observatory / MODIS, public domain, via NASA GIBS.
+- `setOverlay` waits for the current map style to finish loading before adding layers, so turning on Blue Marble right after switching to the offline globe still attaches the layer.
+
+## Unreleased — P0 performance (2026-11-21)
+
+- **Drawing buffer only during export.** `preserveDrawingBuffer` is off in ordinary viewing and is turned on only while the built-in Record WebM export runs (the map is recreated to toggle it). After the recording finishes, or if map recreation for export throws, it is turned off again.
+- **Pixel-ratio cap** (default 1.5) and an **antialias** option (off by default) live under Layers → Display. Changing either recreates the globe.
+- **Blue Marble (GIBS) is never stacked with the EOX satellite base.** Turning Blue Marble on switches to the offline globe; choosing the EOX hybrid base turns Blue Marble off.
+- **Vendored MapLibre 5.24.1 patch:** globe projection error measurement allocates a fresh four-byte pixel-pack buffer per readback and deletes it afterwards, so Chrome/Edge no longer flood the console with READ-usage buffer warnings. See `vendor/MAPLIBRE-PATCHES.md`.
+
+
 ## v1.0.1 — Official Release — 2026-11-21
 
 - **Cold-open audio stripped.** The 8-second Frogpost cold-open clip (`demo/guide-packs/frogpost/assets/v1-cold-open.mp4`) no longer has an audio stream. The quiet ambient track that came with the AI-generated video had a license of [UNKNOWN]; it was removed with `ffmpeg -an`, copying the video stream (no re-encode). Credits and `LICENSE-CONTENT` are updated. Remuxing the container dropped the C2PA content credentials that were in the original file.

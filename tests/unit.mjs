@@ -3,8 +3,8 @@ import fs from "node:fs"; import vm from "node:vm"; import path from "node:path"
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ctx = { window: {}, Date, URL, TextEncoder, TextDecoder, Uint8Array, ArrayBuffer, DataView, console }; vm.createContext(ctx);
 vm.runInContext(fs.readFileSync(path.join(root, "data", "land.js"), "utf8"), ctx);
-for (const f of ["themes", "captions", "events-model", "sanitize", "zip", "schema", "frog-rundown", "model", "archive", "layers", "audio-mix", "recorder"]) vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
-const { model, captions, themes, recorder, sanitize, zip, schema, layers, audioMix, archive } = ctx.window.GD;
+for (const f of ["themes", "captions", "events-model", "sanitize", "zip", "schema", "frog-rundown", "model", "archive", "layers", "render", "audio-mix", "recorder"]) vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
+const { model, captions, themes, recorder, sanitize, zip, schema, layers, audioMix, archive, render } = ctx.window.GD;
 const land = ctx.window.GD_LAND;
 const J = (v) => JSON.parse(JSON.stringify(v));
 assert.deepEqual = ((orig) => (a, b, m) => orig(J(a), J(b), m))(assert.deepEqual);
@@ -221,5 +221,72 @@ t("CSP in index.html, serve.py and serve.ps1 is the same policy", () => {
   assert.equal(/s3\.amazonaws\.com(?!\/elevation-tiles-prod\/)/.test(h), false);
 });
 
+
+t("P0: drawing buffer is off unless recording, antialias defaults off", () => {
+  const a = render.canvasContextAttributes({});
+  assert.equal(a.preserveDrawingBuffer, false);
+  assert.equal(a.antialias, false);
+  const b = render.canvasContextAttributes({ recording: true, antialias: true });
+  assert.equal(b.preserveDrawingBuffer, true);
+  assert.equal(b.antialias, true);
+  const c = render.canvasContextAttributes({ recording: false, antialias: false });
+  assert.equal(c.preserveDrawingBuffer, false);
+});
+t("P0: pixel-ratio cap defaults to 1.5 and never exceeds the cap", () => {
+  assert.equal(render.DEFAULT_PIXEL_RATIO_CAP, 1.5);
+  assert.equal(render.pixelRatio(3, 1.5), 1.5);
+  assert.equal(render.pixelRatio(1, 1.5), 1);
+  assert.equal(render.pixelRatio(2, 1), 1);
+  assert.equal(render.pixelRatio(undefined, undefined), 1);
+});
+t("P0: GIBS Blue Marble and EOX hybrid never stay stacked", () => {
+  assert.equal(render.rastersStacked("sat-hybrid", { bluemarble: true }), true);
+  assert.equal(render.rastersStacked("sat-hybrid", { bluemarble: false }), false);
+  assert.equal(render.rastersStacked("offline", { bluemarble: true }), false);
+  const on = render.policyOnSetOverlay("sat-hybrid", { bluemarble: false }, "bluemarble", true);
+  assert.equal(on.baseId, "offline");
+  assert.equal(on.overlays.bluemarble, true);
+  assert.equal(render.rastersStacked(on.baseId, on.overlays), false);
+  const off = render.policyOnSetBase("sat-hybrid", { bluemarble: true, towns: true });
+  assert.equal(off.overlays.bluemarble, false);
+  assert.equal(off.overlays.towns, true);
+  assert.equal(render.rastersStacked(off.baseId, off.overlays), false);
+  const start = render.normalizeStartup("sat-hybrid", { bluemarble: true });
+  assert.equal(start.overlays.bluemarble, false);
+});
+t("P0: render prefs persist only in the provided storage", () => {
+  const store = { data: {}, getItem(k) { return Object.prototype.hasOwnProperty.call(this.data, k) ? this.data[k] : null; }, setItem(k, v) { this.data[k] = String(v); } };
+  assert.equal(render.readAntialias(store), false);
+  render.writeAntialias(true, store);
+  assert.equal(render.readAntialias(store), true);
+  assert.equal(render.readPixelRatioCap(store), 1.5);
+  render.writePixelRatioCap(2, store);
+  assert.equal(render.readPixelRatioCap(store), 2);
+});
+
+t("P0: prepareForExport is inside recorder.start try so a throw still ends export", () => {
+  const src = fs.readFileSync(path.join(root, "js", "recorder.js"), "utf8");
+  const start = src.indexOf("async function start(");
+  const fn = src.slice(start, src.indexOf("function stop(", start));
+  const tryAt = fn.indexOf("try {");
+  const prepAt = fn.indexOf("prepareForExport");
+  const catchAt = fn.indexOf("} catch");
+  assert.ok(tryAt >= 0 && prepAt > tryAt && prepAt < catchAt && fn.includes("endExport"));
+});
+
+t("P1: Blue Marble uses GIBS unless a local tile proxy is available", () => {
+  const remote = layers.OVERLAYS.find((o) => o.id === "bluemarble").tiles;
+  assert.ok(remote && remote.includes("gibs.earthdata.nasa.gov"));
+  layers.setLocalBlueMarbleProxy(false);
+  assert.equal(layers.blueMarbleTiles({ protocol: "http:", hostname: "127.0.0.1", origin: "http://127.0.0.1:8080" }), remote);
+  layers.setLocalBlueMarbleProxy(true);
+  assert.equal(layers.blueMarbleTiles({ protocol: "http:", hostname: "127.0.0.1", origin: "http://127.0.0.1:8080" }), "http://127.0.0.1:8080/tiles/bluemarble/{z}/{x}/{y}.jpeg");
+  assert.equal(layers.blueMarbleTiles(), remote, "no window location: stay on GIBS");
+  layers.setLocalBlueMarbleProxy(false);
+  const note = layers.OVERLAYS.find((o) => o.id === "bluemarble").note;
+  assert.ok(note.includes("./globedesk-data"));
+  assert.ok(note.includes("/tiles"));
+  assert.equal(note.includes("C:"), false);
+});
 
 console.log(`\n${n} passed`);

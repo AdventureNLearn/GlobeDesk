@@ -11,8 +11,8 @@
   "files": [
     {
       "path": "CHANGELOG.md",
-      "size": 8129,
-      "sha256": "f0fbd8bb29ab2d05ef399b285a4005a430f027815291ee644c81fee540837757"
+      "size": 10351,
+      "sha256": "fe8b1cbda772b2fdd2d8fcfb9643eeca5e34488d6a72ed86554970c6004ceb71"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -21,8 +21,8 @@
     },
     {
       "path": "CREDITS.md",
-      "size": 5266,
-      "sha256": "c33c70557fda9876a261582e80a9bbf048ec435a7ea58a8429e777002b093dee"
+      "size": 5737,
+      "sha256": "d5934dc07316cdffebe54258c6de5b1bbae60e3323ca2346f381ab3c7c1b066d"
     },
     {
       "path": "GROK-ME-BUILD.md",
@@ -41,8 +41,8 @@
     },
     {
       "path": "README.md",
-      "size": 8140,
-      "sha256": "19577f474c7f6422ca658a4134524e8229325daa8e2acca92a1cf6e154701486"
+      "size": 11111,
+      "sha256": "fdbf8b038994a0b3170086fffdd4c84eb5747da41e897831a13754a775b97e8c"
     },
     {
       "path": "SECURITY.md",
@@ -56,8 +56,8 @@
     },
     {
       "path": "WINDOWS-RUN.md",
-      "size": 2082,
-      "sha256": "7c56fae80d241338a68118d2f1c4c013969c446600e7c8f83fa5c650fbe6c916"
+      "size": 3246,
+      "sha256": "a4ffc287ffbb33456eeba315ff256f6adcd778b4e1693e4cf96f1e656ecde9ab"
     },
     {
       "path": "css/app.css",
@@ -81,8 +81,8 @@
     },
     {
       "path": "docs/REFERENCE.md",
-      "size": 19189,
-      "sha256": "81badd1bf9c2377b08b36e98d7cc3050a51a378e679eea0873d5f658f8372ab2"
+      "size": 20100,
+      "sha256": "0d504e6e0ea75f26fe0a75674e4251cbafa1ab01f2a2a9b130270516ea30a7db"
     },
     {
       "path": "docs/STORY-FORMAT.md",
@@ -141,8 +141,8 @@
     },
     {
       "path": "index.html",
-      "size": 8802,
-      "sha256": "08ac4a05d205c93db414889be7273114f68056ab39d527b2de867b78d279e4d5"
+      "size": 8841,
+      "sha256": "c1bc84c018fe39dd9fc62b301d9983448ab175fe6e8b39a2ec7d10e617d2b68a"
     },
     {
       "path": "js/archive.js",
@@ -176,8 +176,8 @@
     },
     {
       "path": "js/events-map.js",
-      "size": 13201,
-      "sha256": "7328cc4f99ab76247d1926ca8c39bdf25a691192158dbafc66cebae9baf0d1d7"
+      "size": 13563,
+      "sha256": "a69311f6b8a17c5035860e25e8ad2cfb6811860c66eaf9bcfab8fb7a280f1ea3"
     },
     {
       "path": "js/events-model.js",
@@ -196,13 +196,13 @@
     },
     {
       "path": "js/globe.js",
-      "size": 26880,
-      "sha256": "fd50fb87c290814ae96958b2d1e22dacfb52d53e58d666e9bfc574d749e404ac"
+      "size": 32056,
+      "sha256": "b4d497aec2a8d0cdb2c9641a63a9a58e4012c4980baa7e6a5de8aef03a6769ad"
     },
     {
       "path": "js/layers.js",
-      "size": 6007,
-      "sha256": "7008a60659b53c4db555788d7ef092922f1b8f1982ab024d5533e65236ce1ac9"
+      "size": 8100,
+      "sha256": "feff4ea2c89d6ec21ca36fa70df9d3d99e6eb9947adf642aeee3dec3dd574005"
     },
     {
       "path": "js/media.js",
@@ -226,8 +226,13 @@
     },
     {
       "path": "js/recorder.js",
-      "size": 19151,
-      "sha256": "2d8c63761ba2bad95dc9dadda6043a09d405998f1b5e857a6341b948d237949c"
+      "size": 19680,
+      "sha256": "2b44553ece5a06829911252d7149ce772fe7d3b5b73f3d96950e31ae54bb15d7"
+    },
+    {
+      "path": "js/render.js",
+      "size": 3213,
+      "sha256": "4eda3fd9ced428bb807fbc62a51f143d8757326ae45c24958d04f0b6a12c0e06"
     },
     {
       "path": "js/sanitize.js",
@@ -256,8 +261,8 @@
     },
     {
       "path": "js/ui.js",
-      "size": 65586,
-      "sha256": "f012ea7b55f8a52a9d0e1a50bf98b0aaafd4a1b1cce70647d7279fdacc95ca33"
+      "size": 66872,
+      "sha256": "c4af5db899c7d919a9685fde99dff8e20aac8a73dfb077629997c6a5783909fa"
     },
     {
       "path": "js/version.js",
@@ -285,18 +290,23 @@
       "sha256": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2"
     },
     {
+      "path": "vendor/MAPLIBRE-PATCHES.md",
+      "size": 1708,
+      "sha256": "8dd63d3cb6767577f4e26500542569cb323a6f9d56d787a38204d5fae310b2db"
+    },
+    {
       "path": "vendor/maplibre-gl.css",
       "size": 70024,
       "sha256": "ab1e70d59ec40465bae7e7030da2f3ccf28133fd502e62bd598eefbadfd7a732"
     },
     {
       "path": "vendor/maplibre-gl.js",
-      "size": 1058059,
-      "sha256": "a9c9e2aa36d4d5b63b131f27c1272f1a28883eeecc0eddd1e0dbfae4033bc7c9"
+      "size": 1058116,
+      "sha256": "0cbd608d819c9d824070c26243afc1a0e28820ec7bf0e6090bf998e5339d8d1d"
     }
   ],
   "totals": {
-    "files": 57,
-    "bytes": 2769025
+    "files": 59,
+    "bytes": 2791227
   }
 }

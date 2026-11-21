@@ -14,12 +14,12 @@ Everything below belongs to its creators and keeps its own terms.
 
 ## Map data and software
 
-- **MapLibre GL JS** 5.24.1, BSD-3-Clause. Vendored in `vendor/` with `vendor/LICENSE-maplibre.txt`.
+- **MapLibre GL JS** 5.24.1, BSD-3-Clause. Vendored in `vendor/` with `vendor/LICENSE-maplibre.txt`. A local patch gives each globe-projection error-measurement readback its own pixel-pack buffer, following [MapLibre GL JS pull request 7943](https://github.com/maplibre/maplibre-gl-js/pull/7943). See `vendor/MAPLIBRE-PATCHES.md`.
 - **OpenFreeMap** tiles and styles ([terms](https://openfreemap.org/tos/)), with map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL) and the [OpenMapTiles](https://openmaptiles.org/) schema (CC BY 4.0).
 - **EOX** Sentinel-2 cloudless 2016 by EOX IT Services GmbH (contains modified Copernicus Sentinel data 2016), CC BY 4.0.
 - **Natural Earth**, public domain. Used for the offline globe, land and towns (`data/`).
 - **Terrain (optional):** Tilezen/Mapzen Terrarium tiles on AWS Open Data. See the [attribution notes](https://github.com/tilezen/joerd/blob/master/docs/attribution.md).
-- **NASA GIBS (optional):** NASA EOSDIS.
+- **NASA Blue Marble (optional overlay):** *Blue Marble (August 2004, Shaded Relief and Bathymetry)* — NASA Earth Observatory / MODIS, public domain. Tiles may be served from a local z0–8 MBTiles pack or streamed from [NASA GIBS](https://earthdata.nasa.gov/gibs) (NASA EOSDIS).
 
 ## Mission demo (`demo/`)
 

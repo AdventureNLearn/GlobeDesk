@@ -74,9 +74,10 @@ try {
   if (!(play.t > 2 && play.playing)) errors.push("playback clock did not advance");
   await ev("GD.playback.stop(); true");
   // Record path: start + stop a 2 s capture and check bytes are produced.
-  const recBytes = await ev(`(async () => { await GD.recorder.start('16:9'); await new Promise(r => setTimeout(r, 2000)); const rec = GD.recorder._rec; cancelAnimationFrame(rec.raf); return await new Promise(res => { rec.mr.onstop = () => res(rec.chunks.reduce((a, b) => a + b.size, 0)); rec.mr.stop(); rec.mr = null; }); })()`);
-  console.log("recorder bytes (2 s):", recBytes);
-  if (!(recBytes > 0)) errors.push("recorder produced no data");
+  const recBytes = await ev(`(async () => { await GD.recorder.start('16:9'); await new Promise(r => setTimeout(r, 2000)); const rec = GD.recorder._rec; const sample = rec.ctx.getImageData(Math.floor(rec.canvas.width/2), Math.floor(rec.canvas.height/2), 1, 1).data; const pixelSum = sample[0]+sample[1]+sample[2]+sample[3]; const blob = await GD.recorder.stop('smoke.webm', { download: false }); return { bytes: blob && blob.size || 0, pixelSum, pdbAfter: GD.globe.isDrawingBufferPreserved && GD.globe.isDrawingBufferPreserved() }; })()`);
+  console.log("recorder (2 s):", JSON.stringify(recBytes));
+  if (!(recBytes && recBytes.bytes > 0)) errors.push("recorder produced no data");
+  if (recBytes && recBytes.pdbAfter) errors.push("drawing buffer still preserved after export");
   await ev("GD.ui.loadEpisode(GD.model.blankEpisode()); true"); await sleep(800); await shot("05-blank-template.png");
   await ev("document.querySelector('[data-tab=layers]').click(); true"); await sleep(300); await shot("06-layers-panel.png");
 

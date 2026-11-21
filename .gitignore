@@ -11,3 +11,7 @@ demo/short-v1/
 demo/shots/
 dist/
 __pycache__/
+
+# Local imagery packs (not in the repo; fetch with tools/fetch_bluemarble_pack.py)
+*.mbtiles
+globedesk-data/

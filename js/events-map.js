@@ -104,10 +104,22 @@
     drawDraft();
   }
 
+  function detach(map) {
+    if (map && em.map && em.map !== map) return;
+    if (em.raf) { cancelAnimationFrame(em.raf); em.raf = 0; }
+    em.map = null;
+    em.installedOn = null;
+  }
+
   // Pulse + ripples + moving heads at ~25 fps; the map repaints, so recordings include it.
   function animate(now) {
     em.raf = requestAnimationFrame(animate);
-    const m = em.map; if (!m || !m.getLayer("ev-pt-pulse") || !GD.state.episode) return;
+    const m = em.map;
+    if (!m || !GD.state.episode) return;
+    if (GD.globe && GD.globe.st && GD.globe.st.map && GD.globe.st.map !== m) return;
+    let pulse;
+    try { pulse = m.getLayer("ev-pt-pulse"); } catch (e) { return; }
+    if (!pulse) return;
     if (now - em.lastData < 40) return;
     em.lastData = now;
     const ph = (now / 1400) % 1;
@@ -204,5 +216,5 @@
     });
   }
 
-  GD.eventsMap = { em, install, refresh, setMode, finish, addVertex, select, find, frame, labels, readable, clock, unlocated, visibleFeatures, currentLayer };
+  GD.eventsMap = { em, install, detach, refresh, setMode, finish, addVertex, select, find, frame, labels, readable, clock, unlocated, visibleFeatures, currentLayer };
 })();

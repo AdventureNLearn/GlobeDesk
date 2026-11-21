@@ -10,7 +10,9 @@ The globe and its base map (satellite, streets, buildings, optional terrain, bun
 
 - **Free and keyless.** MapLibre GL JS 5.24.1 is BSD-3-Clause licensed and is **vendored in `vendor/`**, so no CDN is needed. The default hybrid base uses OpenFreeMap vector tiles (no key), 3D building extrusions, and optional Terrarium terrain from zoom 11.
 - **Real globe-to-street zoom** in one renderer: a globe projection at low zoom, then streets, place labels and pitched 3D buildings at about z16–17.
-- **Recordable.** The WebGL canvas uses `preserveDrawingBuffer`, so `captureStream` and `MediaRecorder` can composite it with overlays.
+- **Recordable.** The WebGL canvas turns `preserveDrawingBuffer` on only while Record WebM is running, so `captureStream` and `MediaRecorder` can composite frames; ordinary viewing keeps it off.
+- **Display.** Layers has a pixel-ratio cap (default 1.5) and an antialias toggle (off by default). NASA Blue Marble is never shown at the same time as the EOX satellite base.
+- **Local Blue Marble pack.** When `./globedesk-data` (or `GLOBEDESK_DATA`) contains the z0–8 MBTiles pack, `tools/serve.py` serves it first at `/tiles/bluemarble/{z}/{x}/{y}.jpeg`, then a disk cache capped at 256 MiB, then NASA GIBS. A complete z0–8 pack is 475,246,592 bytes. Build or resume the pack with `tools/fetch_bluemarble_pack.py`. If `/tiles` is missing, the overlay uses NASA GIBS directly. Natural Earth stays bundled for the offline outline globe.
 
 ## What's in the desk
 
@@ -104,7 +106,7 @@ These are data layers you build to show **where events took place**, right on th
 | OpenFreeMap street styles (dark, Liberty, Positron) | Cloud **TTS voice** for scripts (stub, adapter TODO) |
 | Offline bundled globe: Natural Earth land, countries and towns | **AI summarize / suggest cards** (stub, adapter TODO) |
 | Terrain + hillshade (Tilezen/Mapzen terrain tiles on AWS Open Data) | |
-| NASA GIBS Blue Marble overlay | |
+| NASA Blue Marble overlay (local z0–8 pack, then GIBS) | |
 | Captions, SRT/VTT, cards, sources, spatial insight (all local) | |
 | Pre-recorded voiceover; the browser's built-in voice for previews | |
 | JSON save/load and WebM recording, all in the browser | |
@@ -119,7 +121,7 @@ Keys are typed into **Optional paid** and stored **only in this browser's `local
 - **EOX Sentinel-2 cloudless 2016**: "Sentinel-2 cloudless by EOX IT Services GmbH (contains modified Copernicus Sentinel data 2016)", CC BY 4.0. The 2018+ EOX layers are **CC BY-NC-SA** and are not used. The public endpoint has **no SLA** and a fair-use policy. During repeated testing some tiles returned fetch errors, so switch to another base if it is slow.
 - **OpenFreeMap** © OpenMapTiles, data © OpenStreetMap contributors (ODbL). The public tiles are free, need no key, and are provided as-is (see [OpenFreeMap terms](https://openfreemap.org/tos/)). Attribution is required: OpenFreeMap, OpenMapTiles, and OpenStreetMap contributors. MapLibre shows this on the map; it is also listed in the Layers tab.
 - **Terrain**: Tilezen/Mapzen terrain tiles on AWS Open Data (Terrarium). The upstream sources require credit; the canonical list is the [Tilezen joerd attribution notes](https://github.com/tilezen/joerd/blob/master/docs/attribution.md).
-- **NASA GIBS** Blue Marble imagery.
+- **NASA Blue Marble** (August 2004, shaded relief and bathymetry): NASA Earth Observatory / MODIS, public domain, via NASA GIBS. Optional local pack under `./globedesk-data` (gitignored; override with `GLOBEDESK_DATA`).
 - **NASA / NASA Johnson** — [Ultra High Definition (4K) View of Planet Earth (2016)](https://www.youtube.com/watch?v=oFDeNcu3mnc), used as an allowlisted example embed in the mission demo. A typographic credit still is shown when the live embed cannot play.
 - **Live radio stations** in the mission demo (links only; no song files are in this repository): [Exclusive Radio — Exclusively Creedence Clearwater Revival](https://play.exclusive.radio/), [0 N Radio — Classic Rock](https://www.0nradio.com/), [SomaFM Left Coast 70s](https://somafm.com/seventies/).
 - **Recording bed** (share videos only; the MP3 is not in this repository): “Cool Rock” by Kevin MacLeod, [incompetech.com](https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cool%20Rock.mp3), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

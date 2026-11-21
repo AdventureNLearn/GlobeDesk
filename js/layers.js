@@ -44,12 +44,56 @@
     { id: "terrain", label: "3D terrain + hillshade (from zoom 11, opt-in)", default: false, runtime: true,
       credit: 'Terrain: <a href="https://registry.opendata.aws/terrain-tiles/" target="_blank" rel="noopener noreferrer">Tilezen/Mapzen terrain tiles on AWS Open Data</a> (see README for full source credit)',
       tiles: "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png" },
-    { id: "bluemarble", label: "NASA Blue Marble imagery (GIBS, free)", default: false, runtime: true,
-      credit: 'Imagery: <a href="https://earthdata.nasa.gov/gibs" target="_blank" rel="noopener noreferrer">NASA GIBS</a> Blue Marble',
-      tiles: "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg", maxzoom: 8 },
+    { id: "bluemarble", label: "NASA Blue Marble imagery (local pack, then GIBS)", default: false, runtime: true,
+      credit: 'Imagery: <a href="https://earthobservatory.nasa.gov/features/BlueMarble" target="_blank" rel="noopener noreferrer">NASA Blue Marble</a> (August 2004, shaded relief and bathymetry; Earth Observatory / MODIS, public domain), via <a href="https://earthdata.nasa.gov/gibs" target="_blank" rel="noopener noreferrer">NASA GIBS</a>',
+      tiles: "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg", maxzoom: 8,
+      note: "When the Python server is running, uses a local z0–8 MBTiles pack under ./globedesk-data if present, then a size-capped disk cache, then GIBS. If /tiles is unavailable, this overlay uses NASA GIBS directly. Not shown at the same time as the EOX satellite base; turning this on switches to the offline globe." },
     { id: "ohm", label: "Historical map (OpenHistoricalMap) [UNKNOWN] — not wired yet", default: false, runtime: true, status: "unknown",
       reason: "OpenHistoricalMap period view: style and date filter are not wired yet.", credit: "" }
   ];
 
-  GD.layers = { BASES, OVERLAYS, base: (id) => BASES.find((b) => b.id === id) };
+  const LOCAL_BLUEMARBLE = "/tiles/bluemarble/{z}/{x}/{y}.jpeg";
+  const PACKS_API = "/api/packs";
+  let localProxy = false;
+  let localProxyPromise = null;
+
+  function locHost(loc) {
+    try {
+      const here = loc || (typeof location !== "undefined" ? location : null);
+      return here && /^https?:$/.test(here.protocol) && (here.hostname === "127.0.0.1" || here.hostname === "localhost") ? here : null;
+    } catch (e) { return null; }
+  }
+
+  function usesLocalBlueMarbleProxy() { return localProxy; }
+
+  function setLocalBlueMarbleProxy(on) {
+    localProxy = !!on;
+    if (!localProxyPromise) localProxyPromise = Promise.resolve(localProxy);
+  }
+
+  function probeLocalTileProxy() {
+    if (localProxyPromise) return localProxyPromise;
+    const here = locHost();
+    if (!here || typeof fetch !== "function") {
+      localProxy = false;
+      localProxyPromise = Promise.resolve(false);
+      return localProxyPromise;
+    }
+    localProxyPromise = fetch(PACKS_API, { method: "GET", cache: "no-store" })
+      .then((r) => { localProxy = !!r.ok; return localProxy; })
+      .catch(() => { localProxy = false; return false; });
+    return localProxyPromise;
+  }
+
+  function blueMarbleTiles(loc) {
+    const L = OVERLAYS.find((o) => o.id === "bluemarble");
+    const remote = L && L.tiles;
+    const here = locHost(loc);
+    if (localProxy && here) return here.origin + LOCAL_BLUEMARBLE;
+    return remote;
+  }
+
+  probeLocalTileProxy();
+
+  GD.layers = { BASES, OVERLAYS, base: (id) => BASES.find((b) => b.id === id), blueMarbleTiles, LOCAL_BLUEMARBLE, probeLocalTileProxy, setLocalBlueMarbleProxy, usesLocalBlueMarbleProxy };
 })();
