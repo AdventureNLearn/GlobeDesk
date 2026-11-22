@@ -6,4 +6,4 @@ No account, no required API key. Code is MIT; AdventureNLearn content is CC BY 4
 
 The base map is a separate core layer. User content never modifies the map style or tiles.
 
-This pack is v1.2.0 Live Data. Dated imagery, official GIS, and online address search stay off until the visitor opts in. The public globedesk.grok.me copy is not this release until it is separately published.
+This pack is v1.3.1 · Share & Export. Dated imagery, official GIS, and online address search stay off until the visitor opts in. The public globedesk.grok.me copy is v1.3.0 (Nov 22, 2026) until this patch is uploaded.

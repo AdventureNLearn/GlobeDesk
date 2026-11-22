@@ -36,6 +36,8 @@ Not a fit: tracking or locating private people, scraped data that breaks a site'
 python3 tools/serve.py          # http://127.0.0.1:8080
 ```
 
+Hosted Grok.me copies follow the host notes in [GROK-ME-BUILD.md](GROK-ME-BUILD.md) (entry page `index.html`, no `desk.html` in the repo, localhost-only APIs).
+
 ## Checks to run before you open a PR
 
 ```bash

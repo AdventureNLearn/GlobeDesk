@@ -17,4 +17,5 @@
 - Opt-in dated NASA GIBS imagery (off by default); Blue Marble stays undated
 - EOX 2018-2025 mosaics behind a CC BY-NC-SA acknowledgement; 2016 remains the default; 2017 is not offered
 - Official USGS, Census TIGERweb, and nowCOAST overlays, off until live GIS is opted in
-- Version v1.2.0 · Live Data
+- Version v1.3.1 · Share & Export
+- Layers panel (L) with Show all / Hide all, Reset (H), frame-accurate MP4 export, and an offline share pack (share pack needs the local server)
