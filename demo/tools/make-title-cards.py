@@ -7,7 +7,7 @@ import subprocess, tempfile, shutil
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "work"
 FONT = ROOT / "assets" / "fonts"
-PACK = ROOT / "guide-packs" / "frogpost" / "assets"
+PACK = ROOT / "guide-packs" / "template" / "assets"
 W, H = 1920, 1080
 
 def font(name, size):

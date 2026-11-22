@@ -202,7 +202,7 @@
     return {
       schema: SCHEMA,
       id: uid("ep"),
-      show: "Frogpost",
+      show: "GlobeDesk",
       title: U,
       date: new Date().toISOString().slice(0, 10),
       lede: U,
@@ -210,7 +210,7 @@
       links: [],
       demo: false,
       sample: false,
-      look: GD.themes ? GD.themes.lookFor("frog") : { theme: "frog" },
+      look: GD.themes ? GD.themes.lookFor("globedesk") : { theme: "globedesk" },
       handle: "@AdventureNLearn",
       outro: { enabled: true, durationSec: 5, line1: "Full brief on the channel", link: "https://x.com/AdventureNLearn", handle: "@AdventureNLearn", showXLogo: true },
       output: { aspect: "16:9", fps: 30 },
@@ -220,85 +220,32 @@
     };
   }
 
-  // Frogpost identity (the default show). See js/frog-rundown.js for the rows.
-  const FROG = {
-    show: "Frogpost",
-    title: "Frogpost",
-    handle: "@AdventureNLearn",
-    handleUrl: "https://x.com/AdventureNLearn",
-    badge: "FROGPOST",
-    theme: "frog",
-    date: "2026-11-20",
-    flag: "The rundown is a sample. Locations are approximate. Claims are as reported, not verified."
-  };
+  const SAMPLE_ID = "washington-dc-demo";
+  const SAMPLE_FILE = "episodes/washington-dc-demo.globedesk.json";
 
-  // One Frogpost story from a rundown row: [slug, bucket, title, place, lat, lon, a3, url, sourceLabel, body].
-  // Card copy is the row's body, unchanged. A null lat/lon means no pin and no camera path.
-  function frogStory(row, n) {
-    const [slug, bucket, title, place, lat, lon, a3, url, sourceLabel, body] = row;
-    const pinned = lat != null && lon != null;
-    const s = blankStory(n);
-    s.slug = slug;
-    s.title = title;
-    s.durationSec = 16;
-    s.location = { name: place, lat: pinned ? lat : null, lon: pinned ? lon : null, precision: pinned ? "approximate" : "unset", verified: false, note: pinned ? "sample, approximate, not verified" : "no pin: no single place" };
-    if (a3) s.location.a3 = a3;
-    s.highlight = { a3: a3 || null, geojson: null };
-    s.camera = pinned ? autoCameraPathForLocation(s.location, 8, (typeof window !== "undefined" && window.GD_LAND) || null) : [];
-    const hasUrl = !!url;
-    s.sources = hasUrl ? [{ id: uid("src"), label: sourceLabel || U, url, status: "unverified", note: "As reported. Not independently checked." }] : [];
-    const c = blankCard(pinned ? lat : null, pinned ? lon : null);
-    c.title = hasUrl ? bucket : bucket + " · source missing";
-    c.body = body;
-    c.why = U;
-    c.facts = [
-      { label: "Claim status", value: "As reported; not verified" },
-      { label: "Place", value: place || U },
-      { label: "Source", value: hasUrl ? (sourceLabel || U) : "Missing " + U }
-    ];
-    c.sourceIds = s.sources.map((x) => x.id);
-    c.at = 2;
-    c.dur = 12;
-    c.verified = false;
-    s.cards = [c];
-    s.summary = bucket + ", as reported. Not verified.";
-    s.credit = hasUrl ? (sourceLabel || "") : "";
-    s.creditUrl = hasUrl ? url : "";
-    s.date = "";
-    s.asReported = true;
-    s.script = title + ". " + body;
-    s.captions = GD.captions ? GD.captions.fromScript(s.script, s.durationSec) : [];
-    return s;
+  // Neutral bundled sample (Washington, DC). Data is set by setSampleEpisode()
+  // after the JSON is read (tests) or fetched (the app). Until then this
+  // returns a stamped copy of a blank episode flagged as the sample slot.
+  function setSampleEpisode(ep) {
+    if (ep && typeof ep === "object") GD.sampleEpisodeData = ep;
+    return GD.sampleEpisodeData || null;
   }
 
-  // Default show: Frogpost, stories in 5 fixed buckets. Rows come from GD.frogRundown.
-  function demoEpisode() {
-    const rows = (GD.frogRundown || []);
+  function sampleEpisode() {
+    const src = GD.sampleEpisodeData;
+    if (src) {
+      const ep = JSON.parse(JSON.stringify(src));
+      return normalizeEpisode(ep);
+    }
     const ep = blankEpisode();
-    ep.demo = true;
+    ep.id = "ep-washington-dc-demo";
+    ep.show = "GlobeDesk";
+    ep.title = "Washington, DC demo — the National Mall";
     ep.sample = true;
-    ep.show = FROG.show;
-    ep.title = FROG.title;
-    ep.date = FROG.date;
-    ep.lede = FROG.flag;
-    ep.cta = "Follow " + FROG.handle + " for the next Frogpost.";
-    ep.handle = FROG.handle;
-    ep.outro.handle = FROG.handle;
-    ep.outro.link = FROG.handleUrl;
-    ep.outro.line1 = "Objective thinking is the process. Growth is the goal.";
-    ep.links = [{ label: FROG.handle + " on X", url: FROG.handleUrl }];
-    ep.stories = rows.map((r, i) => frogStory(r, i + 1));
-    if (GD.events) ep.eventLayers = GD.events.demoLayers(ep);
-    ep.mediaBin = [];
+    ep.demo = true;
+    if (GD.themes) ep.look = GD.themes.lookFor("globedesk");
+    if (ep.look && ep.look.map) ep.look.map.base = "offline";
     return ep;
-  }
-
-  // Detects a saved copy of the old bundled sample show. Boot replaces it with Frogpost;
-  // its stories stay reachable from the Archive (js/archive.js).
-  function isLegacyCtdSample(ep) {
-    if (!ep || typeof ep !== "object") return false;
-    const hay = [ep.title, ep.show, ep.handle].map((v) => String(v || "")).join(" ");
-    return /TheCriticalDri1|CTD's Geopolitics/.test(hay);
   }
 
   function validate(ep) {
@@ -343,6 +290,14 @@
     ep.sample = !!(ep.sample || ep.demo);
     ep.mediaBin = ep.mediaBin || [];
     ep.eventLayers = ep.eventLayers || [];
+    if (ep.look && GD.themes) {
+      const id = ep.look.theme;
+      if (!GD.themes.knownTheme(id)) {
+        const base = (ep.look.map && ep.look.map.base) || null;
+        ep.look = GD.themes.lookFor(GD.themes.DEFAULT);
+        if (base) ep.look.map.base = base;
+      }
+    }
     (ep.stories || []).forEach(normalizeStory);
     return ep;
   }
@@ -377,5 +332,5 @@
     return storiesDuration(ep) + o;
   }
 
-  GD.model = { SCHEMA, SCHEMA_LEGACY, U, PRESETS, uid, keyframe, autoCameraPath, autoCameraPathForLocation, pointInLand, lookTarget, blankEpisode, blankStory, blankCard, blankSource, demoEpisode, frogStory, isLegacyCtdSample, FROG, validate, normalizeStory, normalizeEpisode, duplicateStory, storyStarts, totalDuration, storiesDuration, blankCitation, mapCitation, citationLine };
+  GD.model = { SCHEMA, SCHEMA_LEGACY, U, PRESETS, uid, keyframe, autoCameraPath, autoCameraPathForLocation, pointInLand, lookTarget, blankEpisode, blankStory, blankCard, blankSource, sampleEpisode, setSampleEpisode, SAMPLE_ID, SAMPLE_FILE, validate, normalizeStory, normalizeEpisode, duplicateStory, storyStarts, totalDuration, storiesDuration, blankCitation, mapCitation, citationLine };
 })();

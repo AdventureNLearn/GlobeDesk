@@ -1,0 +1,34 @@
+/* GlobeDesk share pack player (read only). Inlined into each .globedesk.html. */
+:root { color-scheme: dark; --bg:#02040c; --ink:#eaf6ff; --soft:#b3c6de; --dim:#7f93ad; --cyan:#5ee7ff; --gold:#e7c766; --edge:rgba(94,231,255,.24); --glass:rgba(12,24,56,.62); }
+* { box-sizing: border-box; }
+html, body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:14px/1.45 "Helvetica Neue", Arial, sans-serif; }
+body { display:flex; flex-direction:column; }
+.sp-top { display:flex; align-items:center; gap:10px; padding:8px 14px; border-bottom:1px solid var(--edge); background:var(--glass); }
+.sp-brand { font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); font-size:12px; }
+.sp-title { font-weight:700; font-size:15px; flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.sp-label { font-size:11px; font-weight:800; letter-spacing:.06em; padding:2px 8px; border-radius:999px; border:1px solid var(--edge); color:var(--cyan); }
+.sp-stage { position:relative; flex:1; min-height:240px; overflow:hidden; }
+#spMap { position:absolute; inset:0; }
+.sp-head { position:absolute; left:0; right:0; top:0; display:flex; gap:12px; align-items:center; padding:10px 16px; background:linear-gradient(rgba(12,12,14,.86), rgba(12,12,14,.55)); pointer-events:none; }
+.sp-badge { background:var(--gold); color:#07140c; font-weight:800; letter-spacing:.06em; padding:4px 10px; border-radius:6px; font-size:12px; }
+.sp-story { font-weight:800; font-size:20px; text-shadow:0 1px 3px #000; }
+.sp-cards { position:absolute; right:14px; top:64px; width:min(380px, 46%); display:flex; flex-direction:column; gap:8px; pointer-events:none; }
+.sp-card { background:rgba(14,15,17,.86); border-left:5px solid var(--gold); border-radius:10px; padding:10px 14px; }
+.sp-card .v { font-size:11px; font-weight:800; letter-spacing:.06em; }
+.sp-card .v.ok { color:#6ee7a8; } .sp-card .v.no { color:#ffd166; }
+.sp-card h3 { margin:4px 0; font-size:17px; } .sp-card p { margin:0; color:#e4e4e4; font-size:13px; }
+.sp-cap { position:absolute; left:6%; right:6%; bottom:18px; text-align:center; font-weight:800; font-size:clamp(16px, 3.2vw, 30px); text-shadow:0 2px 8px #000, 0 0 2px #000; pointer-events:none; }
+.sp-cite { position:absolute; left:14px; top:64px; max-width:46%; background:rgba(70,72,76,.62); border-radius:6px; padding:6px 10px; font-size:12px; pointer-events:none; }
+.sp-sample { position:absolute; left:14px; bottom:64px; color:#ffd166; font-weight:700; font-size:11px; letter-spacing:.04em; pointer-events:none; }
+.sp-bar { display:flex; align-items:center; gap:10px; padding:8px 14px; border-top:1px solid var(--edge); background:var(--glass); flex-wrap:wrap; }
+.sp-bar button { background:#0c1838; color:var(--ink); border:1px solid var(--edge); border-radius:8px; padding:6px 12px; font:inherit; cursor:pointer; }
+.sp-bar button:focus-visible { outline:2px solid var(--gold); outline-offset:1px; }
+#spScrub { flex:1 1 200px; accent-color:var(--cyan); }
+.sp-time { font-variant-numeric:tabular-nums; min-width:96px; }
+.sp-credits { padding:12px 16px; border-top:1px solid var(--edge); max-height:40vh; overflow:auto; background:#050a1a; font-size:12px; color:var(--soft); }
+.sp-credits h2 { font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin:8px 0 4px; }
+.sp-credits a { color:var(--cyan); }
+.sp-credits pre { white-space:pre-wrap; font-size:11px; color:var(--dim); }
+.sp-pin { width:14px; height:14px; border-radius:50%; background:#ff3b5c; border:2px solid #fff; box-shadow:0 0 0 6px rgba(255,59,92,.18); }
+.sp-pin.on { width:18px; height:18px; }
+@media (max-width: 640px) { .sp-cards { width:auto; left:12px; right:12px; top:auto; bottom:84px; } .sp-cite { display:none; } .sp-story { font-size:16px; } }

@@ -125,7 +125,7 @@ async function main() {
   log("script hook", JSON.stringify(script));
 
   const rows = await ev(`(async function () {
-    const res = await fetch("guide-packs/frogpost/manifest.json");
+    const res = await fetch("guide-packs/template/manifest.json");
     const m = await res.json();
     const order = ["spin","dive","open","edit","pins","media","embed","sound","captions","assist","grokme"];
     const spoken = (n) => (n && (n.text || n.spoken) || "").trim();

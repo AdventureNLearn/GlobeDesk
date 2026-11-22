@@ -1,0 +1,583 @@
+{
+  "schema": "globedesk.episode/2",
+  "id": "ep-newsdesk-civic",
+  "show": "GlobeDesk Newsdesk",
+  "title": "Newsdesk story: three civic works",
+  "date": "2026-11-21",
+  "lede": "A short three-story flight from Curitiba's 1974 bus corridors to Medellín's Metro and New York's High Line, cited from official city pages. Pins are approximate.",
+  "cta": "Open in GlobeDesk and browse the rundown, or press Play to fly the stories in order.",
+  "links": [
+    {
+      "label": "City of Curitiba, BRT completa 50 anos em Curitiba",
+      "url": "https://www.curitiba.pr.gov.br/noticias/brt-completa-50-anos-em-curitiba-sistema-ganha-velocidade-e-veiculos-eletricos/75042"
+    },
+    {
+      "label": "Metro de Medellín, Historia del Metro de Medellín",
+      "url": "https://www.metrodemedellin.gov.co/quienes-somos/historia/"
+    },
+    {
+      "label": "NYC Parks, The High Line history",
+      "url": "https://www.nycgovparks.org/parks/the-high-line/history"
+    }
+  ],
+  "demo": true,
+  "sample": true,
+  "look": {
+    "label": "Newsdesk — lower third, boxed captions",
+    "theme": "newsdesk",
+    "header": false,
+    "headerBadge": "NEWSDESK",
+    "headerHeightPct": 12,
+    "citations": true,
+    "captionsOn": true,
+    "captionStyle": "box",
+    "captionSize": "medium",
+    "captionLines": 2,
+    "captionZonePct": 15,
+    "lowerThird": true,
+    "ticker": false,
+    "music": false,
+    "coldOpen": false,
+    "shotSec": 10,
+    "palette": {
+      "bg": "#02040c",
+      "ink": "#eaf6ff",
+      "accent": "#e7c766",
+      "highlight": "#5ee7ff",
+      "panel": "rgba(12, 24, 56, 0.42)",
+      "outroBg": "#02040c"
+    },
+    "map": {
+      "base": "ofm-dark",
+      "softBorders": true,
+      "highlightGlow": true,
+      "countryLabels": "style"
+    },
+    "safeArea": true
+  },
+  "handle": "",
+  "outro": {
+    "enabled": false,
+    "durationSec": 0,
+    "line1": "",
+    "link": "",
+    "handle": "",
+    "showXLogo": false
+  },
+  "output": {
+    "aspect": "16:9",
+    "fps": 30
+  },
+  "stories": [
+    {
+      "id": "story-nd-curitiba-brt",
+      "slug": "curitiba-brt",
+      "title": "Curitiba's BRT corridors, opened in 1974",
+      "summary": "The City of Curitiba, marking 50 years of its bus rapid transit system in 2024, says the system was inaugurated on 22 September 1974 on the North/South axis, beginning with 20 kilometres of exclusive bus corridors.",
+      "date": "1974-09-22",
+      "credit": "City of Curitiba",
+      "creditUrl": "https://www.curitiba.pr.gov.br/noticias/brt-completa-50-anos-em-curitiba-sistema-ganha-velocidade-e-veiculos-eletricos/75042",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "Curitiba (approx.)",
+        "lat": -25.43,
+        "lon": -49.27,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Approximate city pin for Curitiba, whose official 2024 notice describes a North/South corridor system rather than a single station. A surveyed terminal coordinate is [UNKNOWN] in this card. Not a street address.",
+        "a3": "BRA"
+      },
+      "script": "The City of Curitiba, in an official 2024 notice marking 50 years of its bus rapid transit system, says the system was inaugurated on 22 September 1974 on the North/South axis, beginning with 20 kilometres of exclusive bus corridors. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 2.8,
+          "text": "Curitiba's BRT corridors."
+        },
+        {
+          "start": 2.8,
+          "end": 6.2,
+          "text": "Inaugurated on 22 September 1974, the city says."
+        },
+        {
+          "start": 6.2,
+          "end": 8,
+          "text": "The pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-curitiba-brt-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            -49.27,
+            -25.43
+          ],
+          "zoom": 11,
+          "pitch": 42,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-curitiba",
+          "kind": "topic",
+          "title": "Curitiba BRT",
+          "body": "An official City of Curitiba news notice dated 28 November 2024, marking 50 years of the city's BRT, says the system was inaugurated by then mayor Jaime Lerner on 22 September 1974 on the North/South axis, and began with 20 kilometres of exclusive corridors for high-capacity buses, called canaletas. The same notice says the corridors carry 65 percent of the passengers of Curitiba's collective transport, as stated in that 2024 article. Later performance and fleet figures in the article are not copied here.",
+          "why": "An official city account of a transit model that other cities later adopted.",
+          "facts": [
+            {
+              "label": "Inaugurated",
+              "value": "22 September 1974, North/South axis (City of Curitiba, 28 November 2024 notice)."
+            },
+            {
+              "label": "At opening, as stated",
+              "value": "20 kilometres of exclusive bus corridors."
+            },
+            {
+              "label": "Share of riders, as stated in 2024",
+              "value": "Corridors carry 65 percent of Curitiba's collective-transport passengers (same official notice)."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate city stand-in. Surveyed terminal coordinate [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-curitiba-brt50"
+          ],
+          "pin": {
+            "lat": -25.43,
+            "lon": -49.27
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-curitiba-brt50",
+          "label": "City of Curitiba, BRT completa 50 anos em Curitiba",
+          "url": "https://www.curitiba.pr.gov.br/noticias/brt-completa-50-anos-em-curitiba-sistema-ganha-velocidade-e-veiculos-eletricos/75042",
+          "status": "verified",
+          "note": "Official City of Curitiba news notice dated 28 November 2024, read 21 Nov 2026. Pin coordinates are not taken from this page."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "BRA",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "id": "story-nd-medellin-metro",
+      "slug": "medellin-metro",
+      "title": "Medellín's Metro and the first Metrocable line",
+      "summary": "Metro de Medellín's official history says the company was created on 31 May 1979 and began commercial train service on 30 November 1995. Línea K, the north-eastern Metrocable, entered service on 7 August 2004.",
+      "date": "1995-11-30",
+      "credit": "Metro de Medellín",
+      "creditUrl": "https://www.metrodemedellin.gov.co/quienes-somos/historia/",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "Medellín Metro, Aburrá Valley (approx.)",
+        "lat": 6.25,
+        "lon": -75.57,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Approximate city pin for Medellín / the Aburrá Valley system described by Metro de Medellín. The network spans several municipalities. A surveyed station coordinate is [UNKNOWN] in this card. Not a street address.",
+        "a3": "COL"
+      },
+      "script": "Metro de Medellín's official history says the company was created on 31 May 1979 and began commercial service at 11 in the morning on 30 November 1995, on a first stretch of Línea A. The north-eastern Metrocable, Línea K, entered service on 7 August 2004. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 2.8,
+          "text": "Metro de Medellín."
+        },
+        {
+          "start": 2.8,
+          "end": 6.2,
+          "text": "Trains from 1995; Metrocable Línea K from 7 August 2004."
+        },
+        {
+          "start": 6.2,
+          "end": 8,
+          "text": "The pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-medellin-metro-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            -75.57,
+            6.25
+          ],
+          "zoom": 12,
+          "pitch": 42,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-medellin",
+          "kind": "topic",
+          "title": "Metro de Medellín",
+          "body": "The official Metro de Medellín history page says the Empresa de Transporte Masivo del Valle de Aburrá was created on 31 May 1979, and that commercial operation began at 11:00 a.m. on 30 November 1995 on a first stretch of Línea A between Niquía and Poblado. It says Línea K, the north-eastern Metrocable, entered service on 7 August 2004, and that a second Metrocable, Línea J, began service on 3 March 2008. The same page later lists further cable, tram and bus lines. This card uses those dated opening facts and does not repeat later ridership totals.",
+          "why": "An official city-region transit history, including a mapped aerial cable line.",
+          "facts": [
+            {
+              "label": "Company created",
+              "value": "31 May 1979 (Metro de Medellín official history)."
+            },
+            {
+              "label": "Commercial service",
+              "value": "Began 30 November 1995, 11:00 a.m., Línea A between Niquía and Poblado."
+            },
+            {
+              "label": "Metrocable Línea K",
+              "value": "Entered service 7 August 2004."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate city-region stand-in. Surveyed station coordinate [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-medellin-historia"
+          ],
+          "pin": {
+            "lat": 6.25,
+            "lon": -75.57
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-medellin-historia",
+          "label": "Metro de Medellín, Historia del Metro de Medellín",
+          "url": "https://www.metrodemedellin.gov.co/quienes-somos/historia/",
+          "status": "verified",
+          "note": "Official Metro de Medellín history page, read 21 Nov 2026. Pin coordinates are not taken from this page."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "COL",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "id": "story-nd-high-line",
+      "slug": "high-line",
+      "title": "New York's High Line, first opened in 2009",
+      "summary": "NYC Parks says the West Side Elevated Line was fully operational by 1934, ceased operation in 1980, and that the first phase of the new park, from Gansevoort Street to West 20th Street, opened in June 2009.",
+      "date": "2009-06",
+      "credit": "NYC Parks",
+      "creditUrl": "https://www.nycgovparks.org/parks/the-high-line/history",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "The High Line, Manhattan (approx.)",
+        "lat": 40.74,
+        "lon": -74.01,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Approximate pin for the High Line's first section in the Meatpacking District / Chelsea. Distinct from the Midtown Manhattan sample-practice pin and from UN Headquarters on the East River. A surveyed entrance coordinate is [UNKNOWN] in this card. Friends of the High Line states that section 1 opened on 8 June 2009.",
+        "a3": "USA"
+      },
+      "script": "NYC Parks says the West Side Elevated Line was fully operational by 1934 and ceased operation in 1980. The first phase of the new park, from Gansevoort Street to West 20th Street, opened in June 2009. Friends of the High Line states that section 1 opened on 8 June 2009. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 2.8,
+          "text": "The High Line, Manhattan."
+        },
+        {
+          "start": 2.8,
+          "end": 6.2,
+          "text": "The first park section opened in June 2009."
+        },
+        {
+          "start": 6.2,
+          "end": 8,
+          "text": "The pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-high-line-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            -74.01,
+            40.74
+          ],
+          "zoom": 15,
+          "pitch": 42,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-high-line",
+          "kind": "topic",
+          "title": "The High Line",
+          "body": "The official NYC Parks historical sign for the High Line says the West Side Elevated Line, later known as the High Line, stretched from West 34th Street to a Spring Street terminal and was fully operational by 1934, then ceased operation in 1980. Friends of the High Line formed in 1999 to convert the abandoned structure to a public park. The first phase of the new park, from Gansevoort to West 20th Street, opened in June 2009; when fully opened by 2019, the park wrapped around Hudson Yards to West 34th Street. Friends of the High Line, the park conservancy, states that section 1 opened on 8 June 2009. A City of New York Parks Daily Plant article at a parks site URL was not successfully read and is not used as a source.",
+          "why": "An official city account of an elevated freight line turned into a public park.",
+          "facts": [
+            {
+              "label": "Freight line",
+              "value": "Fully operational by 1934; ceased operation in 1980 (NYC Parks)."
+            },
+            {
+              "label": "First park section",
+              "value": "8 June 2009, opening of section 1, from Gansevoort Street to West 20th Street, as stated by Friends of the High Line (the park conservancy). A City of New York Parks Daily Plant article could not be read (fetch timed out) and is not used as a source."
+            },
+            {
+              "label": "Later extent",
+              "value": "Fully opened by 2019, wrapping around Hudson Yards to West 34th Street."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate first-section stand-in. Surveyed entrance coordinate [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-nycparks-highline",
+            "src-highline-15-years"
+          ],
+          "pin": {
+            "lat": 40.74,
+            "lon": -74.01
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-nycparks-highline",
+          "label": "NYC Parks, The High Line history",
+          "url": "https://www.nycgovparks.org/parks/the-high-line/history",
+          "status": "verified",
+          "note": "Official NYC Parks historical sign, read 21 Nov 2026. Pin coordinates are not taken from this page."
+        },
+        {
+          "id": "src-highline-15-years",
+          "label": "Friends of the High Line, Looking back at 15 years of the High Line, 9 June 2014",
+          "url": "https://www.thehighline.org/blog/2014/06/09/looking-back-at-15-years-of-the-high-line/",
+          "status": "verified",
+          "note": "Official conservancy blog, read 21 Nov 2026. Dates the opening of section 1 to 8 June 2009. Not a City of New York notice."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "USA",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    }
+  ],
+  "eventLayers": [
+    {
+      "id": "evl-ep-newsdesk-civic",
+      "name": "Newsdesk story: three civic works (approximate pins)",
+      "color": "#5ee6ff",
+      "icon": "●",
+      "visible": true,
+      "labels": true,
+      "styleByCategory": true,
+      "scope": "all",
+      "note": "Short newsdesk story episode. Pins are approximate unless a cited official page published a coordinate.",
+      "features": [
+        {
+          "type": "Feature",
+          "id": "ev-nd-curitiba-brt",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -49.27,
+              -25.43
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "Curitiba's BRT corridors, opened in 1974",
+            "eventTime": "1974-09-22",
+            "eventEnd": "",
+            "timeApprox": false,
+            "datePrecision": "day",
+            "category": "other",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-curitiba-brt50",
+                "label": "City of Curitiba, BRT completa 50 anos em Curitiba",
+                "url": "https://www.curitiba.pr.gov.br/noticias/brt-completa-50-anos-em-curitiba-sistema-ganha-velocidade-e-veiculos-eletricos/75042",
+                "status": "verified",
+                "note": "Official City of Curitiba news notice dated 28 November 2024, read 21 Nov 2026. Pin coordinates are not taken from this page."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "City of Curitiba",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "The City of Curitiba, marking 50 years of its bus rapid transit system in 2024, says the system was inaugurated on 22 September 1974 on the North/South axis, beginning with 20 kilometres of exclusive bus corridors.",
+            "precisionLabel": "Precision: approximate",
+            "radiusKm": null,
+            "cardId": "card-nd-curitiba",
+            "storyId": "story-nd-curitiba-brt",
+            "example": true
+          }
+        },
+        {
+          "type": "Feature",
+          "id": "ev-nd-medellin-metro",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -75.57,
+              6.25
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "Medellín's Metro and the first Metrocable line",
+            "eventTime": "1995-11-30",
+            "eventEnd": "",
+            "timeApprox": false,
+            "datePrecision": "day",
+            "category": "other",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-medellin-historia",
+                "label": "Metro de Medellín, Historia del Metro de Medellín",
+                "url": "https://www.metrodemedellin.gov.co/quienes-somos/historia/",
+                "status": "verified",
+                "note": "Official Metro de Medellín history page, read 21 Nov 2026. Pin coordinates are not taken from this page."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "Metro de Medellín",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "Metro de Medellín's official history says the company was created on 31 May 1979 and began commercial train service on 30 November 1995. Línea K, the north-eastern Metrocable, entered service on 7 August 2004.",
+            "precisionLabel": "Precision: approximate",
+            "radiusKm": null,
+            "cardId": "card-nd-medellin",
+            "storyId": "story-nd-medellin-metro",
+            "example": true
+          }
+        },
+        {
+          "type": "Feature",
+          "id": "ev-nd-high-line",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -74.01,
+              40.74
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "New York's High Line, first opened in 2009",
+            "eventTime": "2009-06-01",
+            "eventEnd": "",
+            "timeApprox": true,
+            "datePrecision": "unknown",
+            "category": "other",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-nycparks-highline",
+                "label": "NYC Parks, The High Line history",
+                "url": "https://www.nycgovparks.org/parks/the-high-line/history",
+                "status": "verified",
+                "note": "Official NYC Parks historical sign, read 21 Nov 2026. Pin coordinates are not taken from this page."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "NYC Parks",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "NYC Parks says the West Side Elevated Line was fully operational by 1934, ceased operation in 1980, and that the first phase of the new park, from Gansevoort Street to West 20th Street, opened in June 2009.",
+            "precisionLabel": "Precision: approximate",
+            "radiusKm": null,
+            "cardId": "card-nd-high-line",
+            "storyId": "story-nd-high-line",
+            "example": true
+          }
+        }
+      ]
+    }
+  ],
+  "mediaBin": []
+}

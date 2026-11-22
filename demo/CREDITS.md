@@ -1,7 +1,7 @@
 # Credits
 
 - **GlobeDesk** and this demo are by **AdventureNLearn**. Code: MIT (`LICENSE`). AdventureNLearn content: CC BY 4.0 (`LICENSE-CONTENT`). Copyright (c) 2026 AdventureNLearn. The full list is in the repository `CREDITS.md`.
-- **NASA / NASA Johnson** — [Ultra High Definition (4K) View of Planet Earth (2016)](https://www.youtube.com/watch?v=oFDeNcu3mnc). Live embed when available; otherwise a credited typographic still (`guide-packs/frogpost/assets/nasa-earth-poster.jpg`), which is not a frame of that film.
+- **NASA / NASA Johnson** — [Ultra High Definition (4K) View of Planet Earth (2016)](https://www.youtube.com/watch?v=oFDeNcu3mnc). Live embed when available; otherwise a credited typographic still (a typographic still in the guide pack), which is not a frame of that film.
 - **Exclusive Radio** — [Exclusively Creedence Clearwater Revival](https://play.exclusive.radio/) (live stream; not rehosted).
 - **0 N Radio** — [Classic Rock on Radio](https://www.0nradio.com/) (live stream; not rehosted).
 - **SomaFM** — [Left Coast 70s](https://somafm.com/seventies/) (live stream; not rehosted).

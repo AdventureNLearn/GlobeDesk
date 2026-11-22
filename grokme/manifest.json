@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "1.0.1",
+  "version": "1.3.0",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",
@@ -10,24 +10,54 @@
   },
   "files": [
     {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "size": 505,
+      "sha256": "d484fb97da86f703b8f9fc041f1f3e1af34d980accfbcf077f451f5c0ce3d381"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "size": 412,
+      "sha256": "83bd724da5fb7920c62ed673be0e6716b249fd2968e2da9f31f749a518ecd33d"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/layer_data_proposal.md",
+      "size": 948,
+      "sha256": "f5cb5cd88d54da5a8669a52becd2ec57c60cb00d969e9cdbadb9d429bd98300b"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "size": 1570,
+      "sha256": "dd7c364b5970b1a65f557b81f83e95df49a53c6e79217cec3cd03c16b4ef1dc1"
+    },
+    {
       "path": "CHANGELOG.md",
-      "size": 10351,
-      "sha256": "fe8b1cbda772b2fdd2d8fcfb9643eeca5e34488d6a72ed86554970c6004ceb71"
+      "size": 27444,
+      "sha256": "ba7758ada96de0c01a5eaa4854f3bfbd31867893fd464edab1dff1e5365631be"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "size": 5751,
+      "sha256": "085512f0161f062504650290df4a23c15d30748a31dfa0ee184df709fe5f093a"
     },
     {
       "path": "CONTRIBUTING.md",
-      "size": 1949,
-      "sha256": "510cd50946bf1384ede910a592e5b98d6f390614df0a610096c997a8dd547d17"
+      "size": 6408,
+      "sha256": "a3db8eef57a4df543015a502c9b98685479a51d38276bd3661b83787a0448d2d"
     },
     {
       "path": "CREDITS.md",
-      "size": 5737,
-      "sha256": "d5934dc07316cdffebe54258c6de5b1bbae60e3323ca2346f381ab3c7c1b066d"
+      "size": 5713,
+      "sha256": "028de8bc95a3f52188a196298258b0684a912af3d9ad4e055f862dadd0f610ed"
+    },
+    {
+      "path": "FORKING.md",
+      "size": 3547,
+      "sha256": "4bd6eb213a032e2fa366f8813adaeab5025c6aeac1ca76f3ceeda979dd14d7fa"
     },
     {
       "path": "GROK-ME-BUILD.md",
-      "size": 4948,
-      "sha256": "bec0755caa2abfb69366c5d54159f35d7be72dacd684df7e32dd8b57f8832cb0"
+      "size": 4945,
+      "sha256": "1d46aa88476a718f0b8ca8b5241a1ae29d85cd7020ab37689d1d34c438ac67bd"
     },
     {
       "path": "LICENSE",
@@ -36,33 +66,38 @@
     },
     {
       "path": "LICENSE-CONTENT",
-      "size": 21834,
-      "sha256": "42f6d027f439e7f1618ce56e5f382f7b8e617bd681875dba30a8900b5ac48b50"
+      "size": 21374,
+      "sha256": "67ba3c07b35bfb2df797d0afc5e9f067a5d3f22f64e2c8f3ee189afc3f8fb0e9"
     },
     {
       "path": "README.md",
-      "size": 11111,
-      "sha256": "fdbf8b038994a0b3170086fffdd4c84eb5747da41e897831a13754a775b97e8c"
+      "size": 15626,
+      "sha256": "5613648657d4dca23c32781ce8df1d58f4e4efbc0d8c64011e9281a120cedac5"
     },
     {
       "path": "SECURITY.md",
       "size": 1165,
-      "sha256": "00f7c1d09e17d4f29acdf9581bc1433038a7344f65872ddf7578f2b8ed7df924"
+      "sha256": "e971aef1447b5146ba5745b0f03da9c0d909f81fe2f0f95dbfcd06ee48d2182a"
     },
     {
       "path": "USER-GUIDE.md",
-      "size": 4620,
-      "sha256": "b29b39707100aaeec91c6a973bd0b03d0e908eb40be930d543355faba93e05d1"
+      "size": 6505,
+      "sha256": "fbb0d135394fa12102bdf53c26def8ca5e4a4b9d57ebadab7a9ca033ce08424e"
     },
     {
       "path": "WINDOWS-RUN.md",
-      "size": 3246,
-      "sha256": "a4ffc287ffbb33456eeba315ff256f6adcd778b4e1693e4cf96f1e656ecde9ab"
+      "size": 4435,
+      "sha256": "3ceb4b41b997d209055d923c82d1b08bc86fcd42c7ecae8cedcb8eb1efd9e46e"
     },
     {
       "path": "css/app.css",
-      "size": 14179,
-      "sha256": "64b06cfe5fc38d927b1fa400d5b27ab1ea64b2dd736bf1764a582bc7f572cf32"
+      "size": 42970,
+      "sha256": "c526e5fb0ef7403e40d03b21c4eb58a7fe3daa2dced30783cb7b75b776a1dc31"
+    },
+    {
+      "path": "data/gis-registry.json",
+      "size": 5007,
+      "sha256": "6a49361041f0b8c9332c1abbaa3b8776d3297915675b920a90b37859d498ed7e"
     },
     {
       "path": "data/land.js",
@@ -80,34 +115,34 @@
       "sha256": "d0745375a2b75061d71a3ffdca5babe5dde5141a109ecdbe75b7493a110aa361"
     },
     {
+      "path": "docs/PROMOTE.md",
+      "size": 2380,
+      "sha256": "dcb821ce48a2e58128351ff71f616a9afa2b18f36130811d4319534e3913d53f"
+    },
+    {
       "path": "docs/REFERENCE.md",
-      "size": 20100,
-      "sha256": "0d504e6e0ea75f26fe0a75674e4251cbafa1ab01f2a2a9b130270516ea30a7db"
+      "size": 26133,
+      "sha256": "f10238c90c4477c5b8fdcd279d86a4e615d3b3636b62ecd3220df8596548f53e"
+    },
+    {
+      "path": "docs/SHARE-PACK.md",
+      "size": 2850,
+      "sha256": "8b20d03f6af7116fe444a596ac5f1c3e082f68713c1a045c0e92bd93352228e7"
+    },
+    {
+      "path": "docs/SIDECARS.md",
+      "size": 13637,
+      "sha256": "29c677be20043677015f4999b132e390b3bd20d108361353d2da22c900e6521c"
     },
     {
       "path": "docs/STORY-FORMAT.md",
-      "size": 3902,
-      "sha256": "35669fcafb4ca7fbd3737b137969005897b0ed773766a47980a62d81f2c90f94"
+      "size": 5389,
+      "sha256": "e4084e0d1c1cc5fcb6aa51d26402432c4b343919ef44f35ed0110a9af9979c33"
     },
     {
       "path": "episodes/blank.globedesk.json",
-      "size": 2802,
-      "sha256": "88641c58f37f82f860cf086b130e1548feef9b7c46c7cf284ca427eaa5943fbc"
-    },
-    {
-      "path": "episodes/demo-2026-11-20.globedesk.json",
-      "size": 21727,
-      "sha256": "9b9cad9c364320d07483c1e78a22b94c026fb8ea1a2a97cb88012bc382a29325"
-    },
-    {
-      "path": "episodes/frogpost-2026-11-20.globedesk.json",
-      "size": 273797,
-      "sha256": "5a46bd525b1e8e37053f6b18442ce78317f5deda8908bd5edfd00f020088d170"
-    },
-    {
-      "path": "episodes/layers/demo-event-places-demo-not-verified.geojson",
-      "size": 3885,
-      "sha256": "25bcab8ec00619cab878851a8da5f73ec18f5bfd019e47750b7313d57a4bc07b"
+      "size": 2810,
+      "sha256": "171d803a3a8c37d080001d6d9a393755e2d95f4321c6da046f41bf89725ccb9b"
     },
     {
       "path": "episodes/layers/example-placeholders-not-real-data.geojson",
@@ -115,44 +150,59 @@
       "sha256": "bb300df9ff1045365a647beb4e2aa35366007280ccff0208abbd4a904cf84632"
     },
     {
-      "path": "episodes/layers/frogpost-sample-story-places-approximate-not-verified.geojson",
-      "size": 49309,
-      "sha256": "4a22662cfd146a5f9eeca2ed9367ab8aba2daaa77bc9ba8e730b438973e24fb2"
+      "path": "episodes/washington-dc-demo.globedesk.json",
+      "size": 11035,
+      "sha256": "af5f1af82fe5e9f0527d7ba09dba920aa52970ee62ebedfb20f48007f9c18065"
+    },
+    {
+      "path": "fonts/Inter-OFL.txt",
+      "size": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    {
+      "path": "fonts/InterVariable.woff2",
+      "size": 352240,
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    },
+    {
+      "path": "fonts/fonts.css",
+      "size": 269,
+      "sha256": "6a34def7cafbcff1fe8a5449573b67832f2f44b2b2b1585aa9e5f724a9f29445"
     },
     {
       "path": "grokme/APP-BRIEF.txt",
-      "size": 827,
-      "sha256": "52332c0a8a387306e8fd39be92c23360768b81e5668cd7e9ac1c25101924b7d9"
+      "size": 1009,
+      "sha256": "9ac9a4a22348d1df75c6c52c64be2828567de954845719d50a1901ec0d02416b"
     },
     {
       "path": "grokme/BUILDER-PROMPT.txt",
-      "size": 2048,
-      "sha256": "fc57f56daa927c2a78a53e56be7134fbe704796f9a1e2c8946ff0c63e6832e5d"
+      "size": 2579,
+      "sha256": "c1822e713de996fdde96813a6fa755519474f736c186f91f3a02372ce5b87f64"
     },
     {
       "path": "grokme/FEATURES.txt",
-      "size": 996,
-      "sha256": "39c73190e1c1d22d5ed8f45af37ec14df9e082cc590129376b4de436c389a95f"
+      "size": 1532,
+      "sha256": "8e86a4987104131a04d44b0cfd17df337ea741680250534eddc9e39106faad86"
     },
     {
       "path": "grokme/UPDATE-PROMPT.txt",
-      "size": 676,
-      "sha256": "ba191a9dcfec04865a2678c8ae04e36e5e6380742b8f32ddef23b2c9acb89cac"
+      "size": 874,
+      "sha256": "f00b00f92e57c455fb3a8e7972ed17fd4e8d0b65769d0723e9b653f81cd611f6"
     },
     {
       "path": "index.html",
-      "size": 8841,
-      "sha256": "c1bc84c018fe39dd9fc62b301d9983448ab175fe6e8b39a2ec7d10e617d2b68a"
+      "size": 17270,
+      "sha256": "ecbff8f888d80400026898274aa4c3c6b017d7fdf9a08ab21a491e9e6e163e04"
     },
     {
       "path": "js/archive.js",
-      "size": 11259,
-      "sha256": "9fe7aedc254e63d5f9505da63a7a016bcf19eaffc19134f99d5057db4d0fd6fe"
+      "size": 5759,
+      "sha256": "bbc85c3cb311e7b74e2169a3ac13c6df36c1f0427e8219c23800c92885021b72"
     },
     {
       "path": "js/assistant.js",
-      "size": 9196,
-      "sha256": "886c20ef2900eec0be96a4b274341cc2a258a7c03014bf3334c92367d80a2ec5"
+      "size": 9242,
+      "sha256": "d6c433d4e27c90d295937c0b2065953b3f3e33f135261f95aad460ff073de723"
     },
     {
       "path": "js/audio-mix.js",
@@ -161,13 +211,28 @@
     },
     {
       "path": "js/callouts.js",
-      "size": 22194,
-      "sha256": "91335a462c00d443f2ae12acad52b677a972bb9fd9ae6239d606b8b5a36a341a"
+      "size": 22335,
+      "sha256": "e63d77af1f9a9af49f5852183fe7cb3f9b13828a4c03edbee7bad08d1d96f27f"
     },
     {
       "path": "js/captions.js",
       "size": 3029,
       "sha256": "9a140bee087f0c28476767c26b2e88cb11ecbe5ede7befb7382df63d50f4ce7d"
+    },
+    {
+      "path": "js/catalog.js",
+      "size": 5662,
+      "sha256": "458e5699a536f78f3c8c22b8e665714e40d6d3a17ab4a763531cb2e3c6740ac8"
+    },
+    {
+      "path": "js/claims.js",
+      "size": 26640,
+      "sha256": "13001d2459f3f60f2250b955560bf62291e2e70df1bfebab8b32ece472340e92"
+    },
+    {
+      "path": "js/commands.js",
+      "size": 33042,
+      "sha256": "95646e7987ae641ab06d0c2077ff339ae54c97dd0f72ed74935075df5d9cb215"
     },
     {
       "path": "js/content-layer.js",
@@ -176,33 +241,58 @@
     },
     {
       "path": "js/events-map.js",
-      "size": 13563,
-      "sha256": "a69311f6b8a17c5035860e25e8ad2cfb6811860c66eaf9bcfab8fb7a280f1ea3"
+      "size": 14361,
+      "sha256": "64c07d049694d4c24c7c0ea65fbf1551d442a82ad160546af531113d0ed6dcaa"
     },
     {
       "path": "js/events-model.js",
-      "size": 20672,
-      "sha256": "899cf961f2cf1d3bfb62c20b8e04b1a2336652feabb60d0e22f816921d3b161b"
+      "size": 19852,
+      "sha256": "2e74f18f78a38e901cb87373fe3827912ea3e79c77afa407dcd3aee0943a5a57"
     },
     {
       "path": "js/events-ui.js",
-      "size": 17729,
-      "sha256": "373ba11f2febf2a15a9b5d20df8cca072fca3ff43e2b9243b2a79dd0d8f15eec"
+      "size": 17925,
+      "sha256": "6898f13c80313ff1cd2fded110e49ca354be58b65e75fc4fd42641326917c5a8"
     },
     {
-      "path": "js/frog-rundown.js",
-      "size": 18268,
-      "sha256": "fa56cb8ce67d8942de7cd088bcb035c10541c12eed82a446e46946f4378ed07e"
+      "path": "js/frame-export.js",
+      "size": 17265,
+      "sha256": "c5b8d8162fa64939af6b91c2e8c1fd828dd480ba67efe2002271fcf8110f81fb"
+    },
+    {
+      "path": "js/geocode.js",
+      "size": 7179,
+      "sha256": "3147dbb39195ddf6d02a96b1f8812d494ace8621d22747d94e4ca07b33e39304"
+    },
+    {
+      "path": "js/gis.js",
+      "size": 33058,
+      "sha256": "af78559a4f916c9eaa35860c35c8787d1e34445206a3026ffa1e894b5a84f742"
     },
     {
       "path": "js/globe.js",
-      "size": 32056,
-      "sha256": "b4d497aec2a8d0cdb2c9641a63a9a58e4012c4980baa7e6a5de8aef03a6769ad"
+      "size": 42572,
+      "sha256": "db909417ab73e9011e2f7e32d83eb2a583a49432bebe27776ad822e03436bd43"
+    },
+    {
+      "path": "js/layers-panel.js",
+      "size": 16703,
+      "sha256": "4b20ee3d825e83b0f75eb299248ef34341dccf92aa821b128f4d1596f0d33b77"
     },
     {
       "path": "js/layers.js",
-      "size": 8100,
-      "sha256": "feff4ea2c89d6ec21ca36fa70df9d3d99e6eb9947adf642aeee3dec3dd574005"
+      "size": 19923,
+      "sha256": "7d742c418f970d3f659a5798ceb4a6f3ce2681e73a2b13b68b14b2864e362e47"
+    },
+    {
+      "path": "js/layout.js",
+      "size": 39211,
+      "sha256": "cb7fa210cbb1feae966954849aa420f9c3ba541d9337eb204f2e36dbff1fe70f"
+    },
+    {
+      "path": "js/map-pointer.js",
+      "size": 11385,
+      "sha256": "e2977aee6a293ed3f4b6008e1278a64a61bde0654ca94d78f4e5169a031cded5"
     },
     {
       "path": "js/media.js",
@@ -211,28 +301,53 @@
     },
     {
       "path": "js/model.js",
-      "size": 15956,
-      "sha256": "a63c57385febe061c24d97287fcf559b91eceffcda4ed4fc79bb32126f305b93"
+      "size": 13747,
+      "sha256": "bbbc25f6c673df107f18ede6fc9d2c2df3e46a63b617d031601156eadfb01ffe"
+    },
+    {
+      "path": "js/newsdesk.js",
+      "size": 25813,
+      "sha256": "e85896b353a52c5e5ff9299461d410f4fbcdfdf9b5ee070dd929ec3a8350ec2a"
+    },
+    {
+      "path": "js/outbound.js",
+      "size": 5607,
+      "sha256": "e8bb4c9b931c8f71859b8cba0dd1b094f978417f600e47c0a8aa6611c01f2e66"
     },
     {
       "path": "js/playback.js",
-      "size": 6036,
-      "sha256": "51f35e4fc6e521c7658e690380c90cf9f1f03177a3d0a29b01f47644e4b50e8c"
+      "size": 9386,
+      "sha256": "3cc6d5c867b2e6c2e66c77d8d3fefb9b4de0711d384d2fa4167a3a685420c122"
     },
     {
       "path": "js/project-io.js",
-      "size": 4749,
-      "sha256": "c588b7f916bdb71fb2776daf5c1da67d958fe6f83340e55242439242ca0fa639"
+      "size": 4807,
+      "sha256": "fd951f8737b84cf924e75f936af6e6b4ad5c0a5076e18cc41406700e34da28bd"
     },
     {
       "path": "js/recorder.js",
-      "size": 19680,
-      "sha256": "2b44553ece5a06829911252d7149ce772fe7d3b5b73f3d96950e31ae54bb15d7"
+      "size": 24006,
+      "sha256": "bfd03c6841bf3abe2dd103237152aecce88791ef77d622e1f60183e8d7112d2a"
+    },
+    {
+      "path": "js/records.js",
+      "size": 26144,
+      "sha256": "21bb758bb09659f607e6fb14a9a65dff34094330d0688259611c340d005359e8"
     },
     {
       "path": "js/render.js",
-      "size": 3213,
-      "sha256": "4eda3fd9ced428bb807fbc62a51f143d8757326ae45c24958d04f0b6a12c0e06"
+      "size": 3833,
+      "sha256": "d0036d8ab91ef94db789283a14c9eb5e5f0e73dbc176cbb5a1f6e7a7a54b5273"
+    },
+    {
+      "path": "js/research.js",
+      "size": 23991,
+      "sha256": "4e0a6a3981f7c901d37f2b561462e6794a1022ee22948aea7ec353018965da77"
+    },
+    {
+      "path": "js/reset-view.js",
+      "size": 1916,
+      "sha256": "e800cee21555dadae821df293159fade049b3e0b32af5e4844150c73126de226"
     },
     {
       "path": "js/sanitize.js",
@@ -241,13 +356,18 @@
     },
     {
       "path": "js/schema.js",
-      "size": 32673,
-      "sha256": "282f7079b8d2adcf5237b45915e696b7b5caa8da277874b49de6c1fd871e984f"
+      "size": 71170,
+      "sha256": "9e8459ee8273bd645589d9b903c0522604b137effe4e605dd5e46945ccd0c52c"
     },
     {
       "path": "js/settings.js",
       "size": 3406,
       "sha256": "0236cad8a5973ba682032d2c7f5f62d3bab98bc25b9d959204e073320d2745a1"
+    },
+    {
+      "path": "js/share-pack.js",
+      "size": 7634,
+      "sha256": "b4435366edfb7f8ead0ab1a4e85761139f091d11d38524d6bb61d91b5137f862"
     },
     {
       "path": "js/store.js",
@@ -256,18 +376,23 @@
     },
     {
       "path": "js/themes.js",
-      "size": 2923,
-      "sha256": "726ac73e75c55ce7e18c8f80dd843b896060c94be63b716dcb23a6a269467991"
+      "size": 2493,
+      "sha256": "b747375ff0a11495110fd2aa86da2da07f2917acbda2a47779ecf3a750f8904c"
     },
     {
       "path": "js/ui.js",
-      "size": 66872,
-      "sha256": "c4af5db899c7d919a9685fde99dff8e20aac8a73dfb077629997c6a5783909fa"
+      "size": 85131,
+      "sha256": "5a55595f5fc63098f4efa9315f06ace9e8cdc3f4e5969ed3e46acacc9b81e497"
     },
     {
       "path": "js/version.js",
-      "size": 792,
-      "sha256": "d4fe6ecbf5b26cc391e0aa037e1841673f3e6606233e3d480f80750ef4ad4953"
+      "size": 886,
+      "sha256": "3cf632630c6c42cdc438801057b9c3a00cdbff87d8c8f6e2026d5a7b1ee9998b"
+    },
+    {
+      "path": "js/year-clock.js",
+      "size": 26652,
+      "sha256": "03d9e8ef5e7e75530bfcd3f93933d9b83c99e1a0069d9682ecd67e42dd330e8c"
     },
     {
       "path": "js/zip.js",
@@ -275,14 +400,104 @@
       "sha256": "33cd1d140e326781c7792065ea75844006627193c1ad39b4771226b9d6e96926"
     },
     {
+      "path": "newsdesk/README.md",
+      "size": 473,
+      "sha256": "742aeb02d1fd3811545c092924eebad9af22f2b1b410c0d3bdf7059330889e28"
+    },
+    {
+      "path": "newsdesk/catalog.json",
+      "size": 41613,
+      "sha256": "4f23b5af599ae266fbef1c4a08a983d2d2ddd49642ad97f79e3a6c627d60abc9"
+    },
+    {
+      "path": "newsdesk/claims.json",
+      "size": 1511,
+      "sha256": "88e3048bce427b34bbf979da67a5568fd035f34ea9ba6d3f63b5851b82c03a3f"
+    },
+    {
+      "path": "newsdesk/episodes/newsdesk-chokepoints.globedesk.json",
+      "size": 14125,
+      "sha256": "d55a92186c549ed1b7c1cb2d09bafdf65e964f85acf9abcb7f49edb9908ebb79"
+    },
+    {
+      "path": "newsdesk/episodes/newsdesk-civic.globedesk.json",
+      "size": 22353,
+      "sha256": "86be8246555af72692b5fd0cbc7a171371683287dae41e5ffa81c79792505d37"
+    },
+    {
+      "path": "newsdesk/episodes/newsdesk-memory.globedesk.json",
+      "size": 23290,
+      "sha256": "97586b5a22796b450cc5cfc64d9d28d2d93b6f86110dddfe9455700ced7d3374"
+    },
+    {
+      "path": "newsdesk/episodes/newsdesk-science.globedesk.json",
+      "size": 24327,
+      "sha256": "3a4a127de508e2bb624a495fa63102949c6f36370bad97bc4ee5ea38ea9d1bc9"
+    },
+    {
+      "path": "newsdesk/outbound.json",
+      "size": 1309,
+      "sha256": "0d94b21c22412171e988b97839d088dc83c151dc8e23a615d9d798c43d0b9bb6"
+    },
+    {
+      "path": "newsdesk/records.json",
+      "size": 5220,
+      "sha256": "6f7204b3f576310f74b7d36a949e2108949415072ebb8dd10dd647a995721c00"
+    },
+    {
+      "path": "newsdesk/research.json",
+      "size": 2371,
+      "sha256": "82a1706b2b39bda6916620ec2bbfc5465a242b361479d51d285f499a78e94314"
+    },
+    {
+      "path": "newsdesk/sections.json",
+      "size": 2384,
+      "sha256": "40b310f8f31eab5980dd827ddc5e04cc3af1a5382d09fa49bc7cc225f172750b"
+    },
+    {
+      "path": "newsdesk/topics/newsdesk-50.globedesk.json",
+      "size": 349941,
+      "sha256": "cbb92541f4139c830eb0db250047cd7365e311c7b63855a736a0544580758c8d"
+    },
+    {
       "path": "package.json",
-      "size": 515,
-      "sha256": "c7b225431af8f2c5925eb4327b6ddb9b8efdeebe123c9d9b56335a6bc1c1ffbb"
+      "size": 982,
+      "sha256": "8d4418c44c41fdc8c2fe7b3f73fb1545339f0c09e72fba52f88af939b85db6ed"
+    },
+    {
+      "path": "schema/globedesk-claims.schema.json",
+      "size": 3255,
+      "sha256": "627a0149ef658b50ad1e86560756e249144c8d2967c1e15fdebfb33fbf696a29"
+    },
+    {
+      "path": "schema/globedesk-outbound.schema.json",
+      "size": 2949,
+      "sha256": "d1dada22822974730da8253570b3386c5e4ffb5a300f1bbd768e06f41e2733bb"
+    },
+    {
+      "path": "schema/globedesk-records.schema.json",
+      "size": 4010,
+      "sha256": "afae7b5954d30d572af3e3996603491c70beb8b0d8571d54890dec97c77d9836"
+    },
+    {
+      "path": "schema/globedesk-research.schema.json",
+      "size": 4331,
+      "sha256": "94e5efa8854ea49b4811f0ad0ed5f25b66bd64f2088af7b0944a7a20d9c3b386"
     },
     {
       "path": "schema/globedesk-story.schema.json",
-      "size": 27668,
-      "sha256": "2df9c689ef5660f8255bec28d93d260306ba92a99346a390c3e4f5140b3fd2c5"
+      "size": 28436,
+      "sha256": "34e90fa30ec11540628e8bc1fe2e2f968c1a3f2ea09e5bb478068d89b2370807"
+    },
+    {
+      "path": "share/player.css",
+      "size": 3804,
+      "sha256": "6cde320a7910f0c2f070d250d6ca4152cd3dc09c478691137336883a31c4b8cc"
+    },
+    {
+      "path": "share/player.js",
+      "size": 10831,
+      "sha256": "66fa29c9a3175a749e83b55a6dbca87b4d2ad3fcb53873c7edb2765d78ffa34d"
     },
     {
       "path": "vendor/LICENSE-maplibre.txt",
@@ -290,9 +505,19 @@
       "sha256": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2"
     },
     {
+      "path": "vendor/LICENSE-mediabunny.txt",
+      "size": 16726,
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+    },
+    {
       "path": "vendor/MAPLIBRE-PATCHES.md",
       "size": 1708,
       "sha256": "8dd63d3cb6767577f4e26500542569cb323a6f9d56d787a38204d5fae310b2db"
+    },
+    {
+      "path": "vendor/MEDIABUNNY.md",
+      "size": 899,
+      "sha256": "9bb184e164f8f15994d35fc22668113a262ae358052d5b9e7637ad001ecbe9f2"
     },
     {
       "path": "vendor/maplibre-gl.css",
@@ -303,10 +528,15 @@
       "path": "vendor/maplibre-gl.js",
       "size": 1058116,
       "sha256": "0cbd608d819c9d824070c26243afc1a0e28820ec7bf0e6090bf998e5339d8d1d"
+    },
+    {
+      "path": "vendor/mediabunny-1.66.2.min.js",
+      "size": 759043,
+      "sha256": "8a0e529432f11a94be04a737005eac7581c4b6687783e0b5fe7cb8c8fd510692"
     }
   ],
   "totals": {
-    "files": 59,
-    "bytes": 2791227
+    "files": 105,
+    "bytes": 4587288
   }
 }

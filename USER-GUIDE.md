@@ -6,7 +6,7 @@ GlobeDesk is a local studio. There is no account and no server. Everything you c
 
 1. Put the app folder somewhere convenient, for example `C:\GlobeDesk`, so that `index.html` is in that folder.
 2. Windows: double-click `START-GLOBEDESK.bat`. Any OS: run `python3 tools/serve.py` (or `python3 -m http.server 8080 --bind 127.0.0.1`) and open <http://127.0.0.1:8080>.
-3. The first visit opens **Frogpost**, the labelled sample show by @AdventureNLearn (48 stories, approximate locations, as reported, not verified). It is removable. Click **New blank** to start your own show. Later visits restore the project this browser autosaved. Click **Archive** to see a card for every show and story that has ever been in the desk and bring any of them back.
+3. The first visit opens the **news desk**, with no episode preloaded. Use the section tabs to browse example topics, or click **Workspace** for the full editor. **Sample** loads the short Washington, DC walk (approximate pins). **New blank** starts your own show. Later visits restore the project this browser autosaved. Click **Archive** to see a card for every show and story that has ever been in the desk and bring any of them back.
 
 Do not open `index.html` as a `file://` URL. The browser will block parts of the app.
 
@@ -14,7 +14,7 @@ Do not open `index.html` as a `file://` URL. The browser will block parts of the
 
 - In the rundown, click **+ story**. You can also duplicate, reorder, or delete a story.
 - On the **Story** tab, set the title, summary, date, and a credit if the material is someone else's. Leave **As reported, not independently verified** on unless you have checked the claim yourself.
-- Drop a pin by **clicking the globe**, entering latitude and longitude, or searching the bundled town gazetteer (offline). There is no online address lookup.
+- Drop a pin by **right-clicking the globe** (or a **long press** of about half a second on a touch screen), entering latitude and longitude, or searching the bundled town gazetteer (offline). A plain click or tap selects a pin, card, or feature already on the map; it does not drop a pin. Panning, zooming, or tapping empty map keeps the current selection. Escape or an explicit close clears it. There is no online address lookup.
 - The story pin and the street-level camera target can be different places. Street zoom only runs when that target is on land.
 - Add topic cards, https sources (verified or unverified), captions, and camera keyframes. Unknown facts stay `[UNKNOWN]`.
 
@@ -50,17 +50,28 @@ You can also import from a same-origin `postMessage` (`{ type: "globedesk.import
 
 The default spoken voice is the browser's free speech synthesis.
 
+## Layers
+
+Click **Layers** in the top bar (or press **L**) to see every map layer in one place. Each row has an on/off switch, a one-line description and a small legend. **Show all** turns on every overlay that can sit on the current base map; **Hide all** turns them all off. Pick the base map at the top of the panel. Dated imagery and official GIS layers are further down and stay off until you opt in. **Reset** (H) flies back to the starting globe without changing your layers.
+
+## Export MP4 and share packs
+
+Click **Export** in the top bar.
+
+- **MP4:** choose 16:9 or 9:16 and a length, then **Export MP4**. The app renders every frame in order, so the file is smooth even on a slow machine; it can take longer than real time. Sound is AAC when the browser supports it. If it cannot, and you have installed FFmpeg yourself, GlobeDesk converts on this computer; otherwise you get a WebM. Nothing is uploaded. FFmpeg is optional and not part of GlobeDesk; your copy keeps its own GPL/LGPL licence.
+- **Share pack:** give a label (PUBLIC, RECORDED or PROJECTED) and a licence for your own text, choose the map (outline globe, or a Blue Marble or EOX region pack you have already downloaded), then **Check**. Read the report, tick the confirm box, and **Build** to download one `.globedesk.html`. Anyone can open it by double-clicking; it plays read-only with no server and no internet. Stories without a real source, with a non-commercial licence, or with a name or private-data hit are refused. Media files are not included yet.
+
 ## Save, load and record
 
 - The desk **autosaves** in this browser (IndexedDB).
 - **Save JSON** writes a `.globedesk.json` episode (no media bytes).
 - **Save project** writes a `.globedesk` pack (JSON plus media) you can copy to another machine. Open accepts both, and still accepts older `.gobedesk.json`.
-- **Record WebM** captures the stage locally at 16:9 or 9:16, including mixed sound overlays. Nothing is uploaded.
+- **Record WebM** (●) captures the stage locally in real time at 16:9 or 9:16, including mixed sound overlays. Nothing is uploaded.
 - You are responsible for the rights to anything you upload or share.
 
 ## Captions and accessibility
 
-Captions can be auto-built from the script, imported as SRT or WebVTT, and optionally burned into the recording (they are on by default in the Frogpost look). The Readable view shows full titles, citations, cards and captions as text. Truncated titles and citations on the stage show their full text on hover or click. Controls are keyboard reachable and labelled.
+Captions can be auto-built from the script, imported as SRT or WebVTT, and optionally burned into the recording (they are on by default in the GlobeDesk look). The Readable view shows full titles, citations, cards and captions as text. Truncated titles and citations on the stage show their full text on hover or click. Controls are keyboard reachable and labelled.
 
 ## Grok.me
 

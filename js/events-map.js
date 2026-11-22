@@ -10,6 +10,15 @@
   const SRC = ["gd-ev-zone", "gd-ev-line", "gd-ev-pt", "gd-ev-head", "gd-ev-ripple", "gd-ev-sel", "gd-ev-draft"];
 
   function layersOf() { return (GD.state.episode && GD.state.episode.eventLayers) || []; }
+  function displayLayers() {
+    const project = layersOf();
+    const nd = GD.newsdesk && GD.newsdesk.state && GD.newsdesk.state.view === "newsdesk";
+    if (!nd || !GD.records || !GD.records.newsdeskLayers) return project;
+    const extra = GD.records.newsdeskLayers() || [];
+    const seen = {};
+    project.forEach((l) => { if (l && l.id) seen[l.id] = true; });
+    return project.concat(extra.filter((l) => l && l.id && !seen[l.id]));
+  }
   function colorFor(layer, f) {
     const c = E().CATEGORIES[f.properties.category];
     return layer.styleByCategory && c ? c.color : layer.color;
@@ -29,7 +38,7 @@
   function visibleFeatures() {
     const c = clock(), S = GD.state, story = S.episode.stories[S.storyIdx];
     const out = [];
-    layersOf().forEach((l, li) => {
+    displayLayers().forEach((l, li) => {
       if (!l.visible) return;
       l.features.forEach((f) => {
         if (!f.geometry) return;
@@ -120,6 +129,14 @@
     let pulse;
     try { pulse = m.getLayer("ev-pt-pulse"); } catch (e) { return; }
     if (!pulse) return;
+    if (GD.mapPointer && GD.mapPointer.reduceMotion && GD.mapPointer.reduceMotion()) {
+      if (!em._pulseQuiet) {
+        em._pulseQuiet = true;
+        try { m.setPaintProperty("ev-pt-pulse", "circle-radius", 10); m.setPaintProperty("ev-pt-pulse", "circle-opacity", 0.2); } catch (e) { /* ignore */ }
+      }
+      return;
+    }
+    em._pulseQuiet = false;
     if (now - em.lastData < 40) return;
     em.lastData = now;
     const ph = (now / 1400) % 1;
@@ -174,9 +191,12 @@
   }
   function wireMap(map) {
     map.on("click", (e) => {
-      if (em.mode !== "select") { addVertex([e.lngLat.lng, e.lngLat.lat]); return; }
-      const hits = map.queryRenderedFeatures(e.point, { layers: ["ev-pt", "ev-line", "ev-head", "ev-zone-fill"].filter((id) => map.getLayer(id)) });
-      if (hits.length) { select(hits[0].properties.id); GD.eventsUI && GD.eventsUI.open(); }
+      // In select mode the single map-pointer dispatcher owns the click (C2).
+      if (em.mode === "select") return;
+      const oe = e.originalEvent || {};
+      if (GD.mapPointer && !GD.mapPointer.isPrimaryClick(oe)) return;
+      if ((oe.detail || 1) > 1) return;
+      addVertex([e.lngLat.lng, e.lngLat.lat]);
     });
     map.on("dblclick", (e) => { if (em.mode === "line" || em.mode === "polygon") { e.preventDefault(); finish(); } });
   }

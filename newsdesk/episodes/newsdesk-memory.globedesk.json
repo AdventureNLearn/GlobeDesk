@@ -1,0 +1,591 @@
+{
+  "schema": "globedesk.episode/2",
+  "id": "ep-newsdesk-memory",
+  "show": "GlobeDesk Newsdesk",
+  "title": "Newsdesk story: three memorials",
+  "date": "2026-11-21",
+  "lede": "A short three-story flight to official memorials at Hiroshima, Robben Island and the Normandy American Cemetery, cited from UNESCO, UNESCO, and the American Battle Monuments Commission. Pins are approximate or rounded from a listed UNESCO point.",
+  "cta": "Open in GlobeDesk and browse the rundown, or press Play to fly the stories in order.",
+  "links": [
+    {
+      "label": "UNESCO World Heritage Centre, Hiroshima Peace Memorial (Genbaku Dome)",
+      "url": "https://whc.unesco.org/en/list/775/"
+    },
+    {
+      "label": "UNESCO World Heritage Centre, Robben Island",
+      "url": "https://whc.unesco.org/en/list/916/"
+    },
+    {
+      "label": "American Battle Monuments Commission, About Normandy American Cemetery",
+      "url": "https://www.abmc.gov/cemeteries-memorials/about-normandy-american-cemetery/"
+    }
+  ],
+  "demo": true,
+  "sample": true,
+  "look": {
+    "label": "Newsdesk — lower third, boxed captions",
+    "theme": "newsdesk",
+    "header": false,
+    "headerBadge": "NEWSDESK",
+    "headerHeightPct": 12,
+    "citations": true,
+    "captionsOn": true,
+    "captionStyle": "box",
+    "captionSize": "medium",
+    "captionLines": 2,
+    "captionZonePct": 15,
+    "lowerThird": true,
+    "ticker": false,
+    "music": false,
+    "coldOpen": false,
+    "shotSec": 10,
+    "palette": {
+      "bg": "#02040c",
+      "ink": "#eaf6ff",
+      "accent": "#e7c766",
+      "highlight": "#5ee7ff",
+      "panel": "rgba(12, 24, 56, 0.42)",
+      "outroBg": "#02040c"
+    },
+    "map": {
+      "base": "ofm-dark",
+      "softBorders": true,
+      "highlightGlow": true,
+      "countryLabels": "style"
+    },
+    "safeArea": true
+  },
+  "handle": "",
+  "outro": {
+    "enabled": false,
+    "durationSec": 0,
+    "line1": "",
+    "link": "",
+    "handle": "",
+    "showXLogo": false
+  },
+  "output": {
+    "aspect": "16:9",
+    "fps": 30
+  },
+  "stories": [
+    {
+      "id": "story-nd-hiroshima-peace-memorial",
+      "slug": "hiroshima-peace-memorial",
+      "title": "Hiroshima Peace Memorial, preserved after 6 August 1945",
+      "summary": "UNESCO says the Hiroshima Peace Memorial (Genbaku Dome) was the only structure left standing near where the first atomic bomb exploded on 6 August 1945, and that it was inscribed on the World Heritage List in 1996.",
+      "date": "1945-08-06",
+      "credit": "UNESCO World Heritage Centre",
+      "creditUrl": "https://whc.unesco.org/en/list/775/",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "Hiroshima Peace Memorial (UNESCO listed point, approx.)",
+        "lat": 34.396,
+        "lon": 132.454,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Pin rounded from the UNESCO listed point N34 23 44.002 E132 27 13, read 21 Nov 2026.",
+        "a3": "JPN"
+      },
+      "script": "UNESCO says the Hiroshima Peace Memorial, the Genbaku Dome, was the only structure left standing near where the first atomic bomb exploded on 6 August 1945, and that it has been preserved in that state. It was inscribed on the World Heritage List in 1996. The pin follows the listed UNESCO point.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 3.2,
+          "text": "Hiroshima Peace Memorial."
+        },
+        {
+          "start": 3.2,
+          "end": 6.4,
+          "text": "Preserved from 6 August 1945; listed in 1996."
+        },
+        {
+          "start": 6.4,
+          "end": 8,
+          "text": "The pin follows the UNESCO listed point."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-hiroshima-peace-memorial-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            132.454,
+            34.396
+          ],
+          "zoom": 15,
+          "pitch": 42,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-hiroshima",
+          "kind": "topic",
+          "title": "Hiroshima Peace Memorial",
+          "body": "The UNESCO World Heritage Centre page for the Hiroshima Peace Memorial (Genbaku Dome), list 775, says the memorial was the only structure left standing in the area where the first atomic bomb exploded on 6 August 1945, that it has been preserved in the same state as immediately after the bombing, and that it expresses the hope for world peace and the ultimate elimination of all nuclear weapons. Date of inscription is 1996. The brief synthesis identifies the ruin as the surviving remains of the Hiroshima Prefectural Industrial Promotional Hall, constructed in 1914, and gives the inscribed property as 0.40 hectares, with a 42.7-hectare buffer zone that includes the Peace Memorial Park.",
+          "why": "An official World Heritage memorial of a mapped historic event.",
+          "facts": [
+            {
+              "label": "6 August 1945",
+              "value": "UNESCO: the only structure left standing near the first atomic bomb explosion."
+            },
+            {
+              "label": "Inscribed",
+              "value": "1996 (UNESCO World Heritage Centre)."
+            },
+            {
+              "label": "Building",
+              "value": "Surviving remains of the Hiroshima Prefectural Industrial Promotional Hall, constructed in 1914."
+            },
+            {
+              "label": "Pin",
+              "value": "Rounded from the UNESCO listed point."
+            }
+          ],
+          "sourceIds": [
+            "src-unesco-hiroshima"
+          ],
+          "pin": {
+            "lat": 34.396,
+            "lon": 132.454
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-unesco-hiroshima",
+          "label": "UNESCO World Heritage Centre, Hiroshima Peace Memorial (Genbaku Dome)",
+          "url": "https://whc.unesco.org/en/list/775/",
+          "status": "verified",
+          "note": "Official UNESCO listing page, inscribed 1996, read 21 Nov 2026. Pin rounded from the listed point on this page."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "JPN",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "id": "story-nd-robben-island",
+      "slug": "robben-island",
+      "title": "Robben Island, a World Heritage prison site",
+      "summary": "UNESCO describes Robben Island as having been used between the 17th and 20th centuries as a prison, a hospital for socially unacceptable groups, and a military base. Its late-20th-century maximum security prison for political prisoners, it says, witnesses the triumph of democracy and freedom over oppression and racism.",
+      "date": "",
+      "credit": "UNESCO World Heritage Centre",
+      "creditUrl": "https://whc.unesco.org/en/list/916/",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "Robben Island (approx.)",
+        "lat": -33.81,
+        "lon": 18.37,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Approximate pin for Robben Island, off Cape Town. A surveyed prison-building coordinate is [UNKNOWN] in this card. The UNESCO inscription year is [UNKNOWN] in this card because it was not captured from the listing page that was read.",
+        "a3": "ZAF"
+      },
+      "script": "UNESCO describes Robben Island as a prison, hospital and military base between the 17th and 20th centuries, whose late-20th-century maximum security prison for political prisoners witnesses the triumph of democracy and freedom over oppression and racism. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 2.6,
+          "text": "Robben Island, off Cape Town."
+        },
+        {
+          "start": 2.6,
+          "end": 6.4,
+          "text": "UNESCO: a prison site that witnesses democracy's triumph."
+        },
+        {
+          "start": 6.4,
+          "end": 8,
+          "text": "The pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-robben-island-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            18.37,
+            -33.81
+          ],
+          "zoom": 13,
+          "pitch": 42,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-robben-island",
+          "kind": "topic",
+          "title": "Robben Island",
+          "body": "The UNESCO World Heritage Centre page for Robben Island (list 916) says the island was used at various times between the 17th and 20th centuries as a prison, a hospital for socially unacceptable groups and a military base, and that its buildings, particularly the late-20th-century maximum security prison for political prisoners, witness the triumph of democracy and freedom over oppression and racism. The brief synthesis also notes 17th-century quarries and a maximum security prison of the Apartheid period that began in the 1960s, and says this use came to an end in the 1990s when political prisoners received their freedom. The official 2001 UNESCO World Heritage List PDF records the inscription year as 1999 (id 916). The listed property area is 475 hectares.",
+          "why": "An official World Heritage account of a mapped site of imprisonment and political change.",
+          "facts": [
+            {
+              "label": "Use",
+              "value": "Prison, hospital and military base, 17th to 20th centuries (UNESCO)."
+            },
+            {
+              "label": "20th-century prison",
+              "value": "Maximum security prison for political prisoners from the 1960s; this use ended in the 1990s (same page)."
+            },
+            {
+              "label": "Inscription year",
+              "value": "1999 (UNESCO World Heritage List, id 916, official 2001 list PDF)."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate island stand-in. Surveyed coordinate [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-unesco-robben",
+            "src-unesco-list01"
+          ],
+          "pin": {
+            "lat": -33.81,
+            "lon": 18.37
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-unesco-robben",
+          "label": "UNESCO World Heritage Centre, Robben Island",
+          "url": "https://whc.unesco.org/en/list/916/",
+          "status": "verified",
+          "note": "Official UNESCO listing page, read 21 Nov 2026. Inscription year was not captured from the fetched page and is marked [UNKNOWN]. Pin coordinates are not taken from this page."
+        },
+        {
+          "id": "src-unesco-list01",
+          "label": "UNESCO, World Heritage List (2001 official list PDF)",
+          "url": "https://whc.unesco.org/archive/list01-eng.pdf",
+          "status": "verified",
+          "note": "Official UNESCO list PDF, read 21 Nov 2026. Records Robben Island as inscribed in 1999 (id 916). The listing-page Date of Inscription field was not present in the extract that could be read."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "ZAF",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "id": "story-nd-normandy-american-cemetery",
+      "slug": "normandy-american-cemetery",
+      "title": "Normandy American Cemetery at Colleville-sur-Mer",
+      "summary": "The American Battle Monuments Commission says the cemetery at Colleville-sur-Mer stands on the site of the temporary American St. Laurent Cemetery, established by the U.S. First Army on 8 June 1944 as the first American cemetery on European soil in World War II. It was dedicated in 1956.",
+      "date": "1956",
+      "credit": "American Battle Monuments Commission",
+      "creditUrl": "https://www.abmc.gov/cemeteries-memorials/about-normandy-american-cemetery/",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "Normandy American Cemetery, Colleville-sur-Mer (approx.)",
+        "lat": 49.36,
+        "lon": -0.86,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Approximate pin for the ABMC cemetery above the Normandy landing beaches. A surveyed gate coordinate is [UNKNOWN] in this card. Not a street address.",
+        "a3": "FRA"
+      },
+      "script": "The American Battle Monuments Commission says the Normandy American Cemetery at Colleville-sur-Mer stands on the site of the temporary St. Laurent Cemetery, established by the U.S. First Army on 8 June 1944. The cemetery was dedicated in 1956. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 3,
+          "text": "Normandy American Cemetery."
+        },
+        {
+          "start": 3,
+          "end": 6.2,
+          "text": "On the first American cemetery site of 8 June 1944."
+        },
+        {
+          "start": 6.2,
+          "end": 8,
+          "text": "The pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-normandy-american-cemetery-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            -0.86,
+            49.36
+          ],
+          "zoom": 14,
+          "pitch": 42,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-normandy",
+          "kind": "topic",
+          "title": "Normandy American Cemetery",
+          "body": "The official American Battle Monuments Commission page lists the Normandy American Cemetery at Colleville-sur-Mer, France, as dedicated in 1956, covering 172.5 acres, with 9,389 burials and 1,557 missing in action. The overview says it stands on the site of the temporary American St. Laurent Cemetery, established by the U.S. First Army on 8 June 1944 as the first American cemetery on European soil in World War II, and that most of those buried lost their lives in the D-Day landings and ensuing operations. An official American Battle Monuments Commission booklet dates the dedication to 18 July 1956.",
+          "why": "An official U.S. overseas cemetery on the mapped D-Day shore.",
+          "facts": [
+            {
+              "label": "Temporary cemetery",
+              "value": "Established 8 June 1944 by the U.S. First Army (ABMC)."
+            },
+            {
+              "label": "Dedicated",
+              "value": "18 July 1956 (American Battle Monuments Commission official booklet)."
+            },
+            {
+              "label": "As listed by ABMC",
+              "value": "172.5 acres; 9,389 burials; 1,557 missing in action."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate Colleville-sur-Mer stand-in. Surveyed coordinate [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-abmc-normandy",
+            "src-abmc-normandy-booklet"
+          ],
+          "pin": {
+            "lat": 49.36,
+            "lon": -0.86
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-abmc-normandy",
+          "label": "American Battle Monuments Commission, About Normandy American Cemetery",
+          "url": "https://www.abmc.gov/cemeteries-memorials/about-normandy-american-cemetery/",
+          "status": "verified",
+          "note": "Official ABMC page, read 21 Nov 2026. Burial and missing figures are taken as listed on that page. Pin coordinates are not taken from this page."
+        },
+        {
+          "id": "src-abmc-normandy-booklet",
+          "label": "American Battle Monuments Commission, Normandy booklet (2025)",
+          "url": "https://www.abmc.gov/wordpress-uploads/EN_Normandy_Booklet_2025.pdf",
+          "status": "verified",
+          "note": "Official ABMC booklet, read 21 Nov 2026. Dates the dedication to 18 July 1956."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "FRA",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    }
+  ],
+  "eventLayers": [
+    {
+      "id": "evl-ep-newsdesk-memory",
+      "name": "Newsdesk story: three memorials (approximate pins)",
+      "color": "#5ee6ff",
+      "icon": "●",
+      "visible": true,
+      "labels": true,
+      "styleByCategory": true,
+      "scope": "all",
+      "note": "Short newsdesk story episode. Pins are approximate unless a cited official page published a coordinate.",
+      "features": [
+        {
+          "type": "Feature",
+          "id": "ev-nd-hiroshima-peace-memorial",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              132.454,
+              34.396
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "Hiroshima Peace Memorial, preserved after 6 August 1945",
+            "eventTime": "1945-08-06",
+            "eventEnd": "",
+            "timeApprox": false,
+            "datePrecision": "day",
+            "category": "other",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-unesco-hiroshima",
+                "label": "UNESCO World Heritage Centre, Hiroshima Peace Memorial (Genbaku Dome)",
+                "url": "https://whc.unesco.org/en/list/775/",
+                "status": "verified",
+                "note": "Official UNESCO listing page, inscribed 1996, read 21 Nov 2026. Pin rounded from the listed point on this page."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "UNESCO World Heritage Centre",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "UNESCO says the Hiroshima Peace Memorial (Genbaku Dome) was the only structure left standing near where the first atomic bomb exploded on 6 August 1945, and that it was inscribed on the World Heritage List in 1996.",
+            "precisionLabel": "Precision: approximate",
+            "radiusKm": null,
+            "cardId": "card-nd-hiroshima",
+            "storyId": "story-nd-hiroshima-peace-memorial",
+            "example": true
+          }
+        },
+        {
+          "type": "Feature",
+          "id": "ev-nd-robben-island",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              18.37,
+              -33.81
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "Robben Island, a World Heritage prison site",
+            "eventTime": "",
+            "eventEnd": "",
+            "timeApprox": true,
+            "datePrecision": "unknown",
+            "category": "other",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-unesco-robben",
+                "label": "UNESCO World Heritage Centre, Robben Island",
+                "url": "https://whc.unesco.org/en/list/916/",
+                "status": "verified",
+                "note": "Official UNESCO listing page, read 21 Nov 2026. Inscription year was not captured from the fetched page and is marked [UNKNOWN]. Pin coordinates are not taken from this page."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "UNESCO World Heritage Centre",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "UNESCO describes Robben Island as having been used between the 17th and 20th centuries as a prison, a hospital for socially unacceptable groups, and a military base. Its late-20th-century maximum security prison for political prisoners, it says, witnesses the triumph of democracy and freedom over oppression and racism.",
+            "precisionLabel": "Precision: approximate",
+            "radiusKm": null,
+            "cardId": "card-nd-robben-island",
+            "storyId": "story-nd-robben-island",
+            "example": true
+          }
+        },
+        {
+          "type": "Feature",
+          "id": "ev-nd-normandy-american-cemetery",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -0.86,
+              49.36
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "Normandy American Cemetery at Colleville-sur-Mer",
+            "eventTime": "1956-01-01",
+            "eventEnd": "",
+            "timeApprox": true,
+            "datePrecision": "unknown",
+            "category": "military",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-abmc-normandy",
+                "label": "American Battle Monuments Commission, About Normandy American Cemetery",
+                "url": "https://www.abmc.gov/cemeteries-memorials/about-normandy-american-cemetery/",
+                "status": "verified",
+                "note": "Official ABMC page, read 21 Nov 2026. Burial and missing figures are taken as listed on that page. Pin coordinates are not taken from this page."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "American Battle Monuments Commission",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "The American Battle Monuments Commission says the cemetery at Colleville-sur-Mer stands on the site of the temporary American St. Laurent Cemetery, established by the U.S. First Army on 8 June 1944 as the first American cemetery on European soil in World War II. It was dedicated in 1956.",
+            "precisionLabel": "Precision: approximate",
+            "radiusKm": null,
+            "cardId": "card-nd-normandy",
+            "storyId": "story-nd-normandy-american-cemetery",
+            "example": true
+          }
+        }
+      ]
+    }
+  ],
+  "mediaBin": []
+}

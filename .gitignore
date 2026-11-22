@@ -14,4 +14,7 @@ __pycache__/
 
 # Local imagery packs (not in the repo; fetch with tools/fetch_bluemarble_pack.py)
 *.mbtiles
+# Owner's untracked local catalog under GLOBEDESK_DATA: desks/, stories/,
+# claims/, research/, records/, layouts/, settings/, and CATALOG.md.
+# The public tree ships only generic SAMPLE sidecars; personal files stay here.
 globedesk-data/

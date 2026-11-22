@@ -30,7 +30,25 @@ Globe-level NASA Blue Marble imagery (August 2004, shaded relief and bathymetry;
 
 `globedesk-data\bluemarble\BlueMarble_ShadedRelief_Bathymetry-z0-8.mbtiles`
 
-That folder sits under the app folder and is gitignored. Override the parent folder with the `GLOBEDESK_DATA` environment variable. A complete z0–8 pack is 475,246,592 bytes. With the **Python** server running (`tools/serve.py`, used by `START-GLOBEDESK.bat` when Python is available), the desk asks `http://127.0.0.1:<port>/tiles/bluemarble/{z}/{x}/{y}.jpeg`, which looks in the local pack, then a disk cache capped at 256 MiB (`GLOBEDESK_CACHE_MAX_BYTES`), then NASA GIBS. If you start the desk with the PowerShell fallback, `python -m http.server`, or `npm start`, `/tiles` is missing and the overlay uses NASA GIBS directly.
+That folder sits under the app folder and is gitignored. Override the parent folder with the `GLOBEDESK_DATA` environment variable. A complete z0–8 pack is 475,246,592 bytes. With the **Python** server running (`tools/serve.py`, used by `START-GLOBEDESK.bat` when Python is available), the desk asks `http://127.0.0.1:<port>/tiles/bluemarble/{z}/{x}/{y}.jpeg`, which looks in the local pack, then a disk cache (default cap 32 GiB; set `GLOBEDESK_CACHE_MAX_BYTES` — `0` means off, `unlimited` or 1 TiB or larger means no cap), then NASA GIBS. Only the app itself (same Origin or Referer on this port) can stream and fill the cache. If you start the desk with the PowerShell fallback, `python -m http.server`, or `npm start`, `/tiles` is missing and the overlay uses NASA GIBS directly.
+
+## Washington, DC demo-region pack (optional)
+
+A small downtown / National Mall box of EOX Sentinel-2 cloudless 2016 imagery (CC BY 4.0; contains modified Copernicus Sentinel data 2016), used with the GlobeDesk Washington, DC (approx.) stories:
+
+`globedesk-data\regions\washington-dc\eox2016-s2cloudless-2016.mbtiles`
+
+A complete pack is 131 tiles, 1,904,640 bytes (z0–14). Build or resume it with:
+
+```
+py -3 tools\fetch_region_pack.py --out .\globedesk-data\regions\washington-dc
+```
+
+The **Washington, DC demo region** overlay in Layers is served only by the Python server (pack → cache → EOX). Coverage outside that bbox is empty.
+
+A two-story sample episode for this pack is `episodes\washington-dc-demo.globedesk.json`. Open `http://127.0.0.1:8080/index.html?import=/episodes/washington-dc-demo.globedesk.json`. Pins are approximate; facts are cited or marked [UNKNOWN].
+
+The localhost command API (`POST /api/command`, `GET /api/tools`) is also only on the Python server. The PowerShell fallback does not provide it.
 
 To build or resume the pack (rate-limited; safe to re-run):
 

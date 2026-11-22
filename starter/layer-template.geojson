@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "name": "My layer (placeholders, not real data)",
   "globedesk_layer": {
-    "id": "evl-mwpp6mp5-18",
+    "id": "evl-mwr37mjq-1",
     "name": "My layer (placeholders, not real data)",
     "color": "#ff8a1f",
     "icon": "●",
@@ -13,7 +13,7 @@
   "features": [
     {
       "type": "Feature",
-      "id": "ev-mwpp6mp5-19",
+      "id": "ev-mwr37mjq-2",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -47,7 +47,7 @@
     },
     {
       "type": "Feature",
-      "id": "ev-mwpp6mp5-1a",
+      "id": "ev-mwr37mjq-3",
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -87,7 +87,7 @@
     },
     {
       "type": "Feature",
-      "id": "ev-mwpp6mp5-1b",
+      "id": "ev-mwr37mjq-4",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -141,7 +141,7 @@
     },
     {
       "type": "Feature",
-      "id": "ev-mwpp6mp5-1c",
+      "id": "ev-mwr37mjq-5",
       "geometry": {
         "type": "Point",
         "coordinates": [

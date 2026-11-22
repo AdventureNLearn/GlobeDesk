@@ -1,0 +1,76 @@
+{
+  "schema": "globedesk.newsdesk.sections/1",
+  "generated": "2026-11-21",
+  "sections": [
+    {
+      "id": "world",
+      "name": "World",
+      "order": 1,
+      "description": "Places that shape how countries meet, move, and share a planet: headquarters, treaties, and global chokepoints.",
+      "topicCount": 5
+    },
+    {
+      "id": "politics-policy",
+      "name": "Politics & Policy",
+      "order": 2,
+      "description": "Official seats of government and international law, from national parliaments to permanent courts.",
+      "topicCount": 5
+    },
+    {
+      "id": "climate-disasters",
+      "name": "Climate & Disasters",
+      "order": 3,
+      "description": "Observatories, heritage ecosystems, and documented storms, quakes, and volcanic watch posts.",
+      "topicCount": 5
+    },
+    {
+      "id": "science-space",
+      "name": "Science & Space",
+      "order": 4,
+      "description": "Laboratories, launch sites, and observatories that expanded what can be measured from Earth and in space.",
+      "topicCount": 5
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "order": 5,
+      "description": "Documented historic sites and memorials, cited from official heritage and government pages.",
+      "topicCount": 5
+    },
+    {
+      "id": "economy-trade",
+      "name": "Economy & Trade",
+      "order": 6,
+      "description": "Trade houses, financial institutions, and the conference that wrote postwar monetary rules.",
+      "topicCount": 5
+    },
+    {
+      "id": "conflict-security",
+      "name": "Conflict & Security",
+      "order": 7,
+      "description": "Alliance headquarters, battle memorials, armistice sites, and courts that recorded wartime crimes.",
+      "topicCount": 5
+    },
+    {
+      "id": "culture",
+      "name": "Culture",
+      "order": 8,
+      "description": "World Heritage and official cultural landmarks that can be told on a globe.",
+      "topicCount": 5
+    },
+    {
+      "id": "tech",
+      "name": "Tech",
+      "order": 9,
+      "description": "Sites behind timekeeping, computing networks, codebreaking, and big scientific instruments.",
+      "topicCount": 5
+    },
+    {
+      "id": "local-civic",
+      "name": "Local & Civic",
+      "order": 10,
+      "description": "City-scale public works that changed how people move, drink, and share public space.",
+      "topicCount": 5
+    }
+  ]
+}

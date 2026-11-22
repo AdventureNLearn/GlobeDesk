@@ -277,7 +277,7 @@ async function main() {
 
   // 1) US default preview (talk pose), natural pitch
   await ev("window.DemoAudio.setVoice('hfc_male'); window.DemoAudio.setPitch(0); window.DemoAudio.setSpeed(1); window.DemoVoiceLab.refreshLabels();");
-  await playLine("window.__demo.speak('start')", path.join(root, "guide-packs/frogpost/assets/vo/start.wav"), { midShot: "10-voice-lab.png", midAt: 1600 });
+  await playLine("window.__demo.speak('start')", path.join(root, "guide-packs/template/assets/vo/start.wav"), { midShot: "10-voice-lab.png", midAt: 1600 });
 
   // 2) Switch to British at natural pitch (no asetrate; pitch 0 preserves clarity)
   await ev(`(function(){
@@ -291,15 +291,15 @@ async function main() {
   const switched = await ev(`({ voice: DemoAudio.voiceId, lab: DemoAudio.getLab(), src: (DemoAudio.voiceOf(DemoAudio.voiceId) || {}).dir })`);
   log("switched", JSON.stringify(switched));
   if (switched.voice !== "gb") throw new Error("voice did not switch to gb");
-  await playLine("window.__demo.speak('start')", path.join(root, "guide-packs/frogpost/assets/vo/gb/start.wav"));
+  await playLine("window.__demo.speak('start')", path.join(root, "guide-packs/template/assets/vo/gb/start.wav"));
 
   // 3) Success pose
-  await playLine("window.DemoFrog.setExpression('success'); window.__demo.speak('spin-success')", path.join(root, "guide-packs/frogpost/assets/vo/gb/spin-success.wav"), { midShot: "11-pose-success.png", midAt: 900 });
+  await playLine("window.DemoGuide.setExpression('success'); window.__demo.speak('spin-success')", path.join(root, "guide-packs/template/assets/vo/gb/spin-success.wav"), { midShot: "11-pose-success.png", midAt: 900 });
 
   // 4) Hint then salute
-  await ev("window.DemoFrog.setExpression('hint')");
+  await ev("window.DemoGuide.setExpression('hint')");
   await sleep(700);
-  await playLine("window.DemoFrog.setExpression('salute'); window.__demo.speak('finale')", path.join(root, "guide-packs/frogpost/assets/vo/gb/finale.wav"), { midShot: "12-pose-salute.png", midAt: 900 });
+  await playLine("window.DemoGuide.setExpression('salute'); window.__demo.speak('finale')", path.join(root, "guide-packs/template/assets/vo/gb/finale.wav"), { midShot: "12-pose-salute.png", midAt: 900 });
   await sleep(800);
 
   const elapsed = (Date.now() - recT0) / 1000;

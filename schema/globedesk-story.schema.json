@@ -862,6 +862,18 @@
         },
         "eventWindow": {
           "$ref": "#/$defs/eventWindow"
+        },
+        "openIn": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 200, "pattern": "\\S" },
+          "maxItems": 40,
+          "description": "Optional ids from the globedesk.outbound/1 allowlist."
+        },
+        "gisOverlayIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 200, "pattern": "\\S" },
+          "maxItems": 40,
+          "description": "Optional official-GIS registry ids offered with this story. Ids should exist in the bundled data/gis-registry.json (currently ohm). The JS validator warns, and does not reject the episode, when an id is missing from that list (or from a later loaded registry). At runtime unknown ids stay off and show [UNKNOWN]."
         }
       },
       "required": [
@@ -930,8 +942,7 @@
         "theme": {
           "type": "string",
           "enum": [
-            "frog",
-            "ctd",
+            "globedesk",
             "newsdesk"
           ]
         },

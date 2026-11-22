@@ -1,0 +1,43 @@
+{
+  "schema": "globedesk.records/1",
+  "generated": "2026-11-22",
+  "note": "SAMPLE promote fixture. Fictional.",
+  "catalogs": [
+    {
+      "id": "records-promote-sample",
+      "name": "SAMPLE promote catalog",
+      "kind": "event-sequence",
+      "credit": "SAMPLE. example.org",
+      "license": "SAMPLE. CC0 example license.",
+      "terms": "SAMPLE. Cite example.org.",
+      "source": "https://example.org/promote-source",
+      "publicStatus": "PUBLIC",
+      "openIn": [
+        "sample-civic-desk"
+      ],
+      "ownerName": "should be stripped",
+      "records": [
+        {
+          "id": "rec-promote-sample",
+          "title": "SAMPLE promote pin",
+          "kind": "event-sequence",
+          "place": "Washington, District of Columbia",
+          "precision": "gazetteer",
+          "date": "2020-01-01",
+          "citations": [
+            {
+              "id": "cit-promote",
+              "label": "SAMPLE page",
+              "url": "https://example.org/promote-source"
+            }
+          ],
+          "source": "https://example.org/promote-source",
+          "license": "SAMPLE. CC0 example license.",
+          "confidence": "low",
+          "reconstruction": false,
+          "emailAddress": "redacted-personal-field"
+        }
+      ]
+    }
+  ]
+}

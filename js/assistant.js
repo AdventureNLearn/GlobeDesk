@@ -41,9 +41,10 @@
     let data;
     try { data = JSON.parse(text); } catch (e) { return { ok: false, errors: ["Not valid JSON: " + (e.message || e)] }; }
     if (data && data.schema === GD.schema.PROJECT && data.episode) data = data.episode;
-    const errs = (GD.schema && GD.schema.validate) ? GD.schema.validate(data) : GD.model.validate(data);
+    const warns = [];
+    const errs = (GD.schema && GD.schema.validate) ? GD.schema.validate(data, warns) : GD.model.validate(data);
     if (errs.length) return { ok: false, errors: errs };
-    return { ok: true, episode: data };
+    return { ok: true, episode: data, warnings: warns };
   }
 
   function speak(text) {

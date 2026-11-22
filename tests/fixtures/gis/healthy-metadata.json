@@ -1,0 +1,13 @@
+{
+  "_synthetic": "Synthetic test fixture, not a captured live service body.",
+  "currentVersion": 11.1,
+  "serviceDescription": "Example MapServer metadata for tests. Not a live host.",
+  "layers": [
+    {
+      "id": 0,
+      "name": "Example",
+      "type": "Feature Layer"
+    }
+  ],
+  "supportedQueryFormats": "JSON, geoJSON"
+}

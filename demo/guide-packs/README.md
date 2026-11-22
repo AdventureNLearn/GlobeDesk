@@ -5,7 +5,7 @@ The frog in this demo is **AdventureNLearn’s example**, not a locked layer. Ev
 All of that lives in a **guide pack** — one folder under `guide-packs/`. The demo loads the pack named in `js/config.js`:
 
 ```js
-guidePack: "frogpost"   // folder name under guide-packs/
+guidePack: "template"   // folder name under guide-packs/
 ```
 
 Switch packs by changing that one string (for example `"template"`) and reloading. No app code has to change.
@@ -35,7 +35,7 @@ The mission structure itself (level ids, objectives, XP, badges, kiosk modes, ti
 6. Optional: add live radio streams you have the right to link to. Credit the station. Never vendor copyrighted songs.
 7. Set `guidePack: "my-guide"` in `js/config.js` and reload.
 
-`guide-packs/frogpost/` is the shipping example (frog character, US and British Piper banks, classic-rock / CCR radio, Frogpost palette). Treat it as a reference, not a requirement.
+`guide-packs/template/` is the blank starting pack. Add your own portrait, lines, and voice bank.
 
 ## Credits and rights
 

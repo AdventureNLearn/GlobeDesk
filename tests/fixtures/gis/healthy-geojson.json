@@ -1,0 +1,20 @@
+{
+  "_synthetic": "Synthetic test fixture, not a captured live service body.",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.752,
+          41.832
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1
+      }
+    }
+  ]
+}

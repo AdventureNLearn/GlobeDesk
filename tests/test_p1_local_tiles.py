@@ -14,6 +14,7 @@ TOOLS = ROOT / "tools"
 sys.path.insert(0, str(TOOLS))
 
 import local_tiles as T  # noqa: E402
+import tile_cache  # noqa: E402
 
 
 JPEG = b"\xff\xd8\xff\xd9fake-jpeg-bytes"
@@ -139,9 +140,11 @@ class DataDir(unittest.TestCase):
         self.assertEqual(T.data_dir(), ROOT / "globedesk-data")
 
     def test_env_overrides(self):
-        os.environ["GLOBEDESK_DATA"] = "/tmp/gd-custom-data"
-        self.assertEqual(T.data_dir(ROOT), Path("/tmp/gd-custom-data"))
-        self.assertEqual(T.data_dir(), Path("/tmp/gd-custom-data"))
+        with tempfile.TemporaryDirectory() as raw:
+            custom = Path(raw)
+            os.environ["GLOBEDESK_DATA"] = str(custom)
+            self.assertEqual(T.data_dir(ROOT), custom)
+            self.assertEqual(T.data_dir(), custom)
 
 
 class CacheCap(unittest.TestCase):
@@ -150,8 +153,10 @@ class CacheCap(unittest.TestCase):
         self.cache = Path(self.tmp.name) / "cache" / "bluemarble"
         self._prev = os.environ.get("GLOBEDESK_CACHE_MAX_BYTES")
         os.environ.pop("GLOBEDESK_CACHE_MAX_BYTES", None)
+        tile_cache.reset_index_state()
 
     def tearDown(self):
+        tile_cache.reset_index_state()
         self.tmp.cleanup()
         if self._prev is None:
             os.environ.pop("GLOBEDESK_CACHE_MAX_BYTES", None)
@@ -172,11 +177,11 @@ class CacheCap(unittest.TestCase):
         self.assertEqual(T.get_cache_tile(self.cache, 2, 0, 0), b"C" * 100)
         self.assertLessEqual(T.cache_size_bytes(self.cache), 250)
 
-    def test_env_cap_zero_evicts_all(self):
+    def test_env_cap_zero_disables_cache(self):
         os.environ["GLOBEDESK_CACHE_MAX_BYTES"] = "0"
         T.put_cache_tile(self.cache, 0, 0, 0, b"X" * 50)
         self.assertIsNone(T.get_cache_tile(self.cache, 0, 0, 0))
-        self.assertEqual(T.cache_size_bytes(self.cache), 0)
+        self.assertFalse(list(self.cache.rglob("*.jpeg")))
 
 
 if __name__ == "__main__":

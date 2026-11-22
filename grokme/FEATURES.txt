@@ -1,7 +1,8 @@
 - Globe to street-level camera (land-aware), separate story pin and look target
 - Offline Natural Earth fallback globe
 - Story editor: create, edit, duplicate, delete; summary, date, credit, as-reported toggle
-- Pin by click, coordinates, or bundled gazetteer (no online geocoder)
+- Pin by right-click or a long press, coordinates, or the bundled gazetteer; a plain click only selects
+- Optional online address search (Photon; off by default). US Census geocoding only via the local serve.py proxy
 - Topic cards, https sources with verified/unverified, captions (SRT/VTT, burn-in)
 - Event layers: points, routes, areas; GeoJSON/CSV/KML
 - Local media in IndexedDB; type and size limits
@@ -12,3 +13,8 @@
 - CSP, sanitizer, https-only links, credit required for others' work and embeds
 - Optional paid MapTiler / voice / AI off by default
 - Interactive mission demo (demo/) with a swappable example guide pack
+- Data-year slider, separate from episode playback, with recorded and projected labels
+- Opt-in dated NASA GIBS imagery (off by default); Blue Marble stays undated
+- EOX 2018-2025 mosaics behind a CC BY-NC-SA acknowledgement; 2016 remains the default; 2017 is not offered
+- Official USGS, Census TIGERweb, and nowCOAST overlays, off until live GIS is opted in
+- Version v1.2.0 · Live Data

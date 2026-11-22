@@ -3,14 +3,14 @@
 
 The output is AdventureNLearn's own content, licensed CC BY 4.0 (see LICENSE-CONTENT).
 Deterministic: fixed noise seeds and bit-exact WAV output, so a re-run gives the same files.
-Writes the same set to demo/assets/sfx/ and demo/guide-packs/frogpost/assets/sfx/.
+Writes the same set to demo/assets/sfx/ and demo/guide-packs/template/assets/sfx/.
 Usage: python3 demo/tools/make-sfx.py   (needs ffmpeg)
 """
 import shutil, subprocess, sys
 from pathlib import Path
 
 DEMO = Path(__file__).resolve().parents[1]
-OUTS = [DEMO / "assets" / "sfx", DEMO / "guide-packs" / "frogpost" / "assets" / "sfx"]
+OUTS = [DEMO / "assets" / "sfx", DEMO / "guide-packs" / "template" / "assets" / "sfx"]
 SR = 22050
 PI = "PI"
 

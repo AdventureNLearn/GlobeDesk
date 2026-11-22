@@ -1,0 +1,993 @@
+{
+  "schema": "globedesk.newsdesk.catalog/1",
+  "generated": "2026-11-21",
+  "readDate": "21 Nov 2026",
+  "note": "Section, tags and dek live here because globedesk.episode/2 rejects unknown keys. Each topic is also a story in topics/newsdesk-50.globedesk.json and can be copied into a rundown unchanged.",
+  "episodeFile": "topics/newsdesk-50.globedesk.json",
+  "topics": [
+    {
+      "id": "story-nd-suez-canal",
+      "slug": "suez-canal",
+      "sectionId": "world",
+      "tags": [
+        "shipping",
+        "chokepoint",
+        "egypt",
+        "canal"
+      ],
+      "headline": "The Suez Canal, opened to navigation in 1869",
+      "dek": "Egypt's sea-level canal links the Mediterranean and the Red Sea across the Isthmus of Suez. The Suez Canal Authority dates its opening to international navigation to 17 November 1869.",
+      "date": "1869-11-17",
+      "lat": 30.59,
+      "lon": 32.27,
+      "locationName": "Suez Canal, Ismailia area (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx",
+      "publisher": "Suez Canal Authority"
+    },
+    {
+      "id": "story-nd-panama-canal",
+      "slug": "panama-canal",
+      "sectionId": "world",
+      "tags": [
+        "shipping",
+        "chokepoint",
+        "panama",
+        "canal"
+      ],
+      "headline": "The Panama Canal opened with the transit of SS Ancon",
+      "dek": "The Panama Canal Authority, an autonomous agency of the Government of Panama, dates the waterway's opening to world trade to 15 August 1914, when SS Ancon made the official transit.",
+      "date": "1914-08-15",
+      "lat": 9.12,
+      "lon": -79.73,
+      "locationName": "Panama Canal (isthmus, approx.)",
+      "precision": "approximate",
+      "primarySource": "https://pancanal.com/en/the-panama-canal-celebrates-100-years-connecting-the-world/",
+      "publisher": "Panama Canal Authority"
+    },
+    {
+      "id": "story-nd-un-headquarters",
+      "slug": "un-headquarters",
+      "sectionId": "world",
+      "tags": [
+        "united-nations",
+        "new-york",
+        "diplomacy"
+      ],
+      "headline": "United Nations Headquarters on the East River",
+      "dek": "The United Nations was founded in 1945. Official visitor pages say Headquarters construction in Midtown Manhattan began on UN Day, 24 October 1949, and was completed in 1952.",
+      "date": "1949-10-24",
+      "lat": 40.75,
+      "lon": -73.97,
+      "locationName": "UN Headquarters, Midtown Manhattan (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.un.org/en/visit/about-us",
+      "publisher": "United Nations Visitors Services"
+    },
+    {
+      "id": "story-nd-african-union-hq",
+      "slug": "african-union-hq",
+      "sectionId": "world",
+      "tags": [
+        "african-union",
+        "addis-ababa",
+        "diplomacy"
+      ],
+      "headline": "The African Union's headquarters in Addis Ababa",
+      "dek": "The African Union says it is a continental body of 55 member states, officially launched in July 2002 in Durban as successor to the Organisation of African Unity. The Commission is based in Addis Ababa.",
+      "date": "2002-07",
+      "lat": 9.0,
+      "lon": 38.74,
+      "locationName": "African Union Headquarters, Addis Ababa (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.au.int/en/overview",
+      "publisher": "African Union"
+    },
+    {
+      "id": "story-nd-antarctic-treaty",
+      "slug": "antarctic-treaty",
+      "sectionId": "world",
+      "tags": [
+        "antarctica",
+        "treaty",
+        "science",
+        "peace"
+      ],
+      "headline": "The Antarctic Treaty, signed in 1959",
+      "dek": "The Antarctic Treaty Secretariat says the treaty was signed in Washington on 1 December 1959 by twelve countries active in the International Geophysical Year, entered into force in 1961, and now has 58 parties. Antarctica is reserved for peaceful purposes and scientific cooperation.",
+      "date": "1959-12-01",
+      "lat": -90.0,
+      "lon": 0.0,
+      "locationName": "Antarctica, South Pole (stand-in, approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.ats.aq/e/antarctictreaty.html",
+      "publisher": "Antarctic Treaty Secretariat"
+    },
+    {
+      "id": "story-nd-palace-of-westminster",
+      "slug": "palace-of-westminster",
+      "sectionId": "politics-policy",
+      "tags": [
+        "uk",
+        "parliament",
+        "london"
+      ],
+      "headline": "The Palace of Westminster, home of the UK Parliament",
+      "dek": "UK Parliament's official heritage pages describe the Palace of Westminster as the Houses of Parliament, with a history spanning more than 900 years. Westminster Hall is called the oldest building on the estate.",
+      "date": "1834",
+      "lat": 51.5,
+      "lon": -0.12,
+      "locationName": "Palace of Westminster (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.parliament.uk/about/living-heritage/building/palace/",
+      "publisher": "UK Parliament"
+    },
+    {
+      "id": "story-nd-european-parliament-strasbourg",
+      "slug": "european-parliament-strasbourg",
+      "sectionId": "politics-policy",
+      "tags": [
+        "european-union",
+        "strasbourg",
+        "parliament"
+      ],
+      "headline": "The European Parliament's official seat in Strasbourg",
+      "dek": "Official European Parliament pages say EU governments decided in 1992 that the Parliament's official seat, and the venue for most plenary sessions, is Strasbourg, with additional work in Brussels and the Secretariat in Luxembourg.",
+      "date": "1992-12",
+      "lat": 48.6,
+      "lon": 7.77,
+      "locationName": "European Parliament, Strasbourg (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.europarl.europa.eu/news/en/faq/2/seating-in-the-chamber",
+      "publisher": "European Parliament"
+    },
+    {
+      "id": "story-nd-asean-secretariat",
+      "slug": "asean-secretariat",
+      "sectionId": "politics-policy",
+      "tags": [
+        "asean",
+        "jakarta",
+        "diplomacy"
+      ],
+      "headline": "The ASEAN Secretariat, seated in Jakarta",
+      "dek": "The 24 February 1976 Agreement on the Establishment of the ASEAN Secretariat, signed at Denpasar, Bali, created a permanent secretariat and set its seat in Jakarta. The agreement's preamble dates ASEAN itself to 8 August 1967 in Bangkok.",
+      "date": "1976-02-24",
+      "lat": -6.24,
+      "lon": 106.8,
+      "locationName": "ASEAN Secretariat, Jakarta (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://asean.org/wp-content/uploads/2025/07/Agreement-on-the-Establishment-of-the-ASEAN-Secretariat.pdf",
+      "publisher": "ASEAN"
+    },
+    {
+      "id": "story-nd-icc-the-hague",
+      "slug": "icc-the-hague",
+      "sectionId": "politics-policy",
+      "tags": [
+        "international-law",
+        "the-hague",
+        "rome-statute"
+      ],
+      "headline": "The International Criminal Court in The Hague",
+      "dek": "The ICC, headquartered in The Hague, is the world's first permanent international criminal court. Its official Rome Statute page says the treaty was adopted on 17 July 1998 and entered into force on 1 July 2002, thereby creating the Court.",
+      "date": "2002-07-01",
+      "lat": 52.11,
+      "lon": 4.28,
+      "locationName": "International Criminal Court, The Hague (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.icc-cpi.int/publications/core-legal-texts/rome-statute-international-criminal-court",
+      "publisher": "International Criminal Court"
+    },
+    {
+      "id": "story-nd-union-buildings",
+      "slug": "union-buildings",
+      "sectionId": "politics-policy",
+      "tags": [
+        "south-africa",
+        "pretoria",
+        "presidency"
+      ],
+      "headline": "The Union Buildings, official seat of South Africa's government",
+      "dek": "The Presidency of South Africa says the Union Buildings in Pretoria form the official seat of government and house The Presidency. Designed by Sir Herbert Baker in 1908, building began in 1909 and was completed in 1913.",
+      "date": "1913",
+      "lat": -25.74,
+      "lon": 28.21,
+      "locationName": "Union Buildings, Pretoria (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.presidency.gov.za/union-buildings",
+      "publisher": "The Presidency of the Republic of South Africa"
+    },
+    {
+      "id": "story-nd-mauna-loa-observatory",
+      "slug": "mauna-loa-observatory",
+      "sectionId": "climate-disasters",
+      "tags": [
+        "climate",
+        "noaa",
+        "hawaii",
+        "carbon-dioxide"
+      ],
+      "headline": "NOAA's Mauna Loa Baseline Observatory",
+      "dek": "NOAA's Global Monitoring Laboratory describes the Mauna Loa Observatory as an atmospheric research facility on the north flank of Mauna Loa, Hawai'i, continuously monitoring atmospheric change since the 1950s. Official coordinates and elevation are published on the observatory page.",
+      "date": "1950s",
+      "lat": 19.5362,
+      "lon": -155.5763,
+      "locationName": "Mauna Loa Baseline Observatory (NOAA-listed point)",
+      "precision": "approximate",
+      "primarySource": "https://gml.noaa.gov/obop/mlo/",
+      "publisher": "NOAA Global Monitoring Laboratory"
+    },
+    {
+      "id": "story-nd-great-barrier-reef",
+      "slug": "great-barrier-reef",
+      "sectionId": "climate-disasters",
+      "tags": [
+        "unesco",
+        "australia",
+        "coral",
+        "heritage"
+      ],
+      "headline": "The Great Barrier Reef World Heritage property",
+      "dek": "UNESCO inscribed the Great Barrier Reef, off Australia's north-east coast, on the World Heritage List in 1981. The official description calls it the world's largest collection of coral reefs.",
+      "date": "1981",
+      "lat": -18.286,
+      "lon": 147.7,
+      "locationName": "Great Barrier Reef, UNESCO listed point (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://whc.unesco.org/en/list/154/",
+      "publisher": "UNESCO World Heritage Centre"
+    },
+    {
+      "id": "story-nd-sumatra-2004-earthquake",
+      "slug": "sumatra-2004-earthquake",
+      "sectionId": "climate-disasters",
+      "tags": [
+        "earthquake",
+        "tsunami",
+        "indonesia",
+        "usgs"
+      ],
+      "headline": "The 26 December 2004 northern Sumatra earthquake",
+      "dek": "A USGS Earthquake Hazards Program page titles the event 'M9.0 December 26, 2004 Northern Sumatra' and describes a great earthquake off the west coast of northern Sumatra, with a rupture duration of about three to four minutes.",
+      "date": "2004-12-26",
+      "lat": 3.3,
+      "lon": 95.85,
+      "locationName": "Off the west coast of northern Sumatra (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.usgs.gov/programs/earthquake-hazards/science/m90-december-26-2004-northern-sumatra",
+      "publisher": "U.S. Geological Survey"
+    },
+    {
+      "id": "story-nd-hurricane-katrina",
+      "slug": "hurricane-katrina",
+      "sectionId": "climate-disasters",
+      "tags": [
+        "hurricane",
+        "new-orleans",
+        "noaa",
+        "2005"
+      ],
+      "headline": "Hurricane Katrina, August 2005",
+      "dek": "The National Weather Service office in Mobile says Hurricane Katrina, in August 2005, was the costliest hurricane to hit the United States and was responsible for 1,833 fatalities and about $108 billion in damage in un-adjusted 2005 dollars.",
+      "date": "2005-08",
+      "lat": 29.95,
+      "lon": -90.07,
+      "locationName": "New Orleans (Katrina landfall region, approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.weather.gov/mob/katrina",
+      "publisher": "National Weather Service, Mobile/Pensacola"
+    },
+    {
+      "id": "story-nd-yellowstone-volcano-observatory",
+      "slug": "yellowstone-volcano-observatory",
+      "sectionId": "climate-disasters",
+      "tags": [
+        "volcano",
+        "usgs",
+        "yellowstone",
+        "monitoring"
+      ],
+      "headline": "The Yellowstone Volcano Observatory",
+      "dek": "The U.S. Geological Survey describes the Yellowstone Volcano Observatory as a consortium of nine state and federal agencies that monitors volcanic, hydrothermal, and earthquake activity in the Yellowstone Plateau region.",
+      "date": "ongoing",
+      "lat": 44.46,
+      "lon": -110.83,
+      "locationName": "Yellowstone Plateau (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.usgs.gov/observatories/yvo",
+      "publisher": "U.S. Geological Survey"
+    },
+    {
+      "id": "story-nd-cern-lhc",
+      "slug": "cern-lhc",
+      "sectionId": "science-space",
+      "tags": [
+        "cern",
+        "physics",
+        "geneva",
+        "lhc"
+      ],
+      "headline": "CERN's Large Hadron Collider, started in 2008",
+      "dek": "CERN describes the Large Hadron Collider as the world's largest and most powerful particle accelerator: a 27-kilometre ring, about 100 metres underground on the Franco-Swiss border near Geneva. It first started up on 10 September 2008.",
+      "date": "2008-09-10",
+      "lat": 46.23,
+      "lon": 6.05,
+      "locationName": "CERN, near Geneva (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://home.cern/science/accelerators/large-hadron-collider",
+      "publisher": "CERN"
+    },
+    {
+      "id": "story-nd-kennedy-space-center",
+      "slug": "kennedy-space-center",
+      "sectionId": "science-space",
+      "tags": [
+        "nasa",
+        "florida",
+        "launch",
+        "spaceport"
+      ],
+      "headline": "NASA's Kennedy Space Center, established in 1962",
+      "dek": "NASA's official About Kennedy page says President John F. Kennedy visited and toured the spaceport in 1962, the year Kennedy Space Center was established as an official NASA center, on Florida's Space Coast beside Merritt Island National Wildlife Refuge.",
+      "date": "1962",
+      "lat": 28.57,
+      "lon": -80.65,
+      "locationName": "Kennedy Space Center, Florida (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.nasa.gov/kennedy/about-kennedy/",
+      "publisher": "NASA Kennedy Space Center"
+    },
+    {
+      "id": "story-nd-alma-chajnantor",
+      "slug": "alma-chajnantor",
+      "sectionId": "science-space",
+      "tags": [
+        "astronomy",
+        "chile",
+        "atacama",
+        "radio-telescope"
+      ],
+      "headline": "ALMA on the Chajnantor Plateau",
+      "dek": "The official ALMA factsheet places the array on the Chajnantor Plateau in Chile at 5,000 metres, says construction began in 2003, scientific observations started in September 2011, and the observatory was inaugurated on 13 March 2013.",
+      "date": "2013-03-13",
+      "lat": -23.02,
+      "lon": -67.75,
+      "locationName": "ALMA, Chajnantor Plateau (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.almaobservatory.org/en/factsheet/",
+      "publisher": "ALMA Observatory"
+    },
+    {
+      "id": "story-nd-iter-cadarache",
+      "slug": "iter-cadarache",
+      "sectionId": "science-space",
+      "tags": [
+        "fusion",
+        "france",
+        "iter",
+        "energy"
+      ],
+      "headline": "ITER, the fusion experiment in southern France",
+      "dek": "ITER's official 'In a Few Lines' page says  the project is building the world's largest tokamak in Saint-Paul-lez-Durance, southern France, after a 2005 decision to site the project in France and the 2006 ITER Agreement.",
+      "date": "2006",
+      "lat": 43.71,
+      "lon": 5.78,
+      "locationName": "ITER, Saint-Paul-lez-Durance (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.iter.org/few-lines",
+      "publisher": "ITER Organization"
+    },
+    {
+      "id": "story-nd-europe-spaceport-kourou",
+      "slug": "europe-spaceport-kourou",
+      "sectionId": "science-space",
+      "tags": [
+        "esa",
+        "launch",
+        "french-guiana",
+        "arianespace"
+      ],
+      "headline": "Europe's Spaceport at Kourou",
+      "dek": "The European Space Agency says Europe's Spaceport in French Guiana, about 500 kilometres north of the equator, has supported more than 300 launches since 1979. France chose Kourou in 1964; ESA has shared the site since 1975.",
+      "date": "1979",
+      "lat": 5.24,
+      "lon": -52.77,
+      "locationName": "Europe's Spaceport, Kourou (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.esa.int/Enabling_Support/Space_Transportation/Europe_s_Spaceport",
+      "publisher": "European Space Agency"
+    },
+    {
+      "id": "story-nd-independence-hall",
+      "slug": "independence-hall",
+      "sectionId": "history",
+      "tags": [
+        "united-states",
+        "philadelphia",
+        "nps",
+        "constitution"
+      ],
+      "headline": "Independence Hall, where two founding texts were signed",
+      "dek": "The National Park Service says the Declaration of Independence and the U.S. Constitution were both debated and signed inside Independence Hall, a UNESCO World Heritage Site in Independence National Historical Park, Philadelphia.",
+      "date": "",
+      "lat": 39.95,
+      "lon": -75.15,
+      "locationName": "Independence Hall, Philadelphia (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.nps.gov/inde/index.htm",
+      "publisher": "National Park Service"
+    },
+    {
+      "id": "story-nd-hiroshima-peace-memorial",
+      "slug": "hiroshima-peace-memorial",
+      "sectionId": "history",
+      "tags": [
+        "unesco",
+        "hiroshima",
+        "peace",
+        "1945"
+      ],
+      "headline": "Hiroshima Peace Memorial, preserved after 6 August 1945",
+      "dek": "UNESCO says the Hiroshima Peace Memorial (Genbaku Dome) was the only structure left standing near where the first atomic bomb exploded on 6 August 1945, and that it was inscribed on the World Heritage List in 1996.",
+      "date": "1945-08-06",
+      "lat": 34.396,
+      "lon": 132.454,
+      "locationName": "Hiroshima Peace Memorial (UNESCO listed point, approx.)",
+      "precision": "approximate",
+      "primarySource": "https://whc.unesco.org/en/list/775/",
+      "publisher": "UNESCO World Heritage Centre"
+    },
+    {
+      "id": "story-nd-robben-island",
+      "slug": "robben-island",
+      "sectionId": "history",
+      "tags": [
+        "unesco",
+        "south-africa",
+        "cape-town",
+        "memorial"
+      ],
+      "headline": "Robben Island, a World Heritage prison site",
+      "dek": "UNESCO describes Robben Island as having been used between the 17th and 20th centuries as a prison, a hospital for socially unacceptable groups, and a military base. Its late-20th-century maximum security prison for political prisoners, it says, witnesses the triumph of democracy and freedom over oppression and racism.",
+      "date": "",
+      "lat": -33.81,
+      "lon": 18.37,
+      "locationName": "Robben Island (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://whc.unesco.org/en/list/916/",
+      "publisher": "UNESCO World Heritage Centre"
+    },
+    {
+      "id": "story-nd-normandy-american-cemetery",
+      "slug": "normandy-american-cemetery",
+      "sectionId": "history",
+      "tags": [
+        "world-war-ii",
+        "normandy",
+        "abmc",
+        "d-day"
+      ],
+      "headline": "Normandy American Cemetery at Colleville-sur-Mer",
+      "dek": "The American Battle Monuments Commission says the cemetery at Colleville-sur-Mer stands on the site of the temporary American St. Laurent Cemetery, established by the U.S. First Army on 8 June 1944 as the first American cemetery on European soil in World War II. It was dedicated in 1956.",
+      "date": "1956",
+      "lat": 49.36,
+      "lon": -0.86,
+      "locationName": "Normandy American Cemetery, Colleville-sur-Mer (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.abmc.gov/cemeteries-memorials/about-normandy-american-cemetery/",
+      "publisher": "American Battle Monuments Commission"
+    },
+    {
+      "id": "story-nd-pompeii",
+      "slug": "pompeii",
+      "sectionId": "history",
+      "tags": [
+        "unesco",
+        "italy",
+        "vesuvius",
+        "archaeology"
+      ],
+      "headline": "Pompeii, buried when Vesuvius erupted in AD 79",
+      "dek": "UNESCO says that when Vesuvius erupted on 24 August AD 79, it engulfed the Roman towns of Pompeii and Herculaneum. The archaeological areas have been excavated and opened to the public since the mid-18th century, and were inscribed in 1997.",
+      "date": "0079-08-24",
+      "lat": 40.75,
+      "lon": 14.49,
+      "locationName": "Pompeii (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://whc.unesco.org/en/list/829/",
+      "publisher": "UNESCO World Heritage Centre"
+    },
+    {
+      "id": "story-nd-wto-geneva",
+      "slug": "wto-geneva",
+      "sectionId": "economy-trade",
+      "tags": [
+        "trade",
+        "geneva",
+        "wto"
+      ],
+      "headline": "The World Trade Organization in Geneva",
+      "dek": "The WTO is the only international organization dealing with the rules of trade between nations. Its official fact file places it in Geneva, established on 1 January 1995, created by the Uruguay Round negotiations of 1986-94.",
+      "date": "1995-01-01",
+      "lat": 46.22,
+      "lon": 6.15,
+      "locationName": "World Trade Organization, Geneva (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.wto.org/english/thewto_e/whatis_e/whatis_e.htm",
+      "publisher": "World Trade Organization"
+    },
+    {
+      "id": "story-nd-bis-basel",
+      "slug": "bis-basel",
+      "sectionId": "economy-trade",
+      "tags": [
+        "finance",
+        "basel",
+        "central-banks"
+      ],
+      "headline": "The Bank for International Settlements, in Basel since 1930",
+      "dek": "The BIS, which calls itself the world's oldest international financial institution, says it was established in 1930 and has been headquartered in Basel since then. It is owned by 63 central banks.",
+      "date": "1930",
+      "lat": 47.55,
+      "lon": 7.59,
+      "locationName": "BIS Tower, Basel (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.bis.org/about/index.htm",
+      "publisher": "Bank for International Settlements"
+    },
+    {
+      "id": "story-nd-bretton-woods",
+      "slug": "bretton-woods",
+      "sectionId": "economy-trade",
+      "tags": [
+        "imf",
+        "world-bank",
+        "new-hampshire",
+        "1944"
+      ],
+      "headline": "The Bretton Woods conference of July 1944",
+      "dek": "The IMF's official Articles of Agreement page says the Articles were adopted at the United Nations Monetary and Financial Conference in Bretton Woods, New Hampshire, on 22 July 1944.",
+      "date": "1944-07-22",
+      "lat": 44.26,
+      "lon": -71.44,
+      "locationName": "Bretton Woods, New Hampshire (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.imf.org/external/pubs/ft/aa/",
+      "publisher": "International Monetary Fund"
+    },
+    {
+      "id": "story-nd-afcfta-secretariat",
+      "slug": "afcfta-secretariat",
+      "sectionId": "economy-trade",
+      "tags": [
+        "africa",
+        "trade",
+        "accra",
+        "afcfta"
+      ],
+      "headline": "The AfCFTA Secretariat in Accra",
+      "dek": "The official AfCFTA page says the agreement entered into force on 30 May 2019, trading under it began on 1 January 2021, and the Secretariat is hosted in Accra, Ghana, in a building commissioned on 17 August 2020.",
+      "date": "2020-08-17",
+      "lat": 5.56,
+      "lon": -0.19,
+      "locationName": "AfCFTA Secretariat, Accra (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://au-afcfta.org/about/",
+      "publisher": "AfCFTA Secretariat"
+    },
+    {
+      "id": "story-nd-oecd-paris",
+      "slug": "oecd-paris",
+      "sectionId": "economy-trade",
+      "tags": [
+        "oecd",
+        "paris",
+        "policy"
+      ],
+      "headline": "The OECD, founded in Paris in 1961",
+      "dek": "The OECD says the convention transforming the OEEC into the OECD was signed at the Château de la Muette in Paris on 14 December 1960 and entered into force on 30 September 1961. Headquarters remain in Paris.",
+      "date": "1961-09-30",
+      "lat": 48.86,
+      "lon": 2.27,
+      "locationName": "OECD, Château de la Muette, Paris (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.oecd.org/en/about/history.html",
+      "publisher": "Organisation for Economic Co-operation and Development"
+    },
+    {
+      "id": "story-nd-nato-headquarters",
+      "slug": "nato-headquarters",
+      "sectionId": "conflict-security",
+      "tags": [
+        "nato",
+        "brussels",
+        "alliance"
+      ],
+      "headline": "NATO Headquarters in Brussels",
+      "dek": "NATO says its headquarters, the political and administrative centre of the Alliance and home of the North Atlantic Council, is on Boulevard Leopold III in Brussels. The headquarters moved there in 1967; a new building was finished in 2017 and occupied in 2018.",
+      "date": "1967-10-16",
+      "lat": 50.88,
+      "lon": 4.42,
+      "locationName": "NATO Headquarters, Brussels (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.nato.int/cps/en/natohq/topics_49284.htm",
+      "publisher": "NATO"
+    },
+    {
+      "id": "story-nd-pearl-harbor",
+      "slug": "pearl-harbor",
+      "sectionId": "conflict-security",
+      "tags": [
+        "world-war-ii",
+        "hawaii",
+        "nps",
+        "1941"
+      ],
+      "headline": "Pearl Harbor National Memorial, 7 December 1941",
+      "dek": "The National Park Service says Pearl Harbor National Memorial honors the lives affected by the 7 December 1941 attack, a moment that marked the United States' entry into World War II. The USS Arizona is the final resting place for many of the ship's 1,177 crewmen who died that day.",
+      "date": "1941-12-07",
+      "lat": 21.37,
+      "lon": -157.95,
+      "locationName": "Pearl Harbor National Memorial (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.nps.gov/perl/index.htm",
+      "publisher": "National Park Service"
+    },
+    {
+      "id": "story-nd-joint-security-area",
+      "slug": "joint-security-area",
+      "sectionId": "conflict-security",
+      "tags": [
+        "korea",
+        "dmz",
+        "armistice",
+        "united-nations-command"
+      ],
+      "headline": "The Joint Security Area in the Korean DMZ",
+      "dek": "United Nations Command says its Security Battalion–Joint Security Area is the only UNC element fully deployed to the Demilitarized Zone, where it secures diplomatic dialogue and enforces the Armistice Agreement, a mission it has carried out since 1953.",
+      "date": "1953",
+      "lat": 37.96,
+      "lon": 126.68,
+      "locationName": "Joint Security Area, Panmunjom area (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.unc.mil/Organization/UNC-Security-Battalion/",
+      "publisher": "United Nations Command"
+    },
+    {
+      "id": "story-nd-nuremberg-trials",
+      "slug": "nuremberg-trials",
+      "sectionId": "conflict-security",
+      "tags": [
+        "nuremberg",
+        "international-law",
+        "world-war-ii"
+      ],
+      "headline": "Courtroom 600 and the Nuremberg Trials",
+      "dek": "The official Memorium Nuremberg Trials, in the Palace of Justice, says leaders of the Nazi regime had to answer for their crimes before the International Military Tribunal in historic Courtroom 600 between 20 November 1945 and 1 October 1946.",
+      "date": "1945-11-20",
+      "lat": 49.45,
+      "lon": 11.05,
+      "locationName": "Palace of Justice, Nuremberg (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://museums.nuernberg.de/memorium-nuremberg-trials/",
+      "publisher": "Memorium Nuremberg Trials"
+    },
+    {
+      "id": "story-nd-srebrenica-memorial",
+      "slug": "srebrenica-memorial",
+      "sectionId": "conflict-security",
+      "tags": [
+        "bosnia",
+        "srebrenica",
+        "memorial",
+        "1995"
+      ],
+      "headline": "The Srebrenica-Potočari Memorial, July 1995",
+      "dek": "The official Srebrenica Memorial Center says that in July 1995 Bosnian Serb forces deported more than 25,000 women and children and systematically slaughtered more than 8,000 Bosniak men, crimes it says were formally ruled a genocide in two international courts.",
+      "date": "1995-07",
+      "lat": 44.16,
+      "lon": 19.3,
+      "locationName": "Srebrenica Memorial Center, Potočari (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://srebrenicamemorial.org/en/page/genocide-in-srebrenica/26",
+      "publisher": "Srebrenica Memorial Center"
+    },
+    {
+      "id": "story-nd-sydney-opera-house",
+      "slug": "sydney-opera-house",
+      "sectionId": "culture",
+      "tags": [
+        "unesco",
+        "sydney",
+        "architecture"
+      ],
+      "headline": "Sydney Opera House, inaugurated in 1973",
+      "dek": "UNESCO describes the Sydney Opera House, inaugurated in 1973 at the tip of a peninsula in Sydney Harbour, as a great architectural work of the 20th century. The design was awarded in 1957 to Danish architect Jørn Utzon.",
+      "date": "1973",
+      "lat": -33.86,
+      "lon": 151.22,
+      "locationName": "Sydney Opera House (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://whc.unesco.org/en/list/166/",
+      "publisher": "UNESCO World Heritage Centre"
+    },
+    {
+      "id": "story-nd-angkor",
+      "slug": "angkor",
+      "sectionId": "culture",
+      "tags": [
+        "unesco",
+        "cambodia",
+        "khmer",
+        "angkor-wat"
+      ],
+      "headline": "Angkor, capitals of the Khmer Empire",
+      "dek": "UNESCO calls Angkor one of the most important archaeological sites in South-East Asia. The archaeological park, stretching over some 400 square kilometres, holds remains of Khmer Empire capitals from the 9th to the 15th century, including Angkor Wat. It was inscribed in 1992.",
+      "date": "1992",
+      "lat": 13.41,
+      "lon": 103.87,
+      "locationName": "Angkor Wat (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://whc.unesco.org/en/list/668/",
+      "publisher": "UNESCO World Heritage Centre"
+    },
+    {
+      "id": "story-nd-acropolis-athens",
+      "slug": "acropolis-athens",
+      "sectionId": "culture",
+      "tags": [
+        "unesco",
+        "athens",
+        "greece",
+        "parthenon"
+      ],
+      "headline": "The Acropolis of Athens",
+      "dek": "UNESCO describes the Acropolis of Athens and its monuments as universal symbols of the classical spirit, with the most important buildings — the Parthenon, the Erechtheion, the Propylaea and the temple of Athena Nike — raised in the second half of the fifth century BC.",
+      "date": "",
+      "lat": 37.971,
+      "lon": 23.726,
+      "locationName": "Acropolis, Athens (UNESCO listed point, approx.)",
+      "precision": "approximate",
+      "primarySource": "https://whc.unesco.org/en/list/404/",
+      "publisher": "UNESCO World Heritage Centre"
+    },
+    {
+      "id": "story-nd-rapa-nui",
+      "slug": "rapa-nui",
+      "sectionId": "culture",
+      "tags": [
+        "unesco",
+        "easter-island",
+        "moai",
+        "polynesia"
+      ],
+      "headline": "Rapa Nui National Park and the moai",
+      "dek": "UNESCO says Rapa Nui, the indigenous name of Easter Island, bears witness to a unique cultural phenomenon: a Polynesian society that, from the 10th to the 16th century, built shrines and erected enormous stone figures known as moai.",
+      "date": "",
+      "lat": -27.074,
+      "lon": -109.366,
+      "locationName": "Rapa Nui National Park (UNESCO listed point, approx.)",
+      "precision": "approximate",
+      "primarySource": "https://whc.unesco.org/en/list/715/",
+      "publisher": "UNESCO World Heritage Centre"
+    },
+    {
+      "id": "story-nd-bibliotheca-alexandrina",
+      "slug": "bibliotheca-alexandrina",
+      "sectionId": "culture",
+      "tags": [
+        "alexandria",
+        "library",
+        "egypt"
+      ],
+      "headline": "The Bibliotheca Alexandrina, inaugurated in 2002",
+      "dek": "The official library says the new Bibliotheca Alexandrina is dedicated to recapturing the spirit of openness and scholarship of the original Library of Alexandria. A 12 October 2002 official news notice set the inauguration for 16 October 2002.",
+      "date": "2002-10-16",
+      "lat": 31.21,
+      "lon": 29.91,
+      "locationName": "Bibliotheca Alexandrina (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.bibalex.org/en/page/about",
+      "publisher": "Bibliotheca Alexandrina"
+    },
+    {
+      "id": "story-nd-bletchley-park",
+      "slug": "bletchley-park",
+      "sectionId": "tech",
+      "tags": [
+        "world-war-ii",
+        "codebreaking",
+        "computing",
+        "united-kingdom"
+      ],
+      "headline": "Bletchley Park, wartime home of GC&CS",
+      "dek": "The official Bletchley Park history says the first Government Code and Cypher School and SIS personnel arrived on 18 September 1938, and that by the invasion of Poland on 1 September 1939 the organisation was already moving from London to the Park.",
+      "date": "1939-09-01",
+      "lat": 51.998,
+      "lon": -0.741,
+      "locationName": "Bletchley Park (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.bletchleypark.org.uk/our-story/early-days/",
+      "publisher": "Bletchley Park"
+    },
+    {
+      "id": "story-nd-arpanet-ucla",
+      "slug": "arpanet-ucla",
+      "sectionId": "tech",
+      "tags": [
+        "internet",
+        "darpa",
+        "ucla",
+        "1969"
+      ],
+      "headline": "The first ARPANET signal, sent from UCLA",
+      "dek": "DARPA's official ARPANET feature says the first computer-to-computer signal on the four-node network was sent between UCLA and the Stanford Research Institute on 29 October 1969. A historic log reproduced there records the message at 22:30 Pacific Time from Boelter Hall 3420.",
+      "date": "1969-10-29",
+      "lat": 34.07,
+      "lon": -118.44,
+      "locationName": "UCLA, Boelter Hall area (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.darpa.mil/news/features/arpanet",
+      "publisher": "DARPA"
+    },
+    {
+      "id": "story-nd-super-kamiokande",
+      "slug": "super-kamiokande",
+      "sectionId": "tech",
+      "tags": [
+        "neutrinos",
+        "japan",
+        "physics",
+        "kamioka"
+      ],
+      "headline": "Super-Kamiokande, 1,000 metres underground",
+      "dek": "The official Super-Kamiokande site says the world's largest water Cherenkov detector began construction in 1991 and started observations on 1 April 1996, in the Kamioka Mine, Hida City, Gifu, Japan, 1,000 metres underground.",
+      "date": "1996-04-01",
+      "lat": 36.43,
+      "lon": 137.31,
+      "locationName": "Super-Kamiokande, Kamioka Mine (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www-sk.icrr.u-tokyo.ac.jp/en/sk/about/outline/",
+      "publisher": "Super-Kamiokande / ICRR, University of Tokyo"
+    },
+    {
+      "id": "story-nd-ska-mid-karoo",
+      "slug": "ska-mid-karoo",
+      "sectionId": "tech",
+      "tags": [
+        "radio-astronomy",
+        "south-africa",
+        "skao",
+        "karoo"
+      ],
+      "headline": "The SKA-Mid telescope in South Africa's Karoo",
+      "dek": "The SKA Observatory says it is building two complementary radio telescopes: SKA-Mid, an array of 197 dish antennas in South Africa's Karoo region, and SKA-Low, an array of 131,072 antennas in Western Australia. The most distant South African antennas will be 150 kilometres apart.",
+      "date": "ongoing",
+      "lat": -30.72,
+      "lon": 21.44,
+      "locationName": "SKA-Mid, Karoo region (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.skao.int/en/explore/telescopes",
+      "publisher": "SKA Observatory"
+    },
+    {
+      "id": "story-nd-royal-observatory-greenwich",
+      "slug": "royal-observatory-greenwich",
+      "sectionId": "tech",
+      "tags": [
+        "greenwich",
+        "time",
+        "prime-meridian",
+        "astronomy"
+      ],
+      "headline": "The Royal Observatory, Greenwich, founded in 1675",
+      "dek": "Royal Museums Greenwich says the Royal Observatory, Britain's oldest purpose-built scientific institution, was founded in 1675 and is the home of Greenwich Mean Time and the Prime Meridian. The foundation stone was laid on 10 August 1675.",
+      "date": "1675-08-10",
+      "lat": 51.48,
+      "lon": 0.0,
+      "locationName": "Royal Observatory, Greenwich (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.rmg.co.uk/royal-observatory/history",
+      "publisher": "Royal Museums Greenwich"
+    },
+    {
+      "id": "story-nd-medellin-metro",
+      "slug": "medellin-metro",
+      "sectionId": "local-civic",
+      "tags": [
+        "medellin",
+        "transit",
+        "metrocable",
+        "colombia"
+      ],
+      "headline": "Medellín's Metro and the first Metrocable line",
+      "dek": "Metro de Medellín's official history says the company was created on 31 May 1979 and began commercial train service on 30 November 1995. Línea K, the north-eastern Metrocable, entered service on 7 August 2004.",
+      "date": "1995-11-30",
+      "lat": 6.25,
+      "lon": -75.57,
+      "locationName": "Medellín Metro, Aburrá Valley (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.metrodemedellin.gov.co/quienes-somos/historia/",
+      "publisher": "Metro de Medellín"
+    },
+    {
+      "id": "story-nd-curitiba-brt",
+      "slug": "curitiba-brt",
+      "sectionId": "local-civic",
+      "tags": [
+        "curitiba",
+        "brt",
+        "transit",
+        "brazil"
+      ],
+      "headline": "Curitiba's BRT corridors, opened in 1974",
+      "dek": "The City of Curitiba, marking 50 years of its bus rapid transit system in 2024, says the system was inaugurated on 22 September 1974 on the North/South axis, beginning with 20 kilometres of exclusive bus corridors.",
+      "date": "1974-09-22",
+      "lat": -25.43,
+      "lon": -49.27,
+      "locationName": "Curitiba (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.curitiba.pr.gov.br/noticias/brt-completa-50-anos-em-curitiba-sistema-ganha-velocidade-e-veiculos-eletricos/75042",
+      "publisher": "City of Curitiba"
+    },
+    {
+      "id": "story-nd-high-line",
+      "slug": "high-line",
+      "sectionId": "local-civic",
+      "tags": [
+        "new-york",
+        "park",
+        "adaptive-reuse"
+      ],
+      "headline": "New York's High Line, first opened in 2009",
+      "dek": "NYC Parks says the West Side Elevated Line was fully operational by 1934, ceased operation in 1980, and that the first phase of the new park, from Gansevoort Street to West 20th Street, opened in June 2009.",
+      "date": "2009-06",
+      "lat": 40.74,
+      "lon": -74.01,
+      "locationName": "The High Line, Manhattan (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.nycgovparks.org/parks/the-high-line/history",
+      "publisher": "NYC Parks"
+    },
+    {
+      "id": "story-nd-london-congestion-charge",
+      "slug": "london-congestion-charge",
+      "sectionId": "local-civic",
+      "tags": [
+        "london",
+        "transport",
+        "congestion-charge"
+      ],
+      "headline": "London's Congestion Charge, introduced in 2003",
+      "dek": "A Transport for London impacts-monitoring report says congestion charging was introduced in central London in February 2003. TfL's current official charge page, read on 21 November 2026, lists an £18 daily charge if paid on the day or in advance.",
+      "date": "2003-02",
+      "lat": 51.51,
+      "lon": -0.1,
+      "locationName": "Central London congestion zone (stand-in, approx.)",
+      "precision": "approximate",
+      "primarySource": "https://tfl.gov.uk/modes/driving/congestion-charge",
+      "publisher": "Transport for London"
+    },
+    {
+      "id": "story-nd-chicago-river-reversal",
+      "slug": "chicago-river-reversal",
+      "sectionId": "local-civic",
+      "tags": [
+        "chicago",
+        "water",
+        "engineering",
+        "public-works"
+      ],
+      "headline": "The Chicago River, reversed in 1900",
+      "dek": "The Metropolitan Water Reclamation District of Greater Chicago says it was formed as the Sanitary District of Chicago in 1889, and that it reversed the Chicago River in 1900 by constructing the Chicago Sanitary and Ship Canal, to take wastewater away from Lake Michigan.",
+      "date": "1900",
+      "lat": 41.89,
+      "lon": -87.64,
+      "locationName": "Chicago River, downtown (approx.)",
+      "precision": "approximate",
+      "primarySource": "https://www.mwrd.org/what-we-do/history-protecting-our-water-environment",
+      "publisher": "Metropolitan Water Reclamation District of Greater Chicago"
+    }
+  ]
+}

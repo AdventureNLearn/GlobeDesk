@@ -3,37 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com; connect-src 'self' https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com; font-src 'self' data: https://tiles.openfreemap.org; media-src 'self' blob: data:; frame-src https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';">
-  <title>Frogpost — GlobeDesk</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%227%22 fill=%22%233dbe6a%22/%3E%3C/svg%3E">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov; connect-src 'self' https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov https://photon.komoot.io; font-src 'self' data: https://tiles.openfreemap.org; media-src 'self' blob: data:; frame-src https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <title>GlobeDesk</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect width=%2216%22 height=%2216%22 fill=%22%2302040c%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="vendor/maplibre-gl.css">
   <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
-  <header class="topbar">
-    <div class="brand"><span class="logo" aria-hidden="true">🐸</span> <span class="brand-name">Frogpost</span>
-      <span class="brand-sub"><a id="handleLink" href="https://x.com/AdventureNLearn" target="_blank" rel="noopener noreferrer">@AdventureNLearn</a> · <span id="appVersion" class="ver">v1.0.1 · Official Release</span></span></div>
+<body class="view-newsdesk">
+  <header class="topbar" role="banner">
+    <button id="btnMenu" class="menu-btn" type="button" aria-expanded="false" aria-haspopup="dialog" aria-controls="appMenu" title="Menu">
+      <span class="menu-btn-icon" aria-hidden="true">☰</span>
+      <span class="menu-btn-label">Menu</span>
+    </button>
+    <div class="brand"><span class="brand-name">GlobeDesk</span>
+      <span class="brand-sub"><a id="handleLink" href="https://x.com/AdventureNLearn" target="_blank" rel="noopener noreferrer">@AdventureNLearn</a> · <span id="appVersion" class="ver">v1.3.0 · Share &amp; Export</span></span></div>
     <input id="epTitle" class="ep-title" aria-label="Episode title" placeholder="Episode title">
-    <button id="btnMenu" class="menu-btn" type="button" aria-expanded="false" aria-controls="tools">☰ Menu</button>
-    <div class="tools" id="tools">
+    <div class="tools tools-essential" id="toolsEssential">
+      <button id="btnReset" type="button" title="Reset to the default globe (H)" aria-keyshortcuts="h">Reset</button>
+      <span class="lp-anchor">
+        <button id="btnLayers" type="button" title="Map layers: turn each one on or off (L)" aria-keyshortcuts="l" aria-haspopup="dialog" aria-controls="layersPanel" aria-expanded="false"><span aria-hidden="true">◧</span> Layers</button>
+        <span id="layersHint" class="lp-hint" role="note" hidden><span>All map layers live here. Turn each one on or off, or press Show all.</span> <button id="layersHintOpen" type="button" class="mini">Open Layers</button> <button id="layersHintOk" type="button" class="mini">Got it</button></span>
+      </span>
+      <div class="seg" role="group" aria-label="Output format">
+        <button id="asp169" data-aspect="16:9">16:9</button><button id="asp916" data-aspect="9:16">9:16</button>
+      </div>
+      <button id="btnRecord" class="rec" title="Record WebM in real time">● Record</button>
+      <button id="btnExport" type="button" title="Export an MP4 video or an offline share pack" aria-haspopup="dialog" aria-controls="exportDialog">Export</button>
+      <button id="btnViewToggle" type="button" aria-pressed="false" title="Open the full editor suite">Workspace</button>
+    </div>
+    <div class="tools tools-overflow" id="tools">
       <button id="btnArchive" title="Every show and story ever added. Open one to bring it back.">Archive</button>
       <button id="btnNew" title="New blank episode">New blank</button>
-      <button id="btnDemo" title="Load the Frogpost sample (removable)">Sample</button>
+      <button id="btnDemo" title="Load the Washington, DC sample (removable)">Sample</button>
       <label class="btn">Open<input id="fileOpen" type="file" accept=".globedesk,.globedesk.json,.gobedesk.json,.json,application/json,application/zip" hidden></label>
       <button id="btnSave" title="Episode JSON without media">Save JSON</button>
       <button id="btnSaveProject" title="Project pack: JSON plus local media">Save project</button>
       <button id="btnVtt">VTT</button>
       <button id="btnSrt">SRT</button>
-      <div class="seg" role="group" aria-label="Output format">
-        <button id="asp169" data-aspect="16:9">16:9</button><button id="asp916" data-aspect="9:16">9:16</button>
-      </div>
-      <button id="btnRecord" class="rec">● Record WebM</button>
       <button id="btnSettings">Optional paid</button>
     </div>
   </header>
+  <dialog id="appMenu" class="app-menu" aria-labelledby="appMenuTitle">
+    <div class="app-menu-head">
+      <h2 id="appMenuTitle">Menu</h2>
+      <input id="appMenuSearch" type="search" placeholder="Search menu" aria-label="Search menu" autocomplete="off">
+      <button type="button" id="appMenuClose">Close</button>
+    </div>
+    <div id="appMenuBody" class="app-menu-body" role="listbox" aria-label="Menu items"></div>
+  </dialog>
+  <dialog id="helpDialog" class="help-dialog" aria-labelledby="helpDialogTitle">
+    <form method="dialog">
+      <h2 id="helpDialogTitle">GlobeDesk help</h2>
+      <div id="helpDialogBody" class="help-dialog-body"></div>
+      <button value="close">Close</button>
+    </form>
+  </dialog>
 
   <main class="desk">
-    <aside class="col left">
+    <aside id="newsdesk" class="col newsdesk" aria-label="News desk">
+      <section class="panel nd-head">
+        <h2>News desk</h2>
+        <p id="ndMeta" class="muted small">Loading topics…</p>
+        <nav id="ndSections" class="nd-sections" aria-label="Sections"></nav>
+      </section>
+      <div id="ndNotice" class="nd-notice" hidden></div>
+      <div id="ndCards" class="nd-cards" aria-label="Stories"></div>
+      <div id="ndResearch" class="nd-research" hidden aria-label="Research"></div>
+    </aside>
+    <div class="dock dock-left" id="dockLeft" data-dock="left">
+      <div class="dock-resizer" data-resize="left" tabindex="0" role="separator" aria-orientation="vertical" aria-label="Resize left dock"></div>
       <section class="panel" id="rundownPanel">
         <h2>Rundown <button id="addStory" class="mini">+ story</button></h2>
         <ol id="rundown" class="rundown"></ol>
@@ -45,12 +84,13 @@
         </div>
         <ul id="bin" class="bin"></ul>
       </section>
-    </aside>
+    </div>
 
-    <section class="col center">
+    <section class="col center" id="stageCol">
       <div id="stageWrap" class="stage-wrap">
         <div id="stage" class="stage" data-aspect="16:9">
           <div id="map" class="map"></div>
+          <div id="stageYearBadge" class="stage-year-badge" hidden aria-live="polite"></div>
           <div id="mediaLayer" class="media-layer"></div>
           <div id="contentLayer" class="content-layer" aria-label="User content layer"></div>
           <canvas id="ov" class="ov" aria-hidden="true"></canvas>
@@ -60,23 +100,34 @@
         </div>
       </div>
       <p id="stageCredit" class="stage-credit small" aria-label="Map credits"></p>
-      <div class="transport">
+      <div class="dock dock-bottom" id="dockBottom" data-dock="bottom">
+      <div class="dock-resizer" data-resize="bottom" tabindex="0" role="separator" aria-orientation="horizontal" aria-label="Resize bottom dock"></div>
+      <div class="transport" id="transportBar" role="region" aria-label="Playback">
         <button id="btnPlay" class="play" aria-label="Play">▶</button>
         <span id="time" class="time">0:00 / 0:00</span>
         <div class="scrub-wrap">
           <div id="segments" class="segments"></div>
           <input id="scrub" type="range" min="0" max="100" step="0.05" value="0" aria-label="Episode position">
         </div>
-        <label class="small"><input id="browserVoice" type="checkbox"> Browser voice (free preview)</label>
-        <label class="small"><input id="showSafe" type="checkbox" checked> Safe zones</label>
+        <div class="data-year" id="dataYearWrap">
+          <label for="dataYear" class="data-year-label">Data year</label>
+          <input id="dataYear" type="range" min="1983" max="2026" step="1" value="2026" aria-label="Data year">
+          <span id="dataYearVal" class="data-year-val">2026</span>
+          <span id="dataYearChip" class="data-year-chip" hidden></span>
+        </div>
+        <label class="small tr-opt" title="Use the open story date as the data year"><input id="followStoryDate" type="checkbox"> <span class="tr-lbl-full">Follow story date</span><span class="tr-lbl-short">Follow</span></label>
+        <label class="small tr-opt" title="Browser voice (free preview)"><input id="browserVoice" type="checkbox"> <span class="tr-lbl-full">Browser voice (free preview)</span><span class="tr-lbl-short">Voice</span></label>
+        <label class="small tr-opt" title="Safe zones"><input id="showSafe" type="checkbox" checked> <span class="tr-lbl-full">Safe zones</span><span class="tr-lbl-short">Safe</span></label>
       </div>
       <section class="panel readable" id="readablePanel" aria-live="polite" aria-label="Readable view of cards and captions">
         <h2>Readable view <span class="muted small">(for hard-of-hearing viewers and screen readers)</span></h2>
         <div id="readable"></div>
       </section>
+      </div>
     </section>
 
-    <aside class="col right">
+    <div class="dock dock-right" id="dockRight" data-dock="right">
+      <div class="dock-resizer" data-resize="right" tabindex="0" role="separator" aria-orientation="vertical" aria-label="Resize right dock"></div>
       <section class="panel inspector-panel" id="inspectorPanel">
       <h2>Inspector</h2>
       <nav class="tabs" role="tablist" aria-label="Inspector">
@@ -86,9 +137,49 @@
       </nav>
       <div id="inspector" class="inspector" role="tabpanel" aria-labelledby="tab-story"></div>
       </section>
-    </aside>
+    </div>
+    <div id="floatLayer" class="float-layer"></div>
   </main>
 
+  <dialog id="layersPanel" class="layers-panel" aria-labelledby="layersPanelTitle">
+    <div class="lp-head">
+      <h2 id="layersPanelTitle">Layers</h2>
+      <button id="layersShowAll" type="button">Show all</button>
+      <button id="layersHideAll" type="button">Hide all</button>
+      <button id="layersClose" type="button" aria-label="Close layers">Close</button>
+    </div>
+    <div id="layersPanelBody" class="lp-body"></div>
+  </dialog>
+  <dialog id="exportDialog" class="export-dialog" aria-labelledby="exportTitle">
+    <div class="ex-head"><h2 id="exportTitle">Export</h2><button id="exportClose" type="button">Close</button></div>
+    <section class="ex-sec" aria-labelledby="exMp4H">
+      <h3 id="exMp4H">Video (MP4)</h3>
+      <p class="muted small">Renders the episode frame by frame on this device, then saves an MP4 to your Downloads. Nothing is uploaded.</p>
+      <div class="seg" role="radiogroup" aria-label="Video shape">
+        <label><input type="radio" name="exAspect" value="16:9" checked> 16:9 (X, YouTube)</label>
+        <label><input type="radio" name="exAspect" value="9:16"> 9:16 (phone)</label>
+      </div>
+      <label class="small">Length <select id="exLength"><option value="full">Whole episode</option><option value="10">First 10 seconds</option><option value="30">First 30 seconds</option><option value="60">First 60 seconds</option></select></label>
+      <div class="ex-actions"><button id="exMp4Go" type="button">Export MP4</button><button id="exMp4Cancel" type="button" hidden>Cancel</button></div>
+      <progress id="exMp4Progress" max="100" value="0" hidden></progress>
+      <p id="exMp4Status" class="small" aria-live="polite"></p>
+    </section>
+    <section class="ex-sec" aria-labelledby="exShareH">
+      <h3 id="exShareH">Offline share pack</h3>
+      <p class="muted small">One .globedesk.html file that plays the story in any browser with no internet, server or account. It only takes stories that pass the promote checks (source, licence, label, personal-field strip, scrub scan and name scan), and only after you confirm.</p>
+      <label class="small">Label <select id="shLabel"><option value="">Choose…</option><option>PUBLIC</option><option>RECORDED</option><option>PROJECTED</option></select></label>
+      <label class="small">Your licence for your own text <input id="shLicense" type="text" placeholder="for example CC BY 4.0" maxlength="120"></label>
+      <fieldset class="ex-tiles"><legend class="small">Map</legend>
+        <label><input type="radio" name="shTiles" value="outline" checked> Outline globe (Natural Earth, smallest)</label>
+        <label><input type="radio" name="shTiles" value="bluemarble"> + Blue Marble, low zoom (NASA, public domain)</label>
+        <label><input type="radio" name="shTiles" value="eox-region"> + Washington, DC 2016 region (EOX, CC BY 4.0)</label>
+      </fieldset>
+      <div class="ex-actions"><button id="shCheck" type="button">Check</button></div>
+      <div id="shReport" class="ex-report small" aria-live="polite"></div>
+      <label class="small ex-confirm"><input id="shConfirm" type="checkbox" disabled> I checked the list above and want to make this share pack.</label>
+      <div class="ex-actions"><button id="shBuild" type="button" disabled>Build share pack</button></div>
+    </section>
+  </dialog>
   <dialog id="archive" class="archive" aria-labelledby="archiveTitle">
     <div class="archive-head"><h2 id="archiveTitle">Archive</h2><p class="muted small">Every show and story ever added keeps a card here, and nothing is pruned. Open a card to bring it back.</p><button id="archiveClose" type="button">Close</button></div>
     <div id="archiveBody" class="archive-body"></div>
@@ -106,9 +197,9 @@
   <script src="js/sanitize.js"></script>
   <script src="js/zip.js"></script>
   <script src="js/schema.js"></script>
-  <script src="js/frog-rundown.js"></script>
-  <script src="js/model.js"></script>
+    <script src="js/model.js"></script>
   <script src="js/archive.js"></script>
+  <script src="js/year-clock.js"></script>
   <script src="js/layers.js"></script>
   <script src="js/settings.js"></script>
   <script src="js/store.js"></script>
@@ -119,12 +210,28 @@
   <script src="js/project-io.js"></script>
   <script src="js/version.js"></script>
   <script src="js/render.js"></script>
+  <script src="js/map-pointer.js"></script>
   <script src="js/globe.js"></script>
   <script src="js/events-map.js"></script>
   <script src="js/callouts.js"></script>
   <script src="js/recorder.js"></script>
+  <script src="vendor/mediabunny-1.66.2.min.js"></script>
+  <script src="js/frame-export.js"></script>
   <script src="js/playback.js"></script>
   <script src="js/events-ui.js"></script>
+  <script src="js/outbound.js"></script>
+  <script src="js/claims.js"></script>
+  <script src="js/research.js"></script>
+  <script src="js/records.js"></script>
+  <script src="js/gis.js"></script>
+  <script src="js/geocode.js"></script>
+  <script src="js/newsdesk.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/reset-view.js"></script>
+  <script src="js/layers-panel.js"></script>
+  <script src="js/share-pack.js"></script>
   <script src="js/ui.js"></script>
+  <script src="js/commands.js"></script>
 </body>
 </html>

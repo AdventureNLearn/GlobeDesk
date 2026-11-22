@@ -54,10 +54,12 @@
         </div>`).join("") || "<p class='muted'>No layers yet. Draw something or click + Layer.</p>"}
         <p class="muted small">Categories: ${Object.values(E().CATEGORIES).map((c) => `<span class="ev-cat" data-color="${esc(c.color)}">${c.icon} ${esc(c.label)}</span>`).join(" · ")}</p>
       </div>
+      ${(GD.records && GD.records.panelHtml) ? GD.records.panelHtml() : ""}
       ${sel ? featureEditor(sel) : ""}
       ${unlocatedList()}`;
     root.querySelectorAll(".ev-cat").forEach((n) => { const c = n.getAttribute("data-color"); if (c) n.style.color = c; });
     wire(root, story, cur, sel);
+    if (GD.records && GD.records.wirePanel) GD.records.wirePanel(root);
   }
 
   function unlocatedList() {
@@ -109,8 +111,8 @@
         b.addEventListener("click", () => {
           const c = [pl.lon, pl.lat], em = M().em, s = sel && sel.f;
           if (em.mode === "line" || em.mode === "polygon" || em.mode === "point" || em.mode === "ring") M().addVertex(c);
-          else if (s && s.geometry && s.geometry.type === "Point") { s.geometry.coordinates = c; s.properties.precisionLabel = `Precision: snapped to gazetteer point for ${pl.name} (town center, not an event fix)`; }
-          else { M().setMode("point"); const f = M().addVertex(c); M().setMode("select"); if (f) f.properties.precisionLabel = `Precision: gazetteer point for ${pl.name} (town center, not an event fix)`; }
+          else if (s && s.geometry && s.geometry.type === "Point") { s.geometry.coordinates = c; s.properties.precisionLabel = `Precision: snapped to gazetteer point for ${pl.name} (Natural Earth populated-place point, not an event fix)`; }
+          else { M().setMode("point"); const f = M().addVertex(c); M().setMode("select"); if (f) f.properties.precisionLabel = `Precision: gazetteer point for ${pl.name} (Natural Earth populated-place point, not an event fix)`; }
           GD.globe.flyTo({ center: c, zoom: 11, pitch: 45, bearing: 0, durationSec: 1.6 });
           changed(); render(root);
         });

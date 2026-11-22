@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "js" / "config.js"
-OUT = ROOT / "guide-packs" / "frogpost" / "assets" / "vo" / "gb"
+OUT = ROOT / "guide-packs" / "template" / "assets" / "vo" / "gb"
 PIPER = Path(os.environ.get("PIPER") or shutil.which("piper") or "piper")
 MODEL = Path(os.environ.get("PIPER_MODEL") or "voices/en_GB-vctk-medium.onnx")
 SPEAKER = os.environ.get("PIPER_SPEAKER") or "p226"  # VCTK p226: male, 22, English (Surrey)
@@ -42,7 +42,7 @@ def load_demo():
         raise SystemExit("failed to read config.js")
     demo = json.loads(r.stdout)
     # The spoken lines live in the guide pack (same merge as js/guidepack.js).
-    pack = json.loads((ROOT / "guide-packs" / "frogpost" / "manifest.json").read_text())
+    pack = json.loads((ROOT / "guide-packs" / "template" / "manifest.json").read_text())
     demo["lines"] = dict(pack.get("lines") or {})
     scripts = pack.get("levels") or {}
     if isinstance(scripts, list):

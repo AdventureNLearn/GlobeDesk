@@ -1,0 +1,340 @@
+{
+  "schema": "globedesk.episode/2",
+  "id": "ep-washington-dc-demo",
+  "show": "GlobeDesk",
+  "title": "Washington, DC demo \u2014 the National Mall",
+  "date": "2026-11-21",
+  "lede": "A short two-story walk of the National Mall, built for the offline Washington, DC region pack. Pins are approximate. Imagery is EOX Sentinel-2 cloudless 2016 (CC BY 4.0).",
+  "cta": "Open with the DC region pack and press Play.",
+  "links": [
+    {
+      "label": "Architect of the Capitol \u2014 U.S. Capitol Building",
+      "url": "https://www.aoc.gov/explore-capitol-campus/buildings-grounds/capitol-building"
+    },
+    {
+      "label": "National Park Service \u2014 Lincoln Memorial",
+      "url": "https://www.nps.gov/linc/index.htm"
+    },
+    {
+      "label": "National Park Service \u2014 National Mall and Memorial Parks",
+      "url": "https://www.nps.gov/mall/index.htm"
+    }
+  ],
+  "demo": true,
+  "sample": true,
+  "look": {
+    "label": "GlobeDesk (default) \u2014 SeaGlobe cinematic glass, holographic cyan, gold chrome",
+    "theme": "globedesk",
+    "header": true,
+    "headerBadge": "GLOBEDESK",
+    "headerHeightPct": 15,
+    "citations": true,
+    "captionsOn": true,
+    "captionStyle": "shadow",
+    "captionSize": "large",
+    "captionLines": 2,
+    "captionZonePct": 15,
+    "lowerThird": false,
+    "ticker": false,
+    "music": false,
+    "coldOpen": false,
+    "shotSec": 8,
+    "palette": {
+      "bg": "#02040c",
+      "ink": "#eaf6ff",
+      "accent": "#e7c766",
+      "highlight": "#5ee7ff",
+      "panel": "rgba(12, 24, 56, 0.42)",
+      "outroBg": "#02040c"
+    },
+    "map": {
+      "base": "offline",
+      "softBorders": true,
+      "highlightGlow": true,
+      "countryLabels": "flat-white"
+    },
+    "safeArea": true
+  },
+  "handle": "@AdventureNLearn",
+  "outro": {
+    "enabled": false,
+    "durationSec": 0,
+    "line1": "",
+    "link": "",
+    "handle": "@AdventureNLearn",
+    "showXLogo": false
+  },
+  "output": {
+    "aspect": "16:9",
+    "fps": 30
+  },
+  "stories": [
+    {
+      "id": "story-capitol",
+      "slug": "capitol",
+      "title": "The United States Capitol",
+      "summary": "The Capitol stands at the eastern end of the National Mall and houses the Senate and the House of Representatives.",
+      "date": "",
+      "credit": "Architect of the Capitol",
+      "creditUrl": "https://www.aoc.gov/explore-capitol-campus/buildings-grounds/capitol-building",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "U.S. Capitol (approx.)",
+        "lat": 38.89,
+        "lon": -77.01,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Rounded pin at the east end of the National Mall. A surveyed building coordinate is [UNKNOWN] in this episode. Not a street address.",
+        "a3": "USA"
+      },
+      "script": "Story one. The United States Capitol stands at the eastern end of the National Mall in Washington, D.C. The Senate and the House of Representatives meet here to craft the country's laws. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 2.2,
+          "text": "Story one. The United States Capitol."
+        },
+        {
+          "start": 2.2,
+          "end": 5.4,
+          "text": "Eastern end of the National Mall, Washington, D.C."
+        },
+        {
+          "start": 5.4,
+          "end": 8,
+          "text": "The Senate and the House meet here. Pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-capitol-orbit",
+          "preset": "orbit",
+          "at": 0,
+          "center": [
+            -77.01,
+            38.89
+          ],
+          "zoom": 2.4,
+          "pitch": 0,
+          "bearing": 0,
+          "durationSec": 2.0,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        },
+        {
+          "id": "kf-capitol-close",
+          "preset": "close",
+          "at": 2,
+          "center": [
+            -77.01,
+            38.89
+          ],
+          "zoom": 13,
+          "pitch": 42,
+          "bearing": 15,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-capitol",
+          "kind": "topic",
+          "title": "U.S. Capitol",
+          "body": "The United States Capitol Building is in Washington, D.C., at the eastern end of the National Mall. At the Capitol the Senate and the House of Representatives come together to discuss, debate and deliberate national policy and craft the country's laws.",
+          "why": "A clear, official landmark on the offline DC region pack, used here as the first beat of a short story demo.",
+          "facts": [
+            {
+              "label": "Place",
+              "value": "Washington, D.C., eastern end of the National Mall (Architect of the Capitol)."
+            },
+            {
+              "label": "Role",
+              "value": "Meeting place of the Senate and the House of Representatives (Architect of the Capitol)."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate, rounded to 38.89, \u221277.01. Surveyed coordinate [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-aoc-capitol"
+          ],
+          "pin": {
+            "lat": 38.89,
+            "lon": -77.01
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-aoc-capitol",
+          "label": "Architect of the Capitol, U.S. Capitol Building",
+          "url": "https://www.aoc.gov/explore-capitol-campus/buildings-grounds/capitol-building",
+          "status": "verified",
+          "note": "Official Architect of the Capitol page, read 21 Nov 2026. Pin coordinates are not taken from this page."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "USA",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "id": "story-lincoln",
+      "slug": "lincoln",
+      "title": "The Lincoln Memorial",
+      "summary": "The Lincoln Memorial is in National Mall and Memorial Parks. From there the Mall stretches toward the Washington Monument and the U.S. Capitol.",
+      "date": "",
+      "credit": "National Park Service",
+      "creditUrl": "https://www.nps.gov/linc/index.htm",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "Lincoln Memorial (approx.)",
+        "lat": 38.89,
+        "lon": -77.05,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Rounded pin west of the Capitol pin, inside the DC region pack bbox. A surveyed memorial coordinate is [UNKNOWN] in this episode. Not a street address.",
+        "a3": "USA"
+      },
+      "script": "Story two. The Lincoln Memorial is in National Mall and Memorial Parks in Washington, D.C. From the memorial the Mall looks east toward the Washington Monument and the U.S. Capitol. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 2.4,
+          "text": "Story two. The Lincoln Memorial."
+        },
+        {
+          "start": 2.4,
+          "end": 5.6,
+          "text": "National Mall and Memorial Parks, Washington, D.C."
+        },
+        {
+          "start": 5.6,
+          "end": 8,
+          "text": "The Mall looks east toward the Capitol. Pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-lincoln-close",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            -77.05,
+            38.89
+          ],
+          "zoom": 13,
+          "pitch": 40,
+          "bearing": -15,
+          "durationSec": 2.6,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-lincoln",
+          "kind": "topic",
+          "title": "Lincoln Memorial",
+          "body": "The Lincoln Memorial is a National Park Service memorial in the District of Columbia, in National Mall and Memorial Parks. A National Park Service view looks east from the Lincoln Memorial Reflecting Pool toward the Washington Monument and the U.S. Capitol. The National Mall is shown as a stretch from the Lincoln Memorial to the U.S. Capitol.",
+          "why": "A second official landmark inside the same offline region pack, used to test two-story playback and resume.",
+          "facts": [
+            {
+              "label": "Place",
+              "value": "District of Columbia, National Mall and Memorial Parks (National Park Service)."
+            },
+            {
+              "label": "View",
+              "value": "East from the Lincoln Memorial Reflecting Pool toward the Washington Monument and the U.S. Capitol (NPS)."
+            },
+            {
+              "label": "Dedication date",
+              "value": "[UNKNOWN] in this card."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate, rounded to 38.89, \u221277.05. Surveyed coordinate [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-nps-linc",
+            "src-nps-mall"
+          ],
+          "pin": {
+            "lat": 38.89,
+            "lon": -77.05
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-nps-linc",
+          "label": "National Park Service, Lincoln Memorial",
+          "url": "https://www.nps.gov/linc/index.htm",
+          "status": "verified",
+          "note": "Official NPS page, read 21 Nov 2026. Pin coordinates are not taken from this page."
+        },
+        {
+          "id": "src-nps-mall",
+          "label": "National Park Service, National Mall and Memorial Parks",
+          "url": "https://www.nps.gov/mall/index.htm",
+          "status": "verified",
+          "note": "Official NPS page, read 21 Nov 2026, including the eastward view from the Lincoln Memorial Reflecting Pool and the Mall described as a stretch from the Lincoln Memorial to the U.S. Capitol."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "USA",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    }
+  ],
+  "eventLayers": [],
+  "mediaBin": []
+}

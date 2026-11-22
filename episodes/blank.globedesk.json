@@ -1,7 +1,7 @@
 {
   "schema": "globedesk.episode/2",
-  "id": "ep-mwpmy709-1",
-  "show": "Frogpost",
+  "id": "ep-mwr37mjj-1",
+  "show": "GlobeDesk",
   "title": "[UNKNOWN]",
   "date": "YYYY-MM-DD",
   "lede": "[UNKNOWN]",
@@ -10,10 +10,10 @@
   "demo": false,
   "sample": false,
   "look": {
-    "label": "Frogpost (default) — pond green, header, citation boxes, bold captions, no music",
-    "theme": "frog",
+    "label": "GlobeDesk (default) — SeaGlobe cinematic glass, holographic cyan, gold chrome",
+    "theme": "globedesk",
     "header": true,
-    "headerBadge": "FROGPOST",
+    "headerBadge": "GLOBEDESK",
     "headerHeightPct": 15,
     "citations": true,
     "captionsOn": true,
@@ -24,15 +24,15 @@
     "lowerThird": false,
     "ticker": false,
     "music": false,
-    "coldOpen": true,
+    "coldOpen": false,
     "shotSec": 8,
     "palette": {
-      "bg": "#0c1610",
-      "ink": "#f3f7ef",
-      "accent": "#3dbe6a",
-      "highlight": "#d6f25c",
-      "panel": "rgba(16,42,28,0.78)",
-      "outroBg": "#07140c"
+      "bg": "#02040c",
+      "ink": "#eaf6ff",
+      "accent": "#e7c766",
+      "highlight": "#5ee7ff",
+      "panel": "rgba(12, 24, 56, 0.42)",
+      "outroBg": "#02040c"
     },
     "map": {
       "base": "sat-hybrid",
@@ -57,7 +57,7 @@
   },
   "stories": [
     {
-      "id": "story-mwpmy709-2",
+      "id": "story-mwr37mjk-2",
       "slug": "story-1",
       "title": "[UNKNOWN]",
       "durationSec": 24,
@@ -72,7 +72,7 @@
       "camera": [],
       "cards": [
         {
-          "id": "card-mwpmy709-3",
+          "id": "card-mwr37mjk-3",
           "kind": "topic",
           "title": "[UNKNOWN]",
           "body": "[UNKNOWN]",
@@ -93,7 +93,7 @@
       ],
       "sources": [
         {
-          "id": "src-mwpmy709-4",
+          "id": "src-mwr37mjk-4",
           "label": "[UNKNOWN]",
           "url": "",
           "status": "unverified",

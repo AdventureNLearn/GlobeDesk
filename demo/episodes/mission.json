@@ -15,10 +15,10 @@
   "demo": true,
   "sample": false,
   "look": {
-    "label": "CTD (default) — header, citation boxes, bold captions, no music",
-    "theme": "ctd",
+    "label": "GlobeDesk — header, citation boxes, bold captions, no music",
+    "theme": "globedesk",
     "header": true,
-    "headerBadge": "NOW COVERING",
+    "headerBadge": "GLOBEDESK",
     "headerHeightPct": 15,
     "citations": true,
     "captionsOn": true,

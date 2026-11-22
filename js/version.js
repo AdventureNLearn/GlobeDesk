@@ -3,8 +3,8 @@
 (function () {
   "use strict";
   const GD = (window.GD = window.GD || {});
-  const APP = "1.0.1";
-  const EDITION = "Official Release";
+  const APP = "1.3.0";
+  const EDITION = "Share & Export";
   // Intended post-release check URL is not confirmed. Do not invent a host.
   const URL = null; // [UNKNOWN]
 
@@ -19,5 +19,6 @@
     }
   }
 
-  GD.version = { APP, EDITION, URL, check };
+  const label = "v" + APP + " · " + EDITION;
+  GD.version = { APP, EDITION, URL, check, label: label, number: "v" + APP, suffix: EDITION };
 })();

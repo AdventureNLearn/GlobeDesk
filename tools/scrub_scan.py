@@ -10,6 +10,8 @@ Usage:
 Extra, private patterns (names, places, internal project words) are never stored
 in this repository. Pass them with --private, or set GLOBEDESK_PRIVATE_PATTERNS
 to a JSON file containing a list of regular expressions. Exit code 1 on any hit.
+Test-only phone fixtures may be allowlisted by exact (path, kind)
+and only when the match contains a 555 exchange. Do not allow a whole file.
 """
 from __future__ import annotations
 import argparse, json, os, re, subprocess, sys, zipfile
@@ -37,8 +39,24 @@ GENERIC = {
     "agent store id": r"\bstore-[0-9a-f]{8}-[0-9a-f]{4}",
     "uuid": r"\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b",
 }
-# Lines that legitimately contain a pattern (documentation of the scanner itself, test fixtures).
+# Lines that legitimately contain a pattern (documentation of the scanner itself).
+# Whole-file allows are only for the scanner source. Test fixtures must use ALLOW_HITS.
 ALLOW_FILES = {"tools/scrub_scan.py"}
+# Exact (path, kind) pairs only. Phone hits also require the NANP *exchange* to be 555.
+ALLOW_HITS = {
+    ("tests/records.unit.mjs", "phone number"),
+    ("tests/research.unit.mjs", "phone number"),
+}
+PHONE_555 = re.compile(r"(?<!\d)555(?!\d)")
+# A 555 *area code* is not an exchange. Strip punctuation and require digits 4-6.
+def phone_exchange_is_555(text: str) -> bool:
+    digits = re.sub(r"\D+", "", text or "")
+    if len(digits) == 11 and digits.startswith("1"):
+        digits = digits[1:]
+    if len(digits) != 10:
+        return False
+    return digits[3:6] == "555"
+
 # The bundled gazetteer (Natural Earth, public domain) lists thousands of real towns;
 # private place patterns are not applied to it.
 PRIVATE_SKIP_PREFIX = ("data/",)
@@ -95,7 +113,9 @@ def main() -> int:
             for k, r in rx.items():
                 if k.startswith("private") and rel.startswith(PRIVATE_SKIP_PREFIX):
                     continue
-                if r.search(line):
+                for m in r.finditer(line):
+                    if (rel, k) in ALLOW_HITS and (k != "phone number" or phone_exchange_is_555(m.group(0) or "")):
+                        continue
                     hits += 1
                     # Private patterns are reported by number only, never echoed.
                     print(f"{rel}:{ln}: {k}")

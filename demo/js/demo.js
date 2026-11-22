@@ -239,13 +239,13 @@
     const dur = await DemoAudio.playVo(key);
     showCaption(text, dur ? dur * 1000 : 0);
     if (state.skip) {
-      DemoFrog.stopTalk();
+      DemoGuide.stopTalk();
       state.speaking = false;
       return;
     }
-    DemoFrog.setExpression(poseFor(key));
-    DemoFrog.startTalk();
-    const typed = DemoFrog.typeText($("speech"), text);
+    DemoGuide.setExpression(poseFor(key));
+    DemoGuide.startTalk();
+    const typed = DemoGuide.typeText($("speech"), text);
     const typeBudget = Math.min(2200, (text.length || 8) * ((C.timing && C.timing.typeMsPerChar) || 16) + 200);
     await Promise.race([typed, sleep(typeBudget)]);
     $("speech").textContent = text;
@@ -253,7 +253,7 @@
     // computed duration so a long line is never cut off when the next starts.
     const remain = state.skip ? 0 : Math.max(0, (dur ? dur * 1000 - typeBudget : 500));
     if (remain > 0) await sleep(remain);
-    DemoFrog.stopTalk();
+    DemoGuide.stopTalk();
     state.speaking = false;
   }
 
@@ -318,7 +318,7 @@
     if (level.badge && state.badges.indexOf(level.badge.id) < 0) state.badges.push(level.badge.id);
     cue("award", level.id);
     DemoAudio.playSfx("success-chime.wav", 0.65);
-    DemoFrog.setExpression("success");
+    DemoGuide.setExpression("success");
     const next = currentRank();
     renderBar();
     renderLog();
@@ -358,7 +358,7 @@
     hintTimer = setTimeout(function () {
       if (DemoDesk.objectiveMet(level.id) || state.skip) return;
       state.hinted[level.id] = true;
-      DemoFrog.setExpression("hint");
+      DemoGuide.setExpression("hint");
       DemoAudio.playSfx("hint-tick.wav", 0.5);
       speak(level.id + "-hint").catch(function () {});
     }, C.timing.hintAfterMs || 12000);
@@ -476,7 +476,7 @@
     DemoDesk.hideKit();
     DemoDesk.setKioskMode("globe");
     try { await DemoDesk.goOrbit(); } catch (e) {}
-    DemoFrog.setExpression("salute");
+    DemoGuide.setExpression("salute");
     await speak("finale").catch(function () {});
     state.xp += 200;
     cue("award", "finale");
@@ -521,7 +521,7 @@
   function skip() {
     state.skip = true;
     stopCaptionPages();
-    DemoFrog.resolveType();
+    DemoGuide.resolveType();
     if (window.DemoAudio) DemoAudio.stopVo();
     DemoAudio.playSfx("ui-click.wav", 0.4);
     requestContinue();
@@ -572,8 +572,8 @@
         showScreen("screen-complete");
         renderDebrief();
         if (window.DemoDesk) DemoDesk.setKioskMode("globe");
-        DemoFrog.setExpression("salute");
-        DemoFrog.stopTalk();
+        DemoGuide.setExpression("salute");
+        DemoGuide.stopTalk();
         radioOn();
         renderBar();
       },
@@ -608,7 +608,7 @@
       const level = C.levels[state.levelIndex];
       if (!level) return;
       DemoAudio.playSfx("hint-tick.wav", 0.5);
-      DemoFrog.setExpression("hint");
+      DemoGuide.setExpression("hint");
       speak(level.id + "-hint").catch(function () {});
     });
     $("btnAssist").addEventListener("click", function () {
@@ -626,7 +626,7 @@
     await DemoAudio.init({ muted: state.muted });
     if (window.DemoRadio) DemoRadio.init({ muted: state.muted, record: record });
     if (window.DemoVoiceLab) DemoVoiceLab.init();
-    DemoFrog.init();
+    DemoGuide.init();
 
     const deskP = DemoDesk.waitReady().then(async function (ok) {
       state.deskReady = !!ok;

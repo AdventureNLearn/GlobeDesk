@@ -25,7 +25,16 @@
     const kfs = (s.camera || []).filter((k) => k.at <= lt).sort((a, b) => a.at - b.at);
     // A map shot's citation holds from its cut until the next cut.
     const cutKf = kfs.filter((k) => k.cut !== false).pop() || kfs[kfs.length - 1];
-    S.ov.cards = (s.cards || []).filter((c) => lt >= c.at && lt < c.at + c.dur);
+    const timed = (s.cards || []).filter((c) => lt >= c.at && lt < c.at + c.dur);
+    const forced = (S.forcedCards || []).map((id) => {
+      for (const st of (S.episode.stories || [])) {
+        const c = (st.cards || []).find((x) => x.id === id);
+        if (c) return c;
+      }
+      return null;
+    }).filter(Boolean);
+    S.ov.cards = timed.slice();
+    forced.forEach((c) => { if (!S.ov.cards.some((x) => x.id === c.id)) S.ov.cards.push(c); });
     S.ov.captions = (s.captions || []).filter((c) => lt >= c.start && lt < c.end).map((c) => c.text);
     S.ov.media = (s.media || []).filter((m) => m.role !== "voiceover" && m.role !== "music" && lt >= m.at && lt < m.at + m.dur);
     S.ov.citations = [];
@@ -46,13 +55,20 @@
     if (jump) {
       const past = kfs.filter((k) => k.at <= lt);
       const k = past[past.length - 1] || kfs[0];
-      GD.globe.st.map.jumpTo({ center: k.center, zoom: k.zoom, pitch: k.pitch, bearing: k.bearing });
+      if (GD.globe.jumpTo) GD.globe.jumpTo(k);
+      else GD.globe.st.map.jumpTo({ center: k.center, zoom: k.zoom, pitch: k.pitch, bearing: k.bearing });
       kfs.forEach((x) => { if (x.at <= lt) pb.fired.add(s.id + x.id); });
       return;
     }
     kfs.forEach((k) => {
       const key = s.id + k.id;
-      if (lt >= k.at && !pb.fired.has(key)) { pb.fired.add(key); GD.globe.flyTo(k); }
+      if (lt >= k.at && !pb.fired.has(key)) {
+        pb.fired.add(key);
+        if (GD.commands && GD.commands.flyTo) {
+          const c = k.center || [0, 0];
+          GD.commands.flyTo({ lon: c[0], lat: c[1], zoom: k.zoom, pitch: k.pitch, bearing: k.bearing, durationSec: k.durationSec });
+        } else GD.globe.flyTo(k);
+      }
     });
   }
 
@@ -95,20 +111,99 @@
     pb.raf = requestAnimationFrame(tick);
   }
 
-  function play() {
+  function capturePlayBaseline() {
+    const S = GD.state;
+    if (!S.episode || !GD.globe) return;
+    S.playBaseline = {
+      locations: (GD.commands && GD.commands.cloneLocations) ? GD.commands.cloneLocations(S.episode) : [],
+      overlays: JSON.parse(JSON.stringify(GD.globe.st.overlays || {})),
+      baseId: GD.globe.st.baseId
+    };
+  }
+
+  function restorePlayBaseline() {
+    const S = GD.state, b = S.playBaseline;
+    if (!b || !S.episode) return;
+    if (GD.commands && GD.commands.restoreLocations) GD.commands.restoreLocations(S.episode, b.locations);
+    S.forcedCards = [];
+    if (GD.callouts) GD.callouts.clear();
+    if (GD.globe && b.baseId && GD.globe.st.baseId !== b.baseId) GD.globe.setBase(b.baseId);
+    if (GD.globe && b.overlays) {
+      const cur = GD.globe.st.overlays || {};
+      const ids = new Set([].concat(Object.keys(cur), Object.keys(b.overlays)));
+      ids.forEach((id) => {
+        const want = !!b.overlays[id];
+        if (!!cur[id] !== want) GD.globe.setOverlay(id, want);
+      });
+    }
+    if (GD.globe) GD.globe.setEpisode(S.episode, S.storyIdx);
+  }
+
+  function storyState(t) {
+    const S = GD.state;
+    const { idx, lt, s } = evaluate(t);
+    const kf = (GD.commands && GD.commands.cameraAt) ? GD.commands.cameraAt(s, lt) : null;
+    return {
+      t, idx, lt,
+      cards: (S.ov.cards || []).map((c) => c.id),
+      camera: kf ? { center: kf.center, zoom: kf.zoom, pitch: kf.pitch, bearing: kf.bearing } : null
+    };
+  }
+
+  function applyStoryState(t) {
+    const S = GD.state;
+    restorePlayBaseline();
+    const stt = storyState(t);
+    const { idx, lt } = stt;
+    GD.globe.st.active = idx;
+    GD.globe.setEpisode(S.episode);
+    syncCamera(idx, lt, true);
+    if (GD.eventsMap) GD.eventsMap.refresh();
+    if (GD.audioMix) GD.audioMix.sync(S.episode.stories[idx], lt, false);
+    GD.ui.renderOverlays();
+    if (GD.content) GD.content.render();
+    return stt;
+  }
+
+  function startClock() {
     const S = GD.state;
     if (S.playing) return;
-    if (S.t >= GD.model.totalDuration(S.episode) - 0.05) seek(0);
     S.playing = true;
+    S.paused = false;
     pb.fired.clear();
     const { idx, lt } = evaluate(S.t);
-    // Mark moves already past so resume does not replay them; then fire the current one.
     const s = S.episode.stories[idx];
     (s.camera || []).forEach((k) => { if (k.at < lt - 0.25) pb.fired.add(s.id + k.id); });
     pb.audioStory = -1;
     pb.last = performance.now();
     pb.raf = requestAnimationFrame(tick);
     GD.ui.renderTransport();
+  }
+
+  function play() {
+    const S = GD.state;
+    if (S.playing) return;
+    if (S.paused) { resume(); return; }
+    if (S.t >= GD.model.totalDuration(S.episode) - 0.05) seek(0);
+    if (!S.playBaseline) capturePlayBaseline();
+    applyStoryState(S.t);
+    startClock();
+  }
+
+  function pause() {
+    const S = GD.state;
+    stop();
+    S.paused = true;
+    GD.ui.renderTransport();
+  }
+
+  function resume() {
+    const S = GD.state;
+    if (S.playing) return;
+    if (!S.playBaseline) capturePlayBaseline();
+    applyStoryState(S.t);
+    S.paused = false;
+    startClock();
   }
 
   function stop() {
@@ -127,6 +222,7 @@
     pb.fired.clear();
     pb.audioStory = -1;
     pb.spoken = -1;
+    if (S.playBaseline) restorePlayBaseline();
     const { idx, lt } = evaluate(S.t);
     GD.globe.st.active = idx;
     GD.globe.setEpisode(S.episode);
@@ -138,5 +234,13 @@
     if (GD.content) GD.content.render();
   }
 
-  GD.playback = { play, stop, seek, evaluate, locate };
+  function clearBaseline() {
+    const S = GD.state;
+    if (!S) return;
+    S.playBaseline = null;
+    S.paused = false;
+    S.forcedCards = [];
+  }
+
+  GD.playback = { play, pause, resume, stop, seek, evaluate, locate, storyState, applyStoryState, capturePlayBaseline, restorePlayBaseline, clearBaseline };
 })();
