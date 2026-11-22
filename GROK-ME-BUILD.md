@@ -61,10 +61,10 @@ Offline, the bundled Natural Earth globe still runs (`?base=offline` or Layers â
 
 ## Host notes (Grok.me)
 
-These notes came from the v1.3.0 rebuild and still apply to v1.3.1:
+These notes came from the v1.3.0 rebuild and were rechecked against the public live copy on Nov 22, 2026 (ET):
 
 - The kit is exactly the files listed in `grokme/manifest.json`. Copy them unchanged. Do not invent a new tree.
-- The entry page stays `index.html`. `desk.html` is only the Grok.me host shell; never add it to this repository.
+- In this repository the entry page stays `index.html`. Do not add `desk.html` to the repo: on Grok.me, `/` is the host shell, which iframes `/desk.html`. A check of the live v1.3.1 copy found `/desk.html` byte-identical to this kit's `index.html`, and `/index.html` returned 404. How the builder maps those paths is [UNKNOWN].
 - Leave the version-check URL in `js/version.js` null.
 - Keep the Content-Security-Policy in `index.html` exactly as it is. Add no hosts.
 - Live official GIS, dated NASA imagery, and online address search stay off by default.

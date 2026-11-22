@@ -4,7 +4,7 @@
 
 Pick your stories and the globe flies from orbit down to street level for each one. Cards pin to the place, every source carries a verified or unverified label, captions are always on, and you can record the result as a 16:9 or 9:16 video. It runs in your browser. You don't need an account, a server or an API key.
 
-> **v1.3.1 · Share & Export** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · The public live copy at [globedesk.grok.me](https://globedesk.grok.me) is v1.3.0 (Nov 22, 2026) until this patch is uploaded.
+> **v1.3.1 · Share & Export** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · The public live copy at [globedesk.grok.me](https://globedesk.grok.me) showed **v1.3.1 · Share & Export** in the top bar on Nov 22, 2026 (checked that afternoon, ET).
 
 ## Civic Intelligence Project, open source
 
