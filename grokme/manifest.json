@@ -31,8 +31,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 28809,
-      "sha256": "8435e544082111b49cf50230a323a42037990e72c90952ba5be28ad1e875cbaf"
+      "size": 29193,
+      "sha256": "ceac1d8662883ab879842466906dcc3c345c67a073ed68cb9bc69b9f17a0950b"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -56,8 +56,8 @@
     },
     {
       "path": "GROK-ME-BUILD.md",
-      "size": 6272,
-      "sha256": "cc46efa7ea01e778ac16e52da325ad879abb0e2acc32f337ccda1e57e1cec4fe"
+      "size": 6529,
+      "sha256": "457763103d193a7c5fad44dfa5fc623f7dfb1687debae99806a62d23f7eac047"
     },
     {
       "path": "LICENSE",
@@ -71,8 +71,8 @@
     },
     {
       "path": "README.md",
-      "size": 15613,
-      "sha256": "a87292dc76b6703319aa2fe06bbaea6ad36ad7f7b788e4ccec93909ef5aedfc4"
+      "size": 15655,
+      "sha256": "26805f186140e4e8afb9bc4840552ebb6e2a15580e6e777d74bc4eaa8e2aa7c7"
     },
     {
       "path": "SECURITY.md",
@@ -171,8 +171,8 @@
     },
     {
       "path": "grokme/APP-BRIEF.txt",
-      "size": 1018,
-      "sha256": "43bbda1eefa418d128f973c4f39a84159730e580864f9b5f3617c2f4c1a56a47"
+      "size": 1023,
+      "sha256": "e8e32ef90c0c145052d8a48013b5d1b399971074e95628c30d765fb1b917aa7b"
     },
     {
       "path": "grokme/BUILDER-PROMPT.txt",
@@ -537,6 +537,6 @@
   ],
   "totals": {
     "files": 105,
-    "bytes": 4594493
+    "bytes": 4595181
   }
 }
