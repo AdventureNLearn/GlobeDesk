@@ -92,7 +92,7 @@
   }
 
   async function load() {
-    const id = DEMO.guidePack || "frogpost";
+    const id = DEMO.guidePack || "template";
     const url = packBase(id) + "manifest.json";
     const r = await fetch(url);
     if (!r.ok) throw new Error("Guide pack not found: " + url + " (" + r.status + ")");

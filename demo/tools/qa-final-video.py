@@ -11,7 +11,7 @@ OUT_DIR = TMP / "final-qa"
 STT = Path(os.environ.get("GLOBEDESK_STT_DIR") or (TMP / "stt"))
 MODEL = STT / "vosk-model-small-en-us-0.15"
 VENV_PY = STT / "venv" / "bin" / "python"
-MANIFEST = ROOT / "guide-packs" / "frogpost" / "manifest.json"
+MANIFEST = ROOT / "guide-packs" / "template" / "manifest.json"
 
 LEVEL_ORDER = [
     "spin", "dive", "open", "edit", "pins", "media",

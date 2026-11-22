@@ -1,0 +1,599 @@
+{
+  "schema": "globedesk.episode/2",
+  "id": "ep-newsdesk-science",
+  "show": "GlobeDesk Newsdesk",
+  "title": "Newsdesk story: time, atmosphere, and the collider",
+  "date": "2026-11-21",
+  "lede": "A short three-story flight from the Royal Observatory at Greenwich to NOAA's Mauna Loa Observatory and CERN's Large Hadron Collider, cited from official pages. The Mauna Loa pin uses coordinates published by NOAA; the other pins are approximate.",
+  "cta": "Open in GlobeDesk and browse the rundown, or press Play to fly the stories in order.",
+  "links": [
+    {
+      "label": "Royal Museums Greenwich, History of the Royal Observatory",
+      "url": "https://www.rmg.co.uk/royal-observatory/history"
+    },
+    {
+      "label": "NOAA Global Monitoring Laboratory, Mauna Loa Baseline Observatory",
+      "url": "https://gml.noaa.gov/obop/mlo/"
+    },
+    {
+      "label": "CERN, The Large Hadron Collider",
+      "url": "https://home.cern/science/accelerators/large-hadron-collider"
+    }
+  ],
+  "demo": true,
+  "sample": true,
+  "look": {
+    "label": "Newsdesk — lower third, boxed captions",
+    "theme": "newsdesk",
+    "header": false,
+    "headerBadge": "NEWSDESK",
+    "headerHeightPct": 12,
+    "citations": true,
+    "captionsOn": true,
+    "captionStyle": "box",
+    "captionSize": "medium",
+    "captionLines": 2,
+    "captionZonePct": 15,
+    "lowerThird": true,
+    "ticker": false,
+    "music": false,
+    "coldOpen": false,
+    "shotSec": 10,
+    "palette": {
+      "bg": "#02040c",
+      "ink": "#eaf6ff",
+      "accent": "#e7c766",
+      "highlight": "#5ee7ff",
+      "panel": "rgba(12, 24, 56, 0.42)",
+      "outroBg": "#02040c"
+    },
+    "map": {
+      "base": "ofm-dark",
+      "softBorders": true,
+      "highlightGlow": true,
+      "countryLabels": "style"
+    },
+    "safeArea": true
+  },
+  "handle": "",
+  "outro": {
+    "enabled": false,
+    "durationSec": 0,
+    "line1": "",
+    "link": "",
+    "handle": "",
+    "showXLogo": false
+  },
+  "output": {
+    "aspect": "16:9",
+    "fps": 30
+  },
+  "stories": [
+    {
+      "id": "story-nd-royal-observatory-greenwich",
+      "slug": "royal-observatory-greenwich",
+      "title": "The Royal Observatory, Greenwich, founded in 1675",
+      "summary": "Royal Museums Greenwich says the Royal Observatory, Britain's oldest purpose-built scientific institution, was founded in 1675 and is the home of Greenwich Mean Time and the Prime Meridian. The foundation stone was laid on 10 August 1675.",
+      "date": "1675-08-10",
+      "credit": "Royal Museums Greenwich",
+      "creditUrl": "https://www.rmg.co.uk/royal-observatory/history",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "Royal Observatory, Greenwich (approx.)",
+        "lat": 51.48,
+        "lon": 0.0,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Approximate pin for the Royal Observatory in Greenwich Park, home of the Prime Meridian as described by Royal Museums Greenwich. A surveyed meridian-line coordinate is [UNKNOWN] in this card. The official history page, read 21 Nov 2026, says the site is temporarily closed for a capital project expected to reopen in spring 2028.",
+        "a3": "GBR"
+      },
+      "script": "Royal Museums Greenwich says the Royal Observatory, Britain's oldest purpose-built scientific institution, was founded in 1675 and is the home of Greenwich Mean Time and the Prime Meridian. The foundation stone was laid on 10 August 1675. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 2.8,
+          "text": "The Royal Observatory, Greenwich."
+        },
+        {
+          "start": 2.8,
+          "end": 6.2,
+          "text": "Founded in 1675; home of the Prime Meridian."
+        },
+        {
+          "start": 6.2,
+          "end": 8,
+          "text": "The pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-royal-observatory-greenwich-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            0.0,
+            51.48
+          ],
+          "zoom": 15,
+          "pitch": 42,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-greenwich",
+          "kind": "topic",
+          "title": "Royal Observatory Greenwich",
+          "body": "The official Royal Museums Greenwich history page says the Royal Observatory is Britain's oldest purpose-built scientific institution, founded in 1675, the birthplace of modern astronomy, and the home of Greenwich Mean Time and the Prime Meridian. It quotes Charles II's order to build a small observatory in Greenwich Park, notes that Christopher Wren was tasked with the design, and says Astronomer Royal John Flamsteed laid the foundation stone at 3.14pm on 10 August 1675 and moved in on 10 July 1676. In 1953 the Greenwich site became part of the National Maritime Museum. The page, read 21 November 2026, also says the site is temporarily closed for a capital project expected to reopen in spring 2028.",
+          "why": "The official home of the Prime Meridian, a natural pin for a globe.",
+          "facts": [
+            {
+              "label": "Founded",
+              "value": "1675; foundation stone laid 10 August 1675 (Royal Museums Greenwich)."
+            },
+            {
+              "label": "Role, as stated",
+              "value": "Britain's oldest purpose-built scientific institution; home of Greenwich Mean Time and the Prime Meridian."
+            },
+            {
+              "label": "Status when read",
+              "value": "Temporarily closed for a project expected to reopen in spring 2028 (page read 21 Nov 2026)."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate Greenwich Park stand-in. Surveyed meridian coordinate [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-rmg-history"
+          ],
+          "pin": {
+            "lat": 51.48,
+            "lon": 0.0
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-rmg-history",
+          "label": "Royal Museums Greenwich, History of the Royal Observatory",
+          "url": "https://www.rmg.co.uk/royal-observatory/history",
+          "status": "verified",
+          "note": "Official RMG history page, read 21 Nov 2026. Pin coordinates are not taken from this page."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "GBR",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "id": "story-nd-mauna-loa-observatory",
+      "slug": "mauna-loa-observatory",
+      "title": "NOAA's Mauna Loa Baseline Observatory",
+      "summary": "NOAA's Global Monitoring Laboratory describes the Mauna Loa Observatory as an atmospheric research facility on the north flank of Mauna Loa, Hawai'i, continuously monitoring atmospheric change since the 1950s. Official coordinates and elevation are published on the observatory page.",
+      "date": "1950s",
+      "credit": "NOAA Global Monitoring Laboratory",
+      "creditUrl": "https://gml.noaa.gov/obop/mlo/",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "Mauna Loa Baseline Observatory (NOAA-listed point)",
+        "lat": 19.5362,
+        "lon": -155.5763,
+        "precision": "approximate",
+        "verified": true,
+        "note": "Latitude 19.5362° N, longitude 155.5763° W, and elevation 3,397 metres are published on the official NOAA GML observatory page, read 21 Nov 2026. The same page says the 2022 Mauna Loa eruption cut off road access, and that a temporary access road was completed on 26 March 2026, with no general-public opening date yet established.",
+        "a3": "USA"
+      },
+      "script": "NOAA's Global Monitoring Laboratory places the Mauna Loa Observatory on the north flank of Mauna Loa, at 3,397 metres, and says it has been continuously monitoring atmospheric change since the 1950s. Official NOAA pages say the observatory was constructed in 1956 and has run continuously since, and that Keeling CO2 measurements began in March 1958. Official NOAA pages distinguish the 1956 construction from the March 1958 Keeling record. The pin uses the observatory's published coordinates.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 3,
+          "text": "Mauna Loa Baseline Observatory, Hawai'i."
+        },
+        {
+          "start": 3,
+          "end": 6.4,
+          "text": "NOAA has monitored the atmosphere here since the 1950s."
+        },
+        {
+          "start": 6.4,
+          "end": 8,
+          "text": "The pin uses NOAA's published coordinates."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-mauna-loa-observatory-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            -155.5763,
+            19.5362
+          ],
+          "zoom": 11,
+          "pitch": 42,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-mauna-loa",
+          "kind": "topic",
+          "title": "Mauna Loa Observatory",
+          "body": "The official NOAA Global Monitoring Laboratory page says Mauna Loa Observatory sits on the north flank of Mauna Loa Volcano on the Island of Hawai'i, at an elevation of 3,397 metres (11,135 feet), and has been continuously monitoring and collecting data related to atmospheric change since the 1950s. It publishes the site coordinates as 19.5362° North, 155.5763° West. The page also states that the 2022 eruption of Mauna Loa cut off road access, that construction on a temporary access road was completed on 26 March 2026, and that no public opening date had yet been established when the page was read. NOAA's Global Monitoring Laboratory says the observatory was constructed in 1956 and has been continuously in operation since. A NOAA media release says Keeling CO2 measurements began in March 1958. These two official start statements are not collapsed into one day. The exact calendar day in March 1958 is [UNKNOWN] in this card.",
+          "why": "One of the world's primary climate-observing sites, with coordinates published by NOAA.",
+          "facts": [
+            {
+              "label": "Location, as published",
+              "value": "North flank of Mauna Loa; 19.5362° N, 155.5763° W; 3,397 m (NOAA GML)."
+            },
+            {
+              "label": "Record",
+              "value": "Two official start statements, not collapsed: the observatory was constructed in 1956 and has been continuously in operation since (NOAA GML); Keeling CO2 measurements began in March 1958 (NOAA). Exact calendar day of the March 1958 start [UNKNOWN]."
+            },
+            {
+              "label": "Access note, as of page read",
+              "value": "Road cut by the 2022 eruption; temporary access road completed 26 March 2026; public opening date not yet established."
+            },
+            {
+              "label": "Pin",
+              "value": "NOAA-listed observatory coordinates, read 21 Nov 2026."
+            }
+          ],
+          "sourceIds": [
+            "src-noaa-mlo",
+            "src-noaa-mlo-about",
+            "src-noaa-keeling-2015"
+          ],
+          "pin": {
+            "lat": 19.5362,
+            "lon": -155.5763
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-noaa-mlo",
+          "label": "NOAA Global Monitoring Laboratory, Mauna Loa Baseline Observatory",
+          "url": "https://gml.noaa.gov/obop/mlo/",
+          "status": "verified",
+          "note": "Official NOAA GML observatory page, read 21 Nov 2026. Coordinates and elevation are taken from this page. Staff names and phone numbers on the page are not copied here."
+        },
+        {
+          "id": "src-noaa-mlo-about",
+          "label": "NOAA Global Monitoring Laboratory, About Mauna Loa Observatory",
+          "url": "https://gml.noaa.gov/obop/mlo/aboutus/aboutus.html",
+          "status": "verified",
+          "note": "Official NOAA GML page, read 21 Nov 2026. Says the observatory was constructed in 1956 and has been continuously in operation since."
+        },
+        {
+          "id": "src-noaa-keeling-2015",
+          "label": "NOAA, American Chemical Society honors measurement set at NOAA observatory, 23 April 2015",
+          "url": "https://www.noaa.gov/media-release/american-chemical-society-honors-measurement-set-at-noaa-observatory",
+          "status": "verified",
+          "note": "Official NOAA media release, read 21 Nov 2026. Says Keeling CO2 measurements began in March 1958."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "USA",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "id": "story-nd-cern-lhc",
+      "slug": "cern-lhc",
+      "title": "CERN's Large Hadron Collider, started in 2008",
+      "summary": "CERN describes the Large Hadron Collider as the world's largest and most powerful particle accelerator: a 27-kilometre ring, about 100 metres underground on the Franco-Swiss border near Geneva. It first started up on 10 September 2008.",
+      "date": "2008-09-10",
+      "credit": "CERN",
+      "creditUrl": "https://home.cern/science/accelerators/large-hadron-collider",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "CERN, near Geneva (approx.)",
+        "lat": 46.23,
+        "lon": 6.05,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Approximate pin for the CERN site on the Franco-Swiss border near Geneva. The LHC is a 27-kilometre ring, not a single building. A surveyed ring-point coordinate is [UNKNOWN] in this card.",
+        "a3": "CHE"
+      },
+      "script": "CERN describes the Large Hadron Collider as the world's largest and most powerful particle accelerator, a 27-kilometre ring about 100 metres underground on the Franco-Swiss border near Geneva. It first started up on 10 September 2008. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 2.6,
+          "text": "The Large Hadron Collider, near Geneva."
+        },
+        {
+          "start": 2.6,
+          "end": 6.2,
+          "text": "CERN started the machine on 10 September 2008."
+        },
+        {
+          "start": 6.2,
+          "end": 8,
+          "text": "The pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-cern-lhc-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            6.05,
+            46.23
+          ],
+          "zoom": 11,
+          "pitch": 42,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-cern-lhc",
+          "kind": "topic",
+          "title": "Large Hadron Collider",
+          "body": "CERN's official LHC page says the collider is the world's largest and most powerful particle accelerator, a 27-kilometre ring of superconducting magnets that first started up on 10 September 2008, sitting in a tunnel 100 metres underground at CERN on the Franco-Swiss border near Geneva, Switzerland. The same page says the announcement of the discovery of the Higgs boson in July 2012 confirmed the mechanism predicted in 1964 through which fundamental particles acquire mass. CERN's official announcement of that observation is dated 4 July 2012.",
+          "why": "A flagship laboratory that can be flown to on a globe, cited from CERN.",
+          "facts": [
+            {
+              "label": "Started",
+              "value": "10 September 2008 (CERN official LHC page)."
+            },
+            {
+              "label": "Machine",
+              "value": "27-kilometre ring, about 100 metres underground, Franco-Swiss border near Geneva."
+            },
+            {
+              "label": "Higgs announcement",
+              "value": "4 July 2012 (CERN official announcement that the experiments observed a particle consistent with the Higgs boson)."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate CERN-area stand-in for a 27 km ring."
+            }
+          ],
+          "sourceIds": [
+            "src-cern-lhc",
+            "src-cern-higgs-2012"
+          ],
+          "pin": {
+            "lat": 46.23,
+            "lon": 6.05
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-cern-lhc",
+          "label": "CERN, The Large Hadron Collider",
+          "url": "https://home.cern/science/accelerators/large-hadron-collider",
+          "status": "verified",
+          "note": "Official CERN LHC page, read 21 Nov 2026. Pin coordinates are not taken from this page."
+        },
+        {
+          "id": "src-cern-higgs-2012",
+          "label": "CERN, experiments observe a particle consistent with the long-sought Higgs boson",
+          "url": "https://home.cern/cern-experiments-observe-particle-consistent-with-long-sought-higgs-boson/",
+          "status": "verified",
+          "note": "Official CERN announcement, read 21 Nov 2026. Dated 4 July 2012."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "CHE",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    }
+  ],
+  "eventLayers": [
+    {
+      "id": "evl-ep-newsdesk-science",
+      "name": "Newsdesk story: time, atmosphere, and the collider (approximate pins)",
+      "color": "#5ee6ff",
+      "icon": "●",
+      "visible": true,
+      "labels": true,
+      "styleByCategory": true,
+      "scope": "all",
+      "note": "Short newsdesk story episode. Pins are approximate unless a cited official page published a coordinate.",
+      "features": [
+        {
+          "type": "Feature",
+          "id": "ev-nd-royal-observatory-greenwich",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              0.0,
+              51.48
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "The Royal Observatory, Greenwich, founded in 1675",
+            "eventTime": "1675-08-10",
+            "eventEnd": "",
+            "timeApprox": false,
+            "datePrecision": "day",
+            "category": "other",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-rmg-history",
+                "label": "Royal Museums Greenwich, History of the Royal Observatory",
+                "url": "https://www.rmg.co.uk/royal-observatory/history",
+                "status": "verified",
+                "note": "Official RMG history page, read 21 Nov 2026. Pin coordinates are not taken from this page."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "Royal Museums Greenwich",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "Royal Museums Greenwich says the Royal Observatory, Britain's oldest purpose-built scientific institution, was founded in 1675 and is the home of Greenwich Mean Time and the Prime Meridian. The foundation stone was laid on 10 August 1675.",
+            "precisionLabel": "Precision: approximate",
+            "radiusKm": null,
+            "cardId": "card-nd-greenwich",
+            "storyId": "story-nd-royal-observatory-greenwich",
+            "example": true
+          }
+        },
+        {
+          "type": "Feature",
+          "id": "ev-nd-mauna-loa-observatory",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -155.5763,
+              19.5362
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "NOAA's Mauna Loa Baseline Observatory",
+            "eventTime": "1958-01-01",
+            "eventEnd": "",
+            "timeApprox": true,
+            "datePrecision": "unknown",
+            "category": "other",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-noaa-mlo",
+                "label": "NOAA Global Monitoring Laboratory, Mauna Loa Baseline Observatory",
+                "url": "https://gml.noaa.gov/obop/mlo/",
+                "status": "verified",
+                "note": "Official NOAA GML observatory page, read 21 Nov 2026. Coordinates and elevation are taken from this page. Staff names and phone numbers on the page are not copied here."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "NOAA Global Monitoring Laboratory",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "NOAA's Global Monitoring Laboratory describes the Mauna Loa Observatory as an atmospheric research facility on the north flank of Mauna Loa, Hawai'i, continuously monitoring atmospheric change since the 1950s. Official coordinates and elevation are published on the observatory page.",
+            "precisionLabel": "Precision: coordinates as published by the cited official page, still treated as a site point",
+            "radiusKm": null,
+            "cardId": "card-nd-mauna-loa",
+            "storyId": "story-nd-mauna-loa-observatory",
+            "example": true
+          }
+        },
+        {
+          "type": "Feature",
+          "id": "ev-nd-cern-lhc",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              6.05,
+              46.23
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "CERN's Large Hadron Collider, started in 2008",
+            "eventTime": "2008-09-10",
+            "eventEnd": "",
+            "timeApprox": false,
+            "datePrecision": "day",
+            "category": "other",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-cern-lhc",
+                "label": "CERN, The Large Hadron Collider",
+                "url": "https://home.cern/science/accelerators/large-hadron-collider",
+                "status": "verified",
+                "note": "Official CERN LHC page, read 21 Nov 2026. Pin coordinates are not taken from this page."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "CERN",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "CERN describes the Large Hadron Collider as the world's largest and most powerful particle accelerator: a 27-kilometre ring, about 100 metres underground on the Franco-Swiss border near Geneva. It first started up on 10 September 2008.",
+            "precisionLabel": "Precision: approximate",
+            "radiusKm": null,
+            "cardId": "card-nd-cern-lhc",
+            "storyId": "story-nd-cern-lhc",
+            "example": true
+          }
+        }
+      ]
+    }
+  ],
+  "mediaBin": []
+}

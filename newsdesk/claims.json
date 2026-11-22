@@ -1,0 +1,51 @@
+{
+  "schema": "globedesk.claims/1",
+  "generated": "2026-11-22",
+  "note": "SAMPLE claim scores for the public tree. These rows are fictional teaching examples, not an author's private scores. Keep your own claims in GLOBEDESK_DATA/claims/ (untracked).",
+  "claims": [
+    {
+      "id": "claim-sample-supported",
+      "storyId": "story-nd-chicago-river-reversal",
+      "cardId": "card-nd-chicago-river",
+      "factIndex": 0,
+      "factLabel": "District created",
+      "claimStatus": "supported",
+      "sourceIds": [
+        "src-mwrd-history"
+      ]
+    },
+    {
+      "id": "claim-sample-not-proven",
+      "storyId": "story-nd-chicago-river-reversal",
+      "cardId": "card-nd-chicago-river",
+      "factIndex": 3,
+      "factLabel": "Pin",
+      "claimStatus": "not-proven",
+      "sourceIds": [
+        "src-mwrd-history"
+      ]
+    },
+    {
+      "id": "claim-sample-disagree",
+      "storyId": "story-nd-chicago-river-reversal",
+      "cardId": "card-nd-chicago-river",
+      "factIndex": 1,
+      "factLabel": "Reversal",
+      "claimStatus": "people-disagree",
+      "disagree": [
+        {
+          "sourceIds": [
+            "src-mwrd-125-friends"
+          ],
+          "position": "SAMPLE. One fictional source dates the example event to 2 January 1900."
+        },
+        {
+          "sourceIds": [
+            "src-illinois-dnr-flood-history"
+          ],
+          "position": "SAMPLE. Another fictional source dates the example event to 17 January 1900."
+        }
+      ]
+    }
+  ]
+}

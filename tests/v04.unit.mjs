@@ -5,9 +5,10 @@ const ctx = { window: {}, Date, console, Uint8Array, ArrayBuffer, TextEncoder, T
 // URL in vm may need global
 vm.createContext(ctx);
 vm.runInContext(fs.readFileSync(path.join(root, "data", "land.js"), "utf8"), ctx);
-for (const f of ["themes", "captions", "events-model", "sanitize", "zip", "schema", "frog-rundown", "model", "media", "audio-mix", "content-layer", "project-io", "assistant", "store"]) {
+for (const f of ["themes", "captions", "events-model", "sanitize", "zip", "schema", "model", "media", "audio-mix", "content-layer", "project-io", "assistant", "store"]) {
   vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
 }
+ctx.window.GD.model.setSampleEpisode(JSON.parse(fs.readFileSync(path.join(root, "episodes", "washington-dc-demo.globedesk.json"), "utf8")));
 const GD = ctx.window.GD;
 const J = (v) => JSON.parse(JSON.stringify(v));
 assert.deepEqual = ((orig) => (a, b, m) => orig(J(a), J(b), m))(assert.deepEqual);
@@ -26,12 +27,12 @@ t("media.validateFile rejects huge or unknown types", () => {
 });
 
 t("project pack round-trip of episode JSON", async () => {
-  const ep = GD.model.demoEpisode();
+  const ep = GD.model.sampleEpisode();
   const bytes = await GD.project.buildPack(ep, {});
   const pack = await GD.project.parsePack(bytes);
   assert.equal(pack.episode.title, ep.title);
   assert.equal(pack.episode.stories.length, ep.stories.length);
-  assert.ok(ep.stories.length >= 45);
+  assert.equal(ep.stories.length, 2);
   assert.deepEqual(GD.schema.validate(pack.episode), []);
 });
 

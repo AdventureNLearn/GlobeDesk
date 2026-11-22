@@ -7,3 +7,5 @@ Update this GlobeDesk copy to the newly published GlobeDesk release.
 - Official Grok.me size limits and history behaviour are [UNKNOWN]. If the update looks wrong, roll back with the builder's own history.
 
 Then run the test checklist in GROK-ME-BUILD.md.
+
+This update is GlobeDesk v1.2.0 Live Data. After rebuilding, check that live GIS, dated imagery, and address search are still off by default, and that the version string reads v1.2.0 · Live Data.

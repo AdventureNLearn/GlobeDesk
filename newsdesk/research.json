@@ -1,0 +1,57 @@
+{
+  "schema": "globedesk.research/1",
+  "generated": "2026-11-22",
+  "note": "SAMPLE research notes for the public tree. The two links are the official history pages already cited on this public sample story (Metropolitan Water Reclamation District and Illinois Department of Natural Resources). The quotes are fictional SAMPLE text, not excerpts from those pages. Keep your own research in GLOBEDESK_DATA/research/ (untracked).",
+  "stories": [
+    {
+      "storyId": "story-nd-chicago-river-reversal",
+      "claimIds": [
+        "claim-sample-not-proven"
+      ],
+      "links": [
+        {
+          "id": "link-sample-one",
+          "label": "Metropolitan Water Reclamation District, A History of Protecting Our Water Environment (official page already cited on the story)",
+          "url": "https://www.mwrd.org/what-we-do/history-protecting-our-water-environment",
+          "kind": "official"
+        },
+        {
+          "id": "link-sample-two",
+          "label": "Illinois Department of Natural Resources, history of flood control and drainage in northeastern Illinois (official page already cited on the story)",
+          "url": "https://dnr.illinois.gov/waterresources/historyoffloodcontroldrainageinnortheasternillinois.html",
+          "kind": "official"
+        }
+      ],
+      "quotes": [
+        {
+          "id": "quote-sample-one",
+          "text": "SAMPLE. A fictional caption that stands in for a cited official excerpt.",
+          "sourceId": "src-mwrd-125-friends",
+          "retrieved": "2026-11-22",
+          "locator": "SAMPLE caption"
+        },
+        {
+          "id": "quote-sample-two",
+          "text": "SAMPLE. A second fictional excerpt used only to demonstrate a research gap.",
+          "sourceId": "src-illinois-dnr-flood-history",
+          "retrieved": "2026-11-22",
+          "locator": "SAMPLE history"
+        }
+      ],
+      "gaps": [
+        {
+          "id": "gap-chicago-pin",
+          "label": "Surveyed lock coordinate",
+          "detail": "SAMPLE. The exact surveyed coordinate is [UNKNOWN]."
+        }
+      ],
+      "updates": [
+        {
+          "id": "update-sample-20261122",
+          "at": "2026-11-22",
+          "note": "SAMPLE. Recorded the official MWRD and Illinois DNR history links already cited on this story, and the existing surveyed lock coordinate gap."
+        }
+      ]
+    }
+  ]
+}

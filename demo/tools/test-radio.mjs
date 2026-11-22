@@ -189,7 +189,7 @@ async function main() {
   await ev("window.__demo.skip()");
   await sleep(800);
   await ev("window.__demo.enterDebriefPreview()");
-  await ev(`(function(){ const t = "Mission complete. That's the whole desk, fren. Now go build."; const s = document.getElementById("speech"); const c = document.getElementById("caption"); if (s) s.textContent = t; if (c) c.textContent = t; DemoFrog.stopTalk(); DemoFrog.setExpression("salute"); return true; })()`);
+  await ev(`(function(){ const t = "Mission complete. That's the whole desk, fren. Now go build."; const s = document.getElementById("speech"); const c = document.getElementById("caption"); if (s) s.textContent = t; if (c) c.textContent = t; DemoGuide.stopTalk(); DemoGuide.setExpression("salute"); return true; })()`);
   await sleep(500);
   const fin = await ev(`({
     phase: window.__demo.phase,
@@ -241,15 +241,15 @@ async function main() {
 
   // hint / clear lamps
   await ev("DemoAudio.stopVo()");
-  await ev("DemoFrog.setExpression('hint')");
+  await ev("DemoGuide.setExpression('hint')");
   const hint = await ev(`({ legend: document.getElementById("commsLegend").textContent, hidden: document.getElementById("commsLegend").hidden, cls: document.getElementById("comms").className, talk: DemoAudio.talking })`);
   log("hint lamp", JSON.stringify(hint));
   if (hint.talk || hint.hidden || hint.legend !== "HINT") throw new Error("hint lamp failed: " + JSON.stringify(hint));
-  await ev("DemoFrog.setExpression('success')");
+  await ev("DemoGuide.setExpression('success')");
   const clear = await ev(`({ legend: document.getElementById("commsLegend").textContent, hidden: document.getElementById("commsLegend").hidden, cls: document.getElementById("comms").className })`);
   log("clear lamp", JSON.stringify(clear));
   if (clear.hidden || clear.legend !== "CLEAR") throw new Error("clear lamp failed: " + JSON.stringify(clear));
-  await ev("DemoFrog.setExpression('idle')");
+  await ev("DemoGuide.setExpression('idle')");
   const idle = await ev(`({ legendHidden: document.getElementById("commsLegend").hidden, cls: document.getElementById("comms").className, talk: getComputedStyle(document.documentElement).getPropertyValue('--talk') })`);
   log("idle lamp", JSON.stringify(idle));
   if (!idle.legendHidden) throw new Error("idle still showing a legend");

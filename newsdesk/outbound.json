@@ -1,0 +1,41 @@
+{
+  "schema": "globedesk.outbound/1",
+  "generated": "2026-11-22",
+  "checked": "2026-11-22",
+  "note": "SAMPLE allowlist of fictional Open in… desks for the public tree. URLs use the example.org domain and are not real services. Your own desks live locally in GLOBEDESK_DATA/desks/ (untracked) and are not shipped.",
+  "targets": [
+    {
+      "id": "sample-civic-desk",
+      "label": "Sample Civic Desk",
+      "url": "https://civic.example.org/",
+      "credit": "SAMPLE. A fictional civic desk for documentation and tests. Not a real service.",
+      "enabled": true,
+      "status": "verified",
+      "sectionIds": [
+        "local-civic",
+        "politics-policy"
+      ]
+    },
+    {
+      "id": "sample-atlas-desk",
+      "label": "Sample Atlas Desk",
+      "url": "https://atlas.example.org/",
+      "credit": "SAMPLE. A fictional atlas desk for documentation and tests. Not a real service.",
+      "enabled": true,
+      "status": "verified",
+      "sectionIds": [
+        "science-space"
+      ]
+    },
+    {
+      "id": "sample-pending-desk",
+      "label": "Sample Pending Desk",
+      "credit": "SAMPLE. A fictional desk with no verified public URL, so it must stay unlinked.",
+      "enabled": false,
+      "status": "[UNKNOWN]",
+      "sectionIds": [
+        "history"
+      ]
+    }
+  ]
+}

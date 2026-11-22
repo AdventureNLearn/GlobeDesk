@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globedesk.local/schema/globedesk-research.schema.json",
+  "title": "GlobeDesk research drawer (globedesk.research/1)",
+  "description": "Sidecar for per-story links, quotes, [UNKNOWN] gaps, and a local update log. Not part of globedesk.episode/2. No remote CMS fetch.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "stories"],
+  "properties": {
+    "schema": { "const": "globedesk.research/1" },
+    "generated": { "type": "string", "maxLength": 500 },
+    "note": { "type": "string", "maxLength": 8000 },
+    "stories": {
+      "type": "array",
+      "maxItems": 80,
+      "items": { "$ref": "#/$defs/story" }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "pattern": "\\S"
+    },
+    "story": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["storyId"],
+      "properties": {
+        "storyId": { "$ref": "#/$defs/id" },
+        "links": {
+          "type": "array",
+          "maxItems": 40,
+          "items": { "$ref": "#/$defs/link" }
+        },
+        "quotes": {
+          "type": "array",
+          "maxItems": 80,
+          "items": { "$ref": "#/$defs/quote" }
+        },
+        "gaps": {
+          "type": "array",
+          "maxItems": 80,
+          "items": { "$ref": "#/$defs/gap" }
+        },
+        "updates": {
+          "type": "array",
+          "maxItems": 200,
+          "items": { "$ref": "#/$defs/update" }
+        },
+        "claimIds": {
+          "type": "array",
+          "maxItems": 40,
+          "items": { "$ref": "#/$defs/id" }
+        },
+        "recordIds": {
+          "type": "array",
+          "maxItems": 40,
+          "items": { "$ref": "#/$defs/id" }
+        }
+      }
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string", "minLength": 1, "maxLength": 500, "pattern": "\\S" },
+        "url": { "type": "string", "minLength": 8, "maxLength": 2000, "pattern": "^https://\\S+$" },
+        "kind": { "type": "string", "enum": ["official", "coverage", "other"] }
+      }
+    },
+    "quote": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "sourceId"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "text": { "type": "string", "minLength": 1, "maxLength": 8000, "pattern": "\\S" },
+        "sourceId": { "$ref": "#/$defs/id" },
+        "retrieved": { "type": "string", "minLength": 1, "maxLength": 500, "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\\.[0-9]+)?)?(Z|[+-][0-9]{2}:[0-9]{2})?)?$" },
+        "locator": { "type": "string", "maxLength": 500 }
+      }
+    },
+    "gap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "detail"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string", "minLength": 1, "maxLength": 500, "pattern": "\\S" },
+        "detail": { "type": "string", "minLength": 1, "maxLength": 8000, "pattern": "\\S" },
+        "isGap": { "type": "boolean" },
+        "closed": { "type": "string", "minLength": 1, "maxLength": 500, "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\\.[0-9]+)?)?(Z|[+-][0-9]{2}:[0-9]{2})?)?$" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "not": {
+              "properties": { "detail": { "pattern": "\\[UNKNOWN\\]" } },
+              "required": ["detail"]
+            }
+          },
+          "then": {
+            "required": ["isGap"],
+            "properties": { "isGap": { "const": true } }
+          }
+        }
+      ]
+    },
+    "update": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["at", "note"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "at": { "type": "string", "minLength": 1, "maxLength": 500, "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\\.[0-9]+)?)?(Z|[+-][0-9]{2}:[0-9]{2})?)?$" },
+        "note": { "type": "string", "minLength": 1, "maxLength": 8000, "pattern": "\\S" },
+        "sourceId": { "$ref": "#/$defs/id" }
+      }
+    }
+  }
+}

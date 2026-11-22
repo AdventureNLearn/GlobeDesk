@@ -2,8 +2,31 @@
 (function () {
   "use strict";
   const GD = (window.GD = window.GD || {});
+  const HOME_VIEW = { center: [40, 28], zoom: 1.6, pitch: 0, bearing: 0 };
   const R_KM = 6371.0088;
   const TERRAIN_MIN_ZOOM = 11;
+  const TOWN_LABEL_MIN_ZOOM = 6;
+  const TOWN_LABEL_MIN_PX = 40;
+
+  function pointsTooClose(a, b, minPx) {
+    if (!a || !b) return false;
+    const d = minPx == null ? TOWN_LABEL_MIN_PX : minPx;
+    const dx = a.x - b.x, dy = a.y - b.y;
+    return dx * dx + dy * dy < d * d;
+  }
+
+  function pickTownLabelPoints(candidates, blocked, minPx) {
+    const taken = (blocked || []).slice();
+    const out = [];
+    (candidates || []).forEach(function (pt) {
+      if (!pt) return;
+      if (taken.some(function (q) { return pointsTooClose(pt, q, minPx); })) return;
+      out.push(pt);
+      taken.push(pt);
+    });
+    return out;
+  }
+
   const st = { map: null, container: null, baseId: "offline", overlays: {}, onReady: [], terrainOn: false, episode: null, active: -1, labelMarkers: [], status: "init", preserveDrawingBuffer: false, recreating: false };
 
   function offlineStyle() {
@@ -14,9 +37,9 @@
         land: { type: "geojson", data: window.GD_LAND || { type: "FeatureCollection", features: [] }, attribution: "Made with Natural Earth" }
       },
       layers: [
-        { id: "background", type: "background", paint: { "background-color": "#04101f" } },
+        { id: "background", type: "background", paint: { "background-color": "#02040c" } },
         { id: "land", type: "fill", source: "land", paint: { "fill-color": "#13263d", "fill-opacity": 1 } },
-        { id: "land-edge", type: "line", source: "land", paint: { "line-color": "#2f5b84", "line-width": 0.8 } }
+        { id: "land-edge", type: "line", source: "land", paint: { "line-color": "#62b6ff", "line-width": 0.8, "line-opacity": 0.55 } }
       ]
     };
   }
@@ -210,7 +233,7 @@
     setOrUpdate("gd-countries", countriesGeoJSON());
     const look = (st.episode && st.episode.look) || {};
     const soft = !look.map || look.map.softBorders !== false;
-    const hl = (look.palette && look.palette.highlight) || "#ff8a1f";
+    const hl = (look.palette && look.palette.highlight) || "#5ee7ff";
     if (!map.getLayer("gd-countries")) map.addLayer({ id: "gd-countries", type: "line", source: "gd-countries", paint: { "line-color": "#ffffff", "line-opacity": ["interpolate", ["linear"], ["zoom"], 1, 0.35, 8, 0.12], "line-width": 0.8 } });
     map.setPaintProperty("gd-countries", "line-blur", soft ? 1.2 : 0);
     map.setPaintProperty("gd-countries", "line-color", soft ? "#ffffff" : "#4d8fd0");
@@ -245,6 +268,19 @@
       map.addLayer({ id: "gd-bluemarble", type: "raster", source: "gd-bluemarble", paint: { "raster-opacity": ["interpolate", ["linear"], ["zoom"], 5, 1, 9, 0] } }, before);
     }
     if (map.getLayer("gd-bluemarble")) map.setLayoutProperty("gd-bluemarble", "visibility", vis(showBlue));
+
+    const showRegion = !!(ov["eox-region"] && GD.render && !GD.render.rastersStacked(st.baseId, ov));
+    if (showRegion && !map.getSource("gd-eox-region")) {
+      const L = GD.layers.OVERLAYS.find((o) => o.id === "eox-region");
+      const tiles = (GD.layers.eoxRegionTiles && GD.layers.eoxRegionTiles()) || (L && L.tiles);
+      const bounds = (GD.layers.eoxRegionBounds && GD.layers.eoxRegionBounds()) || L.bounds;
+      const src = { type: "raster", tiles: [tiles], tileSize: 256, maxzoom: L.maxzoom, attribution: L.credit };
+      if (bounds && bounds.length === 4) src.bounds = bounds;
+      map.addSource("gd-eox-region", src);
+      const before = map.getLayer("gd-countries") ? "gd-countries" : (map.getLayer("gd-bluemarble") ? "gd-bluemarble" : undefined);
+      map.addLayer({ id: "gd-eox-region", type: "raster", source: "gd-eox-region", paint: { "raster-opacity": 1 } }, before);
+    }
+    if (map.getLayer("gd-eox-region")) map.setLayoutProperty("gd-eox-region", "visibility", vis(showRegion));
 
     const geo = st.episode ? episodeGeo(st.episode) : episodeGeo({ stories: [] });
     setOrUpdate("gd-rings", geo.rings);
@@ -284,10 +320,13 @@
     }
     if (map.getLayer("gd-hillshade")) map.setLayoutProperty("gd-hillshade", "visibility", vis(ov.terrain));
     if (GD.eventsMap) GD.eventsMap.install(map); // Event Layers sit above story pins/rings
+    if (GD.gis && GD.gis.syncMap) GD.gis.syncMap(map);
     st.terrainOn = false;
     terrainForZoom();
     try {
-      map.setSky({ "sky-color": "#061226", "horizon-color": "#1b3a63", "fog-color": "#0a1830", "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 5, 1, 7, 0] });
+      /* Holographic atmosphere, from SeaGlobe planet.js / app.js (v3.1.4):
+         atmosphereColor #62b6ff, atmosphereAltitude 0.2, bloom around the limb. */
+      map.setSky({ "sky-color": "#02040c", "horizon-color": "#62b6ff", "fog-color": "#0a2048", "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 5, 0.85, 7, 0] });
     } catch (e) { /* older style spec */ }
   }
 
@@ -299,10 +338,115 @@
     else if (!want && st.terrainOn) { map.setTerrain(null); st.terrainOn = false; }
   }
 
+
+  const SAT_OPACITY = ["interpolate", ["linear"], ["zoom"], 12, 1, 15, 0.88, 17, 0.55];
+
+  function refreshAttrib(map) {
+    const ctrls = map && map._controls;
+    if (!ctrls || !ctrls.forEach) return;
+    ctrls.forEach(function (ctrl) {
+      if (ctrl && typeof ctrl._updateAttributions === "function") {
+        try { ctrl._updateAttributions(); } catch (e) { /* ignore */ }
+      }
+    });
+  }
+
+  function setSourceAttribution(map, id, attribution) {
+    const src = map.getSource(id);
+    if (!src) return;
+    try { src.attribution = attribution || ""; } catch (e) { /* ignore */ }
+    if (src._options) src._options.attribution = attribution || "";
+    refreshAttrib(map);
+  }
+
+  function sourceMaxzoom(src) {
+    if (!src) return null;
+    if (src.maxzoom != null) return Number(src.maxzoom);
+    if (src._options && src._options.maxzoom != null) return Number(src._options.maxzoom);
+    return null;
+  }
+
+  function safeRemoveLayerSource(map, id) {
+    try { if (map.getLayer(id)) map.removeLayer(id); } catch (e) { /* TypeError during a failed load */ }
+    try { if (map.getSource(id)) map.removeSource(id); } catch (e) { /* TypeError during a failed load */ }
+  }
+
+  function ensureSatRaster(map, id, tiles, maxzoom, attribution, beforeId) {
+    if (!tiles) return;
+    const wantZ = maxzoom == null ? 9 : maxzoom;
+    const src = map.getSource(id);
+    const curZ = sourceMaxzoom(src);
+    const rebuild = !!src && curZ != null && curZ !== Number(wantZ);
+    if (rebuild) safeRemoveLayerSource(map, id);
+    const after = map.getSource(id);
+    if (after && after.setTiles) {
+      try { after.setTiles([tiles]); } catch (e) { /* TypeError during a failed load */ }
+      setSourceAttribution(map, id, attribution);
+    } else if (!map.getSource(id)) {
+      try {
+        map.addSource(id, { type: "raster", tiles: [tiles], tileSize: 256, maxzoom: wantZ, attribution: attribution || "" });
+      } catch (e) { /* TypeError during a failed load */ }
+    }
+    if (!map.getLayer(id) && map.getSource(id)) {
+      const before = beforeId && map.getLayer(beforeId) ? beforeId : (map.getLayer("road-casing") ? "road-casing" : undefined);
+      try {
+        map.addLayer({ id: id, type: "raster", source: id, paint: { "raster-saturation": -0.12, "raster-contrast": 0.08, "raster-opacity": 0 } }, before);
+      } catch (e) { /* TypeError during a failed load */ }
+    }
+    refreshAttrib(map);
+  }
+
+  function hideSatBlend(map) {
+    ["sat-prev", "sat-next"].forEach(function (id) {
+      if (map.getLayer(id)) {
+        try { map.setLayoutProperty(id, "visibility", "none"); map.setPaintProperty(id, "raster-opacity", 0); } catch (e) { /* ignore */ }
+      }
+    });
+  }
+
+  function applyDatedSat() {
+    const map = st.map;
+    if (!map || st.baseId !== "sat-hybrid") return;
+    if (!map.getSource || !map.getSource("sat")) return;
+    if (!GD.layers || !GD.layers.datedSatSpec) return;
+    let spec;
+    try { spec = GD.layers.datedSatSpec(); } catch (e) { return; }
+    if (!spec) return;
+    st.datedSat = spec;
+    try {
+      if (spec.kind === "projected" && (spec.tilesPrev || spec.tilesNext)) {
+        const before = map.getLayer("road-casing") ? "road-casing" : undefined;
+        if (spec.tilesPrev) ensureSatRaster(map, "sat-prev", spec.tilesPrev, spec.maxzoom, spec.credit, before);
+        if (spec.tilesNext) ensureSatRaster(map, "sat-next", spec.tilesNext, spec.maxzoom, spec.credit, before);
+        if (map.getLayer("sat")) map.setPaintProperty("sat", "raster-opacity", 0);
+        if (map.getLayer("sat-prev")) {
+          map.setLayoutProperty("sat-prev", "visibility", spec.tilesPrev ? "visible" : "none");
+          map.setPaintProperty("sat-prev", "raster-opacity", spec.tilesPrev ? spec.opacityPrev : 0);
+        }
+        if (map.getLayer("sat-next")) {
+          map.setLayoutProperty("sat-next", "visibility", spec.tilesNext ? "visible" : "none");
+          map.setPaintProperty("sat-next", "raster-opacity", spec.tilesNext ? spec.opacityNext : 0);
+        }
+      } else if (spec.tiles) {
+        const before = map.getLayer("road-casing") ? "road-casing" : undefined;
+        ensureSatRaster(map, "sat", spec.tiles, spec.maxzoom, spec.credit, before);
+        if (map.getLayer("sat")) {
+          try { map.setPaintProperty("sat", "raster-opacity", SAT_OPACITY); } catch (e) { /* ignore */ }
+        }
+        hideSatBlend(map);
+      } else {
+        hideSatBlend(map);
+      }
+    } catch (e) { /* style not ready or TypeError during a failed load */ }
+  }
+
   function styleFor(baseId) {
     const b = GD.layers.base(baseId);
     if (!b || b.kind === "local") return offlineStyle();
-    if (b.kind === "hybrid") return hybridStyle(b);
+    if (b.kind === "hybrid") {
+      const tiles = (GD.layers.eoxTiles && GD.layers.eoxTiles()) || b.satTiles;
+      return hybridStyle(Object.assign({}, b, { satTiles: tiles }));
+    }
     if (b.needsKey) {
       const key = GD.settings && GD.settings.key(b.needsKey);
       if (!key) return null;
@@ -332,17 +476,25 @@
       center: cam.center, zoom: cam.zoom, pitch: cam.pitch, bearing: cam.bearing,
       maxPitch: 85, maxZoom: 18.5, minZoom: 0.5,
       pixelRatio: R ? R.pixelRatio(dpr, prefs.pixelRatioCap) : Math.min(dpr, prefs.pixelRatioCap),
-      attributionControl: { compact: false, customAttribution: "Made with Natural Earth" },
-      canvasContextAttributes: attrs
+      attributionControl: { compact: true, customAttribution: "Made with Natural Earth" },
+      canvasContextAttributes: attrs,
+      cooperativeGestures: !!(GD.mapPointer && GD.mapPointer.isPhoneLayout && GD.mapPointer.isPhoneLayout())
     };
   }
 
   function bindMapEvents(map) {
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
+    map.addControl(panControl(), "top-right");
+    if (GD.mapPointer && GD.mapPointer.syncCooperativeGestures) GD.mapPointer.syncCooperativeGestures(map);
+    if (typeof window !== "undefined" && !window._gdCoopResize) {
+      window._gdCoopResize = true;
+      window.addEventListener("resize", () => { if (st.map && GD.mapPointer) GD.mapPointer.syncCooperativeGestures(st.map); });
+    }
     map.on("style.load", () => {
       try { map.setProjection({ type: "globe" }); } catch (e) { /* ignore */ }
       st.tileErrors = 0;
       const finish = () => {
+        try { applyDatedSat(); } catch (e) { /* ignore */ }
         addOverlays();
         st.status = "ready";
         flushStyleReady();
@@ -352,40 +504,25 @@
       Promise.resolve(probe).then(finish, finish);
     });
     map.on("zoom", terrainForZoom);
-    map.on("click", "gd-pins", (e) => {
-      if (GD.eventsMap && GD.eventsMap.em.mode !== "select") return; // drawing, not picking
-      const f = e.features && e.features[0];
-      // Shift-, Ctrl- or Cmd-click opens or closes that story's card on the globe (several can be open).
-      const oe = e.originalEvent || {};
-      if (f && GD.callouts && (oe.shiftKey || oe.ctrlKey || oe.metaKey)) {
-        const s = st.episode && st.episode.stories[Number(f.properties.idx)];
-        if (s) { GD.callouts.toggle(s.id); if (GD.ui && GD.ui.renderRundown) GD.ui.renderRundown(); }
-        return;
+    map.on("moveend", () => { updateLabels(); if (GD.gis && GD.gis.onMapMoveEnd) GD.gis.onMapMoveEnd(); });
+    // One dispatcher in map-pointer: click selects a pin or event; it never drops a pin.
+    if (GD.mapPointer && GD.mapPointer.bind) GD.mapPointer.bind(map);
+    map.on("sourcedata", (e) => {
+      if (GD.gis && GD.gis.noteSourceLoaded) {
+        try { GD.gis.noteSourceLoaded(e); } catch (err) { /* ignore */ }
       }
-      if (f && GD.ui) GD.ui.selectStory(Number(f.properties.idx), { fly: true });
-    });
-    // Click an empty point on the globe to drop or move the current story pin.
-    // No online geocoder is used; this is a coordinate pick (plus the bundled gazetteer in the Story tab).
-    map.on("click", (e) => {
-      if (GD.eventsMap && GD.eventsMap.em && GD.eventsMap.em.mode !== "select") return;
-      if (map.getLayer("gd-pins")) {
-        const hits = map.queryRenderedFeatures(e.point, { layers: ["gd-pins"] });
-        if (hits && hits.length) return;
-      }
-      const ep = GD.state && GD.state.episode;
-      const s = ep && ep.stories[GD.state.storyIdx];
-      if (!s || !s.location) return;
-      const lat = Math.round(e.lngLat.lat * 1e5) / 1e5;
-      const lon = Math.round(e.lngLat.lng * 1e5) / 1e5;
-      s.location.lat = lat;
-      s.location.lon = lon;
-      if (s.location.precision === "unset") s.location.precision = "approximate";
-      if (GD.ui && GD.ui.changed) GD.ui.changed();
-      if (GD.ui && GD.ui.toast) GD.ui.toast("Pin set to the clicked coordinates (no address lookup).");
     });
     map.on("error", (e) => {
-      const msg = (e && e.error && e.error.message) || "";
+      const err = e && e.error;
+      const msg = (err && err.message) || "";
       if (/abort|cancel/i.test(msg)) return;
+      if (err && err.name === "TypeError" && /signal|bind/i.test(msg)) return;
+      if (GD.gis && GD.gis.noteTileError) {
+        try { if (GD.gis.noteTileError(e)) return; } catch (x) { /* ignore */ }
+      }
+      if (GD.layers && GD.layers.noteDatedTileError) {
+        try { if (GD.layers.noteDatedTileError(e)) return; } catch (x) { /* ignore */ }
+      }
       // A street or satellite *style* that fails to load falls back to the bundled globe.
       if (st.status === "style-loading" && st.baseId !== "offline") {
         console.warn("Base style failed, falling back to offline globe:", msg);
@@ -418,9 +555,16 @@
     storeOverlays();
     const style = styleFor(pol.baseId);
     if (!style) { GD.ui && GD.ui.toast("That base map needs your own key in Settings (optional, paid). Staying on the current map."); return false; }
+    const same = st.baseId === pol.baseId && st.map;
     st.baseId = pol.baseId;
-    st.status = "style-loading";
     try { localStorage.setItem("globedesk.base", st.baseId); } catch (e) { /* ignore */ }
+    if (same) {
+      // Reloading the same style can miss style.load and leave the globe stuck on "style-loading".
+      if (st.map && st.map.isStyleLoaded && st.map.isStyleLoaded()) addOverlays();
+      if (pol.toast) GD.ui && GD.ui.toast(pol.toast);
+      return true;
+    }
+    st.status = "style-loading";
     if (st.map) st.map.setStyle(style);
     if (pol.toast) GD.ui && GD.ui.toast(pol.toast);
     return true;
@@ -438,14 +582,14 @@
     const start = GD.render ? GD.render.normalizeStartup(baseId, st.overlays) : { baseId, overlays: st.overlays };
     st.overlays = start.overlays;
     st.baseId = start.baseId;
-    const map = new maplibregl.Map(mapConstructorOptions({ center: [40, 28], zoom: 1.6, pitch: 0, bearing: 0 }));
+    const map = new maplibregl.Map(mapConstructorOptions({ center: HOME_VIEW.center, zoom: HOME_VIEW.zoom, pitch: HOME_VIEW.pitch, bearing: HOME_VIEW.bearing }));
     st.map = map;
     bindMapEvents(map);
     return map;
   }
 
   function defaultCam() {
-    return st.map ? camera() : { center: [40, 28], zoom: 1.6, pitch: 0, bearing: 0 };
+    return st.map ? camera() : { center: HOME_VIEW.center.slice(), zoom: HOME_VIEW.zoom, pitch: HOME_VIEW.pitch, bearing: HOME_VIEW.bearing };
   }
 
   function recreateMap() {
@@ -548,13 +692,22 @@
   }
 
   // Small DOM labels for the nearest bundled towns around the active story (works offline, no glyphs needed).
+  // Hidden below zoom 6, and skipped when they sit within ~40 px of the pin or an earlier label.
   function updateLabels() {
     st.labelMarkers.forEach((m) => m.remove());
     st.labelMarkers = [];
     if (!st.map || !st.episode || st.active < 0) return;
     const s = st.episode.stories[st.active];
     if (!s || s.location.lat == null || !st.overlays.towns) return;
-    (insight(s.location.lat, s.location.lon, 4) || []).forEach((p) => {
+    if (st.map.getZoom() < TOWN_LABEL_MIN_ZOOM) return;
+    const pinPt = st.map.project([s.location.lon, s.location.lat]);
+    const blocked = pinPt ? [{ x: pinPt.x, y: pinPt.y }] : [];
+    const nearest = insight(s.location.lat, s.location.lon, 4) || [];
+    const candidates = nearest.map((p) => {
+      const pt = st.map.project([p.lon, p.lat]);
+      return pt ? { x: pt.x + 6, y: pt.y, name: p.name, lon: p.lon, lat: p.lat } : null;
+    });
+    pickTownLabelPoints(candidates, blocked, TOWN_LABEL_MIN_PX).forEach((p) => {
       const el = document.createElement("div");
       el.className = "gd-town-label";
       el.textContent = p.name;
@@ -574,13 +727,93 @@
     smooth: (t) => t * t * (3 - 2 * t)
   };
 
-  function flyTo(kf, speedScale) {
-    const dur = Math.max(200, (kf.durationSec || 3) * 1000 * (speedScale || 1));
-    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches && !(GD.state && GD.state.recording);
-    const opts = { center: kf.center, zoom: kf.zoom, pitch: kf.pitch, bearing: kf.bearing, duration: reduce ? 0 : dur, easing: EASES[kf.ease] || EASES.cinematic, essential: true };
-    if (reduce) st.map.jumpTo(opts);
-    else st.map.flyTo(Object.assign(opts, { curve: 1.6 }));
+  function cameraOpts(kf, dur) {
+    const reduce = GD.mapPointer && GD.mapPointer.reduceMotion ? GD.mapPointer.reduceMotion() : false;
+    return {
+      center: kf.center, zoom: kf.zoom, pitch: kf.pitch, bearing: kf.bearing,
+      duration: reduce ? 0 : dur,
+      easing: EASES[kf.ease] || EASES.cinematic,
+      essential: false
+    };
   }
 
-  GD.globe = { st, init, setBase, setOverlay, setEpisode, flyTo, camera, insight, searchPlaces, haversine, bearingTo, towns, updateLabels, countryList, isLand, streetView, prepareForExport, endExport, isDrawingBufferPreserved, setRenderOptions, renderPrefs, refresh: () => st.map && st.map.isStyleLoaded() && addOverlays() };
+  function jumpTo(kf) {
+    if (!st.map) return;
+    const run = () => st.map.jumpTo({ center: kf.center, zoom: kf.zoom, pitch: kf.pitch, bearing: kf.bearing });
+    if (GD.mapPointer && GD.mapPointer.requestCamera) GD.mapPointer.requestCamera(run);
+    else run();
+  }
+
+  function flyTo(kf, speedScale) {
+    if (!st.map) return;
+    const dur = Math.max(200, (kf.durationSec || 3) * 1000 * (speedScale || 1));
+    const run = () => {
+      const opts = cameraOpts(kf, dur);
+      if (opts.duration === 0) st.map.jumpTo(opts);
+      else st.map.flyTo(Object.assign({}, opts, { curve: 1.6 }));
+    };
+    if (GD.mapPointer && GD.mapPointer.requestCamera) GD.mapPointer.requestCamera(run);
+    else run();
+  }
+
+  function panBy(dx, dy) {
+    if (!st.map) return;
+    try { st.map.panBy([dx, dy], { duration: (GD.mapPointer && GD.mapPointer.reduceMotion && GD.mapPointer.reduceMotion()) ? 0 : 200, essential: false }); } catch (e) { /* ignore */ }
+  }
+
+  function recenterOnSelection() {
+    const sel = GD.mapPointer && GD.mapPointer.getSelection && GD.mapPointer.getSelection();
+    const ep = st.episode || (GD.state && GD.state.episode);
+    let ll = null;
+    if (sel && sel.kind === "pin" && ep && ep.stories && ep.stories[sel.storyIdx] && ep.stories[sel.storyIdx].location) {
+      const loc = ep.stories[sel.storyIdx].location;
+      if (loc.lat != null) ll = [loc.lon, loc.lat];
+    }
+    if (!ll && ep && GD.state) {
+      const s = ep.stories[GD.state.storyIdx];
+      if (s && s.location && s.location.lat != null) ll = [s.location.lon, s.location.lat];
+    }
+    if (!ll) return;
+    flyTo({ center: ll, zoom: Math.max(st.map.getZoom(), 8), pitch: st.map.getPitch(), bearing: st.map.getBearing(), durationSec: 0.8 });
+  }
+
+  function panControl() {
+    return {
+      onAdd(map) {
+        const d = document.createElement("div");
+        d.className = "maplibregl-ctrl gd-pan-ctrl";
+        d.setAttribute("role", "group");
+        d.setAttribute("aria-label", "Pan the map");
+        const mk = (label, title, fn) => {
+          const b = document.createElement("button");
+          b.type = "button"; b.textContent = label; b.title = title; b.setAttribute("aria-label", title);
+          b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); fn(); });
+          return b;
+        };
+        const cell = (child) => {
+          const slot = document.createElement("span");
+          slot.className = "gd-pan-cell";
+          if (child) slot.appendChild(child);
+          d.appendChild(slot);
+        };
+        cell(null);
+        cell(mk("↑", "Pan up", () => panBy(0, 80)));
+        cell(null);
+        cell(mk("←", "Pan left", () => panBy(-80, 0)));
+        cell(mk("⊙", "Recenter on the selected or current story pin", recenterOnSelection));
+        cell(mk("→", "Pan right", () => panBy(80, 0)));
+        cell(null);
+        cell(mk("↓", "Pan down", () => panBy(0, -80)));
+        cell(null);
+        this._map = map; this._el = d; return d;
+      },
+      onRemove() { if (this._el && this._el.parentNode) this._el.parentNode.removeChild(this._el); this._map = null; }
+    };
+  }
+
+  if (GD.yearClock && GD.yearClock.onChange && !st._yearClockBound) {
+    st._yearClockBound = true;
+    GD.yearClock.onChange(function () { applyDatedSat(); });
+  }
+  GD.globe = { st, HOME_VIEW, init, setBase, setOverlay, setEpisode, flyTo, jumpTo, panBy, recenterOnSelection, camera, insight, searchPlaces, haversine, bearingTo, towns, updateLabels, pickTownLabelPoints, pointsTooClose, TOWN_LABEL_MIN_ZOOM, TOWN_LABEL_MIN_PX, countryList, isLand, streetView, prepareForExport, endExport, isDrawingBufferPreserved, setRenderOptions, renderPrefs, applyDatedSat, refresh: () => { if (st.map && st.map.isStyleLoaded()) { addOverlays(); applyDatedSat(); } } };
 })();

@@ -18,30 +18,24 @@ Say if you changed it.
 
 Covered by CC BY 4.0 (to the extent AdventureNLearn holds rights in it)
 ----------------------------------------------------------------------
-- Episode text: episodes/frogpost-2026-11-20.globedesk.json, the Frogpost
-  card text, titles and scripts in js/frog-rundown.js, and
-  episodes/layers/frogpost-*.geojson. Card text restates public reports. The
+- Episode text: episodes/washington-dc-demo.globedesk.json, the GlobeDesk
+  card text, titles and scripts in js/model.js, and
+  episodes/layers/globedesk-*.geojson. Card text restates public reports. The
   linked articles and posts belong to their publishers and are linked, not
   copied. Facts themselves are not owned by anyone.
-- AdventureNLearn's frog art and stills: demo/assets/*.jpg, demo/assets/frog/,
-  demo/guide-packs/frogpost/assets/*.jpg, demo/guide-packs/frogpost/assets/frog/,
-  demo/guide-packs/frogpost/assets/v1-cold-open.mp4, demo/poster/*.jpg and
-  the template placeholder stills in demo/guide-packs/template/assets/.
-  These were made with an AI image tool. C2PA content credentials remain in
-  the stills. The cold-open video is picture-only as of v1.0.1 (its ambient
-  audio, license [UNKNOWN], was stripped with ffmpeg -an); remuxing the
-  file removed the C2PA credentials that were in the original container.
+- AdventureNLearn typographic stills: demo/assets/*.jpg, demo/poster/*.jpg
+  and the template placeholder stills in demo/guide-packs/template/assets/.
 - AdventureNLearn's voice-clip scripts: the line text in
-  demo/guide-packs/frogpost/manifest.json and the durations.json files.
+  demo/guide-packs/template/manifest.json and the durations.json files.
 - Screenshots in shots/. Map imagery visible in a screenshot keeps its own
   terms (EOX, OpenStreetMap / OpenFreeMap / OpenMapTiles, Natural Earth). See
   CREDITS.md.
 - Documentation: *.md files, docs/, grokme/*.txt and starter/ docs.
-- British voice clips: demo/guide-packs/frogpost/assets/vo/gb/*.wav. Made with
+- British voice clips: demo/guide-packs/template/assets/vo/gb/*.wav. Made with
   the Piper en_GB-vctk-medium voice, whose training data is CC BY 4.0. When you
   reuse them, also credit the CSTR VCTK Corpus (University of Edinburgh) and
   Hi-Fi TTS (NVIDIA), as written in vo/gb/SOURCE.txt and CREDITS.md.
-- Sound effects: demo/assets/sfx/*.wav and demo/guide-packs/frogpost/assets/sfx/*.wav,
+- Sound effects: demo/assets/sfx/*.wav and demo/guide-packs/template/assets/sfx/*.wav,
   synthesized from scratch by demo/tools/make-sfx.py.
 
 NOT covered by CC BY 4.0
@@ -50,7 +44,7 @@ NOT covered by CC BY 4.0
   vendor/), fonts (SIL OFL 1.1, see demo/assets/fonts/FONTS.txt), map data and
   tiles, and anything credited to someone else in CREDITS.md.
 - US voice clips (the .wav files directly in
-  demo/guide-packs/frogpost/assets/vo/, Piper en_US-hfc_male-medium): for
+  demo/guide-packs/template/assets/vo/, Piper en_US-hfc_male-medium): for
   NON-COMMERCIAL use only. The voice's dataset is CC BY-NC-SA 4.0
   (non-commercial, share-alike) and the model was fine-tuned from lessac
   (Blizzard 2013 license). These clips are excluded from the CC BY 4.0 grant

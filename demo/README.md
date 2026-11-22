@@ -1,10 +1,10 @@
 # GlobeDesk mission demo
 
-An interactive, frog-guided tour of [GlobeDesk](https://github.com/AdventureNLearn/GlobeDesk). Built by AdventureNLearn.
+An interactive guided tour of [GlobeDesk](https://github.com/AdventureNLearn/GlobeDesk). Built by AdventureNLearn.
 
-**The frog is an example.** Every narrator piece — character stills, name, voice bank, script, pose map, lamp colors, radio stations, theme palette — lives in a swappable guide pack:
+**The guide is an example pack.** Every narrator piece — stills, name, voice bank, script, pose map, lamp colors, radio stations, theme palette — lives in a swappable guide pack:
 
-- Example pack: [`guide-packs/frogpost/`](guide-packs/frogpost/)
+- Example pack: [`guide-packs/template/`](guide-packs/template/)
 - Blank starter: [`guide-packs/template/`](guide-packs/template/)
 - How to make your own: [`guide-packs/README.md`](guide-packs/README.md)
 
@@ -26,7 +26,7 @@ The temporary voice lab is **off** unless you set `tempVoiceLab.enabled` to `tru
 
 ## Credits
 
-- GlobeDesk and this demo: AdventureNLearn. Code: MIT (`LICENSE`). AdventureNLearn content (frog art, scripts, docs): CC BY 4.0 (`LICENSE-CONTENT`). British voice WAVs and sound effects: CC BY 4.0. US voice WAVs: non-commercial only, excluded from CC BY (see `CREDITS.md`).
+- GlobeDesk and this demo: AdventureNLearn. Code: MIT (`LICENSE`). AdventureNLearn content (stills, scripts, docs): CC BY 4.0 (`LICENSE-CONTENT`). British voice WAVs and sound effects: CC BY 4.0. US voice WAVs: non-commercial only, excluded from CC BY (see `CREDITS.md`).
 - NASA / NASA Johnson — [Ultra High Definition (4K) View of Planet Earth (2016)](https://www.youtube.com/watch?v=oFDeNcu3mnc). The live embed is used when it plays; otherwise a typographic credit still is shown. The still is not a frame of the film.
 - Live radio (links only, no song files in this repo): [Exclusive Radio — Exclusively Creedence Clearwater Revival](https://play.exclusive.radio/), [0 N Radio — Classic Rock](https://www.0nradio.com/), [SomaFM Left Coast 70s](https://somafm.com/seventies/).
 - Recording bed (used only when muxing a share video, not stored in this repo): “Cool Rock” by Kevin MacLeod, [incompetech.com](https://incompetech.com/music/royalty-free/mp3-royaltyfree/Cool%20Rock.mp3), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Credit appears on the radio widget and the end card.
@@ -37,5 +37,5 @@ You are responsible for rights in any pack, image, voice, or stream you add.
 
 ## Demo video
 
-The shareable ~4.5 minute mission video is not stored in git (it is large). A title poster is at [`poster/title.jpg`](poster/title.jpg). The finished video is shared separately from the repository (file name `GlobeDesk-frog-mission-FINAL.mp4`).
+The shareable ~4.5 minute mission video is not stored in git (it is large). A title poster is at [`poster/title.jpg`](poster/title.jpg). The finished video is shared separately from the repository (file name `GlobeDesk-mission-FINAL.mp4`).
 

@@ -25,7 +25,7 @@ Click **Open** and choose `episode-template.globedesk.json`. Then, in the **Look
 ## 3. Write a story
 
 1. Give the story a headline and a short summary in the **Story** tab.
-2. Drop a pin. You can click the globe, type coordinates, or search the bundled place list (it works offline).
+2. Drop a pin. Right-click the globe (or long-press on a touch screen), type coordinates, or search the bundled place list (it works offline). A plain click selects what is already on the map and does not drop a pin.
    - Use an **approximate** pin, such as a city or a region.
    - **Never pin a private home**, or anything that could locate a private person.
 3. Add a card in the **Cards** tab. Say what was reported, not more.

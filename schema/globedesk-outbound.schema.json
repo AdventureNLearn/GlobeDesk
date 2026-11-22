@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globedesk.local/schema/globedesk-outbound.schema.json",
+  "title": "GlobeDesk Open in\u2026 allowlist (globedesk.outbound/1)",
+  "description": "Sidecar of allowlisted https targets. Disabled or [UNKNOWN] targets must not be rendered as links. Personal-data checks (an email or phone in the query or fragment) are enforced by js/schema.js, which is authoritative at load time. This JSON Schema only checks shape, https, and enablement.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "targets"
+  ],
+  "properties": {
+    "schema": {
+      "const": "globedesk.outbound/1"
+    },
+    "generated": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "checked": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "note": {
+      "type": "string",
+      "maxLength": 8000
+    },
+    "targets": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "$ref": "#/$defs/target"
+      }
+    }
+  },
+  "$defs": {
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "enabled",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 500,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "url": {
+          "type": "string",
+          "maxLength": 2000,
+          "pattern": "^https://",
+          "description": "Must be https. Email and phone checks in the query or fragment are applied by js/schema.js, not by this pattern."
+        },
+        "credit": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "reason": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "sectionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 40
+        },
+        "storyIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 40
+        }
+      },
+      "if": {
+        "properties": {
+          "enabled": {
+            "const": true
+          }
+        },
+        "required": [
+          "enabled"
+        ]
+      },
+      "then": {
+        "required": [
+          "url"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "url"
+          ]
+        }
+      }
+    }
+  }
+}

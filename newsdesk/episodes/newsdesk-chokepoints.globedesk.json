@@ -1,0 +1,405 @@
+{
+  "schema": "globedesk.episode/2",
+  "id": "ep-newsdesk-chokepoints",
+  "show": "GlobeDesk Newsdesk",
+  "title": "Newsdesk story: two canal chokepoints",
+  "date": "2026-11-21",
+  "lede": "A short two-story flight from the Suez Canal to the Panama Canal, cited from the official canal authorities. Pins are approximate. Distinct from existing Hormuz sample stories.",
+  "cta": "Open in GlobeDesk and browse the rundown, or press Play to fly the stories in order.",
+  "links": [
+    {
+      "label": "Suez Canal Authority, Canal History",
+      "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx"
+    },
+    {
+      "label": "Panama Canal Authority, 100 Years Connecting the World",
+      "url": "https://pancanal.com/en/the-panama-canal-celebrates-100-years-connecting-the-world/"
+    }
+  ],
+  "demo": true,
+  "sample": true,
+  "look": {
+    "label": "Newsdesk \u2014 lower third, boxed captions",
+    "theme": "newsdesk",
+    "header": false,
+    "headerBadge": "NEWSDESK",
+    "headerHeightPct": 12,
+    "citations": true,
+    "captionsOn": true,
+    "captionStyle": "box",
+    "captionSize": "medium",
+    "captionLines": 2,
+    "captionZonePct": 15,
+    "lowerThird": true,
+    "ticker": false,
+    "music": false,
+    "coldOpen": false,
+    "shotSec": 10,
+    "palette": {
+      "bg": "#02040c",
+      "ink": "#eaf6ff",
+      "accent": "#e7c766",
+      "highlight": "#5ee7ff",
+      "panel": "rgba(12, 24, 56, 0.42)",
+      "outroBg": "#02040c"
+    },
+    "map": {
+      "base": "ofm-dark",
+      "softBorders": true,
+      "highlightGlow": true,
+      "countryLabels": "style"
+    },
+    "safeArea": true
+  },
+  "handle": "",
+  "outro": {
+    "enabled": false,
+    "durationSec": 0,
+    "line1": "",
+    "link": "",
+    "handle": "",
+    "showXLogo": false
+  },
+  "output": {
+    "aspect": "16:9",
+    "fps": 30
+  },
+  "stories": [
+    {
+      "id": "story-nd-suez-canal",
+      "slug": "suez-canal",
+      "title": "The Suez Canal, opened to navigation in 1869",
+      "summary": "Egypt's sea-level canal links the Mediterranean and the Red Sea across the Isthmus of Suez. The Suez Canal Authority dates its opening to international navigation to 17 November 1869.",
+      "date": "1869-11-17",
+      "credit": "Suez Canal Authority",
+      "creditUrl": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "Suez Canal, Ismailia area (approx.)",
+        "lat": 30.59,
+        "lon": 32.27,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Approximate stand-in near mid-canal at Ismailia. The canal is a north\u2013south waterway, not a single point. A surveyed midpoint is [UNKNOWN] in this card. Not a street address.",
+        "a3": "EGY"
+      },
+      "script": "The Suez Canal is an artificial sea-level waterway across the Isthmus of Suez in Egypt. The Suez Canal Authority says it was opened to navigation on 17 November 1869. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 3.2,
+          "text": "The Suez Canal, Egypt."
+        },
+        {
+          "start": 3.2,
+          "end": 6.2,
+          "text": "Opened to navigation on 17 November 1869."
+        },
+        {
+          "start": 6.2,
+          "end": 8,
+          "text": "The pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-suez-canal-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            32.27,
+            30.59
+          ],
+          "zoom": 8,
+          "pitch": 30,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-suez-canal",
+          "kind": "topic",
+          "title": "Suez Canal",
+          "body": "The Suez Canal Authority describes the canal as an artificial sea-level waterway running north to south across the Isthmus of Suez in Egypt, connecting the Mediterranean Sea and the Red Sea. Its official history dates the inauguration ceremony to 17 November 1869. The same official history records later turning points, including nationalization and a closure after the 1967 war, with reopening in June 1975.",
+          "why": "A primary official chokepoint on the globe, cited from the canal's own authority.",
+          "facts": [
+            {
+              "label": "Opened",
+              "value": "17 November 1869 (Suez Canal Authority, Canal History)."
+            },
+            {
+              "label": "What it connects",
+              "value": "The Mediterranean Sea and the Red Sea, across the Isthmus of Suez (SCA)."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate Ismailia-area stand-in. Surveyed midpoint [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-sca-history"
+          ],
+          "pin": {
+            "lat": 30.59,
+            "lon": 32.27
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-sca-history",
+          "label": "Suez Canal Authority, Canal History",
+          "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx",
+          "status": "verified",
+          "note": "Official Suez Canal Authority history page, read 21 Nov 2026. Pin coordinates are not taken from this page."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "EGY",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "id": "story-nd-panama-canal",
+      "slug": "panama-canal",
+      "title": "The Panama Canal opened with the transit of SS Ancon",
+      "summary": "The Panama Canal Authority, an autonomous agency of the Government of Panama, dates the waterway's opening to world trade to 15 August 1914, when SS Ancon made the official transit.",
+      "date": "1914-08-15",
+      "credit": "Panama Canal Authority",
+      "creditUrl": "https://pancanal.com/en/the-panama-canal-celebrates-100-years-connecting-the-world/",
+      "asReported": false,
+      "durationSec": 8,
+      "location": {
+        "name": "Panama Canal (isthmus, approx.)",
+        "lat": 9.12,
+        "lon": -79.73,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Approximate pin on the isthmus waterway. The canal is a route, not a single lock. A surveyed lock coordinate is [UNKNOWN] in this card. Not a street address. Distinct from the existing Americas subsea-cable landing pin at Panama City.",
+        "a3": "PAN"
+      },
+      "script": "The Panama Canal Authority dates the canal's opening to world trade to 15 August 1914, when SS Ancon made the official transit. The Authority calls the waterway 80 kilometres long in its 2014 centenary notice. The pin is approximate.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 3,
+          "text": "The Panama Canal."
+        },
+        {
+          "start": 3,
+          "end": 6.4,
+          "text": "Opened to world trade on 15 August 1914."
+        },
+        {
+          "start": 6.4,
+          "end": 8,
+          "text": "The pin is approximate."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-nd-panama-canal-1",
+          "preset": "close",
+          "at": 0,
+          "center": [
+            -79.73,
+            9.12
+          ],
+          "zoom": 9,
+          "pitch": 30,
+          "bearing": 0,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-nd-panama-canal",
+          "kind": "topic",
+          "title": "Panama Canal",
+          "body": "A 15 August 2014 notice from the Panama Canal Authority says the canal opened to world trade that day in 1914 with the passage of SS Ancon, and describes the waterway as 80 kilometres long. The Authority is the autonomous agency of the Government of Panama in charge of managing, operating and maintaining the canal.",
+          "why": "The official operator's own centenary account of a second global canal chokepoint.",
+          "facts": [
+            {
+              "label": "Opened",
+              "value": "15 August 1914, official transit of SS Ancon (Panama Canal Authority, 15 August 2014)."
+            },
+            {
+              "label": "Length, as stated",
+              "value": "80 kilometres (same ACP notice)."
+            },
+            {
+              "label": "Operator",
+              "value": "Panama Canal Authority, an autonomous agency of the Government of Panama."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate isthmus stand-in. Surveyed lock coordinate [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-acp-100"
+          ],
+          "pin": {
+            "lat": 9.12,
+            "lon": -79.73
+          },
+          "at": 1.5,
+          "dur": 6,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-acp-100",
+          "label": "Panama Canal Authority, 100 Years Connecting the World",
+          "url": "https://pancanal.com/en/the-panama-canal-celebrates-100-years-connecting-the-world/",
+          "status": "verified",
+          "note": "Official ACP centenary notice dated 15 August 2014, read 21 Nov 2026. Pin coordinates are not taken from this page."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "PAN",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    }
+  ],
+  "eventLayers": [
+    {
+      "id": "evl-ep-newsdesk-chokepoints",
+      "name": "Newsdesk story: two canal chokepoints (approximate pins)",
+      "color": "#5ee6ff",
+      "icon": "\u25cf",
+      "visible": true,
+      "labels": true,
+      "styleByCategory": true,
+      "scope": "all",
+      "note": "Short newsdesk story episode. Pins are approximate unless a cited official page published a coordinate.",
+      "features": [
+        {
+          "type": "Feature",
+          "id": "ev-nd-suez-canal",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              32.27,
+              30.59
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "The Suez Canal, opened to navigation in 1869",
+            "eventTime": "1869-11-17",
+            "eventEnd": "",
+            "timeApprox": false,
+            "datePrecision": "day",
+            "category": "convoy",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-sca-history",
+                "label": "Suez Canal Authority, Canal History",
+                "url": "https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx",
+                "status": "verified",
+                "note": "Official Suez Canal Authority history page, read 21 Nov 2026. Pin coordinates are not taken from this page."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "Suez Canal Authority",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "Egypt's sea-level canal links the Mediterranean and the Red Sea across the Isthmus of Suez. The Suez Canal Authority dates its opening to international navigation to 17 November 1869.",
+            "precisionLabel": "Precision: approximate",
+            "radiusKm": null,
+            "cardId": "card-nd-suez-canal",
+            "storyId": "story-nd-suez-canal",
+            "example": true
+          }
+        },
+        {
+          "type": "Feature",
+          "id": "ev-nd-panama-canal",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -79.73,
+              9.12
+            ]
+          },
+          "properties": {
+            "kind": "point",
+            "title": "The Panama Canal opened with the transit of SS Ancon",
+            "eventTime": "1914-08-15",
+            "eventEnd": "",
+            "timeApprox": false,
+            "datePrecision": "day",
+            "category": "convoy",
+            "verification": "verified",
+            "sources": [
+              {
+                "id": "src-acp-100",
+                "label": "Panama Canal Authority, 100 Years Connecting the World",
+                "url": "https://pancanal.com/en/the-panama-canal-celebrates-100-years-connecting-the-world/",
+                "status": "verified",
+                "note": "Official ACP centenary notice dated 15 August 2014, read 21 Nov 2026. Pin coordinates are not taken from this page."
+              }
+            ],
+            "citation": {
+              "type": "Official page",
+              "date": "21 Nov 2026",
+              "credit": "Panama Canal Authority",
+              "license": "[UNKNOWN]"
+            },
+            "notes": "The Panama Canal Authority, an autonomous agency of the Government of Panama, dates the waterway's opening to world trade to 15 August 1914, when SS Ancon made the official transit.",
+            "precisionLabel": "Precision: approximate",
+            "radiusKm": null,
+            "cardId": "card-nd-panama-canal",
+            "storyId": "story-nd-panama-canal",
+            "example": true
+          }
+        }
+      ]
+    }
+  ],
+  "mediaBin": []
+}

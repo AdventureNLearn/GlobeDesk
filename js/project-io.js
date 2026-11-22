@@ -38,7 +38,8 @@
     let pack;
     try { pack = JSON.parse(raw); } catch (e) { throw new Error("project.json is not valid JSON"); }
     const ep = pack.episode || pack;
-    const errs = GD.schema.validate(ep);
+    const warns = [];
+    const errs = GD.schema.validate(ep, warns);
     if (errs.length) throw new Error("Invalid episode: " + errs[0]);
     const media = [];
     Object.keys(files).forEach((name) => {
@@ -98,7 +99,8 @@
     const text = await file.text();
     const data = JSON.parse(text);
     const ep = data && data.schema === GD.schema.PROJECT && data.episode ? data.episode : data;
-    const errs = GD.schema.validate(ep);
+    const warns = [];
+    const errs = GD.schema.validate(ep, warns);
     if (errs.length) throw new Error("Invalid episode: " + errs[0]);
     return ep;
   }

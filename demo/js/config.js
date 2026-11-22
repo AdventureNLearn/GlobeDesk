@@ -1,12 +1,12 @@
 /* GlobeDesk full mission config.
-   The frog guide is an example pack, not a locked layer.
+   The on-screen guide is a swappable pack, not a locked layer.
    Narrator content (character, voice, script, poses, lamps, radio, theme)
    lives in guide-packs/<guidePack>/manifest.json. See guide-packs/README.md
    to make or swap your own guide. Mission mechanics (levels, XP, timing)
    stay here. */
 window.DEMO = {
   /* Folder name under guide-packs/. Change this to load a different guide. */
-  guidePack: "frogpost",
+  guidePack: "template",
 
   brand: {
     product: "GlobeDesk",
@@ -22,23 +22,23 @@ window.DEMO = {
   /* Fallback asset paths used only until the guide pack loads.
      The pack overwrites these with pack-relative URLs. */
   assets: {
-    startStill: "guide-packs/frogpost/assets/a1-console.jpg",
-    completeStill: "guide-packs/frogpost/assets/a4-outro.jpg",
-    coldOpen: "guide-packs/frogpost/assets/v1-cold-open.mp4",
-    portrait: "guide-packs/frogpost/assets/frog/idle.jpg",
+    startStill: "",
+    completeStill: "",
+    coldOpen: "",
+    portrait: "",
     poses: {
-      idle: "guide-packs/frogpost/assets/frog/idle.jpg",
-      talk: "guide-packs/frogpost/assets/frog/talk.jpg",
-      success: "guide-packs/frogpost/assets/frog/thumbs-up.jpg",
-      hint: "guide-packs/frogpost/assets/frog/hint.jpg",
-      salute: "guide-packs/frogpost/assets/frog/salute.jpg"
+      idle: "",
+      talk: "",
+      success: "",
+      hint: "",
+      salute: ""
     },
-    voiceDir: "guide-packs/frogpost/assets/vo/",
-    sfxDir: "guide-packs/frogpost/assets/sfx/",
+    voiceDir: "",
+    sfxDir: "",
     missionEpisode: "/episodes/mission.json",
-    telemetryBed: "guide-packs/frogpost/assets/sfx/telemetry-bed.wav",
-    mediaStill: "guide-packs/frogpost/assets/a1-console.jpg",
-    embedPoster: "guide-packs/frogpost/assets/nasa-earth-poster.jpg"
+    telemetryBed: "",
+    mediaStill: "",
+    embedPoster: ""
   },
 
   embed: {
@@ -46,7 +46,7 @@ window.DEMO = {
     title: "Earth from the ISS",
     credit: "NASA / NASA Johnson — Ultra High Definition (4K) View of Planet Earth (2016)",
     page: "https://www.youtube.com/watch?v=oFDeNcu3mnc",
-    poster: "guide-packs/frogpost/assets/nasa-earth-poster.jpg"
+    poster: ""
   },
 
   /* TEMPORARY voice lab. Off in production. Set enabled: true to show the panel. */

@@ -1,0 +1,89 @@
+{
+  "schema": "globedesk.gis-registry/1",
+  "generated": "2026-11-22",
+  "note": "Official public GIS overlays for GlobeDesk. Live GIS is off by default and only the user can opt in. OpenHistoricalMap stays unknown, with no URL, until a style and date filter are deliberately connected. Do not invent endpoints. A down host is a skip, not a replacement dataset. Online geocoding stays off. Census geocoding is not a registry host.",
+  "liveDefault": false,
+  "layers": [
+    {
+      "id": "usgs-topo",
+      "label": "USGS Topo (current The National Map, not year-stamped)",
+      "group": "overlay",
+      "kind": "raster",
+      "status": "working",
+      "runtime": true,
+      "yearKind": "current-snapshot",
+      "credit": "USGS The National Map: National Boundaries Dataset, 3DEP Elevation Program, Geographic Names Information System, National Hydrography Dataset, National Land Cover Database, National Structures Dataset, and National Transportation Dataset; USGS Global Ecosystems; U.S. Census Bureau TIGER/Line; USFS Road Data; Natural Earth Data; U.S. Department of State HIU; NOAA NCEI. Data refreshed September 4, 2026.",
+      "terms": "Current official USGS composite, not a yearly time dimension. Do not label a historical data-year view of this layer as recorded for that year. Attribution required.",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer",
+      "tiles": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}",
+      "minzoom": 3
+    },
+    {
+      "id": "usgs-imagery",
+      "label": "USGS Imagery Only (current ortho, not year-stamped)",
+      "group": "overlay",
+      "kind": "raster",
+      "status": "working",
+      "runtime": true,
+      "yearKind": "current-snapshot",
+      "credit": "USDA, USGS The National Map: Orthoimagery. Data refreshed June, 2024.",
+      "terms": "Current official ortho mosaic, not a dated yearly stack. Do not label a historical data-year view as recorded ortho for that year.",
+      "sourceUrl": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer",
+      "tiles": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}",
+      "minzoom": 3
+    },
+    {
+      "id": "usgs-nhd",
+      "label": "USGS National Hydrography Dataset (current)",
+      "group": "overlay",
+      "kind": "raster",
+      "status": "working",
+      "runtime": true,
+      "yearKind": "current-snapshot",
+      "credit": "USGS TNM \u2013 National Hydrography Dataset. Data Refreshed October, 2026.",
+      "terms": "Current official hydrography, not year-stamped. Raster export only; no attribute query for personal fields. A down host is skipped.",
+      "sourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer",
+      "tiles": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/export?bbox={bbox-epsg-3857}&bboxSR=3857&imageSR=3857&size=256,256&format=png32&transparent=true&f=image",
+      "minzoom": 7
+    },
+    {
+      "id": "tiger-boundaries",
+      "label": "Census TIGERweb state and county boundaries",
+      "group": "boundary",
+      "kind": "raster",
+      "status": "working",
+      "runtime": true,
+      "yearKind": "tiger",
+      "showLayers": "0,1",
+      "credit": "Source: U.S. Census Bureau.",
+      "terms": "Official TIGERweb boundaries. Legal boundaries are never projected. Years without a vintage stay off or show the nearest vintage labelled as not that year. No ACS2020 service.",
+      "sourceUrl": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer",
+      "tiles": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/export?bbox={bbox-epsg-3857}&bboxSR=3857&imageSR=3857&size=256,256&format=png32&transparent=true&f=image&layers=show:0,1",
+      "minzoom": 4
+    },
+    {
+      "id": "nowcoast-radar",
+      "label": "NOAA nowCOAST base reflectivity (current observations)",
+      "group": "overlay",
+      "kind": "raster",
+      "status": "working",
+      "runtime": true,
+      "yearKind": "current-weather",
+      "wmsLayer": "weather_radar:base_reflectivity_mosaic",
+      "credit": "NOAA nowCOAST / NWS. Current weather observations, not historical.",
+      "terms": "Current observations only. Hidden for a historical data year. A down host is skipped.",
+      "sourceUrl": "https://nowcoast.noaa.gov/geoserver/ows",
+      "tiles": "https://nowcoast.noaa.gov/geoserver/ows?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=weather_radar%3Abase_reflectivity_mosaic&STYLES=&SRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256&FORMAT=image/png&TRANSPARENT=true",
+      "minzoom": 4
+    },
+    {
+      "id": "ohm",
+      "label": "Historical map (OpenHistoricalMap)",
+      "group": "overlay",
+      "kind": "none",
+      "status": "unknown",
+      "runtime": false,
+      "reason": "OpenHistoricalMap period view: style and date filter are not wired yet."
+    }
+  ]
+}

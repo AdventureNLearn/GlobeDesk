@@ -131,7 +131,18 @@
     });
   }
 
-  // Title starts to the right of the "NOW COVERING" badge, inside the header band only.
+  // Header title shown on the globe. A blank or [UNKNOWN] story title must not appear as chrome
+  // (first load used to show "GLOBEDESK [UNKNOWN]"): fall back to the episode title, then a default.
+  const DEFAULT_TITLE = "Welcome to GlobeDesk";
+  function knownText(v) {
+    const t = String(v == null ? "" : v).trim();
+    return t && !/^\[UNKNOWN\]$/i.test(t) ? t : "";
+  }
+  function displayTitle(ep, story) {
+    return knownText(story && story.title) || knownText(ep && ep.title) || DEFAULT_TITLE;
+  }
+
+  // Title starts to the right of the header badge, inside the header band only.
   // Returned box is used by paintOverlays (and unit-tested) so citations never cover the headline.
   function layoutHeader(W, H, L, u, ctx, font, badge, title) {
     const hh = H * (L.headerHeightPct || 15) / 100;
@@ -162,6 +173,83 @@
     const n = parseInt(m[1], 16), ch = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
     const Lm = 0.2126 * ch[0] + 0.7152 * ch[1] + 0.0722 * ch[2];
     return (1.05 / (Lm + 0.05)) >= 4.5 ? "#fff" : "#07140c";
+  }
+
+
+  function plainCredit(html) {
+    return String(html || "")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&nbsp;/g, " ")
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&quot;/g, "\"")
+      .replace(/&#39;/g, "'")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function paintYearBadge(ctx, W, H, u, font, opts) {
+    if (!GD.yearClock || !GD.yearClock.yearBadgeSpec) return null;
+    const spec = GD.yearClock.yearBadgeSpec();
+    if (!spec || (spec.kind !== "projected" && spec.kind !== "recorded" && spec.kind !== "recorded-nearest")) return null;
+    const L = (GD.state && GD.state.episode && GD.state.episode.look) || {};
+    const headerOn = !!(L.header && GD.state && GD.state.episode && GD.state.episode.stories && GD.state.episode.stories[GD.state.storyIdx]);
+    const hh = headerOn ? H * (L.headerHeightPct || 15) / 100 : 0;
+    ctx.save();
+    ctx.textAlign = "left";
+    ctx.font = font(800, 22);
+    const text = String(spec.text || "");
+    const padX = 12 * u, padY = 8 * u;
+    const tw = ctx.measureText(text).width;
+    const bw = tw + padX * 2, bh = 28 * u + padY;
+    const x = 16 * u;
+    let y = hh + 16 * u;
+    const cits = rec.hits && rec.hits.citations;
+    if (cits && cits.length) {
+      cits.forEach(function (c) {
+        if (c && c.y != null && c.h != null) y = Math.max(y, c.y + c.h + 8 * u);
+      });
+    }
+    rec.hits = rec.hits || {};
+    rec.hits.yearBadge = { kind: spec.kind, text: text, spoken: spec.spoken || "", x: x, y: y, w: bw, h: bh };
+    // Live preview keeps the DOM badge only, so the canvas copy is not drawn on top of it.
+    if (opts && opts.preview) { ctx.restore(); return rec.hits.yearBadge; }
+    ctx.fillStyle = spec.kind === "projected" ? "rgba(245,193,74,0.94)" : "rgba(110,231,168,0.92)";
+    roundRect(ctx, x, y, bw, bh, 14 * u); ctx.fill();
+    ctx.strokeStyle = spec.kind === "projected" ? "rgba(217,160,23,0.85)" : "rgba(16,185,129,0.7)";
+    ctx.lineWidth = 2 * u; ctx.stroke();
+    ctx.fillStyle = spec.kind === "projected" ? "#1a1204" : "#04210f";
+    ctx.fillText(text, x + padX, y + bh * 0.7);
+    ctx.restore();
+    return rec.hits.yearBadge;
+  }
+
+  function paintImageryCredit(ctx, W, H, u, font) {
+    const spec = (GD.layers && GD.layers.datedSatSpec) ? GD.layers.datedSatSpec() : null;
+    const text = plainCredit(spec && spec.credit);
+    if (!text) return null;
+    const L = (GD.state && GD.state.episode && GD.state.episode.look) || {};
+    const zone = H * (L.captionZonePct || 15) / 100;
+    ctx.save();
+    ctx.textAlign = "left";
+    ctx.font = font(500, 16);
+    ctx.fillStyle = "rgba(255,255,255,0.92)";
+    ctx.shadowColor = "rgba(0,0,0,0.85)";
+    ctx.shadowBlur = 4 * u;
+    ctx.shadowOffsetY = 1 * u;
+    const lines = wrap(ctx, text, W - 56 * u).slice(0, 2);
+    const lineH = 18 * u;
+    const ep = GD.state && GD.state.episode;
+    const sampleOn = !!(ep && (ep.demo || ep.sample));
+    const sampleY = H - zone - 14 * u;
+    const lastY = sampleOn ? (sampleY - 16 * u) : (H - zone - 14 * u);
+    const y = lastY - Math.max(0, lines.length - 1) * lineH;
+    lines.forEach(function (line, k) { ctx.fillText(line, 28 * u, y + k * lineH); });
+    ctx.restore();
+    rec.hits = rec.hits || {};
+    rec.hits.imageryCredit = { text: text, x: 28 * u, y: y, lines: lines };
+    return rec.hits.imageryCredit;
   }
 
   function paintOverlays(ctx, W, H, proj, opts) {
@@ -195,7 +283,8 @@
     // cannot clip the first letters. Citations always start below the header band.
     let headerBottom = 0;
     if (headerOn) {
-      const lay = layoutHeader(W, H, L, u, ctx, font, L.headerBadge || "FROGPOST", story.title);
+      const shownTitle = displayTitle(ep, story);
+      const lay = layoutHeader(W, H, L, u, ctx, font, L.headerBadge || "GLOBEDESK", shownTitle);
       headerBottom = lay.hh;
       ctx.fillStyle = "rgba(12,12,14,0.86)"; ctx.fillRect(0, 0, W, lay.lowerBarTop);
       ctx.fillStyle = "rgba(40,41,44,0.92)"; ctx.fillRect(0, lay.lowerBarTop, W, lay.hh - lay.lowerBarTop);
@@ -204,7 +293,7 @@
       ctx.font = font(800, lay.titleSize); ctx.fillStyle = "#fff";
       lay.titleLines.forEach((l, k) => ctx.fillText(l, lay.titleX, lay.titleY0 + k * lay.titleLineH));
       rec.hits = rec.hits || { title: null, citations: [] };
-      rec.hits.title = { full: story.title || "", truncated: !!lay.titleTruncated, x: lay.titleX, y: lay.titleY0 - 32 * u, w: lay.titleMaxW, h: lay.titleLines.length * lay.titleLineH + 16 * u };
+      rec.hits.title = { full: shownTitle, truncated: !!lay.titleTruncated, x: lay.titleX, y: lay.titleY0 - 32 * u, w: lay.titleMaxW, h: lay.titleLines.length * lay.titleLineH + 16 * u };
       ctx.font = font(600, 24); ctx.fillStyle = "#e6e6e6";
       const lead = `${ep.show}   •   ${ep.date}   •   `, by = lay.lowerBarTop + (lay.hh - lay.lowerBarTop) * 0.68;
       ctx.fillText(lead + (ep.handle || ""), 36 * u, by);
@@ -228,7 +317,7 @@
       ctx.fillStyle = "rgba(5,14,30,0.82)"; roundRect(ctx, 48 * u, y0, W - 96 * u, 120 * u, 14 * u); ctx.fill();
       ctx.fillStyle = P.accent || "#ff3b5c"; ctx.fillRect(48 * u, y0, 10 * u, 120 * u);
       ctx.fillStyle = "#9fc3ff"; ctx.font = font(600, 24); ctx.fillText(`${ep.show}  •  ${S.storyIdx + 1}/${ep.stories.length}`, 76 * u, y0 + 38 * u);
-      ctx.fillStyle = "#fff"; ctx.font = font(700, 38); ctx.fillText(wrap(ctx, story.title, W - 160 * u)[0] || "", 76 * u, y0 + 90 * u);
+      ctx.fillStyle = "#fff"; ctx.font = font(700, 38); ctx.fillText(wrap(ctx, displayTitle(ep, story), W - 160 * u)[0] || "", 76 * u, y0 + 90 * u);
     }
     cards.forEach(({ c, x, y, w: cw, h: ch, lines }) => {
       ctx.fillStyle = "rgba(14,15,17,0.84)"; roundRect(ctx, x, y, cw, ch, 12 * u); ctx.fill();
@@ -256,12 +345,13 @@
       ctx.fillStyle = "rgba(255,209,102,0.95)"; ctx.font = font(700, 18);
       ctx.fillText("SAMPLE • LOCATIONS APPROXIMATE • NOT VERIFIED", 28 * u, H - (H * (L.captionZonePct || 15) / 100) - 14 * u);
     }
+    paintYearBadge(ctx, W, H, u, font, opts);
+    paintImageryCredit(ctx, W, H, u, font);
   }
 
-  // Draw one output frame from the live map canvas and the current overlay state.
-  function drawFrame() {
-    const { canvas: out, ctx } = rec;
-    const W = out.width, H = out.height;
+  // Compose one output frame (map canvas, file media, overlays) onto ctx. Shared by the
+  // real-time WebM recorder and the frame-by-frame MP4 export (js/frame-export.js).
+  function composeFrame(ctx, W, H) {
     const src = GD.globe.st.map.getCanvas();
     const sr = src.width / src.height, dr = W / H;
     let sw = src.width, sh = src.height, sx = 0, sy = 0;
@@ -277,6 +367,12 @@
       try { ctx.drawImage(el, (W - dw) / 2, (H - dh) / 2, dw, dh); } catch (e) { /* not ready */ }
     });
     paintOverlays(ctx, W, H, proj);
+  }
+
+  // Draw one output frame from the live map canvas and the current overlay state.
+  function drawFrame() {
+    const { canvas: out, ctx } = rec;
+    composeFrame(ctx, out.width, out.height);
     rec.raf = requestAnimationFrame(drawFrame);
   }
 
@@ -338,5 +434,5 @@
     });
   }
 
-  GD.recorder = { supported, start, stop, connectMedia, paintOverlays, layoutHeader, placeLabels, badgeInk, SIZES, _rec: rec, hits: () => rec.hits || { title: null, citations: [] } };
+  GD.recorder = { supported, start, stop, connectMedia, composeFrame, displayTitle, DEFAULT_TITLE, paintOverlays, paintYearBadge, paintImageryCredit, plainCredit, layoutHeader, placeLabels, badgeInk, SIZES, _rec: rec, hits: () => rec.hits || { title: null, citations: [] } };
 })();

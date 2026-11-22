@@ -13,43 +13,59 @@
     setTimeout(() => { try { URL.revokeObjectURL(url); } catch (e) { /* ignore */ } }, 2000);
   }
 
-  GD.state = { episode: null, storyIdx: 0, t: 0, playing: false, recording: false, tab: "story", blobs: {}, browserVoice: false,
+  GD.state = { episode: null, storyIdx: 0, t: 0, playing: false, paused: false, playBaseline: null, forcedCards: [], mapSel: null, recording: false, tab: "story", blobs: {}, browserVoice: false,
     eventClockMode: "follow", eventClockManual: null, eventLayerId: null,
     ov: { cards: [], captions: [], media: [], citations: [], outro: false } };
   const S = GD.state;
   const story = () => S.episode.stories[S.storyIdx];
   const fmtT = (sec) => `${Math.floor(sec / 60)}:${String(Math.floor(sec % 60)).padStart(2, "0")}`;
 
-  function toast(msg) {
+  function toast(msg, ms) {
     const t = $("toast"); t.textContent = msg; t.classList.add("on");
-    clearTimeout(toast._h); toast._h = setTimeout(() => t.classList.remove("on"), 2600);
+    clearTimeout(toast._h); toast._h = setTimeout(() => t.classList.remove("on"), ms || 2600);
+  }
+
+  // Keep the load reason and any validation warning in one toast so a later
+  // "why" message cannot overwrite the note in the same tick.
+  function formatLoadNotice(why, warns) {
+    const note = warns && warns.length
+      ? ("Note: " + warns[0] + (warns.length > 1 ? " (" + warns.length + " warnings)" : ""))
+      : "";
+    if (why && note) return String(why) + " · " + note;
+    return String(why || note || "");
   }
 
   // ---------- Episode lifecycle ----------
   function loadEpisode(ep, why, opts) {
     if (GD.model.normalizeEpisode) GD.model.normalizeEpisode(ep);
-    const errs = (GD.schema && GD.schema.validate) ? GD.schema.validate(ep) : GD.model.validate(ep);
+    const warns = [];
+    const errs = (GD.schema && GD.schema.validate) ? GD.schema.validate(ep, warns) : GD.model.validate(ep);
     if (errs.length) { toast("Episode not loaded: " + errs[0]); console.warn("validate:", errs); return false; }
+    if (warns.length) console.warn("validate warnings:", warns);
     // Fill look/outro defaults for older files.
-    ep.look = Object.assign(GD.themes.lookFor((ep.look && ep.look.theme) || GD.themes.DEFAULT || "frog"), ep.look || {});
+    ep.look = Object.assign(GD.themes.lookFor((ep.look && ep.look.theme) || GD.themes.DEFAULT || "globedesk"), ep.look || {});
     ep.outro = Object.assign({ enabled: true, durationSec: 5, line1: "Full brief on the channel", link: "[channel link]", handle: "@[handle]", showXLogo: true }, ep.outro || {});
     ep.mediaBin = ep.mediaBin || [];
     ep.eventLayers = ep.eventLayers || [];
     ep.stories.forEach((st) => { st.eventWindow = st.eventWindow || { start: "", end: "" }; });
-    S.episode = ep; S.storyIdx = 0; S.t = 0;
+    S.episode = ep; S.storyIdx = 0; S.t = 0; S.paused = false; S.forcedCards = []; S.mapSel = null;
+    if (GD.playback && GD.playback.clearBaseline) GD.playback.clearBaseline();
     GD.globe.st.active = 0;
     S.eventLayerId = ep.eventLayers[0] ? ep.eventLayers[0].id : null;
     if (GD.eventsMap) { GD.eventsMap.em.selected = null; GD.eventsMap.setMode("select"); }
     GD.globe.setEpisode(ep, 0);
+    const wantBase = ep.look && ep.look.map && ep.look.map.base;
+    if (wantBase && GD.globe.setBase) GD.globe.setBase(wantBase);
     GD.globe.refresh();
     renderAll();
     GD.playback.seek(0);
-    if (!(ep.stories[0].camera || []).length && GD.globe.st.map) GD.globe.st.map.jumpTo({ center: [40, 28], zoom: 1.6, pitch: 0, bearing: 0 });
+    if (!(ep.stories[0].camera || []).length && GD.globe.st.map) { const home = (GD.globe.HOME_VIEW || { center: [40, 28], zoom: 1.6, pitch: 0, bearing: 0 }); GD.globe.st.map.jumpTo({ center: home.center, zoom: home.zoom, pitch: home.pitch, bearing: home.bearing }); }
     if (GD.content) { GD.content.clear(); GD.content.render(); }
     if (GD.store) GD.store.schedule(ep);
     rememberSoon((opts && opts.showId) || null);
     renderBrand();
-    if (why) toast(why);
+    const notice = formatLoadNotice(why, warns);
+    if (notice) toast(notice, warns.length ? 4000 : 2600);
     return true;
   }
 
@@ -90,7 +106,7 @@
 
   // ---------- Rendering ----------
   function renderAll() {
-    $("epTitle").value = S.episode.title;
+    $("epTitle").value = S.episode.title === U ? "" : S.episode.title;
     renderRundown(); renderBin(); renderInspector(); renderTransport(); applyAspect(S.episode.output.aspect || "16:9"); renderOverlays();
   }
 
@@ -125,17 +141,35 @@
   }
 
   function selectStory(i, opts) {
+    opts = opts || {};
+    const exploring = GD.mapPointer && GD.mapPointer.shouldSeekOnSelect ? !GD.mapPointer.shouldSeekOnSelect(S) : false;
+    const same = S.storyIdx === i;
     S.storyIdx = i;
-    const start = GD.model.storyStarts(S.episode)[i];
-    GD.playback.seek(start + 0.01);
-    if (opts && opts.fly) {
+    if (GD.globe && GD.globe.st) GD.globe.st.active = i;
+    if (!exploring && !opts.noSeek && !same) {
+      const start = GD.model.storyStarts(S.episode)[i];
+      GD.playback.seek(start + 0.01);
+    }
+    if (opts.fly && !exploring && !same) {
       const s = story(), kf = (s.camera || [])[0];
       if (kf) GD.globe.flyTo(Object.assign({}, kf, { durationSec: 2.2 }));
+    }
+    if (opts.openCard && GD.callouts) {
+      const s = S.episode && S.episode.stories[i];
+      if (s) GD.callouts.open(s.id);
+    }
+    if (GD.yearClock && GD.yearClock.isFollowStory && GD.yearClock.isFollowStory()) {
+      const s = story();
+      GD.yearClock.applyStoryDate(s && s.date, { playbackT: S.t });
     }
     renderRundown(); renderInspector(); renderTransport();
   }
 
   function changed() {
+    if (GD.yearClock && GD.yearClock.isFollowStory && GD.yearClock.isFollowStory()) {
+      const s = story();
+      GD.yearClock.applyStoryDate(s && s.date, { playbackT: S.t });
+    }
     GD.globe.setEpisode(S.episode);
     if (GD.eventsMap) GD.eventsMap.refresh();
     renderRundown(); renderInspector(); renderTransport(); renderOverlays();
@@ -163,6 +197,72 @@
       seg.appendChild(d);
     });
     if (S.episode.outro.enabled) { const d = document.createElement("div"); d.className = "outro"; d.style.flex = String(S.episode.outro.durationSec); d.title = "Outro card"; seg.appendChild(d); }
+    syncDataYearUi();
+  }
+
+  function dataYearStatus() {
+    if (GD.layers && GD.layers.datedSatSpec) {
+      const spec = GD.layers.datedSatSpec();
+      if (spec && spec.status) return spec.status;
+    }
+    if (!GD.yearClock || !GD.yearClock.defaultImageryStatus) return null;
+    return GD.yearClock.defaultImageryStatus(undefined, undefined, {
+      nonCommercialAck: !!(GD.layers && GD.layers.eoxNonCommercialAck && GD.layers.eoxNonCommercialAck()),
+      showProjected: GD.yearClock.isShowProjected ? GD.yearClock.isShowProjected() : true
+    });
+  }
+
+  function syncDataYearUi() {
+    const yc = GD.yearClock;
+    if (!yc) return;
+    const sl = $("dataYear");
+    const val = $("dataYearVal");
+    const chip = $("dataYearChip");
+    const follow = $("followStoryDate");
+    const badge = $("stageYearBadge");
+    if (sl) {
+      sl.min = String(yc.YEAR_MIN);
+      sl.max = String(yc.yearMax());
+      sl.value = String(yc.getYear());
+    }
+    if (val) val.textContent = String(yc.getYear());
+    if (follow) follow.checked = !!yc.isFollowStory();
+    const st = dataYearStatus();
+    const kind = st && st.kind;
+    const chipLabel = yc.chipText ? yc.chipText(st) : "";
+    const badgeSpec = yc.yearBadgeSpec ? yc.yearBadgeSpec() : null;
+    if (chip) {
+      if (chipLabel) {
+        chip.hidden = false;
+        chip.textContent = chipLabel;
+        chip.setAttribute("data-kind", kind || "");
+        chip.title = (st && (st.label || st.spoken)) || "";
+      } else {
+        chip.hidden = true;
+        chip.textContent = "";
+        chip.removeAttribute("data-kind");
+      }
+    }
+    if (badge) {
+      const bKind = (badgeSpec && badgeSpec.kind) || kind;
+      if (badgeSpec && (bKind === "projected" || bKind === "recorded" || bKind === "recorded-nearest")) {
+        badge.hidden = false;
+        badge.setAttribute("data-kind", bKind);
+        badge.textContent = badgeSpec.text;
+        badge.title = badgeSpec.spoken || "";
+      } else {
+        badge.hidden = true;
+        badge.textContent = "";
+        badge.removeAttribute("data-kind");
+      }
+    }
+  }
+
+  function dataYearReadableLine() {
+    const st = dataYearStatus();
+    if (!st || !st.spoken) return "";
+    const kind = st.kind === "projected" ? "projected" : (st.kind === "recorded" || st.kind === "recorded-nearest" ? "recorded" : st.kind);
+    return `<p class="small data-year-readable" data-kind="${esc(kind || "")}"><strong>Data year ${esc(String(GD.yearClock.getYear()))}:</strong> ${esc(st.spoken)}</p>`;
   }
 
   // Preview overlay uses the same painter as the recorder, so what you see is what records.
@@ -180,14 +280,26 @@
     // Map buttons and the on-stage attribution are DOM, not canvas: globe callouts keep clear of them.
     const uiBoxes = [ctrl, document.querySelector("#stage .maplibregl-ctrl-attrib")].filter((el) => el && el.offsetWidth && el.offsetHeight)
       .map((el) => { const cr = el.getBoundingClientRect(); return { x: (cr.left - r.left) * dpr, y: (cr.top - r.top) * dpr, w: cr.width * dpr, h: cr.height * dpr }; });
-    if (cv.width && S.episode) GD.recorder.paintOverlays(ctx, cv.width, cv.height, proj, { reserveRight, uiBoxes });
+    if (cv.width && S.episode) GD.recorder.paintOverlays(ctx, cv.width, cv.height, proj, { reserveRight, uiBoxes, preview: true });
+    const stageBadge = $("stageYearBadge");
+    const yb = GD.recorder && GD.recorder.hits && GD.recorder.hits().yearBadge;
+    if (stageBadge) {
+      if (!stageBadge.hidden && yb && yb.y != null) {
+        stageBadge.style.top = (yb.y / dpr) + "px";
+        stageBadge.style.left = (yb.x / dpr) + "px";
+      } else {
+        stageBadge.style.top = "";
+        stageBadge.style.left = "";
+      }
+    }
     renderMediaLayer();
     if (GD.content) GD.content.render();
     syncHits();
     // Readable (DOM) view: cards + captions as real text. Full title and citations (no truncation).
     const box = $("readable"), s = story();
     if (S.ov.outro) { const o = S.episode.outro; box.innerHTML = `<p><strong>${esc(o.line1)}</strong><br>${esc(o.link)}<br>${esc(o.handle)}</p>`; }
-    else box.innerHTML = `<p class="muted small">${esc(S.episode.look.headerBadge || "")} — <span title="${esc(s.title)}">${esc(s.title)}</span>${S.episode.sample || S.episode.demo ? ' <span class="pill warn">Sample</span>' : ""}</p>` +
+    else box.innerHTML = `<p class="muted small">${esc(S.episode.look.headerBadge || "")} — <span title="${esc(GD.recorder.displayTitle(S.episode, s))}">${esc(GD.recorder.displayTitle(S.episode, s))}</span>${S.episode.sample || S.episode.demo ? ' <span class="pill warn">Sample</span>' : ""}</p>` +
+      dataYearReadableLine() +
       creditLine(s) +
       S.ov.citations.filter((c) => c && c.trim()).map((c) => `<p class="small" title="${esc(c)}">Source box: ${esc(c)}</p>`).join("") +
       S.ov.cards.map((c) => `<article><strong>${esc(c.title)}</strong> <span class="pill ${c.verified ? "ok" : "warn"}">${c.verified ? "verified" : "unverified"}</span><p>${esc(c.body)}</p>${c.why && c.why !== U ? `<p><em>Why it matters:</em> ${esc(c.why)}</p>` : ""}</article>`).join("") +
@@ -259,13 +371,16 @@
       <div class="row2">${field("Story date", s.date || "", 'data-k="date" placeholder="YYYY-MM-DD"')}${field("Duration (s)", s.durationSec, 'data-k="durationSec" type="number" min="2" step="0.5"')}</div>
       ${field("Creator credit (required for other people's work)", s.credit || "", 'data-k="credit"')}
       ${field("Credit link (https)", s.creditUrl || "", 'data-k="creditUrl" type="url" placeholder="https://"')}
+      ${(GD.outbound && GD.outbound.editorPickerHtml) ? GD.outbound.editorPickerHtml(s) : ""}
       <label class="row"><input type="checkbox" data-k="asReported" ${s.asReported !== false ? "checked" : ""}> As reported, not independently verified</label>
       <label>Location verified<select data-k="verified"><option value="0">No (approximate)</option><option value="1" ${loc.verified ? "selected" : ""}>Yes, checked</option></select></label>
       ${field("Story pin label", loc.name, 'data-k="name"')}
-      <label>Find a place (bundled gazetteer, offline)<input id="placeQ" placeholder="Type a town or city"></label><ul id="placeHits" class="suggest"></ul>
+      <label>Find a place<input id="placeQ" placeholder="Type a town, city, or address"></label><ul id="placeHits" class="suggest"></ul>
+      <label class="gis-live-opt"><input type="checkbox" id="geocodeLive" ${GD.geocode && GD.geocode.isLive && GD.geocode.isLive() ? "checked" : ""}> Send this query to Photon (OpenStreetMap / ODbL) for online address search. Off by default. The query leaves this device and is not saved in the episode or in command logs.</label>
+      <label class="gis-live-opt"><input type="checkbox" id="geocodeCensus" ${GD.geocode && GD.geocode.isCensusEnabled && GD.geocode.isCensusEnabled() ? "checked" : ""}> Try the US Census geocoder through the local Python server only (United States, Puerto Rico, and U.S. Island Areas). This does not send the query to Photon. This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau.</label>
       <div class="row2">${field("Pin latitude", loc.lat == null ? "" : loc.lat, 'data-k="lat" type="number" step="0.0001"')}${field("Pin longitude", loc.lon == null ? "" : loc.lon, 'data-k="lon" type="number" step="0.0001"')}</div>
       ${field("Location note", loc.note, 'data-k="note"')}
-      <p class="muted small">Drop a pin by clicking the globe, entering coordinates, or searching the bundled town gazetteer (offline). There is no online address lookup. The story pin marks the place on the globe. The camera / street-level target can be a different land point, so a water or regional pin can still dive to streets nearby. Street zoom (about z16–17, pitched) only runs when that target is on land.</p>
+      <p class="muted small">Drop a pin by right-clicking the globe (or a long press on touch), entering coordinates, or searching the bundled town gazetteer (offline). Online address search stays off until you opt in above. A plain click or tap selects what is already on the map; it does not drop a pin. The story pin marks the place on the globe. The camera / street-level target can be a different land point, so a water or regional pin can still dive to streets nearby. Street zoom (about z16–17, pitched) only runs when that target is on land.</p>
       ${field("Street-level target label", (loc.look && loc.look.name) || "", 'data-k="lookName"')}
       <div class="row2">${field("Target latitude", loc.look && loc.look.lat != null ? loc.look.lat : "", 'data-k="lookLat" type="number" step="0.0001"')}${field("Target longitude", loc.look && loc.look.lon != null ? loc.look.lon : "", 'data-k="lookLon" type="number" step="0.0001"')}</div>
       ${field("Target note", (loc.look && loc.look.note) || "", 'data-k="lookNote"')}
@@ -300,20 +415,74 @@
       }
       changed();
     });
+    el.querySelectorAll("[data-openin]").forEach((cb) => {
+      cb.addEventListener("change", () => {
+        const id = cb.getAttribute("data-openin");
+        const cur = Array.isArray(s.openIn) ? s.openIn.slice() : [];
+        const i = cur.indexOf(id);
+        if (cb.checked && i === -1) cur.push(id);
+        if (!cb.checked && i !== -1) cur.splice(i, 1);
+        if (cur.length) s.openIn = cur;
+        else delete s.openIn;
+        changed();
+      });
+    });
     const q = el.querySelector("#placeQ"), hits = el.querySelector("#placeHits");
-    q.addEventListener("input", () => {
+    const geoLive = el.querySelector("#geocodeLive");
+    const geoCensus = el.querySelector("#geocodeCensus");
+    if (geoLive && GD.geocode && GD.geocode.setLive) {
+      geoLive.addEventListener("change", () => {
+        GD.geocode.setLive(geoLive.checked);
+      });
+    }
+    if (geoCensus && GD.geocode && GD.geocode.setCensusEnabled) {
+      geoCensus.addEventListener("change", () => { GD.geocode.setCensusEnabled(geoCensus.checked); });
+    }
+    let placeTimer = 0, placeGen = 0;
+    function addHit(label, apply) {
+      const li = document.createElement("li"), b = document.createElement("button");
+      b.textContent = label;
+      b.addEventListener("click", apply);
+      li.appendChild(b); hits.appendChild(li);
+    }
+    function runPlaceSearch() {
+      const val = q.value;
       hits.innerHTML = "";
-      GD.globe.searchPlaces(q.value, 8).forEach((p) => {
-        const li = document.createElement("li"), b = document.createElement("button");
-        b.textContent = `${p.name} — ${p.a3}${p.adm1 ? ", " + p.adm1 : ""} (${p.lat}, ${p.lon})`;
-        b.addEventListener("click", () => {
+      GD.globe.searchPlaces(val, 8).forEach((p) => {
+        addHit(`${p.name} — ${p.a3}${p.adm1 ? ", " + p.adm1 : ""} (${p.lat}, ${p.lon})`, () => {
           Object.assign(loc, { name: p.name + " (gazetteer point)", lat: p.lat, lon: p.lon, precision: "town point" });
           s.highlight = s.highlight || {}; if (!s.highlight.a3) s.highlight.a3 = p.a3;
           s.camera = GD.model.autoCameraPathForLocation(s.location, S.episode.look.shotSec, window.GD_LAND);
           changed(); selectStory(S.storyIdx, { fly: true });
         });
-        li.appendChild(b); hits.appendChild(li);
       });
+      const onlineOn = GD.geocode && ((GD.geocode.isLive && GD.geocode.isLive()) || (GD.geocode.isCensusEnabled && GD.geocode.isCensusEnabled()));
+      if (!onlineOn || !String(val || "").trim()) return;
+      const gen = ++placeGen;
+      GD.geocode.searchOnline(val).then((out) => {
+        if (gen !== placeGen || !hits.isConnected) return;
+        (out && out.hits || []).forEach((p) => {
+          const tag = p.source === "census" ? "Census" : "Photon";
+          addHit(`${p.name} — ${tag} (${p.lat}, ${p.lon})`, () => {
+            Object.assign(loc, { name: p.name, lat: p.lat, lon: p.lon, precision: "address search" });
+            s.camera = GD.model.autoCameraPathForLocation(s.location, S.episode.look.shotSec, window.GD_LAND);
+            changed(); selectStory(S.storyIdx, { fly: true });
+          });
+        });
+      }).catch(() => {});
+    }
+    q.addEventListener("input", () => {
+      clearTimeout(placeTimer);
+      hits.innerHTML = "";
+      GD.globe.searchPlaces(q.value, 8).forEach((p) => {
+        addHit(`${p.name} — ${p.a3}${p.adm1 ? ", " + p.adm1 : ""} (${p.lat}, ${p.lon})`, () => {
+          Object.assign(loc, { name: p.name + " (gazetteer point)", lat: p.lat, lon: p.lon, precision: "town point" });
+          s.highlight = s.highlight || {}; if (!s.highlight.a3) s.highlight.a3 = p.a3;
+          s.camera = GD.model.autoCameraPathForLocation(s.location, S.episode.look.shotSec, window.GD_LAND);
+          changed(); selectStory(S.storyIdx, { fly: true });
+        });
+      });
+      placeTimer = setTimeout(runPlaceSearch, 300);
     });
     el.querySelector("#useView").addEventListener("click", () => { const c = GD.globe.camera(); loc.lat = c.center[1]; loc.lon = c.center[0]; changed(); });
     el.querySelector("#useViewLook").addEventListener("click", () => {
@@ -406,7 +575,7 @@
         <div class="row3">${field("At (s)", c.at, `data-f="${i}.at" type="number" step="0.1"`)}${field("For (s)", c.dur, `data-f="${i}.dur" type="number" step="0.1"`)}
         <label>Kind<select data-f="${i}.kind">${["topic", "stat", "quote", "timeline", "insight"].map((k) => `<option ${k === c.kind ? "selected" : ""}>${k}</option>`).join("")}</select></label></div>
         <label>Sources<select multiple data-f="${i}.sourceIds">${s.sources.map((src) => `<option value="${esc(src.id)}" ${(c.sourceIds || []).includes(src.id) ? "selected" : ""}>${esc(src.label)} (${esc(src.status)})</option>`).join("")}</select></label>
-        <label><input type="checkbox" data-f="${i}.verified" ${c.verified ? "checked" : ""}> Content verified</label></div>`).join("")}`;
+        <label><input type="checkbox" data-f="${i}.verified" ${c.verified ? "checked" : ""}> Content verified</label></div>`).join("")}` + claimsEditorMarkup(s);
     bind(el, "[data-f]", (t) => {
       const [i, key] = t.dataset.f.split("."); const c = s.cards[Number(i)];
       if (key === "verified") c.verified = t.checked;
@@ -435,6 +604,7 @@
       sents.slice(0, 3).forEach((t, k) => { const c = GD.model.blankCard(s.location.lat, s.location.lon); c.title = "Draft: " + t.trim().split(/\s+/).slice(0, 5).join(" ") + "…"; c.body = t.trim(); c.at = 1 + k * 5; c.dur = 5; s.cards.push(c); });
       changed(); toast("Draft cards added. Edit and check them.");
     });
+    bindClaimsEditor(el, s);
   }
 
   function tabSources(el, s) {
@@ -452,6 +622,24 @@
     });
     bind(el, "[data-del]", (t) => { s.sources.splice(Number(t.dataset.del), 1); changed(); }, "click");
     el.querySelector("#srcAdd").addEventListener("click", () => { s.sources.push(GD.model.blankSource()); changed(); });
+    el.insertAdjacentHTML("beforeend", claimsEditorMarkup(s));
+    bindClaimsEditor(el, s);
+    el.insertAdjacentHTML("beforeend", (GD.research && GD.research.mountEditor) ? '<div class="story-research-slot"></div>' : "");
+    if (GD.research && GD.research.mountEditor) {
+      const slot = el.querySelector && el.querySelector(".story-research-slot");
+      if (slot) GD.research.mountEditor(slot, s);
+    }
+  }
+
+  function claimsEditorMarkup(s) {
+    return (GD.claims && (GD.claims.mountEditor || GD.claims.editorHtml)) ? '<div class="story-claims-slot"></div>' : "";
+  }
+
+  function bindClaimsEditor(el, s) {
+    if (!GD.claims) return;
+    const slot = (el.querySelector && el.querySelector(".story-claims-slot")) || el;
+    if (GD.claims.mountEditor) GD.claims.mountEditor(slot, s);
+    else if (GD.claims.bindEditor) GD.claims.bindEditor(el.querySelector(".story-claims"), s);
   }
 
   function tabCaptions(el, s) {
@@ -474,7 +662,7 @@
 
   function tabShots(el, s) {
     const bin = S.episode.mediaBin;
-    el.innerHTML = `<p class="muted small">Drop files into the bin, then add them here (or drag a bin item onto the stage). Each shot has its own citation box. Voiceover plays from the story start; music is off in the Frogpost look.</p>
+    el.innerHTML = `<p class="muted small">Drop files into the bin, then add them here (or drag a bin item onto the stage). Each shot has its own citation box. Voiceover plays from the story start; music is off in the default look.</p>
       <label>Voiceover for this story<select id="vo"><option value="">None (silent / browser voice)</option>${bin.filter((b) => b.kind === "audio").map((b) => `<option value="${esc(b.ref)}" ${s.voiceover === b.ref ? "selected" : ""}>${esc(b.name)}</option>`).join("")}</select></label>
       ${(s.media || []).map((m, i) => { const b = bin.find((x) => x.ref === m.mediaRef); return `<div class="item"><h3><span class="sp">${esc(b ? b.name : m.mediaRef)}</span>${S.blobs[m.mediaRef] ? "" : '<span class="pill warn">relink file</span>'}<button data-del="${i}" class="small">✕</button></h3>
         <div class="row3">${field("At (s)", m.at, `data-f="${i}.at" type="number" step="0.1"`)}${field("For (s)", m.dur, `data-f="${i}.dur" type="number" step="0.1"`)}
@@ -533,7 +721,7 @@
         <label>Style<select data-l="captionStyle">${["shadow", "box"].map((z) => `<option ${z === L.captionStyle ? "selected" : ""}>${z}</option>`).join("")}</select></label></div></div>
       <div class="item"><h3>Overlays</h3>
         <label><input type="checkbox" data-l="citations" ${L.citations !== false ? "checked" : ""}> Source citation boxes</label>
-        <label><input type="checkbox" data-l="lowerThird" ${L.lowerThird ? "checked" : ""}> Lower third (off in Frogpost)</label>
+        <label><input type="checkbox" data-l="lowerThird" ${L.lowerThird ? "checked" : ""}> Lower third (off in the default look)</label>
         ${field("Default shot length (s)", L.shotSec, 'data-l="shotSec" type="number" step="0.5"')}
         <div class="row3">${field("Accent", P.accent, 'data-p="accent" type="color"')}${field("Map highlight", P.highlight, 'data-p="highlight" type="color"')}${field("Outro bg", P.outroBg, 'data-p="outroBg" type="color"')}</div></div>
       <div class="item"><h3>Outro card</h3>
@@ -560,15 +748,83 @@
       <h3 class="small">Overlays</h3>
       ${GD.layers.OVERLAYS.map((o) => `<label><input type="checkbox" data-ov="${o.id}" ${st.overlays[o.id] ? "checked" : ""} ${o.status === "unknown" ? "disabled" : ""}> ${esc(o.label)}</label>
         <div class="layer-credit">${o.status === "unknown" ? esc(o.reason) : o.credit}${o.note ? "<br>" + esc(o.note) : ""}</div>`).join("")}
+      <h3 class="small">Dated imagery</h3>
+      <label class="gis-live-opt"><input type="checkbox" id="liveImagery" ${GD.layers && GD.layers.isLiveImagery && GD.layers.isLiveImagery() ? "checked" : ""}> Use dated NASA GIBS imagery for the data year (off by default)</label>
+      <label class="gis-live-opt"><input type="checkbox" id="eoxNcAck" ${GD.layers && GD.layers.eoxNonCommercialAck && GD.layers.eoxNonCommercialAck() ? "checked" : ""}> I acknowledge the EOX 2018–2025 mosaics are CC BY-NC-SA and not for public commercial use (off by default; 2016 stays CC BY 4.0; 2017 is not offered)</label>
+      <p class="muted small">When dated imagery is off, the satellite base stays on the recorded 2016 EOX mosaic. Yearly EOX 2018–2025 mosaics stay off until you tick the non-commercial acknowledgement. The 2017 mosaic is not offered (licence is not verified). Blue Marble is a separate overlay and is not year-stamped.</p>
+      ${GD.gis ? `<h3 class="small">Official GIS</h3>
+      <label class="gis-live-opt"><input type="checkbox" id="gisLive" ${GD.gis.isLiveEnabled && GD.gis.isLiveEnabled() ? "checked" : ""}> Allow official live GIS on this device (off by default)</label>
+      <p class="muted small">Live official overlays stay off until you opt in here. A down host is skipped; nothing is invented to replace it. OpenHistoricalMap is not wired yet.</p>
+      ${(GD.gis.editorRows ? GD.gis.editorRows() : []).map((o) => `<label><input type="checkbox" data-gis="${esc(o.id)}" ${o.on ? "checked" : ""} ${o.disabled ? "disabled" : ""}> ${esc(o.label)} <span class="gis-status">${esc(o.statusLabel)}</span></label>
+        <div class="layer-credit">${o.unknown ? esc(o.reason || "[UNKNOWN]") : esc(o.credit || "")}${o.terms ? "<br>" + esc(o.terms) : ""}</div>`).join("")}` : ""}
       <h3 class="small">Display (this device)</h3>
       <label><input type="checkbox" id="renderAA" ${GD.render && GD.render.readAntialias() ? "checked" : ""}> Smooth edges (antialias). Off by default; changing it recreates the globe.</label>
       <label>Pixel-ratio cap <select id="renderCap">${["1","1.5","2"].map((v) => `<option value="${v}" ${(GD.render ? String(GD.render.readPixelRatioCap()) : "1.5") === v ? "selected" : ""}>${v}</option>`).join("")}</select> (default 1.5). Changing it recreates the globe.</label>
-      <p class="muted small">The WebGL drawing buffer is kept only while Record WebM is running, so ordinary viewing does not pay the readback cost.</p>`;
+      <p class="muted small">The WebGL drawing buffer is kept only while Record WebM is running, so ordinary viewing does not pay the readback cost.</p>
+      <div id="tileCacheBox" class="layer-credit">Tile cache: checking…</div>`;
     bind(el, "input[name=base]", (t) => { if (!GD.globe.setBase(t.value)) renderInspector(); else tabLayers(el); });
     bind(el, "[data-ov]", (t) => { GD.globe.setOverlay(t.dataset.ov, t.checked); tabLayers(el); });
+    const liveImg = el.querySelector("#liveImagery");
+    if (liveImg && GD.layers && GD.layers.setLiveImagery) {
+      liveImg.addEventListener("change", () => {
+        GD.layers.setLiveImagery(liveImg.checked);
+        if (GD.globe && GD.globe.applyDatedSat) GD.globe.applyDatedSat();
+        syncDataYearUi();
+        tabLayers(el);
+      });
+    }
+    const eoxNc = el.querySelector("#eoxNcAck");
+    if (eoxNc && GD.layers && GD.layers.setEoxNonCommercialAck) {
+      eoxNc.addEventListener("change", () => {
+        GD.layers.setEoxNonCommercialAck(eoxNc.checked);
+        if (GD.globe && GD.globe.applyDatedSat) GD.globe.applyDatedSat();
+        syncDataYearUi();
+        tabLayers(el);
+      });
+    }
+    const gisLive = el.querySelector("#gisLive");
+    if (gisLive && GD.gis && GD.gis.setLiveEnabled) {
+      gisLive.addEventListener("change", () => { GD.gis.setLiveEnabled(gisLive.checked); tabLayers(el); });
+    }
+    bind(el, "[data-gis]", (t) => {
+      if (GD.gis && GD.gis.setOverlay) {
+        const out = GD.gis.setOverlay({ id: t.dataset.gis, on: t.checked });
+        if (out && out.ok === false && GD.ui && GD.ui.toast) GD.ui.toast(out.error || "Overlay skipped");
+      }
+      tabLayers(el);
+    });
     const aa = el.querySelector("#renderAA"), cap = el.querySelector("#renderCap");
     if (aa) aa.addEventListener("change", () => { if (GD.globe.setRenderOptions) GD.globe.setRenderOptions({ antialias: aa.checked }); });
     if (cap) cap.addEventListener("change", () => { if (GD.globe.setRenderOptions) GD.globe.setRenderOptions({ pixelRatioCap: Number(cap.value) }); });
+    fillTileCacheBox(el.querySelector("#tileCacheBox"));
+  }
+
+  function formatBytes(n) {
+    const x = Number(n);
+    if (!isFinite(x) || x < 0) return "—";
+    if (x < 1024) return x + " bytes";
+    if (x < 1024 * 1024) return (x / 1024).toFixed(1) + " KiB";
+    if (x < 1024 * 1024 * 1024) return (x / (1024 * 1024)).toFixed(1) + " MiB";
+    return (x / (1024 * 1024 * 1024)).toFixed(2) + " GiB";
+  }
+
+  function fillTileCacheBox(box) {
+    if (!box || typeof fetch !== "function") return;
+    const live = () => document.getElementById("tileCacheBox") || box;
+    fetch("/api/cache", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((st) => {
+      const el = live();
+      if (!el) return;
+      if (!st) { el.textContent = "Tile cache: the Python server is required for the disk cache (the PowerShell fallback does not provide it)."; return; }
+      const cap = st.uncapped ? "no cap" : (st.enabled === false ? "off (GLOBEDESK_CACHE_MAX_BYTES=0)" : formatBytes(st.capBytes));
+      el.innerHTML = `Tile cache: ${formatBytes(st.bytes)} used, cap ${cap}. <button type="button" id="clearTileCache" class="btn tiny">Clear cache</button>`;
+      const btn = el.querySelector("#clearTileCache");
+      if (btn) btn.addEventListener("click", () => {
+        fetch("/api/cache/clear", { method: "POST" }).then((r) => r.ok ? r.json() : null).then(() => fillTileCacheBox(el)).catch(() => {});
+      });
+    }).catch(() => {
+      const el = live();
+      if (el) el.textContent = "Tile cache: the Python server is required for the disk cache (the PowerShell fallback does not provide it).";
+    });
   }
 
   // ---------- Media bin ----------
@@ -622,7 +878,10 @@
     const h = document.createElement("strong"); h.textContent = label; p.appendChild(h);
     const body = document.createElement("div"); body.textContent = text; p.appendChild(body);
     const b = document.createElement("button"); b.type = "button"; b.textContent = "Close";
-    b.addEventListener("click", () => { p.hidden = true; });
+    const close = () => { p.hidden = true; document.removeEventListener("pointerdown", onDoc, true); };
+    const onDoc = (ev) => { if (!p.contains(ev.target)) close(); };
+    b.addEventListener("click", close);
+    document.addEventListener("pointerdown", onDoc, true);
     p.appendChild(b);
   }
   function syncHits() {
@@ -639,8 +898,8 @@
       d.className = "gd-hit";
       d.style.left = (h.x * sx) + "px";
       d.style.top = (h.y * sy) + "px";
-      d.style.width = Math.max(12, h.w * sx) + "px";
-      d.style.height = Math.max(12, h.h * sy) + "px";
+      d.style.width = Math.max((GD.mapPointer && GD.mapPointer.HIT_MIN_PX) || 24, h.w * sx) + "px";
+      d.style.height = Math.max((GD.mapPointer && GD.mapPointer.HIT_MIN_PX) || 24, h.h * sy) + "px";
       d.title = h.full;
       d.setAttribute("aria-label", label + (h.truncated ? " (full text)" : "") + ": " + h.full);
       d.addEventListener("click", (ev) => { ev.preventDefault(); ev.stopPropagation(); showFull(label, h.full); });
@@ -654,7 +913,7 @@
         a.className = "gd-hit gd-hit-link";
         a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
         a.style.left = (hits.handle.x * sx) + "px"; a.style.top = (hits.handle.y * sy) + "px";
-        a.style.width = Math.max(12, hits.handle.w * sx) + "px"; a.style.height = Math.max(12, hits.handle.h * sy) + "px";
+        a.style.width = Math.max((GD.mapPointer && GD.mapPointer.HIT_MIN_PX) || 24, hits.handle.w * sx) + "px"; a.style.height = Math.max((GD.mapPointer && GD.mapPointer.HIT_MIN_PX) || 24, hits.handle.h * sy) + "px";
         a.title = hits.handle.text + " on X";
         a.setAttribute("aria-label", hits.handle.text + " on X (opens in a new tab)");
         host.appendChild(a);
@@ -666,7 +925,7 @@
       const d = document.createElement("button");
       d.type = "button"; d.className = "gd-hit gd-hit-callout";
       d.style.left = (h.box.x * sx) + "px"; d.style.top = (h.box.y * sy) + "px";
-      d.style.width = Math.max(12, h.box.w * sx) + "px"; d.style.height = Math.max(12, h.box.h * sy) + "px";
+      d.style.width = Math.max((GD.mapPointer && GD.mapPointer.HIT_MIN_PX) || 24, h.box.w * sx) + "px"; d.style.height = Math.max((GD.mapPointer && GD.mapPointer.HIT_MIN_PX) || 24, h.box.h * sy) + "px";
       d.setAttribute("aria-label", (h.count > 1 ? h.count + " stories: " : "Card: ") + h.slugs.join(", ") + (h.mode === "chip" ? " (tap to expand)" : ""));
       d.addEventListener("mouseenter", () => GD.callouts.setHover(h.id));
       d.addEventListener("mouseleave", () => GD.callouts.setHover(null));
@@ -705,6 +964,9 @@
       stg.style.setProperty("--safe-bottom", z.bottom * 100 + "%");
       stg.style.setProperty("--safe-side", z.side * 100 + "%");
     }
+    const L = S.episode && S.episode.look;
+    const headerPct = (L && L.header) ? (Number(L.headerHeightPct) || 15) : 0;
+    stg.style.setProperty("--stage-header", headerPct + "%");
     if (GD.globe && GD.globe.st && GD.globe.st.map) GD.globe.st.map.resize();
     renderOverlays();
   }
@@ -713,17 +975,20 @@
   function wire() {
     $("epTitle").addEventListener("change", (e) => { S.episode.title = e.target.value; changed(); });
     $("btnNew").addEventListener("click", () => loadEpisode(GD.model.blankEpisode(), "New blank episode."));
-    $("btnDemo").addEventListener("click", () => loadEpisode(GD.model.demoEpisode(), "Frogpost sample loaded. Removable. Locations approximate, claims as reported, not verified.", { showId: "frogpost-2026-11-20" }));
+    $("btnDemo").addEventListener("click", async () => { await loadSampleData(2); loadEpisode(GD.model.sampleEpisode(), "Washington, DC sample loaded. Removable. Pins are approximate.", { showId: "washington-dc-demo" }); });
     $("btnArchive").addEventListener("click", openArchive);
     $("archiveClose").addEventListener("click", () => $("archive").close());
-    $("btnMenu").addEventListener("click", () => {
-      const open = !document.body.classList.contains("menu-open");
-      document.body.classList.toggle("menu-open", open);
-      $("btnMenu").setAttribute("aria-expanded", open ? "true" : "false");
-    });
+    if (!(GD.layout && GD.layout.toggleMenu)) {
+      $("btnMenu").addEventListener("click", () => {
+        const open = !document.body.classList.contains("menu-open");
+        document.body.classList.toggle("menu-open", open);
+        $("btnMenu").setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    }
     $("tools").addEventListener("click", (e) => {
       if (e.target.closest("button") && document.body.classList.contains("menu-open") && e.target.id !== "btnMenu") {
         document.body.classList.remove("menu-open"); $("btnMenu").setAttribute("aria-expanded", "false");
+        if (GD.layout && GD.layout.closeMenu) GD.layout.closeMenu();
       }
     });
     wireCollapsibles();
@@ -745,8 +1010,35 @@
     $("btnSrt").addEventListener("click", () => download(slug() + ".srt", GD.captions.toSRT(GD.captions.episodeCues(S.episode)), "text/plain"));
     $("asp169").addEventListener("click", () => applyAspect("16:9"));
     $("asp916").addEventListener("click", () => applyAspect("9:16"));
-    $("btnPlay").addEventListener("click", () => (S.playing ? GD.playback.stop() : GD.playback.play()));
+    $("btnPlay").addEventListener("click", () => (S.playing ? GD.playback.pause() : (S.paused ? GD.playback.resume() : GD.playback.play())));
     $("scrub").addEventListener("input", (e) => { GD.playback.seek(Number(e.target.value)); renderTransport(); renderRundown(); });
+    const yearEl = $("dataYear");
+    if (yearEl && GD.yearClock) {
+      yearEl.min = String(GD.yearClock.YEAR_MIN);
+      yearEl.max = String(GD.yearClock.yearMax());
+      yearEl.value = String(GD.yearClock.getYear());
+      yearEl.addEventListener("input", (e) => {
+        const tBefore = S.t;
+        GD.yearClock.setYear(Number(e.target.value));
+        if (S.t !== tBefore) S.t = tBefore; /* year must not move playback */
+        syncDataYearUi();
+      });
+    }
+    const followEl = $("followStoryDate");
+    if (followEl && GD.yearClock) {
+      followEl.checked = !!GD.yearClock.isFollowStory();
+      followEl.addEventListener("change", (e) => {
+        const tBefore = S.t;
+        GD.yearClock.setFollowStory(e.target.checked);
+        if (e.target.checked) {
+          const s = story();
+          GD.yearClock.applyStoryDate(s && s.date, { playbackT: S.t });
+        }
+        if (S.t !== tBefore) S.t = tBefore;
+        syncDataYearUi();
+      });
+    }
+    if (GD.yearClock && GD.yearClock.onChange) GD.yearClock.onChange(() => { syncDataYearUi(); });
     $("browserVoice").addEventListener("change", (e) => (S.browserVoice = e.target.checked));
     $("showSafe").addEventListener("change", (e) => $("safe").classList.toggle("on", e.target.checked));
     $("safe").classList.add("on");
@@ -759,6 +1051,8 @@
     }));
     $("btnSettings").addEventListener("click", () => { GD.settings.render($("settingsBody")); $("settings").showModal(); });
     $("btnRecord").addEventListener("click", toggleRecord);
+    const btnReset = $("btnReset");
+    if (btnReset) btnReset.addEventListener("click", () => { if (GD.resetView) GD.resetView(); });
     const drop = $("drop");
     ["dragenter", "dragover"].forEach((ev) => drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.add("over"); }));
     ["dragleave", "drop"].forEach((ev) => drop.addEventListener(ev, () => drop.classList.remove("over")));
@@ -771,6 +1065,26 @@
     document.addEventListener("keydown", (e) => {
       if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return;
       if (e.code === "Space") { e.preventDefault(); $("btnPlay").click(); }
+      if (!e.altKey && !e.ctrlKey && !e.metaKey && (e.key === "h" || e.key === "H" || e.code === "KeyH")) {
+        e.preventDefault();
+        if (GD.resetView) GD.resetView();
+        return;
+      }
+      if (!e.altKey && !e.ctrlKey && !e.metaKey && (e.key === "l" || e.key === "L" || e.code === "KeyL")) {
+        e.preventDefault();
+        if (GD.layersPanel) GD.layersPanel.toggle();
+        return;
+      }
+      if (e.key === "Escape" || e.code === "Escape") {
+        const archive = $("archive");
+        if (archive && archive.open) return;
+        const full = $("gdFull");
+        if (full && !full.hidden) { full.hidden = true; return; }
+        if (GD.mapPointer) {
+          GD.mapPointer.stopMotion(GD.globe && GD.globe.st && GD.globe.st.map);
+          GD.mapPointer.clearSelection();
+        }
+      }
     });
     attachMap(GD.globe.st.map);
   }
@@ -780,17 +1094,17 @@
     if (!map || hookedMap === map) return;
     hookedMap = map;
     map.on("render", () => { if (!S.playing) renderOverlays(); });
-    // Keep MapLibre attribution expanded and sitting above the caption band (see CSS).
-    const revealAttrib = () => {
-      const a = document.querySelector(".maplibregl-ctrl-attrib");
+    // Compact attribution stays collapsed in the stage (bottom-right). Phones: the same
+    // credits are mirrored into a line under the globe (CSS hides the in-stage box under 760 px).
+    const keepAttribCompact = () => {
+      const a = document.querySelector("#stage .maplibregl-ctrl-attrib");
       if (!a) return;
-      a.classList.remove("maplibregl-compact");
-      a.classList.add("maplibregl-compact-show");
-      a.setAttribute("open", "");
+      a.classList.add("maplibregl-compact");
+      a.classList.remove("maplibregl-compact-show");
+      a.removeAttribute("open");
     };
-    map.on("load", revealAttrib); map.on("styledata", revealAttrib);
-    // Phones: the same map credits are mirrored into a line under the globe (CSS hides the
-    // in-stage box under 760 px), so the credit stays fully readable without covering the globe.
+    map.on("load", keepAttribCompact);
+    map.on("styledata", keepAttribCompact);
     const mirrorCredit = () => {
       const inner = document.querySelector("#stage .maplibregl-ctrl-attrib-inner"), out = $("stageCredit");
       if (!inner || !out) return;
@@ -801,7 +1115,7 @@
       out.replaceChildren(...c.childNodes);
     };
     ["load", "styledata", "sourcedata", "idle"].forEach((ev) => map.on(ev, mirrorCredit));
-    revealAttrib();
+    keepAttribCompact();
     mirrorCredit();
   }
 
@@ -882,20 +1196,47 @@
 
   function onPlaybackEnd() { if (S.recording) toggleRecord(); renderTransport(); }
 
+  // The bundled DC sample. A boot-time fetch can be aborted while the page is still busy, which
+  // left the Sample button on a blank stub; retry, and fetch again on demand from the button.
+  async function loadSampleData(tries) {
+    if (!(GD.model && GD.model.setSampleEpisode)) return false;
+    if (GD.sampleEpisodeData) return true;
+    for (let i = 0; i < (tries || 3); i++) {
+      try {
+        const sr = await fetch("episodes/washington-dc-demo.globedesk.json", { credentials: "same-origin", cache: "no-store" });
+        if (sr.ok) { GD.model.setSampleEpisode(await sr.json()); return true; }
+      } catch (e) { /* retry below */ }
+      await new Promise((r) => setTimeout(r, 300 * (i + 1)));
+    }
+    return false; /* sample file missing; Sample button falls back to a stub */
+  }
+
   async function boot() {
     const params = new URLSearchParams(location.search);
-    GD.globe.init("map", { base: params.get("base") || undefined });
+    const imp = params.get("import");
+    // When an episode is being imported, start offline so a default sat-hybrid
+    // style cannot request OpenFreeMap/EOX before look.map.base is applied.
+    GD.globe.init("map", { base: params.get("base") || (imp ? "offline" : undefined) });
     S.episode = GD.model.blankEpisode();
     wire();
     if (GD.assistant && GD.assistant.listen) GD.assistant.listen();
+    await loadSampleData();
+    if (GD.newsdesk && GD.newsdesk.boot) {
+      try { GD.newsdesk.boot(); } catch (e) { /* news-desk is optional chrome */ }
+    }
     let ep = null, showId;
-    if (params.get("blank")) ep = GD.model.blankEpisode();
-    else if (params.get("sample")) { ep = GD.model.demoEpisode(); showId = "frogpost-2026-11-20"; }
+    if (imp) {
+      // Skip a saved boot load — it would flash and may switch the base map first.
+      ep = GD.model.blankEpisode();
+    } else if (params.get("blank")) ep = GD.model.blankEpisode();
+    else if (params.get("sample")) { ep = GD.model.sampleEpisode(); showId = "washington-dc-demo"; }
+    else if (params.get("workspace")) { if (GD.newsdesk) GD.newsdesk.applyView("workspace"); }
     else if (params.get("archive") && GD.archive && GD.archive.show(params.get("archive"))) { showId = params.get("archive"); ep = GD.archive.show(showId).build(); }
     else if (GD.store) {
       try { ep = await GD.store.loadEpisode(); } catch (e) { ep = null; }
       if (ep) {
-        const errs = (GD.schema && GD.schema.validate) ? GD.schema.validate(ep) : (GD.model.validate ? GD.model.validate(ep) : []);
+        const bootWarns = [];
+        const errs = (GD.schema && GD.schema.validate) ? GD.schema.validate(ep, bootWarns) : (GD.model.validate ? GD.model.validate(ep) : []);
         if (errs && errs.length) {
           try { if (GD.store.keepRejected) await GD.store.keepRejected(ep, errs); } catch (e) { /* still tell the user */ }
           toast("The saved episode did not pass validation (" + errs[0] + "). A backup was kept and has not been overwritten.");
@@ -904,24 +1245,23 @@
       }
       if (ep && GD.media) { try { await GD.media.hydrateBlobs(); } catch (e) { /* ignore */ } }
     }
-    // A saved copy of the old CTD sample is replaced by Frogpost (it stays in the Archive).
-    if (ep && GD.model.isLegacyCtdSample && GD.model.isLegacyCtdSample(ep)) {
-      if (GD.archive) { try { await GD.archive.rememberEpisode(ep, "ctd-geopolitics-2026-11-20"); } catch (e) { /* bundled copy still in the archive */ } }
-      ep = null;
-    }
-    if (!ep) { ep = GD.model.demoEpisode(); showId = "frogpost-2026-11-20"; }
-    loadEpisode(ep, undefined, { showId });
+    if (!ep) ep = GD.model.blankEpisode();
     const ver = $("appVersion");
     if (ver && GD.version) ver.textContent = "v" + GD.version.APP + " · " + GD.version.EDITION;
-    const imp = params.get("import");
     if (imp && GD.assistant) {
       try {
         const r = await GD.assistant.importSameOrigin(imp);
         if (r && r.ok) loadEpisode(r.episode, "Imported (same-origin, validated).");
-        else toast("Import rejected: " + ((r && r.errors && r.errors[0]) || "invalid path"));
+        else {
+          loadEpisode(ep, undefined, { showId });
+          toast("Import rejected: " + ((r && r.errors && r.errors[0]) || "invalid path"));
+        }
       } catch (e) {
+        loadEpisode(ep, undefined, { showId });
         toast("Import failed.");
       }
+    } else {
+      loadEpisode(ep, undefined, { showId });
     }
     if (params.get("aspect")) applyAspect(params.get("aspect"));
     if (params.get("t")) GD.playback.seek(Number(params.get("t")));
@@ -931,6 +1271,6 @@
     window.__globedesk = window.__gobedesk = { ready: true }; // smoke-test hook (legacy alias kept)
   }
 
-  GD.ui = { toast, openArchive, handleUrl, creditLine, selectStory, renderOverlays, renderRundown, renderTransport, onPlaybackEnd, loadEpisode, changed, renderInspector, download, esc, field, num, slug, addFiles, showFull, attachMap };
+  GD.ui = { toast, formatLoadNotice, openArchive, handleUrl, creditLine, selectStory, renderOverlays, renderRundown, renderTransport, onPlaybackEnd, loadEpisode, changed, renderInspector, download, esc, field, num, slug, addFiles, showFull, attachMap, applyAspect, syncDataYearUi, resetView: () => GD.resetView && GD.resetView() };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();

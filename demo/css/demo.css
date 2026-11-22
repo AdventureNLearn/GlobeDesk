@@ -687,7 +687,7 @@ button { cursor: pointer; }
 }
 
 
-/* In-world ship radio (Frogpost console). */
+/* In-world ship radio (globedesk console). */
 .ship-radio {
   position: relative;
   left: auto;

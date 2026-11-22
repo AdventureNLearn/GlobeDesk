@@ -3,27 +3,25 @@ import fs from "node:fs"; import vm from "node:vm"; import path from "node:path"
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ctx = { window: {}, Date, URL, TextEncoder, TextDecoder, Uint8Array, ArrayBuffer, DataView, console }; vm.createContext(ctx);
 vm.runInContext(fs.readFileSync(path.join(root, "data", "land.js"), "utf8"), ctx);
-for (const f of ["themes", "captions", "events-model", "sanitize", "zip", "schema", "frog-rundown", "model", "archive", "layers", "render", "audio-mix", "recorder"]) vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
-const { model, captions, themes, recorder, sanitize, zip, schema, layers, audioMix, archive, render } = ctx.window.GD;
+for (const f of ["themes", "captions", "events-model", "sanitize", "zip", "schema", "model", "archive", "layers", "render", "audio-mix", "recorder", "map-pointer", "commands", "newsdesk"]) vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
+ctx.window.GD.model.setSampleEpisode(JSON.parse(fs.readFileSync(path.join(root, "episodes", "washington-dc-demo.globedesk.json"), "utf8")));
+const { model, captions, themes, recorder, sanitize, zip, schema, layers, audioMix, archive, render, commands, mapPointer } = ctx.window.GD;
 const land = ctx.window.GD_LAND;
 const J = (v) => JSON.parse(JSON.stringify(v));
 assert.deepEqual = ((orig) => (a, b, m) => orig(J(a), J(b), m))(assert.deepEqual);
-let n = 0; const t = (name, fn) => { fn(); n++; console.log("ok -", name); };
+let n = 0; const pending = []; const t = (name, fn) => { const r = fn(); if (r && typeof r.then === "function") pending.push(Promise.resolve(r).then(() => { n++; console.log("ok -", name); })); else { n++; console.log("ok -", name); } };
 
-t("archived CTD show: 3 stories, CTD look, outro, unverified approximate locations, creator credited", () => {
-  const ep = archive.ctdEpisode();
-  assert.equal(ep.stories.length, 3);
-  assert.equal(ep.look.theme, "ctd");
-  assert.equal(ep.look.lowerThird, false);
-  assert.equal(ep.outro.line1, "Full brief on the channel");
+t("bundled Washington, DC sample: 2 stories, globedesk look, outro off, approximate pins, official sources", () => {
+  const ep = model.sampleEpisode();
+  assert.equal(ep.stories.length, 2);
+  assert.equal(ep.look.theme, "globedesk");
+  assert.equal(ep.outro.enabled, false);
+  assert.deepEqual(ep.stories.map((s) => s.slug), ["capitol", "lincoln"]);
   for (const s of ep.stories) {
     assert.equal(s.location.verified, false);
-    assert.equal(s.location.note, "demo, not verified");
-    assert.ok(s.sources.every((x) => x.status === "unverified"));
-    assert.ok(s.sources.every((x) => !x.url || /^https:\/\/x\.com\/TheCriticalDri1\/status\//.test(x.url)), "only crit's posts linked");
-    assert.equal(s.sources.length, 1, "one source box, no blank source");
-    assert.equal(s.credit, "@TheCriticalDri1");
-    assert.equal(s.creditUrl, s.sources[0].url);
+    assert.equal(s.location.precision, "approximate");
+    assert.ok(s.sources.every((x) => !x.url || /^https:\/\//.test(x.url)));
+    assert.ok(s.sources.length >= 1);
   }
   assert.deepEqual(model.validate(ep), []);
 });
@@ -60,18 +58,18 @@ t("lookTarget falls back to the pin when look is unset", () => {
 t("citation layout: title starts to the right of the badge and stays inside the header", () => {
   const ctx = { font: "", measureText: (t) => ({ width: String(t).length * 8 }) };
   const font = (w, px) => `${w} ${px}px sans-serif`;
-  const lay = recorder.layoutHeader(1920, 1080, { headerHeightPct: 15 }, 1, ctx, font, "NOW COVERING", "Three major Kyiv bridges damaged, as reported");
+  const lay = recorder.layoutHeader(1920, 1080, { headerHeightPct: 15 }, 1, ctx, font, "GLOBEDESK", "The United States Capitol stands at the eastern end of the National Mall");
   assert.ok(lay.titleX >= lay.badgeX + lay.badgeW, "title must start after the badge");
   assert.ok(lay.titleY0 + (lay.titleLines.length - 1) * lay.titleLineH < lay.lowerBarTop, "title stays above the lower header bar");
   assert.ok(lay.headerBottom <= 1080 * 0.16);
   assert.ok(lay.titleLines.length >= 1);
 });
-t("pacing: archived CTD show is ~6 shots in ~48 s plus outro", () => {
-  const ep = archive.ctdEpisode();
+t("pacing: Washington, DC sample is 3 cuts in 16 s, outro off", () => {
+  const ep = model.sampleEpisode();
   const shots = ep.stories.reduce((a, s) => a + s.camera.filter((k) => k.cut).length, 0);
-  assert.equal(shots, 6);
-  assert.equal(model.storiesDuration(ep), 48);
-  assert.equal(model.totalDuration(ep), 53);
+  assert.equal(shots, 3);
+  assert.equal(model.storiesDuration(ep), 16);
+  assert.equal(model.totalDuration(ep), 16);
 });
 t("captions: SRT and VTT round trip", () => {
   const cues = [{ start: 0, end: 1.5, text: "Hello" }, { start: 1.5, end: 3.25, text: "World line" }];
@@ -107,7 +105,7 @@ t("v0.4 schema is globedesk.episode/2 and still reads /1", () => {
   assert.equal(ep.schema, "globedesk.episode/2");
   assert.equal(ep.stories[0].asReported, true);
   assert.deepEqual(model.validate(ep), []);
-  const old = model.demoEpisode();
+  const old = model.sampleEpisode();
   old.schema = "globedesk.episode/1";
   assert.deepEqual(model.validate(old), []);
   model.normalizeEpisode(old);
@@ -160,7 +158,7 @@ t("truncated header layout still keeps title to the right of the badge", () => {
   const ctx = { font: "", measureText: (t) => ({ width: String(t).length * 8 }) };
   const font = (w, px) => `${w} ${px}px sans-serif`;
   const long = "A very long headline that should wrap and mark truncation when it exceeds two lines of the header band in 16:9";
-  const lay = recorder.layoutHeader(1920, 1080, { headerHeightPct: 15 }, 1, ctx, font, "NOW COVERING", long);
+  const lay = recorder.layoutHeader(1920, 1080, { headerHeightPct: 15 }, 1, ctx, font, "GLOBEDESK", long);
   assert.equal(typeof lay.titleFull, "string");
   assert.equal(lay.titleFull, long);
 });
@@ -185,7 +183,7 @@ t("validation rejects unknown keys, oversize titles, and non-numeric duration", 
   const ep4 = model.blankEpisode();
   ep4.stories[0].cards = { title: "nope" };
   assert.ok(model.validate(ep4).some((e) => /cards/.test(e)));
-  const ep5 = model.demoEpisode();
+  const ep5 = model.sampleEpisode();
   assert.deepEqual(model.validate(ep5), []);
 });
 
@@ -289,4 +287,256 @@ t("P1: Blue Marble uses GIBS unless a local tile proxy is available", () => {
   assert.equal(note.includes("C:"), false);
 });
 
+t("P2: EOX and the DC region pack use the local /tiles proxy only when it is available", () => {
+  const remote = layers.BASES.find((b) => b.id === "sat-hybrid").satTiles;
+  const region = layers.OVERLAYS.find((o) => o.id === "eox-region");
+  assert.ok(remote && remote.includes("tiles.maps.eox.at"));
+  assert.ok(region && region.tiles.includes("s2cloudless_3857"));
+  assert.ok(region.note.includes("CC BY 4.0"));
+  assert.equal(region.note.includes("C:"), false);
+  const loc = { protocol: "http:", hostname: "127.0.0.1", origin: "http://127.0.0.1:8080" };
+  layers.setLocalBlueMarbleProxy(false);
+  assert.equal(layers.eoxTiles(loc), remote);
+  assert.equal(layers.eoxRegionTiles(loc), region.tiles);
+  layers.setLocalBlueMarbleProxy(true);
+  assert.equal(layers.eoxTiles(loc), "http://127.0.0.1:8080/tiles/eox2016/{z}/{x}/{y}.jpg");
+  assert.equal(layers.eoxRegionTiles(loc), "http://127.0.0.1:8080/tiles/eox2016/{z}/{x}/{y}.jpg");
+  layers.setLocalBlueMarbleProxy(false);
+});
+
+t("P2: packs probe times out so a hung /api/packs cannot block the globe", () => {
+  assert.equal(layers.PACKS_PROBE_TIMEOUT_MS, 2000);
+  const src = fs.readFileSync(path.join(root, "js", "layers.js"), "utf8");
+  assert.ok(src.includes("AbortController"));
+  assert.ok(src.includes("PACKS_PROBE_TIMEOUT_MS"));
+  const fn = src.slice(src.indexOf("function probeLocalTileProxy"), src.indexOf("function blueMarbleTiles"));
+  assert.ok(fn.includes("timeoutMs"));
+  assert.ok(fn.includes("ctl.abort"));
+});
+
+t("P2: DC region overlay is not stacked with EOX hybrid or Blue Marble", () => {
+  assert.equal(render.rastersStacked("sat-hybrid", { "eox-region": true }), true);
+  assert.equal(render.rastersStacked("offline", { "eox-region": true }), false);
+  assert.equal(render.rastersStacked("offline", { bluemarble: true, "eox-region": true }), true);
+  const on = render.policyOnSetOverlay("sat-hybrid", { "eox-region": false }, "eox-region", true);
+  assert.equal(on.baseId, "offline");
+  assert.equal(on.overlays["eox-region"], true);
+  assert.equal(on.overlays.bluemarble, false);
+  assert.equal(render.rastersStacked(on.baseId, on.overlays), false);
+  const off = render.policyOnSetBase("sat-hybrid", { "eox-region": true, towns: true });
+  assert.equal(off.overlays["eox-region"], false);
+  assert.equal(off.overlays.towns, true);
+});
+
+const dcEp = JSON.parse(fs.readFileSync(path.join(root, "episodes", "washington-dc-demo.globedesk.json"), "utf8"));
+t("P3: DC sample episode is globedesk.episode/2 and validates", () => {
+  assert.equal(dcEp.schema, "globedesk.episode/2");
+  assert.equal(dcEp.stories.length, 2);
+  assert.equal(dcEp.stories[0].slug, "capitol");
+  assert.equal(dcEp.stories[1].slug, "lincoln");
+  assert.equal(dcEp.look.map.base, "offline");
+  assert.equal(dcEp.outro.enabled, false);
+  const errs = schema.validate(dcEp);
+  assert.deepEqual(errs, []);
+  for (const s of dcEp.stories) {
+    assert.equal(s.location.precision, "approximate");
+    assert.equal(s.location.verified, false);
+    assert.ok(s.location.note.includes("[UNKNOWN]"));
+    assert.ok(s.sources.every((x) => x.status === "verified" && /^https:\/\//.test(x.url)));
+  }
+});
+
+t("P3: command allowlist and validation", () => {
+  const need = ["flyTo", "zoom", "toggleLayer", "dropPin", "openCard", "closeCard", "play", "pause", "resume"];
+  need.forEach((c) => assert.ok(commands.list().includes(c), c));
+  const ok = commands.unpack({ cmd: "flyTo", lat: 38.89, lon: -77.01, zoom: 13 });
+  assert.equal(ok.cmd, "flyTo");
+  assert.equal(ok.args.zoom, 13);
+  const bad = commands.unpack({ cmd: "eval", code: "1" });
+  assert.ok(bad.error.includes("unknown command"));
+  const range = commands.unpack({ cmd: "zoom", zoom: 99 });
+  assert.ok(range.error);
+  const layer = commands.unpack({ cmd: "toggleLayer", id: "eox-region", on: true });
+  assert.equal(layer.args.id, "eox-region");
+});
+
+t("P3: story state at beat times and resume restores pins", () => {
+  const s0 = dcEp.stories[0], s1 = dcEp.stories[1];
+  assert.deepEqual(commands.cardsAt(s0, 0).map((c) => c.id), []);
+  assert.deepEqual(commands.cardsAt(s0, 3).map((c) => c.id), ["card-capitol"]);
+  assert.deepEqual(commands.cardsAt(s1, 3).map((c) => c.id), ["card-lincoln"]);
+  const cam0 = commands.cameraAt(s0, 3);
+  assert.equal(cam0.id, "kf-capitol-close");
+  assert.equal(cam0.zoom, 13);
+  const cam1 = commands.cameraAt(s1, 0);
+  assert.equal(cam1.center[0], -77.05);
+  const snap = commands.cloneLocations(dcEp);
+  dcEp.stories[0].location.lat = 10;
+  dcEp.stories[0].location.lon = 20;
+  commands.restoreLocations(dcEp, snap);
+  assert.equal(dcEp.stories[0].location.lat, 38.89);
+  assert.equal(dcEp.stories[0].location.lon, -77.01);
+  assert.equal(dcEp.stories[1].location.lon, -77.05);
+});
+
+t("P3: DC region overlay declares MapLibre bounds", () => {
+  const region = layers.OVERLAYS.find((o) => o.id === "eox-region");
+  assert.deepEqual(region.bounds, [-77.12, 38.83, -76.94, 38.97]);
+  assert.deepEqual(layers.eoxRegionBounds(), [-77.12, 38.83, -76.94, 38.97]);
+  const globeSrc = fs.readFileSync(path.join(root, "js", "globe.js"), "utf8");
+  assert.ok(globeSrc.includes("eoxRegionBounds"));
+  assert.ok(globeSrc.includes("src.bounds"));
+  const uiSrc = fs.readFileSync(path.join(root, "js", "ui.js"), "utf8");
+  assert.ok(uiSrc.includes("wantBase"));
+  assert.ok(uiSrc.includes("ep.look.map.base"));
+});
+
+t("P3: openCard on an already-open card is ok", async () => {
+  const GD = ctx.window.GD;
+  const prev = { state: GD.state, callouts: GD.callouts, playback: GD.playback, ui: GD.ui };
+  GD.state = { episode: dcEp, storyIdx: 0, t: 0, forcedCards: [], ov: { cards: [] } };
+  GD.callouts = { isOpen: () => false, open() {}, close() {}, clear() {}, state: { open: [] } };
+  GD.playback = null;
+  GD.ui = null;
+  const first = await commands.run({ cmd: "openCard", args: { id: "card-capitol" } });
+  assert.equal(first.ok, true);
+  assert.equal(first.result.alreadyOpen, false);
+  assert.ok(GD.state.forcedCards.includes("card-capitol"));
+  const second = await commands.run({ cmd: "openCard", args: { id: "card-capitol" } });
+  assert.equal(second.ok, true);
+  assert.equal(second.result.alreadyOpen, true);
+  assert.equal(second.result.id, "card-capitol");
+  GD.state.ov = { cards: [{ id: "card-lincoln" }] };
+  const timed = await commands.run({ cmd: "openCard", args: { id: "card-lincoln" } });
+  assert.equal(timed.ok, true);
+  assert.equal(timed.result.alreadyOpen, true);
+  Object.assign(GD, prev);
+});
+
+t("P3: plain click never drops a pin; only right-click or long-press does", () => {
+  assert.equal(mapPointer.LONG_PRESS_MS, 500);
+  assert.equal(mapPointer.actionFor({ type: "click" }, {}), "keep");
+  assert.equal(mapPointer.actionFor({ type: "tap" }, {}), "keep");
+  assert.equal(mapPointer.actionFor({ type: "click", button: 0 }, {}), "keep");
+  assert.equal(mapPointer.actionFor({ type: "click" }, { pin: { kind: "pin", id: "s1" } }), "select");
+  assert.equal(mapPointer.actionFor({ type: "tap" }, { card: { kind: "card", id: "c1" } }), "select");
+  assert.equal(mapPointer.actionFor({ type: "click" }, { eventFeature: { kind: "event", id: "e1" } }), "select");
+  assert.equal(mapPointer.actionFor({ type: "contextmenu" }, {}), "dropPin");
+  assert.equal(mapPointer.actionFor({ type: "longpress" }, {}), "dropPin");
+  assert.equal(mapPointer.actionFor({ type: "click", button: 2 }, {}), "keep");
+  assert.equal(mapPointer.actionFor({ type: "drag" }, {}), "keep");
+  assert.equal(mapPointer.shouldCancelLongPress({ x: 0, y: 0 }, { x: 11, y: 0 }), true);
+  assert.equal(mapPointer.shouldCancelLongPress({ x: 0, y: 0 }, { x: 3, y: 3 }), false);
+});
+
+t("P3: selection survives pan, zoom, and empty taps; only close, Escape, or a new pick changes it", () => {
+  const GD = ctx.window.GD;
+  const prev = GD.state;
+  GD.state = { mapSel: null, episode: dcEp, storyIdx: 0 };
+  const pin = { kind: "pin", id: "story-capitol", storyIdx: 0 };
+  const picked = mapPointer.apply({ type: "click" }, { pin });
+  assert.equal(picked.action, "select");
+  assert.equal(mapPointer.getSelection().id, "story-capitol");
+  const empty = mapPointer.apply({ type: "click" }, {});
+  assert.equal(empty.action, "keep");
+  assert.equal(mapPointer.getSelection().id, "story-capitol");
+  assert.equal(mapPointer.apply({ type: "pan" }, {}).action, "keep");
+  assert.equal(mapPointer.apply({ type: "zoom" }, {}).action, "keep");
+  assert.equal(mapPointer.apply({ type: "drag" }, {}).action, "keep");
+  assert.equal(mapPointer.getSelection().id, "story-capitol");
+  const dropped = mapPointer.apply({ type: "contextmenu" }, {});
+  assert.equal(dropped.action, "dropPin");
+  assert.equal(mapPointer.getSelection().id, "story-capitol");
+  const other = mapPointer.apply({ type: "click" }, { eventFeature: { kind: "event", id: "ev-1" } });
+  assert.equal(other.action, "select");
+  assert.equal(mapPointer.getSelection().id, "ev-1");
+  const gone = mapPointer.apply({ type: "escape" }, {});
+  assert.equal(gone.action, "clearSelection");
+  assert.equal(mapPointer.getSelection(), null);
+  assert.equal(mapPointer.nextSelection(pin, "keep"), pin);
+  assert.equal(mapPointer.nextSelection(pin, "dropPin"), pin);
+  assert.equal(mapPointer.nextSelection(pin, "clearSelection"), null);
+  GD.state = prev;
+});
+
+t("P3: one click dispatcher — an event pick selects and never drops a pin", () => {
+  const evHit = { eventFeature: { kind: "event", id: "zone-1" } };
+  assert.equal(mapPointer.actionFor({ type: "click" }, evHit), "select");
+  assert.notEqual(mapPointer.actionFor({ type: "click" }, evHit), "dropPin");
+  const both = { pin: { kind: "pin", id: "s1", storyIdx: 0 }, eventFeature: { kind: "event", id: "zone-1" } };
+  assert.equal(mapPointer.actionFor({ type: "click" }, both), "select");
+  const dispatched = mapPointer.apply({ type: "click" }, evHit);
+  assert.equal(dispatched.action, "select");
+  assert.equal(dispatched.selection.id, "zone-1");
+  mapPointer.clearSelection();
+});
+
+t("P3: a double-click zoom does not run the click action", () => {
+  assert.equal(mapPointer.DBLCLICK_MS, 300);
+  assert.equal(mapPointer.actionFor({ type: "dblclick" }, { pin: { id: "s1" } }), "keep");
+  assert.equal(mapPointer.actionFor({ type: "click", detail: 2 }, { pin: { id: "s1" } }), "keep");
+  assert.equal(mapPointer.actionFor({ type: "click", detail: 2 }, {}), "keep");
+});
+
+t("P3: selecting while paused does not seek or clear explore state", () => {
+  assert.equal(mapPointer.shouldSeekOnSelect({ paused: true, playing: false }), false);
+  assert.equal(mapPointer.shouldSeekOnSelect({ paused: false, playing: true }), true);
+  assert.equal(mapPointer.shouldSeekOnSelect({ paused: false, playing: false }), true);
+  const GD = ctx.window.GD;
+  const prev = GD.state;
+  GD.state = { episode: dcEp, storyIdx: 0, paused: true, playing: false, mapSel: { kind: "pin", id: "story-capitol", storyIdx: 0 } };
+  const pin = { lat: 10, lon: 20 };
+  dcEp.stories[0].location.lat = 10;
+  dcEp.stories[0].location.lon = 20;
+  const action = mapPointer.apply({ type: "click" }, { pin: { kind: "pin", id: "story-lincoln", storyIdx: 1 } });
+  assert.equal(action.action, "select");
+  assert.equal(mapPointer.shouldSeekOnSelect(GD.state), false);
+  assert.equal(dcEp.stories[0].location.lat, 10);
+  assert.equal(dcEp.stories[0].location.lon, 20);
+  commands.restoreLocations(dcEp, [{ id: dcEp.stories[0].id, location: { name: "U.S. Capitol (approx.)", lat: 38.89, lon: -77.01, precision: "approximate", verified: false } }, { id: dcEp.stories[1].id, location: JSON.parse(JSON.stringify(dcEp.stories[1].location)) }]);
+  GD.state = prev;
+});
+
+t("P3: story and API flyTo are queued while the pointer is down", () => {
+  mapPointer.resetPointerState();
+  assert.equal(mapPointer.pointerIsDown(), false);
+  mapPointer.notePointerDown(null);
+  assert.equal(mapPointer.pointerIsDown(), true);
+  let ran = 0;
+  const q = mapPointer.requestCamera(() => { ran += 1; });
+  assert.equal(q.queued, true);
+  assert.equal(ran, 0);
+  mapPointer.notePointerUp();
+  assert.equal(mapPointer.pointerIsDown(), false);
+  assert.equal(ran, 1);
+  const immediate = mapPointer.requestCamera(() => { ran += 1; });
+  assert.equal(immediate.queued, false);
+  assert.equal(ran, 2);
+  mapPointer.notePointerDown(null);
+  mapPointer.requestCamera(() => { ran += 10; });
+  mapPointer.stopMotion(null);
+  mapPointer.notePointerUp();
+  assert.equal(ran, 2);
+  mapPointer.resetPointerState();
+});
+
+t("P3: reduced-motion, 24 px hits, and docs no longer say click the globe", () => {
+  assert.equal(mapPointer.HIT_MIN_PX, 24);
+  assert.equal(mapPointer.reduceMotion(), false);
+  const globeSrc = fs.readFileSync(path.join(root, "js", "globe.js"), "utf8");
+  assert.ok(globeSrc.includes("essential: false"));
+  assert.ok(globeSrc.includes("cooperativeGestures"));
+  assert.ok(globeSrc.includes("gd-pan-ctrl"));
+  const evSrc = fs.readFileSync(path.join(root, "js", "events-map.js"), "utf8");
+  assert.ok(evSrc.includes("reduceMotion"));
+  const guide = fs.readFileSync(path.join(root, "USER-GUIDE.md"), "utf8");
+  const ref = fs.readFileSync(path.join(root, "docs", "REFERENCE.md"), "utf8");
+  const own = fs.readFileSync(path.join(root, "starter", "MAKE-YOUR-OWN.md"), "utf8");
+  for (const text of [guide, ref, own]) {
+    assert.equal(/(?<![\w-])click(?:ing)? the globe/i.test(text), false, "docs still teach click-the-globe");
+    assert.ok(/right-click/i.test(text));
+  }
+});
+
+await Promise.all(pending);
 console.log(`\n${n} passed`);

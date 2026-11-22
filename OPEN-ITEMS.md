@@ -4,12 +4,12 @@ Audit of what has shipped, and what is still open.
 
 ## Closed in v1.0.1
 
-- The unlicensed ambient audio track was stripped from the Frogpost cold-open clip (`demo/guide-packs/frogpost/assets/v1-cold-open.mp4`) with `ffmpeg -an`, copying the video stream. The original audio license remains [UNKNOWN]; the picture is unchanged.
+- The unlicensed ambient audio track was stripped from the GlobeDesk cold-open clip (`demo/guide-packs/template/assets/v1-cold-open.mp4`) with `ffmpeg -an`, copying the video stream. The original audio license remains [UNKNOWN]; the picture is unchanged.
 
 ## Closed in v1.0.0
 
 - License decided: MIT for code, CC BY 4.0 for content made for GlobeDesk (credited to "AdventureNLearn").
-- Unbacked Frogpost cards dropped; the rest carry a source (only the "open maps" note has none, by design).
+- Unbacked GlobeDesk cards dropped; the rest carry a source (only the "open maps" note has none, by design).
 - Florida pins widened to one state-level approximate point.
 - Multi-card callouts on the globe: scale with zoom, no overlaps, leaders follow their rings, clustering with hysteresis.
 - Starter kit, scrub scan and starter zip script.

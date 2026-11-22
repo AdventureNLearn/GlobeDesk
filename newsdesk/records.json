@@ -1,0 +1,129 @@
+{
+  "schema": "globedesk.records/1",
+  "generated": "2026-11-22",
+  "note": "SAMPLE record catalogs for the public tree. Citations use example.org. Gazetteer points come from Natural Earth (public domain). Keep your own records in GLOBEDESK_DATA/records/ (untracked).",
+  "catalogs": [
+    {
+      "id": "records-sample-canal-voyage",
+      "name": "SAMPLE canal opening",
+      "kind": "event-sequence",
+      "credit": "SAMPLE. Fictional credit; town point from Natural Earth (public domain).",
+      "license": "SAMPLE. Example.org page, cited and not bundled as a dataset. Gazetteer points: Natural Earth, public domain.",
+      "terms": "SAMPLE. Cite the example.org page. Natural Earth is public domain.",
+      "storyId": "story-nd-chicago-river-reversal",
+      "layerId": "evl-sample-canal-voyage",
+      "note": "SAMPLE event-sequence waypoints for a fictional canal opening.",
+      "records": [
+        {
+          "id": "rec-sample-canal-chicago",
+          "title": "SAMPLE flow through a fictional canal, Chicago",
+          "kind": "event-sequence",
+          "place": "Chicago, Illinois",
+          "precision": "gazetteer",
+          "precisionLabel": "Precision: Natural Earth populated-place point for Chicago, not an event fix",
+          "date": "1900-01-17",
+          "citations": [
+            {
+              "id": "cit-sample-history",
+              "label": "SAMPLE history of the fictional canal",
+              "url": "https://example.org/sample-history"
+            }
+          ],
+          "confidence": "medium",
+          "reconstruction": false,
+          "credit": "SAMPLE. Example.org",
+          "license": "SAMPLE. Example.org page, cited and not bundled as a dataset.",
+          "pathId": "path-sample-canal-1900",
+          "storyId": "story-nd-chicago-river-reversal"
+        }
+      ]
+    },
+    {
+      "id": "records-sample-inflow-case",
+      "name": "SAMPLE initial inflow (example record)",
+      "kind": "event-sequence",
+      "credit": "SAMPLE. Fictional credit for the public example.",
+      "license": "SAMPLE. Example.org page, cited and not bundled as a dataset.",
+      "terms": "SAMPLE. Cite the example.org page.",
+      "storyId": "story-nd-chicago-river-reversal",
+      "layerId": "evl-sample-inflow-case",
+      "note": "SAMPLE. One gazetteer pin and one off-map [UNKNOWN] standpoint.",
+      "records": [
+        {
+          "id": "rec-sample-inflow-chicago",
+          "title": "SAMPLE inflow at Chicago",
+          "kind": "event-sequence",
+          "place": "Chicago, Illinois",
+          "precision": "gazetteer",
+          "precisionLabel": "Precision: Natural Earth populated-place point for Chicago, not an event fix",
+          "date": "1900-01-02",
+          "citations": [
+            {
+              "id": "cit-sample-inflow",
+              "label": "SAMPLE inflow page",
+              "url": "https://example.org/sample-history-b"
+            }
+          ],
+          "confidence": "medium",
+          "reconstruction": false,
+          "credit": "SAMPLE. Example.org",
+          "license": "SAMPLE. Example.org page, cited and not bundled as a dataset.",
+          "storyId": "story-nd-chicago-river-reversal"
+        },
+        {
+          "id": "rec-sample-inflow-standpoint",
+          "title": "SAMPLE standpoint (no gazetteer hit)",
+          "kind": "event-sequence",
+          "place": "[UNKNOWN]",
+          "precision": "unknown",
+          "date": "1900-01-02",
+          "citations": [
+            {
+              "id": "cit-sample-inflow-2",
+              "label": "SAMPLE inflow page",
+              "url": "https://example.org/sample-history-b"
+            }
+          ],
+          "confidence": "low",
+          "reconstruction": false,
+          "credit": "SAMPLE. Example.org",
+          "license": "SAMPLE. Example.org page, cited and not bundled as a dataset.",
+          "storyId": "story-nd-chicago-river-reversal"
+        }
+      ]
+    },
+    {
+      "id": "records-sample-deepening",
+      "name": "SAMPLE canal deepening",
+      "kind": "event-sequence",
+      "credit": "SAMPLE. Fictional credit for the public example.",
+      "license": "SAMPLE. Example.org page, cited and not bundled as a dataset.",
+      "terms": "SAMPLE. Cite the example.org page.",
+      "storyId": "story-nd-chicago-river-reversal",
+      "layerId": "evl-sample-deepening",
+      "note": "SAMPLE. A named stretch without a gazetteer hit stays off the map.",
+      "records": [
+        {
+          "id": "rec-sample-deepening-stretch",
+          "title": "SAMPLE deepening stretch (no gazetteer hit)",
+          "kind": "event-sequence",
+          "place": "Sample Stretch [UNKNOWN]",
+          "precision": "unknown",
+          "date": "1867",
+          "citations": [
+            {
+              "id": "cit-sample-deepening",
+              "label": "SAMPLE deepening page",
+              "url": "https://example.org/sample-history"
+            }
+          ],
+          "confidence": "low",
+          "reconstruction": false,
+          "credit": "SAMPLE. Example.org",
+          "license": "SAMPLE. Example.org page, cited and not bundled as a dataset.",
+          "storyId": "story-nd-chicago-river-reversal"
+        }
+      ]
+    }
+  ]
+}

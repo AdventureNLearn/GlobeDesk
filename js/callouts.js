@@ -209,7 +209,8 @@
   function open(id) { if (id && !isOpen(id)) S.open.push(id); changedView(); }
   function close(id) { S.open = S.open.filter((x) => x !== id); S.prevPlace.delete(id); changedView(); }
   function toggle(id) { isOpen(id) ? close(id) : open(id); return isOpen(id); }
-  function clear() { S.open = []; S.prevPlace = new Map(); S.prevGroup = new Map(); changedView(); }
+  function collapse() { if (S.expanded) { S.expanded = null; changedView(); } }
+  function clear() { S.open = []; S.expanded = null; S.hover = null; S.prevPlace = new Map(); S.prevGroup = new Map(); changedView(); }
   function openSlugs(slugs) {
     const ep = GD.state && GD.state.episode; if (!ep) return 0;
     (slugs || []).forEach((sl) => { const s = ep.stories.find((x) => x.slug === sl); if (s) open(s.id); });
@@ -363,10 +364,10 @@
     const it = hits().find((h) => h.id === id); if (!it) return;
     if (it.mode === "chip") { S.expanded = S.expanded === id ? null : id; changedView(); return; }
     const ep = GD.state.episode, i = ep.stories.findIndex((s) => s.id === it.ids[0]);
-    if (it.count === 1 && i >= 0 && GD.ui) GD.ui.selectStory(i, { fly: true });
+    if (it.count === 1 && i >= 0 && GD.ui) GD.ui.selectStory(i, { fly: true, openCard: true });
   }
 
   GD.callouts = { K, pxPerKm, ringRadius, clampRadius, ringStroke, cardScale, fontPx, angularDeg, horizonAlpha,
     rectsHit, circleHitsRect, segHitsRect, leaderFor, candidates, place, cluster,
-    open, close, toggle, clear, isOpen, openSlugs, paint, hits, setHover, tap, state: S, last: () => S.last };
+    open, close, toggle, collapse, clear, isOpen, openSlugs, paint, hits, setHover, tap, state: S, last: () => S.last };
 })();

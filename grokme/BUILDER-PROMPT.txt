@@ -24,3 +24,10 @@ Safety (do not weaken)
 - Official Grok.me size limits are [UNKNOWN]. Stay within 20 MiB total, 5 MiB per file, 600 files.
 
 When you are done, follow the test checklist in GROK-ME-BUILD.md.
+
+Live data (v1.2.0)
+- Keep live official GIS, dated NASA GIBS imagery, and online address search off by default.
+- Do not add Content-Security-Policy hosts beyond those already in index.html.
+- Do not add Nominatim, geocoding.geo.census.gov, or ArcGIS Online hosts. Census geocoding, if present, stays on the local serve.py proxy only.
+- Do not enable the EOX 2017 mosaic. Keep 2018-2025 behind the non-commercial acknowledgement.
+- A click on the map selects; a pin is dropped only on right-click or a long press of about 500 ms.

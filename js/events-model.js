@@ -277,35 +277,24 @@
     return fromGeoJSON(gj, name);
   }
 
-  // Sample layer: the sample episode's own approximate story locations, each linked to that
+  // Sample layer: the episode's own approximate story locations, each linked to that
   // story's own source. Stories with a null lat/lon have no pin and are left out (never guessed).
   function demoLayers(ep) {
-    const cats = { hormuz: "convoy", "kyiv-bridges": "strike", "riyadh-tower": "missile" };
-    const l = createLayer("Sample story places (approximate, not verified)", { color: "#3dbe6a", note: "Approximate story locations from the sample episode. Not event fixes." });
-    ep.stories.forEach((s) => {
+    const l = createLayer("Sample story places (approximate, not verified)", { color: "#e7c766", note: "Approximate story locations from the sample episode. Not event fixes." });
+    (ep.stories || []).forEach((s) => {
       const loc = s.location || {};
       if (loc.lat == null || loc.lon == null) return;
       const card = (s.cards || [])[0];
       const src = (s.sources || []).filter((x) => x && x.url && /^https:\/\//i.test(x.url)).slice(0, 1).map((x) => ({ label: x.label || U, url: x.url }));
       l.features.push(createFeature("point", { type: "Point", coordinates: [loc.lon, loc.lat] }, {
         title: s.title, eventTime: ep.date, timeApprox: true, datePrecision: "day (episode date; event time [UNKNOWN])",
-        category: cats[s.slug] || "other", verification: "not verified", sources: src,
+        category: "other", verification: "not verified", sources: src,
         citation: { type: "Map pin", date: ep.date, credit: "Approximate location, sample", license: "n/a" },
         notes: "sample, not verified. " + (loc.name || U), precisionLabel: "Precision: approximate (sample)",
         cardId: card ? card.id : null, storyId: s.id
       }));
     });
-    const out = [l];
-    const hz = ep.stories.find((s) => s.slug === "hormuz");
-    if (hz) {
-      const ex = createLayer("EXAMPLE PLACEHOLDERS (not real data)", { color: "#9ca3af", visible: true, note: "Shapes only, to show the tools. Not events." });
-      ex.features.push(createFeature("ring", { type: "Point", coordinates: [hz.location.lon, hz.location.lat] }, {
-        title: "EXAMPLE PLACEHOLDER ring — not an event extent", radiusKm: 25, category: "blockade", verification: "not verified",
-        sources: [], notes: "Example only. Source [UNKNOWN]. Radius is arbitrary.", precisionLabel: "Example placeholder", example: true, storyId: hz.id, eventTime: ep.date
-      }));
-      out.push(ex);
-    }
-    return out;
+    return [l];
   }
 
   GD.events = { U, KINDS, VERIF, CATEGORIES, ICONS, uid, createLayer, createFeature, parseTime, timeLabel, visibleAt, progressAt, timeRange,

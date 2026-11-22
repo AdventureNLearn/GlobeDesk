@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globedesk.local/schema/globedesk-claims.schema.json",
+  "title": "GlobeDesk claim scores (globedesk.claims/1)",
+  "description": "Sidecar for author-applied claim scores. Not part of globedesk.episode/2. Facts in the episode stay label and value only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "claims"
+  ],
+  "properties": {
+    "schema": {
+      "const": "globedesk.claims/1"
+    },
+    "generated": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "note": {
+      "type": "string",
+      "maxLength": 8000
+    },
+    "claims": {
+      "type": "array",
+      "maxItems": 400,
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    }
+  },
+  "$defs": {
+    "disagreeGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceIds",
+        "position"
+      ],
+      "properties": {
+        "sourceIds": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "maxItems": 40
+        },
+        "position": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8000,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "storyId"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 200,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "storyId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "\\S"
+        },
+        "cardId": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "factIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "factLabel": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "claimStatus": {
+          "type": "string",
+          "enum": [
+            "supported",
+            "not-proven",
+            "disputed",
+            "people-disagree"
+          ]
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "maxItems": 40
+        },
+        "disagree": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/disagreeGroup"
+          },
+          "maxItems": 8
+        }
+      },
+      "if": {
+        "properties": {
+          "claimStatus": {
+            "const": "people-disagree"
+          }
+        },
+        "required": [
+          "claimStatus"
+        ]
+      },
+      "then": {
+        "required": [
+          "disagree"
+        ],
+        "properties": {
+          "disagree": {
+            "minItems": 2
+          }
+        }
+      },
+      "else": {
+        "not": {
+          "required": [
+            "disagree"
+          ]
+        }
+      },
+      "dependentRequired": {
+        "factIndex": [
+          "cardId"
+        ],
+        "factLabel": [
+          "cardId"
+        ]
+      }
+    }
+  }
+}

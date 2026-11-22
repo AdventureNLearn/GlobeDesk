@@ -12,7 +12,12 @@
   }
 
   function rastersStacked(baseId, overlays) {
-    return !!(usesEoxRaster(baseId) && overlays && overlays.bluemarble);
+    const ov = overlays || {};
+    const region = !!ov["eox-region"];
+    const blue = !!ov.bluemarble;
+    if (usesEoxRaster(baseId) && (blue || region)) return true;
+    if (blue && region) return true;
+    return false;
   }
 
   function pixelRatio(deviceRatio, cap) {
@@ -35,10 +40,14 @@
     const ov = Object.assign({}, overlays || {}, { [id]: !!on });
     let nextBase = baseId;
     let toast = "";
-    if (id === "bluemarble" && on && usesEoxRaster(baseId)) {
+    if (on && (id === "bluemarble" || id === "eox-region") && usesEoxRaster(baseId)) {
       nextBase = "offline";
-      toast = "Switched to the offline globe so Blue Marble isn't stacked with EOX satellite.";
+      toast = id === "bluemarble"
+        ? "Switched to the offline globe so Blue Marble isn't stacked with EOX satellite."
+        : "Switched to the offline globe so the DC region pack isn't stacked with the EOX hybrid base.";
     }
+    if (id === "bluemarble" && on) ov["eox-region"] = false;
+    if (id === "eox-region" && on) ov.bluemarble = false;
     return { baseId: nextBase, overlays: ov, toast };
   }
 
@@ -48,6 +57,10 @@
     if (usesEoxRaster(baseId) && ov.bluemarble) {
       ov.bluemarble = false;
       toast = "Blue Marble turned off so it isn't stacked with EOX satellite.";
+    }
+    if (usesEoxRaster(baseId) && ov["eox-region"]) {
+      ov["eox-region"] = false;
+      toast = toast || "DC region overlay turned off so it isn't stacked with the EOX hybrid base.";
     }
     return { baseId, overlays: ov, toast };
   }

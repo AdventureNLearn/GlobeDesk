@@ -2,26 +2,27 @@
 import fs from "node:fs"; import vm from "node:vm"; import path from "node:path"; import assert from "node:assert/strict"; import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ctx = { window: {}, Date }; vm.createContext(ctx);
-for (const f of ["themes", "captions", "events-model", "frog-rundown", "model", "archive"]) vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
+for (const f of ["themes", "captions", "events-model", "model", "archive"]) vm.runInContext(fs.readFileSync(path.join(root, "js", f + ".js"), "utf8"), ctx);
+ctx.window.GD.model.setSampleEpisode(JSON.parse(fs.readFileSync(path.join(root, "episodes", "washington-dc-demo.globedesk.json"), "utf8")));
 const { events: E, model, archive } = ctx.window.GD;
 const J = (v) => JSON.parse(JSON.stringify(v));
 let n = 0; const t = (name, fn) => { fn(); n++; console.log("ok -", name); };
-const POST = "https://x.com/TheCriticalDri1/status/2123762612571886024";
-
-t("archived CTD layers use only its story locations and each story's own source; example is marked", () => {
-  const ep = archive.ctdEpisode();
-  assert.equal(ep.eventLayers.length, 2);
-  const [demo, ex] = ep.eventLayers;
-  assert.equal(demo.features.length, 3);
-  ep.stories.forEach((s, i) => {
+t("sample layers use only the episode's story locations and each story's own source", () => {
+  const ep = model.sampleEpisode();
+  const layers = E.demoLayers(ep);
+  assert.equal(layers.length, 1);
+  const demo = layers[0];
+  const pinned = ep.stories.filter((s) => s.location && s.location.lat != null);
+  assert.equal(demo.features.length, pinned.length);
+  pinned.forEach((s, i) => {
     const f = demo.features[i];
     assert.deepEqual(J(f.geometry.coordinates), [s.location.lon, s.location.lat]);
     assert.equal(f.properties.verification, "not verified");
     assert.match(f.properties.notes, /^sample, not verified/);
-    assert.deepEqual(J(f.properties.sources.map((x) => x.url)), [POST]);
     assert.equal(f.properties.storyId, s.id);
+    const urls = (s.sources || []).filter((x) => x && x.url).map((x) => x.url);
+    if (urls.length) assert.ok(f.properties.sources.some((x) => urls.indexOf(x.url) >= 0));
   });
-  assert.ok(ex.features.every((f) => f.properties.example && f.properties.sources.length === 0 && /\[UNKNOWN\]/.test(f.properties.notes)));
   assert.deepEqual(J(model.validate(ep)), []);
 });
 t("strict validation: kinds, verification, https, verified-needs-source, coords, ring radius", () => {
