@@ -33,7 +33,7 @@ python3 tools/make_grokme_manifest.py          # rewrite grokme/manifest.json fr
 python3 tools/make_grokme_manifest.py --check  # manifest matches files and stays in budget
 ```
 
-A version-check URL for published copies is [UNKNOWN] and is not enabled (`js/version.js` has `URL = null`).
+A version-check URL for published copies is [UNKNOWN] and is not enabled (`js/version.js` has `URL = null`). Leave it null.
 
 ## Requests the build may make
 
@@ -58,9 +58,24 @@ Offline, the bundled Natural Earth globe still runs (`?base=offline` or Layers �
 - User content must not modify the base map style, sources, or tiles.
 - Optional paid features stay off by default.
 
+
+## Host notes (Grok.me)
+
+These notes came from the v1.3.0 rebuild and still apply to v1.3.1:
+
+- The kit is exactly the files listed in `grokme/manifest.json`. Copy them unchanged. Do not invent a new tree.
+- The entry page stays `index.html`. `desk.html` is only the Grok.me host shell; never add it to this repository.
+- Leave the version-check URL in `js/version.js` null.
+- Keep the Content-Security-Policy in `index.html` exactly as it is. Add no hosts.
+- Live official GIS, dated NASA imagery, and online address search stay off by default.
+- Keep LICENSE (MIT), LICENSE-CONTENT (CC BY 4.0), CREDITS.md, and the licence files in `vendor/`.
+- Do not add keys, sign-in, or paid API calls.
+- Do not "fix" `/api/packs` or `/api/command/next`. Those run only on localhost when the local GlobeDesk server is present. A hosted copy does not call them.
+- Ignore any Grok.me wrapper. This git repository is the kit, not the host shell.
+
 ## GROK-ME-UPDATE
 
-1. Each copy can show its local version from `js/version.js` (`1.2.0`). A remote version-check host is [UNKNOWN] and disabled.
+1. Each copy can show its local version from `js/version.js` (`1.3.1`). A remote version-check host is [UNKNOWN] and disabled.
 2. When a new GlobeDesk release is published, paste `grokme/UPDATE-PROMPT.txt` into the builder.
 3. The builder rebuilds from that release's `grokme/manifest.json` and changes nothing else.
 4. If the copy looks wrong, roll back with the builder's own history (how Grok.me keeps history is [UNKNOWN]).
@@ -79,6 +94,7 @@ After a Grok.me (or local) build:
 - [ ] Assist tab rejects invalid JSON and accepts a valid episode.
 - [ ] CSP is present; no unpaid keys in the tree.
 - [ ] Sample is labelled Sample and is removable.
-- [ ] A fresh open (empty save) shows GlobeDesk: GLOBEDESK badge, @AdventureNLearn, 48 stories, version "v1.2.0 · Live Data" in the top bar.
+- [ ] A fresh open (empty save) shows the GlobeDesk news desk with the GLOBEDESK badge, @AdventureNLearn, and version "v1.3.1 · Share & Export" in the top bar. The 50-topic public history show and the 2-story Washington, DC sample are in the Archive (they are not preloaded).
 - [ ] Archive opens a card for every story (Washington, DC sample plus the news-desk topic set). A story deleted from the rundown is still in the Archive and **Bring back** restores it.
+- [ ] The Layers button (or the L key) opens the layer list. Show all and Hide all update the visible map layers in one go on the Offline globe and on Satellite + streets (not only the summary text). Reset (or H) returns to the default globe.
 - [ ] At phone width (about 390 px) the globe shows first at full width; the ☰ Menu opens the top-bar buttons; panels fold.

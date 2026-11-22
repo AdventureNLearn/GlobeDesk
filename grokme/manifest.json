@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",
@@ -31,8 +31,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 27444,
-      "sha256": "ba7758ada96de0c01a5eaa4854f3bfbd31867893fd464edab1dff1e5365631be"
+      "size": 28809,
+      "sha256": "8435e544082111b49cf50230a323a42037990e72c90952ba5be28ad1e875cbaf"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -41,8 +41,8 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "size": 6408,
-      "sha256": "a3db8eef57a4df543015a502c9b98685479a51d38276bd3661b83787a0448d2d"
+      "size": 6569,
+      "sha256": "a1e05b0d3aefa6225c3af2bebd1702890ff5c782e04ee9079941ffa4b29598ca"
     },
     {
       "path": "CREDITS.md",
@@ -56,8 +56,8 @@
     },
     {
       "path": "GROK-ME-BUILD.md",
-      "size": 4945,
-      "sha256": "1d46aa88476a718f0b8ca8b5241a1ae29d85cd7020ab37689d1d34c438ac67bd"
+      "size": 6272,
+      "sha256": "cc46efa7ea01e778ac16e52da325ad879abb0e2acc32f337ccda1e57e1cec4fe"
     },
     {
       "path": "LICENSE",
@@ -71,8 +71,8 @@
     },
     {
       "path": "README.md",
-      "size": 15626,
-      "sha256": "5613648657d4dca23c32781ce8df1d58f4e4efbc0d8c64011e9281a120cedac5"
+      "size": 15613,
+      "sha256": "a87292dc76b6703319aa2fe06bbaea6ad36ad7f7b788e4ccec93909ef5aedfc4"
     },
     {
       "path": "SECURITY.md",
@@ -171,28 +171,28 @@
     },
     {
       "path": "grokme/APP-BRIEF.txt",
-      "size": 1009,
-      "sha256": "9ac9a4a22348d1df75c6c52c64be2828567de954845719d50a1901ec0d02416b"
+      "size": 1018,
+      "sha256": "43bbda1eefa418d128f973c4f39a84159730e580864f9b5f3617c2f4c1a56a47"
     },
     {
       "path": "grokme/BUILDER-PROMPT.txt",
-      "size": 2579,
-      "sha256": "c1822e713de996fdde96813a6fa755519474f736c186f91f3a02372ce5b87f64"
+      "size": 3048,
+      "sha256": "abe9b31f83c5a07ec2ebda3fdfea55983f73c9be3f913b0c5d0db386859a306e"
     },
     {
       "path": "grokme/FEATURES.txt",
-      "size": 1532,
-      "sha256": "8e86a4987104131a04d44b0cfd17df337ea741680250534eddc9e39106faad86"
+      "size": 1682,
+      "sha256": "86b58fc45057a77f5e9630712bfc4a2554cf72c4b55b18d9d39b65179a223e72"
     },
     {
       "path": "grokme/UPDATE-PROMPT.txt",
-      "size": 874,
-      "sha256": "f00b00f92e57c455fb3a8e7972ed17fd4e8d0b65769d0723e9b653f81cd611f6"
+      "size": 1273,
+      "sha256": "4a07d3361aae312ae57652f8335a7c029a3727af1632e6ddc61d9ddbddcf96cc"
     },
     {
       "path": "index.html",
       "size": 17270,
-      "sha256": "ecbff8f888d80400026898274aa4c3c6b017d7fdf9a08ab21a491e9e6e163e04"
+      "sha256": "d907f074feeadad425b0e8e8a929b875bbba220451ab1ef506c2f42bf87152a4"
     },
     {
       "path": "js/archive.js",
@@ -271,8 +271,8 @@
     },
     {
       "path": "js/globe.js",
-      "size": 42572,
-      "sha256": "db909417ab73e9011e2f7e32d83eb2a583a49432bebe27776ad822e03436bd43"
+      "size": 45819,
+      "sha256": "e11a05849f7ad60ff1e4c62edec084dfe9c8b10804f0c7b2d6f0e5642b90d471"
     },
     {
       "path": "js/layers-panel.js",
@@ -287,7 +287,7 @@
     {
       "path": "js/layout.js",
       "size": 39211,
-      "sha256": "cb7fa210cbb1feae966954849aa420f9c3ba541d9337eb204f2e36dbff1fe70f"
+      "sha256": "4a6e80f16fe64630cdb5ca4e6d0af3d56813b8c2b04b666ecebbfd214c4b3fdc"
     },
     {
       "path": "js/map-pointer.js",
@@ -387,7 +387,7 @@
     {
       "path": "js/version.js",
       "size": 886,
-      "sha256": "3cf632630c6c42cdc438801057b9c3a00cdbff87d8c8f6e2026d5a7b1ee9998b"
+      "sha256": "751d82947e932c97b4c386d0eac05fb0e236467eaf4daa9e8966f1e51f802b2a"
     },
     {
       "path": "js/year-clock.js",
@@ -461,8 +461,8 @@
     },
     {
       "path": "package.json",
-      "size": 982,
-      "sha256": "8d4418c44c41fdc8c2fe7b3f73fb1545339f0c09e72fba52f88af939b85db6ed"
+      "size": 1073,
+      "sha256": "fa0701648364e9ed16cb511b6e3daa66f261d0e566b82b0fcef9a424ee6519c4"
     },
     {
       "path": "schema/globedesk-claims.schema.json",
@@ -537,6 +537,6 @@
   ],
   "totals": {
     "files": 105,
-    "bytes": 4587288
+    "bytes": 4594493
   }
 }

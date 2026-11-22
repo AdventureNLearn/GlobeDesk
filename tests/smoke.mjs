@@ -33,12 +33,12 @@ try {
   await until(() => ev("window.__globedesk && window.__globedesk.ready && GD.globe.st.status === 'ready'"), 30000, "app ready");
   console.log("base:", await ev("GD.globe.st.baseId"), "recorder supported:", await ev("GD.recorder.supported()"));
   await idle(); await sleep(1500); await shot("01-desk-globe-16x9.png");
-  // Street-level cinematic shot of the Kyiv story (slug dnipro-bridges), via seek (jumps camera to that keyframe).
-  const KI = await ev("GD.state.episode.stories.findIndex((s) => s.slug === 'dnipro-bridges')");
-  if (!(KI >= 0)) throw new Error("Kyiv story (slug dnipro-bridges) not found in the default show");
-  await ev(`GD.ui.selectStory(${KI}); GD.playback.seek(GD.model.storyStarts(GD.state.episode)[${KI}] + 13); true`);
+  // Street-level cinematic shot of the Capitol story in the Washington, DC sample, via seek (jumps camera to that keyframe).
+  const KI = await ev("GD.state.episode.stories.findIndex((s) => s.slug === 'capitol')");
+  if (!(KI >= 0)) throw new Error("Capitol story (slug capitol) not found in the Washington, DC sample");
+  await ev(`GD.ui.selectStory(${KI}); GD.playback.seek(GD.model.storyStarts(GD.state.episode)[${KI}] + 3); true`);
   await idle(); await sleep(2500); await shot("02-street-cinematic-16x9.png");
-  // Dedicated street-level still of the Kyiv land pin (about z16–17, pitched).
+  // Dedicated street-level still of the Capitol land pin (about z16–17, pitched).
   const street = await ev(`(() => {
     const s = GD.state.episode.stories[${KI}];
     const sv = GD.globe.streetView(s);
@@ -47,20 +47,20 @@ try {
     GD.globe.st.map.jumpTo({ center: sv.center, zoom: sv.zoom, pitch: sv.pitch, bearing: sv.bearing });
     return { ok: true, zoom: GD.globe.st.map.getZoom(), land: GD.globe.isLand(s.location.lat, s.location.lon) };
   })()`);
-  console.log("street kyiv:", JSON.stringify(street));
-  if (!street || !street.ok || !(street.zoom >= 16) || street.land !== true) errors.push("Kyiv street-level camera failed: " + JSON.stringify(street));
-  await idle(); await sleep(8000); await shot("10-street-level-kyiv-bridges-16x9.png");
+  console.log("street capitol:", JSON.stringify(street));
+  if (!street || !street.ok || !(street.zoom >= 16) || street.land !== true) errors.push("Capitol street-level camera failed: " + JSON.stringify(street));
+  await idle(); await sleep(8000); await shot("10-street-level-capitol-16x9.png");
   const feats = await ev(`(() => {
     const m = GD.globe.st.map;
     const layers = ["roads", "road-casing", "road-labels", "place-labels", "gd-buildings"].filter((id) => !!m.getLayer(id));
     return { layers, n: m.queryRenderedFeatures({ layers }).length, zoom: Number(m.getZoom().toFixed(2)) };
   })()`);
   console.log("street features:", JSON.stringify(feats));
-  // 9:16 frame on the Hormuz story (slug hormuz-cloud): header, citation box and focus-region glow in view.
-  const HI = await ev("GD.state.episode.stories.findIndex((s) => s.slug === 'hormuz-cloud')");
-  if (!(HI >= 0)) throw new Error("Hormuz story (slug hormuz-cloud) not found in the default show");
+  // 9:16 frame on the Lincoln Memorial story: header, citation box and focus-region glow in view.
+  const HI = await ev("GD.state.episode.stories.findIndex((s) => s.slug === 'lincoln')");
+  if (!(HI >= 0)) throw new Error("Lincoln Memorial story (slug lincoln) not found in the Washington, DC sample");
   await ev(`document.getElementById('asp916').click(); GD.ui.selectStory(${HI}); GD.playback.seek(GD.model.storyStarts(GD.state.episode)[${HI}] + 1.2); true`);
-  await ev("GD.globe.st.map.jumpTo({center:[56.25,26.57],zoom:4.6,pitch:30,bearing:-10}); true");
+  await ev("GD.globe.st.map.jumpTo({center:[-77.05,38.89],zoom:4.6,pitch:30,bearing:-10}); true");
   await idle(); await sleep(1500); await shot("03-vertical-9x16-header-citation.png");
   const hl = await ev("({active: GD.globe.st.active, a3: GD.state.episode.stories[GD.globe.st.active].highlight.a3, feats: GD.globe.st.map.querySourceFeatures('gd-highlight').length, layer: !!GD.globe.st.map.getLayer('gd-hl-glow'), vis: GD.globe.st.map.getLayoutProperty('gd-hl-glow','visibility')})");
   console.log("highlight:", JSON.stringify(hl));

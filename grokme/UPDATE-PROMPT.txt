@@ -3,9 +3,12 @@ Update this GlobeDesk copy to the newly published GlobeDesk release.
 - Use that release's grokme/manifest.json and copy every listed file unchanged.
 - Do not change behaviour that the manifest does not change.
 - Keep the safety rules in GROK-ME-BUILD.md and grokme/BUILDER-PROMPT.txt (local-only media, sanitizing, no keys in files, credit, not-verified labels, CSP hosts, base map vs content split).
+- Entry page stays index.html. desk.html is only the Grok.me host shell; never add it to the repo.
 - Leave the version-check URL unset unless the new release documents a confirmed host.
+- Do not "fix" /api/packs or /api/command/next. Those run only on localhost when the local server is present. A hosted copy does not call them.
+- Ignore any Grok.me wrapper. The git repo is the kit, not the host shell.
 - Official Grok.me size limits and history behaviour are [UNKNOWN]. If the update looks wrong, roll back with the builder's own history.
 
 Then run the test checklist in GROK-ME-BUILD.md.
 
-This update is GlobeDesk v1.2.0 Live Data. After rebuilding, check that live GIS, dated imagery, and address search are still off by default, and that the version string reads v1.2.0 · Live Data.
+This update is GlobeDesk v1.3.1 · Share & Export. After rebuilding, check that live GIS, dated imagery, and address search are still off by default, that the version string reads v1.3.1 · Share & Export, and that Layers Show all and Hide all update the visible map in one go.

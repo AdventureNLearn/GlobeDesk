@@ -23,9 +23,15 @@ Safety (do not weaken)
 - A public version-check URL is [UNKNOWN]; leave js/version.js URL null.
 - Official Grok.me size limits are [UNKNOWN]. Stay within 20 MiB total, 5 MiB per file, 600 files.
 
+Host shell (do not change the kit to match the wrapper)
+- Entry page stays index.html. desk.html is only the Grok.me host shell; never add it to the repo.
+- Leave the version-check URL in js/version.js null.
+- Do not "fix" /api/packs or /api/command/next. Those run only on localhost when the local GlobeDesk server is present. A hosted copy does not call them.
+- Ignore any Grok.me wrapper. This git repository is the kit, not the host shell.
+
 When you are done, follow the test checklist in GROK-ME-BUILD.md.
 
-Live data (v1.2.0)
+Live data (still off by default in v1.3.1)
 - Keep live official GIS, dated NASA GIBS imagery, and online address search off by default.
 - Do not add Content-Security-Policy hosts beyond those already in index.html.
 - Do not add Nominatim, geocoding.geo.census.gov, or ArcGIS Online hosts. Census geocoding, if present, stays on the local serve.py proxy only.

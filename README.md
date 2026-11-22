@@ -4,7 +4,7 @@
 
 Pick your stories and the globe flies from orbit down to street level for each one. Cards pin to the place, every source carries a verified or unverified label, captions are always on, and you can record the result as a 16:9 or 9:16 video. It runs in your browser. You don't need an account, a server or an API key.
 
-> **v1.3.0 · Share & Export** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · The public live copy at [globedesk.grok.me](https://globedesk.grok.me) remains v1.0.1 until this branch is released. This branch has not been uploaded to grok.me yet.
+> **v1.3.1 · Share & Export** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · The public live copy at [globedesk.grok.me](https://globedesk.grok.me) is v1.3.0 (Nov 22, 2026) until this patch is uploaded.
 
 ## Civic Intelligence Project, open source
 
@@ -153,7 +153,7 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 | [docs/STORY-FORMAT.md](docs/STORY-FORMAT.md) | The `globedesk.episode/2` JSON format |
 | [docs/SIDECARS.md](docs/SIDECARS.md) | Sidecar catalogs and schema rules for native tools |
 | [demo/README.md](demo/README.md) | The mission demo and guide packs |
-| [GROK-ME-BUILD.md](GROK-ME-BUILD.md) | Rebuilding a hosted copy on Grok.me |
+| [GROK-ME-BUILD.md](GROK-ME-BUILD.md) | Rebuilding a hosted copy on Grok.me, including host-shell notes |
 | [CHANGELOG.md](CHANGELOG.md) | Release notes |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
 

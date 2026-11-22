@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.3.1 — Share & Export (patch) — 2026-11-22
+
+- Version shown as "v1.3.1 · Share & Export".
+- **Layers Show all / Hide all apply in one go.** A batch of overlay changes is coalesced into one map update as soon as the style is parsed, even if tiles are still loading (`isStyleLoaded()` can stay false while Event Layers animate, and idle may never fire). If the apply throws, it is retried on a short timer bound to the current map, and that wait is cleared when the map is recreated (MP4 export start and end, or a render-option change). Previously the rest of the batch was skipped until the next click: on the offline globe, Show all turned Blue Marble on in the panel but did not draw it, and Hide all then drew Blue Marble, the focus glow and the pin while the summary said everything was off; on the satellite base, hillshade and the same story overlays lagged one step behind. Single switches were already fine.
+- Grok.me builder notes are in [GROK-ME-BUILD.md](GROK-ME-BUILD.md): the entry page stays `index.html`, `desk.html` is only the host shell, the version-check URL stays null, `/api/packs` and `/api/command/next` stay localhost-only, and the git repo is the kit (not the wrapper). Stale v1.2.0 and "48 stories" checklist lines are updated.
+- The public live copy at globedesk.grok.me is v1.3.0 (Nov 22, 2026) until this patch is uploaded.
+
+
 ## v1.3.0 — Share & Export — 2026-11-22
 
 - Version shown as "v1.3.0 · Share & Export".

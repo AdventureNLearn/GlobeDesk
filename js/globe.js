@@ -260,25 +260,29 @@
 
     // Never stack GIBS Blue Marble with the EOX satellite raster.
     const showBlue = !!(ov.bluemarble && GD.render && !GD.render.rastersStacked(st.baseId, ov));
-    if (showBlue && !map.getSource("gd-bluemarble")) {
+    if (showBlue) {
       const L = GD.layers.OVERLAYS.find((o) => o.id === "bluemarble");
       const tiles = (GD.layers.blueMarbleTiles && GD.layers.blueMarbleTiles()) || L.tiles;
-      map.addSource("gd-bluemarble", { type: "raster", tiles: [tiles], tileSize: 256, maxzoom: L.maxzoom, attribution: L.credit });
-      const before = map.getLayer("gd-countries") ? "gd-countries" : undefined;
-      map.addLayer({ id: "gd-bluemarble", type: "raster", source: "gd-bluemarble", paint: { "raster-opacity": ["interpolate", ["linear"], ["zoom"], 5, 1, 9, 0] } }, before);
+      if (!map.getSource("gd-bluemarble")) map.addSource("gd-bluemarble", { type: "raster", tiles: [tiles], tileSize: 256, maxzoom: L.maxzoom, attribution: L.credit });
+      if (!map.getLayer("gd-bluemarble")) {
+        const before = map.getLayer("gd-countries") ? "gd-countries" : undefined;
+        map.addLayer({ id: "gd-bluemarble", type: "raster", source: "gd-bluemarble", paint: { "raster-opacity": ["interpolate", ["linear"], ["zoom"], 5, 1, 9, 0] } }, before);
+      }
     }
     if (map.getLayer("gd-bluemarble")) map.setLayoutProperty("gd-bluemarble", "visibility", vis(showBlue));
 
     const showRegion = !!(ov["eox-region"] && GD.render && !GD.render.rastersStacked(st.baseId, ov));
-    if (showRegion && !map.getSource("gd-eox-region")) {
+    if (showRegion) {
       const L = GD.layers.OVERLAYS.find((o) => o.id === "eox-region");
       const tiles = (GD.layers.eoxRegionTiles && GD.layers.eoxRegionTiles()) || (L && L.tiles);
       const bounds = (GD.layers.eoxRegionBounds && GD.layers.eoxRegionBounds()) || L.bounds;
       const src = { type: "raster", tiles: [tiles], tileSize: 256, maxzoom: L.maxzoom, attribution: L.credit };
       if (bounds && bounds.length === 4) src.bounds = bounds;
-      map.addSource("gd-eox-region", src);
-      const before = map.getLayer("gd-countries") ? "gd-countries" : (map.getLayer("gd-bluemarble") ? "gd-bluemarble" : undefined);
-      map.addLayer({ id: "gd-eox-region", type: "raster", source: "gd-eox-region", paint: { "raster-opacity": 1 } }, before);
+      if (!map.getSource("gd-eox-region")) map.addSource("gd-eox-region", src);
+      if (!map.getLayer("gd-eox-region")) {
+        const before = map.getLayer("gd-countries") ? "gd-countries" : (map.getLayer("gd-bluemarble") ? "gd-bluemarble" : undefined);
+        map.addLayer({ id: "gd-eox-region", type: "raster", source: "gd-eox-region", paint: { "raster-opacity": 1 } }, before);
+      }
     }
     if (map.getLayer("gd-eox-region")) map.setLayoutProperty("gd-eox-region", "visibility", vis(showRegion));
 
@@ -311,17 +315,21 @@
     }
     if (map.getLayer("gd-buildings")) map.setLayoutProperty("gd-buildings", "visibility", vis(ov.buildings));
     const base = GD.layers.base(st.baseId);
-    if (ov.terrain && base && base.runtime && !map.getSource("gd-terrain")) {
+    if (ov.terrain && base && base.runtime) {
       const T = GD.layers.OVERLAYS.find((o) => o.id === "terrain");
       const dem = { type: "raster-dem", tiles: [T.tiles], encoding: "terrarium", tileSize: 256, maxzoom: 15, attribution: T.credit };
-      map.addSource("gd-terrain", dem);
-      map.addSource("gd-hillshade", Object.assign({}, dem));
-      map.addLayer({ id: "gd-hillshade", type: "hillshade", source: "gd-hillshade", minzoom: 11, paint: { "hillshade-exaggeration": 0.3, "hillshade-shadow-color": "#000" } }, map.getLayer("gd-buildings") ? "gd-buildings" : "gd-rings");
+      if (!map.getSource("gd-terrain")) map.addSource("gd-terrain", dem);
+      if (!map.getSource("gd-hillshade")) map.addSource("gd-hillshade", Object.assign({}, dem));
+      if (!map.getLayer("gd-hillshade")) {
+        map.addLayer({ id: "gd-hillshade", type: "hillshade", source: "gd-hillshade", minzoom: 11, paint: { "hillshade-exaggeration": 0.3, "hillshade-shadow-color": "#000" } }, map.getLayer("gd-buildings") ? "gd-buildings" : "gd-rings");
+      }
     }
     if (map.getLayer("gd-hillshade")) map.setLayoutProperty("gd-hillshade", "visibility", vis(ov.terrain));
     if (GD.eventsMap) GD.eventsMap.install(map); // Event Layers sit above story pins/rings
     if (GD.gis && GD.gis.syncMap) GD.gis.syncMap(map);
-    st.terrainOn = false;
+    // Don't clear the flag first: that made every addOverlays call setTerrain again
+    // and left the style not-ready, so a batch of setOverlay calls could skip later layers.
+    if (typeof map.getTerrain === "function") st.terrainOn = !!map.getTerrain();
     terrainForZoom();
     try {
       /* Holographic atmosphere, from SeaGlobe planet.js / app.js (v3.1.4):
@@ -498,6 +506,7 @@
         addOverlays();
         st.status = "ready";
         flushStyleReady();
+        kickOverlayApply();
         st.onReady.forEach((f) => f());
       };
       const probe = (GD.layers && GD.layers.probeLocalTileProxy) ? GD.layers.probeLocalTileProxy() : Promise.resolve();
@@ -599,6 +608,7 @@
     const ep = st.episode;
     const active = st.active;
     if (st.map) {
+      clearOverlayWait();
       if (GD.eventsMap && GD.eventsMap.detach) GD.eventsMap.detach(st.map);
       try { st.map.remove(); } catch (e) { /* ignore */ }
       st.map = null;
@@ -651,17 +661,99 @@
   }
 
   const styleReadyWaiters = [];
+  let overlaysDirty = false;
+  let overlayWait = null;
+  const OVERLAY_RETRY_MS = 100;
+  const OVERLAY_RETRY_MAX = 50;
 
   function flushStyleReady() {
     const fns = styleReadyWaiters.splice(0);
     fns.forEach((fn) => { try { fn(); } catch (e) { /* ignore */ } });
   }
 
+  // The style object is parsed and attached. Tiles and sources may still be
+  // loading: Event Layers call setData every 40 ms, so isStyleLoaded() can
+  // stay false and idle may never fire. addLayer / setLayoutProperty still work.
+  function styleIsBound() {
+    return !!(st.map && st.status === "ready");
+  }
+
+  function clearOverlayWait() {
+    const w = overlayWait;
+    overlayWait = null;
+    if (!w) return;
+    if (w.map) {
+      try { w.map.off("idle", w.fire); } catch (e) { /* ignore */ }
+      try { w.map.off("styledata", w.fire); } catch (e) { /* ignore */ }
+    }
+    if (w.timer != null && typeof clearTimeout === "function") clearTimeout(w.timer);
+  }
+
   function afterStyleReady(fn) {
     const map = st.map;
     if (!map) return;
-    if (st.status === "ready" && map.isStyleLoaded()) { fn(); return; }
+    if (styleIsBound()) { fn(); return; }
     styleReadyWaiters.push(fn);
+    waitForStyleSettle();
+  }
+
+  function waitForStyleSettle() {
+    const map = st.map;
+    if (!map) return;
+    if (overlayWait && overlayWait.map !== map) clearOverlayWait();
+    if (overlayWait) return;
+    const fire = () => {
+      if (!overlayWait || overlayWait.map !== map) return;
+      if (st.map !== map) { clearOverlayWait(); return; }
+      if (!styleIsBound()) return;
+      clearOverlayWait();
+      flushStyleReady();
+      kickOverlayApply();
+    };
+    const wait = { map: map, fire: fire, timer: null, tries: 0 };
+    overlayWait = wait;
+    map.on("idle", fire);
+    map.on("styledata", fire);
+    const tick = () => {
+      if (overlayWait !== wait) return;
+      wait.tries++;
+      if (styleIsBound() || wait.tries >= OVERLAY_RETRY_MAX) {
+        // Give up the timer after the bound, but leave overlaysDirty so a later style.load can still apply.
+        if (styleIsBound()) fire();
+        else clearOverlayWait();
+        return;
+      }
+      wait.timer = setTimeout(tick, OVERLAY_RETRY_MS);
+    };
+    wait.timer = setTimeout(tick, OVERLAY_RETRY_MS);
+  }
+
+  // Coalesce a burst of setOverlay calls into one apply after this turn.
+  // If the style isn't bound yet, or the apply throws, retry on a short timer
+  // (and on idle / styledata) bound to the current map, not on isStyleLoaded().
+  let overlayApplyQueued = false;
+
+  function applyOverlaysWhenReady() {
+    overlaysDirty = true;
+    // Wait until this turn finishes so a Show all / Hide all batch is applied once, with the final state.
+    if (overlayApplyQueued) return;
+    overlayApplyQueued = true;
+    const run = () => { overlayApplyQueued = false; kickOverlayApply(); };
+    if (typeof queueMicrotask === "function") queueMicrotask(run);
+    else Promise.resolve().then(run);
+  }
+
+  function kickOverlayApply() {
+    if (!overlaysDirty || !st.map) return;
+    if (!styleIsBound()) {
+      waitForStyleSettle();
+      return;
+    }
+    overlaysDirty = false;
+    try { addOverlays(); } catch (e) {
+      overlaysDirty = true;
+      waitForStyleSettle();
+    }
   }
 
   function setOverlay(id, on) {
@@ -673,7 +765,7 @@
       if (pol.toast) GD.ui && GD.ui.toast(pol.toast);
       return ok;
     }
-    afterStyleReady(() => { if (st.map && st.map.isStyleLoaded()) addOverlays(); });
+    applyOverlaysWhenReady();
     if (pol.toast) GD.ui && GD.ui.toast(pol.toast);
     return true;
   }
@@ -815,5 +907,5 @@
     st._yearClockBound = true;
     GD.yearClock.onChange(function () { applyDatedSat(); });
   }
-  GD.globe = { st, HOME_VIEW, init, setBase, setOverlay, setEpisode, flyTo, jumpTo, panBy, recenterOnSelection, camera, insight, searchPlaces, haversine, bearingTo, towns, updateLabels, pickTownLabelPoints, pointsTooClose, TOWN_LABEL_MIN_ZOOM, TOWN_LABEL_MIN_PX, countryList, isLand, streetView, prepareForExport, endExport, isDrawingBufferPreserved, setRenderOptions, renderPrefs, applyDatedSat, refresh: () => { if (st.map && st.map.isStyleLoaded()) { addOverlays(); applyDatedSat(); } } };
+  GD.globe = { st, HOME_VIEW, init, setBase, setOverlay, setEpisode, flyTo, jumpTo, panBy, recenterOnSelection, camera, insight, searchPlaces, haversine, bearingTo, towns, updateLabels, pickTownLabelPoints, pointsTooClose, TOWN_LABEL_MIN_ZOOM, TOWN_LABEL_MIN_PX, countryList, isLand, streetView, prepareForExport, endExport, isDrawingBufferPreserved, setRenderOptions, renderPrefs, applyDatedSat, refresh: () => { applyOverlaysWhenReady(); if (styleIsBound()) applyDatedSat(); } };
 })();
