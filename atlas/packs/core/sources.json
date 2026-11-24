@@ -2443,6 +2443,28 @@
       "class": "official",
       "publisher": "US Geological Survey",
       "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nps-inde-hall-250-prep",
+      "title": "Independence Hall to temporarily close for preservation projects in advance of the 250th Anniversary (NPS news release, Nov 13, 2025)",
+      "url": "https://www.nps.gov/inde/learn/news/independencehalltemporaryclosure.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "description": "Independence NHP news release: Independence Hall closed to visitors November 13, 2025 to January 28, 2026 for interior preservation work to prepare the site for the 250th anniversary of the Declaration of Independence, as the last stage of the Independence Square Improvement Project begun in March 2025.",
+      "terms_url": "https://www.nps.gov/aboutus/disclaimer.htm"
+    },
+    {
+      "id": "nps-inde-celebration-2026",
+      "title": "Celebration of Freedom Ceremony, July 4, 2026 (NPS event page, Independence NHP)",
+      "url": "https://www.nps.gov/planyourvisit/event-details.htm?id=9AC337AE-DC43-B243-F7A29938195E7182",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "description": "NPS event listing for the free Celebration of Freedom Ceremony at 10 a.m. on July 4, 2026 on Independence Mall (between 5th and 6th and Market and Chestnut Streets), honoring America's 250th anniversary, with performances, speeches and awards.",
+      "terms_url": "https://www.nps.gov/aboutus/disclaimer.htm"
     }
   ]
 }

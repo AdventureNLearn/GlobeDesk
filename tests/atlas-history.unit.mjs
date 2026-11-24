@@ -44,7 +44,9 @@ t("bell links are by id only: no bell entries duplicated in this pack, links poi
   BELL_IDS.forEach((id) => assert.equal(all.filter((e) => e.id === id).length, 1, id + " must exist exactly once (in the Bells pack)"));
   BELL_IDS.forEach((id) => assert.ok(bellPack.some((e) => e.id === id), id + " must live in the Bells pack"));
   const linked = new Set(hist.flatMap((e) => e.see_also_ids || []));
-  BELL_IDS.forEach((id) => assert.ok(linked.has(id), id));
+  // Owner decision 2026-11-24 (OPEN-ITEMS #32): America 250 links the Liberty Bell; the Bicentennial Bell keeps its record but no history link.
+  BELL_IDS.filter((id) => id !== "bicentennial-bell").forEach((id) => assert.ok(linked.has(id), id));
+  assert.deepEqual(hist.find((e) => e.id === "america-250-2026").see_also_ids, ["liberty-bell"]);
   assert.ok(hist.every((e) => !(e.related || []).some((r) => BELL_IDS.includes(r.to))), "bells must be see_also_ids, not related (the Bells pack owns them)");
 });
 t("artifact records for history objects: Constitution (four pages) and the 1844 telegraph tape", () => {
