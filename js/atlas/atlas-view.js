@@ -102,16 +102,23 @@
 
   // ---------- entry detail ----------
   function recordOf(e) { const r = e && (e.record || (e.records || [])[0]); return r ? D().records[r] : null; }
-  function kitRecord(e) { if (!e) return null; if (e.kind === "object") return recordOf(e); if (e.id === "bag-solar-kit-prices") return D().records["data/atlas/objects/bag-solar-kit.json"]; return null; }
+  function isKit(r) { return !!(r && Array.isArray(r.options)); }
+  function kitRecord(e) { if (!e) return null; if (e.kind === "object") { const r = recordOf(e); return isKit(r) ? r : null; } if (e.id === "bag-solar-kit-prices") return D().records["data/atlas/objects/bag-solar-kit.json"]; return null; }
+  // Historic object or material record (globedesk.artifact/1): facts, parts, materials, dated timeline.
+  function artRecord(e) { const r = recordOf(e); return r && r.schema === "globedesk.artifact/1" ? r : null; }
+  function srcLabel(id) { const s = (D().sources || []).find((x) => x.id === id); return s ? link(s.url, s.publisher || s.title) : esc(id + " " + UNKNOWN); }
+  function dateLabel(d) { return esc(d.date + (d.approximate ? " (approx.)" : "")); }
   function priceRegions() { return Object.keys(D().records).filter((k) => /^data\/atlas\/prices\//.test(k)).map((k) => D().records[k].region).sort(); }
   function priceDoc(region) { return D().records["data/atlas/prices/" + region + ".json"] || null; }
 
   function objectTab(e) {
     const kit = kitRecord(e);
     const note = M().tierNote(e, st.tier);
-    let h = '<p>' + esc(e.summary) + "</p>" + (note ? '<p class="muted small">' + esc(note) + "</p>" : "") +
+    const art = artRecord(e);
+    let h = '<p class="at-text">' + esc(M().tierText(e, st.tier)) + "</p>" + (note ? '<p class="muted small">' + esc(note) + "</p>" : "") +
+      (M().tiersWritten ? '<p class="muted small at-levels">Reading levels written: ' + M().tiersWritten(e).map((t) => esc(M().TIER_LABEL[t])).join(", ") + "</p>" : "") +
       '<p class="small"><span class="pill">' + esc(e.kind) + '</span> <span class="pill">' + esc(M().TIER_LABEL[e.tier]) + '</span> <span class="pill ' + (e.status === "draft" || e.status === "placeholder" ? "warn" : "ok") + '">' + esc(e.status) + '</span> <span class="pill">confidence ' + esc(e.confidence) + '</span> <span class="pill">' + esc(e.license) + "</span> <span class=\"muted\">checked " + esc(e.checked) + "</span></p>";
-    if (e.places.length) h += '<p class="small">Places: ' + e.places.map((p) => esc((p.region || UNKNOWN) + " (" + p.precision + ")")).join(", ") + "</p>";
+    if (e.places.length) h += '<p class="small">Places: ' + e.places.map((p) => esc((p.region || UNKNOWN) + " (" + p.precision + ")" + (p.note ? " · " + p.note : ""))).join(", ") + "</p>";
     if (e.dates.length) h += '<p class="small">Dates: ' + e.dates.map((d) => esc(d.date + " (" + d.precision + (d.approximate ? ", approximate" : "") + ")")).join(", ") + "</p>";
     if (e.related.length) h += '<p class="small">Related: ' + e.related.map((r) => { const t = M().entryById(D(), r.to); return '<button type="button" class="linklike" data-at-entry="' + esc(r.to) + '">' + esc(t ? t.title : r.to) + "</button> <span class=\"muted\">(" + esc(r.type) + ")</span>"; }).join(", ") + "</p>";
     if (kit && e.kind === "object") {
@@ -123,11 +130,21 @@
       h += "<h4>Safety rules in the record</h4><ul class=\"small\">" + kit.safety.map((s) => "<li><b>" + esc(s.topic) + ":</b> " + esc(s.rule) + "</li>").join("") + "</ul>";
       h += '<p class="muted small">Draft: not built or tested. Model is an artistic layout from the parametric record, not a build drawing.</p>';
     }
+    if ((e.see_also_ids || []).length) h += '<p class="small at-seealso">See also: ' + e.see_also_ids.map((id) => { const t = M().entryById(D(), id); return t ? '<button type="button" class="linklike" data-at-entry="' + esc(id) + '">' + esc(t.title) + "</button>" : '<span class="muted">' + esc(id) + " (not in this copy)</span>"; }).join(", ") + "</p>";
+    if (art) {
+      if (art.facts.length) h += '<h4>Key facts</h4><table class="at-table small at-facts">' + art.facts.map((f) => "<tr><th>" + esc(f.label) + "</th><td>" + esc(f.value) + ' <span class="muted">· ' + srcLabel(f.source) + "</span></td></tr>").join("") + "</table>";
+      if (art.timeline.length) h += '<h4>Timeline</h4><ol class="small at-timeline-list">' + art.timeline.map((t) => "<li><b>" + dateLabel(t) + "</b> " + esc(t.event) + ' <span class="muted">· ' + srcLabel(t.source) + "</span></li>").join("") + "</ol>";
+      if (art.unknowns.length) h += '<p class="muted small">Not known yet: ' + art.unknowns.map(esc).join("; ") + "</p>";
+    }
     return h + personalHtml(e);
   }
 
   function partsTab(e) {
     const kit = kitRecord(e);
+    const art = artRecord(e);
+    if (!kit && art && art.parts.length) return '<table class="at-table small at-parts"><thead><tr><th>Part</th><th>Material</th><th>Note</th><th>Source</th></tr></thead><tbody>' +
+      art.parts.map((p) => "<tr><td><b>" + esc(p.part) + "</b></td><td>" + esc(p.material) + "</td><td>" + esc(p.note || "") + "</td><td>" + srcLabel(p.source) + "</td></tr>").join("") + "</tbody></table>" +
+      '<p class="muted small">Historic object: parts and materials only where an official page states them; everything else is ' + UNKNOWN + ".</p>";
     if (!kit) return '<p class="muted">No parts list for this entry ' + UNKNOWN + ".</p>";
     const regions = priceRegions();
     const P = global.GD_ATLAS_PRICING;
@@ -149,6 +166,17 @@
   function chemistryTab(e) {
     let chemId = e.kind === "chemistry" ? e.id : null;
     const kit = kitRecord(e);
+    const own = artRecord(e);
+    if (!chemId && own && own.chemistry) chemId = own.chemistry;
+    const cEntry = chemId ? M().entryById(D(), chemId) : null;
+    const cRec = cEntry ? recordOf(cEntry) : null;
+    if ((own && own.materials.length) || (cRec && cRec.materials)) {
+      const rows = (own ? own.materials : []).concat(cRec && cRec !== own && cRec.materials ? cRec.materials : []);
+      return (cEntry && chemId !== e.id ? '<p class="small">Material: <button type="button" class="linklike" data-at-entry="' + esc(chemId) + '">' + esc(cEntry.title) + "</button></p>" : "") +
+        '<table class="at-table small at-materials"><thead><tr><th>Material</th><th>Composition</th><th>Source</th></tr></thead><tbody>' +
+        rows.map((r) => "<tr><td>" + esc(r.material) + "</td><td>" + esc(r.composition) + "</td><td>" + srcLabel(r.source) + "</td></tr>").join("") + "</tbody></table>" +
+        (cEntry ? '<p class="small">' + esc(M().tierText(cEntry, st.tier)) + "</p>" : "") + '<p class="muted small">Crystal or molecule 3D models: ' + UNKNOWN + ".</p>";
+    }
     if (!chemId && kit && kit.chemistry && kit.chemistry.length) chemId = kit.chemistry[0];
     const ce = chemId ? M().entryById(D(), chemId) : null;
     const rec = ce ? recordOf(ce) : null;
@@ -237,7 +265,7 @@
   function select(id) {
     st.selected = id;
     const e = M().entryById(D(), id);
-    if (e && st.tab === "chemistry" && e.kind !== "chemistry" && !kitRecord(e)) st.tab = "object";
+    if (e && st.tab === "chemistry" && e.kind !== "chemistry" && !kitRecord(e) && !artRecord(e)) st.tab = "object";
     render();
     if (e && st.mode === "globe") flyToEntry(e);
   }
@@ -308,7 +336,13 @@
     const ll = p && centroid(p.a3);
     if (ll && GD.globe && GD.globe.flyTo) { try { GD.globe.flyTo({ center: ll, zoom: 3, pitch: 0, bearing: 0, durationSec: 2 }); } catch (e) { /* ignore */ } }
   }
-  function flyToEntry(e) { const p = (e.places || [])[0]; if (p && p.region) flyToRegion(p.region.slice(0, 2)); }
+  // Fly to the entry's own pin when it has one (zoom by precision), else to its country.
+  const ZOOM = { site: 15, city: 11, subdivision: 6, country: 3 };
+  function flyToEntry(e) {
+    const p = (e.places || [])[0];
+    if (p && p.lat != null && p.lng != null && GD.globe && GD.globe.flyTo) { try { GD.globe.flyTo({ center: [p.lng, p.lat], zoom: ZOOM[p.precision] || 6, pitch: p.precision === "site" ? 45 : 0, bearing: 0, durationSec: 2.5 }); } catch (err) { /* ignore */ } return; }
+    if (p && p.region) flyToRegion(p.region.slice(0, 2));
+  }
 
   // ---------- 3D ----------
   function draw3d() {
@@ -316,6 +350,11 @@
     if (!box) return;
     const e = st.selected ? M().entryById(D(), st.selected) : null;
     const kit = kitRecord(e);
+    const art = artRecord(e);
+    if (e && art && art.model && GD.atlas3d) {
+      GD.atlas3d.show(box, art.model.id, art.model).then((r) => { if (note) note.textContent = r.ok ? "Approximate model, not a scan. " + art.model.label + ". Drag to turn." : "3D view unavailable here: " + r.reason; });
+      return;
+    }
     if (!e || !kit || e.kind !== "object" || !GD.atlas3d) { box.classList.add("stub"); box.textContent = "No 3D model for this entry " + UNKNOWN + "."; return; }
     const opt = kit.options.find((o) => o.id === st.option) || kit.options[0];
     const parallel = parseInt((/4S(\d)P/.exec(opt.config) || [])[1] || "1", 10);

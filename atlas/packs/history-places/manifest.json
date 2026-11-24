@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "history-places",
+  "title": "Atlas pack: History and places",
+  "kind": "category",
+  "category": "history-places",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "409d206e8901f60d919af4117a974182060a9ce4139a9c6c1584466e39bfbe01",
+  "entry_count": 41,
+  "size_bytes": 60670,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 60670,
+      "sha256": "0a9dd5536677eb5b3986e4303f678a4ffef820382cdb9e4561d90200db7389ce"
+    }
+  ]
+}

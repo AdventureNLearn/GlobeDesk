@@ -1,0 +1,67 @@
+{
+ "schema": "globedesk.artifact/1",
+ "id": "constitution-1787",
+ "title": "The Constitution (signed parchment)",
+ "kind": "document",
+ "status": "draft",
+ "checked": "2026-11-24",
+ "facts": [
+  {
+   "label": "Pages",
+   "value": "Four",
+   "source": "nara-constitution"
+  },
+  {
+   "label": "Signed",
+   "value": "September 17, 1787",
+   "source": "nara-constitution"
+  },
+  {
+   "label": "Held by",
+   "value": "National Archives (permanent home)",
+   "source": "nara-constitution"
+  },
+  {
+   "label": "Writing surface",
+   "value": "[UNKNOWN] in the cited page",
+   "source": "nara-constitution"
+  }
+ ],
+ "parts": [
+  {
+   "part": "Pages (4)",
+   "material": "[UNKNOWN]",
+   "note": "",
+   "source": "nara-constitution"
+  }
+ ],
+ "materials": [],
+ "timeline": [
+  {
+   "date": "1787-05-25",
+   "precision": "day",
+   "approximate": false,
+   "event": "Quorum of seven states; work begins",
+   "source": "nara-constitution"
+  },
+  {
+   "date": "1787-09-17",
+   "precision": "day",
+   "approximate": false,
+   "event": "Signed",
+   "source": "nara-constitution"
+  }
+ ],
+ "citations": [
+  {
+   "id": "nara-constitution",
+   "title": "Constitution of the United States (Milestone Documents)",
+   "url": "https://www.archives.gov/milestone-documents/constitution",
+   "publisher": "US National Archives and Records Administration",
+   "class": "official"
+  }
+ ],
+ "unknowns": [
+  "Material (parchment) not stated on the cited page: [UNKNOWN]"
+ ]
+}

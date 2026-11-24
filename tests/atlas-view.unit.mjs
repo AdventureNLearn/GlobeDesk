@@ -21,18 +21,19 @@ t("A-Z lists every title and alias, sorted, with jump letters; placeholders sort
   const rows = M.azRows(D, {});
   assert.equal(rows.filter((r) => !r.alias).length, D.entries.length);
   assert.ok(rows.some((r) => r.alias && r.id === "bag-solar-kit"));
-  assert.deepEqual(M.letters(rows), ["B", "C", "L", "P", "S", "W"]);
+  assert.deepEqual(M.letters(rows), ["#", "A", "B", "C", "D", "E", "F", "G", "H", "L", "M", "P", "S", "T", "U", "W"]);
 });
 t("search, category and tier filters", () => {
   assert.deepEqual(M.azRows(D, { q: "zzqx nothing" }).map((r) => r.id), []);
   assert.ok(M.azRows(D, { q: "air travel" }).some((r) => r.id === "lithium-batteries-air-travel"));
   assert.ok(M.azRows(D, { category: "chemistry" }).every((r) => r.entry.category_path[0] === "chemistry" || (r.entry.see_also_paths || []).some((p) => p[0] === "chemistry")));
-  assert.ok(M.azRows(D, { tier: "kids" }).every((r) => r.entry.tier === "kids"));
+  assert.ok(M.azRows(D, { tier: "kids" }).every((r) => r.entry.tier === "kids" || (r.entry.tiers && r.entry.tiers.kids)));
+  assert.ok(M.azRows(D, { tier: "kids" }).some((r) => r.id === "declaration-of-independence-1776"));
 });
 t("by place: coarse keys; US-TX rolls up under US with no invented point; No place bucket", () => {
   const r = M.byPlace(D, {});
   const us = r.rows.find((x) => x.key === "US");
-  assert.equal(us.a3, "USA"); assert.equal(us.subdivisions[0].key, "US-TX"); assert.ok(us.entries.includes("phosphate-cathode-discovery"));
+  assert.equal(us.a3, "USA"); assert.ok(us.subdivisions.some((s) => s.key === "US-TX")); assert.ok(us.entries.includes("phosphate-cathode-discovery"));
   assert.ok(!r.rows.some((x) => x.key === "US-TX"));
   assert.ok(r.noPlace.includes("bag-solar-kit"));
 });
@@ -42,12 +43,15 @@ t("ISO weeks (Monday start) across year edges", () => {
 });
 t("by year: years, then months and weeks in the current year, and This week", () => {
   const y = M.byYear(D, {}, { today: "2026-11-24" });
-  assert.equal(y.range.min, 1996); assert.equal(y.range.max, 2026); assert.ok(y.undated.length > 0);
+  assert.equal(y.range.min, 1775); assert.equal(y.range.max, 2026);
+  const hp = M.byYear(D, { pack: "history-places" }, { today: "2026-11-24" });
+  assert.equal(hp.range.min, 1775); assert.ok(hp.rows.some((d) => d.date === "1776-07-04")); assert.ok(hp.rows.some((d) => d.date === "2026-07-04")); assert.ok(y.undated.length > 0);
   assert.deepEqual(M.byYear(D, {}, { today: "2026-11-24", year: 1996 }).rows.map((d) => d.entry), ["phosphate-cathode-discovery"]);
   const m = M.byYear(D, {}, { today: "2026-11-24", zoom: "months" });
   assert.equal(m.buckets.length, 12); assert.equal(m.buckets[10].rows.length, 1);
   const w = M.byYear(D, {}, { today: "2026-11-24", zoom: "weeks" });
-  assert.equal(w.buckets[0].key, "2026-W48");
+  assert.equal(w.buckets[0].key, "2026-W27"); assert.ok(w.buckets.some((b) => b.key === "2026-W48"));
+  assert.equal(m.buckets[6].rows[0].entry, "america-250-2026");
   const tw = M.byYear(D, {}, { today: "2026-11-24", zoom: "this-week" });
   assert.equal(tw.key, "2026-W48"); assert.equal(tw.rows[0].entry, "bag-solar-kit-prices");
   assert.equal(M.byYear(D, {}, { today: "2026-12-10", zoom: "this-week" }).rows.length, 0);
@@ -61,15 +65,18 @@ t("Now status: this week, this month, leaving soon, left after now_until", () =>
   assert.equal(M.nowStatus(e, "2027-02-19"), "left");
   assert.equal(M.nowStatus({ current: false }, "2026-11-24"), "not-current");
 });
-t("tree: 4 bundled packs installed, 8 categories greyed, Now weekly", () => {
+t("tree: 5 bundled packs installed, 7 categories greyed, Now weekly", () => {
   const tr = M.tree(D);
-  assert.deepEqual(tr.filter((c) => c.installed).map((c) => c.id), ["energy", "objects", "chemistry", "economics"]);
+  assert.deepEqual(tr.filter((c) => c.installed).map((c) => c.id), ["history-places", "energy", "objects", "chemistry", "economics"]);
   assert.equal(tr.find((c) => c.id === "now").refresh, "weekly");
 });
 t("tier switch: other levels say not written yet [UNKNOWN]", () => {
   const e = D.entries.find((x) => x.id === "portable-solar-power");
   assert.equal(M.tierNote(e, "everyday"), null);
   assert.match(M.tierNote(e, "kids"), /No Kids version yet \[UNKNOWN\]/);
+  const lb = D.entries.find((x) => x.id === "declaration-of-independence-1776");
+  assert.equal(M.tierNote(lb, "kids"), null); assert.equal(M.tierText(lb, "kids"), lb.tiers.kids); assert.equal(M.tierText(lb, "all"), lb.summary);
+  assert.deepEqual(M.tiersWritten(lb), ["kids", "everyday", "student", "professional"]);
 });
 t("view code has no network calls and no inline styles; online lookups stay off", () => {
   for (const f of ["js/atlas/atlas-view.js", "js/atlas/atlas-model.js", "js/atlas/atlas-3d.js", "js/work-desks.js", "js/user-layers.js", "js/personal-layer.js", "js/community-cards.js", "js/source-class.js"]) {

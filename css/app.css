@@ -708,6 +708,8 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .ul-pin.ul-mine { background: var(--gd-green); border-radius: 50% 50% 50% 0; }
 .ul-badge { position: absolute; left: 14px; top: -14px; transform: rotate(-45deg); font-size: 9px; padding: 0 4px; border-radius: 6px; background: rgba(2, 4, 12, 0.85); color: #fff; white-space: nowrap; pointer-events: none; }
 .ul-comm-swatch { --c: #c9a2ff; }
+.at-timeline-list { padding-left: 1.2em; }
+.at-timeline-list li { margin: 0.2em 0; }
 .ul-mine-swatch { --c: #4ff0a8; }
 .lp-actions { display: flex; gap: 6px; flex-wrap: wrap; padding: 4px 0 4px 30px; }
 /* Work desks */

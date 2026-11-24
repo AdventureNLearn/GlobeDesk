@@ -59,6 +59,104 @@
       "current": false
     },
     {
+      "id": "thirteenth-amendment-1865",
+      "title": "13th Amendment ratified",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "nineteenth-amendment-1920",
+      "title": "19th Amendment certified",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "alaska-transfer-1867",
+      "title": "Alaska transfer at Sitka",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "america-250-2026",
+      "title": "America 250",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ada-1990",
+      "title": "Americans with Disabilities Act",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "apollo-11-1969",
+      "title": "Apollo 11",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "pearl-harbor-1941",
+      "title": "Attack on Pearl Harbor",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "bag-solar-kit",
       "title": "Bag solar kit",
       "aliases": [
@@ -85,6 +183,272 @@
       ],
       "tier": "everyday",
       "pack": "economics",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "gettysburg-1863",
+      "title": "Battle of Gettysburg",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bill-of-rights-1791",
+      "title": "Bill of Rights ratified",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "brown-v-board-1954",
+      "title": "Brown v. Board of Education",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "trail-of-tears-1838",
+      "title": "Cherokee removal (Trail of Tears)",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "civil-rights-act-1964",
+      "title": "Civil Rights Act of 1964",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "constitution-signed-1787",
+      "title": "Constitution signed",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "covid-19-pandemic-2020",
+      "title": "COVID-19 pandemic in the United States",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "declaration-of-independence-1776",
+      "title": "Declaration of Independence",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "selma-bloody-sunday-1965",
+      "title": "Edmund Pettus Bridge, Selma",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ellis-island-1892",
+      "title": "Ellis Island immigration station",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "places-regions"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "emancipation-proclamation-1863",
+      "title": "Emancipation Proclamation",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "erie-canal-1825",
+      "title": "Erie Canal in operation",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "routes"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "first-flight-1903",
+      "title": "First powered flight",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "washington-inauguration-1789",
+      "title": "First presidential inauguration",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "seneca-falls-1848",
+      "title": "First Women's Rights Convention",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "fort-mchenry-1814",
+      "title": "Fort McHenry holds",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "fort-sumter-1861",
+      "title": "Fort Sumter",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "gold-discovery-1848",
+      "title": "Gold at Sutter's Mill",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "hoover-dam-1935",
+      "title": "Hoover Dam dedicated",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
       "status": "draft",
       "current": false
     },
@@ -117,6 +481,62 @@
       "current": false
     },
     {
+      "id": "little-rock-1957",
+      "title": "Little Rock Central High School",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "louisiana-transfer-1803",
+      "title": "Louisiana transfer at the Cabildo",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "march-on-washington-1963",
+      "title": "March on Washington",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "mount-st-helens-1980",
+      "title": "Mount St. Helens erupts",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "phosphate-cathode-discovery",
       "title": "Phosphate found as a lithium battery cathode (1996)",
       "aliases": [],
@@ -141,6 +561,160 @@
       ],
       "tier": "everyday",
       "pack": "energy",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "september-11-2001",
+      "title": "September 11, 2001",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "social-security-act-1935",
+      "title": "Social Security Act",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "statue-of-liberty-1886",
+      "title": "Statue of Liberty dedicated",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "stock-crash-1929",
+      "title": "Stock market crash of 1929",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "appomattox-1865",
+      "title": "Surrender at Appomattox Court House",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "yorktown-surrender-1781",
+      "title": "Surrender at Yorktown",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "telegraph-message-1844",
+      "title": "Telegraph: What hath God wrought?",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "golden-spike-1869",
+      "title": "Transcontinental railroad completed",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "routes"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "old-north-lanterns-1775",
+      "title": "Two lanterns at Old North Church",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "un-charter-1945",
+      "title": "United Nations Charter signed",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "fort-clatsop-1805",
+      "title": "Winter at Fort Clatsop",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
       "status": "draft",
       "current": false
     }

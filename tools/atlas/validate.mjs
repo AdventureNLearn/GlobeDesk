@@ -75,6 +75,29 @@ export function deskRules(doc) {
   return p;
 }
 
+// Historic object and material records: schema, every row cites a registered source, unknowns stay marked.
+export function artifactRules(rel, rec, ctx, schema) {
+  const p = [];
+  const at = `record ${rel}`;
+  asList(validateSchema(schema, rec)).forEach((x) => p.push(`${at}: ${x}`));
+  ["facts", "parts", "materials", "timeline"].forEach((k) => (rec[k] || []).forEach((row, i) => { if (!ctx.sourceIds.has(row.source)) p.push(`${at}: ${k} ${i + 1} cites unknown source ${row.source}`); }));
+  (rec.citations || []).forEach((c) => { const s = ctx.sourceById.get(c.id); if (!s) p.push(`${at}: citation ${c.id} not in core/sources.json`); else if (s.url !== c.url) p.push(`${at}: citation ${c.id} url differs from the registry`); if (s && SC.classOf(s) === "experimental") p.push(`${at}: citation ${c.id} is experimental and cannot back a fact`); });
+  (rec.timeline || []).forEach((t) => { if (!DATE_FORM[t.precision].test(t.date)) p.push(`${at}: timeline date ${t.date} does not match precision ${t.precision}`); });
+  return p;
+}
+
+// History pack and object layers: at least one official source, reading-level text agrees with the summary,
+// and a globe layer entry needs a lat/lng pin.
+export function historyRules(e, ctx) {
+  const p = [];
+  const at = `entry ${e.id}`;
+  if (e.pack === "history-places" && e.status !== "placeholder" && !e.sources.some((s) => { const src = ctx.sourceById.get(s); return src && SC.classOf(src) === "official"; })) p.push(`${at}: a history entry needs at least one official source`);
+  if (e.tiers && e.tiers[e.tier] && e.tiers[e.tier] !== e.summary) p.push(`${at}: tiers.${e.tier} must equal the summary`);
+  if (e.layer && !e.places.some((pl) => pl.lat != null && pl.lng != null)) p.push(`${at}: an object-layer entry needs a lat/lng pin`);
+  if (e.layer && e.status !== "placeholder" && !e.record) p.push(`${at}: an object-layer entry needs a record`);
+  return p;
+}
+
 export function packRules(m, dir) {
   const p = [];
   let size = 0;
@@ -106,7 +129,11 @@ export function validateAtlas() {
   for (const e of entries) {
     asList(validateSchema(entrySchema, e)).forEach((x) => problems.push(`entry ${e.id}: ${x}`));
     problems.push(...entryRules(e, ctx));
+    problems.push(...historyRules(e, ctx));
   }
+  const artSchema = JR("schema/globedesk-artifact.schema.json");
+  const artifactRecs = [...new Set(entries.flatMap((e) => [e.record, ...(e.records || [])]).filter(Boolean))].filter((r) => exists(r) && JR(r).schema === "globedesk.artifact/1");
+  artifactRecs.forEach((r) => problems.push(...artifactRules(r, JR(r), ctx, artSchema)));
   for (const id of ["core", ...CATEGORY_PACKS]) {
     const m = J(`packs/${id}/manifest.json`);
     asList(validateSchema(manSchema, m)).forEach((x) => problems.push(`manifest ${id}: ${x}`));
@@ -121,7 +148,11 @@ export function validateAtlas() {
   // Hygiene: shareable files carry no home paths, emails or key-like strings.
   for (const rel of ["categories.json", "views.json", "packs/core/sources.json", ...CATEGORY_PACKS.map((p) => `packs/${p}/entries.json`)]) {
     const s = readFileSync(path.join(ATLAS, rel), "utf8");
-    if (/\/home\/|\/workspace\/|C:\\\\|[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}|api[_-]?key|secret|password|bearer /i.test(s)) problems.push(`hygiene: ${rel} has a path, email or key-like string`);
+    if (/\/home\/|\/workspace\/|C:\\\\|[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}|api[_-]?key|\bsecrets?\b|password|bearer /i.test(s)) problems.push(`hygiene: ${rel} has a path, email or key-like string`);
+  }
+  for (const rel of artifactRecs) {
+    const s = readFileSync(path.join(ATLAS, "..", rel), "utf8");
+    if (/\/home\/|\/workspace\/|C:\\\\|[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}|api[_-]?key|\bsecrets?\b|password|bearer /i.test(s)) problems.push(`hygiene: ${rel} has a path, email or key-like string`);
   }
   return problems;
 }

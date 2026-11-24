@@ -27,8 +27,146 @@
       "key": "US",
       "precision": "country",
       "entries": [
+        "thirteenth-amendment-1865",
+        "ada-1990",
         "bag-solar-kit-prices",
-        "lithium-batteries-air-travel"
+        "bill-of-rights-1791",
+        "civil-rights-act-1964",
+        "lithium-batteries-air-travel",
+        "social-security-act-1935"
+      ]
+    },
+    {
+      "key": "US-AK",
+      "precision": "site",
+      "entries": [
+        "alaska-transfer-1867"
+      ]
+    },
+    {
+      "key": "US-AL",
+      "precision": "site",
+      "entries": [
+        "selma-bloody-sunday-1965"
+      ]
+    },
+    {
+      "key": "US-AR",
+      "precision": "site",
+      "entries": [
+        "little-rock-1957"
+      ]
+    },
+    {
+      "key": "US-CA",
+      "precision": "site",
+      "entries": [
+        "gold-discovery-1848",
+        "un-charter-1945"
+      ]
+    },
+    {
+      "key": "US-DC",
+      "precision": "city",
+      "entries": [
+        "nineteenth-amendment-1920",
+        "brown-v-board-1954",
+        "emancipation-proclamation-1863",
+        "march-on-washington-1963",
+        "telegraph-message-1844"
+      ]
+    },
+    {
+      "key": "US-FL",
+      "precision": "site",
+      "entries": [
+        "apollo-11-1969"
+      ]
+    },
+    {
+      "key": "US-HI",
+      "precision": "site",
+      "entries": [
+        "pearl-harbor-1941"
+      ]
+    },
+    {
+      "key": "US-LA",
+      "precision": "site",
+      "entries": [
+        "louisiana-transfer-1803"
+      ]
+    },
+    {
+      "key": "US-MA",
+      "precision": "site",
+      "entries": [
+        "old-north-lanterns-1775"
+      ]
+    },
+    {
+      "key": "US-MD",
+      "precision": "site",
+      "entries": [
+        "fort-mchenry-1814"
+      ]
+    },
+    {
+      "key": "US-NC",
+      "precision": "site",
+      "entries": [
+        "first-flight-1903"
+      ]
+    },
+    {
+      "key": "US-NV",
+      "precision": "site",
+      "entries": [
+        "hoover-dam-1935"
+      ]
+    },
+    {
+      "key": "US-NY",
+      "precision": "site",
+      "entries": [
+        "ellis-island-1892",
+        "erie-canal-1825",
+        "washington-inauguration-1789",
+        "seneca-falls-1848",
+        "statue-of-liberty-1886",
+        "stock-crash-1929"
+      ]
+    },
+    {
+      "key": "US-OR",
+      "precision": "site",
+      "entries": [
+        "fort-clatsop-1805"
+      ]
+    },
+    {
+      "key": "US-PA",
+      "precision": "site",
+      "entries": [
+        "america-250-2026",
+        "gettysburg-1863",
+        "constitution-signed-1787",
+        "declaration-of-independence-1776",
+        "september-11-2001"
+      ]
+    },
+    {
+      "key": "US-SC",
+      "precision": "site",
+      "entries": [
+        "fort-sumter-1861"
+      ]
+    },
+    {
+      "key": "US-TN",
+      "precision": "site",
+      "entries": [
+        "trail-of-tears-1838"
       ]
     },
     {
@@ -36,6 +174,29 @@
       "precision": "subdivision",
       "entries": [
         "phosphate-cathode-discovery"
+      ]
+    },
+    {
+      "key": "US-UT",
+      "precision": "site",
+      "entries": [
+        "golden-spike-1869"
+      ]
+    },
+    {
+      "key": "US-VA",
+      "precision": "site",
+      "entries": [
+        "appomattox-1865",
+        "yorktown-surrender-1781"
+      ]
+    },
+    {
+      "key": "US-WA",
+      "precision": "subdivision",
+      "entries": [
+        "covid-19-pandemic-2020",
+        "mount-st-helens-1980"
       ]
     }
   ],
