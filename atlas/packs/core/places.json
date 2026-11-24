@@ -122,6 +122,7 @@
       "precision": "city",
       "entries": [
         "hiroshima-nagasaki-1945",
+        "hiroshima-nagasaki-1945",
         "byodoin-bell",
         "chion-in-bell",
         "todaiji-bell",
@@ -383,6 +384,7 @@
         "erie-canal-1825",
         "washington-inauguration-1789",
         "seneca-falls-1848",
+        "september-11-2001",
         "statue-of-liberty-1886",
         "stock-crash-1929",
         "naacp-founding-1909"
@@ -446,6 +448,7 @@
       "key": "US-VA",
       "precision": "site",
       "entries": [
+        "september-11-2001",
         "appomattox-1865",
         "yorktown-surrender-1781"
       ]

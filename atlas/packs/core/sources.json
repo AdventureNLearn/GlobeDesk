@@ -2465,6 +2465,61 @@
       "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
       "description": "NPS event listing for the free Celebration of Freedom Ceremony at 10 a.m. on July 4, 2026 on Independence Mall (between 5th and 6th and Market and Chestnut Streets), honoring America's 250th anniversary, with performances, speeches and awards.",
       "terms_url": "https://www.nps.gov/aboutus/disclaimer.htm"
+    },
+    {
+      "id": "loc-erie-1825",
+      "title": "Today in History - October 26: The Erie Canal (Library of Congress)",
+      "url": "https://www.loc.gov/item/today-in-history/october-26/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "Library of Congress web text (federal work); individual items may carry other rights",
+      "description": "LOC Today in History story: the Erie Canal opened October 26, 1825 between the Hudson River and Lake Erie; Governor DeWitt Clinton's 363-mile project; Clinton left Buffalo on the Seneca Chief and eight days later emptied Lake Erie water into the Atlantic.",
+      "terms_url": "https://www.loc.gov/legal/"
+    },
+    {
+      "id": "nps-elis-faqs",
+      "title": "Frequently Asked Questions (Ellis Island, Statue of Liberty NM)",
+      "url": "https://www.nps.gov/elis/faqs.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "description": "NPS FAQ for Ellis Island: first and largest federal immigrant station (over 12 million people, 1892-1954); Castle Garden before it; opened January 1, 1892, with Annie Moore of County Cork, Ireland, the first immigrant processed.",
+      "terms_url": "https://www.nps.gov/aboutus/disclaimer.htm"
+    },
+    {
+      "id": "nps-garfield-centennial",
+      "title": "James A. Garfield and the Centennial Exposition of 1876, Part I (NPS article)",
+      "url": "https://www.nps.gov/articles/000/james-a-garfield-and-the-centennial-exposition-of-1876-part-i.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "description": "James A. Garfield NHS article on the 1876 Centennial Exposition in Philadelphia: its scale, President Grant opening it on May 10, 1876, and Congressman Garfield's visit, with period images.",
+      "terms_url": "https://www.nps.gov/aboutus/disclaimer.htm"
+    },
+    {
+      "id": "nps-gosp-four-spikes",
+      "title": "Four Special Spikes (Golden Spike NHP)",
+      "url": "https://www.nps.gov/gosp/learn/historyculture/four-special-spikes.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "description": "Golden Spike NHP page on the four ceremonial spikes of May 10, 1869: the Hewes golden Last Spike (Garratt Foundry, 17.6 carat, 14.03 oz), the San Francisco News Letter gold spike, Nevada's silver spike and Arizona's iron, silver and gold spike, plus the ceremony and where the spikes went.",
+      "terms_url": "https://www.nps.gov/aboutus/disclaimer.htm"
+    },
+    {
+      "id": "nps-flni-timeline",
+      "title": "September 11, 2001 Timeline (Flight 93 National Memorial)",
+      "url": "https://www.nps.gov/flni/learn/historyculture/september-11-2001-timeline.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "description": "Minute-by-minute NPS timeline of September 11, 2001: the hijackings, Flight 11 and Flight 175 striking the World Trade Center towers, the Pentagon attack, and Flight 93's crash at 10:03 a.m. in Stonycreek Township, Somerset County, Pennsylvania, with source notes.",
+      "terms_url": "https://www.nps.gov/aboutus/disclaimer.htm"
     }
   ]
 }

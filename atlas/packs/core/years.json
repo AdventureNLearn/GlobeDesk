@@ -391,8 +391,8 @@
       "entry": "bolshoy-uspensky-bell"
     },
     {
-      "date": "1825",
-      "precision": "year",
+      "date": "1825-10-26",
+      "precision": "day",
       "approximate": false,
       "entry": "erie-canal-1825"
     },
@@ -622,8 +622,8 @@
       "entry": "centennial-bell"
     },
     {
-      "date": "1876",
-      "precision": "year",
+      "date": "1876-05-10",
+      "precision": "day",
       "approximate": false,
       "entry": "centennial-exposition-1876"
     },
@@ -722,6 +722,12 @@
       "precision": "year",
       "approximate": false,
       "end": "1924",
+      "entry": "ellis-island-1892"
+    },
+    {
+      "date": "1892-01-01",
+      "precision": "day",
+      "approximate": false,
       "entry": "ellis-island-1892"
     },
     {
