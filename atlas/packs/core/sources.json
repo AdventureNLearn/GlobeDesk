@@ -2520,6 +2520,18 @@
       "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
       "description": "Minute-by-minute NPS timeline of September 11, 2001: the hijackings, Flight 11 and Flight 175 striking the World Trade Center towers, the Pentagon attack, and Flight 93's crash at 10:03 a.m. in Stonycreek Township, Somerset County, Pennsylvania, with source notes.",
       "terms_url": "https://www.nps.gov/aboutus/disclaimer.htm"
+    },
+    {
+      "id": "usembassy-ph-balangiga-2022",
+      "title": "U.S. Ambassador Visits Balangiga Bells (US Embassy in the Philippines, Oct 19, 2022)",
+      "url": "https://ph.usembassy.gov/u-s-ambassador-visits-balangiga-bells/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Embassy in the Philippines (US Department of State)",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); photos may carry other rights",
+      "description": "Embassy news item: Ambassador MaryKay Carlson visited the Balangiga Bells on October 18, 2022; the three bells, taken in 1901, were returned in 2018 (flown to Manila, airlifted to Guiuan, driven to Balangiga) and are installed in a reflection area outside San Lorenzo de Martir Parish Church.",
+      "terms_url": "https://www.state.gov/copyright-information/",
+      "verified": "opened directly (HTTP 200)"
     }
   ]
 }

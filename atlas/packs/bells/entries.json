@@ -2583,18 +2583,18 @@
       ],
       "tier": "everyday",
       "tiers": {
-        "everyday": "The Bells of Balangiga were church bells taken from the Philippines by US troops in 1901. The United States gave them back in 2018.",
-        "student": "The US Air Force records that the bells were used in a 1901 attack in which 45 US soldiers were killed, were kept at F.E. Warren AFB from 1904, joined the Air Force museum system in 1992 and were presented to the Philippines on 14 November 2018. Number of bells and present place [UNKNOWN] from official pages we could open."
+        "everyday": "The Bells of Balangiga were church bells taken from the Philippines by US troops in 1901. The United States gave the three bells back in 2018, and they are now outside the parish church in Balangiga.",
+        "student": "The US Air Force records that the bells were used in a 1901 attack in which 45 US soldiers were killed, were kept at F.E. Warren AFB from 1904, joined the Air Force museum system in 1992 and were presented to the Philippines on 14 November 2018. The US Embassy in Manila records that the three bells were flown to Manila, airlifted to Guiuan and taken by land to Balangiga, where they are installed in a reflection area outside San Lorenzo de Martir Parish Church."
       },
       "layer": "bells",
-      "summary": "The Bells of Balangiga were church bells taken from the Philippines by US troops in 1901. The United States gave them back in 2018.",
+      "summary": "The Bells of Balangiga were church bells taken from the Philippines by US troops in 1901. The United States gave the three bells back in 2018, and they are now outside the parish church in Balangiga.",
       "places": [
         {
           "region": "PH",
           "lat": 11.10745,
           "lng": 125.38745,
           "precision": "site",
-          "note": "Balangiga, Eastern Samar (home town; current hanging place [UNKNOWN]) (approximate pin)"
+          "note": "San Lorenzo de Martir Parish Church, Balangiga, Eastern Samar (reflection area outside the church) (approximate pin)"
         }
       ],
       "dates": [
@@ -2621,10 +2621,17 @@
           "precision": "day",
           "approximate": false,
           "label": "Officially presented to the Philippine government at F.E. Warren AFB"
+        },
+        {
+          "date": "2022-10-18",
+          "precision": "day",
+          "approximate": false,
+          "label": "US Ambassador visits the three bells at San Lorenzo de Martir Parish Church, Balangiga"
         }
       ],
       "sources": [
-        "af-balangiga"
+        "af-balangiga",
+        "usembassy-ph-balangiga-2022"
       ],
       "related": [
         {
@@ -2644,7 +2651,7 @@
       "checked": "2026-11-24",
       "current": false,
       "subject_person_living": false,
-      "notes": "Bells layer. Status [UNKNOWN]. Official source listed. Gaps: present location; bell count; dimensions."
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: dimensions; maker; mass."
     },
     {
       "id": "panaji-church-bell",

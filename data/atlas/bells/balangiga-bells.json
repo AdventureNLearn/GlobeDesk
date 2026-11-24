@@ -3,17 +3,17 @@
   "id": "balangiga-bells",
   "title": "Bells of Balangiga",
   "kind": "chime-set",
-  "status": "[UNKNOWN]",
-  "status_note": "Presented back to the Philippines on 14 November 2018; present location not confirmed in an official source we could open.",
+  "status": "in-place",
+  "status_note": "Returned in 2018; installed in a reflection area outside San Lorenzo de Martir Parish Church, Balangiga, open to visitors (US Embassy Manila, October 2022).",
   "era": "[UNKNOWN]",
   "region": "Asia",
   "country": "PH",
   "place": {
-    "label": "Balangiga, Eastern Samar (home town; current hanging place [UNKNOWN])",
+    "label": "San Lorenzo de Martir Parish Church, Balangiga, Eastern Samar (reflection area outside the church)",
     "lat": 11.10745,
     "lng": 125.38745,
     "approximate": true,
-    "basis": "home-town",
+    "basis": "current",
     "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
   },
   "maker": "[UNKNOWN]",
@@ -22,7 +22,7 @@
   "diameter_m": null,
   "height_m": null,
   "note": null,
-  "bells_count": null,
+  "bells_count": 3,
   "alloy": {
     "entry": "bell-bronze",
     "note": "[UNKNOWN]"
@@ -55,17 +55,26 @@
       "approximate": false,
       "event": "Officially presented to the Philippine government at F.E. Warren AFB",
       "source": "af-balangiga"
+    },
+    {
+      "date": "2022-10-18",
+      "precision": "day",
+      "approximate": false,
+      "event": "US Ambassador visits the three bells at San Lorenzo de Martir Parish Church, Balangiga",
+      "source": "usembassy-ph-balangiga-2022"
     }
   ],
   "tiers": {
-    "everyday": "The Bells of Balangiga were church bells taken from the Philippines by US troops in 1901. The United States gave them back in 2018.",
-    "student": "The US Air Force records that the bells were used in a 1901 attack in which 45 US soldiers were killed, were kept at F.E. Warren AFB from 1904, joined the Air Force museum system in 1992 and were presented to the Philippines on 14 November 2018. Number of bells and present place [UNKNOWN] from official pages we could open."
+    "everyday": "The Bells of Balangiga were church bells taken from the Philippines by US troops in 1901. The United States gave the three bells back in 2018, and they are now outside the parish church in Balangiga.",
+    "student": "The US Air Force records that the bells were used in a 1901 attack in which 45 US soldiers were killed, were kept at F.E. Warren AFB from 1904, joined the Air Force museum system in 1992 and were presented to the Philippines on 14 November 2018. The US Embassy in Manila records that the three bells were flown to Manila, airlifted to Guiuan and taken by land to Balangiga, where they are installed in a reflection area outside San Lorenzo de Martir Parish Church."
   },
   "sources": [
-    "af-balangiga"
+    "af-balangiga",
+    "usembassy-ph-balangiga-2022"
   ],
   "official_sources": [
-    "af-balangiga"
+    "af-balangiga",
+    "usembassy-ph-balangiga-2022"
   ],
   "official_status": "listed",
   "model": {
@@ -75,9 +84,9 @@
     "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
   },
   "unknowns": [
-    "present location",
-    "bell count",
-    "dimensions"
+    "dimensions",
+    "maker",
+    "mass"
   ],
   "confidence": "medium",
   "checked": "2026-11-24",
