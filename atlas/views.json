@@ -1,0 +1,21 @@
+{
+  "schema": "globedesk.atlas-views/1",
+  "status": "draft",
+  "views": {
+    "a-z": { "source": "packs/core/index.json", "keys": ["title", "aliases"], "letter_jump": true, "search_debounce_ms": 120, "filters": ["category", "pack", "kind", "tier", "status"], "not_installed": "show greyed with an add-pack action" },
+    "by-place": { "source": "packs/core/places.json", "globe": "shade each region by entry count; click lists entries grouped by category", "precision": "coarse only: country, subdivision, city or site; no addresses", "no_place_bucket": "No place", "network": "none" },
+    "by-year": {
+      "source": "packs/core/years.json",
+      "years": "astronomical (1 BCE = 0), BCE labels as in the app",
+      "slider_min_year": "[UNKNOWN]",
+      "zoom": [
+        { "level": "years", "range": "all dated entries" },
+        { "level": "months", "range": "current year only" },
+        { "level": "weeks", "range": "current year only" }
+      ],
+      "this_week_button": "jumps to the ISO week containing today and shows current entries",
+      "ranges": "drawn as bars", "approximate": "flagged", "undated_bucket": "Undated"
+    }
+  },
+  "now": { "category": "now", "source": "entries with current true", "leave_after_days": 90, "after_leaving": "entry stays in its home category pack", "refresh": "weekly via owner promote step" }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globedesk.local/schema/globedesk-personal-layer.schema.json",
+  "title": "GlobeDesk personal layer (globedesk.personal-layer/1) - DRAFT",
+  "description": "The user's own pins, notes, followed topics and links. Stored only on this device (browser storage) and in files the user exports. Never sent anywhere by the app.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "pins", "notes", "followed", "links"],
+  "properties": {
+    "schema": { "const": "globedesk.personal-layer/1" },
+    "exported": { "type": "string" },
+    "pins": { "type": "array", "maxItems": 500, "items": { "type": "object", "additionalProperties": false, "required": ["id", "title", "lat", "lng"],
+      "properties": { "id": { "type": "string", "pattern": "^[A-Za-z0-9_-]{1,40}$" }, "title": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "lat": { "type": "number", "minimum": -90 }, "lng": { "type": "number", "minimum": -180 },
+        "note": { "type": "string", "maxLength": 1000 }, "created": { "type": "string" } } } },
+    "notes": { "type": "array", "maxItems": 500, "items": { "type": "object", "additionalProperties": false, "required": ["id", "text"],
+      "properties": { "id": { "type": "string", "pattern": "^[A-Za-z0-9_-]{1,40}$" }, "text": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "entry": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,79}$" }, "created": { "type": "string" } } } },
+    "followed": { "type": "array", "maxItems": 200, "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,79}(/[a-z0-9-]+)?$" } },
+    "links": { "type": "array", "maxItems": 200, "items": { "type": "object", "additionalProperties": false, "required": ["title", "url"],
+      "properties": { "title": { "type": "string", "minLength": 1, "maxLength": 160 }, "url": { "type": "string", "pattern": "^https://[^\\s\"'<>]+$" }, "topic": { "type": "string" } } } }
+  }
+}

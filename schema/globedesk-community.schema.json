@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globedesk.local/schema/globedesk-community.schema.json",
+  "title": "GlobeDesk community lane (globedesk.community/1) - DRAFT",
+  "description": "Reviewed contributor cards plus community links and pins. Community material is shown in its own lane, off by default, and never mixed with primary sources.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "cards", "links", "pins"],
+  "properties": {
+    "schema": { "const": "globedesk.community/1" },
+    "note": { "type": "string" },
+    "cards": { "type": "array", "items": { "type": "object" }, "description": "Each card is validated against globedesk-contributor-card.schema.json." },
+    "links": { "type": "array", "items": { "$ref": "#/$defs/communityLink" } },
+    "pins": { "type": "array", "items": { "$ref": "#/$defs/communityPin" } }
+  },
+  "$defs": {
+    "communityLink": {
+      "type": "object", "additionalProperties": false, "required": ["entry", "title", "url", "card", "license", "checked"],
+      "properties": {
+        "entry": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,79}$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "url": { "type": "string", "pattern": "^https://[^\\s\"'<>@]+$" },
+        "card": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{1,31}$" },
+        "license": { "type": "string", "minLength": 1 },
+        "checked": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+      }
+    },
+    "communityPin": {
+      "type": "object", "additionalProperties": false, "required": ["id", "title", "lat", "lng", "card", "source", "license", "checked"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,79}$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "lat": { "type": "number", "minimum": -90 },
+        "lng": { "type": "number", "minimum": -180 },
+        "card": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{1,31}$" },
+        "source": { "type": "string", "pattern": "^https://[^\\s\"'<>@]+$" },
+        "license": { "type": "string", "minLength": 1 },
+        "checked": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+      }
+    }
+  }
+}

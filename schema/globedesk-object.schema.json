@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globedesk.local/schema/globedesk-object.schema.json",
+  "title": "GlobeDesk Atlas object record (globedesk.object/1) - DRAFT",
+  "description": "One buildable object in the Atlas tab: specs, parts as part classes, sizing, safety, chemistry links, model, sources. Prices live in region files (globedesk.prices/1), never here. No invented facts: a gap is the string [UNKNOWN].",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "kind", "name", "summary", "license", "checked", "options", "parts", "safety", "model", "citations", "confidence_level"],
+  "properties": {
+    "schema": { "const": "globedesk.object/1" },
+    "id": { "$ref": "#/$defs/id" },
+    "kind": { "enum": ["energy-kit", "tool", "shelter", "water", "other"] },
+    "name": { "$ref": "#/$defs/text" },
+    "summary": { "$ref": "#/$defs/text" },
+    "status": { "enum": ["draft", "reviewed", "built-and-tested"] },
+    "license": { "type": "string", "pattern": "^CC BY 4\\.0" },
+    "checked": { "$ref": "#/$defs/date" },
+    "confidence_level": { "enum": ["high", "medium", "low"] },
+    "assumptions": { "type": "object" },
+    "options": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/option" } },
+    "blocks": { "type": "array", "items": { "$ref": "#/$defs/block" } },
+    "parts": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/part" } },
+    "safety": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/safety" } },
+    "chemistry": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+    "model": { "$ref": "#/$defs/model" },
+    "facts": { "type": "object" },
+    "citations": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/citation" } }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,79}$" },
+    "text": { "type": "string", "minLength": 1, "maxLength": 4000, "pattern": "\\S" },
+    "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "citation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "url", "checked"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "$ref": "#/$defs/text" },
+        "url": { "type": "string", "pattern": "^https://" },
+        "checked": { "$ref": "#/$defs/date" },
+        "note": { "type": "string", "maxLength": 1000 }
+      }
+    },
+    "option": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "name", "config", "wh", "air_rule"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Z]$" },
+        "name": { "$ref": "#/$defs/text" },
+        "config": { "type": "string", "pattern": "^[0-9]+S[0-9]+P$" },
+        "wh": { "type": "number", "minimum": 0 },
+        "outputs": { "type": "object" },
+        "derived": { "type": "object" },
+        "air_rule": { "$ref": "#/$defs/text" }
+      }
+    },
+    "block": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "label", "to"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "$ref": "#/$defs/text" },
+        "to": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+        "parts": { "type": "array", "items": { "$ref": "#/$defs/id" } }
+      }
+    },
+    "part": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "class", "role", "spec", "qty", "ease", "citations"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "class": { "$ref": "#/$defs/text" },
+        "role": { "$ref": "#/$defs/text" },
+        "spec": { "type": "object" },
+        "qty": { "type": "object", "description": "Quantity per option id, e.g. {S:4,M:8,L:16}. Value may be [UNKNOWN]." },
+        "ease": { "enum": ["hardware-store", "electronics-retail", "online-common", "specialist", "[UNKNOWN]"] },
+        "example_items": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+        "model_node": { "type": "string", "maxLength": 120 },
+        "notes": { "type": "string", "maxLength": 2000 },
+        "citations": { "type": "array", "items": { "$ref": "#/$defs/id" } }
+      }
+    },
+    "safety": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "topic", "rule", "citations"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "topic": { "enum": ["fusing", "bms", "thermal", "transport", "wiring", "charging", "assembly"] },
+        "rule": { "$ref": "#/$defs/text" },
+        "citations": { "type": "array", "items": { "$ref": "#/$defs/id" } }
+      }
+    },
+    "model": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "generator", "units"],
+      "properties": {
+        "kind": { "enum": ["parametric", "gltf"] },
+        "generator": { "type": "string", "pattern": "^js/atlas/models/[a-z0-9-]+\\.js$" },
+        "gltf": { "type": "string", "pattern": "^data/atlas/models/[a-z0-9-]+\\.glb$" },
+        "units": { "const": "mm" },
+        "note": { "type": "string", "maxLength": 1000 }
+      }
+    }
+  }
+}

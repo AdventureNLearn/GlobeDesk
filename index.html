@@ -17,7 +17,7 @@
       <span class="menu-btn-label">Menu</span>
     </button>
     <div class="brand"><span class="brand-name">GlobeDesk</span>
-      <span class="brand-sub"><a id="handleLink" href="https://x.com/AdventureNLearn" target="_blank" rel="noopener noreferrer">@AdventureNLearn</a> · <span id="appVersion" class="ver">v1.3.1 · Share &amp; Export</span></span></div>
+      <span class="brand-sub"><a id="handleLink" href="https://x.com/AdventureNLearn" target="_blank" rel="noopener noreferrer">@AdventureNLearn</a> · <span id="appVersion" class="ver">v1.4.0-draft · not released</span></span></div>
     <input id="epTitle" class="ep-title" aria-label="Episode title" placeholder="Episode title">
     <div class="tools tools-essential" id="toolsEssential">
       <button id="btnReset" type="button" title="Reset to the default globe (H)" aria-keyshortcuts="h">Reset</button>
@@ -31,6 +31,7 @@
       <button id="btnRecord" class="rec" title="Record WebM in real time">● Record</button>
       <button id="btnExport" type="button" title="Export an MP4 video or an offline share pack" aria-haspopup="dialog" aria-controls="exportDialog">Export</button>
       <button id="btnViewToggle" type="button" aria-pressed="false" title="Open the full editor suite">Workspace</button>
+      <button id="btnAtlas" type="button" aria-pressed="false" aria-controls="atlasView" title="Atlas: GlobeDesk's own cited encyclopedia (draft)">Atlas</button>
     </div>
     <div class="tools tools-overflow" id="tools">
       <button id="btnArchive" title="Every show and story ever added. Open one to bring it back.">Archive</button>
@@ -62,6 +63,7 @@
 
   <main class="desk">
     <aside id="newsdesk" class="col newsdesk" aria-label="News desk">
+      <div class="desk-switch"><label for="deskSelect" class="small muted">Desk</label> <select id="deskSelect" aria-label="Choose a desk"></select></div>
       <section class="panel nd-head">
         <h2>News desk</h2>
         <p id="ndMeta" class="muted small">Loading topics…</p>
@@ -70,6 +72,7 @@
       <div id="ndNotice" class="nd-notice" hidden></div>
       <div id="ndCards" class="nd-cards" aria-label="Stories"></div>
       <div id="ndResearch" class="nd-research" hidden aria-label="Research"></div>
+      <div id="workDesk" class="work-desk" hidden aria-live="polite"></div>
     </aside>
     <div class="dock dock-left" id="dockLeft" data-dock="left">
       <div class="dock-resizer" data-resize="left" tabindex="0" role="separator" aria-orientation="vertical" aria-label="Resize left dock"></div>
@@ -140,6 +143,7 @@
     </div>
     <div id="floatLayer" class="float-layer"></div>
   </main>
+  <aside id="atlasView" class="atlas-view" hidden aria-label="Atlas"></aside>
 
   <dialog id="layersPanel" class="layers-panel" aria-labelledby="layersPanelTitle">
     <div class="lp-head">
@@ -230,6 +234,17 @@
   <script src="js/layout.js"></script>
   <script src="js/reset-view.js"></script>
   <script src="js/layers-panel.js"></script>
+  <script src="js/atlas/atlas-data.js"></script>
+  <script src="js/atlas/atlas-model.js"></script>
+  <script src="js/atlas/pricing.js"></script>
+  <script src="js/atlas/models/bag-solar-kit.js"></script>
+  <script src="js/source-class.js"></script>
+  <script src="js/community-cards.js"></script>
+  <script src="js/personal-layer.js"></script>
+  <script src="js/user-layers.js"></script>
+  <script src="js/work-desks.js"></script>
+  <script src="js/atlas/atlas-3d.js"></script>
+  <script src="js/atlas/atlas-view.js"></script>
   <script src="js/share-pack.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/commands.js"></script>

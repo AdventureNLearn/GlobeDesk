@@ -123,10 +123,11 @@ await t("Default title replaces [UNKNOWN] on first load", () => {
   assert.equal(dt(null, null), "Welcome to GlobeDesk");
 });
 
-await t("Version is v1.3.1 in the app, package.json and the CHANGELOG", () => {
-  assert.match(read("js", "version.js"), /APP\s*[:=]\s*"1\.3\.1"/);
-  assert.equal(JSON.parse(read("package.json")).version, "1.3.1");
-  assert.match(read("index.html"), /v1\.3\.1/);
+await t("Version is v1.4.0-draft (not released) in the app, package.json and the CHANGELOG", () => {
+  assert.match(read("js", "version.js"), /APP\s*[:=]\s*"1\.4\.0-draft"/);
+  assert.equal(JSON.parse(read("package.json")).version, "1.4.0-draft");
+  assert.match(read("index.html"), /v1\.4\.0-draft/);
+  assert.match(read("CHANGELOG.md"), /1\.4\.0-draft[^\n]*not released/);
   assert.match(read("CHANGELOG.md"), /1\.3\.1/);
 });
 

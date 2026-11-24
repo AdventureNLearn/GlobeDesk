@@ -1,0 +1,15 @@
+{ "schema": "globedesk.atlas-entries/1", "pack": "energy", "entries": [
+  { "id": "portable-solar-power", "title": "Portable solar power", "kind": "topic", "category_path": ["energy", "portable-power"], "tier": "everyday",
+    "summary": "DRAFT. How a folding panel, a charge controller and a battery pack work together. A 75 V / 10 A controller suits up to about 145 W of panels on 12 V.",
+    "places": [], "dates": [], "sources": ["mppt-vpp"], "related": [{ "type": "see-also", "to": "bag-solar-kit" }, { "type": "see-also", "to": "solar-resource-by-region" }],
+    "pack": "energy", "status": "draft", "confidence": "low", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false },
+  { "id": "lithium-batteries-air-travel", "title": "Lithium batteries and air travel (US)", "kind": "topic", "category_path": ["energy", "batteries-storage"], "see_also_paths": [["preparedness", "kits-checklists"]], "tier": "everyday",
+    "summary": "DRAFT. Under FAA PackSafe, spare lithium-ion batteries go in carry-on only, with terminals protected. Up to 100 Wh is allowed; 101-160 Wh needs airline approval, two spares at most.",
+    "places": [{ "region": "US", "precision": "country" }], "dates": [], "sources": ["faa-packsafe"], "related": [{ "type": "see-also", "to": "bag-solar-kit" }],
+    "pack": "energy", "status": "draft", "confidence": "high", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false },
+  { "id": "solar-resource-by-region", "title": "[PLACEHOLDER] Solar resource by region", "kind": "dataset", "category_path": ["energy", "solar"], "see_also_paths": [["earth", "solar-resource"]], "tier": "student",
+    "summary": "PLACEHOLDER. Peak sun hours by region, to be built from PVGIS with its required credit. Not built yet; values [UNKNOWN].",
+    "places": [], "dates": [], "sources": [], "related": [],
+    "pack": "energy", "status": "placeholder", "confidence": "[UNKNOWN]", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false,
+    "outbound": [{ "title": "PVGIS usage conditions", "url": "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis/general-information/usage-conditions-data-protection_en" }] }
+] }

@@ -1,0 +1,28 @@
+{
+  "schema": "globedesk.atlas-years/1",
+  "generated": "2026-11-24",
+  "dates": [
+    {
+      "date": "1996",
+      "precision": "year",
+      "approximate": false,
+      "entry": "phosphate-cathode-discovery"
+    },
+    {
+      "date": "2026-11-24",
+      "precision": "day",
+      "approximate": false,
+      "entry": "bag-solar-kit-prices"
+    }
+  ],
+  "undated": [
+    "currency-conversion",
+    "lithium-element",
+    "solar-resource-by-region",
+    "water-filter-kit",
+    "bag-solar-kit",
+    "lifepo4-vs-nmc",
+    "lithium-batteries-air-travel",
+    "portable-solar-power"
+  ]
+}

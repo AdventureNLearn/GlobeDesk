@@ -1,0 +1,51 @@
+{
+  "schema": "globedesk.atlas-places/1",
+  "generated": "2026-11-24",
+  "places": [
+    {
+      "key": "GB",
+      "precision": "country",
+      "entries": [
+        "bag-solar-kit-prices"
+      ]
+    },
+    {
+      "key": "IN",
+      "precision": "country",
+      "entries": [
+        "bag-solar-kit-prices"
+      ]
+    },
+    {
+      "key": "IT",
+      "precision": "country",
+      "entries": [
+        "bag-solar-kit-prices"
+      ]
+    },
+    {
+      "key": "US",
+      "precision": "country",
+      "entries": [
+        "bag-solar-kit-prices",
+        "lithium-batteries-air-travel"
+      ]
+    },
+    {
+      "key": "US-TX",
+      "precision": "subdivision",
+      "entries": [
+        "phosphate-cathode-discovery"
+      ]
+    }
+  ],
+  "no_place": [
+    "currency-conversion",
+    "lithium-element",
+    "solar-resource-by-region",
+    "water-filter-kit",
+    "bag-solar-kit",
+    "lifepo4-vs-nmc",
+    "portable-solar-power"
+  ]
+}

@@ -54,6 +54,15 @@ The default spoken voice is the browser's free speech synthesis.
 
 Click **Layers** in the top bar (or press **L**) to see every map layer in one place. Each row has an on/off switch, a one-line description and a small legend. **Show all** turns on every overlay that can sit on the current base map; **Hide all** turns them all off. Pick the base map at the top of the panel. Dated imagery and official GIS layers are further down and stay off until you opt in. **Reset** (H) flies back to the starting globe without changing your layers.
 
+## Atlas, desks and your layer (v1.4.0-draft, not released)
+
+- **Atlas.** Press **Atlas** in the top bar. Browse **A–Z** (letter jump and search), **Categories** (12, with pack status; categories without a pack yet are greyed), **By place** (counts on the globe by country; places are coarse) or **By year**. On the year slider, the current year zooms to **Months** and **Weeks**, and **This week** jumps to the current ISO week. Pick a reading level (Kids, Everyday, Student, Professional); entries not written at that level say so with `[UNKNOWN]`.
+- **Entry tabs.** **Object** (summary, sizes, key facts, safety rules in the record), **Parts** (quantities and bundled, dated price checks by region; unknown prices stay `[UNKNOWN]`), **Chemistry**, and **Sources**, grouped as Official sources, Other cited references, Experimental references (the maintainer's own repos and cards, never official) and Community links.
+- **Globe | 3D.** Globe flies to an entry's place. 3D draws the bag solar kit's parametric layout with the bundled three.js; it is an artistic layout, not a build drawing. All Atlas entries are drafts; the kit is not built or tested. Online price and solar lookups are off.
+- **Desks.** The **Desk** menu above the news desk switches between News (unchanged) and nine work desks. Each desk shows its scope, reading levels, official sources (or `Official source [UNKNOWN]`), and experimental references labelled *Experimental (not an official source)*.
+- **Your layer.** Layers, **Your layer**: pin the map centre, follow Atlas entries, add notes, and **Export** or **Import** them as a JSON file. It stays in this browser on this device.
+- **Community.** Layers, **Community** (off by default) shows contributor cards per Atlas category, community links and community pins with their own badge. See CONTRIBUTING.md, Contributor cards.
+
 ## Export MP4 and share packs
 
 Click **Export** in the top bar.

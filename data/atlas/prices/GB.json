@@ -1,0 +1,9 @@
+{
+  "schema": "globedesk.prices/1",
+  "region": "GB",
+  "currency": "GBP",
+  "tax_note": "VAT inclusion per row; [UNKNOWN] where the source did not say.",
+  "rows": [
+    { "object": "bag-solar-kit", "part": "mppt", "status": "checked", "item": "Victron SmartSolar MPPT 75/10", "seller": "idealo.co.uk (4 offers)", "url": "https://www.idealo.co.uk/compare/6042755/victron-smartsolar-mppt-75-10.html", "low": 39.10, "high": 52.63, "unit": "each", "includes_tax": "[UNKNOWN]", "checked": "2026-11-24", "method": "web-search" }
+  ]
+}

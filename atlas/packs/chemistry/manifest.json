@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "chemistry",
+  "title": "Atlas pack: Chemistry and materials",
+  "kind": "category",
+  "category": "chemistry",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "3ff1cc48dc5a59330801adfbce3106962cf48905dba151d6b814a37e6ee39a9f",
+  "entry_count": 3,
+  "size_bytes": 2115,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 2115,
+      "sha256": "04d769e5bc6cc5e1c9bd10063b8c6f41983c04b0f52ce6622759f516786e09b0"
+    }
+  ]
+}

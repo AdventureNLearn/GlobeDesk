@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "energy",
+  "title": "Atlas pack: Energy and power",
+  "kind": "category",
+  "category": "energy",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "0b53f131e3043aa5e0abf2c1fc76cc32ac1220c4142ba31ae5b47c35853c3318",
+  "entry_count": 3,
+  "size_bytes": 2299,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 2299,
+      "sha256": "df5c2bc69fe549dc14ad602a2c853d290677eb8bd56fe2c6ee1bfd1246555fb2"
+    }
+  ]
+}

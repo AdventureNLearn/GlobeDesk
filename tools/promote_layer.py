@@ -266,8 +266,45 @@ def promote(src: Path, catalog_id: str | None, label: str | None, dest: str | No
     }
 
 
+def promote_card(src: Path, dest: str | None, yes: bool, patterns: str | None) -> dict:
+    """Contributor card: strip contact fields, check the card, scan it, and write a candidate only with --yes."""
+    import contributor_card
+    try:
+        card = json.loads(src.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        raise PromoteError(f"could not read card: {e}")
+    if not isinstance(card, dict):
+        raise PromoteError("a contributor card must be a JSON object")
+    cleaned, removed = contributor_card.strip_contacts(card)
+    errs = contributor_card.check(cleaned)
+    if errs:
+        raise PromoteError("blocked: the card does not pass the contributor-card rules", errs)
+    patterns = require_patterns(patterns)
+    out = Path(dest) if dest else ROOT / "atlas" / "community" / "candidates" / f"{cleaned['handle']}.json"
+    with tempfile.TemporaryDirectory() as td:
+        tmp = Path(td) / out.name
+        tmp.write_text(json.dumps(cleaned, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        scrub_hits = run_scrub(tmp)
+        if scrub_hits:
+            raise PromoteError("blocked: scrub_scan reported hits", scrub_hits)
+        name_hits = run_name_scan(tmp, patterns)
+        if name_hits:
+            raise PromoteError("blocked: name_scan reported hits", name_hits)
+        if not yes:
+            raise PromoteError(
+                "refusing to write: owner YES is required for each promote (pass --yes after that confirmation). Nothing was written or committed.",
+                [f"candidate would be {out}", "stripped: " + (", ".join(removed) or "nothing")],
+            )
+        out.parent.mkdir(parents=True, exist_ok=True)
+        if out.exists():
+            raise PromoteError(f"refusing to overwrite existing file {out}")
+        shutil.copyfile(tmp, out)
+    return {"ok": True, "path": str(out), "handle": cleaned["handle"], "stripped": removed, "committed": False,
+            "note": "Wrote a contributor-card candidate only. Add it to atlas/community/community.json after review and the owner's YES. Nothing was committed."}
+
+
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Write one catalog item as a public-tree candidate. Never commits.")
+    ap = argparse.ArgumentParser(description="Write one catalog item (or, with --card, one contributor card) as a public-tree candidate. Never commits.")
     ap.add_argument("--item", required=True, help="Path to a catalog JSON file (absolute, or relative to GLOBEDESK_DATA).")
     ap.add_argument("--id", dest="catalog_id", help="Optional catalog or story id inside that file.")
     ap.add_argument("--label", choices=LABELS, help="PUBLIC, RECORDED, or PROJECTED.")
@@ -275,6 +312,7 @@ def main() -> int:
     ap.add_argument("--patterns", help="JSON patterns file for name_scan.")
     ap.add_argument("--yes", action="store_true", help="Write the candidate. Still does not commit. Owner YES required.")
     ap.add_argument("--data", help="GLOBEDESK_DATA root when --item is relative.")
+    ap.add_argument("--card", action="store_true", help="--item is a contributor card: strip contact fields and check it.")
     a = ap.parse_args()
     base = Path(a.data) if a.data else local_tiles.data_dir(ROOT)
     src = Path(a.item)
@@ -284,7 +322,7 @@ def main() -> int:
         print(f"promote: no such item {a.item}", file=sys.stderr)
         return 2
     try:
-        result = promote(src, a.catalog_id, a.label, a.dest, a.yes, a.patterns)
+        result = promote_card(src, a.dest, a.yes, a.patterns) if a.card else promote(src, a.catalog_id, a.label, a.dest, a.yes, a.patterns)
     except PromoteError as e:
         print(f"promote: {e}", file=sys.stderr)
         for r in e.reasons:

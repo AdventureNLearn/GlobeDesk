@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.4.0-draft — not released (local branch next/atlas-v1.4)
+
+- Version shown as "v1.4.0-draft · not released". The release name is an open owner question (atlas/OPEN-ITEMS.md, item 12). Not pushed, merged or published.
+- **Atlas.** New **Atlas** view beside News desk and Workspace: A–Z, Categories, By place and By year browsing (years, then months and ISO weeks in the current year, plus **This week**), a reading-level switch, a **Globe | 3D** switch, and Object, Parts, Chemistry and Sources tabs. Data: 12-category tree, entry schema (`schema/atlas-entry.schema.json`), pack manifest schema (`schema/atlas-pack-manifest.schema.json`), a core pack and four starter packs (Energy, 3D objects, Chemistry, Economics and prices; 10 draft or placeholder entries), the bag solar kit record, LFP vs NMC chemistry record and US, GB, IT and IN price checks. `tools/atlas/` builds the packs and the generated `js/atlas/atlas-data.js` and validates everything (no entries about living people, Now timing, sources, sizes under 50 MB, hashes). Online price and solar lookups stay off.
+- **3D.** three.js r158 (MIT, unmodified) is vendored and lazy-loaded only when 3D is chosen; it draws the kit's parametric layout. If WebGL or the file is missing, the view is a labelled stub.
+- **Work desks.** A **Desk** menu above the news desk adds nine work desks next to the unchanged News desk: Permits and Codes; Jobsite and Constructability; Trades and Skills; Engineering and 3D Objects; Energy and Materials; Infrastructure, Trade and Routes; Regulatory and Public Records; Surveillance and Civil Liberties; Security and Counterterrorism (`desks/work-desks.json`).
+- **Source classes (owner rule).** Official sources are primary or public records only. The maintainer's own repos and Learning Lab cards are listed as *Experimental (not an official source)* in a separate group and never count as a record backing a claim; the validator refuses an owner repo tagged official. Eight desks show `Official source [UNKNOWN]` and are listed as open.
+- **Your layer and Community (v1).** A personal layer (pins, notes, followed topics, links) stays in the browser with Import and Export. Contributor cards (handle, 1–2 line description, topics, up to 3 public links, checked date; no contact or location fields) with a schema and validator. A **Community** switch in Layers, off by default, with its own pin style and badge; contributor lists per Atlas category; community links kept apart from sources. `tools/promote_layer.py --card` strips contact fields. No profiles, ratings, accounts or server.
+- Open items: the 12 owner questions stay OPEN, plus 9 new ones, in [atlas/OPEN-ITEMS.md](atlas/OPEN-ITEMS.md).
+
 ## v1.3.1 — Share & Export (patch) — 2026-11-22
 
 - Version shown as "v1.3.1 · Share & Export".

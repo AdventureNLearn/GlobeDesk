@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "objects",
+  "title": "Atlas pack: 3D objects and builds",
+  "kind": "category",
+  "category": "objects",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "0e713abb7c88e8ae58f0a3e87557bec2d4c1e49c54a6c399dd01d8a558402878",
+  "entry_count": 2,
+  "size_bytes": 1613,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 1613,
+      "sha256": "6c8507b8faba82ddfb05a16dcd3f8303a1dc73dafa0817adb79c2d1b64f36a71"
+    }
+  ]
+}

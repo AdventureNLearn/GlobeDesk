@@ -1,0 +1,7 @@
+{
+  "schema": "globedesk.community/1",
+  "note": "Reviewed contributor cards, community links and community pins. Empty until the first card passes maintainer review and the owner's YES. Cards arrive by pull request; see CONTRIBUTING.md, Contributor cards.",
+  "cards": [],
+  "links": [],
+  "pins": []
+}

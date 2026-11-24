@@ -1,0 +1,26 @@
+{
+  "schema": "globedesk.prices/1",
+  "region": "US",
+  "currency": "USD",
+  "tax_note": "US listings show prices before sales tax. Shipping varies.",
+  "rows": [
+    { "object": "bag-solar-kit", "part": "mppt", "status": "checked", "item": "Victron SmartSolar MPPT 75/10", "seller": "critpro.com", "url": "https://critpro.com/victron-smartsolar-mppt-75-10-solar-charge-controller/", "low": 65.45, "unit": "each", "includes_tax": "no", "checked": "2026-11-24", "method": "web-search", "note": "MSRP shown as 77.00; 6.95 flat shipping." },
+    { "object": "bag-solar-kit", "part": "cell", "status": "checked", "item": "LiFePO4 32700 6000 mAh cell", "seller": "fullbattery.com", "url": "https://fullbattery.com/products/32700", "low": 5.41, "unit": "each", "includes_tax": "no", "checked": "2026-11-24", "method": "web-search" },
+    { "object": "bag-solar-kit", "part": "panel", "status": "checked", "item": "100 W folding ETFE panel, 18 V (several listings)", "seller": "amazon.com", "url": "https://www.amazon.com/SOKIOVOLA-Portable-Waterproof-Lightweight-Activities/dp/B0CRB3DFRV", "low": 69.99, "high": 109.99, "unit": "each", "includes_tax": "no", "checked": "2026-11-24", "method": "web-search", "note": "Range across 4 listings in one search." },
+    { "object": "bag-solar-kit", "part": "ref-prebuilt-pack", "status": "checked", "item": "Ready-made 12.8 V 6 Ah LiFePO4 pack with BMS (baseline to compare against custom)", "seller": "amazon.com", "url": "https://www.amazon.com/TalentCell-LiFePO4-Battery-Rechargeable-Phosphate/dp/B08R1FWW5P", "low": 16.99, "high": 32.99, "unit": "each", "includes_tax": "no", "checked": "2026-11-24", "method": "web-search", "note": "Range across 5 listings in one search." },
+    { "object": "bag-solar-kit", "part": "bms", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "busbar", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "holder", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "enclosure", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "main-fuse", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "switch", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "pv-fuse", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "pv-cable", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "wire", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "connectors", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "usbc-pd", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "dc-out", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "inverter", "status": "unknown" },
+    { "object": "bag-solar-kit", "part": "bag", "status": "unknown" }
+  ]
+}

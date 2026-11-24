@@ -41,9 +41,11 @@ Hosted Grok.me copies follow the host notes in [GROK-ME-BUILD.md](GROK-ME-BUILD.
 ## Checks to run before you open a PR
 
 ```bash
-npm test                                            # unit suites (Node 20+)
+npm test                                            # unit suites (Node 20+), including the Atlas, desks and community tests
 python3 -m unittest discover -s tests -p "test_*.py" # Python tool and server tests
 node tests/smoke-basic.mjs                          # headless Chrome load; must report 0 errors
+node tests/smoke-atlas.mjs                          # if you changed the Atlas, desks or user layers
+node tools/atlas/build-packs.mjs && node tools/atlas/build-js.mjs  # after editing atlas/, data/atlas/ or desks/
 python3 tools/make_grokme_manifest.py               # if you changed any file the app serves...
 python3 tools/make_grokme_manifest.py --check       # ...then this must print ok
 python3 tools/scrub_scan.py                         # must report 0 hits
@@ -63,6 +65,19 @@ Use the template that opens with every PR ([.github/PULL_REQUEST_TEMPLATE.md](.g
 6. **Tests run:** the commands from the checks above and their results.
 
 One focused change per PR is easiest to review. Draft PRs are fine for early feedback.
+
+## Contributor cards (Community lane, v1.4.0-draft)
+
+You can add yourself as a contributor for Atlas topics you care about. A card is a **credit**, not an Atlas entry about you.
+
+- **What a card holds:** a public handle you choose, a one- or two-line description, 1 to 6 Atlas categories (for example `energy` or `history-places/routes`), up to 3 public https links, a checked date and the licence CC BY 4.0. Format: [schema/globedesk-contributor-card.schema.json](schema/globedesk-contributor-card.schema.json).
+- **What a card never holds:** email, phone, real name, address or location. The promote tool strips these (`python3 tools/promote_layer.py --card --item your-card.json --patterns your-list.json`), but leave them out.
+- **How it is shown:** in its own Community lane, off by default (Layers, Community), with a Community badge and its own pin style. Community links sit apart from official sources under an Atlas entry and never back a claim. Contributor lists appear per Atlas category.
+- **Official vs experimental:** official sources are primary or public records (government, standards bodies, datasets with a named licence). Links to the maintainer's own repositories or Learning Lab cards are shown as *Experimental (not an official source)* and are never counted as a record. The Atlas validator refuses an owner repo tagged official.
+- **Review:** open a pull request that adds your card to `atlas/community/community.json`. Every link still needs a checkable public page and a named licence. Cards carry a checked date and fade after a year without a recheck. Nothing goes public without maintainer review and the owner's YES.
+- **Not in v1:** profiles, ratings, accounts or anything that needs a server.
+
+Your **personal layer** (your pins, notes, followed topics and links) is different: it stays in your browser on your device. Export and Import in Layers, Your layer, move it as a JSON file ([schema/globedesk-personal-layer.schema.json](schema/globedesk-personal-layer.schema.json)). Share it only if you choose to.
 
 ## Code style
 

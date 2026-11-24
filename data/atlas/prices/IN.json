@@ -1,0 +1,9 @@
+{
+  "schema": "globedesk.prices/1",
+  "region": "IN",
+  "currency": "INR",
+  "rows": [
+    { "object": "bag-solar-kit", "part": "cell", "status": "checked", "item": "LiFePO4 32700 6000 mAh cell", "seller": "flyrobo.in", "url": "https://www.flyrobo.in/32700-3.2v-6000mah-lifepo4-battery-3c", "low": 305, "unit": "each", "includes_tax": "yes", "checked": "2026-11-24", "method": "web-search", "note": "Inc GST; 279 each at 7 or more." },
+    { "object": "bag-solar-kit", "part": "cell", "status": "checked", "item": "LiFePO4 32700 6000 mAh cell", "seller": "electroncomponents.com", "url": "https://www.electroncomponents.com/32700-lifepo-3v2-battery-rechargeable-high-power-6k", "low": 285, "unit": "each", "includes_tax": "no", "checked": "2026-11-24", "method": "web-search", "note": "Plus GST." }
+  ]
+}

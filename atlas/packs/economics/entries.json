@@ -1,0 +1,14 @@
+{ "schema": "globedesk.atlas-entries/1", "pack": "economics", "entries": [
+  { "id": "bag-solar-kit-prices", "title": "Bag solar kit prices by region", "kind": "record", "category_path": ["economics", "regional-prices"], "tier": "everyday",
+    "summary": "DRAFT. One-time price checks from web search on Nov 24, 2026, in local currency. Most parts are still [UNKNOWN]; totals add checked parts only.",
+    "places": [{ "region": "US", "precision": "country" }, { "region": "GB", "precision": "country" }, { "region": "IT", "precision": "country" }, { "region": "IN", "precision": "country" }],
+    "dates": [{ "date": "2026-11-24", "precision": "day", "approximate": false, "label": "prices checked" }],
+    "sources": ["price-us-critpro", "cell-fullbattery", "panel-listing", "price-us-pack-listing", "price-gb-idealo", "price-it-idealo", "price-in-flyrobo", "price-in-electroncomponents"],
+    "related": [{ "type": "part-of", "to": "bag-solar-kit" }],
+    "records": ["data/atlas/prices/US.json", "data/atlas/prices/GB.json", "data/atlas/prices/IT.json", "data/atlas/prices/IN.json"],
+    "pack": "economics", "status": "draft", "confidence": "low", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false },
+  { "id": "currency-conversion", "title": "[PLACEHOLDER] Currency conversion for prices", "kind": "dataset", "category_path": ["economics", "currencies"], "tier": "student",
+    "summary": "PLACEHOLDER. Optional, labelled conversion of regional prices. Rate source and reuse terms [UNKNOWN].",
+    "places": [], "dates": [], "sources": [], "related": [],
+    "pack": "economics", "status": "placeholder", "confidence": "[UNKNOWN]", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false }
+] }

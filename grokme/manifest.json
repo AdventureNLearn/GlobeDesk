@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "1.3.1",
+  "version": "1.4.0-draft",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",
@@ -31,8 +31,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 29193,
-      "sha256": "ceac1d8662883ab879842466906dcc3c345c67a073ed68cb9bc69b9f17a0950b"
+      "size": 31896,
+      "sha256": "bfb6373ce628a225e15fa4816645a6d0b289051aa966b6bf74b275be82334cb6"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -41,13 +41,13 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "size": 6569,
-      "sha256": "a1e05b0d3aefa6225c3af2bebd1702890ff5c782e04ee9079941ffa4b29598ca"
+      "size": 8875,
+      "sha256": "802871725b2fa7e76fc78d1b4aec3c874e50e419e591b6e9ae406edd02d4d0b3"
     },
     {
       "path": "CREDITS.md",
-      "size": 5713,
-      "sha256": "028de8bc95a3f52188a196298258b0684a912af3d9ad4e055f862dadd0f610ed"
+      "size": 6229,
+      "sha256": "b0778c19e818b031f2ee70b26c82d902ec0e2f5edd8abb395943598718f88f1c"
     },
     {
       "path": "FORKING.md",
@@ -81,8 +81,8 @@
     },
     {
       "path": "USER-GUIDE.md",
-      "size": 6505,
-      "sha256": "fbb0d135394fa12102bdf53c26def8ca5e4a4b9d57ebadab7a9ca033ce08424e"
+      "size": 8364,
+      "sha256": "e745bc5820baf54ecd7d27d329996e21870ab4b78cbb0b3e89aba714787bf5d8"
     },
     {
       "path": "WINDOWS-RUN.md",
@@ -90,9 +90,129 @@
       "sha256": "3ceb4b41b997d209055d923c82d1b08bc86fcd42c7ecae8cedcb8eb1efd9e46e"
     },
     {
+      "path": "atlas/README.md",
+      "size": 2069,
+      "sha256": "f97648c9207398b72a7619623edb7dc56b99888c295627731f1595c015be5868"
+    },
+    {
+      "path": "atlas/categories.json",
+      "size": 6586,
+      "sha256": "d619add808a90aad1f6c947a70b9bc272a8cf3d5c29c2ac88cd8da0a037f14ab"
+    },
+    {
+      "path": "atlas/community/community.json",
+      "size": 304,
+      "sha256": "c176a853c26a2b03603c8f8a938cc456be46303f31ddc369e4cce11acc0d0da9"
+    },
+    {
+      "path": "atlas/packs/chemistry/entries.json",
+      "size": 2115,
+      "sha256": "04d769e5bc6cc5e1c9bd10063b8c6f41983c04b0f52ce6622759f516786e09b0"
+    },
+    {
+      "path": "atlas/packs/chemistry/manifest.json",
+      "size": 635,
+      "sha256": "2b23c6c20315d929ad82958a1d7a501ad32ae06a2a40b0b8336bd4bd4eebbde7"
+    },
+    {
+      "path": "atlas/packs/core/categories.json",
+      "size": 8762,
+      "sha256": "7d5f6542838d253b6916aa9678121dae9ff453ab6d82b470de7bfe462e27fc49"
+    },
+    {
+      "path": "atlas/packs/core/index.json",
+      "size": 3390,
+      "sha256": "8b8c9237c239425233cf7f50b2f93bcb37186daae1f32d7c71c1544ff53645cf"
+    },
+    {
+      "path": "atlas/packs/core/manifest.json",
+      "size": 1209,
+      "sha256": "6b53caa46fd031617dd4387b3ceac0b01fe35537743b3d69e0f37da540415258"
+    },
+    {
+      "path": "atlas/packs/core/places.json",
+      "size": 941,
+      "sha256": "bd83b51d25488b7cd597e80cda12819f7a856386730be5e50930300e39bd00ff"
+    },
+    {
+      "path": "atlas/packs/core/sources.json",
+      "size": 4292,
+      "sha256": "7052ad04f7b893c355bfee3e9b9eb3395bd3a72f3c605f66518a8512d4945b4a"
+    },
+    {
+      "path": "atlas/packs/core/years.json",
+      "size": 588,
+      "sha256": "75fa8dbad07c52b526f78a3d5c52ca11501605968e35d4c3feee1a0080da846b"
+    },
+    {
+      "path": "atlas/packs/economics/entries.json",
+      "size": 1791,
+      "sha256": "38e0ae47dbf60b195fd18f4adcdf038bf1528e78c87f1ce1527bc6b6b5dc0d55"
+    },
+    {
+      "path": "atlas/packs/economics/manifest.json",
+      "size": 632,
+      "sha256": "aaaa2146d62c19c95be2c4f335ca0ec7b6e24b00147e66ecef5d1518afcee2bb"
+    },
+    {
+      "path": "atlas/packs/energy/entries.json",
+      "size": 2299,
+      "sha256": "df5c2bc69fe549dc14ad602a2c853d290677eb8bd56fe2c6ee1bfd1246555fb2"
+    },
+    {
+      "path": "atlas/packs/energy/manifest.json",
+      "size": 622,
+      "sha256": "8a7315694cad839260b68c04c2afb7ff1fd588da1ca94274c227ee86efca060a"
+    },
+    {
+      "path": "atlas/packs/objects/entries.json",
+      "size": 1613,
+      "sha256": "6c8507b8faba82ddfb05a16dcd3f8303a1dc73dafa0817adb79c2d1b64f36a71"
+    },
+    {
+      "path": "atlas/packs/objects/manifest.json",
+      "size": 629,
+      "sha256": "428ca5d4f99f3f132f412a1d1e485cc31ae7a6afb0cc0443a7befa98e633ded7"
+    },
+    {
+      "path": "atlas/views.json",
+      "size": 1348,
+      "sha256": "374d404557c92b4f6844b62c2cbcfed5d15f0d70c1e2aec01d1ad2e2788a09d5"
+    },
+    {
       "path": "css/app.css",
-      "size": 42970,
-      "sha256": "c526e5fb0ef7403e40d03b21c4eb58a7fe3daa2dced30783cb7b75b776a1dc31"
+      "size": 49167,
+      "sha256": "3587bdfdfd9c2a6b19aa192b56d2b1d8c6e05329691bb45290240c909c3ed2a9"
+    },
+    {
+      "path": "data/atlas/chemistry/lifepo4-vs-nmc.json",
+      "size": 1356,
+      "sha256": "68fd946126e828fc2360bbf5caf3d94b4a844bf4376e1dd6d70981cdc9672800"
+    },
+    {
+      "path": "data/atlas/objects/bag-solar-kit.json",
+      "size": 15810,
+      "sha256": "6b23fe8558c54f2f4b12b6fb0376a92b8974f8a1f55d302182893aebb73a1080"
+    },
+    {
+      "path": "data/atlas/prices/GB.json",
+      "size": 531,
+      "sha256": "7d791f607f687f60b1733dc7221c0781f3631694ac0d12671135a631c317799d"
+    },
+    {
+      "path": "data/atlas/prices/IN.json",
+      "size": 805,
+      "sha256": "3212ae7630a7abd361d9be1a4d7e041a90ab11abd84baab39bcaf707f57acf6b"
+    },
+    {
+      "path": "data/atlas/prices/IT.json",
+      "size": 455,
+      "sha256": "809ea84cc9d8b954bae3e5e5580fdec15858182a50ccaf5aff1f16c101db9b5a"
+    },
+    {
+      "path": "data/atlas/prices/US.json",
+      "size": 2767,
+      "sha256": "714ab5aedd446c2573bd66b5b31e50a366c5ab5b955e98b0ef8def135f9c6d32"
     },
     {
       "path": "data/gis-registry.json",
@@ -113,6 +233,11 @@
       "path": "data/world.js",
       "size": 164394,
       "sha256": "d0745375a2b75061d71a3ffdca5babe5dde5141a109ecdbe75b7493a110aa361"
+    },
+    {
+      "path": "desks/work-desks.json",
+      "size": 19296,
+      "sha256": "06dc2237385343a47bef36f7d650a239c05e0a87db1fabd0caf920032ab82d9b"
     },
     {
       "path": "docs/PROMOTE.md",
@@ -191,8 +316,8 @@
     },
     {
       "path": "index.html",
-      "size": 17270,
-      "sha256": "d907f074feeadad425b0e8e8a929b875bbba220451ab1ef506c2f42bf87152a4"
+      "size": 18268,
+      "sha256": "6c1b5e8f6b9e2c63824164f919d9793c213762bdeb245b6b2406b43b47ffa495"
     },
     {
       "path": "js/archive.js",
@@ -203,6 +328,36 @@
       "path": "js/assistant.js",
       "size": 9242,
       "sha256": "d6c433d4e27c90d295937c0b2065953b3f3e33f135261f95aad460ff073de723"
+    },
+    {
+      "path": "js/atlas/atlas-3d.js",
+      "size": 5443,
+      "sha256": "170778e246040e9916b026ac65288420558c9a26166103115c52354be2ba2062"
+    },
+    {
+      "path": "js/atlas/atlas-data.js",
+      "size": 51722,
+      "sha256": "30dfde8ba066c021b3e69c7a5069d77ca06e7259c9ff2b361eaff0c18aa07769"
+    },
+    {
+      "path": "js/atlas/atlas-model.js",
+      "size": 9488,
+      "sha256": "d8a8a44639673afa73bc10651370d08820b8a6cc6d777b68f1b2a365e683c0ed"
+    },
+    {
+      "path": "js/atlas/atlas-view.js",
+      "size": 30989,
+      "sha256": "4ca44d76c3e0bdb71fe7de9432e8fb5b77190f917b95a4077257d49cbca440e9"
+    },
+    {
+      "path": "js/atlas/models/bag-solar-kit.js",
+      "size": 1528,
+      "sha256": "bca5afd02005c32ef34a6d70456601e29faf42c02f8e3cc644713652ef9f8235"
+    },
+    {
+      "path": "js/atlas/pricing.js",
+      "size": 1905,
+      "sha256": "2af98a558e0e49b0d9d72cd9d310e2ef7c0b0e9789794aae7a8f126ad26a9279"
     },
     {
       "path": "js/audio-mix.js",
@@ -233,6 +388,11 @@
       "path": "js/commands.js",
       "size": 33042,
       "sha256": "95646e7987ae641ab06d0c2077ff339ae54c97dd0f72ed74935075df5d9cb215"
+    },
+    {
+      "path": "js/community-cards.js",
+      "size": 7581,
+      "sha256": "a0ba814b94bfaa7e831e7811bd695420db5f59f4762a01d58f48133af044c098"
     },
     {
       "path": "js/content-layer.js",
@@ -276,8 +436,8 @@
     },
     {
       "path": "js/layers-panel.js",
-      "size": 16703,
-      "sha256": "4b20ee3d825e83b0f75eb299248ef34341dccf92aa821b128f4d1596f0d33b77"
+      "size": 16896,
+      "sha256": "06deab875647acb431bc37fcf24ba3a81da483c575d4b4a35a04b73d0ca0c25d"
     },
     {
       "path": "js/layers.js",
@@ -313,6 +473,11 @@
       "path": "js/outbound.js",
       "size": 5607,
       "sha256": "e8bb4c9b931c8f71859b8cba0dd1b094f978417f600e47c0a8aa6611c01f2e66"
+    },
+    {
+      "path": "js/personal-layer.js",
+      "size": 7050,
+      "sha256": "8f1d45e09cc7c9cf0e7e6883cd16957f5ae65d3768d7b54b7e4d75fcf0fe6d49"
     },
     {
       "path": "js/playback.js",
@@ -370,6 +535,11 @@
       "sha256": "b4435366edfb7f8ead0ab1a4e85761139f091d11d38524d6bb61d91b5137f862"
     },
     {
+      "path": "js/source-class.js",
+      "size": 2259,
+      "sha256": "99d1de2a00a159e2ee97325da613aa6354f8f9526b5bab59dc43c2f332399ac7"
+    },
+    {
       "path": "js/store.js",
       "size": 5063,
       "sha256": "4ad68b59a84f6e4c9af1d9a7e6e2d761b979cd84c116fd81d5c3724c381dd2c6"
@@ -385,9 +555,19 @@
       "sha256": "5a55595f5fc63098f4efa9315f06ace9e8cdc3f4e5969ed3e46acacc9b81e497"
     },
     {
+      "path": "js/user-layers.js",
+      "size": 6315,
+      "sha256": "f10fc404029e6bf82944154e6ec6e016645bdda2ae56ad8c5f95528306fd9b92"
+    },
+    {
       "path": "js/version.js",
-      "size": 886,
-      "sha256": "751d82947e932c97b4c386d0eac05fb0e236467eaf4daa9e8966f1e51f802b2a"
+      "size": 958,
+      "sha256": "aad6a28cf2f9562ad4230e2021b261325e41cbb059afe202feceaf3da7c6f4a1"
+    },
+    {
+      "path": "js/work-desks.js",
+      "size": 6719,
+      "sha256": "382476d8b4384132d6b1d080c18211bd35a364aee50c819fe3647328aff378b1"
     },
     {
       "path": "js/year-clock.js",
@@ -461,8 +641,18 @@
     },
     {
       "path": "package.json",
-      "size": 1073,
-      "sha256": "fa0701648364e9ed16cb511b6e3daa66f261d0e566b82b0fcef9a424ee6519c4"
+      "size": 1296,
+      "sha256": "d095c8e63789b9540a0d350857ae242ab8c493858dd915d27c3e92246479ecb8"
+    },
+    {
+      "path": "schema/atlas-entry.schema.json",
+      "size": 5160,
+      "sha256": "5f5b71289c670b3eb0f3b3fde7956259606376bed0a68c8a61b67024b704ed8f"
+    },
+    {
+      "path": "schema/atlas-pack-manifest.schema.json",
+      "size": 2112,
+      "sha256": "62e963c6d652062e3b6f1e59b34b0d63baff608adb6282fe1679ad367c0274ec"
     },
     {
       "path": "schema/globedesk-claims.schema.json",
@@ -470,9 +660,34 @@
       "sha256": "627a0149ef658b50ad1e86560756e249144c8d2967c1e15fdebfb33fbf696a29"
     },
     {
+      "path": "schema/globedesk-community.schema.json",
+      "size": 2309,
+      "sha256": "5d7f06f9bf9a420977e5ed110284f8d57d8dfbb2fb66385fdbe4102963e3dd43"
+    },
+    {
+      "path": "schema/globedesk-contributor-card.schema.json",
+      "size": 1766,
+      "sha256": "46d110915b5fd88f766e41ef08cadfa82a6d42a0c07b3ec4d4fa220ce4d65951"
+    },
+    {
+      "path": "schema/globedesk-object.schema.json",
+      "size": 5136,
+      "sha256": "fabec44f73065d7e6455840242652405829911e4c35995356596014821579aab"
+    },
+    {
       "path": "schema/globedesk-outbound.schema.json",
       "size": 2949,
       "sha256": "d1dada22822974730da8253570b3386c5e4ffb5a300f1bbd768e06f41e2733bb"
+    },
+    {
+      "path": "schema/globedesk-personal-layer.schema.json",
+      "size": 2008,
+      "sha256": "b57c1ee9c509f74bd0b8eddd1429554abf0d6e15e838e1a45703ae54f2d7b244"
+    },
+    {
+      "path": "schema/globedesk-prices.schema.json",
+      "size": 2070,
+      "sha256": "0b311c82fa8437ce085a14d6c93ef9c10f02e213fa8fcef1ebb10dfcda112237"
     },
     {
       "path": "schema/globedesk-records.schema.json",
@@ -488,6 +703,11 @@
       "path": "schema/globedesk-story.schema.json",
       "size": 28436,
       "sha256": "34e90fa30ec11540628e8bc1fe2e2f968c1a3f2ea09e5bb478068d89b2370807"
+    },
+    {
+      "path": "schema/globedesk-work-desks.schema.json",
+      "size": 6454,
+      "sha256": "b5b742ef55efe5025081ddf5654a225b60eaab7e2969a46315f9900868aa7a09"
     },
     {
       "path": "share/player.css",
@@ -508,6 +728,11 @@
       "path": "vendor/LICENSE-mediabunny.txt",
       "size": 16726,
       "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+    },
+    {
+      "path": "vendor/LICENSE-three.txt",
+      "size": 1081,
+      "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d"
     },
     {
       "path": "vendor/MAPLIBRE-PATCHES.md",
@@ -533,10 +758,15 @@
       "path": "vendor/mediabunny-1.66.2.min.js",
       "size": 759043,
       "sha256": "8a0e529432f11a94be04a737005eac7581c4b6687783e0b5fe7cb8c8fd510692"
+    },
+    {
+      "path": "vendor/three-0.158.0.min.js",
+      "size": 651651,
+      "sha256": "3b3a1c97de3ce65ec5b28c28d9f2805a738e9651622691ba771aa95c79d41d51"
     }
   ],
   "totals": {
-    "files": 105,
-    "bytes": 4595181
+    "files": 151,
+    "bytes": 5501839
   }
 }

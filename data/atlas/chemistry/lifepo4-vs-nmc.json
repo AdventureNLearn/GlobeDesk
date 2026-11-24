@@ -1,0 +1,21 @@
+{
+  "schema": "globedesk.chem/0-draft",
+  "id": "lifepo4-vs-nmc",
+  "name": "LiFePO4 (LFP) vs NMC lithium-ion",
+  "license": "CC BY 4.0 (record text). Source keeps its own terms.",
+  "checked": "2026-11-24",
+  "note": "BU-205 calls all readings average estimates at time of writing.",
+  "compare": [
+    { "property": "Nominal cell voltage", "lfp": "3.20-3.30 V", "nmc": "3.60-3.70 V", "source": "bu-205" },
+    { "property": "Operating range per cell", "lfp": "2.5-3.65 V", "nmc": "3.0-4.2 V or higher", "source": "bu-205" },
+    { "property": "Specific energy", "lfp": "90-120 Wh/kg", "nmc": "150-220 Wh/kg", "source": "bu-205" },
+    { "property": "Cycle life", "lfp": "2000 and higher", "nmc": "1000-2000", "source": "bu-205" },
+    { "property": "Thermal runaway", "lfp": "270 C typical", "nmc": "210 C typical", "source": "bu-205" }
+  ],
+  "why_this_kit_uses_lfp": "More thermal margin and cycle life; costs weight. [Design choice, not a source claim.]",
+  "reactions": "[UNKNOWN] - add half-cell reactions only with an open, citable source.",
+  "molecule_models": "[UNKNOWN] - crystal structure files need an open-licence source (to find).",
+  "citations": [
+    { "id": "bu-205", "title": "Battery University BU-205: Types of Lithium-ion", "url": "https://batteryuniversity.com/article/bu-205-types-of-lithium-ion", "checked": "2026-11-24" }
+  ]
+}

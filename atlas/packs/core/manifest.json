@@ -1,0 +1,43 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "core",
+  "title": "Atlas core: index, category tree, places, years, sources",
+  "kind": "core",
+  "refresh": "with-release",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "32d7392f7385545fd7c0e0305269b5b95942387f12b32706e336497276abadfc",
+  "entry_count": 10,
+  "size_bytes": 17973,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "index.json",
+      "bytes": 3390,
+      "sha256": "8b8c9237c239425233cf7f50b2f93bcb37186daae1f32d7c71c1544ff53645cf"
+    },
+    {
+      "path": "categories.json",
+      "bytes": 8762,
+      "sha256": "7d5f6542838d253b6916aa9678121dae9ff453ab6d82b470de7bfe462e27fc49"
+    },
+    {
+      "path": "places.json",
+      "bytes": 941,
+      "sha256": "bd83b51d25488b7cd597e80cda12819f7a856386730be5e50930300e39bd00ff"
+    },
+    {
+      "path": "years.json",
+      "bytes": 588,
+      "sha256": "75fa8dbad07c52b526f78a3d5c52ca11501605968e35d4c3feee1a0080da846b"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 4292,
+      "sha256": "7052ad04f7b893c355bfee3e9b9eb3395bd3a72f3c605f66518a8512d4945b4a"
+    }
+  ]
+}

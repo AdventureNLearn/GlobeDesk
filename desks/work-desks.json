@@ -1,0 +1,551 @@
+{
+  "schema": "globedesk.work-desks/1",
+  "status": "draft",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0",
+  "note": "Ten desks: the existing news desk plus nine work desks. Official sources are primary or public records only (government, standards bodies, datasets with a named licence). The owner's own repositories and Learning Lab cards are listed under Experimental references, labelled 'Experimental (not an official source)', and never count as a record backing a claim. Atlas entries, news sections and episodes are GlobeDesk's own content (class internal), not sources. Withheld or private projects appear as 'owner project (link pending)' with no link. A desk with no official source shows official source [UNKNOWN] and is listed in atlas/OPEN-ITEMS.md. Depth labels come from the source inventory; anything a source does not label is [UNKNOWN].",
+  "tiers": [
+    "kids",
+    "everyday",
+    "student",
+    "professional"
+  ],
+  "desks": [
+    {
+      "n": 1,
+      "id": "news",
+      "title": "News",
+      "existing": true,
+      "scope": "The existing news desk: 50 sourced topics in 10 sections (World, Politics & Policy, Climate & Disasters, Science & Space, History, Economy & Trade, Conflict & Security, Culture, Tech, Local & Civic). Unchanged.",
+      "tier_note": "Story depth is [UNKNOWN]: the stories are not labelled for kids or professionals. A kids version is not written yet.",
+      "tiers": {
+        "kids": "[UNKNOWN]",
+        "everyday": "[UNKNOWN]",
+        "student": "[UNKNOWN]",
+        "professional": "[UNKNOWN]"
+      },
+      "news_sections": [
+        "world",
+        "politics-policy",
+        "climate-disasters",
+        "science-space",
+        "history",
+        "economy-trade",
+        "conflict-security",
+        "culture",
+        "tech",
+        "local-civic"
+      ],
+      "atlas_categories": [
+        "history-places",
+        "civic"
+      ],
+      "backing": [
+        {
+          "kind": "repo",
+          "label": "AdventureNLearn/GlobeDesk (newsdesk/)",
+          "url": "https://github.com/AdventureNLearn/GlobeDesk",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        }
+      ],
+      "official_sources": [],
+      "official_status": "[UNKNOWN]",
+      "official_note": "Each news story cites its own official pages on its card. A desk-level official source list is [UNKNOWN]."
+    },
+    {
+      "n": 2,
+      "id": "permits-codes",
+      "title": "Permits and Codes",
+      "scope": "Find the US office (Authority Having Jurisdiction) that handles a construction permit before you file. Guidance only, not legal advice; confirm with the office.",
+      "tier_note": "Written for professionals today. Kids and everyday versions are not written yet.",
+      "tiers": {
+        "kids": "not written",
+        "everyday": "not written",
+        "student": "[UNKNOWN]",
+        "professional": "experimental reference only (permit-harbor catalog)"
+      },
+      "news_sections": [],
+      "atlas_categories": [
+        "civic"
+      ],
+      "backing": [
+        {
+          "kind": "repo",
+          "label": "AdventureNLearn/permit-harbor: 16,165 US permit desks in 56 packs (snapshot 2026-08-18)",
+          "url": "https://github.com/AdventureNLearn/permit-harbor",
+          "depth": "professional",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 37: US construction-permit desk finder",
+          "card": 37,
+          "url": "https://learninglab.grok.me/",
+          "depth": "professional",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 18: permit-desk finder beta",
+          "card": 18,
+          "url": "https://learninglab.grok.me/",
+          "depth": "professional",
+          "class": "experimental"
+        },
+        {
+          "kind": "owner-project-pending",
+          "label": "Owner project: state-level permitting prototype (link pending)",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        }
+      ],
+      "official_sources": [],
+      "official_status": "[UNKNOWN]"
+    },
+    {
+      "n": 3,
+      "id": "jobsite",
+      "title": "Jobsite and Constructability",
+      "scope": "How a jobsite runs day to day: inspections, materials, the building-department lane and site maps.",
+      "tier_note": "Written for professionals today. Kids and everyday versions are not written yet.",
+      "tiers": {
+        "kids": "not written",
+        "everyday": "not written",
+        "student": "[UNKNOWN]",
+        "professional": "experimental reference only (LPINv3 field board)"
+      },
+      "news_sections": [],
+      "atlas_categories": [
+        "civic",
+        "objects"
+      ],
+      "backing": [
+        {
+          "kind": "repo",
+          "label": "AdventureNLearn/LPINv3: jobsite field board",
+          "url": "https://github.com/AdventureNLearn/LPINv3",
+          "depth": "professional",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 26: jobsite suite",
+          "card": 26,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        }
+      ],
+      "official_sources": [],
+      "official_status": "[UNKNOWN]"
+    },
+    {
+      "n": 4,
+      "id": "trades-skills",
+      "title": "Trades and Skills",
+      "scope": "Plain-language lessons for 32 trades and jobs, from electrical and plumbing to nursing and logistics. Not a replacement for licensed instruction or codes; safety first.",
+      "tier_note": "The tutor says it is written in plain language for people with little or no experience, so it is the beginner entry point. Whether it suits kids is [UNKNOWN].",
+      "tiers": {
+        "kids": "[UNKNOWN]",
+        "everyday": "plain language (per the tutor README)",
+        "student": "[UNKNOWN]",
+        "professional": "[UNKNOWN]"
+      },
+      "news_sections": [],
+      "atlas_categories": [
+        "objects",
+        "energy",
+        "health"
+      ],
+      "backing": [
+        {
+          "kind": "repo",
+          "label": "AdventureNLearn/Grok-Tutor-AOS-Path: 32 plain-language industries",
+          "url": "https://github.com/AdventureNLearn/Grok-Tutor-AOS-Path",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 04: trades tutor",
+          "card": 4,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        }
+      ],
+      "official_sources": [],
+      "official_status": "[UNKNOWN]"
+    },
+    {
+      "n": 5,
+      "id": "engineering-3d",
+      "title": "Engineering and 3D Objects",
+      "scope": "Buildable and studyable objects with a model, parts and sources: the Atlas bag solar kit, a schematic airframe study atlas, and a 3D orbit desk kit.",
+      "tier_note": "Atlas object entries are written for everyday readers. The airframe atlas and orbit desk do not label their audience [UNKNOWN]. Kids versions are not written yet.",
+      "tiers": {
+        "kids": "not written",
+        "everyday": "Atlas objects",
+        "student": "[UNKNOWN]",
+        "professional": "[UNKNOWN]"
+      },
+      "news_sections": [
+        "science-space",
+        "tech"
+      ],
+      "atlas_categories": [
+        "objects",
+        "energy"
+      ],
+      "backing": [
+        {
+          "kind": "atlas",
+          "label": "Atlas: Bag solar kit (draft, not built or tested)",
+          "entry": "bag-solar-kit",
+          "depth": "everyday",
+          "class": "internal"
+        },
+        {
+          "kind": "repo",
+          "label": "AdventureNLearn/gb6500atlas: schematic airframe study atlas (not a blueprint)",
+          "url": "https://github.com/AdventureNLearn/gb6500atlas",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 36: airframe study atlas",
+          "card": 36,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "repo",
+          "label": "AdventureNLearn/orbit-desk: 3D orbit desk kit",
+          "url": "https://github.com/AdventureNLearn/orbit-desk",
+          "depth": "[UNKNOWN]",
+          "note": "The README and lab card 38 describe it differently; how they relate is [UNKNOWN].",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 38: orbit desk",
+          "card": 38,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        }
+      ],
+      "official_sources": [
+        {
+          "label": "FAA PackSafe: Lithium Batteries (air-travel limits used by the kit sizes)",
+          "publisher": "US Federal Aviation Administration",
+          "url": "https://www.faa.gov/hazmat/packsafe/lithium-batteries",
+          "class": "official",
+          "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed"
+    },
+    {
+      "n": 6,
+      "id": "energy-materials",
+      "title": "Energy and Materials",
+      "scope": "Energy, batteries and materials: Atlas energy and chemistry entries, regional price records, and the news desk's science and fusion stories.",
+      "tier_note": "Atlas entries carry their own reading level (everyday or student). Kids versions are not written yet except the lithium placeholder.",
+      "tiers": {
+        "kids": "placeholder only",
+        "everyday": "Atlas energy entries",
+        "student": "Atlas chemistry entries",
+        "professional": "[UNKNOWN]"
+      },
+      "news_sections": [
+        "science-space",
+        "tech"
+      ],
+      "atlas_categories": [
+        "energy",
+        "chemistry",
+        "economics"
+      ],
+      "backing": [
+        {
+          "kind": "atlas",
+          "label": "Atlas: Portable solar power",
+          "entry": "portable-solar-power",
+          "depth": "everyday",
+          "class": "internal"
+        },
+        {
+          "kind": "atlas",
+          "label": "Atlas: LiFePO4 (LFP) vs NMC lithium-ion",
+          "entry": "lifepo4-vs-nmc",
+          "depth": "student",
+          "class": "internal"
+        },
+        {
+          "kind": "atlas",
+          "label": "Atlas: Bag solar kit prices by region",
+          "entry": "bag-solar-kit-prices",
+          "depth": "everyday",
+          "class": "internal"
+        },
+        {
+          "kind": "news-section",
+          "label": "News desk: Science & Space",
+          "section": "science-space",
+          "depth": "[UNKNOWN]",
+          "class": "internal"
+        }
+      ],
+      "official_sources": [
+        {
+          "label": "FAA PackSafe: Lithium Batteries",
+          "publisher": "US Federal Aviation Administration",
+          "url": "https://www.faa.gov/hazmat/packsafe/lithium-batteries",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "PVGIS usage conditions",
+          "publisher": "European Commission Joint Research Centre",
+          "url": "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis/general-information/usage-conditions-data-protection_en",
+          "class": "official",
+          "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed"
+    },
+    {
+      "n": 7,
+      "id": "infrastructure-routes",
+      "title": "Infrastructure, Trade and Routes",
+      "scope": "Canals, civic works, highways and trade routes: the news desk's chokepoint and civic-works episodes and its Economy & Trade section.",
+      "tier_note": "Story depth is [UNKNOWN]. Kids and professional versions are not written yet.",
+      "tiers": {
+        "kids": "not written",
+        "everyday": "[UNKNOWN]",
+        "student": "[UNKNOWN]",
+        "professional": "[UNKNOWN]"
+      },
+      "news_sections": [
+        "economy-trade",
+        "local-civic",
+        "world"
+      ],
+      "atlas_categories": [
+        "history-places",
+        "civic",
+        "economics"
+      ],
+      "backing": [
+        {
+          "kind": "news-episode",
+          "label": "News desk episode: two canal chokepoints",
+          "path": "newsdesk/episodes/newsdesk-chokepoints.globedesk.json",
+          "depth": "[UNKNOWN]",
+          "class": "internal"
+        },
+        {
+          "kind": "news-episode",
+          "label": "News desk episode: three civic works",
+          "path": "newsdesk/episodes/newsdesk-civic.globedesk.json",
+          "depth": "[UNKNOWN]",
+          "class": "internal"
+        },
+        {
+          "kind": "news-section",
+          "label": "News desk: Economy & Trade",
+          "section": "economy-trade",
+          "depth": "[UNKNOWN]",
+          "class": "internal"
+        },
+        {
+          "kind": "owner-project-pending",
+          "label": "Owner project: highway right-of-way public-record kernel (link pending; repository is private)",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "owner-project-pending",
+          "label": "Owner project: historic routes atlas (link pending)",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        }
+      ],
+      "official_sources": [],
+      "official_status": "[UNKNOWN]"
+    },
+    {
+      "n": 8,
+      "id": "regulatory-records",
+      "title": "Regulatory and Public Records",
+      "scope": "Reading public records: filings, lobbying, campaign finance, contracts, investor-visa programs and consumer filing desks.",
+      "tier_note": "Written for professionals today, from lab-card text only; depth is [UNKNOWN]. Kids and everyday versions are not written yet.",
+      "tiers": {
+        "kids": "not written",
+        "everyday": "not written",
+        "student": "[UNKNOWN]",
+        "professional": "[UNKNOWN]"
+      },
+      "news_sections": [
+        "politics-policy"
+      ],
+      "atlas_categories": [
+        "civic"
+      ],
+      "backing": [
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 06: US legislative and public-records reading room",
+          "card": 6,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 22: contract dashboard tied to a vendor registry (in progress)",
+          "card": 22,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 21: EB-5 investor-visa program tracking",
+          "card": 21,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 33: Florida consumer anti-spam filing desk",
+          "card": 33,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "owner-project-pending",
+          "label": "Owner project: primary-law quotation collection (link pending)",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        }
+      ],
+      "official_sources": [],
+      "official_status": "[UNKNOWN]"
+    },
+    {
+      "n": 9,
+      "id": "surveillance-civil-liberties",
+      "title": "Surveillance and Civil Liberties",
+      "scope": "Public records about surveillance devices and the laws, permits and public comment around them. Records only: no live feeds, no plate search, no tracking of people.",
+      "tier_note": "Sources do not label their audience; depth is [UNKNOWN]. Kids and everyday versions are not written yet.",
+      "tiers": {
+        "kids": "not written",
+        "everyday": "not written",
+        "student": "[UNKNOWN]",
+        "professional": "[UNKNOWN]"
+      },
+      "news_sections": [
+        "politics-policy",
+        "local-civic"
+      ],
+      "atlas_categories": [
+        "civic"
+      ],
+      "backing": [
+        {
+          "kind": "repo",
+          "label": "AdventureNLearn/TIDTOFF: archived public device-location table",
+          "url": "https://github.com/AdventureNLearn/TIDTOFF",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 07: device-table archive",
+          "card": 7,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "repo",
+          "label": "AdventureNLearn/fifty: statewide license-plate-reader civic briefing",
+          "url": "https://github.com/AdventureNLearn/fifty",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 34: statewide briefing",
+          "card": 34,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 25: state permit-revocation map",
+          "card": 25,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        },
+        {
+          "kind": "lab-card",
+          "label": "Learning Lab card 24: federal funding tracker",
+          "card": 24,
+          "url": "https://learninglab.grok.me/",
+          "depth": "[UNKNOWN]",
+          "class": "experimental"
+        }
+      ],
+      "official_sources": [],
+      "official_status": "[UNKNOWN]"
+    },
+    {
+      "n": 10,
+      "id": "security-ct",
+      "title": "Security and Counterterrorism",
+      "scope": "A cited archive of official and scholarly counterterrorism records (laws, treaties, agencies, oversight), with the news desk's Conflict & Security section.",
+      "tier_note": "Written for professionals today. Kids and everyday versions are not written yet.",
+      "tiers": {
+        "kids": "not written",
+        "everyday": "not written",
+        "student": "[UNKNOWN]",
+        "professional": "experimental reference only (CTA6 archive)"
+      },
+      "news_sections": [
+        "conflict-security"
+      ],
+      "atlas_categories": [
+        "history-places",
+        "civic"
+      ],
+      "backing": [
+        {
+          "kind": "repo",
+          "label": "AdventureNLearn/CTA6: counterterrorism archive",
+          "url": "https://github.com/AdventureNLearn/CTA6",
+          "depth": "professional",
+          "class": "experimental"
+        },
+        {
+          "kind": "news-section",
+          "label": "News desk: Conflict & Security",
+          "section": "conflict-security",
+          "depth": "[UNKNOWN]",
+          "class": "internal"
+        }
+      ],
+      "official_sources": [],
+      "official_status": "[UNKNOWN]"
+    }
+  ]
+}

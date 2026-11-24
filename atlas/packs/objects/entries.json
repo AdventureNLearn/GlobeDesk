@@ -1,0 +1,12 @@
+{ "schema": "globedesk.atlas-entries/1", "pack": "objects", "entries": [
+  { "id": "bag-solar-kit", "title": "Bag solar kit", "aliases": ["Personal solar array with battery pack"], "kind": "object", "category_path": ["objects", "energy-kits"], "see_also_paths": [["energy", "portable-power"]], "tier": "everyday",
+    "summary": "DRAFT, not built or tested. A folding 100 W panel, an MPPT controller and a 4S LiFePO4 pack with BMS and fuses, in S, M and L sizes, built from common parts.",
+    "places": [], "dates": [], "sources": ["bu-205", "faa-packsafe", "cell-fullbattery", "cell-sheet-blivex", "cell-sheet-dtp", "mppt-vpp", "panel-listing"],
+    "related": [{ "type": "uses", "to": "lifepo4-vs-nmc" }, { "type": "priced-in", "to": "bag-solar-kit-prices" }, { "type": "see-also", "to": "lithium-batteries-air-travel" }, { "type": "see-also", "to": "portable-solar-power" }],
+    "record": "data/atlas/objects/bag-solar-kit.json",
+    "pack": "objects", "status": "draft", "confidence": "low", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false },
+  { "id": "water-filter-kit", "title": "[PLACEHOLDER] Water filter kit", "kind": "object", "category_path": ["objects", "water-systems"], "tier": "everyday",
+    "summary": "PLACEHOLDER. A second buildable object, to show the pattern. Design, parts and sources [UNKNOWN].",
+    "places": [], "dates": [], "sources": [], "related": [],
+    "pack": "objects", "status": "placeholder", "confidence": "[UNKNOWN]", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false }
+] }

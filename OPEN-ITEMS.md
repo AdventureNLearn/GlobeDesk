@@ -67,3 +67,4 @@ Audit of what has shipped, and what is still open.
 ## Decisions still open
 
 - A version-check host, if one is wanted: [UNKNOWN].
+- v1.4.0-draft (not released): the Atlas, work desks and community open items (21, all OPEN) are in [atlas/OPEN-ITEMS.md](atlas/OPEN-ITEMS.md).

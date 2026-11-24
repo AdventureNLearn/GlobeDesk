@@ -1,0 +1,361 @@
+{
+  "schema": "globedesk.atlas-categories/1",
+  "status": "draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "note": "GlobeDesk's own category tree. Every entry is our own cited text. Outside projects may appear only as outbound links, never as imported content.",
+  "categories": [
+    {
+      "n": 1,
+      "id": "history-places",
+      "title": "History and places",
+      "scope": "Places, events and routes on the globe, with dated sources.",
+      "pack": "history-places",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "places-regions",
+          "title": "Places and regions"
+        },
+        {
+          "id": "events-eras",
+          "title": "Events and eras"
+        },
+        {
+          "id": "routes",
+          "title": "Trade and travel routes"
+        },
+        {
+          "id": "maps-boundaries",
+          "title": "Maps and boundaries over time"
+        },
+        {
+          "id": "archaeology-sites",
+          "title": "Archaeology and sites"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "id": "civic",
+      "title": "Civic and public records",
+      "scope": "How public institutions work, from official records.",
+      "pack": "civic",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "government-elections",
+          "title": "Government and elections"
+        },
+        {
+          "id": "laws-courts",
+          "title": "Laws and courts"
+        },
+        {
+          "id": "public-budgets",
+          "title": "Public budgets"
+        },
+        {
+          "id": "infrastructure",
+          "title": "Infrastructure"
+        },
+        {
+          "id": "census-population",
+          "title": "Census and population"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "id": "energy",
+      "title": "Energy and power",
+      "scope": "Making, storing and using energy, from personal to grid scale.",
+      "pack": "energy",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "portable-power",
+          "title": "Portable power"
+        },
+        {
+          "id": "solar",
+          "title": "Solar"
+        },
+        {
+          "id": "batteries-storage",
+          "title": "Batteries and storage"
+        },
+        {
+          "id": "grid-generation",
+          "title": "Grid and generation"
+        },
+        {
+          "id": "fuels",
+          "title": "Fuels"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "id": "objects",
+      "title": "3D objects and builds",
+      "scope": "Buildable objects with a detailed model, part list, sizing, safety and regional prices.",
+      "pack": "objects",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "energy-kits",
+          "title": "Energy kits"
+        },
+        {
+          "id": "tools",
+          "title": "Tools"
+        },
+        {
+          "id": "shelter",
+          "title": "Shelter"
+        },
+        {
+          "id": "water-systems",
+          "title": "Water systems"
+        },
+        {
+          "id": "transport",
+          "title": "Transport"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "id": "chemistry",
+      "title": "Chemistry and materials",
+      "scope": "Elements, reactions and materials behind the objects.",
+      "pack": "chemistry",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "elements",
+          "title": "Elements"
+        },
+        {
+          "id": "battery-chemistry",
+          "title": "Battery chemistry"
+        },
+        {
+          "id": "metals-alloys",
+          "title": "Metals and alloys"
+        },
+        {
+          "id": "polymers",
+          "title": "Polymers and plastics"
+        },
+        {
+          "id": "glass-ceramics",
+          "title": "Glass and ceramics"
+        },
+        {
+          "id": "safety-data",
+          "title": "Safety data"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "id": "food",
+      "title": "Food and growing",
+      "scope": "Crops, gardening, storage and nutrition facts from cited sources.",
+      "pack": "food",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "gardening-crops",
+          "title": "Gardening and crops"
+        },
+        {
+          "id": "soil-water",
+          "title": "Soil and water"
+        },
+        {
+          "id": "storage-preserving",
+          "title": "Food storage and preserving"
+        },
+        {
+          "id": "nutrition-facts",
+          "title": "Nutrition facts"
+        },
+        {
+          "id": "food-supply",
+          "title": "Food supply by region"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "id": "preparedness",
+      "title": "Preparedness and off-grid",
+      "scope": "Outages, storms and off-grid living, from official guidance.",
+      "pack": "preparedness",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "power-outages",
+          "title": "Power outages"
+        },
+        {
+          "id": "water-sanitation",
+          "title": "Water and sanitation"
+        },
+        {
+          "id": "storms-hazards",
+          "title": "Storms and hazards"
+        },
+        {
+          "id": "communications",
+          "title": "Communications"
+        },
+        {
+          "id": "kits-checklists",
+          "title": "Kits and checklists"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "id": "health",
+      "title": "Health, anatomy and first aid",
+      "scope": "Anatomy by body system, biology, first aid and public health records. No personal treatment advice.",
+      "pack": "health",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "anatomy-systems",
+          "title": "Anatomy by body system"
+        },
+        {
+          "id": "biology-cells",
+          "title": "Biology and cells"
+        },
+        {
+          "id": "first-aid",
+          "title": "First aid"
+        },
+        {
+          "id": "public-health-records",
+          "title": "Public health records"
+        },
+        {
+          "id": "emergency-services",
+          "title": "Emergency services by region"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "id": "economics",
+      "title": "Economics and prices",
+      "scope": "Prices, money and trade by region, all cited and dated.",
+      "pack": "economics",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "regional-prices",
+          "title": "Regional prices"
+        },
+        {
+          "id": "currencies",
+          "title": "Currencies"
+        },
+        {
+          "id": "trade-flows",
+          "title": "Trade flows"
+        },
+        {
+          "id": "household-costs",
+          "title": "Household costs"
+        },
+        {
+          "id": "supply-chains",
+          "title": "Supply chains"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "id": "earth",
+      "title": "Earth and environment",
+      "scope": "The physical planet as seen on the globe.",
+      "pack": "earth",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "climate-weather",
+          "title": "Climate and weather"
+        },
+        {
+          "id": "solar-resource",
+          "title": "Solar resource"
+        },
+        {
+          "id": "geology-minerals",
+          "title": "Geology and minerals"
+        },
+        {
+          "id": "oceans-rivers",
+          "title": "Oceans and rivers"
+        },
+        {
+          "id": "land-cover",
+          "title": "Land cover"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "id": "science-history",
+      "title": "Science and technology history",
+      "scope": "How key discoveries and inventions came about.",
+      "pack": "science-history",
+      "refresh": "quarterly",
+      "subcategories": [
+        {
+          "id": "discoveries",
+          "title": "Discoveries by year"
+        },
+        {
+          "id": "inventions",
+          "title": "Inventions"
+        },
+        {
+          "id": "measurement-units",
+          "title": "Measurement and units"
+        },
+        {
+          "id": "computing",
+          "title": "Computing"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "id": "now",
+      "title": "Now",
+      "scope": "Current events this week and this month. An event leaves Now after about 90 days and stays in its home category.",
+      "pack": "now",
+      "refresh": "weekly",
+      "subcategories": [
+        {
+          "id": "this-week",
+          "title": "This week"
+        },
+        {
+          "id": "this-month",
+          "title": "This month"
+        },
+        {
+          "id": "leaving-soon",
+          "title": "Leaving Now soon"
+        }
+      ]
+    }
+  ]
+}
