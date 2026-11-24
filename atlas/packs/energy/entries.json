@@ -84,7 +84,7 @@
         "solar"
       ],
       "tier": "student",
-      "summary": "DRAFT. Regional solar irradiance and peak-sun-hour datasets are maintained by the European Commission JRC (PVGIS) and NASA POWER (300+ solar and meteorological parameters). Bundled per-region lookup values in GlobeDesk are still [UNKNOWN].",
+      "summary": "DRAFT. Official solar irradiance and meteorological datasets are maintained by the European Commission JRC (PVGIS) and NASA POWER (300+ solar and meteorological parameters). GlobeDesk points to those sources and does not bundle per-region lookup numbers.",
       "places": [],
       "dates": [],
       "sources": [
