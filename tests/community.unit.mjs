@@ -10,7 +10,7 @@ const P = require("../js/personal-layer.js");
 const SC = require("../js/source-class.js");
 const J = (p) => JSON.parse(readFileSync(new URL("../" + p, import.meta.url), "utf8"));
 const errs = (r) => (Array.isArray(r) ? r : (r && r.errors) || []);
-let n = 0; const t = (name, fn) => { fn(); n++; console.log("ok", name); };
+let n = 0; const tests = []; const t = (name, fn) => { tests.push([name, fn]); };
 const cats = J("atlas/categories.json").categories;
 const cardSchema = J("schema/globedesk-contributor-card.schema.json");
 const AT = "@";
@@ -78,5 +78,28 @@ t("Layers panel: Community switch is off by default with its own badge; Your lay
   const html = U.panelHtml();
   assert.match(html, /id="lpCommunity" aria-checked="false">/); assert.match(html, /cm-badge/); assert.match(html, /this device only/);
 });
+t("personal layer: import refuses oversize input before parse; a normal file imports", async () => {
+  const layer = { schema: P.SCHEMA, pins: [{ id: "b1", title: "Well", lat: 1, lng: 2 }], notes: [], followed: [], links: [] };
+  const text = P.exportText(layer, "2026-11-24T12:00:00Z");
+  const ok = P.importText(P.blank(), text);
+  assert.ok(ok.ok); assert.equal(ok.dropped, 0); assert.equal(ok.layer.pins[0].title, "Well");
+  const limit = P.MAX_IMPORT_BYTES;
+  assert.equal(limit, 2 * 1024 * 1024);
+  const atLimit = P.importText(P.blank(), "x".repeat(limit));
+  assert.equal(atLimit.ok, false); assert.match(atLimit.error, /Not a JSON file/);
+  const huge = "x".repeat(limit + 1);
+  const refused = P.importText(P.blank(), huge);
+  assert.equal(refused.ok, false); assert.match(refused.error, /too large to import \(limit 2 MB\)/);
+  const wide = "\u0800".repeat(Math.floor(limit / 3) + 1); // under the string-length cap, over the byte cap
+  assert.ok(wide.length <= limit);
+  const byBytes = P.importText(P.blank(), wide);
+  assert.equal(byBytes.ok, false); assert.match(byBytes.error, /too large to import \(limit 2 MB\)/);
+  let read = false;
+  const fake = { size: limit + 1, text() { read = true; return Promise.resolve(text); } };
+  const fileRefused = await P.importFile(fake);
+  assert.equal(read, false);
+  assert.equal(fileRefused.ok, false); assert.match(fileRefused.error, /too large to import \(limit 2 MB\)/);
+});
 t("CONTRIBUTING has a Contributor cards section", () => assert.match(readFileSync(new URL("../CONTRIBUTING.md", import.meta.url), "utf8"), /## Contributor cards/));
+for (const [name, fn] of tests) { await fn(); n++; console.log("ok", name); }
 console.log(`${n} community and personal-layer tests ok`);

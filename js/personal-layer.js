@@ -5,7 +5,9 @@
   "use strict";
   const SCHEMA = "globedesk.personal-layer/1";
   const KEY = "globedesk.personal.v1";
-  const MAX = { pins: 500, notes: 500, followed: 200, links: 200 };
+  const MAX_IMPORT_BYTES = 2 * 1024 * 1024; // 2 MB, checked before JSON.parse
+  const MAX = { pins: 500, notes: 500, followed: 200, links: 200, importBytes: MAX_IMPORT_BYTES };
+  const IMPORT_TOO_LARGE = "This personal layer file is too large to import (limit 2 MB).";
   const ID = /^[A-Za-z0-9_-]{1,40}$/;
   const TOPIC = /^[a-z0-9][a-z0-9-]{0,79}(\/[a-z0-9-]+)?$/;
   const HTTPS = /^https:\/\/[^\s"'<>]+$/;
@@ -67,7 +69,16 @@
     doc.schema = SCHEMA;
     return JSON.stringify(doc, null, 2) + "\n";
   }
+  function textBytes(text) {
+    if (typeof text !== "string") return 0;
+    if (text.length > MAX_IMPORT_BYTES) return text.length;
+    return new TextEncoder().encode(text).length;
+  }
+  function importTooLarge(bytes) { return typeof bytes === "number" && bytes > MAX_IMPORT_BYTES; }
   function importText(current, text) {
+    if (typeof text === "string" && (text.length > MAX_IMPORT_BYTES || textBytes(text) > MAX_IMPORT_BYTES)) {
+      return { ok: false, error: IMPORT_TOO_LARGE };
+    }
     let doc;
     try { doc = JSON.parse(text); } catch (e) { return { ok: false, error: "Not a JSON file" }; }
     const r = sanitize(doc);
@@ -112,10 +123,11 @@
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
   function importFile(file) {
+    if (file && importTooLarge(file.size)) return Promise.resolve({ ok: false, error: IMPORT_TOO_LARGE });
     return file.text().then((t) => { const r = importText(load(), t); if (r.ok) save(r.layer); return r; });
   }
 
-  const api = { SCHEMA, KEY, MAX, blank, sanitize, merge, exportText, importText, load, save, onChange, addPin, removePin, addNote, isFollowed, toggleFollow, addLink, clearAll, download, importFile };
+  const api = { SCHEMA, KEY, MAX, MAX_IMPORT_BYTES, blank, sanitize, merge, exportText, importText, load, save, onChange, addPin, removePin, addNote, isFollowed, toggleFollow, addLink, clearAll, download, importFile };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else { root.GD = root.GD || {}; root.GD.personal = api; }
 })(typeof window !== "undefined" ? window : globalThis);

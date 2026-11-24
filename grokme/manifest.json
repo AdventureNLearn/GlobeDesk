@@ -31,8 +31,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 32088,
-      "sha256": "478176925477ad2aeab90ddcdfe27dfc732b3276bc73bc413a60a1a1b2b7b18f"
+      "size": 32218,
+      "sha256": "980c807c6042530b975be91c05b374a7808a47aa54245eff55975fe3d8258fa9"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -81,8 +81,8 @@
     },
     {
       "path": "USER-GUIDE.md",
-      "size": 8364,
-      "sha256": "e745bc5820baf54ecd7d27d329996e21870ab4b78cbb0b3e89aba714787bf5d8"
+      "size": 8397,
+      "sha256": "83b9e9944a8b2ce7b82a852847dddc53d4e26997366a05df3c7dd0a6fa15cb23"
     },
     {
       "path": "WINDOWS-RUN.md",
@@ -476,8 +476,8 @@
     },
     {
       "path": "js/personal-layer.js",
-      "size": 7050,
-      "sha256": "8f1d45e09cc7c9cf0e7e6883cd16957f5ae65d3768d7b54b7e4d75fcf0fe6d49"
+      "size": 7832,
+      "sha256": "1a6cf64b5ef37ef2dbc3f65722fb5aed06a60ffd6429154b21fb3693417db16d"
     },
     {
       "path": "js/playback.js",
@@ -767,6 +767,6 @@
   ],
   "totals": {
     "files": 151,
-    "bytes": 5501066
+    "bytes": 5502011
   }
 }

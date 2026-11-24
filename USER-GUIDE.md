@@ -60,7 +60,7 @@ Click **Layers** in the top bar (or press **L**) to see every map layer in one p
 - **Entry tabs.** **Object** (summary, sizes, key facts, safety rules in the record), **Parts** (quantities and bundled, dated price checks by region; unknown prices stay `[UNKNOWN]`), **Chemistry**, and **Sources**, grouped as Official sources, Other cited references, Experimental references (the maintainer's own repos and cards, never official) and Community links.
 - **Globe | 3D.** Globe flies to an entry's place. 3D draws the bag solar kit's parametric layout with the bundled three.js; it is an artistic layout, not a build drawing. All Atlas entries are drafts; the kit is not built or tested. Online price and solar lookups are off.
 - **Desks.** The **Desk** menu above the news desk switches between News (unchanged) and nine work desks. Each desk shows its scope, reading levels, official sources (or `Official source [UNKNOWN]`), and experimental references labelled *Experimental (not an official source)*.
-- **Your layer.** Layers, **Your layer**: pin the map centre, follow Atlas entries, add notes, and **Export** or **Import** them as a JSON file. It stays in this browser on this device.
+- **Your layer.** Layers, **Your layer**: pin the map centre, follow Atlas entries, add notes, and **Export** or **Import** them as a JSON file. Import refuses a file over 2 MB. It stays in this browser on this device.
 - **Community.** Layers, **Community** (off by default) shows contributor cards per Atlas category, community links and community pins with their own badge. See CONTRIBUTING.md, Contributor cards.
 
 ## Export MP4 and share packs
