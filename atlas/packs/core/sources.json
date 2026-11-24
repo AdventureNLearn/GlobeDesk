@@ -1593,9 +1593,9 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
-      "license": "[UNKNOWN]: the page and its terms could not be opened on 2026-11-24 (bot check, HTTP 403 by curl and fetch service). GlobeDesk links only; nothing copied.",
-      "verified": "opened directly (HTTP 200)",
-      "description": "Friedrich-Alexander-Universität Erlangen-Nürnberg (Christian Archaeology) research-project page titled 'Colonial and post-colonial church bells in Ghana' (title and URL). The page body sits behind a bot check and returned 403 to the fetch service on 2026-11-24, so its contents are not described further here."
+      "license": "[UNKNOWN]: no open licence is shown in the copy we could read, and FAU's imprint and terms pages sit behind the same bot check. Treat as all rights reserved. GlobeDesk links only; nothing copied.",
+      "verified": "not opened directly on 2026-11-24 (bot check, HTTP 403); described from a search-index copy",
+      "description": "FAU Chair of Christian Archaeology project page 'Ghana - Kirchenglocken': a project (since 2023, with a bell-documentation sub-project since 2024) recording church bells from the early mission and colonial period in Protestant and Catholic congregations of Ghana's Volta Region, with maker, casting year, inscriptions, tones and ringing customs. Read from a search-index copy; the live page sits behind a bot check (HTTP 403 to curl and the fetch service, 2026-11-24)."
     },
     {
       "id": "usa-branches",
