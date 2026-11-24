@@ -1,0 +1,73 @@
+{
+ "schema": "globedesk.artifact/1",
+ "id": "telegraph-tape-1844",
+ "title": "Telegraph tape, May 24, 1844",
+ "kind": "device",
+ "status": "draft",
+ "checked": "2026-11-24",
+ "facts": [
+  {
+   "label": "Message",
+   "value": "What hath God wrought?",
+   "source": "loc-morse-tape"
+  },
+  {
+   "label": "From",
+   "value": "Supreme Court room, U.S. Capitol, Washington",
+   "source": "loc-morse-tape"
+  },
+  {
+   "label": "To",
+   "value": "Alfred Vail, Baltimore",
+   "source": "loc-morse-tape"
+  },
+  {
+   "label": "Held by",
+   "value": "Library of Congress, Samuel F. B. Morse Papers",
+   "source": "loc-morse-tape"
+  }
+ ],
+ "parts": [
+  {
+   "part": "Paper tape",
+   "material": "paper",
+   "note": "raised dots and dashes, translated later by an operator",
+   "source": "loc-morse-tape"
+  },
+  {
+   "part": "Line",
+   "material": "[UNKNOWN]",
+   "note": "wire material and length [UNKNOWN] in the cited pages",
+   "source": "loc-telegraph-essay"
+  }
+ ],
+ "materials": [],
+ "timeline": [
+  {
+   "date": "1844-05-24",
+   "precision": "day",
+   "approximate": false,
+   "event": "Message sent Washington to Baltimore",
+   "source": "loc-morse-tape"
+  }
+ ],
+ "citations": [
+  {
+   "id": "loc-morse-tape",
+   "title": "Telegraph tape: \"What hath God wrought?\" (Samuel F. B. Morse Papers)",
+   "url": "https://www.loc.gov/item/mmorse000107/",
+   "publisher": "Library of Congress",
+   "class": "official"
+  },
+  {
+   "id": "loc-telegraph-essay",
+   "title": "Invention of the Telegraph (Samuel F. B. Morse Papers)",
+   "url": "https://www.loc.gov/collections/samuel-morse-papers/articles-and-essays/invention-of-the-telegraph/",
+   "publisher": "Library of Congress",
+   "class": "official"
+  }
+ ],
+ "unknowns": [
+  "Wire material and line length [UNKNOWN]"
+ ]
+}

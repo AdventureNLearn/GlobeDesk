@@ -3,10 +3,314 @@
   "generated": "2026-11-24",
   "dates": [
     {
+      "date": "1775-04-18",
+      "precision": "day",
+      "approximate": false,
+      "entry": "old-north-lanterns-1775"
+    },
+    {
+      "date": "1776-07-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "declaration-of-independence-1776"
+    },
+    {
+      "date": "1781-10-19",
+      "precision": "day",
+      "approximate": false,
+      "entry": "yorktown-surrender-1781"
+    },
+    {
+      "date": "1787-05-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "constitution-signed-1787"
+    },
+    {
+      "date": "1787-09-17",
+      "precision": "day",
+      "approximate": false,
+      "entry": "constitution-signed-1787"
+    },
+    {
+      "date": "1789-04-30",
+      "precision": "day",
+      "approximate": false,
+      "entry": "washington-inauguration-1789"
+    },
+    {
+      "date": "1789-09-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "bill-of-rights-1791"
+    },
+    {
+      "date": "1791-12-15",
+      "precision": "day",
+      "approximate": false,
+      "entry": "bill-of-rights-1791"
+    },
+    {
+      "date": "1803-12-20",
+      "precision": "day",
+      "approximate": false,
+      "entry": "louisiana-transfer-1803"
+    },
+    {
+      "date": "1805-12-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "fort-clatsop-1805"
+    },
+    {
+      "date": "1814-09-13",
+      "precision": "day",
+      "approximate": false,
+      "end": "1814-09-14",
+      "entry": "fort-mchenry-1814"
+    },
+    {
+      "date": "1814-09-14",
+      "precision": "day",
+      "approximate": false,
+      "entry": "fort-mchenry-1814"
+    },
+    {
+      "date": "1825",
+      "precision": "year",
+      "approximate": false,
+      "entry": "erie-canal-1825"
+    },
+    {
+      "date": "1838-05",
+      "precision": "month",
+      "approximate": false,
+      "entry": "trail-of-tears-1838"
+    },
+    {
+      "date": "1838-06",
+      "precision": "month",
+      "approximate": false,
+      "entry": "trail-of-tears-1838"
+    },
+    {
+      "date": "1844-05-24",
+      "precision": "day",
+      "approximate": false,
+      "entry": "telegraph-message-1844"
+    },
+    {
+      "date": "1848-01-24",
+      "precision": "day",
+      "approximate": false,
+      "entry": "gold-discovery-1848"
+    },
+    {
+      "date": "1848-07-19",
+      "precision": "day",
+      "approximate": false,
+      "end": "1848-07-20",
+      "entry": "seneca-falls-1848"
+    },
+    {
+      "date": "1861-04-12",
+      "precision": "day",
+      "approximate": false,
+      "entry": "fort-sumter-1861"
+    },
+    {
+      "date": "1862-09-22",
+      "precision": "day",
+      "approximate": false,
+      "entry": "emancipation-proclamation-1863"
+    },
+    {
+      "date": "1863-01-01",
+      "precision": "day",
+      "approximate": false,
+      "entry": "emancipation-proclamation-1863"
+    },
+    {
+      "date": "1863-07-01",
+      "precision": "day",
+      "approximate": false,
+      "end": "1863-07-03",
+      "entry": "gettysburg-1863"
+    },
+    {
+      "date": "1865-01-31",
+      "precision": "day",
+      "approximate": false,
+      "entry": "thirteenth-amendment-1865"
+    },
+    {
+      "date": "1865-04-09",
+      "precision": "day",
+      "approximate": false,
+      "entry": "appomattox-1865"
+    },
+    {
+      "date": "1865-12-06",
+      "precision": "day",
+      "approximate": false,
+      "entry": "thirteenth-amendment-1865"
+    },
+    {
+      "date": "1867-10-18",
+      "precision": "day",
+      "approximate": false,
+      "entry": "alaska-transfer-1867"
+    },
+    {
+      "date": "1869-05-10",
+      "precision": "day",
+      "approximate": false,
+      "entry": "golden-spike-1869"
+    },
+    {
+      "date": "1886-10-28",
+      "precision": "day",
+      "approximate": false,
+      "entry": "statue-of-liberty-1886"
+    },
+    {
+      "date": "1892",
+      "precision": "year",
+      "approximate": false,
+      "end": "1924",
+      "entry": "ellis-island-1892"
+    },
+    {
+      "date": "1903-12-17",
+      "precision": "day",
+      "approximate": false,
+      "entry": "first-flight-1903"
+    },
+    {
+      "date": "1920-08-26",
+      "precision": "day",
+      "approximate": false,
+      "entry": "nineteenth-amendment-1920"
+    },
+    {
+      "date": "1920-09-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "nineteenth-amendment-1920"
+    },
+    {
+      "date": "1929-10-29",
+      "precision": "day",
+      "approximate": false,
+      "entry": "stock-crash-1929"
+    },
+    {
+      "date": "1935-08-14",
+      "precision": "day",
+      "approximate": false,
+      "entry": "social-security-act-1935"
+    },
+    {
+      "date": "1935-09-30",
+      "precision": "day",
+      "approximate": false,
+      "entry": "hoover-dam-1935"
+    },
+    {
+      "date": "1941-12-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "pearl-harbor-1941"
+    },
+    {
+      "date": "1945-06-26",
+      "precision": "day",
+      "approximate": false,
+      "entry": "un-charter-1945"
+    },
+    {
+      "date": "1954-05-17",
+      "precision": "day",
+      "approximate": false,
+      "entry": "brown-v-board-1954"
+    },
+    {
+      "date": "1957-09-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "little-rock-1957"
+    },
+    {
+      "date": "1963-08-28",
+      "precision": "day",
+      "approximate": false,
+      "entry": "march-on-washington-1963"
+    },
+    {
+      "date": "1964-07-02",
+      "precision": "day",
+      "approximate": false,
+      "entry": "civil-rights-act-1964"
+    },
+    {
+      "date": "1965-03-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "selma-bloody-sunday-1965"
+    },
+    {
+      "date": "1969-07-16",
+      "precision": "day",
+      "approximate": false,
+      "entry": "apollo-11-1969"
+    },
+    {
+      "date": "1969-07-20",
+      "precision": "day",
+      "approximate": false,
+      "entry": "apollo-11-1969"
+    },
+    {
+      "date": "1980-05-18",
+      "precision": "day",
+      "approximate": false,
+      "entry": "mount-st-helens-1980"
+    },
+    {
+      "date": "1990-07-26",
+      "precision": "day",
+      "approximate": false,
+      "entry": "ada-1990"
+    },
+    {
       "date": "1996",
       "precision": "year",
       "approximate": false,
       "entry": "phosphate-cathode-discovery"
+    },
+    {
+      "date": "2001-09-11",
+      "precision": "day",
+      "approximate": false,
+      "entry": "september-11-2001"
+    },
+    {
+      "date": "2020-01-20",
+      "precision": "day",
+      "approximate": false,
+      "entry": "covid-19-pandemic-2020"
+    },
+    {
+      "date": "2020-03-11",
+      "precision": "day",
+      "approximate": false,
+      "entry": "covid-19-pandemic-2020"
+    },
+    {
+      "date": "2026-07-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "america-250-2026"
     },
     {
       "date": "2026-11-24",

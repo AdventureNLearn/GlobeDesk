@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globedesk.local/schema/globedesk-artifact.schema.json",
+  "title": "GlobeDesk historic object or material record (globedesk.artifact/1) - DRAFT",
+  "description": "Facts, parts, materials and a dated timeline for a historic object (a bell, a document, a device) or a material. Every row names a source id from atlas/packs/core/sources.json. Unknown values are written [UNKNOWN], never guessed.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "title", "kind", "status", "checked", "facts", "parts", "materials", "timeline", "citations", "unknowns"],
+  "properties": {
+    "schema": { "const": "globedesk.artifact/1" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,79}$" },
+    "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "kind": { "enum": ["bell", "document", "device", "object", "material"] },
+    "status": { "enum": ["draft", "reviewed"] },
+    "checked": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "facts": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["label", "value", "source"],
+      "properties": { "label": { "type": "string", "minLength": 1 }, "value": { "type": "string", "minLength": 1 }, "source": { "$ref": "#/$defs/src" } } } },
+    "parts": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["part", "material", "source"],
+      "properties": { "part": { "type": "string", "minLength": 1 }, "material": { "type": "string", "minLength": 1 }, "note": { "type": "string" }, "source": { "$ref": "#/$defs/src" } } } },
+    "materials": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["material", "composition", "source"],
+      "properties": { "material": { "type": "string", "minLength": 1 }, "composition": { "type": "string", "minLength": 1 }, "source": { "$ref": "#/$defs/src" } } } },
+    "timeline": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["date", "precision", "approximate", "event", "source"],
+      "properties": { "date": { "type": "string", "pattern": "^-?[0-9]{1,4}(-[0-9]{2}(-[0-9]{2})?)?$" }, "precision": { "enum": ["year", "month", "day"] }, "approximate": { "type": "boolean" }, "event": { "type": "string", "minLength": 1 }, "source": { "$ref": "#/$defs/src" } } } },
+    "citations": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["id", "title", "url"],
+      "properties": { "id": { "$ref": "#/$defs/src" }, "title": { "type": "string" }, "url": { "type": "string", "pattern": "^https://" }, "publisher": { "type": "string" }, "class": { "enum": ["official", "reference", "experimental"] } } } },
+    "unknowns": { "type": "array", "items": { "type": "string" } },
+    "chemistry": { "$ref": "#/$defs/src" },
+    "model": { "type": "object", "additionalProperties": false, "required": ["id", "label"],
+      "properties": { "id": { "$ref": "#/$defs/src" }, "diameter_mm": { "description": "mm, or [UNKNOWN]" }, "height_mm": { "description": "mm, or [UNKNOWN]" }, "label": { "type": "string" } } }
+  },
+  "$defs": { "src": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,79}$" } }
+}

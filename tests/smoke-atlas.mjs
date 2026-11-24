@@ -113,10 +113,10 @@ try {
   // Atlas: open, A-Z, category tree, by place markers, by year zoom, This week, tier switch, tabs.
   await q(`document.getElementById("btnAtlas").click()`);
   out.az = await q(`({ open: !document.getElementById("atlasView").hidden, rows: document.querySelectorAll("#atBrowse .at-row").length, letters: document.querySelectorAll(".at-jump button").length })`);
-  if (!out.az.open || out.az.rows !== 11) throw new Error("A-Z: " + JSON.stringify(out.az));
+  if (!out.az.open || out.az.rows !== 52) throw new Error("A-Z: " + JSON.stringify(out.az));
   await q(`document.querySelector('[data-at-view="cats"]').click()`);
   out.cats = await q(`({ cats: document.querySelectorAll(".at-cat").length, greyed: document.querySelectorAll(".at-cat.not-installed").length })`);
-  if (out.cats.cats !== 12 || out.cats.greyed !== 8) throw new Error("categories: " + JSON.stringify(out.cats));
+  if (out.cats.cats !== 12 || out.cats.greyed !== 7) throw new Error("categories: " + JSON.stringify(out.cats));
   await q(`document.querySelector('[data-at-view="place"]').click()`);
   out.place = await q(`({ places: document.querySelectorAll(".at-place").length, markers: document.querySelectorAll(".atlas-count").length })`);
   if (out.place.places !== 4 || out.place.markers !== 4) throw new Error("by place: " + JSON.stringify(out.place));
@@ -129,7 +129,7 @@ try {
   if (!/ISO week/.test(out.week)) throw new Error("this week: " + out.week);
   await q(`(() => { const s = document.getElementById("atTier"); s.value = "kids"; s.dispatchEvent(new Event("change")); document.querySelector('[data-at-view="az"]').click(); })()`);
   out.kids = await q(`document.querySelectorAll("#atBrowse .at-row").length`);
-  if (out.kids !== 1) throw new Error("kids tier rows: " + out.kids);
+  if (out.kids !== 42) throw new Error("kids tier rows: " + out.kids);
   await q(`(() => { const s = document.getElementById("atTier"); s.value = "all"; s.dispatchEvent(new Event("change")); GD.atlas.select("bag-solar-kit"); })()`);
   const tabs = {};
   for (const tab of ["object", "parts", "chemistry", "sources"]) {
@@ -138,6 +138,29 @@ try {
   }
   if (!/Carry-on day kit|S · /.test(tabs.object) || !/\[UNKNOWN\]/.test(tabs.parts) || !/LFP/.test(tabs.chemistry) || !/Official sources/.test(tabs.sources) || !/Community lane is off/.test(tabs.sources)) throw new Error("tabs: " + JSON.stringify(Object.keys(tabs).map((k) => [k, tabs[k].slice(0, 120)])));
   out.official = /FAA PackSafe/.test(tabs.sources);
+
+  // History pack: 41 entries (1775 prologue, 1776-2026); by-year slider spans the history range to 2026. Bells link by id.
+  await q(`(() => { GD.atlas.st.category = "history-places"; GD.atlas.st.view = "year"; GD.atlas.st.zoom = "years"; GD.atlas.st.year = null; GD.atlas.render(); })()`);
+  out.history = await q(`(() => { const y = document.getElementById("atYear"); const t = document.getElementById("atBrowse").innerText; return { min: +y.min, max: +y.max, rows: document.querySelectorAll("#atBrowse .at-years li").length, has1776: /1776/.test(t), has2026: /2026/.test(t), pack: GD.atlasData.manifests["history-places"] && GD.atlasData.manifests["history-places"].entry_count }; })()`);
+  if (out.history.pack !== 41 || out.history.max !== 2026 || out.history.min > 1776 || !out.history.has1776 || !out.history.has2026 || out.history.rows < 40) throw new Error("history by year: " + JSON.stringify(out.history));
+  await q(`(() => { const s = document.getElementById("atYear"); s.value = "1776"; s.dispatchEvent(new Event("change")); })()`);
+  out.y1776 = await q(`(document.getElementById("atBrowse").innerText.match(/Declaration of Independence/g) || []).length`);
+  if (out.y1776 < 1) throw new Error("1776 slider: " + out.y1776);
+  // Reading levels on a history entry.
+  await q(`(() => { GD.atlas.st.category = ""; GD.atlas.st.year = null; GD.atlas.st.view = "az"; GD.atlas.st.tab = "object"; const s = document.getElementById("atTier"); s.value = "kids"; s.dispatchEvent(new Event("change")); GD.atlas.select("declaration-of-independence-1776"); })()`);
+  out.kidsText = await q(`document.querySelector(".at-tabbody .at-text").textContent`);
+  if (!/new, free country/.test(out.kidsText)) throw new Error("kids text: " + out.kidsText);
+  out.bellLink = await q(`(document.querySelector(".at-seealso") || {}).textContent || ""`);
+  if (!/liberty-bell \(not in this copy\)/.test(out.bellLink)) throw new Error("bell link by id: " + out.bellLink);
+  await q(`(() => { const s = document.getElementById("atTier"); s.value = "all"; s.dispatchEvent(new Event("change")); GD.atlas.select("constitution-signed-1787"); })()`);
+  // History object card: Object (facts + timeline), Parts, Sources.
+  const ct = {};
+  for (const tab of ["object", "parts", "sources"]) {
+    await q(`document.querySelector('[data-at-tab="${tab}"]').click()`);
+    ct[tab] = await q(`(document.querySelector(".at-tabbody").innerText || "").slice(0, 3000)`);
+  }
+  if (!/Four/.test(ct.object) || !/1787-09-17/.test(ct.object) || !/Pages \(4\)/.test(ct.parts) || !/Official sources/.test(ct.sources) || !/National Archives/.test(ct.sources)) throw new Error("constitution tabs: " + JSON.stringify(Object.keys(ct).map((k) => [k, ct[k].slice(0, 160)])));
+  await q(`(() => { GD.atlas.st.tab = "object"; GD.atlas.select("bag-solar-kit"); })()`);
 
   // 3D: lazy-load vendored three.js (or a labelled stub when WebGL is missing).
   await q(`document.querySelector('[data-at-mode="3d"]').click()`);
