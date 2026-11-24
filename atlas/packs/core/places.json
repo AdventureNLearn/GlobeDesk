@@ -3,17 +3,95 @@
   "generated": "2026-11-24",
   "places": [
     {
+      "key": "AT",
+      "precision": "site",
+      "entries": [
+        "pummerin"
+      ]
+    },
+    {
+      "key": "AU",
+      "precision": "site",
+      "entries": [
+        "anzac-bell-perth",
+        "national-carillon-canberra",
+        "swan-bells-perth"
+      ]
+    },
+    {
+      "key": "BE",
+      "precision": "site",
+      "entries": [
+        "bruges-belfry-carillon",
+        "mechelen-carillons"
+      ]
+    },
+    {
+      "key": "CA",
+      "precision": "site",
+      "entries": [
+        "peace-tower-carillon"
+      ]
+    },
+    {
+      "key": "CN",
+      "precision": "site",
+      "entries": [
+        "bianzhong-marquis-yi",
+        "yongle-bell"
+      ]
+    },
+    {
+      "key": "DE",
+      "precision": "site",
+      "entries": [
+        "freedom-bell-berlin",
+        "gloriosa-erfurt",
+        "petersglocke-cologne"
+      ]
+    },
+    {
+      "key": "FR",
+      "precision": "site",
+      "entries": [
+        "emmanuel-notre-dame",
+        "savoyarde"
+      ]
+    },
+    {
       "key": "GB",
       "precision": "country",
       "entries": [
-        "bag-solar-kit-prices"
+        "bag-solar-kit-prices",
+        "big-ben-great-bell",
+        "bow-bells",
+        "liverpool-great-george",
+        "great-paul",
+        "great-tom-oxford",
+        "hms-hood-bell",
+        "lutine-bell"
+      ]
+    },
+    {
+      "key": "GH",
+      "precision": "site",
+      "entries": [
+        "amedzofe-bell"
       ]
     },
     {
       "key": "IN",
       "precision": "country",
       "entries": [
-        "bag-solar-kit-prices"
+        "bag-solar-kit-prices",
+        "panaji-church-bell"
+      ]
+    },
+    {
+      "key": "IQ",
+      "precision": "site",
+      "entries": [
+        "nimrud-bronze-bell"
       ]
     },
     {
@@ -24,16 +102,99 @@
       ]
     },
     {
+      "key": "JP",
+      "precision": "site",
+      "entries": [
+        "byodoin-bell",
+        "chion-in-bell",
+        "todaiji-bell",
+        "hiroshima-peace-bell"
+      ]
+    },
+    {
+      "key": "KR",
+      "precision": "site",
+      "entries": [
+        "sangwonsa-bell",
+        "seongdeok-bell"
+      ]
+    },
+    {
+      "key": "MM",
+      "precision": "site",
+      "entries": [
+        "dhammazedi-bell",
+        "mingun-bell"
+      ]
+    },
+    {
+      "key": "MX",
+      "precision": "site",
+      "entries": [
+        "dolores-bell"
+      ]
+    },
+    {
+      "key": "NZ",
+      "precision": "site",
+      "entries": [
+        "wellington-carillon"
+      ]
+    },
+    {
+      "key": "PE",
+      "precision": "site",
+      "entries": [
+        "maria-angola-cusco"
+      ]
+    },
+    {
+      "key": "PH",
+      "precision": "site",
+      "entries": [
+        "balangiga-bells"
+      ]
+    },
+    {
+      "key": "PL",
+      "precision": "site",
+      "entries": [
+        "zygmunt-bell"
+      ]
+    },
+    {
+      "key": "RU",
+      "precision": "site",
+      "entries": [
+        "bolshoy-uspensky-bell",
+        "sysoy-bell",
+        "tsar-bell",
+        "uglich-exile-bell"
+      ]
+    },
+    {
       "key": "US",
       "precision": "country",
       "entries": [
         "thirteenth-amendment-1865",
         "ada-1990",
         "bag-solar-kit-prices",
+        "bicentennial-bell",
         "bill-of-rights-1791",
+        "bok-tower-carillon",
+        "centennial-bell",
         "civil-rights-act-1964",
+        "un-japanese-peace-bell",
+        "justice-bell",
+        "liberty-bell",
         "lithium-batteries-air-travel",
-        "social-security-act-1935"
+        "netherlands-carillon",
+        "old-north-bells",
+        "social-security-act-1935",
+        "edmund-fitzgerald-bell",
+        "uss-arizona-bell",
+        "wilbank-bell",
+        "world-peace-bell"
       ]
     },
     {
@@ -198,6 +359,20 @@
         "covid-19-pandemic-2020",
         "mount-st-helens-1980"
       ]
+    },
+    {
+      "key": "VA",
+      "precision": "site",
+      "entries": [
+        "campanone-st-peters"
+      ]
+    },
+    {
+      "key": "ZA",
+      "precision": "site",
+      "entries": [
+        "cape-town-st-georges-bells"
+      ]
     }
   ],
   "no_place": [
@@ -206,6 +381,8 @@
     "solar-resource-by-region",
     "water-filter-kit",
     "bag-solar-kit",
+    "bell-bronze",
+    "bells-overview",
     "lifepo4-vs-nmc",
     "portable-solar-power"
   ]

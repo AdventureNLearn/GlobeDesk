@@ -1,0 +1,70 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "great-paul",
+  "title": "Great Paul (St Paul's Cathedral)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Rung by hand since its automatic mechanism broke (cathedral).",
+  "era": "19th-century",
+  "region": "Europe",
+  "country": "GB",
+  "place": {
+    "label": "South-west tower, St Paul's Cathedral, London",
+    "lat": 51.51379,
+    "lng": -0.09845,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "John Taylor & Co, Loughborough",
+  "mass_kg": 17019,
+  "mass_note": "16.75 imperial tons (cathedral); converted to kg by us",
+  "diameter_m": null,
+  "height_m": null,
+  "note": "E flat",
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1878",
+      "precision": "year",
+      "approximate": false,
+      "event": "Taylor's cast the cathedral's ring of 12 bells",
+      "source": "stpauls-bells"
+    },
+    {
+      "date": "1881",
+      "precision": "year",
+      "approximate": false,
+      "event": "Great Paul cast by John Taylor & Co",
+      "source": "stpauls-bells"
+    }
+  ],
+  "tiers": {
+    "everyday": "Great Paul, cast in 1881, is one of the heaviest bells ever made in Britain at about 17 tonnes. It hangs at St Paul's Cathedral in London.",
+    "student": "St Paul's gives Great Paul as 16.75 tons, cast in 1881 by John Taylor & Co, note E flat; it is now swung by hand. The cathedral also has a ring of 12 (Taylor, 1878) and Great Tom, a clock bell of over 5 tons cast in 1716 by Richard Phelps of Whitechapel."
+  },
+  "sources": [
+    "stpauls-bells",
+    "belltrust-named-bells"
+  ],
+  "official_sources": [
+    "stpauls-bells"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "diameter"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

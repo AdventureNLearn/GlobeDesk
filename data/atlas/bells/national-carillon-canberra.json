@@ -1,0 +1,70 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "national-carillon-canberra",
+  "title": "National Carillon (Canberra)",
+  "kind": "carillon",
+  "status": "in-place",
+  "status_note": "Gift of the British Government.",
+  "era": "20th-century",
+  "region": "Oceania",
+  "country": "AU",
+  "place": {
+    "label": "Aspen Island, Lake Burley Griffin, Canberra",
+    "lat": -35.29849,
+    "lng": 149.14174,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "John Taylor & Co, Loughborough",
+  "mass_kg": 32000,
+  "mass_note": "about 32,000 kg in all; bells from 7 kg to 6,000 kg (NCA)",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "bells_count": 57,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1970-04-26",
+      "precision": "day",
+      "approximate": false,
+      "event": "Opened; a gift of the British Government",
+      "source": "nca-national-carillon"
+    },
+    {
+      "date": "2020-02-03",
+      "precision": "day",
+      "approximate": false,
+      "event": "Upgrade adds two bells, including the 5 t Ngunnawal bell",
+      "source": "nca-national-carillon"
+    }
+  ],
+  "tiers": {
+    "everyday": "Canberra's National Carillon stands on an island in Lake Burley Griffin. Britain gave it to Australia in 1970.",
+    "student": "The National Capital Authority gives an opening on 26 April 1970, 57 bells totalling about 32,000 kg (7 kg to 6,000 kg) by John Taylor & Co, a 50 m tower, and a 2020 upgrade that added two bells including a 5 t Ngunnawal bell. Whether 57 includes the 2020 bells is [UNKNOWN]."
+  },
+  "sources": [
+    "nca-national-carillon"
+  ],
+  "official_sources": [
+    "nca-national-carillon"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [
+    "bell count after 2020"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

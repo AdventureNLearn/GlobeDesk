@@ -1,0 +1,117 @@
+{
+  "schema": "globedesk.chem/0-draft",
+  "id": "bell-bronze",
+  "name": "Bell bronze (copper-tin bell metal)",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "checked": "2026-11-24",
+  "note": "Composition and temperature as sourced; phase data [UNKNOWN].",
+  "properties": [
+    {
+      "property": "Typical composition",
+      "value": "around 80% copper, 20% tin",
+      "source": "cccbr-bell-founding"
+    },
+    {
+      "property": "Why tin matters",
+      "value": "alloying soft copper and tin gives a harder, more rigid and more elastic metal; the hardest bronze has a lot of tin, but too much makes the bell brittle and liable to crack",
+      "source": "cccbr-bell-founding"
+    },
+    {
+      "property": "Casting (melt) temperature",
+      "value": "approximately 1,100 °C (2,010 °F)",
+      "source": "cccbr-bell-founding"
+    },
+    {
+      "property": "Surface",
+      "value": "verdigris forms a protective patina against further oxidation",
+      "source": "cccbr-bell-founding"
+    },
+    {
+      "property": "Example: Liberty Bell (1753)",
+      "value": "about 70% copper, 25% tin; small amounts of lead, zinc, arsenic, gold and silver",
+      "source": "nps-liberty-bell-sheet"
+    },
+    {
+      "property": "Example: Liberty Bell, fact-sheet wording",
+      "value": "mostly copper and tin, with some zinc and minute traces of antimony and silver",
+      "source": "nps-bell-clock-facts"
+    },
+    {
+      "property": "Example: Bicentennial Bell (1976)",
+      "value": "copper and tin alloy; ratio [UNKNOWN]",
+      "source": "nps-bicentennial-bell"
+    },
+    {
+      "property": "Example: Nimrud bell (800–700 BC)",
+      "value": "copper alloy with an iron clapper",
+      "source": "bm-n162"
+    },
+    {
+      "property": "Range 78–80% Cu / 20–22% Sn",
+      "value": "[UNKNOWN] in a primary source; given only in secondary references",
+      "source": "wiki-bell-metal"
+    },
+    {
+      "property": "Solidus, liquidus and phase data",
+      "value": "[UNKNOWN]: needs a standards or materials-handbook source",
+      "source": ""
+    }
+  ],
+  "used_by": [
+    "tsar-bell",
+    "bolshoy-uspensky-bell",
+    "sysoy-bell",
+    "uglich-exile-bell",
+    "big-ben-great-bell",
+    "great-paul",
+    "great-tom-oxford",
+    "bow-bells",
+    "liverpool-great-george",
+    "lutine-bell",
+    "hms-hood-bell",
+    "pummerin",
+    "emmanuel-notre-dame",
+    "savoyarde",
+    "gloriosa-erfurt",
+    "petersglocke-cologne",
+    "freedom-bell-berlin",
+    "zygmunt-bell",
+    "campanone-st-peters",
+    "mechelen-carillons",
+    "bruges-belfry-carillon",
+    "bianzhong-marquis-yi",
+    "yongle-bell",
+    "seongdeok-bell",
+    "sangwonsa-bell",
+    "todaiji-bell",
+    "chion-in-bell",
+    "byodoin-bell",
+    "hiroshima-peace-bell",
+    "mingun-bell",
+    "dhammazedi-bell",
+    "balangiga-bells",
+    "panaji-church-bell",
+    "nimrud-bronze-bell",
+    "liberty-bell",
+    "wilbank-bell",
+    "centennial-bell",
+    "justice-bell",
+    "bicentennial-bell",
+    "old-north-bells",
+    "world-peace-bell",
+    "un-japanese-peace-bell",
+    "netherlands-carillon",
+    "bok-tower-carillon",
+    "uss-arizona-bell",
+    "edmund-fitzgerald-bell",
+    "peace-tower-carillon",
+    "dolores-bell",
+    "maria-angola-cusco",
+    "national-carillon-canberra",
+    "swan-bells-perth",
+    "anzac-bell-perth",
+    "wellington-carillon",
+    "cape-town-st-georges-bells",
+    "amedzofe-bell"
+  ]
+}

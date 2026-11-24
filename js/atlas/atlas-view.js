@@ -108,6 +108,35 @@
   function artRecord(e) { const r = recordOf(e); return r && r.schema === "globedesk.artifact/1" ? r : null; }
   function srcLabel(id) { const s = (D().sources || []).find((x) => x.id === id); return s ? link(s.url, s.publisher || s.title) : esc(id + " " + UNKNOWN); }
   function dateLabel(d) { return esc(d.date + (d.approximate ? " (approx.)" : "")); }
+  // Bells layer records (globedesk.bell/1) and the bells overview (globedesk.bell-overview/1).
+  function bellRecord(e) { const r = recordOf(e); return r && r.schema === "globedesk.bell/1" ? r : null; }
+  function overviewRecord(e) { const r = recordOf(e); return r && r.schema === "globedesk.bell-overview/1" ? r : null; }
+  function srcLink(id) { const s = (D().sources || []).find((x) => x.id === id); return s ? link(s.url, s.publisher || s.title) : esc(id + " " + UNKNOWN); }
+  function entryLink(id) { const t = M().entryById(D(), id); return t ? '<button type="button" class="linklike" data-at-entry="' + esc(id) + '">' + esc(t.title) + "</button>" : esc(id) + ' <span class="muted">(not in this copy)</span>'; }
+  function fmtNum(v, unit, digits) { return v == null ? UNKNOWN : Number(v).toLocaleString("en", { maximumFractionDigits: digits == null ? 2 : digits }) + " " + unit; }
+  const STATUS_LABEL = { "in-place": "In place", museum: "Museum or display", lost: "Lost", "in-storage": "In storage", "[UNKNOWN]": "Status [UNKNOWN]" };
+
+  function bellHtml(e, rec) {
+    const row = (k, v) => "<tr><th>" + esc(k) + "</th><td>" + v + "</td></tr>";
+    let h = '<h4>Bell facts</h4><table class="at-table small at-bell-facts">' +
+      row("Kind", esc(rec.kind)) + row("Status", '<span class="pill ' + (rec.status === "lost" || rec.status === "[UNKNOWN]" ? "warn" : "ok") + '">' + esc(STATUS_LABEL[rec.status] || rec.status) + "</span> " + esc(rec.status_note)) +
+      row("Place", esc(rec.place.label) + (rec.place.approximate ? ' <span class="pill warn">approximate pin</span>' : "") + ' <span class="muted">(' + esc(rec.place.lat.toFixed(4) + ", " + rec.place.lng.toFixed(4)) + "; " + esc(rec.place.coords_source) + ")</span>") +
+      row("Region and era", esc(rec.region + " · " + rec.era)) + row("Foundry or maker", esc(rec.maker)) +
+      row("Mass", esc(fmtNum(rec.mass_kg, "kg", 0)) + ' <span class="muted">' + esc(rec.mass_note) + "</span>") +
+      row("Diameter", esc(fmtNum(rec.diameter_m, "m", 3))) + row("Height", esc(fmtNum(rec.height_m, "m", 3))) +
+      (rec.thickness_m ? row("Wall (sound bow)", esc(fmtNum(rec.thickness_m, "m", 3))) : "") +
+      row("Note", esc(rec.note || UNKNOWN)) + (rec.bells_count !== undefined ? row("Bells", esc(rec.bells_count == null ? UNKNOWN : rec.bells_count)) : "") +
+      row("Alloy", entryLink(rec.alloy.entry) + " · " + esc(rec.alloy.note)) + "</table>";
+    h += '<h4>Timeline</h4>' + (rec.timeline.length ? '<ol class="small at-timeline-list">' + rec.timeline.map((t) => '<li><b>' + esc(M().yearLabel(parseInt(t.date, 10)) + (t.date.length > 4 && t.date[0] !== "-" ? t.date.slice(4) : "")) + (t.end ? "–" + esc(t.end) : "") + (t.approximate ? " ~" : "") + "</b> " + esc(t.event) + ' <span class="muted">· ' + srcLink(t.source) + "</span></li>").join("") + "</ol>" : '<p class="muted small">Dated timeline ' + UNKNOWN + ".</p>");
+    h += '<h4>3D model</h4><p class="small">' + esc(rec.model.label) + (rec.model.available ? ' <button type="button" class="mini" data-at-mode="3d" id="atBell3d">Show the 3D bell</button>' : "") + "</p>";
+    h += '<p class="small">Official source: <b>' + esc(rec.official_status) + "</b>" + (rec.unknowns.length ? ' · Gaps: ' + rec.unknowns.map((u) => esc(u)).join("; ") : "") + "</p>";
+    return h;
+  }
+  function overviewHtml(rec) {
+    return rec.sections.map((sec) => '<section class="at-ov small"><h4>' + esc(sec.title) + "</h4><p>" + esc(sec.text) + '</p><p class="muted">Sources: ' + sec.sources.map(srcLink).join(", ") +
+      (sec.bells.length ? "<br>Bells: " + sec.bells.map(entryLink).join(", ") : "") + "</p></section>").join("") +
+      '<p class="muted small">Bells by region: ' + Object.keys(rec.counts).sort().map((k) => esc(k + " " + rec.counts[k])).join(" · ") + "</p>";
+  }
   function priceRegions() { return Object.keys(D().records).filter((k) => /^data\/atlas\/prices\//.test(k)).map((k) => D().records[k].region).sort(); }
   function priceDoc(region) { return D().records["data/atlas/prices/" + region + ".json"] || null; }
 
@@ -130,12 +159,15 @@
       h += "<h4>Safety rules in the record</h4><ul class=\"small\">" + kit.safety.map((s) => "<li><b>" + esc(s.topic) + ":</b> " + esc(s.rule) + "</li>").join("") + "</ul>";
       h += '<p class="muted small">Draft: not built or tested. Model is an artistic layout from the parametric record, not a build drawing.</p>';
     }
-    if ((e.see_also_ids || []).length) h += '<p class="small at-seealso">See also: ' + e.see_also_ids.map((id) => { const t = M().entryById(D(), id); return t ? '<button type="button" class="linklike" data-at-entry="' + esc(id) + '">' + esc(t.title) + "</button>" : '<span class="muted">' + esc(id) + " (not in this copy)</span>"; }).join(", ") + "</p>";
+    if ((e.see_also_ids || []).length) h += '<p class="small at-seealso">See also: ' + e.see_also_ids.map(entryLink).join(", ") + "</p>";
     if (art) {
       if (art.facts.length) h += '<h4>Key facts</h4><table class="at-table small at-facts">' + art.facts.map((f) => "<tr><th>" + esc(f.label) + "</th><td>" + esc(f.value) + ' <span class="muted">· ' + srcLabel(f.source) + "</span></td></tr>").join("") + "</table>";
       if (art.timeline.length) h += '<h4>Timeline</h4><ol class="small at-timeline-list">' + art.timeline.map((t) => "<li><b>" + dateLabel(t) + "</b> " + esc(t.event) + ' <span class="muted">· ' + srcLabel(t.source) + "</span></li>").join("") + "</ol>";
       if (art.unknowns.length) h += '<p class="muted small">Not known yet: ' + art.unknowns.map(esc).join("; ") + "</p>";
     }
+    const bell = bellRecord(e), ov = overviewRecord(e);
+    if (bell) h += bellHtml(e, bell);
+    if (ov) h += overviewHtml(ov);
     return h + personalHtml(e);
   }
 
@@ -178,13 +210,18 @@
         (cEntry ? '<p class="small">' + esc(M().tierText(cEntry, st.tier)) + "</p>" : "") + '<p class="muted small">Crystal or molecule 3D models: ' + UNKNOWN + ".</p>";
     }
     if (!chemId && kit && kit.chemistry && kit.chemistry.length) chemId = kit.chemistry[0];
+    const bell = bellRecord(e);
+    if (!chemId && bell) chemId = bell.alloy.entry;
     const ce = chemId ? M().entryById(D(), chemId) : null;
     const rec = ce ? recordOf(ce) : null;
     if (!rec) return '<p class="muted">No chemistry record for this entry ' + UNKNOWN + ".</p>" + (ce ? "<p>" + esc(ce.summary) + "</p>" : "");
     let h = (chemId !== e.id ? '<p class="small">From <button type="button" class="linklike" data-at-entry="' + esc(chemId) + '">' + esc(ce.title) + "</button></p>" : "") +
+      (rec.properties ? '<p class="small">' + esc(M().tierText ? M().tierText(ce, st.tier) : ce.summary) + '</p><table class="at-table small"><thead><tr><th>Property</th><th>Value</th><th>Source</th></tr></thead><tbody>' +
+        rec.properties.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.value) + "</td><td>" + (r.source ? srcLink(r.source) : UNKNOWN) + "</td></tr>").join("") + "</tbody></table>" :
       '<table class="at-table small"><thead><tr><th>Property</th><th>LFP</th><th>NMC</th><th>Source</th></tr></thead><tbody>' +
-      rec.compare.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.lfp) + "</td><td>" + esc(r.nmc) + "</td><td>" + esc(r.source) + "</td></tr>").join("") + "</tbody></table>";
-    h += '<p class="small">' + esc(rec.why_this_kit_uses_lfp || "") + "</p>" + '<p class="muted small">Reactions: ' + esc(rec.reactions) + "<br>3D molecule or crystal models: " + esc(rec.molecule_models) + "</p>" + (rec.note ? '<p class="muted small">' + esc(rec.note) + "</p>" : "");
+      rec.compare.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.lfp) + "</td><td>" + esc(r.nmc) + "</td><td>" + esc(r.source) + "</td></tr>").join("") + "</tbody></table>");
+    if (!rec.properties) h += '<p class="small">' + esc(rec.why_this_kit_uses_lfp || "") + "</p>" + '<p class="muted small">Reactions: ' + esc(rec.reactions) + "<br>3D molecule or crystal models: " + esc(rec.molecule_models) + "</p>";
+    if (rec.note) h += '<p class="muted small">' + esc(rec.note) + "</p>";
     return h;
   }
 
@@ -265,7 +302,7 @@
   function select(id) {
     st.selected = id;
     const e = M().entryById(D(), id);
-    if (e && st.tab === "chemistry" && e.kind !== "chemistry" && !kitRecord(e) && !artRecord(e)) st.tab = "object";
+    if (e && st.tab === "chemistry" && e.kind !== "chemistry" && !kitRecord(e) && !artRecord(e) && !bellRecord(e)) st.tab = "object";
     render();
     if (e && st.mode === "globe") flyToEntry(e);
   }
@@ -336,11 +373,16 @@
     const ll = p && centroid(p.a3);
     if (ll && GD.globe && GD.globe.flyTo) { try { GD.globe.flyTo({ center: ll, zoom: 3, pitch: 0, bearing: 0, durationSec: 2 }); } catch (e) { /* ignore */ } }
   }
-  // Fly to the entry's own pin when it has one (zoom by precision), else to its country.
+  // Fly to the entry's own pin when it has one (zoom by precision; an approximate site pin stops at city zoom), else to its country.
   const ZOOM = { site: 15, city: 11, subdivision: 6, country: 3 };
   function flyToEntry(e) {
     const p = (e.places || [])[0];
-    if (p && p.lat != null && p.lng != null && GD.globe && GD.globe.flyTo) { try { GD.globe.flyTo({ center: [p.lng, p.lat], zoom: ZOOM[p.precision] || 6, pitch: p.precision === "site" ? 45 : 0, bearing: 0, durationSec: 2.5 }); } catch (err) { /* ignore */ } return; }
+    if (p && typeof p.lat === "number" && typeof p.lng === "number" && GD.globe && GD.globe.flyTo) {
+      const approx = /approximate/i.test(p.note || "");
+      const zoom = p.precision === "site" && approx ? 11 : (ZOOM[p.precision] || 6);
+      try { GD.globe.flyTo({ center: [p.lng, p.lat], zoom, pitch: p.precision === "site" && !approx ? 45 : 0, bearing: 0, durationSec: 2.5 }); } catch (err) { /* ignore */ }
+      return;
+    }
     if (p && p.region) flyToRegion(p.region.slice(0, 2));
   }
 
@@ -349,6 +391,13 @@
     const box = $("at3d"), note = $("at3dNote");
     if (!box) return;
     const e = st.selected ? M().entryById(D(), st.selected) : null;
+    const bell = bellRecord(e);
+    if (bell && GD.atlas3d) {
+      if (!bell.model.available) { box.classList.add("stub"); box.textContent = bell.model.label; return; }
+      const params = bell.model.params || { diameter_m: 1 };
+      GD.atlas3d.show(box, "bell", params).then((r) => { if (note) note.textContent = r.ok ? bell.model.label + " Drag to turn." + (r.layout && r.layout.assumed && (r.layout.assumed.height || r.layout.assumed.thickness) ? " Assumed: " + [r.layout.assumed.height ? "height (0.8 × diameter)" : "", r.layout.assumed.thickness ? "wall (diameter ÷ 13)" : ""].filter(Boolean).join(", ") + "." : "") : "3D view unavailable here: " + r.reason; });
+      return;
+    }
     const kit = kitRecord(e);
     const art = artRecord(e);
     if (e && art && art.model && GD.atlas3d) {

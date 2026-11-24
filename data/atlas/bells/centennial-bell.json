@@ -1,0 +1,92 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "centennial-bell",
+  "title": "Centennial Bell (Independence Hall)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Strikes the hours with a mechanical hammer since 1926.",
+  "era": "19th-century",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Tower of Independence Hall, Philadelphia",
+    "lat": 39.94889,
+    "lng": -75.15003,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Meneely-Kimberly foundry, Troy, New York; gift of Henry Seybert",
+  "mass_kg": 5897,
+  "mass_note": "13,000 lb, 1,000 lb for each of the original 13 states (NPS)",
+  "diameter_m": 2.286,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; contains metal from four melted cannons (NPS)"
+  },
+  "timeline": [
+    {
+      "date": "1876",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast at Meneely-Kimberly, Troy, for the centennial",
+      "source": "nps-bell-clock-facts"
+    },
+    {
+      "date": "1876-07-04",
+      "precision": "day",
+      "approximate": false,
+      "event": "First rings for the nation's 100th birthday; listeners find the tone poor",
+      "source": "nps-bells-and-clocks"
+    },
+    {
+      "date": "1876",
+      "precision": "year",
+      "approximate": true,
+      "event": "Sent back to Troy and recast; in the steeple again by the end of 1876",
+      "source": "nps-bells-and-clocks"
+    },
+    {
+      "date": "1926",
+      "precision": "year",
+      "approximate": false,
+      "event": "A mechanical hammer begins striking the hours",
+      "source": "nps-centennial-bell-ring"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Centennial Bell hangs where the Liberty Bell once did, in the Independence Hall tower. It weighs 13,000 lb and rings every hour.",
+    "student": "NPS gives 13,000 lb and a 7 ft 6 in diameter, cast at Meneely-Kimberly in Troy in 1876. Its metal includes 400 lb from four cannons: one American and one British from Saratoga, one Union and one Confederate from Gettysburg (fact sheet). Since 1926 a hammer strikes it on the hour. The National Register form gives 7 ft 3/4 in across (conflict kept open)."
+  },
+  "sources": [
+    "nps-bell-clock-facts",
+    "nps-centennial-bell-ring",
+    "nps-bells-and-clocks",
+    "nps-nrhp-inde"
+  ],
+  "official_sources": [
+    "nps-bell-clock-facts",
+    "nps-centennial-bell-ring",
+    "nps-bells-and-clocks",
+    "nps-nrhp-inde"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.286
+    },
+    "label": "Parametric profile scaled from the sourced diameter; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "diameter conflict (7 ft 6 in fact sheet vs 7 ft 3/4 in National Register form)"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "lutine-bell",
+  "title": "Lutine Bell (Lloyd's of London)",
+  "kind": "ship-bell",
+  "status": "in-place",
+  "status_note": "Rung for special occasions.",
+  "era": "[UNKNOWN]",
+  "region": "Europe",
+  "country": "GB",
+  "place": {
+    "label": "Underwriting Room, Lloyd's building, City of London",
+    "lat": 51.51296,
+    "lng": -0.08241,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "[UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1799-10-09",
+      "precision": "day",
+      "approximate": false,
+      "event": "HMS Lutine wrecked off the Dutch coast",
+      "source": "lloyds-hms-lutine"
+    },
+    {
+      "date": "1858",
+      "precision": "year",
+      "approximate": true,
+      "event": "Bell recovered from the wreck (Lloyd's gives both 1857 and 1858)",
+      "source": "lloyds-hms-lutine"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Lutine Bell came from the wreck of HMS Lutine, lost in 1799. It hangs at Lloyd's in London and was once rung so that news of a ship reached everyone at the same moment.",
+    "student": "Lloyd's records the frigate's loss on 9 October 1799 and recovery of the bell from the wreck in the late 1850s (1857 and 1858 both appear). It hangs in the Underwriting Room and is now rung only on special occasions."
+  },
+  "sources": [
+    "lloyds-hms-lutine"
+  ],
+  "official_sources": [
+    "lloyds-hms-lutine"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "exact recovery year",
+    "mass"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

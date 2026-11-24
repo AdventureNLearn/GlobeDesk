@@ -7,7 +7,8 @@ import { ROOT, J, JR, CATEGORY_PACKS } from "./lib.mjs";
 import { readFileSync } from "node:fs";
 
 // Coarse ISO 3166-1 alpha-2 -> alpha-3 for the bundled world outline (Natural Earth a3). Only codes in use.
-const A3 = { US: "USA", GB: "GBR", IT: "ITA", IN: "IND" };
+const A3 = { US: "USA", GB: "GBR", IT: "ITA", IN: "IND", RU: "RUS", AT: "AUT", FR: "FRA", DE: "DEU", PL: "POL", BE: "BEL", CN: "CHN", KR: "KOR", JP: "JPN",
+  MM: "MMR", PH: "PHL", IQ: "IRQ", CA: "CAN", MX: "MEX", PE: "PER", AU: "AUS", NZ: "NZL", ZA: "ZAF", GH: "GHA" }; // VA (Vatican City) has no polygon in the bundled outline: [UNKNOWN]
 
 export function buildData() {
   const entries = CATEGORY_PACKS.flatMap((p) => J(`packs/${p}/entries.json`).entries);

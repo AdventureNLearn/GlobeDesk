@@ -1,0 +1,71 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "peace-tower-carillon",
+  "title": "Peace Tower Carillon (Ottawa)",
+  "kind": "carillon",
+  "status": "in-place",
+  "status_note": "Played by the Dominion Carillonneur.",
+  "era": "20th-century",
+  "region": "North America",
+  "country": "CA",
+  "place": {
+    "label": "Peace Tower, Parliament Hill, Ottawa",
+    "lat": 45.42479,
+    "lng": -75.69964,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Gillett & Johnston, Croydon",
+  "mass_kg": 54000,
+  "mass_note": "about 54 t for all bells; bourdon 10,090 kg (House of Commons)",
+  "diameter_m": null,
+  "height_m": null,
+  "note": "bourdon E",
+  "bells_count": 53,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1925",
+      "end": "1927",
+      "precision": "year",
+      "approximate": false,
+      "event": "Bells cast by Gillett & Johnston",
+      "source": "ourcommons-carillon"
+    },
+    {
+      "date": "1927-07-01",
+      "precision": "day",
+      "approximate": false,
+      "event": "Inaugurated",
+      "source": "ourcommons-carillon"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Peace Tower in Ottawa holds a carillon of 53 bells, inaugurated on 1 July 1927. The biggest bell weighs over 10 tonnes.",
+    "student": "House of Commons heritage: 53 bells cast 1925–27 by Gillett & Johnston, inaugurated on 1 July 1927; bourdon 10,090 kg (E) with a 229 kg clapper, smallest bell 4.5 kg, about 54 t in all."
+  },
+  "sources": [
+    "ourcommons-carillon",
+    "canada-peace-tower"
+  ],
+  "official_sources": [
+    "ourcommons-carillon",
+    "canada-peace-tower"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

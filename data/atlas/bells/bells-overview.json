@@ -1,0 +1,251 @@
+{
+  "schema": "globedesk.bell-overview/1",
+  "id": "bells-overview",
+  "title": "Bells: a world history",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "tiers": {
+    "everyday": "Bells have been made for about 3,000 years, from tiny Assyrian bronze bells to Chinese chime sets, Buddhist temple bells struck with a beam, European church and city bells, carillons played from a keyboard and giant Russian bells. Most are cast from bell bronze, about four parts copper to one part tin.",
+    "student": "This overview links every bell in the Bells layer. It covers early bells (a Neo-Assyrian bell of 800–700 BC), the bianzhong of Marquis Yi of Zeng (5th century BCE), Buddhist bonshō and Korean bells, Christian church bells and medieval founding, Low Countries carillons, Russian giant bells, English change ringing, ship and civic bells and the modern era. It ends with how bells are cast in loam moulds from about 80% copper and 20% tin, then tuned by turning metal from the inside."
+  },
+  "sections": [
+    {
+      "id": "early",
+      "title": "Bronze Age and early bells",
+      "text": "Small cast bells with clappers are among the oldest bells we know. The British Museum holds a Neo-Assyrian copper-alloy bell from Nimrud, 800–700 BC, about 5 cm high, with an iron clapper.",
+      "sources": [
+        "bm-n162"
+      ],
+      "bells": [
+        "nimrud-bronze-bell"
+      ]
+    },
+    {
+      "id": "bianzhong",
+      "title": "Chinese bianzhong (Marquis Yi of Zeng)",
+      "text": "The 65 bells from the tomb of Marquis Yi of Zeng, excavated at Suizhou in 1978 and dated by UNESCO to the 5th century BCE, hang on a 7.48 m rack in three tiers. Each bell gives two tones about a third apart, and the set spans about 5.5 octaves. Its 3,755 inscribed characters record music theory.",
+      "sources": [
+        "hbww-zeng-bianzhong",
+        "unesco-mow-zeng"
+      ],
+      "bells": [
+        "bianzhong-marquis-yi"
+      ]
+    },
+    {
+      "id": "bonsho",
+      "title": "Buddhist bonshō and Korean temple bells",
+      "text": "East Asian temple bells have no clapper and are struck from outside with a wooden beam: Tōdai-ji's 26.3 t bell (8th century) uses a 4.48 m zelkova beam. Korean bells add a sound tube on top; the Sangwonsa bell (725) is the oldest Korean bell, and the Seongdeok bell (771) the largest, at about 18.9 t. Later giants include the Chion-in bell (1636, 70 t) and Beijing's Yongle Bell (early 15th century, about 46 t).",
+      "sources": [
+        "todaiji-shoro",
+        "nara-todaiji-shoro",
+        "khs-sangwonsa",
+        "khs-seongdeok",
+        "chionin-daishoro",
+        "beijing-dazhongsi"
+      ],
+      "bells": [
+        "todaiji-bell",
+        "sangwonsa-bell",
+        "seongdeok-bell",
+        "chion-in-bell",
+        "yongle-bell",
+        "byodoin-bell"
+      ]
+    },
+    {
+      "id": "church",
+      "title": "Christian church bells and medieval founding",
+      "text": "Bell founding in Britain began with monastic orders, and the craft has stayed essentially the same since the 12th century: bells are cast mouth down in a two-part mould (core and cope). Medieval survivors include Erfurt's Gloriosa (1497, 11,450 kg), called the largest free-swinging medieval bell. St Peter's in Rome recast its great bell in 1352–54 after a fire in 1303.",
+      "sources": [
+        "cccbr-bell-founding",
+        "erfurt-dom",
+        "vatican-campane-info"
+      ],
+      "bells": [
+        "gloriosa-erfurt",
+        "campanone-st-peters",
+        "zygmunt-bell",
+        "emmanuel-notre-dame",
+        "pummerin",
+        "petersglocke-cologne"
+      ]
+    },
+    {
+      "id": "carillons",
+      "title": "Carillons of the Low Countries",
+      "text": "A carillon is a set of tuned bells played from a keyboard. Mechelen in Belgium has six carillons and the carillon school founded in 1922. The belfries of Belgium and France, World Heritage since 1999, include Bruges, whose carillon has 47 bells weighing about 27 t. Seventeenth-century founders such as the Hemonys could already tune bell partials closely.",
+      "sources": [
+        "visitmechelen-carillon",
+        "visitbruges-carillon",
+        "unesco-whc-943",
+        "hibberts-tuning"
+      ],
+      "bells": [
+        "mechelen-carillons",
+        "bruges-belfry-carillon",
+        "peace-tower-carillon",
+        "netherlands-carillon",
+        "bok-tower-carillon",
+        "national-carillon-canberra",
+        "wellington-carillon"
+      ]
+    },
+    {
+      "id": "russia",
+      "title": "Russian giant bells",
+      "text": "Russian founders made the largest bells. The Tsar Bell (1733–1735, about 202 t) cracked in a fire in 1737 and was never rung. Rostov's Sysoy (1688) weighs 2,000 poods, and the Kremlin's Bolshoy Uspensky bell (1817) is 4.2 m across. The CCCBR history says too much tin makes bell metal brittle, and it cites the Tsar Bell as an example.",
+      "sources": [
+        "kreml-tsar-bell",
+        "rostmuseum-zvonnitsa",
+        "kreml-coll-uspensky",
+        "cccbr-bell-founding"
+      ],
+      "bells": [
+        "tsar-bell",
+        "sysoy-bell",
+        "bolshoy-uspensky-bell",
+        "uglich-exile-bell"
+      ]
+    },
+    {
+      "id": "change-ringing",
+      "title": "English change ringing",
+      "text": "English rings of bells are hung for full-circle ringing in changes. Bow Bells in London were rebuilt after 1666 and again after 1941. Old North in Boston received the first ring cast for North America (1744). Liverpool Cathedral calls its 13 bells the highest and heaviest peal, and Cape Town has a ring of ten.",
+      "sources": [
+        "stmarylebow-bells",
+        "oldnorth-bells",
+        "liverpool-cathedral-bells",
+        "sgcathedral-bellringers"
+      ],
+      "bells": [
+        "bow-bells",
+        "old-north-bells",
+        "liverpool-great-george",
+        "cape-town-st-georges-bells",
+        "swan-bells-perth"
+      ]
+    },
+    {
+      "id": "ship-civic",
+      "title": "Ship and civic bells",
+      "text": "Ships carry bells that outlive them, such as the Lutine Bell at Lloyd's (wreck of 1799), HMS Hood's bell (recovered 2015) and the Edmund Fitzgerald's bell (recovered 1995). Civic bells mark time and public moments: Big Ben (1858), the Liberty Bell (1753), the Bell of Dolores (1810), the Freedom Bell in Berlin (1950) and the civic belfries of Flanders.",
+      "sources": [
+        "lloyds-hms-lutine",
+        "rn-hood-bell-2016",
+        "glshs-fitzgerald",
+        "parl-big-ben-casting",
+        "nps-liberty-bell",
+        "inah-grito",
+        "berlin-freiheitsglocke",
+        "unesco-whc-943"
+      ],
+      "bells": [
+        "lutine-bell",
+        "hms-hood-bell",
+        "edmund-fitzgerald-bell",
+        "uss-arizona-bell",
+        "big-ben-great-bell",
+        "liberty-bell",
+        "dolores-bell",
+        "freedom-bell-berlin"
+      ]
+    },
+    {
+      "id": "modern",
+      "title": "The modern era",
+      "text": "After a UK tradition of old-style tuning that lasted to the end of the 19th century, Taylor's became the first UK founders to adopt true-harmonic tuning of the lowest five partials. Twentieth-century bells often carry memory and peace: the UN Japanese Peace Bell (cast 1952 from coins of 60 nations), Hiroshima's Peace Bell (1964), the World Peace Bell (Paccard, 1999, 33 t) and Perth's ANZAC Bell (2018). Some bells came home: the Bells of Balangiga were returned to the Philippines in 2018.",
+      "sources": [
+        "hibberts-tuning",
+        "un-gifts-peace-bell",
+        "hiroshima-pcf-peacebell",
+        "paccard-world-peace-bell",
+        "belltower-perth-about",
+        "af-balangiga"
+      ],
+      "bells": [
+        "un-japanese-peace-bell",
+        "hiroshima-peace-bell",
+        "world-peace-bell",
+        "anzac-bell-perth",
+        "balangiga-bells",
+        "justice-bell",
+        "centennial-bell",
+        "bicentennial-bell",
+        "wilbank-bell"
+      ]
+    },
+    {
+      "id": "casting",
+      "title": "How bells are cast and tuned",
+      "text": "Founders cut wooden 'strickle boards' to the bell's profile and build a core and an outer mould (cope) of sand or loam, sometimes mixed with straw and horse manure. Bell metal of around 80% copper and 20% tin is melted at about 1,100 °C and poured into the mould, which is buried mouth down in a casting pit. The bell is then tuned on a lathe by cutting metal from the inside. Tuners listen for the five lowest partials: hum, prime, tierce, quint and nominal. True-harmonic tuning sets these at simple intervals. The often-quoted range of 78–80% copper and 20–22% tin appears only in secondary references, so we mark it [UNKNOWN] in a primary source.",
+      "sources": [
+        "cccbr-bell-founding",
+        "hibberts-tuning",
+        "wiki-bell-metal"
+      ],
+      "bells": []
+    },
+    {
+      "id": "lost",
+      "title": "Lost and exiled bells",
+      "text": "Some bells are known only from records. The Dhammazedi Bell sank in 1608 (BBC report, no official record found). The Uglich bell was 'exiled' to Siberia in 1591 and returned in 1892.",
+      "sources": [
+        "bbc-dhammazedi",
+        "culture-ru-uglich-bell",
+        "uglmus-history"
+      ],
+      "bells": [
+        "dhammazedi-bell",
+        "uglich-exile-bell",
+        "maria-angola-cusco",
+        "amedzofe-bell",
+        "panaji-church-bell",
+        "mingun-bell",
+        "great-paul",
+        "great-tom-oxford",
+        "savoyarde"
+      ]
+    }
+  ],
+  "counts": {
+    "Europe": 21,
+    "Asia": 13,
+    "North America": 14,
+    "South America": 1,
+    "Oceania": 4,
+    "Africa": 2
+  },
+  "eras": [
+    {
+      "id": "ancient",
+      "label": "Before 500",
+      "to": 499
+    },
+    {
+      "id": "medieval",
+      "label": "500–1499",
+      "to": 1499
+    },
+    {
+      "id": "early-modern",
+      "label": "1500–1799",
+      "to": 1799
+    },
+    {
+      "id": "19th-century",
+      "label": "1800s",
+      "to": 1899
+    },
+    {
+      "id": "20th-century",
+      "label": "1900s",
+      "to": 1999
+    },
+    {
+      "id": "21st-century",
+      "label": "2000s",
+      "to": 9999
+    }
+  ]
+}

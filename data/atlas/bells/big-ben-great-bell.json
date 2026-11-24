@@ -1,0 +1,103 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "big-ben-great-bell",
+  "title": "Big Ben (the Great Bell, Elizabeth Tower)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Hour bell of the Great Clock.",
+  "era": "19th-century",
+  "region": "Europe",
+  "country": "GB",
+  "place": {
+    "label": "Elizabeth Tower, Palace of Westminster, London",
+    "lat": 51.50069,
+    "lng": -0.12457,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "First bell: John Warner & Sons near Stockton-on-Tees (1856). Present bell: George Mears, Whitechapel (1858)",
+  "mass_kg": 13700,
+  "mass_note": "13.7 t (UK Parliament)",
+  "diameter_m": 2.7,
+  "height_m": 2.2,
+  "note": "E",
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN] in the cited pages"
+  },
+  "timeline": [
+    {
+      "date": "1856-08",
+      "precision": "month",
+      "approximate": false,
+      "event": "First Great Bell cast by Warners near Stockton-on-Tees",
+      "source": "parl-big-ben-casting"
+    },
+    {
+      "date": "1857-10-17",
+      "precision": "day",
+      "approximate": false,
+      "event": "A 1.2 m crack appears during testing",
+      "source": "parl-big-ben-casting"
+    },
+    {
+      "date": "1858-04-10",
+      "precision": "day",
+      "approximate": false,
+      "event": "Recast by George Mears at the Whitechapel foundry (13.5 t)",
+      "source": "parl-big-ben-casting"
+    },
+    {
+      "date": "1859-07-11",
+      "precision": "day",
+      "approximate": false,
+      "event": "First strikes the hours",
+      "source": "parl-big-ben-dates"
+    },
+    {
+      "date": "1859-09",
+      "precision": "month",
+      "approximate": false,
+      "event": "Cracks; silenced",
+      "source": "parl-big-ben-dates"
+    },
+    {
+      "date": "1863",
+      "precision": "year",
+      "approximate": false,
+      "event": "Turned a quarter turn and given a lighter hammer; strikes again",
+      "source": "parl-big-ben-dates"
+    }
+  ],
+  "tiers": {
+    "everyday": "Big Ben is the nickname of the Great Bell in the Elizabeth Tower in London. It weighs 13.7 tonnes and strikes the note E. The first bell cracked, and the present one was recast at Whitechapel in 1858.",
+    "student": "UK Parliament records: a first bell cast in August 1856 by Warners cracked in testing (October 1857); George Mears recast it at Whitechapel on 10 April 1858. It first struck on 11 July 1859, cracked that September, and from 1863 was turned 90° with a lighter (about 200 kg) hammer. 13.7 t, 2.7 m across, 2.2 m high, note E."
+  },
+  "sources": [
+    "parl-great-bell",
+    "parl-big-ben-casting",
+    "parl-big-ben-dates"
+  ],
+  "official_sources": [
+    "parl-great-bell",
+    "parl-big-ben-casting",
+    "parl-big-ben-dates"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.7,
+      "height_m": 2.2
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

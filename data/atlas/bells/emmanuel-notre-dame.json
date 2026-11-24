@@ -1,0 +1,105 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "emmanuel-notre-dame",
+  "title": "Emmanuel (great bourdon of Notre-Dame de Paris)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "The south tower was not damaged in the 2019 fire.",
+  "era": "early-modern",
+  "region": "Europe",
+  "country": "FR",
+  "place": {
+    "label": "South tower, Notre-Dame de Paris",
+    "lat": 48.85294,
+    "lng": 2.35005,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "1686 casting: founders Chapelle, Gillot, Moreau and Le Guay",
+  "mass_kg": 13320,
+  "mass_note": "13,320 kg, bell alone (Ministry of Culture page)",
+  "diameter_m": 2.61,
+  "height_m": 2.052,
+  "note": "[UNKNOWN]",
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1680-07-22",
+      "precision": "day",
+      "approximate": false,
+      "event": "The earlier bourdon Jacqueline is renamed Emmanuel",
+      "source": "culture-gouv-emmanuel"
+    },
+    {
+      "date": "1680-09-17",
+      "precision": "day",
+      "approximate": false,
+      "event": "First casting attempt (Jean Thibault)",
+      "source": "culture-gouv-emmanuel"
+    },
+    {
+      "date": "1682-07-14",
+      "precision": "day",
+      "approximate": false,
+      "event": "Hoisted into the south tower; found to be a semitone too low",
+      "source": "culture-gouv-emmanuel"
+    },
+    {
+      "date": "1686-03-04",
+      "precision": "day",
+      "approximate": false,
+      "event": "Successful recasting",
+      "source": "culture-gouv-emmanuel"
+    },
+    {
+      "date": "1686-04-29",
+      "precision": "day",
+      "approximate": false,
+      "event": "Blessed; Louis XIV is its sponsor",
+      "source": "culture-gouv-emmanuel"
+    },
+    {
+      "date": "2019-04-15",
+      "precision": "day",
+      "approximate": false,
+      "event": "Cathedral fire; the south tower and bourdon survive",
+      "source": "rebatir-nd-tours"
+    }
+  ],
+  "tiers": {
+    "everyday": "Emmanuel is the biggest bell of Notre-Dame de Paris, recast in 1686 and weighing about 13 tonnes. It survived the 2019 fire in the south tower.",
+    "student": "The Ministry of Culture page traces castings in 1680–1681, a bell hoisted in 1682 that sounded a semitone low, and a successful recasting on 4 March 1686, blessed on 29 April 1686. Present figures: 13,320 kg, diameter 261 cm. The cathedral calls it the great bourdon of the south tower."
+  },
+  "sources": [
+    "culture-gouv-emmanuel",
+    "nd-paris-emmanuel",
+    "rebatir-nd-tours"
+  ],
+  "official_sources": [
+    "culture-gouv-emmanuel",
+    "nd-paris-emmanuel",
+    "rebatir-nd-tours"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.61,
+      "height_m": 2.052
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "note name in an official source"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "byodoin-bell",
+  "title": "Bronze bell of Byōdō-in",
+  "kind": "bell",
+  "status": "museum",
+  "status_note": "National Treasure.",
+  "era": "medieval",
+  "region": "Asia",
+  "country": "JP",
+  "place": {
+    "label": "Byōdō-in, Uji (museum)",
+    "lat": 34.8895,
+    "lng": 135.80745,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": 1.46,
+  "thickness_m": 0.12,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1100",
+      "precision": "year",
+      "approximate": true,
+      "event": "Cast in the Heian period, 12th century (year approximate)",
+      "source": "byodoin-sculpture"
+    }
+  ],
+  "tiers": {
+    "everyday": "Byōdō-in's bronze bell is a National Treasure from the 12th century, famous for its fine decoration.",
+    "student": "Byodoin lists the bell as Heian period, 12th century: body height 146.0 cm, thickness 12.0 cm, National Treasure. Diameter and mass [UNKNOWN]."
+  },
+  "sources": [
+    "byodoin-sculpture"
+  ],
+  "official_sources": [
+    "byodoin-sculpture"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "exact year",
+    "diameter",
+    "mass"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "dhammazedi-bell",
+  "title": "Dhammazedi Bell (lost)",
+  "kind": "bell",
+  "status": "lost",
+  "status_note": "Sank in 1608 while being moved by raft; never recovered.",
+  "era": "medieval",
+  "region": "Asia",
+  "country": "MM",
+  "place": {
+    "label": "Last known: river near Yangon (very approximate)",
+    "lat": 16.76851,
+    "lng": 96.172,
+    "approximate": true,
+    "basis": "last-known",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Commissioned by King Dhammazedi",
+  "mass_kg": null,
+  "mass_note": "reported as nearly 300 t (BBC, reference); unverified",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "[UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1484",
+      "precision": "year",
+      "approximate": true,
+      "event": "Cast in the 15th century (exact year [UNKNOWN])",
+      "source": "bbc-dhammazedi"
+    },
+    {
+      "date": "1608",
+      "precision": "year",
+      "approximate": false,
+      "event": "Seized by Filipe de Brito; sinks in the river from a raft",
+      "source": "bbc-dhammazedi"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Dhammazedi Bell was a huge 15th-century bell that sank in a river in Myanmar in 1608. People have searched for it ever since.",
+    "student": "BBC reporting (a reference, not an official source) describes a 15th-century bell, reportedly near 300 t, seized in 1608 by the Portuguese adventurer Filipe de Brito and lost from a raft. No official record was found [UNKNOWN]."
+  },
+  "sources": [
+    "bbc-dhammazedi"
+  ],
+  "official_sources": [],
+  "official_status": "[UNKNOWN]",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [
+    "official source",
+    "mass",
+    "exact location",
+    "exact casting year (pinned as approximate 1484)"
+  ],
+  "confidence": "low",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

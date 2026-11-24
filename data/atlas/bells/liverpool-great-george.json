@@ -1,0 +1,73 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "liverpool-great-george",
+  "title": "Great George (Liverpool Cathedral)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Bourdon above the cathedral's ring of 13.",
+  "era": "20th-century",
+  "region": "Europe",
+  "country": "GB",
+  "place": {
+    "label": "Vestey Tower, Liverpool Cathedral",
+    "lat": 53.39732,
+    "lng": -2.97318,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "John Taylor & Co, Loughborough (foundry trust)",
+  "mass_kg": 15000,
+  "mass_note": "15 tonnes (14.5 tons) per the cathedral",
+  "diameter_m": 2.9,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1940",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast (per the Taylor foundry trust; not stated on the cathedral page)",
+      "source": "belltrust-named-bells"
+    },
+    {
+      "date": "1951",
+      "precision": "year",
+      "approximate": false,
+      "event": "Installed after a wartime delay (foundry trust)",
+      "source": "belltrust-named-bells"
+    }
+  ],
+  "tiers": {
+    "everyday": "Great George is a 15-tonne bell at Liverpool Cathedral, which also has the highest and heaviest peal of ringing bells in the world.",
+    "student": "The cathedral gives Great George as 15 tonnes and 2.9 m across; the 13-bell ring totals about 17 tonnes with a 4.06 t tenor, which it calls the highest and heaviest peal. The Taylor foundry trust (reference) gives casting in 1940 and installation in 1951."
+  },
+  "sources": [
+    "liverpool-cathedral-bells",
+    "belltrust-named-bells"
+  ],
+  "official_sources": [
+    "liverpool-cathedral-bells"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.9
+    },
+    "label": "Parametric profile scaled from the sourced diameter; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "cast date in an official source"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

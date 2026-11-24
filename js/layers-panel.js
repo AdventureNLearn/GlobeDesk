@@ -140,10 +140,12 @@
         m.gis.map((g) => '<label class="lp-row lp-sub' + (g.on ? " on" : "") + (g.disabled || !gisLive ? " disabled" : "") + '"><input type="checkbox" role="switch" data-lp-gis="' + esc(g.id) + '"' + (g.on ? " checked" : "") + (g.disabled || !gisLive ? " disabled" : "") + '>' +
           '<span class="lp-text"><span class="lp-name">' + esc(g.label) + ' <span class="gis-status">' + esc(g.status) + '</span></span><span class="lp-credit">' + esc(g.credit) + "</span></span></label>").join("") +
         "</section>" : "") +
+      (GD.bellsLayer && GD.bellsLayer.panelHtml ? GD.bellsLayer.panelHtml() : "") +
       (GD.userLayers && GD.userLayers.panelHtml ? GD.userLayers.panelHtml() : "") +
       '<p class="muted small lp-foot">More settings (display quality, tile cache, licence notes) are in Workspace, Inspector, Layers.</p>';
     paintLegends(body);
     bindBody(body);
+    if (GD.bellsLayer && GD.bellsLayer.bind) GD.bellsLayer.bind(body, () => { render(); refreshOthers(); });
     if (GD.userLayers && GD.userLayers.bind) GD.userLayers.bind(body, () => { render(); refreshOthers(); });
   }
 

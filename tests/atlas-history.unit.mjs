@@ -14,7 +14,8 @@ const cats = J("categories.json").categories;
 const all = allEntries();
 const ctx = { cats, entryIds: new Set(all.map((e) => e.id)), sourceIds: new Set(byId.keys()), sourceById: byId };
 const hist = J("packs/history-places/entries.json").entries;
-const bells = []; // bell entries live in the Bells branch (next/atlas-bells); history links to them by id
+const bells = []; // bell entries live in the Bells pack and are checked by tests/bells.unit.mjs; history links to them by id
+const bellPack = J("packs/bells/entries.json").entries;
 const year = (d) => parseInt(d, 10);
 const ERAS = [[1775, 1799], [1800, 1860], [1861, 1869], [1870, 1913], [1914, 1945], [1946, 1980], [1981, 2026]];
 
@@ -39,10 +40,12 @@ t("pins: day-precision dates where given, approximate pins say so", () => hist.c
 })));
 t("bell links are by id only: no bell entries duplicated in this pack, links point at Bells-layer ids", () => {
   const BELL_IDS = ["liberty-bell", "centennial-bell", "justice-bell", "old-north-bells", "bicentennial-bell"];
-  assert.ok(!all.some((e) => BELL_IDS.includes(e.id)), "a bell entry is duplicated in this branch");
+  assert.ok(!hist.some((e) => BELL_IDS.includes(e.id)), "a bell entry is duplicated in the history pack");
+  BELL_IDS.forEach((id) => assert.equal(all.filter((e) => e.id === id).length, 1, id + " must exist exactly once (in the Bells pack)"));
+  BELL_IDS.forEach((id) => assert.ok(bellPack.some((e) => e.id === id), id + " must live in the Bells pack"));
   const linked = new Set(hist.flatMap((e) => e.see_also_ids || []));
   BELL_IDS.forEach((id) => assert.ok(linked.has(id), id));
-  assert.ok(hist.every((e) => !(e.related || []).some((r) => BELL_IDS.includes(r.to))), "bells must be see_also_ids, not related (they are not in this copy)");
+  assert.ok(hist.every((e) => !(e.related || []).some((r) => BELL_IDS.includes(r.to))), "bells must be see_also_ids, not related (the Bells pack owns them)");
 });
 t("artifact records for history objects: Constitution (four pages) and the 1844 telegraph tape", () => {
   const schema = JR("schema/globedesk-artifact.schema.json");
@@ -55,7 +58,7 @@ t("artifact records for history objects: Constitution (four pages) and the 1844 
 t("validator: history entry with no official source, a layer entry with no pin, an artifact row with an unknown source", () => {
   const e = structuredClone(hist[0]); e.sources = ["oldnorth-bells"];
   assert.ok(historyRules(e, ctx).some((x) => /official source/.test(x)));
-  const b = structuredClone(hist[0]); b.layer = "bells"; b.places = [{ region: "US-PA", precision: "subdivision" }];
+  const b = structuredClone(hist[0]); b.layer = "bells"; b.kind = "object"; b.places = [{ region: "US-PA", precision: "subdivision" }];
   assert.ok(historyRules(b, ctx).some((x) => /lat\/lng pin/.test(x)));
   const r = structuredClone(JR("data/atlas/artifacts/constitution-1787.json")); r.facts[0].source = "made-up-source";
   assert.ok(artifactRules("x", r, ctx, JR("schema/globedesk-artifact.schema.json")).some((x) => /unknown source/.test(x)));

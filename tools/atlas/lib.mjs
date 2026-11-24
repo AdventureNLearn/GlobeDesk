@@ -7,7 +7,10 @@ import path from "node:path";
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");  // repo root
 export const ATLAS = path.join(ROOT, "atlas");
 export const MAX_BYTES = 50 * 1024 * 1024;
-export const CATEGORY_PACKS = ["history-places", "energy", "objects", "chemistry", "economics"]; // packs written so far
+export const CATEGORY_PACKS = ["history-places", "energy", "objects", "chemistry", "economics", "bells"]; // packs written so far
+// The category that owns a pack: its main pack, or an extra pack listed under it (bells lives under objects).
+export const packCategory = (cats, id) => cats.find((c) => c.pack === id) || cats.find((c) => (c.extra_packs || []).includes(id)) || null;
+export const categoryPacks = (c) => (c ? [c.pack, ...(c.extra_packs || [])] : []);
 export const J = (p) => JSON.parse(readFileSync(path.join(ATLAS, p), "utf8"));
 export const JR = (p) => JSON.parse(readFileSync(path.join(ROOT, p), "utf8")); // repo-root relative (schemas, records)
 export const sha = (buf) => createHash("sha256").update(buf).digest("hex");

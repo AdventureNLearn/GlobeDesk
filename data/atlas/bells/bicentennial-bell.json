@@ -1,0 +1,84 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "bicentennial-bell",
+  "title": "Bicentennial Bell (Philadelphia)",
+  "kind": "bell",
+  "status": "museum",
+  "status_note": "On display in the Benjamin Rush Garden after storage from 2013.",
+  "era": "20th-century",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Benjamin Rush Garden, 3rd and Walnut Streets, Philadelphia",
+    "lat": 39.94743,
+    "lng": -75.14657,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Whitechapel Foundry, London",
+  "mass_kg": 5654,
+  "mass_note": "12,466 lb (NPS history page) vs 12,446 lb (2013 NPS release)",
+  "diameter_m": 2.095,
+  "height_m": 1.676,
+  "note": "G below middle C",
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "copper and tin alloy (NPS); ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1976-07-06",
+      "precision": "day",
+      "approximate": false,
+      "event": "Presented by Britain to the people of the United States",
+      "source": "nps-bicentennial-bell"
+    },
+    {
+      "date": "2013-01-31",
+      "precision": "day",
+      "approximate": false,
+      "event": "Lifted from its 130 ft tower and placed in museum storage",
+      "source": "nps-bicentennial-bell-move"
+    },
+    {
+      "date": "2024",
+      "precision": "year",
+      "approximate": true,
+      "event": "On display in the renovated Benjamin Rush Garden",
+      "source": "nps-rush-garden"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Bicentennial Bell was a gift from the people of Britain for America's 200th birthday in 1976. It was cast at Whitechapel, the foundry that first cast the Liberty Bell.",
+    "student": "NPS: cast at the Whitechapel Foundry, presented on 6 July 1976, inscribed 'LET FREEDOM RING'; 6 ft 10.5 in across and 5 ft 6 in high (2013 release), note G below middle C, 12,466 lb (the 2013 release says 12,446 lb). It rang from a tower on 3rd Street until moved to storage on 31 January 2013, and now stands in the Benjamin Rush Garden."
+  },
+  "sources": [
+    "nps-bicentennial-bell",
+    "nps-bicentennial-bell-move",
+    "nps-rush-garden"
+  ],
+  "official_sources": [
+    "nps-bicentennial-bell",
+    "nps-bicentennial-bell-move",
+    "nps-rush-garden"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.095,
+      "height_m": 1.676
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "mass conflict (12,466 vs 12,446 lb)"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "chion-in-bell",
+  "title": "Great bell of Chion-in",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Struck by a team of monks at New Year (temple).",
+  "era": "early-modern",
+  "region": "Asia",
+  "country": "JP",
+  "place": {
+    "label": "Daishōrō bell tower, Chion-in, Kyoto",
+    "lat": 35.00562,
+    "lng": 135.78354,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": 70000,
+  "mass_note": "70 t (Chion-in)",
+  "diameter_m": 2.7,
+  "height_m": 3.3,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1636",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast",
+      "source": "chionin-daishoro"
+    }
+  ],
+  "tiers": {
+    "everyday": "Chion-in's great bell in Kyoto was cast in 1636 and weighs about 70 tonnes, one of the largest bells in Japan.",
+    "student": "Chion-in gives casting in 1636, 3.3 m high, 2.7 m across and 70 t. It is a bonshō struck from outside with a swinging beam."
+  },
+  "sources": [
+    "chionin-daishoro"
+  ],
+  "official_sources": [
+    "chionin-daishoro"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.7,
+      "height_m": 3.3
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

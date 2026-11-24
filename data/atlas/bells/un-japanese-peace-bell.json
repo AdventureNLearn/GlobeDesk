@@ -1,0 +1,70 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "un-japanese-peace-bell",
+  "title": "Japanese Peace Bell (United Nations, New York)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Kept at UN Headquarters.",
+  "era": "20th-century",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "UN Headquarters grounds, New York",
+    "lat": 40.74963,
+    "lng": -73.96739,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "cast from coins given by delegates of 60 nations (UN); ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1952",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast from coins donated by delegates of 60 nations",
+      "source": "un-gifts-peace-bell"
+    },
+    {
+      "date": "1954-06-08",
+      "precision": "day",
+      "approximate": false,
+      "event": "Presented by the United Nations Association of Japan",
+      "source": "un-gifts-peace-bell"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Japanese Peace Bell at the United Nations was cast in 1952 from coins given by people from 60 nations. It says 'Long live absolute world peace'.",
+    "student": "UN Gifts: cast in 1952 from coins donated by delegates of 60 nations, presented on 8 June 1954 by the UN Association of Japan, inscribed 'Long live absolute world peace'. Size and founder [UNKNOWN]."
+  },
+  "sources": [
+    "un-gifts-peace-bell"
+  ],
+  "official_sources": [
+    "un-gifts-peace-bell"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "mass",
+    "founder"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

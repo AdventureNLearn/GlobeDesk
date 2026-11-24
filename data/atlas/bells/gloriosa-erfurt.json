@@ -1,0 +1,73 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "gloriosa-erfurt",
+  "title": "Gloriosa (Erfurt Cathedral)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Called the largest free-swinging medieval bell.",
+  "era": "medieval",
+  "region": "Europe",
+  "country": "DE",
+  "place": {
+    "label": "Erfurt Cathedral (Dom St. Marien)",
+    "lat": 50.97571,
+    "lng": 11.02291,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN] in the cited page",
+  "mass_kg": 11450,
+  "mass_note": "11,450 kg (erfurt.de)",
+  "diameter_m": 2.57,
+  "height_m": 2.5,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1251",
+      "precision": "year",
+      "approximate": false,
+      "event": "A first bell consecrated",
+      "source": "erfurt-dom"
+    },
+    {
+      "date": "1497",
+      "precision": "year",
+      "approximate": false,
+      "event": "Last recast, the bell that hangs today",
+      "source": "erfurt-dom"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Gloriosa in Erfurt Cathedral, cast in 1497, is the largest free-swinging medieval bell. It weighs about 11.5 tonnes.",
+    "student": "Erfurt's city page gives a first consecration in 1251 and several recastings, the last in 1497: 11,450 kg, 2.57 m across, 2.50 m tall with crown. The founder is not named on the official page [UNKNOWN]."
+  },
+  "sources": [
+    "erfurt-dom"
+  ],
+  "official_sources": [
+    "erfurt-dom"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.57,
+      "height_m": 2.5
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "founder"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

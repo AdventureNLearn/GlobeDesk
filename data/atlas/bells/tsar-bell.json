@@ -1,0 +1,87 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "tsar-bell",
+  "title": "Tsar Bell",
+  "kind": "bell",
+  "status": "museum",
+  "status_note": "On a pedestal in the Kremlin since 1836; never rung.",
+  "era": "early-modern",
+  "region": "Europe",
+  "country": "RU",
+  "place": {
+    "label": "Moscow Kremlin, beside the Ivan the Great Bell Tower",
+    "lat": 55.75077,
+    "lng": 37.61844,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Ivan Motorin and his son Mikhail Motorin (Moscow)",
+  "mass_kg": 202000,
+  "mass_note": "about 202 t (Kremlin Museums)",
+  "diameter_m": 6.6,
+  "height_m": 6.14,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze (Kremlin Museums); ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1733",
+      "precision": "year",
+      "approximate": false,
+      "event": "Casting work begins under Ivan and Mikhail Motorin",
+      "source": "kreml-tsar-bell"
+    },
+    {
+      "date": "1735-11",
+      "precision": "month",
+      "approximate": false,
+      "event": "Bell finally cast in its casting pit",
+      "source": "kreml-tsar-bell"
+    },
+    {
+      "date": "1737-05",
+      "precision": "month",
+      "approximate": false,
+      "event": "Troitsky fire: the hot bell cracks and an 11.5 t piece breaks off",
+      "source": "kreml-tsar-bell"
+    },
+    {
+      "date": "1836",
+      "precision": "year",
+      "approximate": false,
+      "event": "Raised from the pit onto a pedestal under architect Auguste de Montferrand",
+      "source": "kreml-tsar-bell"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Tsar Bell in the Moscow Kremlin is about 202 tonnes of bronze and has never been rung. It cracked in a fire in 1737 while still in its casting pit, and a huge piece broke off.",
+    "student": "Cast in 1733–1735 by Ivan and Mikhail Motorin, the Tsar Bell (about 202 t, 6.14 m high, 6.6 m across) cracked during the Troitsky fire of May 1737, losing an 11.5 t fragment. It was raised onto a pedestal in 1836 and is a monument of Russian founding, never a working bell."
+  },
+  "sources": [
+    "kreml-tsar-bell",
+    "kreml-coll-tsar-bell"
+  ],
+  "official_sources": [
+    "kreml-tsar-bell",
+    "kreml-coll-tsar-bell"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 6.6,
+      "height_m": 6.14
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

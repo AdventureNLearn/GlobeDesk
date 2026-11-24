@@ -1,0 +1,78 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "mechelen-carillons",
+  "title": "Mechelen carillons (St Rumbold's Tower)",
+  "kind": "carillon",
+  "status": "in-place",
+  "status_note": "Two carillons in the tower; six in the city.",
+  "era": "[UNKNOWN]",
+  "region": "Europe",
+  "country": "BE",
+  "place": {
+    "label": "St Rumbold's Tower, Mechelen",
+    "lat": 51.02881,
+    "lng": 4.4783,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN] in the cited pages",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1922",
+      "precision": "year",
+      "approximate": false,
+      "event": "Royal Carillon School founded by Jef Denyn",
+      "source": "visitmechelen-carillon"
+    },
+    {
+      "date": "1981",
+      "precision": "year",
+      "approximate": false,
+      "event": "A new carillon installed in St Rumbold's Tower",
+      "source": "mechelen-onzetoren"
+    },
+    {
+      "date": "2014",
+      "precision": "year",
+      "approximate": false,
+      "event": "Belgian carillon culture recognised by UNESCO",
+      "source": "visitmechelen-carillon"
+    }
+  ],
+  "tiers": {
+    "everyday": "Mechelen in Belgium is a world centre of the carillon, a set of tuned bells played from a keyboard. St Rumbold's Tower holds two carillons and the city has a famous carillon school.",
+    "student": "Visit Mechelen describes six carillons in the city, two in St Rumbold's Tower (one installed in 1981), and the carillon school founded by Jef Denyn in 1922. Belgian carillon culture was recognised by UNESCO in 2014 (per the city)."
+  },
+  "sources": [
+    "visitmechelen-carillon",
+    "mechelen-onzetoren"
+  ],
+  "official_sources": [
+    "visitmechelen-carillon",
+    "mechelen-onzetoren"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [
+    "bell count and founders per carillon"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

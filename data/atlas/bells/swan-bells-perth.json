@@ -1,0 +1,69 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "swan-bells-perth",
+  "title": "Swan Bells (Perth)",
+  "kind": "ring",
+  "status": "in-place",
+  "status_note": "Ring of 18 in The Bell Tower.",
+  "era": "[UNKNOWN]",
+  "region": "Oceania",
+  "country": "AU",
+  "place": {
+    "label": "The Bell Tower, Barrack Square, Perth",
+    "lat": -31.95896,
+    "lng": 115.85823,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Twelve historic bells from St Martin-in-the-Fields, London; founders [UNKNOWN] in the cited pages",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "bells_count": 18,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1988",
+      "precision": "year",
+      "approximate": false,
+      "event": "Five new bells cast for Australia's bicentenary",
+      "source": "wa-gov-swan-bells"
+    },
+    {
+      "date": "2000-12-10",
+      "precision": "day",
+      "approximate": false,
+      "event": "The Bell Tower and Swan Bells handed over to Western Australia",
+      "source": "wa-gov-swan-bells"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Swan Bells in Perth include 12 old bells from St Martin-in-the-Fields in London. There are 18 bells in the tower.",
+    "student": "The WA Government statement of 10 December 2000 describes the twelve St Martin-in-the-Fields bells, five cast in 1988 for the bicentenary and one more for the millennium: a ring of 18."
+  },
+  "sources": [
+    "wa-gov-swan-bells",
+    "belltower-perth-about"
+  ],
+  "official_sources": [
+    "wa-gov-swan-bells"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

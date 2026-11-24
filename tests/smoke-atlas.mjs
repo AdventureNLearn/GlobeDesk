@@ -110,16 +110,23 @@ try {
   if (out.boot.cards !== 50 || out.boot.desk !== "news" || out.boot.desks !== 10 || !out.boot.atlasHidden) throw new Error("boot: " + JSON.stringify(out.boot));
   if (!/v1\.4\.0-draft/.test(out.boot.ver)) throw new Error("version: " + out.boot.ver);
 
+  // Bells layer: pins (or clusters) on the globe at start, from the bundled Bells pack.
+  out.bellsBoot = await q(`({ marks: document.querySelectorAll(".bl-pin, .bl-cluster").length, total: GD.bellsLayer.pins(GD.atlasData).length })`);
+  if (out.bellsBoot.marks < 3 || out.bellsBoot.total < 40) throw new Error("bells at start: " + JSON.stringify(out.bellsBoot));
+  // Expected counts come from the bundled data (the Bells pack adds dozens of entries and places).
+  const exp = await q(`(() => { const M = GD.atlasModel, D = GD.atlasData; const pl = M.byPlace(D, {}).rows; return { az: M.azRows(D, {}).length, kids: M.azRows(D, { tier: "kids" }).length, places: pl.length, markers: pl.filter((r) => GD.atlas.centroid(r.a3)).length }; })()`);
+  out.expected = exp;
+
   // Atlas: open, A-Z, category tree, by place markers, by year zoom, This week, tier switch, tabs.
   await q(`document.getElementById("btnAtlas").click()`);
   out.az = await q(`({ open: !document.getElementById("atlasView").hidden, rows: document.querySelectorAll("#atBrowse .at-row").length, letters: document.querySelectorAll(".at-jump button").length })`);
-  if (!out.az.open || out.az.rows !== 52) throw new Error("A-Z: " + JSON.stringify(out.az));
+  if (!out.az.open || out.az.rows !== exp.az) throw new Error("A-Z: " + JSON.stringify(out.az));
   await q(`document.querySelector('[data-at-view="cats"]').click()`);
   out.cats = await q(`({ cats: document.querySelectorAll(".at-cat").length, greyed: document.querySelectorAll(".at-cat.not-installed").length })`);
   if (out.cats.cats !== 12 || out.cats.greyed !== 7) throw new Error("categories: " + JSON.stringify(out.cats));
   await q(`document.querySelector('[data-at-view="place"]').click()`);
   out.place = await q(`({ places: document.querySelectorAll(".at-place").length, markers: document.querySelectorAll(".atlas-count").length })`);
-  if (out.place.places !== 4 || out.place.markers !== 4) throw new Error("by place: " + JSON.stringify(out.place));
+  if (out.place.places !== exp.places || out.place.markers !== exp.markers || exp.places < 20) throw new Error("by place: " + JSON.stringify(out.place));
   await q(`document.querySelector('[data-at-view="year"]').click()`);
   await q(`document.querySelector('[data-at-zoom="months"]').click()`);
   out.months = await q(`document.querySelectorAll("[data-at-bucket]").length`);
@@ -129,7 +136,7 @@ try {
   if (!/ISO week/.test(out.week)) throw new Error("this week: " + out.week);
   await q(`(() => { const s = document.getElementById("atTier"); s.value = "kids"; s.dispatchEvent(new Event("change")); document.querySelector('[data-at-view="az"]').click(); })()`);
   out.kids = await q(`document.querySelectorAll("#atBrowse .at-row").length`);
-  if (out.kids !== 42) throw new Error("kids tier rows: " + out.kids);
+  if (out.kids !== exp.kids) throw new Error("kids tier rows: " + out.kids);
   await q(`(() => { const s = document.getElementById("atTier"); s.value = "all"; s.dispatchEvent(new Event("change")); GD.atlas.select("bag-solar-kit"); })()`);
   const tabs = {};
   for (const tab of ["object", "parts", "chemistry", "sources"]) {
@@ -150,8 +157,8 @@ try {
   await q(`(() => { GD.atlas.st.category = ""; GD.atlas.st.year = null; GD.atlas.st.view = "az"; GD.atlas.st.tab = "object"; const s = document.getElementById("atTier"); s.value = "kids"; s.dispatchEvent(new Event("change")); GD.atlas.select("declaration-of-independence-1776"); })()`);
   out.kidsText = await q(`document.querySelector(".at-tabbody .at-text").textContent`);
   if (!/new, free country/.test(out.kidsText)) throw new Error("kids text: " + out.kidsText);
-  out.bellLink = await q(`(document.querySelector(".at-seealso") || {}).textContent || ""`);
-  if (!/liberty-bell \(not in this copy\)/.test(out.bellLink)) throw new Error("bell link by id: " + out.bellLink);
+  out.bellLink = await q(`(() => { const el = document.querySelector(".at-seealso"); return { text: el ? el.textContent : "", button: !!(el && el.querySelector('[data-at-entry="liberty-bell"]')) }; })()`);
+  if (!/Liberty Bell/.test(out.bellLink.text) || /not in this copy/.test(out.bellLink.text) || !out.bellLink.button) throw new Error("bell link by id (Bells pack merged): " + JSON.stringify(out.bellLink));
   await q(`(() => { const s = document.getElementById("atTier"); s.value = "all"; s.dispatchEvent(new Event("change")); GD.atlas.select("constitution-signed-1787"); })()`);
   // History object card: Object (facts + timeline), Parts, Sources.
   const ct = {};
@@ -167,7 +174,33 @@ try {
   await until(() => q(`(() => { const el = document.getElementById("at3d"); return el && (el.getAttribute("data-3d") || (el.classList.contains("stub") ? "stub" : "")); })()`), 20000, "3d view");
   out.three = await q(`({ state: document.getElementById("at3d").getAttribute("data-3d"), canvas: !!document.querySelector("#at3d canvas"), note: document.getElementById("at3dNote").textContent, THREE: typeof THREE !== "undefined" && THREE.REVISION })`);
   await q(`document.querySelector('[data-at-mode="globe"]').click()`);
+
+  // A bell in the Atlas: Object tab facts, timeline and alloy link; Chemistry shows bell bronze; the 3D tab loads the bell model.
+  await q(`(() => { GD.atlas.st.tab = "object"; GD.atlas.select("big-ben-great-bell"); })()`);
+  const bt = {};
+  for (const tab of ["object", "chemistry", "sources"]) {
+    await q(`document.querySelector('[data-at-tab="${tab}"]').click()`);
+    bt[tab] = await q(`(document.querySelector(".at-tabbody").innerText || "").slice(0, 4000)`);
+  }
+  if (!/Bell facts/.test(bt.object) || !/1858/.test(bt.object) || !/Bell bronze/i.test(bt.object) || !/copper/i.test(bt.chemistry) || !/UK Parliament/.test(bt.sources)) throw new Error("bell tabs: " + JSON.stringify(Object.keys(bt).map((k) => [k, bt[k].slice(0, 200)])));
+  await q(`document.querySelector('[data-at-tab="object"]').click()`);
+  await q(`document.querySelector('[data-at-mode="3d"]').click()`);
+  await until(() => q(`(() => { const el = document.getElementById("at3d"); return el && el.getAttribute("data-model") === "bell" && (el.getAttribute("data-3d") || (el.classList.contains("stub") ? "stub" : "")); })()`), 20000, "bell 3d view");
+  out.bell3d = await q(`({ state: document.getElementById("at3d").getAttribute("data-3d"), model: document.getElementById("at3d").getAttribute("data-model"), canvas: !!document.querySelector("#at3d canvas"), note: document.getElementById("at3dNote").textContent })`);
+  if (out.bell3d.model !== "bell" || (out.bell3d.state === "ok" && !out.bell3d.canvas)) throw new Error("bell 3d: " + JSON.stringify(out.bell3d));
+  await q(`document.querySelector('[data-at-mode="globe"]').click()`);
   await q(`document.getElementById("atClose").click()`);
+
+  // Bells layer drill-down: zoom to Philadelphia, single pins appear; a pin click opens that bell in the Atlas.
+  await q(`(() => { GD.globe.st.map.jumpTo({ center: [-75.15, 39.949], zoom: 12 }); GD.bellsLayer.sync(); })()`);
+  out.bellPins = await q(`({ liberty: !!document.querySelector('.bl-pin[data-bell="liberty-bell"]'), approx: document.querySelectorAll(".bl-pin.bl-approx").length, clusters: document.querySelectorAll(".bl-cluster").length })`);
+  if (!out.bellPins.liberty) throw new Error("bell pins at zoom 12: " + JSON.stringify(out.bellPins));
+  await q(`document.querySelector('.bl-pin[data-bell="liberty-bell"]').click()`);
+  out.bellDrill = await q(`({ open: !document.getElementById("atlasView").hidden, selected: GD.atlas.st.selected, text: (document.querySelector(".at-tabbody").innerText || "").slice(0, 600) })`);
+  if (!out.bellDrill.open || out.bellDrill.selected !== "liberty-bell" || !/Whitechapel|1752/.test(out.bellDrill.text)) throw new Error("bell drill: " + JSON.stringify(out.bellDrill));
+  await q(`document.getElementById("atClose").click()`);
+  // Region filter: Asia only, then back to all.
+  out.bellFilter = await q(`(() => { GD.bellsLayer.setFilter({ region: "Asia" }); GD.globe.st.map.jumpTo({ center: [120, 30], zoom: 10 }); GD.bellsLayer.sync(); const n = GD.bellsLayer.st.markers.length; GD.bellsLayer.setFilter({ region: "all" }); return n; })()`);
 
   // Desks: switch to Permits and Codes, check labels, then back to News.
   await q(`(() => { const s = document.getElementById("deskSelect"); s.value = "permits-codes"; s.dispatchEvent(new Event("change")); })()`);
@@ -179,8 +212,8 @@ try {
 
   // Layers: Your layer and Community sections; Community off by default, then on shows the lane in Atlas.
   await q(`GD.layersPanel.open()`);
-  out.layers = await q(`({ mine: !!document.getElementById("lpPersonal"), comm: !!document.getElementById("lpCommunity"), commOn: document.getElementById("lpCommunity").checked })`);
-  if (!out.layers.mine || !out.layers.comm || out.layers.commOn) throw new Error("layers: " + JSON.stringify(out.layers));
+  out.layers = await q(`({ mine: !!document.getElementById("lpPersonal"), comm: !!document.getElementById("lpCommunity"), commOn: document.getElementById("lpCommunity").checked, bells: !!document.getElementById("lpBells") && document.getElementById("lpBells").checked, eras: document.querySelectorAll("#lpBellsEra option").length, regions: document.querySelectorAll("#lpBellsRegion option").length })`);
+  if (!out.layers.mine || !out.layers.comm || out.layers.commOn || !out.layers.bells || out.layers.eras !== 8 || out.layers.regions !== 7) throw new Error("layers: " + JSON.stringify(out.layers));
   await q(`document.getElementById("lpCommunity").click()`);
   await q(`GD.layersPanel.close(); GD.atlas.open(); document.querySelector('[data-at-view="cats"]').click()`);
   out.lane = await q(`document.querySelectorAll(".at-community").length`);
@@ -194,7 +227,7 @@ try {
   console.log(JSON.stringify({ smoke: "atlas", errors: fatal.length, warnings: warnings.length, out }, null, 2));
   if (fatal.length) { console.error("ERRORS:\n" + fatal.join("\n")); failed = true; }
   if (warnings.length) { console.error("WARNINGS:\n" + warnings.join("\n")); failed = true; }
-  if (!failed) console.log("smoke-atlas: 0 warnings, 0 errors, atlas + desks + layers ok; 3D " + out.three.state);
+  if (!failed) console.log("smoke-atlas: 0 warnings, 0 errors, atlas + desks + layers + bells ok; 3D " + out.three.state + ", bell 3D " + out.bell3d.state);
 } catch (e) {
   failed = true;
   console.error(e);

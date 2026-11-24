@@ -26,13 +26,14 @@
         { "id": "batteries-storage", "title": "Batteries and storage" },
         { "id": "grid-generation", "title": "Grid and generation" },
         { "id": "fuels", "title": "Fuels" } ] },
-    { "n": 4, "id": "objects", "title": "3D objects and builds", "scope": "Buildable objects with a detailed model, part list, sizing, safety and regional prices.", "pack": "objects", "refresh": "quarterly",
+    { "n": 4, "id": "objects", "title": "3D objects and builds", "scope": "Buildable objects with a detailed model, part list, sizing, safety and regional prices.", "pack": "objects", "extra_packs": ["bells"], "refresh": "quarterly",
       "subcategories": [
         { "id": "energy-kits", "title": "Energy kits" },
         { "id": "tools", "title": "Tools" },
         { "id": "shelter", "title": "Shelter" },
         { "id": "water-systems", "title": "Water systems" },
-        { "id": "transport", "title": "Transport" } ] },
+        { "id": "transport", "title": "Transport" },
+        { "id": "bells", "title": "Bells" } ] },
     { "n": 5, "id": "chemistry", "title": "Chemistry and materials", "scope": "Elements, reactions and materials behind the objects.", "pack": "chemistry", "refresh": "quarterly",
       "subcategories": [
         { "id": "elements", "title": "Elements" },

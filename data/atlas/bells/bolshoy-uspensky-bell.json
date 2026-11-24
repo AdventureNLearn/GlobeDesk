@@ -1,0 +1,65 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "bolshoy-uspensky-bell",
+  "title": "Bolshoy Uspensky Bell (Moscow Kremlin)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Listed in the Kremlin Museums collection; hangs in the bell-tower ensemble.",
+  "era": "19th-century",
+  "region": "Europe",
+  "country": "RU",
+  "place": {
+    "label": "Ivan the Great Bell Tower ensemble, Moscow Kremlin (exact hanging point approximate)",
+    "lat": 55.75072,
+    "lng": 37.61821,
+    "approximate": true,
+    "basis": "building",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Masters Yakov Zavyalov and Rusinov, plant of Mikhail Bogdanov",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN] in the cited record",
+  "diameter_m": 4.2,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze (Kremlin Museums)"
+  },
+  "timeline": [
+    {
+      "date": "1817",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast (date in the Kremlin Museums collection record)",
+      "source": "kreml-coll-uspensky"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Bolshoy Uspensky (Great Assumption) bell is the largest bell in the Kremlin's working bell-tower ensemble. It was cast in 1817 and is 4.2 m across.",
+    "student": "The Kremlin Museums record dates the bell to 1817, names masters Yakov Zavyalov and Rusinov at Mikhail Bogdanov's plant, and gives a diameter of 4200 mm. Mass is not in the record [UNKNOWN]."
+  },
+  "sources": [
+    "kreml-coll-uspensky"
+  ],
+  "official_sources": [
+    "kreml-coll-uspensky"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 4.2
+    },
+    "label": "Parametric profile scaled from the sourced diameter; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "mass"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

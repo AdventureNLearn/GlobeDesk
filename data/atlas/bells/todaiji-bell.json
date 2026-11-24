@@ -1,0 +1,75 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "todaiji-bell",
+  "title": "Great bell of Tōdai-ji",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "National Treasure; one of Japan's Three Famous Bells.",
+  "era": "medieval",
+  "region": "Asia",
+  "country": "JP",
+  "place": {
+    "label": "Shōrō bell tower, Tōdai-ji, Nara",
+    "lat": 34.68824,
+    "lng": 135.83976,
+    "approximate": true,
+    "basis": "building",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": 26300,
+  "mass_note": "26.3 t (Tōdai-ji)",
+  "diameter_m": 2.71,
+  "height_m": 3.86,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "752",
+      "precision": "year",
+      "approximate": true,
+      "event": "Dates from the temple's founding period in the 8th century (exact year [UNKNOWN])",
+      "source": "todaiji-shoro"
+    },
+    {
+      "date": "1210",
+      "precision": "year",
+      "approximate": false,
+      "event": "Bell tower rebuilt",
+      "source": "nara-todaiji-shoro"
+    }
+  ],
+  "tiers": {
+    "everyday": "Tōdai-ji's great bell in Nara weighs 26.3 tonnes and dates from the temple's founding in the 700s. It is struck with a big wooden beam rather than a clapper.",
+    "student": "Tōdai-ji gives 26.3 t; Nara City gives 3.86 m total height and 2.71 m diameter, a bell tower rebuilt in 1210 and a zelkova striking beam 4.48 m long and 180 kg. Like other bonshō it has no clapper. Exact casting year [UNKNOWN] (pinned as approximate 752)."
+  },
+  "sources": [
+    "todaiji-shoro",
+    "nara-todaiji-shoro"
+  ],
+  "official_sources": [
+    "todaiji-shoro",
+    "nara-todaiji-shoro"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.71,
+      "height_m": 3.86
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "exact casting year"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,77 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "seongdeok-bell",
+  "title": "Sacred Bell of Great King Seongdeok",
+  "kind": "bell",
+  "status": "museum",
+  "status_note": "National Treasure since 20 December 1962.",
+  "era": "medieval",
+  "region": "Asia",
+  "country": "KR",
+  "place": {
+    "label": "Gyeongju National Museum",
+    "lat": 35.82899,
+    "lng": 129.22797,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": 18900,
+  "mass_note": "about 18.9 t (Korea Heritage Service)",
+  "diameter_m": 2.27,
+  "height_m": 3.75,
+  "thickness_m": 0.25,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "771",
+      "precision": "year",
+      "approximate": false,
+      "event": "Completed under King Hyegong of Unified Silla",
+      "source": "khs-seongdeok"
+    },
+    {
+      "date": "1962-12-20",
+      "precision": "day",
+      "approximate": false,
+      "event": "Designated a National Treasure",
+      "source": "khs-seongdeok"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Sacred Bell of Great King Seongdeok in Gyeongju, finished in 771, is Korea's largest bell at about 18.9 tonnes. It is also called the Emille Bell.",
+    "student": "Korea Heritage Service: completed in 771, 3.75 m high, 2.27 m across, walls 11–25 cm, about 18.9 t, first hung at Bongdeoksa, with a sound tube on top typical of Korean bells. Gyeongju City gives 3.66 m (height conflict kept open)."
+  },
+  "sources": [
+    "khs-seongdeok",
+    "gyeongju-seongdeok"
+  ],
+  "official_sources": [
+    "khs-seongdeok",
+    "gyeongju-seongdeok"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.27,
+      "height_m": 3.75,
+      "thickness_m": 0.25
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height and wall thickness; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "height conflict (3.75 m vs 3.66 m)"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

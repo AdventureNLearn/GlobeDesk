@@ -3,6 +3,267 @@
   "generated": "2026-11-24",
   "dates": [
     {
+      "date": "-799",
+      "precision": "year",
+      "approximate": true,
+      "end": "-699",
+      "entry": "nimrud-bronze-bell"
+    },
+    {
+      "date": "-432",
+      "precision": "year",
+      "approximate": true,
+      "entry": "bianzhong-marquis-yi"
+    },
+    {
+      "date": "725",
+      "precision": "year",
+      "approximate": false,
+      "entry": "sangwonsa-bell"
+    },
+    {
+      "date": "752",
+      "precision": "year",
+      "approximate": true,
+      "entry": "todaiji-bell"
+    },
+    {
+      "date": "771",
+      "precision": "year",
+      "approximate": false,
+      "entry": "seongdeok-bell"
+    },
+    {
+      "date": "1100",
+      "precision": "year",
+      "approximate": true,
+      "entry": "byodoin-bell"
+    },
+    {
+      "date": "1210",
+      "precision": "year",
+      "approximate": false,
+      "entry": "todaiji-bell"
+    },
+    {
+      "date": "1251",
+      "precision": "year",
+      "approximate": false,
+      "entry": "gloriosa-erfurt"
+    },
+    {
+      "date": "1303",
+      "precision": "year",
+      "approximate": false,
+      "entry": "campanone-st-peters"
+    },
+    {
+      "date": "1352",
+      "precision": "year",
+      "approximate": false,
+      "end": "1354",
+      "entry": "campanone-st-peters"
+    },
+    {
+      "date": "1403",
+      "precision": "year",
+      "approximate": true,
+      "end": "1424",
+      "entry": "yongle-bell"
+    },
+    {
+      "date": "1484",
+      "precision": "year",
+      "approximate": true,
+      "entry": "dhammazedi-bell"
+    },
+    {
+      "date": "1497",
+      "precision": "year",
+      "approximate": false,
+      "entry": "gloriosa-erfurt"
+    },
+    {
+      "date": "1520",
+      "precision": "year",
+      "approximate": false,
+      "entry": "zygmunt-bell"
+    },
+    {
+      "date": "1591",
+      "precision": "year",
+      "approximate": false,
+      "entry": "uglich-exile-bell"
+    },
+    {
+      "date": "1591-05-15",
+      "precision": "day",
+      "approximate": false,
+      "entry": "uglich-exile-bell"
+    },
+    {
+      "date": "1608",
+      "precision": "year",
+      "approximate": false,
+      "entry": "dhammazedi-bell"
+    },
+    {
+      "date": "1636",
+      "precision": "year",
+      "approximate": false,
+      "entry": "chion-in-bell"
+    },
+    {
+      "date": "1666",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bow-bells"
+    },
+    {
+      "date": "1677",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bow-bells"
+    },
+    {
+      "date": "1680",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bruges-belfry-carillon"
+    },
+    {
+      "date": "1680",
+      "precision": "year",
+      "approximate": false,
+      "entry": "great-tom-oxford"
+    },
+    {
+      "date": "1680-07-22",
+      "precision": "day",
+      "approximate": false,
+      "entry": "emmanuel-notre-dame"
+    },
+    {
+      "date": "1680-09-17",
+      "precision": "day",
+      "approximate": false,
+      "entry": "emmanuel-notre-dame"
+    },
+    {
+      "date": "1682-07-14",
+      "precision": "day",
+      "approximate": false,
+      "entry": "emmanuel-notre-dame"
+    },
+    {
+      "date": "1686-03-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "emmanuel-notre-dame"
+    },
+    {
+      "date": "1686-04-29",
+      "precision": "day",
+      "approximate": false,
+      "entry": "emmanuel-notre-dame"
+    },
+    {
+      "date": "1688",
+      "precision": "year",
+      "approximate": false,
+      "entry": "sysoy-bell"
+    },
+    {
+      "date": "1711",
+      "precision": "year",
+      "approximate": false,
+      "entry": "pummerin"
+    },
+    {
+      "date": "1733",
+      "precision": "year",
+      "approximate": false,
+      "entry": "tsar-bell"
+    },
+    {
+      "date": "1735-11",
+      "precision": "month",
+      "approximate": false,
+      "entry": "tsar-bell"
+    },
+    {
+      "date": "1737-05",
+      "precision": "month",
+      "approximate": false,
+      "entry": "tsar-bell"
+    },
+    {
+      "date": "1738",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bow-bells"
+    },
+    {
+      "date": "1742",
+      "precision": "year",
+      "approximate": false,
+      "entry": "old-north-bells"
+    },
+    {
+      "date": "1744",
+      "precision": "year",
+      "approximate": false,
+      "entry": "old-north-bells"
+    },
+    {
+      "date": "1745",
+      "precision": "year",
+      "approximate": false,
+      "entry": "old-north-bells"
+    },
+    {
+      "date": "1751",
+      "precision": "year",
+      "approximate": false,
+      "entry": "liberty-bell"
+    },
+    {
+      "date": "1752",
+      "precision": "year",
+      "approximate": false,
+      "entry": "liberty-bell"
+    },
+    {
+      "date": "1752-09-01",
+      "precision": "day",
+      "approximate": false,
+      "entry": "liberty-bell"
+    },
+    {
+      "date": "1753",
+      "precision": "year",
+      "approximate": false,
+      "entry": "liberty-bell"
+    },
+    {
+      "date": "1753-06",
+      "precision": "month",
+      "approximate": false,
+      "entry": "liberty-bell"
+    },
+    {
+      "date": "1762",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bow-bells"
+    },
+    {
+      "date": "1775-04-18",
+      "precision": "day",
+      "approximate": false,
+      "entry": "old-north-bells"
+    },
+    {
       "date": "1775-04-18",
       "precision": "day",
       "approximate": false,
@@ -15,10 +276,22 @@
       "entry": "declaration-of-independence-1776"
     },
     {
+      "date": "1776-07-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "liberty-bell"
+    },
+    {
       "date": "1781-10-19",
       "precision": "day",
       "approximate": false,
       "entry": "yorktown-surrender-1781"
+    },
+    {
+      "date": "1785",
+      "precision": "year",
+      "approximate": false,
+      "entry": "campanone-st-peters"
     },
     {
       "date": "1787-05-25",
@@ -51,6 +324,12 @@
       "entry": "bill-of-rights-1791"
     },
     {
+      "date": "1799-10-09",
+      "precision": "day",
+      "approximate": false,
+      "entry": "lutine-bell"
+    },
+    {
       "date": "1803-12-20",
       "precision": "day",
       "approximate": false,
@@ -61,6 +340,24 @@
       "precision": "day",
       "approximate": false,
       "entry": "fort-clatsop-1805"
+    },
+    {
+      "date": "1808-04-29",
+      "precision": "day",
+      "approximate": false,
+      "entry": "mingun-bell"
+    },
+    {
+      "date": "1810",
+      "precision": "year",
+      "approximate": true,
+      "entry": "mingun-bell"
+    },
+    {
+      "date": "1810-09-16",
+      "precision": "day",
+      "approximate": false,
+      "entry": "dolores-bell"
     },
     {
       "date": "1814-09-13",
@@ -76,10 +373,34 @@
       "entry": "fort-mchenry-1814"
     },
     {
+      "date": "1817",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bolshoy-uspensky-bell"
+    },
+    {
       "date": "1825",
       "precision": "year",
       "approximate": false,
       "entry": "erie-canal-1825"
+    },
+    {
+      "date": "1828",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wilbank-bell"
+    },
+    {
+      "date": "1835",
+      "precision": "year",
+      "approximate": false,
+      "entry": "liberty-bell"
+    },
+    {
+      "date": "1836",
+      "precision": "year",
+      "approximate": false,
+      "entry": "tsar-bell"
     },
     {
       "date": "1838-05",
@@ -100,6 +421,12 @@
       "entry": "telegraph-message-1844"
     },
     {
+      "date": "1846-02-23",
+      "precision": "day",
+      "approximate": false,
+      "entry": "liberty-bell"
+    },
+    {
       "date": "1848-01-24",
       "precision": "day",
       "approximate": false,
@@ -113,6 +440,48 @@
       "entry": "seneca-falls-1848"
     },
     {
+      "date": "1855",
+      "precision": "year",
+      "approximate": false,
+      "entry": "amedzofe-bell"
+    },
+    {
+      "date": "1856-08",
+      "precision": "month",
+      "approximate": false,
+      "entry": "big-ben-great-bell"
+    },
+    {
+      "date": "1857-10-17",
+      "precision": "day",
+      "approximate": false,
+      "entry": "big-ben-great-bell"
+    },
+    {
+      "date": "1858",
+      "precision": "year",
+      "approximate": true,
+      "entry": "lutine-bell"
+    },
+    {
+      "date": "1858-04-10",
+      "precision": "day",
+      "approximate": false,
+      "entry": "big-ben-great-bell"
+    },
+    {
+      "date": "1859-07-11",
+      "precision": "day",
+      "approximate": false,
+      "entry": "big-ben-great-bell"
+    },
+    {
+      "date": "1859-09",
+      "precision": "month",
+      "approximate": false,
+      "entry": "big-ben-great-bell"
+    },
+    {
       "date": "1861-04-12",
       "precision": "day",
       "approximate": false,
@@ -123,6 +492,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "emancipation-proclamation-1863"
+    },
+    {
+      "date": "1863",
+      "precision": "year",
+      "approximate": false,
+      "entry": "big-ben-great-bell"
     },
     {
       "date": "1863-01-01",
@@ -168,10 +543,76 @@
       "entry": "golden-spike-1869"
     },
     {
+      "date": "1871",
+      "precision": "year",
+      "approximate": false,
+      "entry": "panaji-church-bell"
+    },
+    {
+      "date": "1874",
+      "precision": "year",
+      "approximate": false,
+      "entry": "petersglocke-cologne"
+    },
+    {
+      "date": "1876",
+      "precision": "year",
+      "approximate": false,
+      "entry": "centennial-bell"
+    },
+    {
+      "date": "1876",
+      "precision": "year",
+      "approximate": true,
+      "entry": "centennial-bell"
+    },
+    {
+      "date": "1876-07-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "centennial-bell"
+    },
+    {
+      "date": "1877",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wilbank-bell"
+    },
+    {
+      "date": "1878",
+      "precision": "year",
+      "approximate": false,
+      "entry": "great-paul"
+    },
+    {
+      "date": "1881",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bow-bells"
+    },
+    {
+      "date": "1881",
+      "precision": "year",
+      "approximate": false,
+      "entry": "great-paul"
+    },
+    {
       "date": "1886-10-28",
       "precision": "day",
       "approximate": false,
       "entry": "statue-of-liberty-1886"
+    },
+    {
+      "date": "1891",
+      "precision": "year",
+      "approximate": false,
+      "entry": "hms-hood-bell"
+    },
+    {
+      "date": "1891-05-12",
+      "precision": "day",
+      "approximate": false,
+      "entry": "savoyarde"
     },
     {
       "date": "1892",
@@ -181,10 +622,88 @@
       "entry": "ellis-island-1892"
     },
     {
+      "date": "1892-05",
+      "precision": "month",
+      "approximate": false,
+      "entry": "uglich-exile-bell"
+    },
+    {
+      "date": "1892-06",
+      "precision": "month",
+      "approximate": false,
+      "entry": "uglich-exile-bell"
+    },
+    {
+      "date": "1894",
+      "precision": "year",
+      "approximate": false,
+      "entry": "old-north-bells"
+    },
+    {
+      "date": "1895-10-16",
+      "precision": "day",
+      "approximate": false,
+      "entry": "savoyarde"
+    },
+    {
+      "date": "1896",
+      "precision": "year",
+      "approximate": false,
+      "entry": "dolores-bell"
+    },
+    {
+      "date": "1901",
+      "precision": "year",
+      "approximate": false,
+      "entry": "balangiga-bells"
+    },
+    {
       "date": "1903-12-17",
       "precision": "day",
       "approximate": false,
       "entry": "first-flight-1903"
+    },
+    {
+      "date": "1904",
+      "precision": "year",
+      "approximate": false,
+      "entry": "balangiga-bells"
+    },
+    {
+      "date": "1915",
+      "precision": "year",
+      "approximate": false,
+      "entry": "justice-bell"
+    },
+    {
+      "date": "1915",
+      "precision": "year",
+      "approximate": false,
+      "entry": "justice-bell"
+    },
+    {
+      "date": "1915",
+      "precision": "year",
+      "approximate": false,
+      "entry": "justice-bell"
+    },
+    {
+      "date": "1915",
+      "precision": "year",
+      "approximate": false,
+      "entry": "liberty-bell"
+    },
+    {
+      "date": "1918",
+      "precision": "year",
+      "approximate": false,
+      "entry": "petersglocke-cologne"
+    },
+    {
+      "date": "1920",
+      "precision": "year",
+      "approximate": false,
+      "entry": "justice-bell"
     },
     {
       "date": "1920-08-26",
@@ -199,10 +718,89 @@
       "entry": "nineteenth-amendment-1920"
     },
     {
+      "date": "1920-09-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "justice-bell"
+    },
+    {
+      "date": "1922",
+      "precision": "year",
+      "approximate": false,
+      "entry": "mechelen-carillons"
+    },
+    {
+      "date": "1922-03-13",
+      "precision": "day",
+      "approximate": false,
+      "entry": "petersglocke-cologne"
+    },
+    {
+      "date": "1923-05-05",
+      "precision": "day",
+      "approximate": false,
+      "entry": "petersglocke-cologne"
+    },
+    {
+      "date": "1924",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wilbank-bell"
+    },
+    {
+      "date": "1925",
+      "precision": "year",
+      "approximate": false,
+      "end": "1927",
+      "entry": "peace-tower-carillon"
+    },
+    {
+      "date": "1926",
+      "precision": "year",
+      "approximate": false,
+      "entry": "centennial-bell"
+    },
+    {
+      "date": "1926",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wellington-carillon"
+    },
+    {
+      "date": "1927",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wellington-carillon"
+    },
+    {
+      "date": "1927-07-01",
+      "precision": "day",
+      "approximate": false,
+      "entry": "peace-tower-carillon"
+    },
+    {
       "date": "1929-10-29",
       "precision": "day",
       "approximate": false,
       "entry": "stock-crash-1929"
+    },
+    {
+      "date": "1931-11-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "campanone-st-peters"
+    },
+    {
+      "date": "1932-04-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "wellington-carillon"
+    },
+    {
+      "date": "1933",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bow-bells"
     },
     {
       "date": "1935-08-14",
@@ -217,10 +815,46 @@
       "entry": "hoover-dam-1935"
     },
     {
+      "date": "1937",
+      "precision": "year",
+      "approximate": false,
+      "entry": "pummerin"
+    },
+    {
+      "date": "1940",
+      "precision": "year",
+      "approximate": false,
+      "entry": "liverpool-great-george"
+    },
+    {
+      "date": "1941-05-11",
+      "precision": "day",
+      "approximate": false,
+      "entry": "bow-bells"
+    },
+    {
+      "date": "1941-05-24",
+      "precision": "day",
+      "approximate": false,
+      "entry": "hms-hood-bell"
+    },
+    {
       "date": "1941-12-07",
       "precision": "day",
       "approximate": false,
       "entry": "pearl-harbor-1941"
+    },
+    {
+      "date": "1944-06",
+      "precision": "month",
+      "approximate": false,
+      "entry": "uss-arizona-bell"
+    },
+    {
+      "date": "1945-04",
+      "precision": "month",
+      "approximate": false,
+      "entry": "pummerin"
     },
     {
       "date": "1945-06-26",
@@ -229,16 +863,148 @@
       "entry": "un-charter-1945"
     },
     {
+      "date": "1946-10-27",
+      "precision": "day",
+      "approximate": false,
+      "entry": "uss-arizona-bell"
+    },
+    {
+      "date": "1950",
+      "precision": "year",
+      "approximate": false,
+      "entry": "freedom-bell-berlin"
+    },
+    {
+      "date": "1950",
+      "precision": "year",
+      "approximate": false,
+      "entry": "maria-angola-cusco"
+    },
+    {
+      "date": "1950-07-27",
+      "precision": "day",
+      "approximate": false,
+      "entry": "freedom-bell-berlin"
+    },
+    {
+      "date": "1950-08-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "freedom-bell-berlin"
+    },
+    {
+      "date": "1950-10-24",
+      "precision": "day",
+      "approximate": false,
+      "entry": "freedom-bell-berlin"
+    },
+    {
+      "date": "1951",
+      "precision": "year",
+      "approximate": false,
+      "entry": "liverpool-great-george"
+    },
+    {
+      "date": "1951",
+      "precision": "year",
+      "approximate": false,
+      "entry": "pummerin"
+    },
+    {
+      "date": "1951",
+      "precision": "year",
+      "approximate": false,
+      "entry": "uss-arizona-bell"
+    },
+    {
+      "date": "1952",
+      "precision": "year",
+      "approximate": false,
+      "entry": "un-japanese-peace-bell"
+    },
+    {
+      "date": "1952",
+      "precision": "year",
+      "approximate": false,
+      "entry": "pummerin"
+    },
+    {
+      "date": "1952-04-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "netherlands-carillon"
+    },
+    {
+      "date": "1954",
+      "precision": "year",
+      "approximate": false,
+      "entry": "netherlands-carillon"
+    },
+    {
       "date": "1954-05-17",
       "precision": "day",
       "approximate": false,
       "entry": "brown-v-board-1954"
     },
     {
+      "date": "1954-06-08",
+      "precision": "day",
+      "approximate": false,
+      "entry": "un-japanese-peace-bell"
+    },
+    {
+      "date": "1956",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bow-bells"
+    },
+    {
+      "date": "1957",
+      "precision": "year",
+      "approximate": false,
+      "entry": "pummerin"
+    },
+    {
       "date": "1957-09-25",
       "precision": "day",
       "approximate": false,
       "entry": "little-rock-1957"
+    },
+    {
+      "date": "1958-06-08",
+      "precision": "day",
+      "approximate": false,
+      "entry": "edmund-fitzgerald-bell"
+    },
+    {
+      "date": "1960-05-05",
+      "precision": "day",
+      "approximate": false,
+      "entry": "netherlands-carillon"
+    },
+    {
+      "date": "1961-12-21",
+      "precision": "day",
+      "approximate": false,
+      "entry": "bow-bells"
+    },
+    {
+      "date": "1962",
+      "precision": "year",
+      "approximate": false,
+      "entry": "cape-town-st-georges-bells"
+    },
+    {
+      "date": "1962-12-20",
+      "precision": "day",
+      "approximate": false,
+      "entry": "sangwonsa-bell"
+    },
+    {
+      "date": "1962-12-20",
+      "precision": "day",
+      "approximate": false,
+      "entry": "seongdeok-bell"
     },
     {
       "date": "1963-08-28",
@@ -251,6 +1017,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "civil-rights-act-1964"
+    },
+    {
+      "date": "1964-09-20",
+      "precision": "day",
+      "approximate": false,
+      "entry": "hiroshima-peace-bell"
     },
     {
       "date": "1965-03-07",
@@ -271,10 +1043,64 @@
       "entry": "apollo-11-1969"
     },
     {
+      "date": "1970-04-26",
+      "precision": "day",
+      "approximate": false,
+      "entry": "national-carillon-canberra"
+    },
+    {
+      "date": "1975",
+      "precision": "year",
+      "approximate": false,
+      "entry": "old-north-bells"
+    },
+    {
+      "date": "1975-11-10",
+      "precision": "day",
+      "approximate": false,
+      "entry": "edmund-fitzgerald-bell"
+    },
+    {
+      "date": "1976-07-06",
+      "precision": "day",
+      "approximate": false,
+      "entry": "bicentennial-bell"
+    },
+    {
+      "date": "1978",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bianzhong-marquis-yi"
+    },
+    {
+      "date": "1979",
+      "precision": "year",
+      "approximate": false,
+      "entry": "cape-town-st-georges-bells"
+    },
+    {
       "date": "1980-05-18",
       "precision": "day",
       "approximate": false,
       "entry": "mount-st-helens-1980"
+    },
+    {
+      "date": "1981",
+      "precision": "year",
+      "approximate": false,
+      "entry": "mechelen-carillons"
+    },
+    {
+      "date": "1986",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wellington-carillon"
+    },
+    {
+      "date": "1988",
+      "precision": "year",
+      "approximate": false,
+      "entry": "swan-bells-perth"
     },
     {
       "date": "1990-07-26",
@@ -283,10 +1109,46 @@
       "entry": "ada-1990"
     },
     {
+      "date": "1992",
+      "precision": "year",
+      "approximate": false,
+      "entry": "balangiga-bells"
+    },
+    {
+      "date": "1995-07-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "edmund-fitzgerald-bell"
+    },
+    {
       "date": "1996",
       "precision": "year",
       "approximate": false,
       "entry": "phosphate-cathode-discovery"
+    },
+    {
+      "date": "1997",
+      "precision": "year",
+      "approximate": true,
+      "entry": "wellington-carillon"
+    },
+    {
+      "date": "1999",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bruges-belfry-carillon"
+    },
+    {
+      "date": "1999",
+      "precision": "year",
+      "approximate": false,
+      "entry": "world-peace-bell"
+    },
+    {
+      "date": "2000-12-10",
+      "precision": "day",
+      "approximate": false,
+      "entry": "swan-bells-perth"
     },
     {
       "date": "2001-09-11",
@@ -295,16 +1157,82 @@
       "entry": "september-11-2001"
     },
     {
+      "date": "2011",
+      "precision": "year",
+      "approximate": false,
+      "entry": "pummerin"
+    },
+    {
+      "date": "2013-01-31",
+      "precision": "day",
+      "approximate": false,
+      "entry": "bicentennial-bell"
+    },
+    {
+      "date": "2014",
+      "precision": "year",
+      "approximate": false,
+      "entry": "mechelen-carillons"
+    },
+    {
+      "date": "2015",
+      "precision": "year",
+      "approximate": false,
+      "entry": "hms-hood-bell"
+    },
+    {
+      "date": "2016-05-24",
+      "precision": "day",
+      "approximate": false,
+      "entry": "hms-hood-bell"
+    },
+    {
+      "date": "2018-10",
+      "precision": "month",
+      "approximate": false,
+      "entry": "anzac-bell-perth"
+    },
+    {
+      "date": "2018-11-11",
+      "precision": "day",
+      "approximate": false,
+      "entry": "anzac-bell-perth"
+    },
+    {
+      "date": "2018-11-14",
+      "precision": "day",
+      "approximate": false,
+      "entry": "balangiga-bells"
+    },
+    {
+      "date": "2019-04-15",
+      "precision": "day",
+      "approximate": false,
+      "entry": "emmanuel-notre-dame"
+    },
+    {
       "date": "2020-01-20",
       "precision": "day",
       "approximate": false,
       "entry": "covid-19-pandemic-2020"
     },
     {
+      "date": "2020-02-03",
+      "precision": "day",
+      "approximate": false,
+      "entry": "national-carillon-canberra"
+    },
+    {
       "date": "2020-03-11",
       "precision": "day",
       "approximate": false,
       "entry": "covid-19-pandemic-2020"
+    },
+    {
+      "date": "2024",
+      "precision": "year",
+      "approximate": true,
+      "entry": "bicentennial-bell"
     },
     {
       "date": "2026-07-04",
@@ -325,6 +1253,9 @@
     "solar-resource-by-region",
     "water-filter-kit",
     "bag-solar-kit",
+    "bell-bronze",
+    "bells-overview",
+    "bok-tower-carillon",
     "lifepo4-vs-nmc",
     "lithium-batteries-air-travel",
     "portable-solar-power"

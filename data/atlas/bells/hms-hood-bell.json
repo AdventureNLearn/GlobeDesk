@@ -1,0 +1,83 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "hms-hood-bell",
+  "title": "HMS Hood's bell",
+  "kind": "ship-bell",
+  "status": "museum",
+  "status_note": "Recovered from the wreck in 2015; rededicated in 2016.",
+  "era": "19th-century",
+  "region": "Europe",
+  "country": "GB",
+  "place": {
+    "label": "National Museum of the Royal Navy, Portsmouth (pin approximate)",
+    "lat": 50.80047,
+    "lng": -1.10948,
+    "approximate": true,
+    "basis": "building",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "[UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1891",
+      "precision": "year",
+      "approximate": false,
+      "event": "The bell first served in the earlier battleship Hood, launched this year",
+      "source": "nmrn-hood-bell"
+    },
+    {
+      "date": "1941-05-24",
+      "precision": "day",
+      "approximate": false,
+      "event": "HMS Hood sunk in the Denmark Strait with about 1,400 lost",
+      "source": "rn-hood-bell-2016"
+    },
+    {
+      "date": "2015",
+      "precision": "year",
+      "approximate": false,
+      "event": "Recovered from the wreck at a depth of nearly 3 km",
+      "source": "rn-hood-bell-2016"
+    },
+    {
+      "date": "2016-05-24",
+      "precision": "day",
+      "approximate": false,
+      "event": "Rededicated in Portsmouth, 75 years after the sinking",
+      "source": "rn-hood-bell-2016"
+    }
+  ],
+  "tiers": {
+    "everyday": "This ship's bell was raised from the wreck of HMS Hood, sunk in 1941, nearly 3 km down. It is now a memorial in Portsmouth.",
+    "student": "The Royal Navy recovered the bell in 2015 and rededicated it on 24 May 2016. The museum notes it first served in an earlier battleship Hood launched in 1891, so it outlived three ships of the name."
+  },
+  "sources": [
+    "rn-hood-bell-2016",
+    "nmrn-hood-bell"
+  ],
+  "official_sources": [
+    "rn-hood-bell-2016",
+    "nmrn-hood-bell"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

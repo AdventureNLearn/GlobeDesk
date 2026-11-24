@@ -1,0 +1,64 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "hiroshima-peace-bell",
+  "title": "Peace Bell (Hiroshima Peace Memorial Park)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Visitors may strike it.",
+  "era": "20th-century",
+  "region": "Asia",
+  "country": "JP",
+  "place": {
+    "label": "Peace Memorial Park, Hiroshima",
+    "lat": 34.39487,
+    "lng": 132.45241,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": 1200,
+  "mass_note": "about 1,200 kg (Hiroshima Peace Culture Foundation)",
+  "diameter_m": 1,
+  "height_m": 1.7,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1964-09-20",
+      "precision": "day",
+      "approximate": false,
+      "event": "Completed",
+      "source": "hiroshima-pcf-peacebell"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Peace Bell in Hiroshima was finished in 1964. Visitors strike it to pray for a world without nuclear weapons.",
+    "student": "The foundation gives completion on 20 September 1964, about 1 m across, 1.7 m high and about 1,200 kg."
+  },
+  "sources": [
+    "hiroshima-pcf-peacebell"
+  ],
+  "official_sources": [
+    "hiroshima-pcf-peacebell"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 1,
+      "height_m": 1.7
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

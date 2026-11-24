@@ -1,0 +1,86 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "balangiga-bells",
+  "title": "Bells of Balangiga",
+  "kind": "chime-set",
+  "status": "[UNKNOWN]",
+  "status_note": "Presented back to the Philippines on 14 November 2018; present location not confirmed in an official source we could open.",
+  "era": "[UNKNOWN]",
+  "region": "Asia",
+  "country": "PH",
+  "place": {
+    "label": "Balangiga, Eastern Samar (home town; current hanging place [UNKNOWN])",
+    "lat": 11.10745,
+    "lng": 125.38745,
+    "approximate": true,
+    "basis": "home-town",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "bells_count": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "[UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1901",
+      "precision": "year",
+      "approximate": false,
+      "event": "Used during an attack on an American garrison in which 45 soldiers were killed; taken to the US",
+      "source": "af-balangiga"
+    },
+    {
+      "date": "1904",
+      "precision": "year",
+      "approximate": false,
+      "event": "Housed at F.E. Warren Air Force Base, Wyoming",
+      "source": "af-balangiga"
+    },
+    {
+      "date": "1992",
+      "precision": "year",
+      "approximate": false,
+      "event": "Become property of the US Air Force Museum System",
+      "source": "af-balangiga"
+    },
+    {
+      "date": "2018-11-14",
+      "precision": "day",
+      "approximate": false,
+      "event": "Officially presented to the Philippine government at F.E. Warren AFB",
+      "source": "af-balangiga"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Bells of Balangiga were church bells taken from the Philippines by US troops in 1901. The United States gave them back in 2018.",
+    "student": "The US Air Force records that the bells were used in a 1901 attack in which 45 US soldiers were killed, were kept at F.E. Warren AFB from 1904, joined the Air Force museum system in 1992 and were presented to the Philippines on 14 November 2018. Number of bells and present place [UNKNOWN] from official pages we could open."
+  },
+  "sources": [
+    "af-balangiga"
+  ],
+  "official_sources": [
+    "af-balangiga"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [
+    "present location",
+    "bell count",
+    "dimensions"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "nimrud-bronze-bell",
+  "title": "Neo-Assyrian bronze bell from Nimrud",
+  "kind": "bell",
+  "status": "museum",
+  "status_note": "British Museum collection, not on display.",
+  "era": "ancient",
+  "region": "Asia",
+  "country": "IQ",
+  "place": {
+    "label": "Findspot: Nimrud (object now in the British Museum, London)",
+    "lat": 36.0982,
+    "lng": 43.32886,
+    "approximate": true,
+    "basis": "findspot",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN] (Neo-Assyrian)",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": 0.0345,
+  "height_m": 0.052,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "copper alloy with an iron clapper (British Museum)"
+  },
+  "timeline": [
+    {
+      "date": "-799",
+      "end": "-699",
+      "precision": "year",
+      "approximate": true,
+      "event": "Made in the Neo-Assyrian period, 800–700 BC",
+      "source": "bm-n162"
+    }
+  ],
+  "tiers": {
+    "everyday": "This little bell, only about 5 cm tall, was made in Assyria nearly 3,000 years ago. Small bells like it are among the oldest bells we know.",
+    "student": "British Museum N.162: Neo-Assyrian, 800–700 BC, copper alloy with an iron clapper, 5.20 cm high and 3.45 cm across, excavated at Nimrud (the record credits A. H. Layard). Excavation year [UNKNOWN] in our notes."
+  },
+  "sources": [
+    "bm-n162"
+  ],
+  "official_sources": [
+    "bm-n162"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 0.0345,
+      "height_m": 0.052
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "excavation year"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

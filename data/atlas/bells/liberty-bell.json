@@ -1,0 +1,128 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "liberty-bell",
+  "title": "Liberty Bell",
+  "kind": "bell",
+  "status": "museum",
+  "status_note": "Not rung since the fatal crack of 1846.",
+  "era": "early-modern",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Liberty Bell Center, Independence NHP, Philadelphia",
+    "lat": 39.94995,
+    "lng": -75.15021,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Lester & Pack, Whitechapel (1752); recast by John Pass and John Stow, Philadelphia (1753)",
+  "mass_kg": 943,
+  "mass_note": "2,080 lb (NPS)",
+  "diameter_m": 1.181,
+  "height_m": 0.914,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "about 70% copper and 25% tin with small amounts of lead, zinc, arsenic, gold and silver (NPS info sheet)"
+  },
+  "timeline": [
+    {
+      "date": "1751",
+      "precision": "year",
+      "approximate": false,
+      "event": "Ordered for the Pennsylvania State House",
+      "source": "nps-bell-clock-facts"
+    },
+    {
+      "date": "1752",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast at Whitechapel by Thomas Lester and Thomas Pack",
+      "source": "nps-bell-clock-facts"
+    },
+    {
+      "date": "1752-09-01",
+      "precision": "day",
+      "approximate": false,
+      "event": "Has arrived in Philadelphia by this date; cracks on a test ring",
+      "source": "nps-bells-and-clocks"
+    },
+    {
+      "date": "1753",
+      "precision": "year",
+      "approximate": false,
+      "event": "Recast twice by John Pass and John Stow in Philadelphia",
+      "source": "nps-bell-clock-facts"
+    },
+    {
+      "date": "1753-06",
+      "precision": "month",
+      "approximate": false,
+      "event": "The Pass and Stow bell is raised in the State House steeple (early June)",
+      "source": "nps-bells-and-clocks"
+    },
+    {
+      "date": "1776-07-04",
+      "precision": "day",
+      "approximate": false,
+      "event": "NPS: no evidence the bell rang on July 4 or 8, 1776 (it did ring for the Stamp Act and its repeal)",
+      "source": "nps-liberty-bell"
+    },
+    {
+      "date": "1835",
+      "precision": "year",
+      "approximate": false,
+      "event": "The Anti-Slavery Record first calls it the Liberty Bell",
+      "source": "nps-liberty-bell"
+    },
+    {
+      "date": "1846-02-23",
+      "precision": "day",
+      "approximate": false,
+      "event": "Repaired for Washington's birthday, rung, and cracked beyond use",
+      "source": "nps-liberty-bell-sheet"
+    },
+    {
+      "date": "1915",
+      "precision": "year",
+      "approximate": false,
+      "event": "Travels across the country to San Francisco and back, its last trip",
+      "source": "nps-justice-bell-dyk"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Liberty Bell was made for the Pennsylvania State House (now Independence Hall). It weighs 2,080 lb and cracked for good in 1846. It became a symbol of freedom for abolitionists and many others.",
+    "student": "NPS: ordered in 1751, first cast at Whitechapel (Lester & Pack) in 1752, cracked on test and recast twice by Pass and Stow in 1753. About 70% copper and 25% tin; 2,080 lb, 46.5 in across, 3 ft high. A thin crack was repaired in February 1846; it cracked again on 23 February 1846 and has not been rung since. NPS finds no evidence it rang on 4 or 8 July 1776; abolitionists named it the Liberty Bell in 1835."
+  },
+  "sources": [
+    "nps-liberty-bell",
+    "nps-liberty-bell-sheet",
+    "nps-bell-clock-facts",
+    "nps-bells-and-clocks",
+    "nps-justice-bell-dyk"
+  ],
+  "official_sources": [
+    "nps-liberty-bell",
+    "nps-liberty-bell-sheet",
+    "nps-bell-clock-facts",
+    "nps-bells-and-clocks",
+    "nps-justice-bell-dyk"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 1.181,
+      "height_m": 0.914
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "wilbank-bell",
+  "title": "Wilbank Bell (Independence Hall, 1828)",
+  "kind": "bell",
+  "status": "[UNKNOWN]",
+  "status_note": "NPS records moves to Germantown in 1877 and 1924; present condition [UNKNOWN].",
+  "era": "19th-century",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Germantown Town Hall, Germantown Avenue, Philadelphia (its 1924 home; pin approximate)",
+    "lat": 40.03827,
+    "lng": -75.17746,
+    "approximate": true,
+    "basis": "last-known",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "John Wilbank, Philadelphia",
+  "mass_kg": 2087,
+  "mass_note": "4,600 lb (NPS fact sheet)",
+  "diameter_m": 1.562,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1828",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast by John Wilbank for the new Independence Hall tower; first rings on 4 July, but the sound disappoints and Wilbank replaces it",
+      "source": "nps-bells-and-clocks"
+    },
+    {
+      "date": "1877",
+      "precision": "year",
+      "approximate": false,
+      "event": "The replacement bell moves to Germantown Town Hall on Market Square",
+      "source": "nps-bells-and-clocks"
+    },
+    {
+      "date": "1924",
+      "precision": "year",
+      "approximate": false,
+      "event": "Moves with the Lukens clock to the Germantown Town Hall on Germantown Avenue",
+      "source": "nps-bells-and-clocks"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Wilbank Bell was cast in 1828 for the new tower of Independence Hall, between the Liberty Bell and the Centennial Bell. It later moved to Germantown.",
+    "student": "NPS: John Wilbank cast a larger bell in 1828 for the rebuilt tower; listeners disliked its first ring on 4 July and he replaced it. The fact sheet gives 4,600 lb and 61.5 in. The bell went to Germantown Town Hall in 1877 and to its Germantown Avenue building in 1924."
+  },
+  "sources": [
+    "nps-bells-and-clocks",
+    "nps-bell-clock-facts"
+  ],
+  "official_sources": [
+    "nps-bells-and-clocks",
+    "nps-bell-clock-facts"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 1.562
+    },
+    "label": "Parametric profile scaled from the sourced diameter; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "present location and condition"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

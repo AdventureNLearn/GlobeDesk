@@ -1,0 +1,102 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "old-north-bells",
+  "title": "Old North Church bells",
+  "kind": "ring",
+  "status": "in-place",
+  "status_note": "Ring of eight, still rung.",
+  "era": "early-modern",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Old North Church (Christ Church), Boston",
+    "lat": 42.36632,
+    "lng": -71.05445,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Abel Rudhall (Rudhall family foundry), Gloucester",
+  "mass_kg": 701,
+  "mass_note": "tenor 1,545 lb (Old North); all eight more than 5,000 lb (Boston Landmarks Commission)",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "bells_count": 8,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1742",
+      "precision": "year",
+      "approximate": false,
+      "event": "Bells contracted from Abel Rudhall of Gloucester",
+      "source": "oldnorth-bells"
+    },
+    {
+      "date": "1744",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast in England by the Rudhall foundry (the same report also says 1745 once)",
+      "source": "boston-blc-old-north"
+    },
+    {
+      "date": "1745",
+      "precision": "year",
+      "approximate": false,
+      "event": "Installed at Christ Church: the first change-ringing bells in the British American colonies",
+      "source": "boston-blc-old-north"
+    },
+    {
+      "date": "1775-04-18",
+      "precision": "day",
+      "approximate": false,
+      "event": "Two signal lanterns are hung in the church's bell tower before the British march",
+      "source": "nps-old-north-bost"
+    },
+    {
+      "date": "1894",
+      "precision": "year",
+      "approximate": false,
+      "event": "Bells rehung",
+      "source": "npshistory-christchurch"
+    },
+    {
+      "date": "1975",
+      "precision": "year",
+      "approximate": false,
+      "event": "Restored for the Boston Bicentennial (church page)",
+      "source": "oldnorth-bells"
+    }
+  ],
+  "tiers": {
+    "everyday": "The eight bells of Boston's Old North Church were cast in England in 1744. They were the first ring of change-ringing bells in North America.",
+    "student": "The Boston Landmarks Commission records eight bells cast in 1744 by the Rudhall foundry of Gloucestershire and installed in 1745, more than 5,000 lb in all, the first change-ringing bells in the British American colonies; NPS calls them the nation's first maiden peal. Old North gives a 1,545 lb tenor; NPS notes that Paul Revere rang bells there as a teenager and that the 1775 lantern signal was shown from this bell tower. The NPS-archive tower report records rehanging in 1894."
+  },
+  "sources": [
+    "oldnorth-bells",
+    "boston-blc-old-north",
+    "nps-old-north",
+    "nps-old-north-bost",
+    "npshistory-christchurch"
+  ],
+  "official_sources": [
+    "boston-blc-old-north",
+    "nps-old-north",
+    "nps-old-north-bost"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

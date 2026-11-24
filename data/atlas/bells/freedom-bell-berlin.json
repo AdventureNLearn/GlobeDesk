@@ -1,0 +1,85 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "freedom-bell-berlin",
+  "title": "Freedom Bell (Rathaus Schöneberg, Berlin)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Rings daily from the town-hall tower.",
+  "era": "20th-century",
+  "region": "Europe",
+  "country": "DE",
+  "place": {
+    "label": "Tower of Rathaus Schöneberg, Berlin",
+    "lat": 52.48483,
+    "lng": 13.3441,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Gillett & Johnston, Croydon",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN] in the cited pages",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1950-07-27",
+      "precision": "day",
+      "approximate": false,
+      "event": "Cast by Gillett & Johnston, Croydon",
+      "source": "berlin-freiheitsglocke-75"
+    },
+    {
+      "date": "1950",
+      "precision": "year",
+      "approximate": false,
+      "event": "Tours 26 US states in the Crusade for Freedom",
+      "source": "berlin-freiheitsglocke-75"
+    },
+    {
+      "date": "1950-08-25",
+      "precision": "day",
+      "approximate": false,
+      "event": "Shipped to Berlin",
+      "source": "berlin-freiheitsglocke-75"
+    },
+    {
+      "date": "1950-10-24",
+      "precision": "day",
+      "approximate": false,
+      "event": "First rung before more than 400,000 people",
+      "source": "berlin-freiheitsglocke"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Freedom Bell was cast in England in 1950, toured the United States and was given to West Berlin. It first rang on 24 October 1950.",
+    "student": "Berlin's district office records casting at Gillett & Johnston on 27 July 1950, a tour of 26 US states (the Crusade for Freedom, backed by about 16 million Americans), shipment on 25 August and a first ring on 24 October 1950 before more than 400,000 people."
+  },
+  "sources": [
+    "berlin-freiheitsglocke",
+    "berlin-freiheitsglocke-75"
+  ],
+  "official_sources": [
+    "berlin-freiheitsglocke",
+    "berlin-freiheitsglocke-75"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "mass"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}
