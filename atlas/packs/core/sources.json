@@ -127,7 +127,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "US Centers for Disease Control and Prevention",
-      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "description": "CDC Museum COVID-19 Timeline: dated entries from the first Wuhan cluster (December 12, 2019) through mid-2022, covering WHO and CDC actions, the first US cases, declarations, testing, vaccines and variants. Last reviewed July 8, 2024.",
+      "terms_url": "https://www.cdc.gov/other/agencymaterials.html",
+      "verified": "opened via a fetch service on 2026-11-24 (direct fetch returns HTTP 403)"
     },
     {
       "id": "frh-crash-1929",
