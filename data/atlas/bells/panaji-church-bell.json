@@ -1,0 +1,63 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "panaji-church-bell",
+  "title": "Bell of Our Lady of the Immaculate Conception, Panaji",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Second largest bell in Goa (Goa Tourism).",
+  "era": "[UNKNOWN]",
+  "region": "Asia",
+  "country": "IN",
+  "place": {
+    "label": "Our Lady of the Immaculate Conception Church, Panaji, Goa",
+    "lat": 15.49853,
+    "lng": 73.82974,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": 2250,
+  "mass_note": "2,250 kg (Goa Tourism)",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "[UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1871",
+      "precision": "year",
+      "approximate": false,
+      "event": "Staircase and belfry strengthened to take the bell (Goa Tourism)",
+      "source": "goa-gtdc-panaji"
+    }
+  ],
+  "tiers": {
+    "everyday": "The church in Panaji, Goa, has a 2,250 kg bell that came from a ruined Augustinian church. It is the second largest bell in Goa.",
+    "student": "Goa Tourism says the bell came from the ruined Augustinian church of Our Lady of Grace, was first hung at the Fort Aguada chapel, and that the belfry was strengthened in 1871; 2,250 kg, second in Goa after the Golden Bell. Cast date [UNKNOWN]."
+  },
+  "sources": [
+    "goa-gtdc-panaji"
+  ],
+  "official_sources": [
+    "goa-gtdc-panaji"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "cast date",
+    "founder"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -101,6 +101,9 @@
       "title": "3D objects and builds",
       "scope": "Buildable objects with a detailed model, part list, sizing, safety and regional prices.",
       "pack": "objects",
+      "extra_packs": [
+        "bells"
+      ],
       "refresh": "quarterly",
       "subcategories": [
         {
@@ -122,6 +125,10 @@
         {
           "id": "transport",
           "title": "Transport"
+        },
+        {
+          "id": "bells",
+          "title": "Bells"
         }
       ]
     },

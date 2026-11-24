@@ -1,0 +1,70 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "dolores-bell",
+  "title": "Bell of Dolores",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Rung each 15 September for the Grito.",
+  "era": "[UNKNOWN]",
+  "region": "North America",
+  "country": "MX",
+  "place": {
+    "label": "Central balcony, Palacio Nacional, Mexico City",
+    "lat": 19.43255,
+    "lng": -99.13127,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "[UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1810-09-16",
+      "precision": "day",
+      "approximate": false,
+      "event": "Rung at dawn in Dolores by Miguel Hidalgo to call the uprising for independence",
+      "source": "inah-grito"
+    },
+    {
+      "date": "1896",
+      "precision": "year",
+      "approximate": false,
+      "event": "Moved to Mexico City and placed over the Palacio Nacional balcony; rung each 15 September since",
+      "source": "inah-grito"
+    }
+  ],
+  "tiers": {
+    "everyday": "Miguel Hidalgo rang the Bell of Dolores in 1810 to start Mexico's fight for independence. It now hangs at the National Palace and rings every 15 September.",
+    "student": "INAH: the bell called the people of Dolores at dawn on 16 September 1810; in 1896 it was moved to Mexico City and placed on the Palacio Nacional's central balcony, where it is rung each 15 September for the Grito."
+  },
+  "sources": [
+    "inah-grito"
+  ],
+  "official_sources": [
+    "inah-grito"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "founder",
+    "mass"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

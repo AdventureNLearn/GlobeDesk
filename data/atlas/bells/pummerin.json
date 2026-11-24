@@ -1,0 +1,109 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "pummerin",
+  "title": "Pummerin (St. Stephen's Cathedral, Vienna)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Present bell recast 1951, in the North Tower since 1957.",
+  "era": "early-modern",
+  "region": "Europe",
+  "country": "AT",
+  "place": {
+    "label": "North Tower, St. Stephen's Cathedral, Vienna",
+    "lat": 48.20849,
+    "lng": 16.37313,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Present bell: recast at St. Florian (1951)",
+  "mass_kg": 20130,
+  "mass_note": "20,130 kg (cathedral)",
+  "diameter_m": 3.136,
+  "height_m": null,
+  "thickness_m": 0.23,
+  "note": "c° +4",
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1711",
+      "precision": "year",
+      "approximate": false,
+      "event": "First Pummerin cast from captured cannon under Emperor Joseph I",
+      "source": "stephansdom-pummerin"
+    },
+    {
+      "date": "1937",
+      "precision": "year",
+      "approximate": false,
+      "event": "Last rung",
+      "source": "wien-geschichte-pummerin"
+    },
+    {
+      "date": "1945-04",
+      "precision": "month",
+      "approximate": false,
+      "event": "Falls in the cathedral fire and shatters",
+      "source": "stephansdom-pummerin"
+    },
+    {
+      "date": "1951",
+      "precision": "year",
+      "approximate": false,
+      "event": "Recast at St. Florian",
+      "source": "stephansdom-pummerin"
+    },
+    {
+      "date": "1952",
+      "precision": "year",
+      "approximate": false,
+      "event": "Consecrated",
+      "source": "stephansdom-pummerin"
+    },
+    {
+      "date": "1957",
+      "precision": "year",
+      "approximate": false,
+      "event": "Raised into the North Tower",
+      "source": "stephansdom-pummerin"
+    },
+    {
+      "date": "2011",
+      "precision": "year",
+      "approximate": false,
+      "event": "Fitted with a new 637 kg clapper",
+      "source": "stephansdom-pummerin"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Pummerin is the great bell of St. Stephen's Cathedral in Vienna. The first one, made from captured cannon in 1711, shattered in the 1945 fire; the new bell weighs about 20 tonnes.",
+    "student": "The cathedral gives the 1951 bell as 20,130 kg, 313.6 cm across, wall 23 cm, note c°+4; it was consecrated in 1952 and hung in the North Tower in 1957, with a 637 kg clapper from 2011. Its predecessor (1711) fell and broke in April 1945."
+  },
+  "sources": [
+    "stephansdom-pummerin",
+    "wien-geschichte-pummerin"
+  ],
+  "official_sources": [
+    "stephansdom-pummerin",
+    "wien-geschichte-pummerin"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 3.136,
+      "thickness_m": 0.23
+    },
+    "label": "Parametric profile scaled from the sourced diameter and wall thickness; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

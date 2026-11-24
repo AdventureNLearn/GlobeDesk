@@ -1,0 +1,85 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "petersglocke-cologne",
+  "title": "Petersglocke (Cologne Cathedral)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Rung on high feasts.",
+  "era": "19th-century",
+  "region": "Europe",
+  "country": "DE",
+  "place": {
+    "label": "South tower, Cologne Cathedral",
+    "lat": 50.9413,
+    "lng": 6.95814,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Heinrich Ulrich, Gebr. Ulrich foundry, Apolda",
+  "mass_kg": 24000,
+  "mass_note": "24,000 kg (cathedral)",
+  "diameter_m": 3.22,
+  "height_m": 3.2,
+  "note": "c0",
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1874",
+      "precision": "year",
+      "approximate": false,
+      "event": "Predecessor Kaiserglocke cast by Andreas Hamm",
+      "source": "koelner-dom-petersglocke"
+    },
+    {
+      "date": "1918",
+      "precision": "year",
+      "approximate": false,
+      "event": "Kaiserglocke melted down",
+      "source": "koelner-dom-petersglocke"
+    },
+    {
+      "date": "1922-03-13",
+      "precision": "day",
+      "approximate": false,
+      "event": "New bell ordered from Gebr. Ulrich, Apolda",
+      "source": "koelner-dom-petersglocke"
+    },
+    {
+      "date": "1923-05-05",
+      "precision": "day",
+      "approximate": false,
+      "event": "Cast by Heinrich Ulrich (the inscription says 1922)",
+      "source": "koelner-dom-petersglocke"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Petersglocke in Cologne Cathedral weighs 24 tonnes. It replaced the Kaiserglocke, which was melted down in 1918.",
+    "student": "The cathedral records an order of 13 March 1922 to Gebr. Ulrich in Apolda and casting on 5 May 1923 by Heinrich Ulrich: 24,000 kg, 3.22 m across, 3.2 m high, note c0, clapper about 600 kg."
+  },
+  "sources": [
+    "koelner-dom-petersglocke"
+  ],
+  "official_sources": [
+    "koelner-dom-petersglocke"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 3.22,
+      "height_m": 3.2
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "edmund-fitzgerald-bell",
+  "title": "SS Edmund Fitzgerald bell",
+  "kind": "ship-bell",
+  "status": "museum",
+  "status_note": "Displayed as a memorial to the 29 crew.",
+  "era": "20th-century",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Great Lakes Shipwreck Museum, Whitefish Point, Michigan",
+    "lat": 46.7706,
+    "lng": -84.95818,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": 91,
+  "mass_note": "200 lb (museum)",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze (museum); ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1958-06-08",
+      "precision": "day",
+      "approximate": false,
+      "event": "Ship launched",
+      "source": "glshs-fitzgerald"
+    },
+    {
+      "date": "1975-11-10",
+      "precision": "day",
+      "approximate": false,
+      "event": "Lost on Lake Superior with all 29 crew",
+      "source": "glshs-fitzgerald"
+    },
+    {
+      "date": "1995-07-04",
+      "precision": "day",
+      "approximate": false,
+      "event": "Bell recovered from the wreck",
+      "source": "glshs-fitzgerald"
+    }
+  ],
+  "tiers": {
+    "everyday": "The bell of the Edmund Fitzgerald, a ship lost on Lake Superior in 1975, was raised in 1995. It is a memorial to the 29 people who died.",
+    "student": "The Great Lakes Shipwreck Historical Society records the loss on 10 November 1975 with all 29 crew and recovery of the 200 lb bronze bell on 4 July 1995; it is displayed at Whitefish Point."
+  },
+  "sources": [
+    "glshs-fitzgerald"
+  ],
+  "official_sources": [
+    "glshs-fitzgerald"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

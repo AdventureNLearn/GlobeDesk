@@ -1,0 +1,70 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "yongle-bell",
+  "title": "Yongle Bell (Dazhong Temple, Beijing)",
+  "kind": "bell",
+  "status": "museum",
+  "status_note": "Rung at New Year; moved three times.",
+  "era": "medieval",
+  "region": "Asia",
+  "country": "CN",
+  "place": {
+    "label": "Dazhong Temple Ancient Bell Museum, Beijing",
+    "lat": 39.96783,
+    "lng": 116.33199,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": 46500,
+  "mass_note": "46.5 t (english.beijing.gov.cn) vs about 46 t (Beijing Cultural Heritage Bureau)",
+  "diameter_m": 3.3,
+  "height_m": 6.75,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1403",
+      "end": "1424",
+      "precision": "year",
+      "approximate": true,
+      "event": "Cast during the Yongle reign of the Ming dynasty",
+      "source": "beijing-dazhongsi"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Yongle Bell in Beijing was cast in the early 1400s and weighs about 46 tonnes. More than 230,000 Chinese and Sanskrit characters cover it.",
+    "student": "Beijing's government page gives 46.5 t, 6.75 m high and 3.3 m across, cast under the Yongle Emperor (1403–1424), with more than 230,000 characters of Buddhist texts. The heritage bureau gives about 46 t and 5.5 m: the height conflict is kept open."
+  },
+  "sources": [
+    "beijing-dazhongsi",
+    "wwj-yongle-bell"
+  ],
+  "official_sources": [
+    "beijing-dazhongsi",
+    "wwj-yongle-bell"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 3.3,
+      "height_m": 6.75
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "height conflict (6.75 m vs 5.5 m)",
+    "exact casting year"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

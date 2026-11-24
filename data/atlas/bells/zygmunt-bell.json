@@ -1,0 +1,63 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "zygmunt-bell",
+  "title": "Sigismund Bell (Wawel Cathedral)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Rung by hand on major feasts and national occasions.",
+  "era": "early-modern",
+  "region": "Europe",
+  "country": "PL",
+  "place": {
+    "label": "Sigismund Tower, Wawel Cathedral, Kraków",
+    "lat": 50.05465,
+    "lng": 19.93546,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Hans Behem of Nuremberg, cast in Kraków",
+  "mass_kg": 12600,
+  "mass_note": "about 12,600 kg with fittings; body 9,650 kg (cathedral)",
+  "diameter_m": 2.42,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1520",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast in Kraków by Hans Behem",
+      "source": "wawel-zygmunt"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Sigismund Bell at Wawel Cathedral in Kraków was cast in 1520. It is Poland's most famous bell and is rung by hand on great occasions.",
+    "student": "The cathedral gives casting in 1520 by Hans Behem of Nuremberg in Kraków, diameter 242 cm, body 9,650 kg and about 12,600 kg in all, with an original clapper of 323 kg."
+  },
+  "sources": [
+    "wawel-zygmunt"
+  ],
+  "official_sources": [
+    "wawel-zygmunt"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.42
+    },
+    "label": "Parametric profile scaled from the sourced diameter; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

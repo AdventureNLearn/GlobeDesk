@@ -3,7 +3,7 @@ import path from "node:path";
 import { readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { validateSchema } from "../../tests/jsonschema-lite.mjs";
-import { ATLAS, J, JR, MAX_BYTES, CATEGORY_PACKS, allEntries, fileInfo, packSha, exists, daysBetween, DATE_FORM } from "./lib.mjs";
+import { ATLAS, J, JR, MAX_BYTES, CATEGORY_PACKS, allEntries, fileInfo, packSha, exists, daysBetween, DATE_FORM, packCategory, categoryPacks } from "./lib.mjs";
 
 const NOW_MAX_DAYS = 92; // "about 90 days"
 const SC = createRequire(import.meta.url)("../../js/source-class.js");
@@ -22,7 +22,7 @@ export function entryRules(e, ctx) {
   if (!cat) p.push(`${at}: unknown category ${e.category_path[0]}`);
   else if (!cat.subcategories.some((s) => s.id === e.category_path[1])) p.push(`${at}: unknown subcategory ${e.category_path.join("/")}`);
   (e.see_also_paths || []).forEach((sp) => { const c = ctx.cats.find((x) => x.id === sp[0]); if (!c || !c.subcategories.some((s) => s.id === sp[1])) p.push(`${at}: unknown see-also path ${sp.join("/")}`); });
-  if (cat) { const want = e.current ? [cat.pack, "now"] : [cat.pack]; if (!want.includes(e.pack)) p.push(`${at}: pack ${e.pack} should be ${want.join(" or ")}`); }
+  if (cat) { const want = e.current ? [...categoryPacks(cat), "now"] : categoryPacks(cat); if (!want.includes(e.pack)) p.push(`${at}: pack ${e.pack} should be ${want.join(" or ")}`); }
   if (e.pack === "now" && !e.current) p.push(`${at}: an entry in the Now pack must be current`);
   if (e.current) {
     const days = e.dates.filter((d) => d.precision === "day").map((d) => d.date).sort();
@@ -75,6 +75,35 @@ export function deskRules(doc) {
   return p;
 }
 
+// Bells layer: each bell record matches its schema and its entry; facts cite registered sources; at least one
+// official source (official_status listed) or official_status [UNKNOWN]; no official or primary source means low confidence; Wikipedia is never the only source; pins in range.
+export function bellRules(entry, rec, ctx) {
+  const p = [];
+  const at = `bell ${entry.id}`;
+  asList(validateSchema(ctx.bellSchema, rec)).forEach((x) => p.push(`${at}: ${x}`));
+  if (rec.id !== entry.id) p.push(`${at}: record id ${rec.id} does not match the entry`);
+  const known = (id) => ctx.sourceById.has(id);
+  [...rec.sources, ...rec.timeline.map((t) => t.source)].forEach((id) => { if (!known(id)) p.push(`${at}: source ${id} not in core/sources.json`); });
+  rec.timeline.forEach((t) => { if (!rec.sources.includes(t.source)) p.push(`${at}: timeline source ${t.source} is not listed in the record's sources`); });
+  const cls = (id) => (ctx.sourceById.get(id) || {});
+  const official = rec.sources.filter((id) => cls(id).class === "official");
+  const primary = rec.sources.filter((id) => cls(id).primary === true);
+  if (official.length && rec.official_status !== "listed") p.push(`${at}: official_status must be listed when an official source is cited`);
+  if (!official.length && rec.official_status !== "[UNKNOWN]") p.push(`${at}: official_status must be [UNKNOWN] when no official source is cited`);
+  if (!official.length && !primary.length && rec.confidence !== "low") p.push(`${at}: with no official or primary source, confidence must be low`);
+  if (JSON.stringify(official) !== JSON.stringify(rec.official_sources)) p.push(`${at}: official_sources must list exactly the official-class sources`);
+  if (rec.sources.every((id) => /wikipedia\.org/.test((ctx.sourceById.get(id) || {}).url || ""))) p.push(`${at}: Wikipedia cannot be the only source`);
+  if (Math.abs(rec.place.lat) > 90 || Math.abs(rec.place.lng) > 180) p.push(`${at}: pin out of range`);
+  const pl = entry.places[0];
+  if (!pl || pl.lat !== rec.place.lat || pl.lng !== rec.place.lng || pl.region !== rec.country) p.push(`${at}: entry place does not match the record pin`);
+  if (rec.place.approximate && !/approximate/i.test(pl ? pl.note || "" : "")) p.push(`${at}: an approximate pin must say so in the entry place note`);
+  if (!entry.tiers || entry.tiers.everyday !== rec.tiers.everyday || entry.tiers.student !== rec.tiers.student) p.push(`${at}: entry tiers must match the record`);
+  if (!entry.related.some((r) => r.type === "made-of" && r.to === "bell-bronze")) p.push(`${at}: must link made-of bell-bronze`);
+  if (rec.model.available !== (entry.model === "bell")) p.push(`${at}: entry model and record model disagree`);
+  if (rec.model.from_sources && !(rec.diameter_m > 0)) p.push(`${at}: a sourced 3D model needs a sourced diameter`);
+  return p;
+}
+
 export function packRules(m, dir) {
   const p = [];
   let size = 0;
@@ -113,8 +142,13 @@ export function validateAtlas() {
     problems.push(...packRules(m, path.join(ATLAS, "packs", id)));
     const count = id === "core" ? entries.length : J(`packs/${id}/entries.json`).entries.length;
     if (m.entry_count !== count) problems.push(`manifest ${id}: entry_count ${m.entry_count} != ${count}`);
-    if (id !== "core") { const c = cats.find((x) => x.pack === id); if (!c || m.category !== c.id || m.refresh !== c.refresh) problems.push(`manifest ${id}: category or refresh does not match the tree`); }
+    if (id !== "core") { const c = packCategory(cats, id); if (!c || m.category !== c.id || m.refresh !== c.refresh) problems.push(`manifest ${id}: category or refresh does not match the tree`); }
   }
+  const bellSchema = JR("schema/globedesk-bell.schema.json");
+  entries.filter((e) => e.layer === "bells" && e.kind === "object").forEach((e) => {
+    if (!e.record || !exists(e.record)) { problems.push(`bell ${e.id}: record missing`); return; }
+    problems.push(...bellRules(e, JR(e.record), { ...ctx, bellSchema }));
+  });
   const index = J("packs/core/index.json").entries.map((e) => e.id).sort();
   if (JSON.stringify(index) !== JSON.stringify([...ids].sort())) problems.push("core index does not list exactly the pack entries");
   problems.push(...deskRules(JR("desks/work-desks.json")));

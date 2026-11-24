@@ -1,0 +1,63 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "great-tom-oxford",
+  "title": "Great Tom (Christ Church, Oxford)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Hangs in Tom Tower.",
+  "era": "early-modern",
+  "region": "Europe",
+  "country": "GB",
+  "place": {
+    "label": "Tom Tower, Christ Church, Oxford",
+    "lat": 51.7502,
+    "lng": -1.25655,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Recast by Christopher Hodson (1680)",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN] in the cited page",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1680",
+      "precision": "year",
+      "approximate": false,
+      "event": "Recast by Christopher Hodson and hung in Tom Tower; the bell came from Osney Abbey",
+      "source": "chch-bells"
+    }
+  ],
+  "tiers": {
+    "everyday": "Great Tom is the big bell in Tom Tower at Christ Church, Oxford. It came from Osney Abbey and was recast in 1680.",
+    "student": "Christ Church records the great bell as originally from Osney Abbey, recast in 1680 by Christopher Hodson and hung in Tom Tower. Two bells of about 1410 by John Bird survive in the cathedral ring. Mass [UNKNOWN] in the official page."
+  },
+  "sources": [
+    "chch-bells"
+  ],
+  "official_sources": [
+    "chch-bells"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "mass",
+    "diameter"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "campanone-st-peters",
+  "title": "Campanone (St Peter's Basilica)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Electric ringing since 1931.",
+  "era": "medieval",
+  "region": "Europe",
+  "country": "VA",
+  "place": {
+    "label": "Bell chamber, St Peter's Basilica, Vatican City",
+    "lat": 41.90216,
+    "lng": 12.45371,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Luigi Valadier (1785)",
+  "mass_kg": 8950,
+  "mass_note": "8,950 kg (vatican.va)",
+  "diameter_m": 2.316,
+  "height_m": null,
+  "note": "MI2 (E) +5/16",
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1303",
+      "precision": "year",
+      "approximate": false,
+      "event": "Fire breaks the basilica's bells",
+      "source": "vatican-campane-info"
+    },
+    {
+      "date": "1352",
+      "end": "1354",
+      "precision": "year",
+      "approximate": false,
+      "event": "Campanone recast under Innocent VI",
+      "source": "vatican-campane-info"
+    },
+    {
+      "date": "1785",
+      "precision": "year",
+      "approximate": false,
+      "event": "Present Campanone cast by Luigi Valadier",
+      "source": "vatican-campane"
+    },
+    {
+      "date": "1931-11-04",
+      "precision": "day",
+      "approximate": false,
+      "event": "Electric ringing begins",
+      "source": "vatican-campane-info"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Campanone is the great bell of St Peter's Basilica in Rome. The present bell was cast in 1785 and weighs nearly 9 tonnes.",
+    "student": "Vatican pages give the Campanone as cast in 1785 by Luigi Valadier, 8,950 kg, 2316 mm across, nominal MI2 +5/16. An earlier campanone was recast in 1352–54 after the fire of 1303; electric ringing dates from 4 November 1931."
+  },
+  "sources": [
+    "vatican-campane",
+    "vatican-campane-info"
+  ],
+  "official_sources": [
+    "vatican-campane",
+    "vatican-campane-info"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2.316
+    },
+    "label": "Parametric profile scaled from the sourced diameter; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

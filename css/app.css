@@ -710,6 +710,18 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .ul-comm-swatch { --c: #c9a2ff; }
 .ul-mine-swatch { --c: #4ff0a8; }
 .lp-actions { display: flex; gap: 6px; flex-wrap: wrap; padding: 4px 0 4px 30px; }
+/* Bells layer: bronze bell pins (44px tap target), dashed when the pin is approximate, grey when the bell is lost */
+.bl-pin, .bl-cluster { min-width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; padding: 0; cursor: pointer; }
+.bl-glyph { display: block; width: 20px; height: 22px; border-radius: 10px 10px 3px 3px; background: linear-gradient(160deg, #e6b56a, #a86a24); border: 2px solid #fff3dc; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); }
+.bl-approx .bl-glyph { border-style: dashed; }
+.bl-lost .bl-glyph { background: #777; }
+.bl-pin:focus-visible, .bl-cluster:focus-visible { outline: 2px solid var(--gd-gold); outline-offset: 2px; border-radius: 8px; }
+.bl-cluster { min-width: 34px; width: auto; height: 34px; border-radius: 17px; margin: 5px; padding: 0 8px; background: rgba(60, 34, 8, 0.9); border: 2px solid #e6b56a; color: #ffe3b0; font-weight: 700; font-size: 12px; }
+.bl-swatch { --c: #c88a3e; }
+.bl-filters select { max-width: 11rem; }
+.at-ov h4 { margin: 10px 0 2px; }
+.at-timeline-list { padding-left: 18px; }
+.at-timeline-list li { margin: 2px 0; }
 /* Work desks */
 .desk-switch { display: flex; align-items: center; gap: 6px; padding: 6px 10px 0; }
 .desk-switch select { flex: 1; }

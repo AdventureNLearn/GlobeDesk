@@ -1,0 +1,64 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "amedzofe-bell",
+  "title": "Amedzofe church bell (Volta Region, Ghana)",
+  "kind": "bell",
+  "status": "[UNKNOWN]",
+  "status_note": "Recorded in the DAI survey; current condition [UNKNOWN] to us.",
+  "era": "19th-century",
+  "region": "Africa",
+  "country": "GH",
+  "place": {
+    "label": "Amedzofe, Volta Region (village pin)",
+    "lat": 6.84739,
+    "lng": 0.4355,
+    "approximate": true,
+    "basis": "home-town",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "F. Otto (per the DAI survey)",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze (DAI survey); ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1855",
+      "precision": "year",
+      "approximate": false,
+      "event": "Bronze bell cast by F. Otto, recorded at Amedzofe (DAI survey)",
+      "source": "dai-ghana-bells"
+    }
+  ],
+  "tiers": {
+    "everyday": "German missionaries brought church bells to the Volta Region of Ghana in the 1800s. One at Amedzofe is a bronze bell dated 1855.",
+    "student": "The German Archaeological Institute's survey of bells as shared German-Ghanaian heritage records a bronze bell by F. Otto dated 1855 at Amedzofe, alongside an 1857 Pelargus bell at Ho and later steel bells. The FAU project studies colonial-era bells in Ghana."
+  },
+  "sources": [
+    "dai-ghana-bells",
+    "fau-ghana-bells"
+  ],
+  "official_sources": [
+    "dai-ghana-bells"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "present status",
+    "dimensions"
+  ],
+  "confidence": "low",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

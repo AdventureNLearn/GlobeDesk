@@ -1,0 +1,63 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "sysoy-bell",
+  "title": "Sysoy bell (Rostov Kremlin)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Hangs in the Rostov cathedral belfry (museum-reserve).",
+  "era": "early-modern",
+  "region": "Europe",
+  "country": "RU",
+  "place": {
+    "label": "Cathedral belfry (Sobornaya zvonnitsa), Rostov Kremlin",
+    "lat": 57.18488,
+    "lng": 39.41524,
+    "approximate": true,
+    "basis": "building",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Flor Terentyev",
+  "mass_kg": 32760,
+  "mass_note": "2,000 poods per the museum; converted at 16.38 kg per pood (our conversion)",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1688",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast by Flor Terentyev, 2,000 poods",
+      "source": "rostmuseum-zvonnitsa"
+    }
+  ],
+  "tiers": {
+    "everyday": "Sysoy is the biggest bell of the famous Rostov Kremlin belfry, cast in 1688 and weighing about 2,000 poods (roughly 33 tonnes).",
+    "student": "The Rostov Kremlin museum gives Sysoy as cast in 1688 by Flor Terentyev at 2,000 poods (about 32.8 t by our conversion). The same belfry holds the earlier Polyeleiny (1,000 poods) and Lebed (500 poods) bells cast by the Andreev masters."
+  },
+  "sources": [
+    "rostmuseum-zvonnitsa"
+  ],
+  "official_sources": [
+    "rostmuseum-zvonnitsa"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "diameter",
+    "note"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "bok-tower-carillon",
+  "title": "Bok Tower carillon (Singing Tower)",
+  "kind": "carillon",
+  "status": "in-place",
+  "status_note": "Recitals from the tower (gardens).",
+  "era": "[UNKNOWN]",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Bok Tower Gardens, Lake Wales, Florida (pin approximate)",
+    "lat": 27.93603,
+    "lng": -81.57582,
+    "approximate": true,
+    "basis": "building",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "John Taylor & Co, Loughborough",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "bells_count": 60,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [],
+  "tiers": {
+    "everyday": "The Singing Tower at Bok Tower Gardens in Florida holds a carillon of 60 bells cast in England.",
+    "student": "Bok Tower Gardens gives 60 bells, all cast by John Taylor & Co of Loughborough. Dedication year and bell masses [UNKNOWN] in the official page."
+  },
+  "sources": [
+    "bok-singing-tower"
+  ],
+  "official_sources": [
+    "bok-singing-tower"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [
+    "dedication year",
+    "bourdon mass"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

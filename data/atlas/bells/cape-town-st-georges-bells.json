@@ -1,0 +1,72 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "cape-town-st-georges-bells",
+  "title": "St George's Cathedral bells (Cape Town)",
+  "kind": "ring",
+  "status": "in-place",
+  "status_note": "Ring of ten for change ringing.",
+  "era": "20th-century",
+  "region": "Africa",
+  "country": "ZA",
+  "place": {
+    "label": "St George's Cathedral, Cape Town",
+    "lat": -33.92487,
+    "lng": 18.41942,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Mears & Stainbank, Whitechapel (Dove's Guide)",
+  "mass_kg": 1270,
+  "mass_note": "tenor 25-0-0 cwt, about 1,270 kg (Dove's Guide); ring about 300–1,300 kg (cathedral)",
+  "diameter_m": 1.321,
+  "height_m": null,
+  "note": "tenor E flat",
+  "bells_count": 10,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1962",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast as a chime for a car park (Dove's Guide)",
+      "source": "dove-cape-town"
+    },
+    {
+      "date": "1979",
+      "precision": "year",
+      "approximate": false,
+      "event": "Moved into the cathedral tower (Dove's Guide)",
+      "source": "dove-cape-town"
+    }
+  ],
+  "tiers": {
+    "everyday": "St George's Cathedral in Cape Town has a ring of ten bells for English-style change ringing, one of few in Africa.",
+    "student": "The cathedral describes a ring of ten from about 300 kg to 1,300 kg. Dove's Guide (reference) gives a 1962 Mears & Stainbank casting first used as a chime, a move to the tower in 1979 and a 25 cwt tenor in E flat, 52 in across."
+  },
+  "sources": [
+    "sgcathedral-bellringers",
+    "dove-cape-town"
+  ],
+  "official_sources": [
+    "sgcathedral-bellringers"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 1.321
+    },
+    "label": "3D uses the tenor (52 in, Dove's Guide). Parametric profile scaled from the sourced diameter; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

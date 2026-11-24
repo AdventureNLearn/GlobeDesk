@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "bells",
+  "title": "Atlas pack: 3D objects and builds: Bells",
+  "kind": "category",
+  "category": "objects",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "a0554614c4d5dba4326e93f96932deee2526149054fc8da0fd001c1e719bd9e7",
+  "entry_count": 56,
+  "size_bytes": 139519,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 139519,
+      "sha256": "25ac6d7ebcdae281af4be93fb2d69dd07e4902bae623e16e073ce1dac7611f40"
+    }
+  ]
+}

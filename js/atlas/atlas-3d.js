@@ -1,5 +1,6 @@
 /* Atlas 3D viewer. Lazy-loads the vendored three.js r158 (MIT, unmodified, vendor/three-0.158.0.min.js)
-   only when the user picks 3D, then draws the parametric layout from js/atlas/models/*.js.
+   only when the user picks 3D, then draws the parametric layout from js/atlas/models/*.js
+   (a model with its own build(THREE, layout), like bell.js, draws itself).
    Same origin only; nothing is fetched from the internet. If WebGL or the script is unavailable,
    the view stays a labelled stub. window.GD.atlas3d */
 (function (global) {
@@ -53,7 +54,7 @@
     return { scene, group, size: Math.max(L.box.w, L.box.d, L.box.h) };
   }
 
-  function show(el, modelId, parallel) {
+  function show(el, modelId, param) {
     dispose();
     const models = global.GD_ATLAS_MODELS || {};
     const mod = models[modelId];
@@ -61,7 +62,7 @@
     el.classList.remove("stub");
     el.textContent = "Loading 3D view…";
     return loadThree().then((THREE) => {
-      const L = mod.layout(parallel);
+      const L = mod.layout(param);
       const w = Math.max(200, el.clientWidth || 360), h = Math.max(160, el.clientHeight || 240);
       let renderer;
       try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); } catch (e) { throw new Error("WebGL is not available"); }
@@ -69,10 +70,11 @@
       renderer.setSize(w, h);
       el.textContent = "";
       el.appendChild(renderer.domElement);
-      const { scene, group, size } = build(THREE, L);
+      const built = typeof mod.build === "function" ? mod.build(THREE, L) : build(THREE, L); // a model may bring its own builder (bell.js)
+      const { scene, group, size } = built;
       const camera = new THREE.PerspectiveCamera(40, w / h, 1, size * 20);
       camera.position.set(size * 1.4, size * 1.1, size * 1.6);
-      camera.lookAt(0, L.box.h / 3, 0);
+      camera.lookAt(0, built.lookAtY != null ? built.lookAtY : L.box.h / 3, 0);
       let yaw = 0.6, drag = null;
       const onDown = (e) => { drag = e.clientX; };
       const onMove = (e) => { if (drag != null) { yaw += (e.clientX - drag) * 0.01; drag = e.clientX; } };
@@ -91,7 +93,8 @@
       };
       tick();
       el.setAttribute("data-3d", "ok");
-      return { ok: true, cells: L.cells.length };
+      el.setAttribute("data-model", modelId);
+      return { ok: true, model: modelId, cells: L.cells ? L.cells.length : 0, layout: L };
     }).catch((err) => {
       el.classList.add("stub");
       el.setAttribute("data-3d", "stub");

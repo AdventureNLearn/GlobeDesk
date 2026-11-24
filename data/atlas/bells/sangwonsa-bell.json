@@ -1,0 +1,73 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "sangwonsa-bell",
+  "title": "Bronze Bell of Sangwonsa Temple",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "National Treasure; the oldest Korean bell.",
+  "era": "medieval",
+  "region": "Asia",
+  "country": "KR",
+  "place": {
+    "label": "Sangwonsa Temple, Odaesan, Pyeongchang",
+    "lat": 37.78637,
+    "lng": 128.56396,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": 0.91,
+  "height_m": 1.67,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "725",
+      "precision": "year",
+      "approximate": false,
+      "event": "Cast (Unified Silla)",
+      "source": "khs-sangwonsa"
+    },
+    {
+      "date": "1962-12-20",
+      "precision": "day",
+      "approximate": false,
+      "event": "Designated a National Treasure",
+      "source": "khs-sangwonsa"
+    }
+  ],
+  "tiers": {
+    "everyday": "The bell at Sangwonsa Temple, cast in 725, is the oldest Korean bell that survives.",
+    "student": "Korea Heritage Service gives casting in 725, height 1.67 m and diameter 0.91 m, designated on 20 December 1962. Mass [UNKNOWN]."
+  },
+  "sources": [
+    "khs-sangwonsa"
+  ],
+  "official_sources": [
+    "khs-sangwonsa"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 0.91,
+      "height_m": 1.67
+    },
+    "label": "Parametric profile scaled from the sourced diameter and height; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [
+    "mass"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

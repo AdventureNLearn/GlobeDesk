@@ -1,0 +1,87 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "uglich-exile-bell",
+  "title": "Uglich alarm bell (the exiled bell)",
+  "kind": "bell",
+  "status": "museum",
+  "status_note": "Returned from Siberian exile in May 1892; one of the first exhibits of the Uglich museum.",
+  "era": "[UNKNOWN]",
+  "region": "Europe",
+  "country": "RU",
+  "place": {
+    "label": "Uglich Kremlin (museum); pin on the kremlin",
+    "lat": 57.52869,
+    "lng": 38.31733,
+    "approximate": true,
+    "basis": "building",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1591-05-15",
+      "precision": "day",
+      "approximate": false,
+      "event": "Rings the alarm on the death of Tsarevich Dmitry in Uglich",
+      "source": "culture-ru-uglich-bell"
+    },
+    {
+      "date": "1591",
+      "precision": "year",
+      "approximate": false,
+      "event": "By decree of Boris Godunov thrown down, its tongue torn out and ear cut off, flogged and exiled to Tobolsk",
+      "source": "culture-ru-uglich-bell"
+    },
+    {
+      "date": "1892-05",
+      "precision": "month",
+      "approximate": false,
+      "event": "Returned to Uglich from Siberian exile",
+      "source": "uglmus-history"
+    },
+    {
+      "date": "1892-06",
+      "precision": "month",
+      "approximate": false,
+      "event": "The Uglich Museum of Antiquities opens with the bell among its most valued items",
+      "source": "uglmus-history"
+    }
+  ],
+  "tiers": {
+    "everyday": "In 1591 this bell rang the alarm in Uglich when the young Tsarevich Dmitry died. As punishment it was 'flogged', had its clapper torn out and was exiled to Siberia. It came home in 1892.",
+    "student": "After the alarm of 15 May 1591, the bell was punished by decree of Boris Godunov (tongue torn out, ear cut off, 12 lashes) and exiled to Tobolsk. The Uglich museum records its return in May 1892, when it became a founding exhibit. Maker, mass and size [UNKNOWN]."
+  },
+  "sources": [
+    "culture-ru-uglich-bell",
+    "uglmus-history"
+  ],
+  "official_sources": [
+    "culture-ru-uglich-bell",
+    "uglmus-history"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "maker",
+    "cast date",
+    "mass"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

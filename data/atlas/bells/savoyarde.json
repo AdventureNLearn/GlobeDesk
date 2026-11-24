@@ -1,0 +1,69 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "savoyarde",
+  "title": "La Savoyarde (Sacré-Cœur, Paris)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Gift of the four dioceses of Savoie.",
+  "era": "19th-century",
+  "region": "Europe",
+  "country": "FR",
+  "place": {
+    "label": "Bell tower, Basilica of Sacré-Cœur, Montmartre, Paris",
+    "lat": 48.88681,
+    "lng": 2.34302,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Paccard, Annecy-le-Vieux",
+  "mass_kg": 19000,
+  "mass_note": "19 t (basilica)",
+  "diameter_m": null,
+  "height_m": null,
+  "note": "low C",
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1891-05-12",
+      "precision": "day",
+      "approximate": false,
+      "event": "Cast by Paccard at Annecy-le-Vieux (the bell is inscribed 1890; one page line says 1895)",
+      "source": "sacrecoeur-savoyarde"
+    },
+    {
+      "date": "1895-10-16",
+      "precision": "day",
+      "approximate": false,
+      "event": "Arrives at Montmartre, drawn by 28 horses",
+      "source": "sacrecoeur-savoyarde"
+    }
+  ],
+  "tiers": {
+    "everyday": "La Savoyarde is the 19-tonne bell of Sacré-Cœur in Paris. It was hauled up Montmartre by 28 horses in 1895.",
+    "student": "The basilica says Paccard cast it on 12 May 1891 at Annecy-le-Vieux (inscribed 1890; another line on the page says 1895, a conflict we keep open). It reached Montmartre on 16 October 1895 drawn by 28 horses; 19 t, low C, given by the dioceses of Savoie."
+  },
+  "sources": [
+    "sacrecoeur-savoyarde"
+  ],
+  "official_sources": [
+    "sacrecoeur-savoyarde"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "casting year conflict"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

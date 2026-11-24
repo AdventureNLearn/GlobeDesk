@@ -1,0 +1,62 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "world-peace-bell",
+  "title": "World Peace Bell (Newport, Kentucky)",
+  "kind": "bell",
+  "status": "[UNKNOWN]",
+  "status_note": "Present status not confirmed in a source we could open.",
+  "era": "20th-century",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Millennium Monument site, Newport, Kentucky (pin approximate)",
+    "lat": 39.09495,
+    "lng": -84.49601,
+    "approximate": true,
+    "basis": "building",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Paccard (France)",
+  "mass_kg": 33000,
+  "mass_note": "33 metric tons (Paccard)",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1999",
+      "precision": "year",
+      "approximate": false,
+      "event": "Year of casting per Paccard (other accounts say December 1998; not verified)",
+      "source": "paccard-world-peace-bell"
+    }
+  ],
+  "tiers": {
+    "everyday": "The World Peace Bell in Newport, Kentucky, cast by Paccard in France, weighs 33 tonnes. It was made to ring in the year 2000.",
+    "student": "Paccard's portfolio gives 1999 as the year of casting and 33 metric tons; other accounts give December 1998 (not verified). It was installed at Newport for the millennium. Present status [UNKNOWN]."
+  },
+  "sources": [
+    "paccard-world-peace-bell"
+  ],
+  "official_sources": [],
+  "official_status": "[UNKNOWN]",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "present status",
+    "official record",
+    "exact cast date"
+  ],
+  "confidence": "low",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

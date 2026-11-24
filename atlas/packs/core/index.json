@@ -59,6 +59,34 @@
       "current": false
     },
     {
+      "id": "amedzofe-bell",
+      "title": "Amedzofe church bell (Volta Region, Ghana)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "anzac-bell-perth",
+      "title": "ANZAC Bell (Perth)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "bag-solar-kit",
       "title": "Bag solar kit",
       "aliases": [
@@ -85,6 +113,471 @@
       ],
       "tier": "everyday",
       "pack": "economics",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bell-bronze",
+      "title": "Bell bronze (copper-tin bell metal)",
+      "aliases": [
+        "Bell metal"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "metals-alloys"
+      ],
+      "tier": "everyday",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "dolores-bell",
+      "title": "Bell of Dolores",
+      "aliases": [
+        "Campana de Dolores",
+        "Esquilón de San José"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "panaji-church-bell",
+      "title": "Bell of Our Lady of the Immaculate Conception, Panaji",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "balangiga-bells",
+      "title": "Bells of Balangiga",
+      "aliases": [
+        "Balangiga bells"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bells-overview",
+      "title": "Bells: a world history",
+      "aliases": [
+        "History of bells",
+        "Bell founding"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bianzhong-marquis-yi",
+      "title": "Bianzhong of Marquis Yi of Zeng",
+      "aliases": [
+        "Zeng Hou Yi bianzhong",
+        "Chime bells of Marquis Yi"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bicentennial-bell",
+      "title": "Bicentennial Bell (Philadelphia)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "big-ben-great-bell",
+      "title": "Big Ben (the Great Bell, Elizabeth Tower)",
+      "aliases": [
+        "Big Ben",
+        "Great Bell of Westminster"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bok-tower-carillon",
+      "title": "Bok Tower carillon (Singing Tower)",
+      "aliases": [
+        "Singing Tower"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bolshoy-uspensky-bell",
+      "title": "Bolshoy Uspensky Bell (Moscow Kremlin)",
+      "aliases": [
+        "Great Assumption Bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bow-bells",
+      "title": "Bow Bells (St Mary-le-Bow)",
+      "aliases": [
+        "Bells of St Mary-le-Bow"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "byodoin-bell",
+      "title": "Bronze bell of Byōdō-in",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "sangwonsa-bell",
+      "title": "Bronze Bell of Sangwonsa Temple",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bruges-belfry-carillon",
+      "title": "Bruges Belfry carillon",
+      "aliases": [
+        "Belfort carillon"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "campanone-st-peters",
+      "title": "Campanone (St Peter's Basilica)",
+      "aliases": [
+        "Great bell of St Peter's"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "centennial-bell",
+      "title": "Centennial Bell (Independence Hall)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "dhammazedi-bell",
+      "title": "Dhammazedi Bell (lost)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "emmanuel-notre-dame",
+      "title": "Emmanuel (great bourdon of Notre-Dame de Paris)",
+      "aliases": [
+        "Bourdon Emmanuel"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "freedom-bell-berlin",
+      "title": "Freedom Bell (Rathaus Schöneberg, Berlin)",
+      "aliases": [
+        "Freiheitsglocke"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "gloriosa-erfurt",
+      "title": "Gloriosa (Erfurt Cathedral)",
+      "aliases": [
+        "Maria Gloriosa"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "chion-in-bell",
+      "title": "Great bell of Chion-in",
+      "aliases": [
+        "Chion-in ogane"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "todaiji-bell",
+      "title": "Great bell of Tōdai-ji",
+      "aliases": [
+        "Todaiji bonsho"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "liverpool-great-george",
+      "title": "Great George (Liverpool Cathedral)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "great-paul",
+      "title": "Great Paul (St Paul's Cathedral)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "great-tom-oxford",
+      "title": "Great Tom (Christ Church, Oxford)",
+      "aliases": [
+        "Great Tom of Oxford"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "hms-hood-bell",
+      "title": "HMS Hood's bell",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "un-japanese-peace-bell",
+      "title": "Japanese Peace Bell (United Nations, New York)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "justice-bell",
+      "title": "Justice Bell (Women's Liberty Bell)",
+      "aliases": [
+        "Women's Liberty Bell",
+        "Suffrage Bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "savoyarde",
+      "title": "La Savoyarde (Sacré-Cœur, Paris)",
+      "aliases": [
+        "Savoyarde"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "liberty-bell",
+      "title": "Liberty Bell",
+      "aliases": [
+        "State House bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
       "status": "draft",
       "current": false
     },
@@ -117,6 +610,185 @@
       "current": false
     },
     {
+      "id": "lutine-bell",
+      "title": "Lutine Bell (Lloyd's of London)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "maria-angola-cusco",
+      "title": "María Angola (Cusco Cathedral)",
+      "aliases": [
+        "Maria Angola"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "mechelen-carillons",
+      "title": "Mechelen carillons (St Rumbold's Tower)",
+      "aliases": [
+        "Mechelen carillon"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "mingun-bell",
+      "title": "Mingun Bell",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "national-carillon-canberra",
+      "title": "National Carillon (Canberra)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "wellington-carillon",
+      "title": "National War Memorial Carillon (Wellington)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "nimrud-bronze-bell",
+      "title": "Neo-Assyrian bronze bell from Nimrud",
+      "aliases": [
+        "British Museum N.162"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "netherlands-carillon",
+      "title": "Netherlands Carillon (Arlington, Virginia)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "old-north-bells",
+      "title": "Old North Church bells",
+      "aliases": [
+        "Christ Church Boston bells"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "hiroshima-peace-bell",
+      "title": "Peace Bell (Hiroshima Peace Memorial Park)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "peace-tower-carillon",
+      "title": "Peace Tower Carillon (Ottawa)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "petersglocke-cologne",
+      "title": "Petersglocke (Cologne Cathedral)",
+      "aliases": [
+        "St. Peter's Bell",
+        "Decke Pitter"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "phosphate-cathode-discovery",
       "title": "Phosphate found as a lithium battery cathode (1996)",
       "aliases": [],
@@ -141,6 +813,204 @@
       ],
       "tier": "everyday",
       "pack": "energy",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "pummerin",
+      "title": "Pummerin (St. Stephen's Cathedral, Vienna)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "seongdeok-bell",
+      "title": "Sacred Bell of Great King Seongdeok",
+      "aliases": [
+        "Emille Bell",
+        "Bell of Bongdeoksa"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "zygmunt-bell",
+      "title": "Sigismund Bell (Wawel Cathedral)",
+      "aliases": [
+        "Zygmunt",
+        "Royal Sigismund Bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "edmund-fitzgerald-bell",
+      "title": "SS Edmund Fitzgerald bell",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "cape-town-st-georges-bells",
+      "title": "St George's Cathedral bells (Cape Town)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "swan-bells-perth",
+      "title": "Swan Bells (Perth)",
+      "aliases": [
+        "Bells of St Martin-in-the-Fields"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "sysoy-bell",
+      "title": "Sysoy bell (Rostov Kremlin)",
+      "aliases": [
+        "Sysoy"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "tsar-bell",
+      "title": "Tsar Bell",
+      "aliases": [
+        "Tsar Kolokol"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "uglich-exile-bell",
+      "title": "Uglich alarm bell (the exiled bell)",
+      "aliases": [
+        "Uglich bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "uss-arizona-bell",
+      "title": "USS Arizona bell (University of Arizona)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "wilbank-bell",
+      "title": "Wilbank Bell (Independence Hall, 1828)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "world-peace-bell",
+      "title": "World Peace Bell (Newport, Kentucky)",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "yongle-bell",
+      "title": "Yongle Bell (Dazhong Temple, Beijing)",
+      "aliases": [
+        "Yongle Great Bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "tier": "everyday",
+      "pack": "bells",
       "status": "draft",
       "current": false
     }

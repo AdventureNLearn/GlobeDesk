@@ -1,0 +1,75 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "netherlands-carillon",
+  "title": "Netherlands Carillon (Arlington, Virginia)",
+  "kind": "carillon",
+  "status": "in-place",
+  "status_note": "NPS site, George Washington Memorial Parkway.",
+  "era": "20th-century",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Netherlands Carillon, Arlington, Virginia",
+    "lat": 38.88822,
+    "lng": -77.0695,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN] in the cited page",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "bells_count": 49,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1952-04-04",
+      "precision": "day",
+      "approximate": false,
+      "event": "Queen Juliana presents a silver bell as a token of the gift",
+      "source": "nps-netherlands-carillon"
+    },
+    {
+      "date": "1954",
+      "precision": "year",
+      "approximate": false,
+      "event": "49 bells arrive and play from a temporary tower in West Potomac Park",
+      "source": "nps-netherlands-carillon"
+    },
+    {
+      "date": "1960-05-05",
+      "precision": "day",
+      "approximate": false,
+      "event": "Carillon tower dedicated",
+      "source": "nps-netherlands-carillon"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Netherlands Carillon was a thank-you gift from the Dutch people for American help in World War II. Its tower near Arlington was dedicated in 1960.",
+    "student": "NPS: a silver bell presented by Queen Juliana on 4 April 1952; 49 bells arrived in 1954 and played from a temporary tower; the tower (about 127 ft, by Joost Boks) was dedicated on 5 May 1960. Later changes to the bell count [UNKNOWN] in the cited page."
+  },
+  "sources": [
+    "nps-netherlands-carillon"
+  ],
+  "official_sources": [
+    "nps-netherlands-carillon"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

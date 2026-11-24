@@ -1,0 +1,72 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "bianzhong-marquis-yi",
+  "title": "Bianzhong of Marquis Yi of Zeng",
+  "kind": "chime-set",
+  "status": "museum",
+  "status_note": "Excavated in 1978; displayed at the Hubei Provincial Museum.",
+  "era": "ancient",
+  "region": "Asia",
+  "country": "CN",
+  "place": {
+    "label": "Hubei Provincial Museum, Wuhan (excavated at Suizhou)",
+    "lat": 30.56401,
+    "lng": 114.35998,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN] (Zeng state bronze workshops)",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN] total in the cited pages",
+  "diameter_m": null,
+  "height_m": null,
+  "note": "each bell gives two tones about a third apart; range about 5.5 octaves",
+  "bells_count": 65,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "-432",
+      "precision": "year",
+      "approximate": true,
+      "event": "Burial of Marquis Yi, early Warring States period (UNESCO: about 2,400 years ago, 5th century BCE)",
+      "source": "unesco-mow-zeng"
+    },
+    {
+      "date": "1978",
+      "precision": "year",
+      "approximate": false,
+      "event": "65 bells excavated at Suizhou, Hubei",
+      "source": "hbww-zeng-bianzhong"
+    }
+  ],
+  "tiers": {
+    "everyday": "These 65 bronze bells from the tomb of Marquis Yi of Zeng are about 2,400 years old. Each bell can play two different notes depending on where it is struck.",
+    "student": "The Hubei Provincial Museum lists 65 bells (19 niuzhong, 45 yongzhong and one bo bell given by King Hui of Chu) on a 7.48 m rack in three tiers and eight groups, with 3,755 inscribed characters on music theory. Each bell sounds two tones a third apart; the set spans about 5.5 octaves. UNESCO lists it in Memory of the World."
+  },
+  "sources": [
+    "hbww-zeng-bianzhong",
+    "unesco-mow-zeng"
+  ],
+  "official_sources": [
+    "hbww-zeng-bianzhong",
+    "unesco-mow-zeng"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Chinese zhong are almond-shaped in section; the round profile model would misrepresent them."
+  },
+  "unknowns": [
+    "exact burial year (pinned as approximate 433 BCE from UNESCO's 5th century BCE framing)"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

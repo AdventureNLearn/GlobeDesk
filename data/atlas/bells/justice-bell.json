@@ -1,0 +1,95 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "justice-bell",
+  "title": "Justice Bell (Women's Liberty Bell)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "On permanent display at the chapel (inside Valley Forge NHP's boundary but not part of the park).",
+  "era": "20th-century",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Washington Memorial Chapel, Valley Forge, Pennsylvania",
+    "lat": 40.10476,
+    "lng": -75.43784,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Meneely Bell Foundry, Troy, New York",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1915",
+      "precision": "year",
+      "approximate": false,
+      "event": "Commissioned by suffragist Katharine Wentworth Ruschenberger and cast at Meneely, Troy (Library of Congress photo of the casting)",
+      "source": "loc-justice-bell-casting"
+    },
+    {
+      "date": "1915",
+      "precision": "year",
+      "approximate": false,
+      "event": "Tours all 67 Pennsylvania counties, about 5,000 miles, with its clapper chained silent",
+      "source": "nps-justice-bell-dyk"
+    },
+    {
+      "date": "1915",
+      "precision": "year",
+      "approximate": false,
+      "event": "Pennsylvania's statewide suffrage referendum fails; the bell stays silent",
+      "source": "nps-justice-bell-1920"
+    },
+    {
+      "date": "1920",
+      "precision": "year",
+      "approximate": false,
+      "event": "Tours several states for ratification of the 19th Amendment",
+      "source": "nps-justice-bell-dyk"
+    },
+    {
+      "date": "1920-09-25",
+      "precision": "day",
+      "approximate": false,
+      "event": "Unchained and rung on Independence Square, 48 times, once per state",
+      "source": "nps-justice-bell-1920"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Justice Bell is a copy of the Liberty Bell made in 1915 for the fight for women's votes. Its clapper was chained so it could not ring until women won the vote in 1920.",
+    "student": "NPS: commissioned in 1915 by Katharine Wentworth Ruschenberger of the Pennsylvania Woman Suffrage Association, cast by Meneely in Troy without a crack, inscribed 'ESTABLISH JUSTICE'. It toured Pennsylvania's 67 counties silent; after the 19th Amendment it was rung on 25 September 1920. A Library of Congress photo shows the casting."
+  },
+  "sources": [
+    "nps-justice-bell-dyk",
+    "nps-justice-bell-1920",
+    "loc-justice-bell-casting"
+  ],
+  "official_sources": [
+    "nps-justice-bell-dyk",
+    "nps-justice-bell-1920",
+    "loc-justice-bell-casting"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "mass",
+    "dimensions"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

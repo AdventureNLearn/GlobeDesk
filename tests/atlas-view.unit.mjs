@@ -21,18 +21,21 @@ t("A-Z lists every title and alias, sorted, with jump letters; placeholders sort
   const rows = M.azRows(D, {});
   assert.equal(rows.filter((r) => !r.alias).length, D.entries.length);
   assert.ok(rows.some((r) => r.alias && r.id === "bag-solar-kit"));
-  assert.deepEqual(M.letters(rows), ["B", "C", "L", "P", "S", "W"]);
+  const L = M.letters(rows);
+  assert.ok(["B", "C", "L", "P", "S", "W"].every((x) => L.includes(x)), L.join(""));
+  assert.equal(new Set(L).size, L.length); assert.ok(L.includes("T") && L.includes("Z"), "bell titles add letters (Tsar Bell, Zygmunt)");
 });
 t("search, category and tier filters", () => {
   assert.deepEqual(M.azRows(D, { q: "zzqx nothing" }).map((r) => r.id), []);
   assert.ok(M.azRows(D, { q: "air travel" }).some((r) => r.id === "lithium-batteries-air-travel"));
   assert.ok(M.azRows(D, { category: "chemistry" }).every((r) => r.entry.category_path[0] === "chemistry" || (r.entry.see_also_paths || []).some((p) => p[0] === "chemistry")));
-  assert.ok(M.azRows(D, { tier: "kids" }).every((r) => r.entry.tier === "kids"));
+  assert.ok(M.azRows(D, { tier: "kids" }).every((r) => r.entry.tier === "kids" || (r.entry.tiers && r.entry.tiers.kids)));
+  assert.ok(M.azRows(D, { tier: "student" }).some((r) => r.id === "liberty-bell"));
 });
 t("by place: coarse keys; US-TX rolls up under US with no invented point; No place bucket", () => {
   const r = M.byPlace(D, {});
   const us = r.rows.find((x) => x.key === "US");
-  assert.equal(us.a3, "USA"); assert.equal(us.subdivisions[0].key, "US-TX"); assert.ok(us.entries.includes("phosphate-cathode-discovery"));
+  assert.equal(us.a3, "USA"); assert.ok(us.subdivisions.some((s) => s.key === "US-TX")); assert.ok(us.entries.includes("phosphate-cathode-discovery"));
   assert.ok(!r.rows.some((x) => x.key === "US-TX"));
   assert.ok(r.noPlace.includes("bag-solar-kit"));
 });
@@ -42,7 +45,8 @@ t("ISO weeks (Monday start) across year edges", () => {
 });
 t("by year: years, then months and weeks in the current year, and This week", () => {
   const y = M.byYear(D, {}, { today: "2026-11-24" });
-  assert.equal(y.range.min, 1996); assert.equal(y.range.max, 2026); assert.ok(y.undated.length > 0);
+  const minYear = Math.min(...D.entries.flatMap((e) => (e.dates || []).map((d) => parseInt(d.date, 10))));
+  assert.equal(y.range.min, minYear); assert.ok(minYear < 0, "the Bells pack reaches back before 1 CE"); assert.equal(y.range.max, 2026); assert.ok(y.undated.length > 0);
   assert.deepEqual(M.byYear(D, {}, { today: "2026-11-24", year: 1996 }).rows.map((d) => d.entry), ["phosphate-cathode-discovery"]);
   const m = M.byYear(D, {}, { today: "2026-11-24", zoom: "months" });
   assert.equal(m.buckets.length, 12); assert.equal(m.buckets[10].rows.length, 1);

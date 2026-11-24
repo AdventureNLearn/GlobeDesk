@@ -91,13 +91,13 @@
     },
     {
       "path": "atlas/README.md",
-      "size": 2069,
-      "sha256": "f97648c9207398b72a7619623edb7dc56b99888c295627731f1595c015be5868"
+      "size": 2769,
+      "sha256": "7764693929a96f4fe3fe93123a004ee8e297c183407b2c11767780d741d611cd"
     },
     {
       "path": "atlas/categories.json",
-      "size": 6586,
-      "sha256": "d619add808a90aad1f6c947a70b9bc272a8cf3d5c29c2ac88cd8da0a037f14ab"
+      "size": 6657,
+      "sha256": "e50d5529d66f2a35c19094a7b37c3719c9035430f5ffdf30d5ccff4825979cfb"
     },
     {
       "path": "atlas/community/community.json",
@@ -105,44 +105,54 @@
       "sha256": "c176a853c26a2b03603c8f8a938cc456be46303f31ddc369e4cce11acc0d0da9"
     },
     {
+      "path": "atlas/packs/bells/entries.json",
+      "size": 139519,
+      "sha256": "25ac6d7ebcdae281af4be93fb2d69dd07e4902bae623e16e073ce1dac7611f40"
+    },
+    {
+      "path": "atlas/packs/bells/manifest.json",
+      "size": 639,
+      "sha256": "7d234913a863fa0a92b166c1c31227075cd21d3129fc42778492a8efd9c8e52b"
+    },
+    {
       "path": "atlas/packs/chemistry/entries.json",
-      "size": 2115,
-      "sha256": "04d769e5bc6cc5e1c9bd10063b8c6f41983c04b0f52ce6622759f516786e09b0"
+      "size": 3503,
+      "sha256": "bd4428559270ff5acb06d272838156aeee64a9fc1cefc4199a062bac6e34b07e"
     },
     {
       "path": "atlas/packs/chemistry/manifest.json",
       "size": 635,
-      "sha256": "2b23c6c20315d929ad82958a1d7a501ad32ae06a2a40b0b8336bd4bd4eebbde7"
+      "sha256": "d3c2b8d443ab8ee97b6bd73b5452b107917422bef00c8404249d4b0c1560ed3f"
     },
     {
       "path": "atlas/packs/core/categories.json",
-      "size": 8762,
-      "sha256": "7d5f6542838d253b6916aa9678121dae9ff453ab6d82b470de7bfe462e27fc49"
+      "size": 8883,
+      "sha256": "6e70d92d4c079841e89de6124ce8b13cf3674accf497d38b57deb6a5b1499e56"
     },
     {
       "path": "atlas/packs/core/index.json",
-      "size": 3390,
-      "sha256": "8b8c9237c239425233cf7f50b2f93bcb37186daae1f32d7c71c1544ff53645cf"
+      "size": 22166,
+      "sha256": "2aba9c01b151130de4c72c6e6f5afec953e07bdbefafcae47c5869849c9592c4"
     },
     {
       "path": "atlas/packs/core/manifest.json",
-      "size": 1209,
-      "sha256": "6b53caa46fd031617dd4387b3ceac0b01fe35537743b3d69e0f37da540415258"
+      "size": 1214,
+      "sha256": "d06667a9eda6f570b2df811071fa0044b90fa9a8c9ebe1e336fd358b40a2c786"
     },
     {
       "path": "atlas/packs/core/places.json",
-      "size": 941,
-      "sha256": "bd83b51d25488b7cd597e80cda12819f7a856386730be5e50930300e39bd00ff"
+      "size": 4215,
+      "sha256": "710f1671f8f69a6e74f57199031b94af93350528bf0482f699d0197e8b6f8df8"
     },
     {
       "path": "atlas/packs/core/sources.json",
-      "size": 4292,
-      "sha256": "7052ad04f7b893c355bfee3e9b9eb3395bd3a72f3c605f66518a8512d4945b4a"
+      "size": 44185,
+      "sha256": "d602293a7397ca955c6e00fcfd23f990419001564fc047920dba7ecd8338c8cc"
     },
     {
       "path": "atlas/packs/core/years.json",
-      "size": 588,
-      "sha256": "75fa8dbad07c52b526f78a3d5c52ca11501605968e35d4c3feee1a0080da846b"
+      "size": 20006,
+      "sha256": "f2306a14aea0c7dc4b47299718d55c194939a0901ce42b7149e47321b63fd437"
     },
     {
       "path": "atlas/packs/economics/entries.json",
@@ -181,8 +191,293 @@
     },
     {
       "path": "css/app.css",
-      "size": 48587,
-      "sha256": "d3b090c8441b7f09c5effa81ee0cf2abe5d98ded7857e669b62c2393fce1ee64"
+      "size": 49702,
+      "sha256": "d32b88c3ae155952e4a247c6ec61931d4efdce871a259edd481c22203d692714"
+    },
+    {
+      "path": "data/atlas/bells/amedzofe-bell.json",
+      "size": 2032,
+      "sha256": "d26eb3c5fa3d778bfc621313ac672e1c5817be07b592c87ffb727508a56a0f13"
+    },
+    {
+      "path": "data/atlas/bells/anzac-bell-perth.json",
+      "size": 2109,
+      "sha256": "a0d22e531fe42bf91a40a2aa46776b364c0c4e06eb3508c9c3dee59d63fbbde9"
+    },
+    {
+      "path": "data/atlas/bells/balangiga-bells.json",
+      "size": 2754,
+      "sha256": "53817fbd0e54dda80d330243f2dc201f24e5fc13f6ca7459fb30337ad9546323"
+    },
+    {
+      "path": "data/atlas/bells/bells-overview.json",
+      "size": 10191,
+      "sha256": "dc9d9046604ac20d7f22df41eb65069b1a4e6255db1f8d5ae3301faedf1bb4ca"
+    },
+    {
+      "path": "data/atlas/bells/bianzhong-marquis-yi.json",
+      "size": 2549,
+      "sha256": "aed00959ff0571bff6eca15911535ba4899077b18d9612c0644c4529968d2fee"
+    },
+    {
+      "path": "data/atlas/bells/bicentennial-bell.json",
+      "size": 2872,
+      "sha256": "05fbb7ae34c4a8fb12a0bba24689599cc6a0615bfeeef208afa0a881c2d6045d"
+    },
+    {
+      "path": "data/atlas/bells/big-ben-great-bell.json",
+      "size": 3346,
+      "sha256": "e106e374a34120201b28f786ae0deb59feec281dd010b6201f1a1d196c7483a7"
+    },
+    {
+      "path": "data/atlas/bells/bok-tower-carillon.json",
+      "size": 1668,
+      "sha256": "8aecbac54c4b30daf98c40b75ef894cb203b1b87953bb87a2b35f324a98a78ab"
+    },
+    {
+      "path": "data/atlas/bells/bolshoy-uspensky-bell.json",
+      "size": 2112,
+      "sha256": "f240de59dc0238582e767d78ab85d8778fd83271a7f43c13052e5aeb99634ad5"
+    },
+    {
+      "path": "data/atlas/bells/bow-bells.json",
+      "size": 3496,
+      "sha256": "092a9de2b97cb9ee27fb6c883cbda07294bd7563d711c99cc233cb1233a2033e"
+    },
+    {
+      "path": "data/atlas/bells/bruges-belfry-carillon.json",
+      "size": 2382,
+      "sha256": "e18486c762016b4b007a3339d66d0dee1dbf6e39ec89f99ad4416ee5ec410125"
+    },
+    {
+      "path": "data/atlas/bells/byodoin-bell.json",
+      "size": 1785,
+      "sha256": "cc8e8c16d1e58b3a3a5627882516bd4ec52740939a47db99708ef849716acdc5"
+    },
+    {
+      "path": "data/atlas/bells/campanone-st-peters.json",
+      "size": 2571,
+      "sha256": "7a12fef5b3dd477b9f652042693bee23724f9b86aa5567fd8d390150177d88ac"
+    },
+    {
+      "path": "data/atlas/bells/cape-town-st-georges-bells.json",
+      "size": 2335,
+      "sha256": "d57fabcc505365f9838a0debc5ca44cf4a78322e98c096f8f91954e634682b00"
+    },
+    {
+      "path": "data/atlas/bells/centennial-bell.json",
+      "size": 3136,
+      "sha256": "79a6a7a489835c87698951ae5fd2613ad9b4c19221d7b04a8741f701c053d169"
+    },
+    {
+      "path": "data/atlas/bells/chion-in-bell.json",
+      "size": 1800,
+      "sha256": "e5daa531270838b7303ae5597655e346681e88b150d22d3765354bb263cf26c4"
+    },
+    {
+      "path": "data/atlas/bells/dhammazedi-bell.json",
+      "size": 2199,
+      "sha256": "511c1f683a5db292c64bb5a2559251ce9becf2035cff72f6a0c512a2d351c264"
+    },
+    {
+      "path": "data/atlas/bells/dolores-bell.json",
+      "size": 2135,
+      "sha256": "a1770ab373506517d274f18fd637f4d10eab268bc8ba6e5eec490395f65fcacd"
+    },
+    {
+      "path": "data/atlas/bells/edmund-fitzgerald-bell.json",
+      "size": 2210,
+      "sha256": "b3a1c17e7d2846a49dd26a2311dc3a934c2ddf2abee8e235ecc3cfadbb07cc95"
+    },
+    {
+      "path": "data/atlas/bells/emmanuel-notre-dame.json",
+      "size": 3296,
+      "sha256": "31922e1decb65716750df4ab6f6d78d4cc4688af55b3d2d8a2e907dd9cdc9a4e"
+    },
+    {
+      "path": "data/atlas/bells/freedom-bell-berlin.json",
+      "size": 2616,
+      "sha256": "386889eb02b107ac9850a6bcd3c809ec519a018f505c3c8ae59f9253bff67642"
+    },
+    {
+      "path": "data/atlas/bells/gloriosa-erfurt.json",
+      "size": 2115,
+      "sha256": "292e1893c44cc94efd029f804b5c6db499415371e00fad5fd24c975d8d552a8e"
+    },
+    {
+      "path": "data/atlas/bells/great-paul.json",
+      "size": 2214,
+      "sha256": "b9120b503a55dcf00a9523c6b41869e03902234dfe66670208d84c382a65ad3b"
+    },
+    {
+      "path": "data/atlas/bells/great-tom-oxford.json",
+      "size": 1928,
+      "sha256": "0158cd68dfeed624260044521f8319e186e341efef6b95698f092fdc0b1a8037"
+    },
+    {
+      "path": "data/atlas/bells/hiroshima-peace-bell.json",
+      "size": 1838,
+      "sha256": "d44a1d841fb5852fcd73d300d821ab319689505e73718bec15518720eebf6d1c"
+    },
+    {
+      "path": "data/atlas/bells/hms-hood-bell.json",
+      "size": 2513,
+      "sha256": "a422f71687a47b80b103da25dfb1325cd0c7dee91da95feb277ace1851cc5162"
+    },
+    {
+      "path": "data/atlas/bells/justice-bell.json",
+      "size": 3258,
+      "sha256": "abf6393912316bc3a7728c63b96a4d1fd1e814748b0a95fd933a75e16fc2df84"
+    },
+    {
+      "path": "data/atlas/bells/liberty-bell.json",
+      "size": 4329,
+      "sha256": "5d25da0dcb718b5fdebc175344d75ac7926b1751c36a635fe034f16185090c90"
+    },
+    {
+      "path": "data/atlas/bells/liverpool-great-george.json",
+      "size": 2352,
+      "sha256": "52c1cff11c19c9efd85e87e56acbfbae241f224a309a95f040a6996ab96d4d29"
+    },
+    {
+      "path": "data/atlas/bells/lutine-bell.json",
+      "size": 2131,
+      "sha256": "9e26ba0878f903fd67029f16239ad3b3d5dbe4ce31d4589f3fd17763bc55707e"
+    },
+    {
+      "path": "data/atlas/bells/maria-angola-cusco.json",
+      "size": 2047,
+      "sha256": "a72a97fb73e13bb4acac2e5c6052a58a02c62176756110eb4cad96279cfa4dcd"
+    },
+    {
+      "path": "data/atlas/bells/mechelen-carillons.json",
+      "size": 2439,
+      "sha256": "4997069d4b4f46ecc64f497f91c9ebe5debd778350a0a0c6a0bd8b3dd394c871"
+    },
+    {
+      "path": "data/atlas/bells/mingun-bell.json",
+      "size": 2105,
+      "sha256": "f00f72936861f71405ea86ed4d76b9f3a54c71c818eb43d8f32a1728112673e0"
+    },
+    {
+      "path": "data/atlas/bells/national-carillon-canberra.json",
+      "size": 2248,
+      "sha256": "6bf65a371f858e90b24688134cbe3ed2b18832d3b20ca1627c65cafb26299344"
+    },
+    {
+      "path": "data/atlas/bells/netherlands-carillon.json",
+      "size": 2423,
+      "sha256": "f94891c7ec19b61f24b5c2cd7fbc61893c5e7340423cac4234007f465b541ff7"
+    },
+    {
+      "path": "data/atlas/bells/nimrud-bronze-bell.json",
+      "size": 2049,
+      "sha256": "08eb935d32d8518aaa2671246d24b28111d8e6283bb533a3c5b97af47e46eef1"
+    },
+    {
+      "path": "data/atlas/bells/old-north-bells.json",
+      "size": 3453,
+      "sha256": "cdaf408032e974e5f51fdcfabed70a9761b401d924d7f7a246107094297d2e38"
+    },
+    {
+      "path": "data/atlas/bells/panaji-church-bell.json",
+      "size": 1969,
+      "sha256": "e89b879ef6a62ecf652b0b1c592443a4ce9d86ad8272a8408eab69ce776413f6"
+    },
+    {
+      "path": "data/atlas/bells/peace-tower-carillon.json",
+      "size": 2154,
+      "sha256": "2a33e00ef9b861bc7cba3c81fad93fe8d4acd42bc1befff99f9e0ba7c9b8cdae"
+    },
+    {
+      "path": "data/atlas/bells/petersglocke-cologne.json",
+      "size": 2548,
+      "sha256": "802b1b8d9e70359d5bc8d48243c0ee9b26a3d9be1911263dbe9489a2579343e2"
+    },
+    {
+      "path": "data/atlas/bells/pummerin.json",
+      "size": 3277,
+      "sha256": "e16fff4418657a2a73ec3114094e46198ad126fa4eab43e48befe2e99fe061fe"
+    },
+    {
+      "path": "data/atlas/bells/sangwonsa-bell.json",
+      "size": 1970,
+      "sha256": "caa9380d228688bdeef87ab58f97947390402a316a046c599cfb22af1ba8d9bf"
+    },
+    {
+      "path": "data/atlas/bells/savoyarde.json",
+      "size": 2195,
+      "sha256": "642c97bc364dd520b3678f511a1eca5b2620fd2093bf5407c7c1942b84e56ddc"
+    },
+    {
+      "path": "data/atlas/bells/seongdeok-bell.json",
+      "size": 2335,
+      "sha256": "8bdcf757c68e4c7580b9f827e870ca1fc3c33b8ab6e9bff9247a46e5295fd6c2"
+    },
+    {
+      "path": "data/atlas/bells/swan-bells-perth.json",
+      "size": 2137,
+      "sha256": "27e1fe197f476de428d18fe7770f1484f343a598a2476d69de3d019e63015b1b"
+    },
+    {
+      "path": "data/atlas/bells/sysoy-bell.json",
+      "size": 2002,
+      "sha256": "a0a76b064369a36991b4f9b16087d3cf147ace82c1f6e1bc903fea312850f594"
+    },
+    {
+      "path": "data/atlas/bells/todaiji-bell.json",
+      "size": 2299,
+      "sha256": "f9aa3773aea47975aef4d005894ee59f16f7c4c439f9c710d26d0a37661443c5"
+    },
+    {
+      "path": "data/atlas/bells/tsar-bell.json",
+      "size": 2807,
+      "sha256": "abaaf79d22b15e7e78b8414a357fb33679a5abc70742354e1dd44a71c06f8685"
+    },
+    {
+      "path": "data/atlas/bells/uglich-exile-bell.json",
+      "size": 2802,
+      "sha256": "57ae65258753d0300626306736299cae3bb19e6f8948271f832f49204d97dcc0"
+    },
+    {
+      "path": "data/atlas/bells/un-japanese-peace-bell.json",
+      "size": 2156,
+      "sha256": "50d13ed945e44bf9934f763a9ddd9f787d2890ba8536c35f408b529ad58c9490"
+    },
+    {
+      "path": "data/atlas/bells/uss-arizona-bell.json",
+      "size": 2244,
+      "sha256": "f852e472ccbf8b8de7ec816a4f1887cf07560594c461ed4230bb12ddd9c32b4c"
+    },
+    {
+      "path": "data/atlas/bells/wellington-carillon.json",
+      "size": 2711,
+      "sha256": "90f61178108b7479e363ec0e0576a02ae7ae31cad413886d5cba679b43253865"
+    },
+    {
+      "path": "data/atlas/bells/wilbank-bell.json",
+      "size": 2769,
+      "sha256": "897b7e4630e5b37705617fb0f2022e6a15e9a59bd1eba701873ccba6d76a54af"
+    },
+    {
+      "path": "data/atlas/bells/world-peace-bell.json",
+      "size": 2003,
+      "sha256": "fa6fbde28431c85dbfd0379cc7b2f756dd28aa2cb093861db5885bbb04af541c"
+    },
+    {
+      "path": "data/atlas/bells/yongle-bell.json",
+      "size": 2209,
+      "sha256": "bd1bea10e66110b9723bb54077f398585fc699371e077200b67fbff7380e49b3"
+    },
+    {
+      "path": "data/atlas/bells/zygmunt-bell.json",
+      "size": 1953,
+      "sha256": "04368a22132d608a8947e494ea93c0b47d318a338b730d103c10d74e5e209769"
+    },
+    {
+      "path": "data/atlas/chemistry/bell-bronze.json",
+      "size": 3452,
+      "sha256": "9cd34e5c5e05c332e7b3ae0a66a19314d875ee04a381ee5dfa38179ad11629c4"
     },
     {
       "path": "data/atlas/chemistry/lifepo4-vs-nmc.json",
@@ -316,8 +611,8 @@
     },
     {
       "path": "index.html",
-      "size": 18268,
-      "sha256": "6c1b5e8f6b9e2c63824164f919d9793c213762bdeb245b6b2406b43b47ffa495"
+      "size": 18368,
+      "sha256": "8c63139b9aa0fef318daefbcd09b90bc06c10b10025c9cdc5527ae59ee2f5838"
     },
     {
       "path": "js/archive.js",
@@ -331,28 +626,38 @@
     },
     {
       "path": "js/atlas/atlas-3d.js",
-      "size": 5443,
-      "sha256": "170778e246040e9916b026ac65288420558c9a26166103115c52354be2ba2062"
+      "size": 5769,
+      "sha256": "50d84f9bd3a66f37215f29989e5b132c1c5393c21ffe8f232c3524bba3bca5d2"
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 51722,
-      "sha256": "30dfde8ba066c021b3e69c7a5069d77ca06e7259c9ff2b361eaff0c18aa07769"
+      "size": 336884,
+      "sha256": "8a3d0fc1df21b7ff3ccdb0fd67e81c2f1431e0f9b8414a46d32bc43fb24e8388"
     },
     {
       "path": "js/atlas/atlas-model.js",
-      "size": 9488,
-      "sha256": "d8a8a44639673afa73bc10651370d08820b8a6cc6d777b68f1b2a365e683c0ed"
+      "size": 9893,
+      "sha256": "80746803176a68be2ddf14f6b1d55f49140dea9a3bf00f79edc092a625167a7c"
     },
     {
       "path": "js/atlas/atlas-view.js",
-      "size": 30989,
-      "sha256": "4ca44d76c3e0bdb71fe7de9432e8fb5b77190f917b95a4077257d49cbca440e9"
+      "size": 36885,
+      "sha256": "16973cbd835d8ec8c302e0dc7c0b587991dbfaccab4ecea8365159dc02afcd50"
+    },
+    {
+      "path": "js/atlas/bells-layer.js",
+      "size": 9064,
+      "sha256": "53b649645bf5d66321f9d46c3f9f38cbbb24994415cb3d60a3b6ec8519a1b225"
     },
     {
       "path": "js/atlas/models/bag-solar-kit.js",
       "size": 1528,
       "sha256": "bca5afd02005c32ef34a6d70456601e29faf42c02f8e3cc644713652ef9f8235"
+    },
+    {
+      "path": "js/atlas/models/bell.js",
+      "size": 4824,
+      "sha256": "0729923eb46e6a1ababad107ee8342eb9fd7ae2b3914ac12990a60b1184edc27"
     },
     {
       "path": "js/atlas/pricing.js",
@@ -436,8 +741,8 @@
     },
     {
       "path": "js/layers-panel.js",
-      "size": 16896,
-      "sha256": "06deab875647acb431bc37fcf24ba3a81da483c575d4b4a35a04b73d0ca0c25d"
+      "size": 17089,
+      "sha256": "1fa52ee078f356381b468d2c2acb2e44b8ac7b1aaabcf1891884c6cc6fdcef98"
     },
     {
       "path": "js/layers.js",
@@ -641,18 +946,23 @@
     },
     {
       "path": "package.json",
-      "size": 1296,
-      "sha256": "d095c8e63789b9540a0d350857ae242ab8c493858dd915d27c3e92246479ecb8"
+      "size": 1325,
+      "sha256": "2c002ff47b87b2d808f9d29d2d96ffc951b4605243895c46c69074fff1c7f7d8"
     },
     {
       "path": "schema/atlas-entry.schema.json",
-      "size": 5160,
-      "sha256": "5f5b71289c670b3eb0f3b3fde7956259606376bed0a68c8a61b67024b704ed8f"
+      "size": 6103,
+      "sha256": "38759c0ca039243e1eefca183a2563fd72389dda1bfd601d159954317e77ee71"
     },
     {
       "path": "schema/atlas-pack-manifest.schema.json",
       "size": 2112,
       "sha256": "62e963c6d652062e3b6f1e59b34b0d63baff608adb6282fe1679ad367c0274ec"
+    },
+    {
+      "path": "schema/globedesk-bell.schema.json",
+      "size": 7387,
+      "sha256": "19e98a0b90a8afcbd0213bd6e0bd0a47af823d4dcea4d3c04efc6060d17f3db6"
     },
     {
       "path": "schema/globedesk-claims.schema.json",
@@ -766,7 +1076,7 @@
     }
   ],
   "totals": {
-    "files": 151,
-    "bytes": 5502011
+    "files": 213,
+    "bytes": 6188287
   }
 }

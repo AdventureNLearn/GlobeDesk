@@ -16,7 +16,7 @@
   function matches(e, f) {
     f = f || {};
     if (f.category && e.category_path[0] !== f.category && !(e.see_also_paths || []).some((p) => p[0] === f.category) && !(f.category === "now" && e.current)) return false;
-    if (f.tier && f.tier !== "all" && e.tier !== f.tier) return false;
+    if (f.tier && f.tier !== "all" && e.tier !== f.tier && !(e.tiers && e.tiers[f.tier])) return false;
     if (f.kind && e.kind !== f.kind) return false;
     if (f.status && e.status !== f.status) return false;
     if (f.pack && e.pack !== f.pack) return false;
@@ -144,13 +144,17 @@
 
   // Tier view of an entry: the text is written at e.tier; other tiers are not written yet.
   function tierNote(e, tier) {
-    if (!tier || tier === "all" || tier === e.tier) return null;
+    if (!tier || tier === "all" || tier === e.tier || (e.tiers && e.tiers[tier])) return null;
     return "No " + TIER_LABEL[tier] + " version yet " + UNKNOWN + ". Shown at the " + TIER_LABEL[e.tier] + " level.";
   }
 
+  // Text for the chosen reading level: that level's text when written, else the summary (written at e.tier).
+  function tierText(e, tier) { return (tier && tier !== "all" && e.tiers && e.tiers[tier]) || e.summary; }
+  function tiersWritten(e) { return TIERS.filter((t) => t === e.tier || (e.tiers && e.tiers[t])); }
+
   function sourcesFor(data, e) { return (e.sources || []).map((id) => (data.sources || []).find((s) => s.id === id) || { id, title: id + " " + UNKNOWN, url: "" }); }
 
-  const api = { TIERS, TIER_LABEL, UNKNOWN, matches, azRows, letters, byPlace, byYear, isoWeek, nowStatus, tree, tierNote, sourcesFor, entryById, category, yearLabel, parseDay };
+  const api = { TIERS, TIER_LABEL, UNKNOWN, matches, azRows, letters, byPlace, byYear, isoWeek, nowStatus, tree, tierNote, tierText, tiersWritten, sourcesFor, entryById, category, yearLabel, parseDay };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else { root.GD = root.GD || {}; root.GD.atlasModel = api; }
 })(typeof window !== "undefined" ? window : globalThis);

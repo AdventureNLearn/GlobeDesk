@@ -2,7 +2,7 @@
 // Local only. Never deletes; overwrites only the generated files it owns.
 import { writeFileSync, readFileSync } from "node:fs";
 import path from "node:path";
-import { ATLAS, J, MAX_BYTES, CATEGORY_PACKS, allEntries, fileInfo, packSha } from "./lib.mjs";
+import { ATLAS, J, MAX_BYTES, CATEGORY_PACKS, allEntries, fileInfo, packSha, packCategory } from "./lib.mjs";
 
 const VERSION = "0.1.0-draft";
 const CHECKED = "2026-11-24";
@@ -34,7 +34,8 @@ function manifest(id, kind, title, files, entryCount, extra) {
 }
 manifest("core", "core", "Atlas core: index, category tree, places, years, sources", ["index.json", "categories.json", "places.json", "years.json", "sources.json"], entries.length, { refresh: "with-release" });
 for (const p of CATEGORY_PACKS) {
-  const c = cats.categories.find((x) => x.pack === p);
-  manifest(p, "category", `Atlas pack: ${c.title}`, ["entries.json"], J(`packs/${p}/entries.json`).entries.length, { category: c.id, refresh: c.refresh });
+  const c = packCategory(cats.categories, p);
+  const title = c.pack === p ? c.title : `${c.title}: ${p.charAt(0).toUpperCase() + p.slice(1)}`;
+  manifest(p, "category", `Atlas pack: ${title}`, ["entries.json"], J(`packs/${p}/entries.json`).entries.length, { category: c.id, refresh: c.refresh });
 }
 console.log(`built core (${entries.length} entries) + ${CATEGORY_PACKS.length} category manifests`);

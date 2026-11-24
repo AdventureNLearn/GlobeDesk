@@ -1,0 +1,91 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "wellington-carillon",
+  "title": "National War Memorial Carillon (Wellington)",
+  "kind": "carillon",
+  "status": "in-place",
+  "status_note": "74 bells after later additions (Heritage NZ).",
+  "era": "20th-century",
+  "region": "Oceania",
+  "country": "NZ",
+  "place": {
+    "label": "National War Memorial, Pukeahu, Wellington",
+    "lat": -41.29899,
+    "lng": 174.77715,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Original 49 bells: Gillett & Johnston, Croydon",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "bells_count": 74,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1926",
+      "precision": "year",
+      "approximate": false,
+      "event": "Carillon society formed and appeal for 49 bells launched",
+      "source": "nzhistory-carillon"
+    },
+    {
+      "date": "1927",
+      "precision": "year",
+      "approximate": false,
+      "event": "Gillett & Johnston begins casting",
+      "source": "nzhistory-carillon"
+    },
+    {
+      "date": "1932-04-25",
+      "precision": "day",
+      "approximate": false,
+      "event": "Dedicated on Anzac Day",
+      "source": "nzhistory-carillon"
+    },
+    {
+      "date": "1986",
+      "precision": "year",
+      "approximate": false,
+      "event": "Rededicated",
+      "source": "hnz-national-war-memorial"
+    },
+    {
+      "date": "1997",
+      "precision": "year",
+      "approximate": true,
+      "event": "74 bells after additions",
+      "source": "hnz-national-war-memorial"
+    }
+  ],
+  "tiers": {
+    "everyday": "Wellington's National War Memorial Carillon was dedicated on Anzac Day 1932 to remember New Zealanders who died in World War I.",
+    "student": "NZHistory: a society formed in 1926 to fund 49 bells; Gillett & Johnston began casting in late 1927; dedication on Anzac Day 1932. Heritage New Zealand records rededication in 1986 and 74 bells (six octaves) by 1997."
+  },
+  "sources": [
+    "nzhistory-carillon",
+    "hnz-national-war-memorial"
+  ],
+  "official_sources": [
+    "nzhistory-carillon",
+    "hnz-national-war-memorial"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

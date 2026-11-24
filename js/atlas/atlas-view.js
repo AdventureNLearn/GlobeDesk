@@ -102,14 +102,44 @@
 
   // ---------- entry detail ----------
   function recordOf(e) { const r = e && (e.record || (e.records || [])[0]); return r ? D().records[r] : null; }
-  function kitRecord(e) { if (!e) return null; if (e.kind === "object") return recordOf(e); if (e.id === "bag-solar-kit-prices") return D().records["data/atlas/objects/bag-solar-kit.json"]; return null; }
+  function isKit(r) { return !!(r && Array.isArray(r.options)); }
+  function kitRecord(e) { if (!e) return null; if (e.kind === "object") { const r = recordOf(e); return isKit(r) ? r : null; } if (e.id === "bag-solar-kit-prices") return D().records["data/atlas/objects/bag-solar-kit.json"]; return null; }
+  // Bells layer records (globedesk.bell/1) and the bells overview (globedesk.bell-overview/1).
+  function bellRecord(e) { const r = recordOf(e); return r && r.schema === "globedesk.bell/1" ? r : null; }
+  function overviewRecord(e) { const r = recordOf(e); return r && r.schema === "globedesk.bell-overview/1" ? r : null; }
+  function srcLink(id) { const s = (D().sources || []).find((x) => x.id === id); return s ? link(s.url, s.publisher || s.title) : esc(id + " " + UNKNOWN); }
+  function entryLink(id) { const t = M().entryById(D(), id); return t ? '<button type="button" class="linklike" data-at-entry="' + esc(id) + '">' + esc(t.title) + "</button>" : esc(id) + ' <span class="muted">(not in this copy)</span>'; }
+  function fmtNum(v, unit, digits) { return v == null ? UNKNOWN : Number(v).toLocaleString("en", { maximumFractionDigits: digits == null ? 2 : digits }) + " " + unit; }
+  const STATUS_LABEL = { "in-place": "In place", museum: "Museum or display", lost: "Lost", "in-storage": "In storage", "[UNKNOWN]": "Status [UNKNOWN]" };
+
+  function bellHtml(e, rec) {
+    const row = (k, v) => "<tr><th>" + esc(k) + "</th><td>" + v + "</td></tr>";
+    let h = '<h4>Bell facts</h4><table class="at-table small at-bell-facts">' +
+      row("Kind", esc(rec.kind)) + row("Status", '<span class="pill ' + (rec.status === "lost" || rec.status === "[UNKNOWN]" ? "warn" : "ok") + '">' + esc(STATUS_LABEL[rec.status] || rec.status) + "</span> " + esc(rec.status_note)) +
+      row("Place", esc(rec.place.label) + (rec.place.approximate ? ' <span class="pill warn">approximate pin</span>' : "") + ' <span class="muted">(' + esc(rec.place.lat.toFixed(4) + ", " + rec.place.lng.toFixed(4)) + "; " + esc(rec.place.coords_source) + ")</span>") +
+      row("Region and era", esc(rec.region + " · " + rec.era)) + row("Foundry or maker", esc(rec.maker)) +
+      row("Mass", esc(fmtNum(rec.mass_kg, "kg", 0)) + ' <span class="muted">' + esc(rec.mass_note) + "</span>") +
+      row("Diameter", esc(fmtNum(rec.diameter_m, "m", 3))) + row("Height", esc(fmtNum(rec.height_m, "m", 3))) +
+      (rec.thickness_m ? row("Wall (sound bow)", esc(fmtNum(rec.thickness_m, "m", 3))) : "") +
+      row("Note", esc(rec.note || UNKNOWN)) + (rec.bells_count !== undefined ? row("Bells", esc(rec.bells_count == null ? UNKNOWN : rec.bells_count)) : "") +
+      row("Alloy", entryLink(rec.alloy.entry) + " · " + esc(rec.alloy.note)) + "</table>";
+    h += '<h4>Timeline</h4>' + (rec.timeline.length ? '<ol class="small at-timeline-list">' + rec.timeline.map((t) => '<li><b>' + esc(M().yearLabel(parseInt(t.date, 10)) + (t.date.length > 4 && t.date[0] !== "-" ? t.date.slice(4) : "")) + (t.end ? "–" + esc(t.end) : "") + (t.approximate ? " ~" : "") + "</b> " + esc(t.event) + ' <span class="muted">· ' + srcLink(t.source) + "</span></li>").join("") + "</ol>" : '<p class="muted small">Dated timeline ' + UNKNOWN + ".</p>");
+    h += '<h4>3D model</h4><p class="small">' + esc(rec.model.label) + (rec.model.available ? ' <button type="button" class="mini" data-at-mode="3d" id="atBell3d">Show the 3D bell</button>' : "") + "</p>";
+    h += '<p class="small">Official source: <b>' + esc(rec.official_status) + "</b>" + (rec.unknowns.length ? ' · Gaps: ' + rec.unknowns.map((u) => esc(u)).join("; ") : "") + "</p>";
+    return h;
+  }
+  function overviewHtml(rec) {
+    return rec.sections.map((sec) => '<section class="at-ov small"><h4>' + esc(sec.title) + "</h4><p>" + esc(sec.text) + '</p><p class="muted">Sources: ' + sec.sources.map(srcLink).join(", ") +
+      (sec.bells.length ? "<br>Bells: " + sec.bells.map(entryLink).join(", ") : "") + "</p></section>").join("") +
+      '<p class="muted small">Bells by region: ' + Object.keys(rec.counts).sort().map((k) => esc(k + " " + rec.counts[k])).join(" · ") + "</p>";
+  }
   function priceRegions() { return Object.keys(D().records).filter((k) => /^data\/atlas\/prices\//.test(k)).map((k) => D().records[k].region).sort(); }
   function priceDoc(region) { return D().records["data/atlas/prices/" + region + ".json"] || null; }
 
   function objectTab(e) {
     const kit = kitRecord(e);
     const note = M().tierNote(e, st.tier);
-    let h = '<p>' + esc(e.summary) + "</p>" + (note ? '<p class="muted small">' + esc(note) + "</p>" : "") +
+    let h = '<p class="at-text">' + esc(M().tierText ? M().tierText(e, st.tier) : e.summary) + "</p>" + (note ? '<p class="muted small">' + esc(note) + "</p>" : "") +
       '<p class="small"><span class="pill">' + esc(e.kind) + '</span> <span class="pill">' + esc(M().TIER_LABEL[e.tier]) + '</span> <span class="pill ' + (e.status === "draft" || e.status === "placeholder" ? "warn" : "ok") + '">' + esc(e.status) + '</span> <span class="pill">confidence ' + esc(e.confidence) + '</span> <span class="pill">' + esc(e.license) + "</span> <span class=\"muted\">checked " + esc(e.checked) + "</span></p>";
     if (e.places.length) h += '<p class="small">Places: ' + e.places.map((p) => esc((p.region || UNKNOWN) + " (" + p.precision + ")")).join(", ") + "</p>";
     if (e.dates.length) h += '<p class="small">Dates: ' + e.dates.map((d) => esc(d.date + " (" + d.precision + (d.approximate ? ", approximate" : "") + ")")).join(", ") + "</p>";
@@ -123,6 +153,10 @@
       h += "<h4>Safety rules in the record</h4><ul class=\"small\">" + kit.safety.map((s) => "<li><b>" + esc(s.topic) + ":</b> " + esc(s.rule) + "</li>").join("") + "</ul>";
       h += '<p class="muted small">Draft: not built or tested. Model is an artistic layout from the parametric record, not a build drawing.</p>';
     }
+    const bell = bellRecord(e), ov = overviewRecord(e);
+    if (bell) h += bellHtml(e, bell);
+    if (ov) h += overviewHtml(ov);
+    if ((e.see_also_ids || []).length) h += '<p class="small at-seealso">See also: ' + e.see_also_ids.map(entryLink).join(", ") + "</p>";
     return h + personalHtml(e);
   }
 
@@ -150,13 +184,18 @@
     let chemId = e.kind === "chemistry" ? e.id : null;
     const kit = kitRecord(e);
     if (!chemId && kit && kit.chemistry && kit.chemistry.length) chemId = kit.chemistry[0];
+    const bell = bellRecord(e);
+    if (!chemId && bell) chemId = bell.alloy.entry;
     const ce = chemId ? M().entryById(D(), chemId) : null;
     const rec = ce ? recordOf(ce) : null;
     if (!rec) return '<p class="muted">No chemistry record for this entry ' + UNKNOWN + ".</p>" + (ce ? "<p>" + esc(ce.summary) + "</p>" : "");
     let h = (chemId !== e.id ? '<p class="small">From <button type="button" class="linklike" data-at-entry="' + esc(chemId) + '">' + esc(ce.title) + "</button></p>" : "") +
+      (rec.properties ? '<p class="small">' + esc(M().tierText ? M().tierText(ce, st.tier) : ce.summary) + '</p><table class="at-table small"><thead><tr><th>Property</th><th>Value</th><th>Source</th></tr></thead><tbody>' +
+        rec.properties.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.value) + "</td><td>" + (r.source ? srcLink(r.source) : UNKNOWN) + "</td></tr>").join("") + "</tbody></table>" :
       '<table class="at-table small"><thead><tr><th>Property</th><th>LFP</th><th>NMC</th><th>Source</th></tr></thead><tbody>' +
-      rec.compare.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.lfp) + "</td><td>" + esc(r.nmc) + "</td><td>" + esc(r.source) + "</td></tr>").join("") + "</tbody></table>";
-    h += '<p class="small">' + esc(rec.why_this_kit_uses_lfp || "") + "</p>" + '<p class="muted small">Reactions: ' + esc(rec.reactions) + "<br>3D molecule or crystal models: " + esc(rec.molecule_models) + "</p>" + (rec.note ? '<p class="muted small">' + esc(rec.note) + "</p>" : "");
+      rec.compare.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.lfp) + "</td><td>" + esc(r.nmc) + "</td><td>" + esc(r.source) + "</td></tr>").join("") + "</tbody></table>");
+    if (!rec.properties) h += '<p class="small">' + esc(rec.why_this_kit_uses_lfp || "") + "</p>" + '<p class="muted small">Reactions: ' + esc(rec.reactions) + "<br>3D molecule or crystal models: " + esc(rec.molecule_models) + "</p>";
+    if (rec.note) h += '<p class="muted small">' + esc(rec.note) + "</p>";
     return h;
   }
 
@@ -237,7 +276,7 @@
   function select(id) {
     st.selected = id;
     const e = M().entryById(D(), id);
-    if (e && st.tab === "chemistry" && e.kind !== "chemistry" && !kitRecord(e)) st.tab = "object";
+    if (e && st.tab === "chemistry" && e.kind !== "chemistry" && !kitRecord(e) && !bellRecord(e)) st.tab = "object";
     render();
     if (e && st.mode === "globe") flyToEntry(e);
   }
@@ -308,13 +347,29 @@
     const ll = p && centroid(p.a3);
     if (ll && GD.globe && GD.globe.flyTo) { try { GD.globe.flyTo({ center: ll, zoom: 3, pitch: 0, bearing: 0, durationSec: 2 }); } catch (e) { /* ignore */ } }
   }
-  function flyToEntry(e) { const p = (e.places || [])[0]; if (p && p.region) flyToRegion(p.region.slice(0, 2)); }
+  // Site-precision entries with a point (bells) drill to the place; others fly to their country.
+  function flyToEntry(e) {
+    const p = (e.places || [])[0];
+    if (p && p.precision === "site" && typeof p.lat === "number" && GD.globe && GD.globe.flyTo) {
+      const approx = /approximate/i.test(p.note || "");
+      try { GD.globe.flyTo({ center: [p.lng, p.lat], zoom: approx ? 11 : 15, pitch: 0, bearing: 0, durationSec: 2.2 }); } catch (err) { /* ignore */ }
+      return;
+    }
+    if (p && p.region) flyToRegion(p.region.slice(0, 2));
+  }
 
   // ---------- 3D ----------
   function draw3d() {
     const box = $("at3d"), note = $("at3dNote");
     if (!box) return;
     const e = st.selected ? M().entryById(D(), st.selected) : null;
+    const bell = bellRecord(e);
+    if (bell && GD.atlas3d) {
+      if (!bell.model.available) { box.classList.add("stub"); box.textContent = bell.model.label; return; }
+      const params = bell.model.params || { diameter_m: 1 };
+      GD.atlas3d.show(box, "bell", params).then((r) => { if (note) note.textContent = r.ok ? bell.model.label + " Drag to turn." + (r.layout && r.layout.assumed && (r.layout.assumed.height || r.layout.assumed.thickness) ? " Assumed: " + [r.layout.assumed.height ? "height (0.8 × diameter)" : "", r.layout.assumed.thickness ? "wall (diameter ÷ 13)" : ""].filter(Boolean).join(", ") + "." : "") : "3D view unavailable here: " + r.reason; });
+      return;
+    }
     const kit = kitRecord(e);
     if (!e || !kit || e.kind !== "object" || !GD.atlas3d) { box.classList.add("stub"); box.textContent = "No 3D model for this entry " + UNKNOWN + "."; return; }
     const opt = kit.options.find((o) => o.id === st.option) || kit.options[0];

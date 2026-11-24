@@ -101,6 +101,921 @@
       "url": "https://www.amazon.com/TalentCell-LiFePO4-Battery-Rechargeable-Phosphate/dp/B08R1FWW5P",
       "checked": "2026-11-24",
       "class": "reference"
+    },
+    {
+      "id": "cccbr-bell-founding",
+      "title": "Bells and Bell Founding (CCCBR history chapter, PDF)",
+      "url": "https://www.history.cccbr.org.uk/pdf/Chapter_2_Bells_&_Bell_Founding.pdf",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "Central Council of Church Bell Ringers",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "hibberts-tuning",
+      "title": "Basic principles of bell tuning (The Sound of Bells)",
+      "url": "https://www.hibberts.co.uk/basic-principles-of-bell-tuning/",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "The Sound of Bells (hibberts.co.uk)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "belltrust-named-bells",
+      "title": "That Name rings a Bell (Loughborough Bellfoundry Trust)",
+      "url": "https://belltrust.co.uk/that-name-rings-a-bell/",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "Loughborough Bellfoundry Trust (Taylor foundry museum)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "primary": true,
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "unesco-whc-943",
+      "title": "Belfries of Belgium and France (World Heritage List 943)",
+      "url": "https://whc.unesco.org/en/list/943/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "UNESCO World Heritage Centre",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "wiki-bell-metal",
+      "title": "Bell metal (Wikipedia; secondary pointer only)",
+      "url": "https://en.wikipedia.org/wiki/Bell_metal",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "Wikipedia",
+      "license": "CC BY-SA 4.0 (Wikipedia text; not copied)",
+      "secondary_only": true,
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "kreml-tsar-bell",
+      "title": "Tsar Bell (Moscow Kremlin Museums)",
+      "url": "https://kreml.ru/en/museums/arxitekturnyi-ansambl-moskovskogo-kremlia/pamiatniki-liteinogo-iskusstva/car-kolokol",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Moscow Kremlin Museums",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "kreml-coll-tsar-bell",
+      "title": "Tsar-bell, collection record (Moscow Kremlin Museums)",
+      "url": "https://collectiononline.kreml.ru/en/entity/OBJECT/39520",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Moscow Kremlin Museums",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "kreml-coll-uspensky",
+      "title": "The Bolshoy Uspensky bell, collection record (Moscow Kremlin Museums)",
+      "url": "https://collectiononline.kreml.ru/en/entity/OBJECT/39514",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Moscow Kremlin Museums",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "rostmuseum-zvonnitsa",
+      "title": "Cathedral belfry (Sobornaya zvonnitsa), Rostov Kremlin",
+      "url": "https://www.rostmuseum.ru/posetitelyam/dostoprimechatelnosti/sobornaya-zvonnitsa/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Rostov Kremlin State Museum-Reserve",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "culture-ru-uglich-bell",
+      "title": "Uglich bell (Culture.RF AR guide)",
+      "url": "https://ar.culture.ru/en/subject/uglicheskiy-kolokol",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Culture.RF (portal of the Russian Ministry of Culture)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "uglmus-history",
+      "title": "History of the museum (Uglich Museum)",
+      "url": "https://www.uglmus.ru/about/history/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Uglich State Historical, Architectural and Art Museum",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "parl-great-bell",
+      "title": "The Great Bell: facts and figures (Big Ben)",
+      "url": "https://www.parliament.uk/about/living-heritage/building/palace/big-ben/facts-figures/great-bell/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "UK Parliament",
+      "license": "Open Parliament Licence v3.0",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "parl-big-ben-casting",
+      "title": "Constructing the most accurate clock in the world",
+      "url": "https://www.parliament.uk/about/living-heritage/building/palace/big-ben/building-clock-tower/constructing-the-most-accurate-clock-in-the-world/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "UK Parliament",
+      "license": "Open Parliament Licence v3.0",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "parl-big-ben-dates",
+      "title": "Big Ben and Elizabeth Tower: key dates",
+      "url": "https://www.parliament.uk/about/living-heritage/building/palace/big-ben/building-clock-tower/key-dates-/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "UK Parliament",
+      "license": "Open Parliament Licence v3.0",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "stpauls-bells",
+      "title": "The bells (St Paul's Cathedral)",
+      "url": "https://www.stpauls.co.uk/bells",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "St Paul's Cathedral",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "chch-bells",
+      "title": "Bell ringers and bells (Christ Church, Oxford)",
+      "url": "https://www.chch.ox.ac.uk/cathedral/worship-music/bell-ringers-and-bells",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Christ Church, Oxford",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "stmarylebow-bells",
+      "title": "The bells (St Mary-le-Bow)",
+      "url": "https://www.stmarylebow.org.uk/bells/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "St Mary-le-Bow",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "liverpool-cathedral-bells",
+      "title": "The Cathedral bells (Liverpool Cathedral)",
+      "url": "https://liverpoolcathedral.org.uk/plan-your-visit/the-cathedral-tower-experience/the-cathedral-bells/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Liverpool Cathedral",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "lloyds-hms-lutine",
+      "title": "HMS Lutine (Lloyd's history)",
+      "url": "https://www.lloyds.com/about-lloyds/history/catastrophes-and-claims/hms-lutine",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Lloyd's of London",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "rn-hood-bell-2016",
+      "title": "Hood's bell rededicated, 24 May 2016 (Royal Navy news)",
+      "url": "https://www.royalnavy.mod.uk/news/2016/may/24/160524-hood-bell",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Royal Navy (UK Ministry of Defence)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nmrn-hood-bell",
+      "title": "The bell that survived three generations of Hoods",
+      "url": "https://www.royalnavymuseums.org.uk/news/bell-survived-three-generations-hoods",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "National Museum of the Royal Navy",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "stephansdom-pummerin",
+      "title": "Pummerin (St. Stephen's Cathedral, Vienna)",
+      "url": "https://stephansdom-wien.at/glocken/pummerin",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Dompfarre St. Stephan, Vienna",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "wien-geschichte-pummerin",
+      "title": "Pummerin (Wien Geschichte Wiki)",
+      "url": "https://www.geschichtewiki.wien.gv.at/Pummerin",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "City of Vienna (Wiener Stadt- und Landesarchiv)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "culture-gouv-emmanuel",
+      "title": "Le bourdon Emmanuel (Notre-Dame de Paris, Ministry of Culture)",
+      "url": "https://notre-dame-de-paris.culture.gouv.fr/fr/le-bourdon-emmanuel",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Ministère de la Culture (France)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nd-paris-emmanuel",
+      "title": "Great bourdon Emmanuel (Cathédrale Notre-Dame de Paris)",
+      "url": "https://www.notredamedeparis.fr/en/oeuvre/great-bourdon-emmanuel/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Cathédrale Notre-Dame de Paris",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "rebatir-nd-tours",
+      "title": "Restauration des tours et des cloches (Rebâtir Notre-Dame de Paris)",
+      "url": "https://rebatirnotredamedeparis.fr/restauration/restauration-tours-cloches",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Établissement public Rebâtir Notre-Dame de Paris",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "sacrecoeur-savoyarde",
+      "title": "La Savoyarde (Basilique du Sacré-Cœur de Montmartre)",
+      "url": "https://www.sacre-coeur-montmartre.com/decouvrir/patrimoine-et-art-sacre/la-savoyarde/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Basilique du Sacré-Cœur de Montmartre",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "erfurt-dom",
+      "title": "Dom St. Marien (erfurt.de)",
+      "url": "https://www.erfurt.de/ef/de/erleben/sehenswertes/dom/108136.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Landeshauptstadt Erfurt",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "koelner-dom-petersglocke",
+      "title": "Petersglocke (Kölner Dom)",
+      "url": "https://www.koelner-dom.de/erleben/petersglocke",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Hohe Domkirche Köln",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "berlin-freiheitsglocke",
+      "title": "Die Freiheitsglocke (berlin.de, Tempelhof-Schöneberg)",
+      "url": "https://www.berlin.de/ba-tempelhof-schoeneberg/ueber-den-bezirk/historisches/artikel.362167.php",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Bezirksamt Tempelhof-Schöneberg von Berlin",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "berlin-freiheitsglocke-75",
+      "title": "75 Jahre Freiheitsglocke (berlin.de, Tempelhof-Schöneberg)",
+      "url": "https://www.berlin.de/ba-tempelhof-schoeneberg/ueber-den-bezirk/historisches/artikel.1613119.php",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Bezirksamt Tempelhof-Schöneberg von Berlin",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "wawel-zygmunt",
+      "title": "The Royal Sigismund Bell (Wawel Royal Cathedral)",
+      "url": "https://www.katedra-wawelska.pl/en/katedra-wawelska/dzwony-i-wieze-katedralne/krolewski-dzwon-zygmunt/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Wawel Royal Cathedral",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "vatican-campane",
+      "title": "Campane (Basilica di San Pietro, vatican.va)",
+      "url": "https://www.vatican.va/content/vatican/it/ra/campane.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Holy See (vatican.va)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "vatican-campane-info",
+      "title": "Campane: altre informazioni (vatican.va)",
+      "url": "https://www.vatican.va/content/vatican/it/ra/campane/altre-informazioni.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Holy See (vatican.va)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "visitmechelen-carillon",
+      "title": "Carillon culture (Visit Mechelen)",
+      "url": "https://www.visitmechelen.be/en/carillon-culture",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "City of Mechelen (Visit Mechelen)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "mechelen-onzetoren",
+      "title": "St Rumbold's Tower (Visit Mechelen)",
+      "url": "https://onzetoren.visitmechelen.be/en",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "City of Mechelen (Visit Mechelen)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "visitbruges-carillon",
+      "title": "Carillon of the Belfry (Visit Bruges)",
+      "url": "https://www.visitbruges.be/en/things-to-do/culture-and-heritage/beiaard-belfort-carillon-belfry",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "City of Bruges (Visit Bruges)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "hbww-zeng-bianzhong",
+      "title": "Chime bells of Marquis Yi of Zeng (Hubei Provincial Museum)",
+      "url": "https://www.hbww.org.cn/zgzb/p/4695.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Hubei Provincial Museum",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "unesco-mow-zeng",
+      "title": "The Suizhou Bianzhong of Marquis Yi of Zeng (Memory of the World)",
+      "url": "https://www.unesco.org/en/memory-world/suizhou-bianzhong-marquis-yi-zeng",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "UNESCO",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "beijing-dazhongsi",
+      "title": "Dazhong Temple Ancient Bell Museum (english.beijing.gov.cn)",
+      "url": "https://english.beijing.gov.cn/beijinginfo/culture/culturaltreasures/cityofmuseums/list/202604/t20260424_4608875.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "People's Government of Beijing Municipality",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "wwj-yongle-bell",
+      "title": "The Yongle Bell (Beijing Municipal Cultural Heritage Bureau)",
+      "url": "https://wwj.beijing.gov.cn/bjww/wwjzzcslm/1737418/1738090/wwgs/325966413/index.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Beijing Municipal Cultural Heritage Bureau",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "khs-seongdeok",
+      "title": "Sacred Bell of Great King Seongdeok (Heritage Search)",
+      "url": "https://english.khs.go.kr/chaen/search/selectGeneralSearchDetail.do?ccebAsno=0000290000000&mn=EN_02_02&sCcebCtcd=37&sCcebKdcd=11",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Korea Heritage Service",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "gyeongju-seongdeok",
+      "title": "Sacred Bell of Great King Seongdeok (Gyeongju City tourism)",
+      "url": "https://www.gyeongju.go.kr/tour/page.do?chaNo=329&cmd=2&mnu_uid=4796",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Gyeongju City",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "khs-sangwonsa",
+      "title": "Bronze Bell of Sangwonsa Temple (Heritage Search)",
+      "url": "https://english.khs.go.kr/chaen/search/selectGeneralSearchDetail.do?ccebAsno=0000360000000&mn=EN_02_02&sCcebCtcd=51&sCcebKdcd=11",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Korea Heritage Service",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "todaiji-shoro",
+      "title": "Bell Tower (Tōdai-ji)",
+      "url": "https://www.todaiji.or.jp/en/information/shoro/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Tōdai-ji",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nara-todaiji-shoro",
+      "title": "Todaiji Temple Shoro bell tower (Nara City tourism)",
+      "url": "https://www.naracity-guide.com/en/spots/188",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Nara City Tourism Association",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "chionin-daishoro",
+      "title": "Daishōrō, the great bell tower (Chion-in)",
+      "url": "https://www.chion-in.or.jp/en/highlight/building/daishoro.php",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Chion-in",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "byodoin-sculpture",
+      "title": "Sculpture and crafts (Byodoin)",
+      "url": "https://www.byodoin.or.jp/en/learn/sculpture/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Byodoin",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "hiroshima-pcf-peacebell",
+      "title": "Peace Bell (Hiroshima Peace Memorial Park virtual tour)",
+      "url": "https://www.pcf.city.hiroshima.jp/virtual/map-e/irei/tour_08_e.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Hiroshima Peace Culture Foundation",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "mdn-mingun",
+      "title": "705 years old Zeyapura Sagaing (Myanmar Digital News)",
+      "url": "https://mdn.gov.mm/en/705-years-old-zeyapura-sagaing",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Myanmar Digital News (Ministry of Information)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "dagon-bells-paper",
+      "title": "Paper on famous bells of Myanmar (Dagon University, PDF)",
+      "url": "https://www.dagonuniversity.edu.mm/wp-content/uploads/2019/08/Swe-Swe-Aung-1.pdf",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "Dagon University",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "bbc-dhammazedi",
+      "title": "The search for Myanmar's Dhammazedi bell (BBC News)",
+      "url": "https://www.bbc.com/news/world-asia-28832296",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "BBC News",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "af-balangiga",
+      "title": "US presents Bells of Balangiga to the Philippines (F.E. Warren AFB)",
+      "url": "https://www.warren.af.mil/News/Article/1690859/us-presents-bells-of-balangiga-to-the-philippines/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Air Force, F.E. Warren Air Force Base",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); photos may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "goa-gtdc-panaji",
+      "title": "Our Lady of Immaculate Conception Church (Goa Tourism)",
+      "url": "https://goa-tourism.com/church/our-lady-of-immaculate-conception/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Goa Tourism Development Corporation",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "bm-n162",
+      "title": "Bell N.162, collection record (British Museum)",
+      "url": "https://www.britishmuseum.org/collection/object/W_N-162",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "The British Museum",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "nps-liberty-bell",
+      "title": "The Liberty Bell (Independence NHP)",
+      "url": "https://www.nps.gov/inde/learn/historyculture/stories-libertybell.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-liberty-bell-sheet",
+      "title": "Information about the Liberty Bell (PDF)",
+      "url": "https://www.nps.gov/inde/planyourvisit/upload/Liberty-Bell-info-sheet.pdf",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-bell-clock-facts",
+      "title": "Fact Sheet: Bells and Clocks of Independence Hall",
+      "url": "https://www.nps.gov/articles/000/bell-and-clock-facts.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-bells-and-clocks",
+      "title": "The Bells and Clocks of Independence Hall",
+      "url": "https://www.nps.gov/articles/000/bells-and-clocks.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-centennial-bell-ring",
+      "title": "Hear the Centennial Bell Ring",
+      "url": "https://www.nps.gov/thingstodo/hear-the-centennial-bell-ring.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-justice-bell-dyk",
+      "title": "Did You Know: The Justice Bell and the Fight for Women's Access to the Vote",
+      "url": "https://www.nps.gov/articles/dyk-justice-bell.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-justice-bell-1920",
+      "title": "The Justice Bell Rings for Women's Suffrage on Independence Square",
+      "url": "https://www.nps.gov/articles/independence-justicebellunchaining.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "loc-justice-bell-casting",
+      "title": "Casting the suffrage liberty bell at Troy (Bain News Service photo)",
+      "url": "https://www.loc.gov/pictures/item/2014698748/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "Library of Congress: no known restrictions on publication (see item page)",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-bicentennial-bell",
+      "title": "The Bicentennial Bell (Independence NHP)",
+      "url": "https://www.nps.gov/inde/learn/historyculture/the-bicentennial-bell.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-bicentennial-bell-move",
+      "title": "NPS Relocates the Bicentennial Bell (news release, Jan 31, 2013)",
+      "url": "https://www.nps.gov/inde/learn/news/nps-relocates-the-bicentennial-bell.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-rush-garden",
+      "title": "Benjamin Rush Garden (NPS place page)",
+      "url": "https://www.nps.gov/places/benjamin-rush-garden.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "oldnorth-bells",
+      "title": "Steeple and Bell Chamber (Old North Church)",
+      "url": "https://oldnorth.com/steeple-bell-chamber/",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "Old North Illuminated (operator of Old North Church)",
+      "license": "Site content; reuse terms [UNKNOWN]",
+      "primary": true,
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "nps-old-north-bost",
+      "title": "Old North Church, Boston National Historical Park",
+      "url": "https://www.nps.gov/bost/learn/historyculture/onc.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "npshistory-christchurch",
+      "title": "Christ Church (Old North) bell tower report (PDF, npshistory.com archive)",
+      "url": "https://npshistory.com/publications/bost/christ-church-bell-tower.pdf",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "NPS History (archive of National Park Service publications)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "paccard-world-peace-bell",
+      "title": "The World Peace Bell (Paccard foundry portfolio)",
+      "url": "https://paccard.com/en/portfolio/cloche-de-la-paix/",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "Paccard bell foundry",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "primary": true,
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "un-gifts-peace-bell",
+      "title": "Japanese Peace Bell and Garden (UN Gifts)",
+      "url": "https://www.un.org/ungifts/japanese-peace-bell-and-garden",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "United Nations",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-netherlands-carillon",
+      "title": "Netherlands Carillon (George Washington Memorial Parkway)",
+      "url": "https://www.nps.gov/gwmp/learn/historyculture/netherlandscarillon.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "bok-singing-tower",
+      "title": "The Singing Tower (Bok Tower Gardens)",
+      "url": "https://boktowergardens.org/the-singing-tower/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Bok Tower Gardens",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "ua-uss-arizona",
+      "title": "University of Arizona and USS Arizona (UA Libraries exhibit)",
+      "url": "https://exhibits.lib.arizona.edu/exhibits/show/uss-arizona/university-of-arizona-and-uss-",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "University of Arizona Libraries",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "glshs-fitzgerald",
+      "title": "Edmund Fitzgerald (Great Lakes Shipwreck Museum)",
+      "url": "https://shipwreckmuseum.com/edmund-fitzgerald/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Great Lakes Shipwreck Historical Society",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "ourcommons-carillon",
+      "title": "Peace Tower Carillon (House of Commons Heritage Collection)",
+      "url": "https://www.ourcommons.ca/heritage/en/carillon/peace-tower-carillon",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "House of Commons of Canada",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "canada-peace-tower",
+      "title": "Peace Tower (canada.ca)",
+      "url": "https://www.canada.ca/en/public-services-procurement/services/infrastructure-buildings/parliamentary-precinct/discover/peace-tower.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Public Services and Procurement Canada",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "inah-grito",
+      "title": "El Grito de Independencia, una tradición en el Zócalo y Palacio Nacional (INAH)",
+      "url": "https://www.inah.gob.mx/foto-del-dia/el-grito-de-independencia-una-tradicion-en-el-zocalo-y-palacio-nacional",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Instituto Nacional de Antropología e Historia (Mexico)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "cusco-catedral-historia",
+      "title": "Historia de la Catedral del Cusco (heritage catalogue, PDF)",
+      "url": "https://catalogacion.cusco.gob.pe/assets/pdf/inmuebles-religiosos/catedral/historia/Catedral.pdf",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "catalogacion.cusco.gob.pe (Cusco government heritage catalogue)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nca-national-carillon",
+      "title": "National Carillon (National Capital Authority)",
+      "url": "https://www.nca.gov.au/attractions/national-carillon",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "National Capital Authority (Australian Government)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "wa-gov-swan-bells",
+      "title": "Historic Swan Bells ring out in Western Australia (media statement, 10 Dec 2000)",
+      "url": "https://www.wa.gov.au/government/media-statements/Court%20Coalition%20Government/Historic-Swan-Bells-ring-out-in-Western-Australia-20001210",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Government of Western Australia",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "belltower-perth-about",
+      "title": "About The Bell Tower (Perth)",
+      "url": "https://www.thebelltower.com.au/about/",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "The Bell Tower, Perth (operator)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "primary": true,
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "nzhistory-carillon",
+      "title": "History of the National War Memorial Carillon (NZHistory)",
+      "url": "https://nzhistory.govt.nz/war/bells-of-remembrance/history",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Manatū Taonga Ministry for Culture and Heritage (NZ)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "hnz-national-war-memorial",
+      "title": "National War Memorial, List no. 1410 (Heritage New Zealand)",
+      "url": "https://www.heritage.org.nz/list-details/1410/National%20War%20Memorial",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Heritage New Zealand Pouhere Taonga",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "sgcathedral-bellringers",
+      "title": "Bell ringers (St George's Cathedral, Cape Town)",
+      "url": "https://sgcathedral.co.za/bell-ringers/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "St George's Cathedral, Cape Town",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "dove-cape-town",
+      "title": "Cape Town, Cathedral Church of St George (Dove's Guide)",
+      "url": "https://dove.cccbr.org.uk/tower/13736",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "Central Council of Church Bell Ringers (Dove's Guide)",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+    },
+    {
+      "id": "dai-ghana-bells",
+      "title": "Bells as a shared German-Ghanaian cultural heritage: a survey in the Volta Region (PDF 13 in the DAI TransArea Network Africa dataset, DOI 10.34780/7j79w9en)",
+      "url": "https://doi.org/10.34780/7j79w9en",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Deutsches Archäologisches Institut",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "fau-ghana-bells",
+      "title": "Colonial and post-colonial church bells in Ghana (FAU Christian Archaeology project)",
+      "url": "https://www.ca.phil.fau.de/projekte/forschungsprojekte/kolonial-und-postkolonialzeitliche-kirchenglocken-in-ghana/",
+      "checked": "2026-11-24",
+      "class": "reference",
+      "publisher": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+      "license": "[UNKNOWN]: linked only, no text copied",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "boston-blc-old-north",
+      "title": "Old North Church and Campus: Boston Landmarks Commission Study Report (PDF, approved Apr 1, 2025)",
+      "url": "https://www.boston.gov/sites/default/files/file/2025/04/265.19%20Old%20North%20Church%20and%20Campus%20study%20report.pdf",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "City of Boston, Boston Landmarks Commission",
+      "license": "City of Boston public record; reuse terms [UNKNOWN]",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-old-north",
+      "title": "Old North Church (NPS place page)",
+      "url": "https://www.nps.gov/places/old-north-church.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nps-nrhp-inde",
+      "title": "National Register of Historic Places nomination form: Independence NHP (text)",
+      "url": "https://npgallery.nps.gov/NRHP/GetAsset/NRHP/66000683_text",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
+      "verified": "opened directly (HTTP 200)"
     }
   ]
 }

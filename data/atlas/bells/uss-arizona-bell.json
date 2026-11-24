@@ -1,0 +1,77 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "uss-arizona-bell",
+  "title": "USS Arizona bell (University of Arizona)",
+  "kind": "ship-bell",
+  "status": "in-place",
+  "status_note": "Hangs in the Student Union tower.",
+  "era": "20th-century",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Student Union Memorial Center clock tower, University of Arizona, Tucson",
+    "lat": 32.23262,
+    "lng": -110.95182,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "[UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1944-06",
+      "precision": "month",
+      "approximate": false,
+      "event": "Found in the Bremerton salvage yard",
+      "source": "ua-uss-arizona"
+    },
+    {
+      "date": "1946-10-27",
+      "precision": "day",
+      "approximate": false,
+      "event": "Arrives at the university on Navy Day",
+      "source": "ua-uss-arizona"
+    },
+    {
+      "date": "1951",
+      "precision": "year",
+      "approximate": false,
+      "event": "Hung in the Student Union tower",
+      "source": "ua-uss-arizona"
+    }
+  ],
+  "tiers": {
+    "everyday": "One of the bells of the battleship USS Arizona, sunk at Pearl Harbor, hangs in a tower at the University of Arizona. It came there in 1946.",
+    "student": "UA Libraries: the bell was found in June 1944 at the Bremerton salvage yard, arrived on Navy Day, 27 October 1946, and has hung in the Student Union tower since 1951."
+  },
+  "sources": [
+    "ua-uss-arizona"
+  ],
+  "official_sources": [
+    "ua-uss-arizona"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "how the bell left the ship",
+    "mass"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

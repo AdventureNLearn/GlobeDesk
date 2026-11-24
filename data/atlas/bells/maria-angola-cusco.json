@@ -1,0 +1,65 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "maria-angola-cusco",
+  "title": "María Angola (Cusco Cathedral)",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "The heritage catalogue places it in the Gospel tower.",
+  "era": "[UNKNOWN]",
+  "region": "South America",
+  "country": "PE",
+  "place": {
+    "label": "Gospel tower (Torre del Evangelio), Cusco Cathedral",
+    "lat": -13.51628,
+    "lng": -71.97787,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "[UNKNOWN]",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN] (figures seen on a bell database could not be opened, so not used)",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "[UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1950",
+      "precision": "year",
+      "approximate": false,
+      "event": "Earthquake damages the Gospel tower that holds the bell (survey in the catalogue)",
+      "source": "cusco-catedral-historia"
+    }
+  ],
+  "tiers": {
+    "everyday": "María Angola is the famous great bell of Cusco Cathedral in Peru. It hangs in the cathedral's Gospel tower.",
+    "student": "Cusco's heritage catalogue (its 1950 earthquake survey) says the bell called María Angola hangs in the Gospel tower, which the quake damaged. Casting date, founder and mass are [UNKNOWN] from official sources we could open."
+  },
+  "sources": [
+    "cusco-catedral-historia"
+  ],
+  "official_sources": [
+    "cusco-catedral-historia"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "cast date",
+    "founder",
+    "mass",
+    "dimensions"
+  ],
+  "confidence": "low",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

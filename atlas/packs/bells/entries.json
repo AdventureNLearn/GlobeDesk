@@ -1,0 +1,4485 @@
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "bells",
+  "entries": [
+    {
+      "id": "bells-overview",
+      "title": "Bells: a world history",
+      "aliases": [
+        "History of bells",
+        "Bell founding"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Bells have been made for about 3,000 years, from tiny Assyrian bronze bells to Chinese chime sets, Buddhist temple bells struck with a beam, European church and city bells, carillons played from a keyboard and giant Russian bells. Most are cast from bell bronze, about four parts copper to one part tin.",
+        "student": "This overview links every bell in the Bells layer. It covers early bells (a Neo-Assyrian bell of 800–700 BC), the bianzhong of Marquis Yi of Zeng (5th century BCE), Buddhist bonshō and Korean bells, Christian church bells and medieval founding, Low Countries carillons, Russian giant bells, English change ringing, ship and civic bells and the modern era. It ends with how bells are cast in loam moulds from about 80% copper and 20% tin, then tuned by turning metal from the inside."
+      },
+      "layer": "bells",
+      "summary": "Bells have been made for about 3,000 years, from tiny Assyrian bronze bells to Chinese chime sets, Buddhist temple bells struck with a beam, European church and city bells, carillons played from a keyboard and giant Russian bells. Most are cast from bell bronze, about four parts copper to one part tin.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "bm-n162",
+        "hbww-zeng-bianzhong",
+        "unesco-mow-zeng",
+        "todaiji-shoro",
+        "nara-todaiji-shoro",
+        "khs-sangwonsa",
+        "khs-seongdeok",
+        "chionin-daishoro",
+        "beijing-dazhongsi",
+        "cccbr-bell-founding",
+        "erfurt-dom",
+        "vatican-campane-info",
+        "visitmechelen-carillon",
+        "visitbruges-carillon",
+        "unesco-whc-943",
+        "hibberts-tuning",
+        "kreml-tsar-bell",
+        "rostmuseum-zvonnitsa",
+        "kreml-coll-uspensky",
+        "stmarylebow-bells",
+        "oldnorth-bells",
+        "liverpool-cathedral-bells",
+        "sgcathedral-bellringers",
+        "lloyds-hms-lutine",
+        "rn-hood-bell-2016",
+        "glshs-fitzgerald",
+        "parl-big-ben-casting",
+        "nps-liberty-bell",
+        "inah-grito",
+        "berlin-freiheitsglocke",
+        "un-gifts-peace-bell",
+        "hiroshima-pcf-peacebell",
+        "paccard-world-peace-bell",
+        "belltower-perth-about",
+        "af-balangiga",
+        "wiki-bell-metal",
+        "bbc-dhammazedi",
+        "culture-ru-uglich-bell",
+        "uglmus-history"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "bell-bronze"
+        }
+      ],
+      "record": "data/atlas/bells/bells-overview.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "tsar-bell",
+      "title": "Tsar Bell",
+      "aliases": [
+        "Tsar Kolokol"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Tsar Bell in the Moscow Kremlin is about 202 tonnes of bronze and has never been rung. It cracked in a fire in 1737 while still in its casting pit, and a huge piece broke off.",
+        "student": "Cast in 1733–1735 by Ivan and Mikhail Motorin, the Tsar Bell (about 202 t, 6.14 m high, 6.6 m across) cracked during the Troitsky fire of May 1737, losing an 11.5 t fragment. It was raised onto a pedestal in 1836 and is a monument of Russian founding, never a working bell."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Tsar Bell in the Moscow Kremlin is about 202 tonnes of bronze and has never been rung. It cracked in a fire in 1737 while still in its casting pit, and a huge piece broke off.",
+      "places": [
+        {
+          "region": "RU",
+          "lat": 55.75077,
+          "lng": 37.61844,
+          "precision": "site",
+          "note": "Moscow Kremlin, beside the Ivan the Great Bell Tower"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1733",
+          "precision": "year",
+          "approximate": false,
+          "label": "Casting work begins under Ivan and Mikhail Motorin"
+        },
+        {
+          "date": "1735-11",
+          "precision": "month",
+          "approximate": false,
+          "label": "Bell finally cast in its casting pit"
+        },
+        {
+          "date": "1737-05",
+          "precision": "month",
+          "approximate": false,
+          "label": "Troitsky fire: the hot bell cracks and an 11.5 t piece breaks off"
+        },
+        {
+          "date": "1836",
+          "precision": "year",
+          "approximate": false,
+          "label": "Raised from the pit onto a pedestal under architect Auguste de Montferrand"
+        }
+      ],
+      "sources": [
+        "kreml-tsar-bell",
+        "kreml-coll-tsar-bell"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/tsar-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed."
+    },
+    {
+      "id": "bolshoy-uspensky-bell",
+      "title": "Bolshoy Uspensky Bell (Moscow Kremlin)",
+      "aliases": [
+        "Great Assumption Bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Bolshoy Uspensky (Great Assumption) bell is the largest bell in the Kremlin's working bell-tower ensemble. It was cast in 1817 and is 4.2 m across.",
+        "student": "The Kremlin Museums record dates the bell to 1817, names masters Yakov Zavyalov and Rusinov at Mikhail Bogdanov's plant, and gives a diameter of 4200 mm. Mass is not in the record [UNKNOWN]."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Bolshoy Uspensky (Great Assumption) bell is the largest bell in the Kremlin's working bell-tower ensemble. It was cast in 1817 and is 4.2 m across.",
+      "places": [
+        {
+          "region": "RU",
+          "lat": 55.75072,
+          "lng": 37.61821,
+          "precision": "site",
+          "note": "Ivan the Great Bell Tower ensemble, Moscow Kremlin (exact hanging point approximate) (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1817",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast (date in the Kremlin Museums collection record)"
+        }
+      ],
+      "sources": [
+        "kreml-coll-uspensky"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/bolshoy-uspensky-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: mass."
+    },
+    {
+      "id": "sysoy-bell",
+      "title": "Sysoy bell (Rostov Kremlin)",
+      "aliases": [
+        "Sysoy"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Sysoy is the biggest bell of the famous Rostov Kremlin belfry, cast in 1688 and weighing about 2,000 poods (roughly 33 tonnes).",
+        "student": "The Rostov Kremlin museum gives Sysoy as cast in 1688 by Flor Terentyev at 2,000 poods (about 32.8 t by our conversion). The same belfry holds the earlier Polyeleiny (1,000 poods) and Lebed (500 poods) bells cast by the Andreev masters."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "Sysoy is the biggest bell of the famous Rostov Kremlin belfry, cast in 1688 and weighing about 2,000 poods (roughly 33 tonnes).",
+      "places": [
+        {
+          "region": "RU",
+          "lat": 57.18488,
+          "lng": 39.41524,
+          "precision": "site",
+          "note": "Cathedral belfry (Sobornaya zvonnitsa), Rostov Kremlin (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1688",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast by Flor Terentyev, 2,000 poods"
+        }
+      ],
+      "sources": [
+        "rostmuseum-zvonnitsa"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/sysoy-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: diameter; note."
+    },
+    {
+      "id": "uglich-exile-bell",
+      "title": "Uglich alarm bell (the exiled bell)",
+      "aliases": [
+        "Uglich bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "In 1591 this bell rang the alarm in Uglich when the young Tsarevich Dmitry died. As punishment it was 'flogged', had its clapper torn out and was exiled to Siberia. It came home in 1892.",
+        "student": "After the alarm of 15 May 1591, the bell was punished by decree of Boris Godunov (tongue torn out, ear cut off, 12 lashes) and exiled to Tobolsk. The Uglich museum records its return in May 1892, when it became a founding exhibit. Maker, mass and size [UNKNOWN]."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "In 1591 this bell rang the alarm in Uglich when the young Tsarevich Dmitry died. As punishment it was 'flogged', had its clapper torn out and was exiled to Siberia. It came home in 1892.",
+      "places": [
+        {
+          "region": "RU",
+          "lat": 57.52869,
+          "lng": 38.31733,
+          "precision": "site",
+          "note": "Uglich Kremlin (museum); pin on the kremlin (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1591-05-15",
+          "precision": "day",
+          "approximate": false,
+          "label": "Rings the alarm on the death of Tsarevich Dmitry in Uglich"
+        },
+        {
+          "date": "1591",
+          "precision": "year",
+          "approximate": false,
+          "label": "By decree of Boris Godunov thrown down, its tongue torn out and ear cut off, flogged and exiled to Tobolsk"
+        },
+        {
+          "date": "1892-05",
+          "precision": "month",
+          "approximate": false,
+          "label": "Returned to Uglich from Siberian exile"
+        },
+        {
+          "date": "1892-06",
+          "precision": "month",
+          "approximate": false,
+          "label": "The Uglich Museum of Antiquities opens with the bell among its most valued items"
+        }
+      ],
+      "sources": [
+        "culture-ru-uglich-bell",
+        "uglmus-history"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/uglich-exile-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed. Gaps: maker; cast date; mass."
+    },
+    {
+      "id": "big-ben-great-bell",
+      "title": "Big Ben (the Great Bell, Elizabeth Tower)",
+      "aliases": [
+        "Big Ben",
+        "Great Bell of Westminster"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Big Ben is the nickname of the Great Bell in the Elizabeth Tower in London. It weighs 13.7 tonnes and strikes the note E. The first bell cracked, and the present one was recast at Whitechapel in 1858.",
+        "student": "UK Parliament records: a first bell cast in August 1856 by Warners cracked in testing (October 1857); George Mears recast it at Whitechapel on 10 April 1858. It first struck on 11 July 1859, cracked that September, and from 1863 was turned 90° with a lighter (about 200 kg) hammer. 13.7 t, 2.7 m across, 2.2 m high, note E."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "Big Ben is the nickname of the Great Bell in the Elizabeth Tower in London. It weighs 13.7 tonnes and strikes the note E. The first bell cracked, and the present one was recast at Whitechapel in 1858.",
+      "places": [
+        {
+          "region": "GB",
+          "lat": 51.50069,
+          "lng": -0.12457,
+          "precision": "site",
+          "note": "Elizabeth Tower, Palace of Westminster, London"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1856-08",
+          "precision": "month",
+          "approximate": false,
+          "label": "First Great Bell cast by Warners near Stockton-on-Tees"
+        },
+        {
+          "date": "1857-10-17",
+          "precision": "day",
+          "approximate": false,
+          "label": "A 1.2 m crack appears during testing"
+        },
+        {
+          "date": "1858-04-10",
+          "precision": "day",
+          "approximate": false,
+          "label": "Recast by George Mears at the Whitechapel foundry (13.5 t)"
+        },
+        {
+          "date": "1859-07-11",
+          "precision": "day",
+          "approximate": false,
+          "label": "First strikes the hours"
+        },
+        {
+          "date": "1859-09",
+          "precision": "month",
+          "approximate": false,
+          "label": "Cracks; silenced"
+        },
+        {
+          "date": "1863",
+          "precision": "year",
+          "approximate": false,
+          "label": "Turned a quarter turn and given a lighter hammer; strikes again"
+        }
+      ],
+      "sources": [
+        "parl-great-bell",
+        "parl-big-ben-casting",
+        "parl-big-ben-dates"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/big-ben-great-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "great-paul",
+      "title": "Great Paul (St Paul's Cathedral)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Great Paul, cast in 1881, is one of the heaviest bells ever made in Britain at about 17 tonnes. It hangs at St Paul's Cathedral in London.",
+        "student": "St Paul's gives Great Paul as 16.75 tons, cast in 1881 by John Taylor & Co, note E flat; it is now swung by hand. The cathedral also has a ring of 12 (Taylor, 1878) and Great Tom, a clock bell of over 5 tons cast in 1716 by Richard Phelps of Whitechapel."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "Great Paul, cast in 1881, is one of the heaviest bells ever made in Britain at about 17 tonnes. It hangs at St Paul's Cathedral in London.",
+      "places": [
+        {
+          "region": "GB",
+          "lat": 51.51379,
+          "lng": -0.09845,
+          "precision": "site",
+          "note": "South-west tower, St Paul's Cathedral, London"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1878",
+          "precision": "year",
+          "approximate": false,
+          "label": "Taylor's cast the cathedral's ring of 12 bells"
+        },
+        {
+          "date": "1881",
+          "precision": "year",
+          "approximate": false,
+          "label": "Great Paul cast by John Taylor & Co"
+        }
+      ],
+      "sources": [
+        "stpauls-bells",
+        "belltrust-named-bells"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/great-paul.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: diameter."
+    },
+    {
+      "id": "great-tom-oxford",
+      "title": "Great Tom (Christ Church, Oxford)",
+      "aliases": [
+        "Great Tom of Oxford"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Great Tom is the big bell in Tom Tower at Christ Church, Oxford. It came from Osney Abbey and was recast in 1680.",
+        "student": "Christ Church records the great bell as originally from Osney Abbey, recast in 1680 by Christopher Hodson and hung in Tom Tower. Two bells of about 1410 by John Bird survive in the cathedral ring. Mass [UNKNOWN] in the official page."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "Great Tom is the big bell in Tom Tower at Christ Church, Oxford. It came from Osney Abbey and was recast in 1680.",
+      "places": [
+        {
+          "region": "GB",
+          "lat": 51.7502,
+          "lng": -1.25655,
+          "precision": "site",
+          "note": "Tom Tower, Christ Church, Oxford"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1680",
+          "precision": "year",
+          "approximate": false,
+          "label": "Recast by Christopher Hodson and hung in Tom Tower; the bell came from Osney Abbey"
+        }
+      ],
+      "sources": [
+        "chch-bells"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/great-tom-oxford.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: mass; diameter."
+    },
+    {
+      "id": "bow-bells",
+      "title": "Bow Bells (St Mary-le-Bow)",
+      "aliases": [
+        "Bells of St Mary-le-Bow"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Bow Bells are the bells of St Mary-le-Bow in London. They were destroyed in the Great Fire of 1666 and again in a 1941 air raid, and the present twelve bells were first rung in 1961.",
+        "student": "The church's history: lost in 1666; a peal of eight in 1677; tenor recast by Thomas Lester in 1738; twelve from 1881; recast by Gillett & Johnston in 1933; destroyed on 11 May 1941; recast at Whitechapel in 1956 using salvaged metal and first rung on 21 December 1961. A classic English change-ringing ring."
+      },
+      "layer": "bells",
+      "summary": "Bow Bells are the bells of St Mary-le-Bow in London. They were destroyed in the Great Fire of 1666 and again in a 1941 air raid, and the present twelve bells were first rung in 1961.",
+      "places": [
+        {
+          "region": "GB",
+          "lat": 51.51373,
+          "lng": -0.09353,
+          "precision": "site",
+          "note": "St Mary-le-Bow, Cheapside, London"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1666",
+          "precision": "year",
+          "approximate": false,
+          "label": "Bells destroyed in the Great Fire of London"
+        },
+        {
+          "date": "1677",
+          "precision": "year",
+          "approximate": false,
+          "label": "A new peal of eight"
+        },
+        {
+          "date": "1738",
+          "precision": "year",
+          "approximate": false,
+          "label": "Thomas Lester recasts the tenor"
+        },
+        {
+          "date": "1762",
+          "precision": "year",
+          "approximate": false,
+          "label": "The other seven bells recast"
+        },
+        {
+          "date": "1881",
+          "precision": "year",
+          "approximate": false,
+          "label": "Increased to twelve bells"
+        },
+        {
+          "date": "1933",
+          "precision": "year",
+          "approximate": false,
+          "label": "Recast by Gillett & Johnston after the bells became unringable (1926)"
+        },
+        {
+          "date": "1941-05-11",
+          "precision": "day",
+          "approximate": false,
+          "label": "Destroyed in an air raid"
+        },
+        {
+          "date": "1956",
+          "precision": "year",
+          "approximate": false,
+          "label": "New twelve cast at Whitechapel using salvaged metal"
+        },
+        {
+          "date": "1961-12-21",
+          "precision": "day",
+          "approximate": false,
+          "label": "First rung again"
+        }
+      ],
+      "sources": [
+        "stmarylebow-bells"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/bow-bells.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "liverpool-great-george",
+      "title": "Great George (Liverpool Cathedral)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Great George is a 15-tonne bell at Liverpool Cathedral, which also has the highest and heaviest peal of ringing bells in the world.",
+        "student": "The cathedral gives Great George as 15 tonnes and 2.9 m across; the 13-bell ring totals about 17 tonnes with a 4.06 t tenor, which it calls the highest and heaviest peal. The Taylor foundry trust (reference) gives casting in 1940 and installation in 1951."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "Great George is a 15-tonne bell at Liverpool Cathedral, which also has the highest and heaviest peal of ringing bells in the world.",
+      "places": [
+        {
+          "region": "GB",
+          "lat": 53.39732,
+          "lng": -2.97318,
+          "precision": "site",
+          "note": "Vestey Tower, Liverpool Cathedral"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1940",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast (per the Taylor foundry trust; not stated on the cathedral page)"
+        },
+        {
+          "date": "1951",
+          "precision": "year",
+          "approximate": false,
+          "label": "Installed after a wartime delay (foundry trust)"
+        }
+      ],
+      "sources": [
+        "liverpool-cathedral-bells",
+        "belltrust-named-bells"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/liverpool-great-george.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: cast date in an official source."
+    },
+    {
+      "id": "lutine-bell",
+      "title": "Lutine Bell (Lloyd's of London)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Lutine Bell came from the wreck of HMS Lutine, lost in 1799. It hangs at Lloyd's in London and was once rung so that news of a ship reached everyone at the same moment.",
+        "student": "Lloyd's records the frigate's loss on 9 October 1799 and recovery of the bell from the wreck in the late 1850s (1857 and 1858 both appear). It hangs in the Underwriting Room and is now rung only on special occasions."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Lutine Bell came from the wreck of HMS Lutine, lost in 1799. It hangs at Lloyd's in London and was once rung so that news of a ship reached everyone at the same moment.",
+      "places": [
+        {
+          "region": "GB",
+          "lat": 51.51296,
+          "lng": -0.08241,
+          "precision": "site",
+          "note": "Underwriting Room, Lloyd's building, City of London"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1799-10-09",
+          "precision": "day",
+          "approximate": false,
+          "label": "HMS Lutine wrecked off the Dutch coast"
+        },
+        {
+          "date": "1858",
+          "precision": "year",
+          "approximate": true,
+          "label": "Bell recovered from the wreck (Lloyd's gives both 1857 and 1858)"
+        }
+      ],
+      "sources": [
+        "lloyds-hms-lutine"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/lutine-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: exact recovery year; mass."
+    },
+    {
+      "id": "hms-hood-bell",
+      "title": "HMS Hood's bell",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "This ship's bell was raised from the wreck of HMS Hood, sunk in 1941, nearly 3 km down. It is now a memorial in Portsmouth.",
+        "student": "The Royal Navy recovered the bell in 2015 and rededicated it on 24 May 2016. The museum notes it first served in an earlier battleship Hood launched in 1891, so it outlived three ships of the name."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "This ship's bell was raised from the wreck of HMS Hood, sunk in 1941, nearly 3 km down. It is now a memorial in Portsmouth.",
+      "places": [
+        {
+          "region": "GB",
+          "lat": 50.80047,
+          "lng": -1.10948,
+          "precision": "site",
+          "note": "National Museum of the Royal Navy, Portsmouth (pin approximate) (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1891",
+          "precision": "year",
+          "approximate": false,
+          "label": "The bell first served in the earlier battleship Hood, launched this year"
+        },
+        {
+          "date": "1941-05-24",
+          "precision": "day",
+          "approximate": false,
+          "label": "HMS Hood sunk in the Denmark Strait with about 1,400 lost"
+        },
+        {
+          "date": "2015",
+          "precision": "year",
+          "approximate": false,
+          "label": "Recovered from the wreck at a depth of nearly 3 km"
+        },
+        {
+          "date": "2016-05-24",
+          "precision": "day",
+          "approximate": false,
+          "label": "Rededicated in Portsmouth, 75 years after the sinking"
+        }
+      ],
+      "sources": [
+        "rn-hood-bell-2016",
+        "nmrn-hood-bell"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/hms-hood-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed."
+    },
+    {
+      "id": "pummerin",
+      "title": "Pummerin (St. Stephen's Cathedral, Vienna)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Pummerin is the great bell of St. Stephen's Cathedral in Vienna. The first one, made from captured cannon in 1711, shattered in the 1945 fire; the new bell weighs about 20 tonnes.",
+        "student": "The cathedral gives the 1951 bell as 20,130 kg, 313.6 cm across, wall 23 cm, note c°+4; it was consecrated in 1952 and hung in the North Tower in 1957, with a 637 kg clapper from 2011. Its predecessor (1711) fell and broke in April 1945."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Pummerin is the great bell of St. Stephen's Cathedral in Vienna. The first one, made from captured cannon in 1711, shattered in the 1945 fire; the new bell weighs about 20 tonnes.",
+      "places": [
+        {
+          "region": "AT",
+          "lat": 48.20849,
+          "lng": 16.37313,
+          "precision": "site",
+          "note": "North Tower, St. Stephen's Cathedral, Vienna"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1711",
+          "precision": "year",
+          "approximate": false,
+          "label": "First Pummerin cast from captured cannon under Emperor Joseph I"
+        },
+        {
+          "date": "1937",
+          "precision": "year",
+          "approximate": false,
+          "label": "Last rung"
+        },
+        {
+          "date": "1945-04",
+          "precision": "month",
+          "approximate": false,
+          "label": "Falls in the cathedral fire and shatters"
+        },
+        {
+          "date": "1951",
+          "precision": "year",
+          "approximate": false,
+          "label": "Recast at St. Florian"
+        },
+        {
+          "date": "1952",
+          "precision": "year",
+          "approximate": false,
+          "label": "Consecrated"
+        },
+        {
+          "date": "1957",
+          "precision": "year",
+          "approximate": false,
+          "label": "Raised into the North Tower"
+        },
+        {
+          "date": "2011",
+          "precision": "year",
+          "approximate": false,
+          "label": "Fitted with a new 637 kg clapper"
+        }
+      ],
+      "sources": [
+        "stephansdom-pummerin",
+        "wien-geschichte-pummerin"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/pummerin.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "emmanuel-notre-dame",
+      "title": "Emmanuel (great bourdon of Notre-Dame de Paris)",
+      "aliases": [
+        "Bourdon Emmanuel"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Emmanuel is the biggest bell of Notre-Dame de Paris, recast in 1686 and weighing about 13 tonnes. It survived the 2019 fire in the south tower.",
+        "student": "The Ministry of Culture page traces castings in 1680–1681, a bell hoisted in 1682 that sounded a semitone low, and a successful recasting on 4 March 1686, blessed on 29 April 1686. Present figures: 13,320 kg, diameter 261 cm. The cathedral calls it the great bourdon of the south tower."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "Emmanuel is the biggest bell of Notre-Dame de Paris, recast in 1686 and weighing about 13 tonnes. It survived the 2019 fire in the south tower.",
+      "places": [
+        {
+          "region": "FR",
+          "lat": 48.85294,
+          "lng": 2.35005,
+          "precision": "site",
+          "note": "South tower, Notre-Dame de Paris"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1680-07-22",
+          "precision": "day",
+          "approximate": false,
+          "label": "The earlier bourdon Jacqueline is renamed Emmanuel"
+        },
+        {
+          "date": "1680-09-17",
+          "precision": "day",
+          "approximate": false,
+          "label": "First casting attempt (Jean Thibault)"
+        },
+        {
+          "date": "1682-07-14",
+          "precision": "day",
+          "approximate": false,
+          "label": "Hoisted into the south tower; found to be a semitone too low"
+        },
+        {
+          "date": "1686-03-04",
+          "precision": "day",
+          "approximate": false,
+          "label": "Successful recasting"
+        },
+        {
+          "date": "1686-04-29",
+          "precision": "day",
+          "approximate": false,
+          "label": "Blessed; Louis XIV is its sponsor"
+        },
+        {
+          "date": "2019-04-15",
+          "precision": "day",
+          "approximate": false,
+          "label": "Cathedral fire; the south tower and bourdon survive"
+        }
+      ],
+      "sources": [
+        "culture-gouv-emmanuel",
+        "nd-paris-emmanuel",
+        "rebatir-nd-tours"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/emmanuel-notre-dame.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: note name in an official source."
+    },
+    {
+      "id": "savoyarde",
+      "title": "La Savoyarde (Sacré-Cœur, Paris)",
+      "aliases": [
+        "Savoyarde"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "La Savoyarde is the 19-tonne bell of Sacré-Cœur in Paris. It was hauled up Montmartre by 28 horses in 1895.",
+        "student": "The basilica says Paccard cast it on 12 May 1891 at Annecy-le-Vieux (inscribed 1890; another line on the page says 1895, a conflict we keep open). It reached Montmartre on 16 October 1895 drawn by 28 horses; 19 t, low C, given by the dioceses of Savoie."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "La Savoyarde is the 19-tonne bell of Sacré-Cœur in Paris. It was hauled up Montmartre by 28 horses in 1895.",
+      "places": [
+        {
+          "region": "FR",
+          "lat": 48.88681,
+          "lng": 2.34302,
+          "precision": "site",
+          "note": "Bell tower, Basilica of Sacré-Cœur, Montmartre, Paris"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1891-05-12",
+          "precision": "day",
+          "approximate": false,
+          "label": "Cast by Paccard at Annecy-le-Vieux (the bell is inscribed 1890; one page line says 1895)"
+        },
+        {
+          "date": "1895-10-16",
+          "precision": "day",
+          "approximate": false,
+          "label": "Arrives at Montmartre, drawn by 28 horses"
+        }
+      ],
+      "sources": [
+        "sacrecoeur-savoyarde"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/savoyarde.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: casting year conflict."
+    },
+    {
+      "id": "gloriosa-erfurt",
+      "title": "Gloriosa (Erfurt Cathedral)",
+      "aliases": [
+        "Maria Gloriosa"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Gloriosa in Erfurt Cathedral, cast in 1497, is the largest free-swinging medieval bell. It weighs about 11.5 tonnes.",
+        "student": "Erfurt's city page gives a first consecration in 1251 and several recastings, the last in 1497: 11,450 kg, 2.57 m across, 2.50 m tall with crown. The founder is not named on the official page [UNKNOWN]."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Gloriosa in Erfurt Cathedral, cast in 1497, is the largest free-swinging medieval bell. It weighs about 11.5 tonnes.",
+      "places": [
+        {
+          "region": "DE",
+          "lat": 50.97571,
+          "lng": 11.02291,
+          "precision": "site",
+          "note": "Erfurt Cathedral (Dom St. Marien)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1251",
+          "precision": "year",
+          "approximate": false,
+          "label": "A first bell consecrated"
+        },
+        {
+          "date": "1497",
+          "precision": "year",
+          "approximate": false,
+          "label": "Last recast, the bell that hangs today"
+        }
+      ],
+      "sources": [
+        "erfurt-dom"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/gloriosa-erfurt.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: founder."
+    },
+    {
+      "id": "petersglocke-cologne",
+      "title": "Petersglocke (Cologne Cathedral)",
+      "aliases": [
+        "St. Peter's Bell",
+        "Decke Pitter"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Petersglocke in Cologne Cathedral weighs 24 tonnes. It replaced the Kaiserglocke, which was melted down in 1918.",
+        "student": "The cathedral records an order of 13 March 1922 to Gebr. Ulrich in Apolda and casting on 5 May 1923 by Heinrich Ulrich: 24,000 kg, 3.22 m across, 3.2 m high, note c0, clapper about 600 kg."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Petersglocke in Cologne Cathedral weighs 24 tonnes. It replaced the Kaiserglocke, which was melted down in 1918.",
+      "places": [
+        {
+          "region": "DE",
+          "lat": 50.9413,
+          "lng": 6.95814,
+          "precision": "site",
+          "note": "South tower, Cologne Cathedral"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1874",
+          "precision": "year",
+          "approximate": false,
+          "label": "Predecessor Kaiserglocke cast by Andreas Hamm"
+        },
+        {
+          "date": "1918",
+          "precision": "year",
+          "approximate": false,
+          "label": "Kaiserglocke melted down"
+        },
+        {
+          "date": "1922-03-13",
+          "precision": "day",
+          "approximate": false,
+          "label": "New bell ordered from Gebr. Ulrich, Apolda"
+        },
+        {
+          "date": "1923-05-05",
+          "precision": "day",
+          "approximate": false,
+          "label": "Cast by Heinrich Ulrich (the inscription says 1922)"
+        }
+      ],
+      "sources": [
+        "koelner-dom-petersglocke"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/petersglocke-cologne.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "freedom-bell-berlin",
+      "title": "Freedom Bell (Rathaus Schöneberg, Berlin)",
+      "aliases": [
+        "Freiheitsglocke"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Freedom Bell was cast in England in 1950, toured the United States and was given to West Berlin. It first rang on 24 October 1950.",
+        "student": "Berlin's district office records casting at Gillett & Johnston on 27 July 1950, a tour of 26 US states (the Crusade for Freedom, backed by about 16 million Americans), shipment on 25 August and a first ring on 24 October 1950 before more than 400,000 people."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Freedom Bell was cast in England in 1950, toured the United States and was given to West Berlin. It first rang on 24 October 1950.",
+      "places": [
+        {
+          "region": "DE",
+          "lat": 52.48483,
+          "lng": 13.3441,
+          "precision": "site",
+          "note": "Tower of Rathaus Schöneberg, Berlin"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1950-07-27",
+          "precision": "day",
+          "approximate": false,
+          "label": "Cast by Gillett & Johnston, Croydon"
+        },
+        {
+          "date": "1950",
+          "precision": "year",
+          "approximate": false,
+          "label": "Tours 26 US states in the Crusade for Freedom"
+        },
+        {
+          "date": "1950-08-25",
+          "precision": "day",
+          "approximate": false,
+          "label": "Shipped to Berlin"
+        },
+        {
+          "date": "1950-10-24",
+          "precision": "day",
+          "approximate": false,
+          "label": "First rung before more than 400,000 people"
+        }
+      ],
+      "sources": [
+        "berlin-freiheitsglocke",
+        "berlin-freiheitsglocke-75"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/freedom-bell-berlin.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: mass."
+    },
+    {
+      "id": "zygmunt-bell",
+      "title": "Sigismund Bell (Wawel Cathedral)",
+      "aliases": [
+        "Zygmunt",
+        "Royal Sigismund Bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Sigismund Bell at Wawel Cathedral in Kraków was cast in 1520. It is Poland's most famous bell and is rung by hand on great occasions.",
+        "student": "The cathedral gives casting in 1520 by Hans Behem of Nuremberg in Kraków, diameter 242 cm, body 9,650 kg and about 12,600 kg in all, with an original clapper of 323 kg."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Sigismund Bell at Wawel Cathedral in Kraków was cast in 1520. It is Poland's most famous bell and is rung by hand on great occasions.",
+      "places": [
+        {
+          "region": "PL",
+          "lat": 50.05465,
+          "lng": 19.93546,
+          "precision": "site",
+          "note": "Sigismund Tower, Wawel Cathedral, Kraków"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1520",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast in Kraków by Hans Behem"
+        }
+      ],
+      "sources": [
+        "wawel-zygmunt"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/zygmunt-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "campanone-st-peters",
+      "title": "Campanone (St Peter's Basilica)",
+      "aliases": [
+        "Great bell of St Peter's"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Campanone is the great bell of St Peter's Basilica in Rome. The present bell was cast in 1785 and weighs nearly 9 tonnes.",
+        "student": "Vatican pages give the Campanone as cast in 1785 by Luigi Valadier, 8,950 kg, 2316 mm across, nominal MI2 +5/16. An earlier campanone was recast in 1352–54 after the fire of 1303; electric ringing dates from 4 November 1931."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Campanone is the great bell of St Peter's Basilica in Rome. The present bell was cast in 1785 and weighs nearly 9 tonnes.",
+      "places": [
+        {
+          "region": "VA",
+          "lat": 41.90216,
+          "lng": 12.45371,
+          "precision": "site",
+          "note": "Bell chamber, St Peter's Basilica, Vatican City"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1303",
+          "precision": "year",
+          "approximate": false,
+          "label": "Fire breaks the basilica's bells"
+        },
+        {
+          "date": "1352",
+          "end": "1354",
+          "precision": "year",
+          "approximate": false,
+          "label": "Campanone recast under Innocent VI"
+        },
+        {
+          "date": "1785",
+          "precision": "year",
+          "approximate": false,
+          "label": "Present Campanone cast by Luigi Valadier"
+        },
+        {
+          "date": "1931-11-04",
+          "precision": "day",
+          "approximate": false,
+          "label": "Electric ringing begins"
+        }
+      ],
+      "sources": [
+        "vatican-campane",
+        "vatican-campane-info"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/campanone-st-peters.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "mechelen-carillons",
+      "title": "Mechelen carillons (St Rumbold's Tower)",
+      "aliases": [
+        "Mechelen carillon"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Mechelen in Belgium is a world centre of the carillon, a set of tuned bells played from a keyboard. St Rumbold's Tower holds two carillons and the city has a famous carillon school.",
+        "student": "Visit Mechelen describes six carillons in the city, two in St Rumbold's Tower (one installed in 1981), and the carillon school founded by Jef Denyn in 1922. Belgian carillon culture was recognised by UNESCO in 2014 (per the city)."
+      },
+      "layer": "bells",
+      "summary": "Mechelen in Belgium is a world centre of the carillon, a set of tuned bells played from a keyboard. St Rumbold's Tower holds two carillons and the city has a famous carillon school.",
+      "places": [
+        {
+          "region": "BE",
+          "lat": 51.02881,
+          "lng": 4.4783,
+          "precision": "site",
+          "note": "St Rumbold's Tower, Mechelen"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1922",
+          "precision": "year",
+          "approximate": false,
+          "label": "Royal Carillon School founded by Jef Denyn"
+        },
+        {
+          "date": "1981",
+          "precision": "year",
+          "approximate": false,
+          "label": "A new carillon installed in St Rumbold's Tower"
+        },
+        {
+          "date": "2014",
+          "precision": "year",
+          "approximate": false,
+          "label": "Belgian carillon culture recognised by UNESCO"
+        }
+      ],
+      "sources": [
+        "visitmechelen-carillon",
+        "mechelen-onzetoren"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/mechelen-carillons.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: bell count and founders per carillon."
+    },
+    {
+      "id": "bruges-belfry-carillon",
+      "title": "Bruges Belfry carillon",
+      "aliases": [
+        "Belfort carillon"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Belfry of Bruges has a carillon of 47 bells weighing about 27 tonnes together. Its biggest bell dates from 1680.",
+        "student": "Visit Bruges gives 47 bells totalling about 27 t, mostly 18th-century, with a 1680 victory bell of 6 t and 2 m diameter. The belfry is part of UNESCO site 943 (1999, extended 2005), which records civic belfries as symbols of municipal freedom."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Belfry of Bruges has a carillon of 47 bells weighing about 27 tonnes together. Its biggest bell dates from 1680.",
+      "places": [
+        {
+          "region": "BE",
+          "lat": 51.20823,
+          "lng": 3.22479,
+          "precision": "site",
+          "note": "Belfry of Bruges, Markt"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1680",
+          "precision": "year",
+          "approximate": false,
+          "label": "Victory bell cast (6 t, 2 m), the largest of the carillon"
+        },
+        {
+          "date": "1999",
+          "precision": "year",
+          "approximate": false,
+          "label": "Belfries inscribed on the World Heritage List (extended 2005)"
+        }
+      ],
+      "sources": [
+        "visitbruges-carillon",
+        "unesco-whc-943"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/bruges-belfry-carillon.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "bianzhong-marquis-yi",
+      "title": "Bianzhong of Marquis Yi of Zeng",
+      "aliases": [
+        "Zeng Hou Yi bianzhong",
+        "Chime bells of Marquis Yi"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ],
+        [
+          "history-places",
+          "archaeology-sites"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "These 65 bronze bells from the tomb of Marquis Yi of Zeng are about 2,400 years old. Each bell can play two different notes depending on where it is struck.",
+        "student": "The Hubei Provincial Museum lists 65 bells (19 niuzhong, 45 yongzhong and one bo bell given by King Hui of Chu) on a 7.48 m rack in three tiers and eight groups, with 3,755 inscribed characters on music theory. Each bell sounds two tones a third apart; the set spans about 5.5 octaves. UNESCO lists it in Memory of the World."
+      },
+      "layer": "bells",
+      "summary": "These 65 bronze bells from the tomb of Marquis Yi of Zeng are about 2,400 years old. Each bell can play two different notes depending on where it is struck.",
+      "places": [
+        {
+          "region": "CN",
+          "lat": 30.56401,
+          "lng": 114.35998,
+          "precision": "site",
+          "note": "Hubei Provincial Museum, Wuhan (excavated at Suizhou)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-432",
+          "precision": "year",
+          "approximate": true,
+          "label": "Burial of Marquis Yi, early Warring States period (UNESCO: about 2,400 years ago, 5th century BCE)"
+        },
+        {
+          "date": "1978",
+          "precision": "year",
+          "approximate": false,
+          "label": "65 bells excavated at Suizhou, Hubei"
+        }
+      ],
+      "sources": [
+        "hbww-zeng-bianzhong",
+        "unesco-mow-zeng"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/bianzhong-marquis-yi.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed. Gaps: exact burial year (pinned as approximate 433 BCE from UNESCO's 5th century BCE framing)."
+    },
+    {
+      "id": "yongle-bell",
+      "title": "Yongle Bell (Dazhong Temple, Beijing)",
+      "aliases": [
+        "Yongle Great Bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Yongle Bell in Beijing was cast in the early 1400s and weighs about 46 tonnes. More than 230,000 Chinese and Sanskrit characters cover it.",
+        "student": "Beijing's government page gives 46.5 t, 6.75 m high and 3.3 m across, cast under the Yongle Emperor (1403–1424), with more than 230,000 characters of Buddhist texts. The heritage bureau gives about 46 t and 5.5 m: the height conflict is kept open."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Yongle Bell in Beijing was cast in the early 1400s and weighs about 46 tonnes. More than 230,000 Chinese and Sanskrit characters cover it.",
+      "places": [
+        {
+          "region": "CN",
+          "lat": 39.96783,
+          "lng": 116.33199,
+          "precision": "site",
+          "note": "Dazhong Temple Ancient Bell Museum, Beijing"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1403",
+          "end": "1424",
+          "precision": "year",
+          "approximate": true,
+          "label": "Cast during the Yongle reign of the Ming dynasty"
+        }
+      ],
+      "sources": [
+        "beijing-dazhongsi",
+        "wwj-yongle-bell"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/yongle-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed. Gaps: height conflict (6.75 m vs 5.5 m); exact casting year."
+    },
+    {
+      "id": "seongdeok-bell",
+      "title": "Sacred Bell of Great King Seongdeok",
+      "aliases": [
+        "Emille Bell",
+        "Bell of Bongdeoksa"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Sacred Bell of Great King Seongdeok in Gyeongju, finished in 771, is Korea's largest bell at about 18.9 tonnes. It is also called the Emille Bell.",
+        "student": "Korea Heritage Service: completed in 771, 3.75 m high, 2.27 m across, walls 11–25 cm, about 18.9 t, first hung at Bongdeoksa, with a sound tube on top typical of Korean bells. Gyeongju City gives 3.66 m (height conflict kept open)."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Sacred Bell of Great King Seongdeok in Gyeongju, finished in 771, is Korea's largest bell at about 18.9 tonnes. It is also called the Emille Bell.",
+      "places": [
+        {
+          "region": "KR",
+          "lat": 35.82899,
+          "lng": 129.22797,
+          "precision": "site",
+          "note": "Gyeongju National Museum"
+        }
+      ],
+      "dates": [
+        {
+          "date": "771",
+          "precision": "year",
+          "approximate": false,
+          "label": "Completed under King Hyegong of Unified Silla"
+        },
+        {
+          "date": "1962-12-20",
+          "precision": "day",
+          "approximate": false,
+          "label": "Designated a National Treasure"
+        }
+      ],
+      "sources": [
+        "khs-seongdeok",
+        "gyeongju-seongdeok"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/seongdeok-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed. Gaps: height conflict (3.75 m vs 3.66 m)."
+    },
+    {
+      "id": "sangwonsa-bell",
+      "title": "Bronze Bell of Sangwonsa Temple",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The bell at Sangwonsa Temple, cast in 725, is the oldest Korean bell that survives.",
+        "student": "Korea Heritage Service gives casting in 725, height 1.67 m and diameter 0.91 m, designated on 20 December 1962. Mass [UNKNOWN]."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The bell at Sangwonsa Temple, cast in 725, is the oldest Korean bell that survives.",
+      "places": [
+        {
+          "region": "KR",
+          "lat": 37.78637,
+          "lng": 128.56396,
+          "precision": "site",
+          "note": "Sangwonsa Temple, Odaesan, Pyeongchang"
+        }
+      ],
+      "dates": [
+        {
+          "date": "725",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast (Unified Silla)"
+        },
+        {
+          "date": "1962-12-20",
+          "precision": "day",
+          "approximate": false,
+          "label": "Designated a National Treasure"
+        }
+      ],
+      "sources": [
+        "khs-sangwonsa"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/sangwonsa-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: mass."
+    },
+    {
+      "id": "todaiji-bell",
+      "title": "Great bell of Tōdai-ji",
+      "aliases": [
+        "Todaiji bonsho"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Tōdai-ji's great bell in Nara weighs 26.3 tonnes and dates from the temple's founding in the 700s. It is struck with a big wooden beam rather than a clapper.",
+        "student": "Tōdai-ji gives 26.3 t; Nara City gives 3.86 m total height and 2.71 m diameter, a bell tower rebuilt in 1210 and a zelkova striking beam 4.48 m long and 180 kg. Like other bonshō it has no clapper. Exact casting year [UNKNOWN] (pinned as approximate 752)."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "Tōdai-ji's great bell in Nara weighs 26.3 tonnes and dates from the temple's founding in the 700s. It is struck with a big wooden beam rather than a clapper.",
+      "places": [
+        {
+          "region": "JP",
+          "lat": 34.68824,
+          "lng": 135.83976,
+          "precision": "site",
+          "note": "Shōrō bell tower, Tōdai-ji, Nara (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "752",
+          "precision": "year",
+          "approximate": true,
+          "label": "Dates from the temple's founding period in the 8th century (exact year [UNKNOWN])"
+        },
+        {
+          "date": "1210",
+          "precision": "year",
+          "approximate": false,
+          "label": "Bell tower rebuilt"
+        }
+      ],
+      "sources": [
+        "todaiji-shoro",
+        "nara-todaiji-shoro"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/todaiji-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: exact casting year."
+    },
+    {
+      "id": "chion-in-bell",
+      "title": "Great bell of Chion-in",
+      "aliases": [
+        "Chion-in ogane"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Chion-in's great bell in Kyoto was cast in 1636 and weighs about 70 tonnes, one of the largest bells in Japan.",
+        "student": "Chion-in gives casting in 1636, 3.3 m high, 2.7 m across and 70 t. It is a bonshō struck from outside with a swinging beam."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "Chion-in's great bell in Kyoto was cast in 1636 and weighs about 70 tonnes, one of the largest bells in Japan.",
+      "places": [
+        {
+          "region": "JP",
+          "lat": 35.00562,
+          "lng": 135.78354,
+          "precision": "site",
+          "note": "Daishōrō bell tower, Chion-in, Kyoto"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1636",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast"
+        }
+      ],
+      "sources": [
+        "chionin-daishoro"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/chion-in-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "byodoin-bell",
+      "title": "Bronze bell of Byōdō-in",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Byōdō-in's bronze bell is a National Treasure from the 12th century, famous for its fine decoration.",
+        "student": "Byodoin lists the bell as Heian period, 12th century: body height 146.0 cm, thickness 12.0 cm, National Treasure. Diameter and mass [UNKNOWN]."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "Byōdō-in's bronze bell is a National Treasure from the 12th century, famous for its fine decoration.",
+      "places": [
+        {
+          "region": "JP",
+          "lat": 34.8895,
+          "lng": 135.80745,
+          "precision": "site",
+          "note": "Byōdō-in, Uji (museum)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1100",
+          "precision": "year",
+          "approximate": true,
+          "label": "Cast in the Heian period, 12th century (year approximate)"
+        }
+      ],
+      "sources": [
+        "byodoin-sculpture"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/byodoin-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed. Gaps: exact year; diameter; mass."
+    },
+    {
+      "id": "hiroshima-peace-bell",
+      "title": "Peace Bell (Hiroshima Peace Memorial Park)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Peace Bell in Hiroshima was finished in 1964. Visitors strike it to pray for a world without nuclear weapons.",
+        "student": "The foundation gives completion on 20 September 1964, about 1 m across, 1.7 m high and about 1,200 kg."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Peace Bell in Hiroshima was finished in 1964. Visitors strike it to pray for a world without nuclear weapons.",
+      "places": [
+        {
+          "region": "JP",
+          "lat": 34.39487,
+          "lng": 132.45241,
+          "precision": "site",
+          "note": "Peace Memorial Park, Hiroshima"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1964-09-20",
+          "precision": "day",
+          "approximate": false,
+          "label": "Completed"
+        }
+      ],
+      "sources": [
+        "hiroshima-pcf-peacebell"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/hiroshima-peace-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "mingun-bell",
+      "title": "Mingun Bell",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Mingun Bell in Myanmar weighs about 90 tonnes and is one of the largest working bells in the world.",
+        "student": "Myanmar Digital News gives casting on 29 April 1808 by King Badon (Bodawpaya), 90.52 tons or 55,555 viss; a Dagon University paper gives 90,718 kg, work 1808–1810, and notes the bell is uncracked."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Mingun Bell in Myanmar weighs about 90 tonnes and is one of the largest working bells in the world.",
+      "places": [
+        {
+          "region": "MM",
+          "lat": 22.053,
+          "lng": 96.0178,
+          "precision": "site",
+          "note": "Mingun, Sagaing Region"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1808-04-29",
+          "precision": "day",
+          "approximate": false,
+          "label": "Casting by order of King Bodawpaya"
+        },
+        {
+          "date": "1810",
+          "precision": "year",
+          "approximate": true,
+          "label": "Work completed (the Dagon University paper gives 1808–1810)"
+        }
+      ],
+      "sources": [
+        "mdn-mingun",
+        "dagon-bells-paper"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/mingun-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: dimensions in an official source."
+    },
+    {
+      "id": "dhammazedi-bell",
+      "title": "Dhammazedi Bell (lost)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Dhammazedi Bell was a huge 15th-century bell that sank in a river in Myanmar in 1608. People have searched for it ever since.",
+        "student": "BBC reporting (a reference, not an official source) describes a 15th-century bell, reportedly near 300 t, seized in 1608 by the Portuguese adventurer Filipe de Brito and lost from a raft. No official record was found [UNKNOWN]."
+      },
+      "layer": "bells",
+      "summary": "The Dhammazedi Bell was a huge 15th-century bell that sank in a river in Myanmar in 1608. People have searched for it ever since.",
+      "places": [
+        {
+          "region": "MM",
+          "lat": 16.76851,
+          "lng": 96.172,
+          "precision": "site",
+          "note": "Last known: river near Yangon (very approximate) (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1484",
+          "precision": "year",
+          "approximate": true,
+          "label": "Cast in the 15th century (exact year [UNKNOWN])"
+        },
+        {
+          "date": "1608",
+          "precision": "year",
+          "approximate": false,
+          "label": "Seized by Filipe de Brito; sinks in the river from a raft"
+        }
+      ],
+      "sources": [
+        "bbc-dhammazedi"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/dhammazedi-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "low",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status lost. Official source [UNKNOWN]. Gaps: official source; mass; exact location; exact casting year (pinned as approximate 1484)."
+    },
+    {
+      "id": "balangiga-bells",
+      "title": "Bells of Balangiga",
+      "aliases": [
+        "Balangiga bells"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Bells of Balangiga were church bells taken from the Philippines by US troops in 1901. The United States gave them back in 2018.",
+        "student": "The US Air Force records that the bells were used in a 1901 attack in which 45 US soldiers were killed, were kept at F.E. Warren AFB from 1904, joined the Air Force museum system in 1992 and were presented to the Philippines on 14 November 2018. Number of bells and present place [UNKNOWN] from official pages we could open."
+      },
+      "layer": "bells",
+      "summary": "The Bells of Balangiga were church bells taken from the Philippines by US troops in 1901. The United States gave them back in 2018.",
+      "places": [
+        {
+          "region": "PH",
+          "lat": 11.10745,
+          "lng": 125.38745,
+          "precision": "site",
+          "note": "Balangiga, Eastern Samar (home town; current hanging place [UNKNOWN]) (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1901",
+          "precision": "year",
+          "approximate": false,
+          "label": "Used during an attack on an American garrison in which 45 soldiers were killed; taken to the US"
+        },
+        {
+          "date": "1904",
+          "precision": "year",
+          "approximate": false,
+          "label": "Housed at F.E. Warren Air Force Base, Wyoming"
+        },
+        {
+          "date": "1992",
+          "precision": "year",
+          "approximate": false,
+          "label": "Become property of the US Air Force Museum System"
+        },
+        {
+          "date": "2018-11-14",
+          "precision": "day",
+          "approximate": false,
+          "label": "Officially presented to the Philippine government at F.E. Warren AFB"
+        }
+      ],
+      "sources": [
+        "af-balangiga"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/balangiga-bells.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status [UNKNOWN]. Official source listed. Gaps: present location; bell count; dimensions."
+    },
+    {
+      "id": "panaji-church-bell",
+      "title": "Bell of Our Lady of the Immaculate Conception, Panaji",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The church in Panaji, Goa, has a 2,250 kg bell that came from a ruined Augustinian church. It is the second largest bell in Goa.",
+        "student": "Goa Tourism says the bell came from the ruined Augustinian church of Our Lady of Grace, was first hung at the Fort Aguada chapel, and that the belfry was strengthened in 1871; 2,250 kg, second in Goa after the Golden Bell. Cast date [UNKNOWN]."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The church in Panaji, Goa, has a 2,250 kg bell that came from a ruined Augustinian church. It is the second largest bell in Goa.",
+      "places": [
+        {
+          "region": "IN",
+          "lat": 15.49853,
+          "lng": 73.82974,
+          "precision": "site",
+          "note": "Our Lady of the Immaculate Conception Church, Panaji, Goa"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1871",
+          "precision": "year",
+          "approximate": false,
+          "label": "Staircase and belfry strengthened to take the bell (Goa Tourism)"
+        }
+      ],
+      "sources": [
+        "goa-gtdc-panaji"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/panaji-church-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: cast date; founder."
+    },
+    {
+      "id": "nimrud-bronze-bell",
+      "title": "Neo-Assyrian bronze bell from Nimrud",
+      "aliases": [
+        "British Museum N.162"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ],
+        [
+          "history-places",
+          "archaeology-sites"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "This little bell, only about 5 cm tall, was made in Assyria nearly 3,000 years ago. Small bells like it are among the oldest bells we know.",
+        "student": "British Museum N.162: Neo-Assyrian, 800–700 BC, copper alloy with an iron clapper, 5.20 cm high and 3.45 cm across, excavated at Nimrud (the record credits A. H. Layard). Excavation year [UNKNOWN] in our notes."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "This little bell, only about 5 cm tall, was made in Assyria nearly 3,000 years ago. Small bells like it are among the oldest bells we know.",
+      "places": [
+        {
+          "region": "IQ",
+          "lat": 36.0982,
+          "lng": 43.32886,
+          "precision": "site",
+          "note": "Findspot: Nimrud (object now in the British Museum, London) (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-799",
+          "end": "-699",
+          "precision": "year",
+          "approximate": true,
+          "label": "Made in the Neo-Assyrian period, 800–700 BC"
+        }
+      ],
+      "sources": [
+        "bm-n162"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/nimrud-bronze-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed. Gaps: excavation year."
+    },
+    {
+      "id": "liberty-bell",
+      "title": "Liberty Bell",
+      "aliases": [
+        "State House bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Liberty Bell was made for the Pennsylvania State House (now Independence Hall). It weighs 2,080 lb and cracked for good in 1846. It became a symbol of freedom for abolitionists and many others.",
+        "student": "NPS: ordered in 1751, first cast at Whitechapel (Lester & Pack) in 1752, cracked on test and recast twice by Pass and Stow in 1753. About 70% copper and 25% tin; 2,080 lb, 46.5 in across, 3 ft high. A thin crack was repaired in February 1846; it cracked again on 23 February 1846 and has not been rung since. NPS finds no evidence it rang on 4 or 8 July 1776; abolitionists named it the Liberty Bell in 1835."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Liberty Bell was made for the Pennsylvania State House (now Independence Hall). It weighs 2,080 lb and cracked for good in 1846. It became a symbol of freedom for abolitionists and many others.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 39.94995,
+          "lng": -75.15021,
+          "precision": "site",
+          "note": "Liberty Bell Center, Independence NHP, Philadelphia"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1751",
+          "precision": "year",
+          "approximate": false,
+          "label": "Ordered for the Pennsylvania State House"
+        },
+        {
+          "date": "1752",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast at Whitechapel by Thomas Lester and Thomas Pack"
+        },
+        {
+          "date": "1752-09-01",
+          "precision": "day",
+          "approximate": false,
+          "label": "Has arrived in Philadelphia by this date; cracks on a test ring"
+        },
+        {
+          "date": "1753",
+          "precision": "year",
+          "approximate": false,
+          "label": "Recast twice by John Pass and John Stow in Philadelphia"
+        },
+        {
+          "date": "1753-06",
+          "precision": "month",
+          "approximate": false,
+          "label": "The Pass and Stow bell is raised in the State House steeple (early June)"
+        },
+        {
+          "date": "1776-07-04",
+          "precision": "day",
+          "approximate": false,
+          "label": "NPS: no evidence the bell rang on July 4 or 8, 1776 (it did ring for the Stamp Act and its repeal)"
+        },
+        {
+          "date": "1835",
+          "precision": "year",
+          "approximate": false,
+          "label": "The Anti-Slavery Record first calls it the Liberty Bell"
+        },
+        {
+          "date": "1846-02-23",
+          "precision": "day",
+          "approximate": false,
+          "label": "Repaired for Washington's birthday, rung, and cracked beyond use"
+        },
+        {
+          "date": "1915",
+          "precision": "year",
+          "approximate": false,
+          "label": "Travels across the country to San Francisco and back, its last trip"
+        }
+      ],
+      "sources": [
+        "nps-liberty-bell",
+        "nps-liberty-bell-sheet",
+        "nps-bell-clock-facts",
+        "nps-bells-and-clocks",
+        "nps-justice-bell-dyk"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "centennial-bell"
+        },
+        {
+          "type": "see-also",
+          "to": "justice-bell"
+        },
+        {
+          "type": "see-also",
+          "to": "bicentennial-bell"
+        }
+      ],
+      "record": "data/atlas/bells/liberty-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed."
+    },
+    {
+      "id": "wilbank-bell",
+      "title": "Wilbank Bell (Independence Hall, 1828)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Wilbank Bell was cast in 1828 for the new tower of Independence Hall, between the Liberty Bell and the Centennial Bell. It later moved to Germantown.",
+        "student": "NPS: John Wilbank cast a larger bell in 1828 for the rebuilt tower; listeners disliked its first ring on 4 July and he replaced it. The fact sheet gives 4,600 lb and 61.5 in. The bell went to Germantown Town Hall in 1877 and to its Germantown Avenue building in 1924."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Wilbank Bell was cast in 1828 for the new tower of Independence Hall, between the Liberty Bell and the Centennial Bell. It later moved to Germantown.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 40.03827,
+          "lng": -75.17746,
+          "precision": "site",
+          "note": "Germantown Town Hall, Germantown Avenue, Philadelphia (its 1924 home; pin approximate) (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1828",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast by John Wilbank for the new Independence Hall tower; first rings on 4 July, but the sound disappoints and Wilbank replaces it"
+        },
+        {
+          "date": "1877",
+          "precision": "year",
+          "approximate": false,
+          "label": "The replacement bell moves to Germantown Town Hall on Market Square"
+        },
+        {
+          "date": "1924",
+          "precision": "year",
+          "approximate": false,
+          "label": "Moves with the Lukens clock to the Germantown Town Hall on Germantown Avenue"
+        }
+      ],
+      "sources": [
+        "nps-bells-and-clocks",
+        "nps-bell-clock-facts"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "liberty-bell"
+        },
+        {
+          "type": "see-also",
+          "to": "centennial-bell"
+        }
+      ],
+      "record": "data/atlas/bells/wilbank-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status [UNKNOWN]. Official source listed. Gaps: present location and condition."
+    },
+    {
+      "id": "centennial-bell",
+      "title": "Centennial Bell (Independence Hall)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Centennial Bell hangs where the Liberty Bell once did, in the Independence Hall tower. It weighs 13,000 lb and rings every hour.",
+        "student": "NPS gives 13,000 lb and a 7 ft 6 in diameter, cast at Meneely-Kimberly in Troy in 1876. Its metal includes 400 lb from four cannons: one American and one British from Saratoga, one Union and one Confederate from Gettysburg (fact sheet). Since 1926 a hammer strikes it on the hour. The National Register form gives 7 ft 3/4 in across (conflict kept open)."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Centennial Bell hangs where the Liberty Bell once did, in the Independence Hall tower. It weighs 13,000 lb and rings every hour.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 39.94889,
+          "lng": -75.15003,
+          "precision": "site",
+          "note": "Tower of Independence Hall, Philadelphia"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1876",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast at Meneely-Kimberly, Troy, for the centennial"
+        },
+        {
+          "date": "1876-07-04",
+          "precision": "day",
+          "approximate": false,
+          "label": "First rings for the nation's 100th birthday; listeners find the tone poor"
+        },
+        {
+          "date": "1876",
+          "precision": "year",
+          "approximate": true,
+          "label": "Sent back to Troy and recast; in the steeple again by the end of 1876"
+        },
+        {
+          "date": "1926",
+          "precision": "year",
+          "approximate": false,
+          "label": "A mechanical hammer begins striking the hours"
+        }
+      ],
+      "sources": [
+        "nps-bell-clock-facts",
+        "nps-centennial-bell-ring",
+        "nps-bells-and-clocks",
+        "nps-nrhp-inde"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "liberty-bell"
+        }
+      ],
+      "record": "data/atlas/bells/centennial-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: diameter conflict (7 ft 6 in fact sheet vs 7 ft 3/4 in National Register form)."
+    },
+    {
+      "id": "justice-bell",
+      "title": "Justice Bell (Women's Liberty Bell)",
+      "aliases": [
+        "Women's Liberty Bell",
+        "Suffrage Bell"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Justice Bell is a copy of the Liberty Bell made in 1915 for the fight for women's votes. Its clapper was chained so it could not ring until women won the vote in 1920.",
+        "student": "NPS: commissioned in 1915 by Katharine Wentworth Ruschenberger of the Pennsylvania Woman Suffrage Association, cast by Meneely in Troy without a crack, inscribed 'ESTABLISH JUSTICE'. It toured Pennsylvania's 67 counties silent; after the 19th Amendment it was rung on 25 September 1920. A Library of Congress photo shows the casting."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Justice Bell is a copy of the Liberty Bell made in 1915 for the fight for women's votes. Its clapper was chained so it could not ring until women won the vote in 1920.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 40.10476,
+          "lng": -75.43784,
+          "precision": "site",
+          "note": "Washington Memorial Chapel, Valley Forge, Pennsylvania"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1915",
+          "precision": "year",
+          "approximate": false,
+          "label": "Commissioned by suffragist Katharine Wentworth Ruschenberger and cast at Meneely, Troy (Library of Congress photo of the casting)"
+        },
+        {
+          "date": "1915",
+          "precision": "year",
+          "approximate": false,
+          "label": "Tours all 67 Pennsylvania counties, about 5,000 miles, with its clapper chained silent"
+        },
+        {
+          "date": "1915",
+          "precision": "year",
+          "approximate": false,
+          "label": "Pennsylvania's statewide suffrage referendum fails; the bell stays silent"
+        },
+        {
+          "date": "1920",
+          "precision": "year",
+          "approximate": false,
+          "label": "Tours several states for ratification of the 19th Amendment"
+        },
+        {
+          "date": "1920-09-25",
+          "precision": "day",
+          "approximate": false,
+          "label": "Unchained and rung on Independence Square, 48 times, once per state"
+        }
+      ],
+      "sources": [
+        "nps-justice-bell-dyk",
+        "nps-justice-bell-1920",
+        "loc-justice-bell-casting"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "liberty-bell"
+        }
+      ],
+      "record": "data/atlas/bells/justice-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: mass; dimensions."
+    },
+    {
+      "id": "bicentennial-bell",
+      "title": "Bicentennial Bell (Philadelphia)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Bicentennial Bell was a gift from the people of Britain for America's 200th birthday in 1976. It was cast at Whitechapel, the foundry that first cast the Liberty Bell.",
+        "student": "NPS: cast at the Whitechapel Foundry, presented on 6 July 1976, inscribed 'LET FREEDOM RING'; 6 ft 10.5 in across and 5 ft 6 in high (2013 release), note G below middle C, 12,466 lb (the 2013 release says 12,446 lb). It rang from a tower on 3rd Street until moved to storage on 31 January 2013, and now stands in the Benjamin Rush Garden."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Bicentennial Bell was a gift from the people of Britain for America's 200th birthday in 1976. It was cast at Whitechapel, the foundry that first cast the Liberty Bell.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 39.94743,
+          "lng": -75.14657,
+          "precision": "site",
+          "note": "Benjamin Rush Garden, 3rd and Walnut Streets, Philadelphia"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1976-07-06",
+          "precision": "day",
+          "approximate": false,
+          "label": "Presented by Britain to the people of the United States"
+        },
+        {
+          "date": "2013-01-31",
+          "precision": "day",
+          "approximate": false,
+          "label": "Lifted from its 130 ft tower and placed in museum storage"
+        },
+        {
+          "date": "2024",
+          "precision": "year",
+          "approximate": true,
+          "label": "On display in the renovated Benjamin Rush Garden"
+        }
+      ],
+      "sources": [
+        "nps-bicentennial-bell",
+        "nps-bicentennial-bell-move",
+        "nps-rush-garden"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "liberty-bell"
+        }
+      ],
+      "record": "data/atlas/bells/bicentennial-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed. Gaps: mass conflict (12,466 vs 12,446 lb)."
+    },
+    {
+      "id": "old-north-bells",
+      "title": "Old North Church bells",
+      "aliases": [
+        "Christ Church Boston bells"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The eight bells of Boston's Old North Church were cast in England in 1744. They were the first ring of change-ringing bells in North America.",
+        "student": "The Boston Landmarks Commission records eight bells cast in 1744 by the Rudhall foundry of Gloucestershire and installed in 1745, more than 5,000 lb in all, the first change-ringing bells in the British American colonies; NPS calls them the nation's first maiden peal. Old North gives a 1,545 lb tenor; NPS notes that Paul Revere rang bells there as a teenager and that the 1775 lantern signal was shown from this bell tower. The NPS-archive tower report records rehanging in 1894."
+      },
+      "layer": "bells",
+      "summary": "The eight bells of Boston's Old North Church were cast in England in 1744. They were the first ring of change-ringing bells in North America.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 42.36632,
+          "lng": -71.05445,
+          "precision": "site",
+          "note": "Old North Church (Christ Church), Boston"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1742",
+          "precision": "year",
+          "approximate": false,
+          "label": "Bells contracted from Abel Rudhall of Gloucester"
+        },
+        {
+          "date": "1744",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast in England by the Rudhall foundry (the same report also says 1745 once)"
+        },
+        {
+          "date": "1745",
+          "precision": "year",
+          "approximate": false,
+          "label": "Installed at Christ Church: the first change-ringing bells in the British American colonies"
+        },
+        {
+          "date": "1775-04-18",
+          "precision": "day",
+          "approximate": false,
+          "label": "Two signal lanterns are hung in the church's bell tower before the British march"
+        },
+        {
+          "date": "1894",
+          "precision": "year",
+          "approximate": false,
+          "label": "Bells rehung"
+        },
+        {
+          "date": "1975",
+          "precision": "year",
+          "approximate": false,
+          "label": "Restored for the Boston Bicentennial (church page)"
+        }
+      ],
+      "sources": [
+        "oldnorth-bells",
+        "boston-blc-old-north",
+        "nps-old-north",
+        "nps-old-north-bost",
+        "npshistory-christchurch"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/old-north-bells.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "world-peace-bell",
+      "title": "World Peace Bell (Newport, Kentucky)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The World Peace Bell in Newport, Kentucky, cast by Paccard in France, weighs 33 tonnes. It was made to ring in the year 2000.",
+        "student": "Paccard's portfolio gives 1999 as the year of casting and 33 metric tons; other accounts give December 1998 (not verified). It was installed at Newport for the millennium. Present status [UNKNOWN]."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The World Peace Bell in Newport, Kentucky, cast by Paccard in France, weighs 33 tonnes. It was made to ring in the year 2000.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 39.09495,
+          "lng": -84.49601,
+          "precision": "site",
+          "note": "Millennium Monument site, Newport, Kentucky (pin approximate) (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1999",
+          "precision": "year",
+          "approximate": false,
+          "label": "Year of casting per Paccard (other accounts say December 1998; not verified)"
+        }
+      ],
+      "sources": [
+        "paccard-world-peace-bell"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/world-peace-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "low",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status [UNKNOWN]. Official source [UNKNOWN]. Gaps: present status; official record; exact cast date."
+    },
+    {
+      "id": "un-japanese-peace-bell",
+      "title": "Japanese Peace Bell (United Nations, New York)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Japanese Peace Bell at the United Nations was cast in 1952 from coins given by people from 60 nations. It says 'Long live absolute world peace'.",
+        "student": "UN Gifts: cast in 1952 from coins donated by delegates of 60 nations, presented on 8 June 1954 by the UN Association of Japan, inscribed 'Long live absolute world peace'. Size and founder [UNKNOWN]."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The Japanese Peace Bell at the United Nations was cast in 1952 from coins given by people from 60 nations. It says 'Long live absolute world peace'.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 40.74963,
+          "lng": -73.96739,
+          "precision": "site",
+          "note": "UN Headquarters grounds, New York"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1952",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast from coins donated by delegates of 60 nations"
+        },
+        {
+          "date": "1954-06-08",
+          "precision": "day",
+          "approximate": false,
+          "label": "Presented by the United Nations Association of Japan"
+        }
+      ],
+      "sources": [
+        "un-gifts-peace-bell"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/un-japanese-peace-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: mass; founder."
+    },
+    {
+      "id": "netherlands-carillon",
+      "title": "Netherlands Carillon (Arlington, Virginia)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Netherlands Carillon was a thank-you gift from the Dutch people for American help in World War II. Its tower near Arlington was dedicated in 1960.",
+        "student": "NPS: a silver bell presented by Queen Juliana on 4 April 1952; 49 bells arrived in 1954 and played from a temporary tower; the tower (about 127 ft, by Joost Boks) was dedicated on 5 May 1960. Later changes to the bell count [UNKNOWN] in the cited page."
+      },
+      "layer": "bells",
+      "summary": "The Netherlands Carillon was a thank-you gift from the Dutch people for American help in World War II. Its tower near Arlington was dedicated in 1960.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 38.88822,
+          "lng": -77.0695,
+          "precision": "site",
+          "note": "Netherlands Carillon, Arlington, Virginia"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1952-04-04",
+          "precision": "day",
+          "approximate": false,
+          "label": "Queen Juliana presents a silver bell as a token of the gift"
+        },
+        {
+          "date": "1954",
+          "precision": "year",
+          "approximate": false,
+          "label": "49 bells arrive and play from a temporary tower in West Potomac Park"
+        },
+        {
+          "date": "1960-05-05",
+          "precision": "day",
+          "approximate": false,
+          "label": "Carillon tower dedicated"
+        }
+      ],
+      "sources": [
+        "nps-netherlands-carillon"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/netherlands-carillon.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "bok-tower-carillon",
+      "title": "Bok Tower carillon (Singing Tower)",
+      "aliases": [
+        "Singing Tower"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Singing Tower at Bok Tower Gardens in Florida holds a carillon of 60 bells cast in England.",
+        "student": "Bok Tower Gardens gives 60 bells, all cast by John Taylor & Co of Loughborough. Dedication year and bell masses [UNKNOWN] in the official page."
+      },
+      "layer": "bells",
+      "summary": "The Singing Tower at Bok Tower Gardens in Florida holds a carillon of 60 bells cast in England.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 27.93603,
+          "lng": -81.57582,
+          "precision": "site",
+          "note": "Bok Tower Gardens, Lake Wales, Florida (pin approximate) (approximate pin)"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "bok-singing-tower"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/bok-tower-carillon.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: dedication year; bourdon mass."
+    },
+    {
+      "id": "uss-arizona-bell",
+      "title": "USS Arizona bell (University of Arizona)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "One of the bells of the battleship USS Arizona, sunk at Pearl Harbor, hangs in a tower at the University of Arizona. It came there in 1946.",
+        "student": "UA Libraries: the bell was found in June 1944 at the Bremerton salvage yard, arrived on Navy Day, 27 October 1946, and has hung in the Student Union tower since 1951."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "One of the bells of the battleship USS Arizona, sunk at Pearl Harbor, hangs in a tower at the University of Arizona. It came there in 1946.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 32.23262,
+          "lng": -110.95182,
+          "precision": "site",
+          "note": "Student Union Memorial Center clock tower, University of Arizona, Tucson"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1944-06",
+          "precision": "month",
+          "approximate": false,
+          "label": "Found in the Bremerton salvage yard"
+        },
+        {
+          "date": "1946-10-27",
+          "precision": "day",
+          "approximate": false,
+          "label": "Arrives at the university on Navy Day"
+        },
+        {
+          "date": "1951",
+          "precision": "year",
+          "approximate": false,
+          "label": "Hung in the Student Union tower"
+        }
+      ],
+      "sources": [
+        "ua-uss-arizona"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/uss-arizona-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: how the bell left the ship; mass."
+    },
+    {
+      "id": "edmund-fitzgerald-bell",
+      "title": "SS Edmund Fitzgerald bell",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The bell of the Edmund Fitzgerald, a ship lost on Lake Superior in 1975, was raised in 1995. It is a memorial to the 29 people who died.",
+        "student": "The Great Lakes Shipwreck Historical Society records the loss on 10 November 1975 with all 29 crew and recovery of the 200 lb bronze bell on 4 July 1995; it is displayed at Whitefish Point."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The bell of the Edmund Fitzgerald, a ship lost on Lake Superior in 1975, was raised in 1995. It is a memorial to the 29 people who died.",
+      "places": [
+        {
+          "region": "US",
+          "lat": 46.7706,
+          "lng": -84.95818,
+          "precision": "site",
+          "note": "Great Lakes Shipwreck Museum, Whitefish Point, Michigan"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1958-06-08",
+          "precision": "day",
+          "approximate": false,
+          "label": "Ship launched"
+        },
+        {
+          "date": "1975-11-10",
+          "precision": "day",
+          "approximate": false,
+          "label": "Lost on Lake Superior with all 29 crew"
+        },
+        {
+          "date": "1995-07-04",
+          "precision": "day",
+          "approximate": false,
+          "label": "Bell recovered from the wreck"
+        }
+      ],
+      "sources": [
+        "glshs-fitzgerald"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/edmund-fitzgerald-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status museum. Official source listed."
+    },
+    {
+      "id": "peace-tower-carillon",
+      "title": "Peace Tower Carillon (Ottawa)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Peace Tower in Ottawa holds a carillon of 53 bells, inaugurated on 1 July 1927. The biggest bell weighs over 10 tonnes.",
+        "student": "House of Commons heritage: 53 bells cast 1925–27 by Gillett & Johnston, inaugurated on 1 July 1927; bourdon 10,090 kg (E) with a 229 kg clapper, smallest bell 4.5 kg, about 54 t in all."
+      },
+      "layer": "bells",
+      "summary": "The Peace Tower in Ottawa holds a carillon of 53 bells, inaugurated on 1 July 1927. The biggest bell weighs over 10 tonnes.",
+      "places": [
+        {
+          "region": "CA",
+          "lat": 45.42479,
+          "lng": -75.69964,
+          "precision": "site",
+          "note": "Peace Tower, Parliament Hill, Ottawa"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1925",
+          "end": "1927",
+          "precision": "year",
+          "approximate": false,
+          "label": "Bells cast by Gillett & Johnston"
+        },
+        {
+          "date": "1927-07-01",
+          "precision": "day",
+          "approximate": false,
+          "label": "Inaugurated"
+        }
+      ],
+      "sources": [
+        "ourcommons-carillon",
+        "canada-peace-tower"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/peace-tower-carillon.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "dolores-bell",
+      "title": "Bell of Dolores",
+      "aliases": [
+        "Campana de Dolores",
+        "Esquilón de San José"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Miguel Hidalgo rang the Bell of Dolores in 1810 to start Mexico's fight for independence. It now hangs at the National Palace and rings every 15 September.",
+        "student": "INAH: the bell called the people of Dolores at dawn on 16 September 1810; in 1896 it was moved to Mexico City and placed on the Palacio Nacional's central balcony, where it is rung each 15 September for the Grito."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "Miguel Hidalgo rang the Bell of Dolores in 1810 to start Mexico's fight for independence. It now hangs at the National Palace and rings every 15 September.",
+      "places": [
+        {
+          "region": "MX",
+          "lat": 19.43255,
+          "lng": -99.13127,
+          "precision": "site",
+          "note": "Central balcony, Palacio Nacional, Mexico City"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1810-09-16",
+          "precision": "day",
+          "approximate": false,
+          "label": "Rung at dawn in Dolores by Miguel Hidalgo to call the uprising for independence"
+        },
+        {
+          "date": "1896",
+          "precision": "year",
+          "approximate": false,
+          "label": "Moved to Mexico City and placed over the Palacio Nacional balcony; rung each 15 September since"
+        }
+      ],
+      "sources": [
+        "inah-grito"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/dolores-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: founder; mass."
+    },
+    {
+      "id": "maria-angola-cusco",
+      "title": "María Angola (Cusco Cathedral)",
+      "aliases": [
+        "Maria Angola"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "María Angola is the famous great bell of Cusco Cathedral in Peru. It hangs in the cathedral's Gospel tower.",
+        "student": "Cusco's heritage catalogue (its 1950 earthquake survey) says the bell called María Angola hangs in the Gospel tower, which the quake damaged. Casting date, founder and mass are [UNKNOWN] from official sources we could open."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "María Angola is the famous great bell of Cusco Cathedral in Peru. It hangs in the cathedral's Gospel tower.",
+      "places": [
+        {
+          "region": "PE",
+          "lat": -13.51628,
+          "lng": -71.97787,
+          "precision": "site",
+          "note": "Gospel tower (Torre del Evangelio), Cusco Cathedral"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1950",
+          "precision": "year",
+          "approximate": false,
+          "label": "Earthquake damages the Gospel tower that holds the bell (survey in the catalogue)"
+        }
+      ],
+      "sources": [
+        "cusco-catedral-historia"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/maria-angola-cusco.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "low",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: cast date; founder; mass; dimensions."
+    },
+    {
+      "id": "national-carillon-canberra",
+      "title": "National Carillon (Canberra)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Canberra's National Carillon stands on an island in Lake Burley Griffin. Britain gave it to Australia in 1970.",
+        "student": "The National Capital Authority gives an opening on 26 April 1970, 57 bells totalling about 32,000 kg (7 kg to 6,000 kg) by John Taylor & Co, a 50 m tower, and a 2020 upgrade that added two bells including a 5 t Ngunnawal bell. Whether 57 includes the 2020 bells is [UNKNOWN]."
+      },
+      "layer": "bells",
+      "summary": "Canberra's National Carillon stands on an island in Lake Burley Griffin. Britain gave it to Australia in 1970.",
+      "places": [
+        {
+          "region": "AU",
+          "lat": -35.29849,
+          "lng": 149.14174,
+          "precision": "site",
+          "note": "Aspen Island, Lake Burley Griffin, Canberra"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1970-04-26",
+          "precision": "day",
+          "approximate": false,
+          "label": "Opened; a gift of the British Government"
+        },
+        {
+          "date": "2020-02-03",
+          "precision": "day",
+          "approximate": false,
+          "label": "Upgrade adds two bells, including the 5 t Ngunnawal bell"
+        }
+      ],
+      "sources": [
+        "nca-national-carillon"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/national-carillon-canberra.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed. Gaps: bell count after 2020."
+    },
+    {
+      "id": "swan-bells-perth",
+      "title": "Swan Bells (Perth)",
+      "aliases": [
+        "Bells of St Martin-in-the-Fields"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Swan Bells in Perth include 12 old bells from St Martin-in-the-Fields in London. There are 18 bells in the tower.",
+        "student": "The WA Government statement of 10 December 2000 describes the twelve St Martin-in-the-Fields bells, five cast in 1988 for the bicentenary and one more for the millennium: a ring of 18."
+      },
+      "layer": "bells",
+      "summary": "The Swan Bells in Perth include 12 old bells from St Martin-in-the-Fields in London. There are 18 bells in the tower.",
+      "places": [
+        {
+          "region": "AU",
+          "lat": -31.95896,
+          "lng": 115.85823,
+          "precision": "site",
+          "note": "The Bell Tower, Barrack Square, Perth"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1988",
+          "precision": "year",
+          "approximate": false,
+          "label": "Five new bells cast for Australia's bicentenary"
+        },
+        {
+          "date": "2000-12-10",
+          "precision": "day",
+          "approximate": false,
+          "label": "The Bell Tower and Swan Bells handed over to Western Australia"
+        }
+      ],
+      "sources": [
+        "wa-gov-swan-bells",
+        "belltower-perth-about"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/swan-bells-perth.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "anzac-bell-perth",
+      "title": "ANZAC Bell (Perth)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The ANZAC Bell in Perth weighs 6,500 kg and first rang on 11 November 2018, 100 years after the end of World War I.",
+        "student": "The Bell Tower (operator: primary but not official) gives 6,500 kg, casting in Perth with gold in the alloy, installation in October 2018 and a first official ring on 11 November 2018."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "The ANZAC Bell in Perth weighs 6,500 kg and first rang on 11 November 2018, 100 years after the end of World War I.",
+      "places": [
+        {
+          "region": "AU",
+          "lat": -31.95896,
+          "lng": 115.85823,
+          "precision": "site",
+          "note": "The Bell Tower, Barrack Square, Perth"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2018-10",
+          "precision": "month",
+          "approximate": false,
+          "label": "Installed in The Bell Tower"
+        },
+        {
+          "date": "2018-11-11",
+          "precision": "day",
+          "approximate": false,
+          "label": "First official ring, on the centenary of the 1918 Armistice"
+        }
+      ],
+      "sources": [
+        "belltower-perth-about"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/anzac-bell-perth.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "low",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source [UNKNOWN]. Gaps: official source; founder; dimensions."
+    },
+    {
+      "id": "wellington-carillon",
+      "title": "National War Memorial Carillon (Wellington)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Wellington's National War Memorial Carillon was dedicated on Anzac Day 1932 to remember New Zealanders who died in World War I.",
+        "student": "NZHistory: a society formed in 1926 to fund 49 bells; Gillett & Johnston began casting in late 1927; dedication on Anzac Day 1932. Heritage New Zealand records rededication in 1986 and 74 bells (six octaves) by 1997."
+      },
+      "layer": "bells",
+      "summary": "Wellington's National War Memorial Carillon was dedicated on Anzac Day 1932 to remember New Zealanders who died in World War I.",
+      "places": [
+        {
+          "region": "NZ",
+          "lat": -41.29899,
+          "lng": 174.77715,
+          "precision": "site",
+          "note": "National War Memorial, Pukeahu, Wellington"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1926",
+          "precision": "year",
+          "approximate": false,
+          "label": "Carillon society formed and appeal for 49 bells launched"
+        },
+        {
+          "date": "1927",
+          "precision": "year",
+          "approximate": false,
+          "label": "Gillett & Johnston begins casting"
+        },
+        {
+          "date": "1932-04-25",
+          "precision": "day",
+          "approximate": false,
+          "label": "Dedicated on Anzac Day"
+        },
+        {
+          "date": "1986",
+          "precision": "year",
+          "approximate": false,
+          "label": "Rededicated"
+        },
+        {
+          "date": "1997",
+          "precision": "year",
+          "approximate": true,
+          "label": "74 bells after additions"
+        }
+      ],
+      "sources": [
+        "nzhistory-carillon",
+        "hnz-national-war-memorial"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/wellington-carillon.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "cape-town-st-georges-bells",
+      "title": "St George's Cathedral bells (Cape Town)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "St George's Cathedral in Cape Town has a ring of ten bells for English-style change ringing, one of few in Africa.",
+        "student": "The cathedral describes a ring of ten from about 300 kg to 1,300 kg. Dove's Guide (reference) gives a 1962 Mears & Stainbank casting first used as a chime, a move to the tower in 1979 and a 25 cwt tenor in E flat, 52 in across."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "St George's Cathedral in Cape Town has a ring of ten bells for English-style change ringing, one of few in Africa.",
+      "places": [
+        {
+          "region": "ZA",
+          "lat": -33.92487,
+          "lng": 18.41942,
+          "precision": "site",
+          "note": "St George's Cathedral, Cape Town"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1962",
+          "precision": "year",
+          "approximate": false,
+          "label": "Cast as a chime for a car park (Dove's Guide)"
+        },
+        {
+          "date": "1979",
+          "precision": "year",
+          "approximate": false,
+          "label": "Moved into the cathedral tower (Dove's Guide)"
+        }
+      ],
+      "sources": [
+        "sgcathedral-bellringers",
+        "dove-cape-town"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/cape-town-st-georges-bells.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status in-place. Official source listed."
+    },
+    {
+      "id": "amedzofe-bell",
+      "title": "Amedzofe church bell (Volta Region, Ghana)",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "bells"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "chemistry",
+          "metals-alloys"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "German missionaries brought church bells to the Volta Region of Ghana in the 1800s. One at Amedzofe is a bronze bell dated 1855.",
+        "student": "The German Archaeological Institute's survey of bells as shared German-Ghanaian heritage records a bronze bell by F. Otto dated 1855 at Amedzofe, alongside an 1857 Pelargus bell at Ho and later steel bells. The FAU project studies colonial-era bells in Ghana."
+      },
+      "layer": "bells",
+      "model": "bell",
+      "summary": "German missionaries brought church bells to the Volta Region of Ghana in the 1800s. One at Amedzofe is a bronze bell dated 1855.",
+      "places": [
+        {
+          "region": "GH",
+          "lat": 6.84739,
+          "lng": 0.4355,
+          "precision": "site",
+          "note": "Amedzofe, Volta Region (village pin) (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1855",
+          "precision": "year",
+          "approximate": false,
+          "label": "Bronze bell cast by F. Otto, recorded at Amedzofe (DAI survey)"
+        }
+      ],
+      "sources": [
+        "dai-ghana-bells",
+        "fau-ghana-bells"
+      ],
+      "related": [
+        {
+          "type": "made-of",
+          "to": "bell-bronze"
+        },
+        {
+          "type": "part-of",
+          "to": "bells-overview"
+        }
+      ],
+      "record": "data/atlas/bells/amedzofe-bell.json",
+      "pack": "bells",
+      "status": "draft",
+      "confidence": "low",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Bells layer. Status [UNKNOWN]. Official source listed. Gaps: present status; dimensions."
+    }
+  ]
+}

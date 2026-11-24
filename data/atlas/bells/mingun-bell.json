@@ -1,0 +1,70 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "mingun-bell",
+  "title": "Mingun Bell",
+  "kind": "bell",
+  "status": "in-place",
+  "status_note": "Uncracked; hangs at Mingun.",
+  "era": "19th-century",
+  "region": "Asia",
+  "country": "MM",
+  "place": {
+    "label": "Mingun, Sagaing Region",
+    "lat": 22.053,
+    "lng": 96.0178,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Commissioned by King Bodawpaya (Badon)",
+  "mass_kg": 90718,
+  "mass_note": "90,718 kg (Dagon University paper); 90.52 tons or 55,555 viss (Myanmar Digital News)",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1808-04-29",
+      "precision": "day",
+      "approximate": false,
+      "event": "Casting by order of King Bodawpaya",
+      "source": "mdn-mingun"
+    },
+    {
+      "date": "1810",
+      "precision": "year",
+      "approximate": true,
+      "event": "Work completed (the Dagon University paper gives 1808–1810)",
+      "source": "dagon-bells-paper"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Mingun Bell in Myanmar weighs about 90 tonnes and is one of the largest working bells in the world.",
+    "student": "Myanmar Digital News gives casting on 29 April 1808 by King Badon (Bodawpaya), 90.52 tons or 55,555 viss; a Dagon University paper gives 90,718 kg, work 1808–1810, and notes the bell is uncracked."
+  },
+  "sources": [
+    "mdn-mingun",
+    "dagon-bells-paper"
+  ],
+  "official_sources": [
+    "mdn-mingun"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": false,
+    "label": "Generic bell profile: diameter [UNKNOWN], so the 3D shape is illustrative only and not to scale."
+  },
+  "unknowns": [
+    "dimensions in an official source"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

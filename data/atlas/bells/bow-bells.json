@@ -1,0 +1,117 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "bow-bells",
+  "title": "Bow Bells (St Mary-le-Bow)",
+  "kind": "ring",
+  "status": "in-place",
+  "status_note": "Ring of twelve cast in 1956 and first rung in 1961.",
+  "era": "20th-century",
+  "region": "Europe",
+  "country": "GB",
+  "place": {
+    "label": "St Mary-le-Bow, Cheapside, London",
+    "lat": 51.51373,
+    "lng": -0.09353,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Present ring: Whitechapel Bell Foundry (1956)",
+  "mass_kg": null,
+  "mass_note": "[UNKNOWN]",
+  "diameter_m": null,
+  "height_m": null,
+  "note": null,
+  "bells_count": 12,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze, recast partly from salvaged metal"
+  },
+  "timeline": [
+    {
+      "date": "1666",
+      "precision": "year",
+      "approximate": false,
+      "event": "Bells destroyed in the Great Fire of London",
+      "source": "stmarylebow-bells"
+    },
+    {
+      "date": "1677",
+      "precision": "year",
+      "approximate": false,
+      "event": "A new peal of eight",
+      "source": "stmarylebow-bells"
+    },
+    {
+      "date": "1738",
+      "precision": "year",
+      "approximate": false,
+      "event": "Thomas Lester recasts the tenor",
+      "source": "stmarylebow-bells"
+    },
+    {
+      "date": "1762",
+      "precision": "year",
+      "approximate": false,
+      "event": "The other seven bells recast",
+      "source": "stmarylebow-bells"
+    },
+    {
+      "date": "1881",
+      "precision": "year",
+      "approximate": false,
+      "event": "Increased to twelve bells",
+      "source": "stmarylebow-bells"
+    },
+    {
+      "date": "1933",
+      "precision": "year",
+      "approximate": false,
+      "event": "Recast by Gillett & Johnston after the bells became unringable (1926)",
+      "source": "stmarylebow-bells"
+    },
+    {
+      "date": "1941-05-11",
+      "precision": "day",
+      "approximate": false,
+      "event": "Destroyed in an air raid",
+      "source": "stmarylebow-bells"
+    },
+    {
+      "date": "1956",
+      "precision": "year",
+      "approximate": false,
+      "event": "New twelve cast at Whitechapel using salvaged metal",
+      "source": "stmarylebow-bells"
+    },
+    {
+      "date": "1961-12-21",
+      "precision": "day",
+      "approximate": false,
+      "event": "First rung again",
+      "source": "stmarylebow-bells"
+    }
+  ],
+  "tiers": {
+    "everyday": "Bow Bells are the bells of St Mary-le-Bow in London. They were destroyed in the Great Fire of 1666 and again in a 1941 air raid, and the present twelve bells were first rung in 1961.",
+    "student": "The church's history: lost in 1666; a peal of eight in 1677; tenor recast by Thomas Lester in 1738; twelve from 1881; recast by Gillett & Johnston in 1933; destroyed on 11 May 1941; recast at Whitechapel in 1956 using salvaged metal and first rung on 21 December 1961. A classic English change-ringing ring."
+  },
+  "sources": [
+    "stmarylebow-bells"
+  ],
+  "official_sources": [
+    "stmarylebow-bells"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "none",
+    "available": false,
+    "from_sources": false,
+    "label": "Not modelled: a ring, carillon or set has no single bell profile in the cited sources."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}

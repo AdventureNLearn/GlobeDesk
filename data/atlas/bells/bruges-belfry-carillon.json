@@ -1,0 +1,73 @@
+{
+  "schema": "globedesk.bell/1",
+  "id": "bruges-belfry-carillon",
+  "title": "Bruges Belfry carillon",
+  "kind": "carillon",
+  "status": "in-place",
+  "status_note": "Part of the World Heritage belfries of Belgium and France.",
+  "era": "early-modern",
+  "region": "Europe",
+  "country": "BE",
+  "place": {
+    "label": "Belfry of Bruges, Markt",
+    "lat": 51.20823,
+    "lng": 3.22479,
+    "approximate": false,
+    "basis": "current",
+    "coords_source": "OpenStreetMap Nominatim lookup of the named site (ODbL)"
+  },
+  "maker": "Mostly 18th-century bells; founders [UNKNOWN] in the cited page",
+  "mass_kg": 27000,
+  "mass_note": "47 bells together about 27 t (Visit Bruges)",
+  "diameter_m": 2,
+  "height_m": null,
+  "note": null,
+  "bells_count": 47,
+  "alloy": {
+    "entry": "bell-bronze",
+    "note": "bell bronze; ratio [UNKNOWN]"
+  },
+  "timeline": [
+    {
+      "date": "1680",
+      "precision": "year",
+      "approximate": false,
+      "event": "Victory bell cast (6 t, 2 m), the largest of the carillon",
+      "source": "visitbruges-carillon"
+    },
+    {
+      "date": "1999",
+      "precision": "year",
+      "approximate": false,
+      "event": "Belfries inscribed on the World Heritage List (extended 2005)",
+      "source": "unesco-whc-943"
+    }
+  ],
+  "tiers": {
+    "everyday": "The Belfry of Bruges has a carillon of 47 bells weighing about 27 tonnes together. Its biggest bell dates from 1680.",
+    "student": "Visit Bruges gives 47 bells totalling about 27 t, mostly 18th-century, with a 1680 victory bell of 6 t and 2 m diameter. The belfry is part of UNESCO site 943 (1999, extended 2005), which records civic belfries as symbols of municipal freedom."
+  },
+  "sources": [
+    "visitbruges-carillon",
+    "unesco-whc-943"
+  ],
+  "official_sources": [
+    "visitbruges-carillon",
+    "unesco-whc-943"
+  ],
+  "official_status": "listed",
+  "model": {
+    "id": "bell",
+    "available": true,
+    "from_sources": true,
+    "params": {
+      "diameter_m": 2
+    },
+    "label": "3D uses the largest bell: victory bell of 1680, 2 m across, 6 t. Parametric profile scaled from the sourced diameter; the curve itself is a generic Western bell profile, not a scan."
+  },
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-24",
+  "license": "CC BY 4.0 (our record text); linked sources keep their own terms",
+  "subject_person_living": false
+}
