@@ -332,8 +332,7 @@
     if (typeof map.getTerrain === "function") st.terrainOn = !!map.getTerrain();
     terrainForZoom();
     try {
-      /* Holographic atmosphere, from SeaGlobe planet.js / app.js (v3.1.4):
-         atmosphereColor #62b6ff, atmosphereAltitude 0.2, bloom around the limb. */
+      /* Holographic atmosphere: #62b6ff at altitude 0.2, bloom around the limb. */
       map.setSky({ "sky-color": "#02040c", "horizon-color": "#62b6ff", "fog-color": "#0a2048", "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 5, 0.85, 7, 0] });
     } catch (e) { /* older style spec */ }
   }

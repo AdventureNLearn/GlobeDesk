@@ -9,6 +9,7 @@
 - **Source classes (owner rule).** Official sources are primary or public records only. The maintainer's own repos and Learning Lab cards are listed as *Experimental (not an official source)* in a separate group and never count as a record backing a claim; the validator refuses an owner repo tagged official. Eight desks show `Official source [UNKNOWN]` and are listed as open.
 - **Your layer and Community (v1).** A personal layer (pins, notes, followed topics, links) stays in the browser with Import and Export. Contributor cards (handle, 1–2 line description, topics, up to 3 public links, checked date; no contact or location fields) with a schema and validator. A **Community** switch in Layers, off by default, with its own pin style and badge; contributor lists per Atlas category; community links kept apart from sources. `tools/promote_layer.py --card` strips contact fields. No profiles, ratings, accounts or server.
 - Open items: the 12 owner questions stay OPEN, plus 9 new ones, in [atlas/OPEN-ITEMS.md](atlas/OPEN-ITEMS.md).
+- **Palette credit.** The default look is labelled Lily pad palette (owner original). Docs, credits, comments and earlier changelog lines no longer name another owner project. Colors are unchanged.
 
 ## v1.3.1 — Share & Export (patch) — 2026-11-22
 
@@ -55,14 +56,14 @@
 - Shell layout: the Inspector and other panels dock or float, resize, scale, and lock; four templates (Edit, Record/Present, Research, Compact/laptop) persist per device; a searchable hamburger menu sits beside the GlobeDesk title so the top bar stays on one row and no longer covers the stage or map controls.
 - Stage polish: map pan controls show icons in a compact pad beside the zoom control; attribution is a collapsible MapLibre control in the bottom-right of the stage; the globe stays centred in the 16:9 frame after the docks change size; panel scale lives in a compact header control; playback and rundown labels wrap cleanly at laptop width.
 - GIS unit fixtures are marked synthetic in the fixture files themselves.
-- Small SeaGlobe v3.1.4 cinematic-glass consistency on the new claims, research, records, Official GIS, and Open in… panels (tokens, radius, glass, and link hover).
+- Small Lily pad palette (owner original) consistency on the new claims, research, records, Official GIS, and Open in… panels (tokens, radius, glass, and link hover).
 
 
 ## Unreleased — basic GlobeDesk (local branch)
 
-- Combined look (owner pick): GlobeDesk news-desk card layout with SeaGlobe v3.1.4 cinematic colors, holographic globe atmosphere, and a timeline-strip treatment on the transport bar. Replaces the X-profile palette.
+- Combined look (owner pick): GlobeDesk news-desk card layout with Lily pad palette (owner original) colors, holographic globe atmosphere, and a timeline-strip treatment on the transport bar. Replaces the X-profile palette.
 
-- Plain GlobeDesk shell uses the SeaGlobe v3.1.4 cinematic glass look (navy #02040c, ice text, gold, cyan) and a holographic globe atmosphere. No prior show branding in the product. Credit: SeaGlobe.
+- Plain GlobeDesk shell uses the Lily pad palette (owner original) look (navy #02040c, ice text, gold, cyan) and a holographic globe atmosphere. No prior show branding in the product.
 - Consumer news desk with section tabs and story cards, plus a toggle into the full editor. Boots with no episode preloaded.
 - Example feed: 50 sourced topics in 10 sections. Cards keep `[UNKNOWN]` marks and approximate-pin notes as authored.
 - Bundled sample is the short Washington, DC National Mall walk. A click still only selects; a pin drops only on right-click or a 500 ms long press.

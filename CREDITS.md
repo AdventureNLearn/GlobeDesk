@@ -5,8 +5,8 @@ GlobeDesk is by **AdventureNLearn** ([@AdventureNLearn](https://x.com/AdventureN
 - **Code:** MIT ([LICENSE](LICENSE)).
 - **AdventureNLearn content:** CC BY 4.0 ([LICENSE-CONTENT](LICENSE-CONTENT)). That covers the episode text, screenshots and docs. Credit "AdventureNLearn".
 
-- **Inter:** SIL Open Font License 1.1, the same variable cut bundled by SeaGlobe. See `fonts/Inter-OFL.txt`.
-- **Visual theme (cinematic glass, timeline strip, holographic globe atmosphere):** ported from SeaGlobe v3.1.4 (`web/app.css`, `web/js/planet.js`, `web/js/app.js` at tag `benchmark-v3.1.4-20261115`). Credit: SeaGlobe / AdventureNLearn.
+- **Inter:** SIL Open Font License 1.1, local Inter variable cut. See `fonts/Inter-OFL.txt`.
+- **Visual theme (cinematic glass, timeline strip, holographic globe atmosphere):** Lily pad palette (owner original).
 
 Everything below belongs to its creators and keeps its own terms.
 

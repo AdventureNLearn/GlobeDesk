@@ -31,8 +31,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 31896,
-      "sha256": "bfb6373ce628a225e15fa4816645a6d0b289051aa966b6bf74b275be82334cb6"
+      "size": 32088,
+      "sha256": "478176925477ad2aeab90ddcdfe27dfc732b3276bc73bc413a60a1a1b2b7b18f"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -46,8 +46,8 @@
     },
     {
       "path": "CREDITS.md",
-      "size": 6229,
-      "sha256": "b0778c19e818b031f2ee70b26c82d902ec0e2f5edd8abb395943598718f88f1c"
+      "size": 6094,
+      "sha256": "f820d435d83a230cea099fdf27b2ebad837ddf3c8cc88f91b4658adf52b4992a"
     },
     {
       "path": "FORKING.md",
@@ -181,8 +181,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 49167,
-      "sha256": "3587bdfdfd9c2a6b19aa192b56d2b1d8c6e05329691bb45290240c909c3ed2a9"
+      "size": 48587,
+      "sha256": "d3b090c8441b7f09c5effa81ee0cf2abe5d98ded7857e669b62c2393fce1ee64"
     },
     {
       "path": "data/atlas/chemistry/lifepo4-vs-nmc.json",
@@ -246,8 +246,8 @@
     },
     {
       "path": "docs/REFERENCE.md",
-      "size": 26133,
-      "sha256": "f10238c90c4477c5b8fdcd279d86a4e615d3b3636b62ecd3220df8596548f53e"
+      "size": 26091,
+      "sha256": "683a472622e60b885cdb32ff2141504e26f42e38cc38b8aea7d92474ad1b549d"
     },
     {
       "path": "docs/SHARE-PACK.md",
@@ -266,8 +266,8 @@
     },
     {
       "path": "episodes/blank.globedesk.json",
-      "size": 2810,
-      "sha256": "171d803a3a8c37d080001d6d9a393755e2d95f4321c6da046f41bf89725ccb9b"
+      "size": 2819,
+      "sha256": "5a9b90865b28c83b9882c30cbe670819f233dfc2696ab6dd30487914d152299d"
     },
     {
       "path": "episodes/layers/example-placeholders-not-real-data.geojson",
@@ -276,8 +276,8 @@
     },
     {
       "path": "episodes/washington-dc-demo.globedesk.json",
-      "size": 11035,
-      "sha256": "af5f1af82fe5e9f0527d7ba09dba920aa52970ee62ebedfb20f48007f9c18065"
+      "size": 11044,
+      "sha256": "b64088fc75ce2a0d3184fe89392b760f85dcd13817b2bbe42370345e9753d360"
     },
     {
       "path": "fonts/Inter-OFL.txt",
@@ -291,8 +291,8 @@
     },
     {
       "path": "fonts/fonts.css",
-      "size": 269,
-      "sha256": "6a34def7cafbcff1fe8a5449573b67832f2f44b2b2b1585aa9e5f724a9f29445"
+      "size": 244,
+      "sha256": "0d22108cf3563a21312fe40124fc8b89ebfbcbf39e470a017074dd851a90b0bd"
     },
     {
       "path": "grokme/APP-BRIEF.txt",
@@ -431,8 +431,8 @@
     },
     {
       "path": "js/globe.js",
-      "size": 45819,
-      "sha256": "e11a05849f7ad60ff1e4c62edec084dfe9c8b10804f0c7b2d6f0e5642b90d471"
+      "size": 45743,
+      "sha256": "9626635b6c80242a0b4071ff610575893062c53223abe762339067754de15533"
     },
     {
       "path": "js/layers-panel.js",
@@ -446,8 +446,8 @@
     },
     {
       "path": "js/layout.js",
-      "size": 39211,
-      "sha256": "4a6e80f16fe64630cdb5ca4e6d0af3d56813b8c2b04b666ecebbfd214c4b3fdc"
+      "size": 39203,
+      "sha256": "5f90e37a8721e953f19f6015987ffe065da0a5d3e8f36ce42718ef30fbb0f91e"
     },
     {
       "path": "js/map-pointer.js",
@@ -546,8 +546,8 @@
     },
     {
       "path": "js/themes.js",
-      "size": 2493,
-      "sha256": "b747375ff0a11495110fd2aa86da2da07f2917acbda2a47779ecf3a750f8904c"
+      "size": 2376,
+      "sha256": "6b07baeb3713163d14a6fee2ecdd58b753fa5bd0869455b46587a3ddc4a29d68"
     },
     {
       "path": "js/ui.js",
@@ -767,6 +767,6 @@
   ],
   "totals": {
     "files": 151,
-    "bytes": 5501839
+    "bytes": 5501066
   }
 }

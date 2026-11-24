@@ -1,33 +1,31 @@
-/* GlobeDesk chrome: SeaGlobe v3.1.4 cinematic glass (colors, frosted panels,
-   timeline-strip treatment) plus a holographic globe atmosphere.
-   Tokens and glass/timeline styling are ported from SeaGlobe web/app.css
-   at tag benchmark-v3.1.4-20261115. Credit: SeaGlobe / AdventureNLearn. */
+/* GlobeDesk chrome: Lily pad palette (owner original). Colors, frosted panels,
+   timeline-strip treatment, plus a holographic globe atmosphere. */
 :root {
   color-scheme: dark;
-  --gd-bg-deep: #02040c; /* SeaGlobe --bg0 */
+  --gd-bg-deep: #02040c;
   --gd-bg: #02040c;
-  --gd-surface: #091026; /* SeaGlobe --solid rgb(9, 16, 38) */
+  --gd-surface: #091026;
   --gd-surface-2: #0c1838;
   --gd-surface-3: #163056;
-  --gd-text: #eaf6ff; /* SeaGlobe --text */
-  --gd-text-soft: #b3c6de; /* SeaGlobe --text2 */
-  --gd-text-dim: #7f93ad; /* SeaGlobe --text3 */
-  --gd-gold: #e7c766; /* SeaGlobe --gold */
+  --gd-text: #eaf6ff;
+  --gd-text-soft: #b3c6de;
+  --gd-text-dim: #7f93ad;
+  --gd-gold: #e7c766;
   --gd-gold-hi: #fff1b8;
-  --gd-cyan: #5ee7ff; /* SeaGlobe --cyan */
+  --gd-cyan: #5ee7ff;
   --gd-cyan-soft: #5ee7ff;
-  --gd-atmosphere: #62b6ff; /* SeaGlobe globe atmosphereColor */
+  --gd-atmosphere: #62b6ff;
   --gd-holo: #5ee7ff;
   --gd-holo-mid: #62b6ff;
-  --gd-green: #4ff0a8; /* SeaGlobe --green */
-  --gd-amber: #ffbf5e; /* SeaGlobe --amber */
-  --gd-violet: #c9a2ff; /* SeaGlobe --violet */
+  --gd-green: #4ff0a8;
+  --gd-amber: #ffbf5e;
+  --gd-violet: #c9a2ff;
   --gd-panel-solid: rgba(9, 16, 38, 0.92);
   --gd-panel-glass: rgba(12, 24, 56, 0.42);
   --gd-glass-hi: rgba(40, 70, 140, 0.18);
-  --gd-border: rgba(94, 231, 255, 0.24); /* SeaGlobe --edge */
-  --gd-border-data: rgba(94, 231, 255, 0.62); /* SeaGlobe --edge-hi */
-  --gd-blur: 18px; /* SeaGlobe glass blur */
+  --gd-border: rgba(94, 231, 255, 0.24);
+  --gd-border-data: rgba(94, 231, 255, 0.62);
+  --gd-blur: 18px;
   --gd-radius: 8px;
   --gd-font-display: Inter, "Segoe UI", system-ui, sans-serif;
   --gd-font-ui: Inter, "Segoe UI", system-ui, sans-serif;
@@ -91,7 +89,7 @@ textarea { min-height:80px; resize:vertical; }
 .bin li .nm { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .bin li button { padding:2px 6px; font-size:11px; }
 .stage-wrap { flex:1; display:flex; align-items:center; justify-content:center; background: var(--gd-bg-deep); padding:12px; min-height:320px; }
-/* Holographic globe vignette, from SeaGlobe .vignette (v3.1.4). Pointer-events none so map gestures stay unchanged. */
+/* Holographic globe vignette. Pointer-events none so map gestures stay unchanged. */
 .map { position: relative; }
 .stage-wrap .map::after { content:""; position:absolute; inset:0; pointer-events:none; z-index:2;
   background: radial-gradient(120% 95% at 50% 50%, transparent 55%, rgba(0,0,0,.55) 100%);
@@ -105,7 +103,7 @@ textarea { min-height:80px; resize:vertical; }
 .safe-top, .safe-bottom { position:absolute; left:0; right:0; border:1px dashed rgba(255,138,31,.55); }
 .safe-top { top:0; height:var(--safe-top,15%); border-top:0; } .safe-bottom { bottom:0; height:var(--safe-bottom,15%); border-bottom:0; }
 .safe-side { position:absolute; top:0; bottom:0; width:var(--safe-side,6%); border-right:1px dashed rgba(255,138,31,.3); } .safe-side.r { right:0; border-right:0; border-left:1px dashed rgba(255,138,31,.3); }
-/* Timeline strip treatment, ported from SeaGlobe .timeline / .glass (v3.1.4). */
+/* Timeline strip treatment. */
 .transport { display:flex; gap:8px; align-items:center; min-width:0; padding:10px 14px; border-top:1px solid var(--gd-border); border-bottom:1px solid var(--gd-border);
   background: var(--gd-panel-solid); box-shadow: var(--gd-glass-shadow); }
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {

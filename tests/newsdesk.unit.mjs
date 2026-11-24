@@ -9,7 +9,7 @@ let n = 0; const t = (name, fn) => { fn(); n++; console.log("ok -", name); };
 const same = (a, b) => assert.equal(JSON.stringify(a), JSON.stringify(b));
 
 
-t("default palette uses SeaGlobe v3.1.4 cinematic tokens", () => {
+t("default palette uses Lily pad palette (owner original) tokens", () => {
   const pal = ctx.window.GD.themes.PALETTE;
   assert.equal(pal.bg, "#02040c");
   assert.equal(pal.ink, "#eaf6ff");

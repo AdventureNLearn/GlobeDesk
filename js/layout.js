@@ -1,5 +1,5 @@
 /* GlobeDesk shell layout: dockable, resizable, lockable panels; templates; app menu.
-   SeaGlobe v3.1.4 cinematic glass theme is in css/app.css. No new hosts. */
+   Lily pad palette (owner original) is in css/app.css. No new hosts. */
 (function (g) {
   const GD = g.GD || (g.GD = {});
   const STORAGE_KEY = "globedesk.shell.v1";
@@ -783,7 +783,7 @@
         "<li>" + link("license", "License") + " · " + link("conduct", "Code of Conduct") + " · " + link("security", "Security") + " · " + link("issues", "Issues") + "</li>" +
         "</ul><p class='muted small'>These open GitHub in a new tab. Nothing from your desk is sent.</p>";
     } else if (kind === "version") {
-      body.innerHTML = "<p><strong>" + escapeHtml(ver) + "</strong></p><p class='muted small'>SeaGlobe v3.1.4 cinematic glass theme. Local-first. Official GIS is off until you turn it on.</p><p class='small'>Open source: " + link("contribute", "Contribute") + " · " + link("fork", "Fork it") + "</p>";
+      body.innerHTML = "<p><strong>" + escapeHtml(ver) + "</strong></p><p class='muted small'>Lily pad palette (owner original). Local-first. Official GIS is off until you turn it on.</p><p class='small'>Open source: " + link("contribute", "Contribute") + " · " + link("fork", "Fork it") + "</p>";
     } else if (kind === "shortcuts") {
       body.innerHTML = "<ul class='help-keys'>" +
         "<li><kbd>Alt</kbd>+<kbd>M</kbd> Open or close the menu</li>" +

@@ -46,7 +46,7 @@ The globe and its base map (satellite, streets, buildings, optional terrain, bun
 
 The `globedesk` look is first in the Look menu and is what a new file, the **Sample** button, `?sample=1` and a missing save use. Everything in it can be changed in the Look tab. A `newsdesk` look uses the same palette with a lower third and boxed captions.
 
-- **Palette.** Background `#02040c`, ink `#eaf6ff`, accent `#e7c766`, highlight `#5ee7ff`, panel `rgba(12, 24, 56, 0.42)`, outro `#02040c`. These tokens are ported from SeaGlobe v3.1.4 cinematic glass. Credit: SeaGlobe / AdventureNLearn.
+- **Palette.** Background `#02040c`, ink `#eaf6ff`, accent `#e7c766`, highlight `#5ee7ff`, panel `rgba(12, 24, 56, 0.42)`, outro `#02040c`. These tokens are the Lily pad palette (owner original).
 - **Persistent header (top 15%).** A `GLOBEDESK` badge and a headline to the right of the badge, with a second bar for show, date and handle. The handle on the stage is a link.
 - **Source citation boxes.** Small panels in the upper left, **under the header**. Each shot (map keyframe cut or media shot) has its own citation. Map shots set to `auto` take the credit of whichever base map is on. A story shows one source box per real source; empty sources are not shown.
 - **Captions always on.** Bottom center (the bottom 15%), large bold white, 1–2 lines, drop shadow. No lower third, no ticker, no music.

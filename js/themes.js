@@ -1,8 +1,6 @@
-/* Theme presets. "globedesk" is the default look (SeaGlobe v3.1.4 cinematic
-   glass: navy #02040c, ice text, gold, cyan highlight). "newsdesk" is the same
+/* Theme presets. "globedesk" is the default look (Lily pad palette (owner original):
+   navy #02040c, ice text, gold, cyan highlight). "newsdesk" is the same
    palette with a lower-third and boxed captions for the consumer view.
-   Palette tokens are ported from SeaGlobe web/app.css at tag
-   benchmark-v3.1.4-20261115. Credit: SeaGlobe / AdventureNLearn.
    Every value is editable per episode in the Look tab. window.GD.themes */
 (function () {
   "use strict";
@@ -19,7 +17,7 @@
   const MAP = { base: "sat-hybrid", softBorders: true, highlightGlow: true, countryLabels: "flat-white" };
   const THEMES = {
     globedesk: {
-      label: "GlobeDesk (default) — SeaGlobe cinematic glass, holographic cyan, gold chrome",
+      label: "GlobeDesk (default) — Lily pad palette (owner original), holographic cyan, gold chrome",
       theme: "globedesk",
       header: true, headerBadge: "GLOBEDESK", headerHeightPct: 15,
       citations: true,

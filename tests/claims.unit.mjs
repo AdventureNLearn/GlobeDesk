@@ -540,7 +540,7 @@ await t("a source id containing a colon still works in the disagree editor", asy
   assert.ok(listed.facts.find((f) => f.factIndex === 1).disagree.some((g) => g.sourceIds.includes("src:mwrd:official")));
 });
 
-await t("not-proven and disputed chips use different SeaGlobe palette colours", async () => {
+await t("not-proven and disputed chips use different Lily pad palette colours", async () => {
   const css = fs.readFileSync(path.join(root, "css/app.css"), "utf8");
   const notProven = css.match(/\.claim-chip-not-proven\s*\{[^}]+\}/);
   const disputed = css.match(/\.claim-chip-disputed\s*\{[^}]+\}/);
