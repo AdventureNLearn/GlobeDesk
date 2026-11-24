@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "preparedness",
+  "title": "Atlas pack: Preparedness and off-grid",
+  "kind": "category",
+  "category": "preparedness",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "bb43bcbeca3a5796510cdab45214f10e9f10d22794c38be44784efc9808e43ce",
+  "entry_count": 4,
+  "size_bytes": 4727,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 4727,
+      "sha256": "bdcaeb5c0f453f76470815940a8eac193ecf1d7d59a3f49ce492502cb5e586c6"
+    }
+  ]
+}

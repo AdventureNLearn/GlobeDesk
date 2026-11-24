@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "health",
+  "title": "Atlas pack: Health, anatomy and first aid",
+  "kind": "category",
+  "category": "health",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "829ad13a85bc3f07d260d5bea0477fa5e814e41f8773501748da2d61ae7ba0ae",
+  "entry_count": 4,
+  "size_bytes": 4014,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 4014,
+      "sha256": "af99f9693eecf0925c3306eafbaaadcc4eb02c268612cf6103ced074ed7e184f"
+    }
+  ]
+}

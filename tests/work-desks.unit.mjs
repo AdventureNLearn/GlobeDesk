@@ -47,12 +47,11 @@ t("owner rule: an owner repo or card can never be tagged official", () => {
   assert.equal(SC.classOf({ url: "https://github.com/AdventureNLearn/GlobeDesk", class: "official" }), "experimental");
   assert.deepEqual(SC.checkTag({ url: "https://www.faa.gov/hazmat/packsafe/lithium-batteries", class: "official" }, "x"), []);
 });
-t("a desk with only experimental backing shows official source [UNKNOWN] and is listed in OPEN-ITEMS", () => {
-  const open = readFileSync(new URL("../atlas/OPEN-ITEMS.md", import.meta.url), "utf8");
+t("all 10 desks list official sources; a desk with none must show [UNKNOWN]", () => {
   const unknown = doc.desks.filter((d) => !d.official_sources.length);
-  assert.equal(unknown.length, 8);
-  unknown.forEach((d) => { assert.equal(d.official_status, "[UNKNOWN]"); assert.ok(open.includes(d.title.replace(",", "").replace(", ", " ")) || open.includes(d.title), d.title); });
-  const d = clone(); d.desks[2].official_status = "listed"; assert.ok(deskRules(d).some((x) => /official_status/.test(x)));
+  assert.equal(unknown.length, 0);
+  doc.desks.forEach((d) => assert.equal(d.official_status, "listed"));
+  const d = clone(); d.desks[2].official_sources = []; d.desks[2].official_status = "listed"; assert.ok(deskRules(d).some((x) => /official_status/.test(x)));
 });
 t("rendered desk: experimental label on every owner link, separate group, official [UNKNOWN] shown", () => {
   const html = []; const ctx = { window: {}, globalThis: {} }; vm.createContext(ctx);
@@ -61,10 +60,12 @@ t("rendered desk: experimental label on every owner link, separate group, offici
   const W = ctx.window.GD.workDesks;
   const permits = W.deskHtml(doc.desks[1]);
   const links = permits.match(/<a [^>]*>/g) || [];
-  assert.equal(links.length, 3);
+  assert.equal(links.length, 6); // 3 official + 3 experimental
   assert.equal((permits.match(/Experimental \(not an official source\)/g) || []).length, 4); // 3 links + 1 pending
-  assert.match(permits, /Official source \[UNKNOWN\]/);
+  assert.match(permits, /wd-official[\s\S]*census\.gov/);
   assert.ok(permits.indexOf("Official sources") < permits.indexOf("Experimental references"));
+  const noOff = clone().desks[1]; noOff.official_sources = []; noOff.official_status = "[UNKNOWN]";
+  assert.match(W.deskHtml(noOff), /Official source \[UNKNOWN\]/);
   const energy = W.deskHtml(doc.desks[5]);
   assert.match(energy, /wd-official[\s\S]*faa\.gov/); assert.doesNotMatch(energy, /Official source \[UNKNOWN\]/);
   html.push(permits);

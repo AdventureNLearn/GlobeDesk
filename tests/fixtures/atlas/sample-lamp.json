@@ -1,0 +1,98 @@
+{
+  "schema": "globedesk.object/1",
+  "id": "sample-lamp",
+  "kind": "other",
+  "name": "Sample lamp (test fixture)",
+  "summary": "A made-up desk lamp used only to prove that a user-made object, copied from the bag solar kit sample, validates and can load a parametric 3D layout. Not a real product. Parts and prices are [UNKNOWN].",
+  "status": "draft",
+  "license": "CC BY 4.0 (record text). Linked sources keep their own terms.",
+  "checked": "2026-11-24",
+  "confidence_level": "low",
+  "options": [
+    {
+      "id": "S",
+      "name": "Desk lamp",
+      "config": "1S1P",
+      "wh": 0,
+      "air_rule": "[UNKNOWN]"
+    }
+  ],
+  "parts": [
+    {
+      "id": "base",
+      "class": "Lamp base",
+      "role": "Holds the lamp upright",
+      "spec": { "material": "[UNKNOWN]", "size_mm": "[UNKNOWN]" },
+      "qty": { "S": 1 },
+      "ease": "[UNKNOWN]",
+      "model_node": "base",
+      "citations": ["fixture-page"]
+    },
+    {
+      "id": "shade",
+      "class": "Lamp shade",
+      "role": "Directs light",
+      "spec": { "material": "[UNKNOWN]", "size_mm": "[UNKNOWN]" },
+      "qty": { "S": 1 },
+      "ease": "[UNKNOWN]",
+      "model_node": "shade",
+      "citations": ["fixture-page"]
+    },
+    {
+      "id": "bulb",
+      "class": "Lamp bulb",
+      "role": "Light source",
+      "spec": { "watts": "[UNKNOWN]", "base": "[UNKNOWN]" },
+      "qty": { "S": 1 },
+      "ease": "[UNKNOWN]",
+      "citations": ["fixture-page"]
+    },
+    {
+      "id": "switch",
+      "class": "On-off switch",
+      "role": "Turns the lamp on and off",
+      "spec": { "type": "[UNKNOWN]" },
+      "qty": { "S": 1 },
+      "ease": "[UNKNOWN]",
+      "citations": []
+    },
+    {
+      "id": "cord",
+      "class": "Power cord",
+      "role": "Connects the lamp to a socket",
+      "spec": { "length_m": "[UNKNOWN]", "rating": "[UNKNOWN]" },
+      "qty": { "S": 1 },
+      "ease": "[UNKNOWN]",
+      "citations": []
+    }
+  ],
+  "safety": [
+    {
+      "id": "s-wiring",
+      "topic": "wiring",
+      "rule": "Keep mains wiring inside the base and strain-relieved at the cord entry. Exact ratings are [UNKNOWN].",
+      "citations": ["fixture-page"]
+    },
+    {
+      "id": "s-assembly",
+      "topic": "assembly",
+      "rule": "This fixture is not a build guide. Do not treat it as instructions for a real lamp.",
+      "citations": []
+    }
+  ],
+  "model": {
+    "kind": "parametric",
+    "generator": "js/atlas/models/sample-lamp.js",
+    "units": "mm",
+    "note": "Test fixture only. The layout file used in tests lives at tests/fixtures/atlas/sample-lamp-model.js; a user object would place the same file at js/atlas/models/sample-lamp.js."
+  },
+  "citations": [
+    {
+      "id": "fixture-page",
+      "title": "Sample lamp fixture page (not a real product source)",
+      "url": "https://example.org/sample-lamp",
+      "checked": "2026-11-24",
+      "note": "Placeholder citation for the test fixture only."
+    }
+  ]
+}

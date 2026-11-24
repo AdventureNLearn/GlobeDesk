@@ -115,14 +115,12 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const clean = (s) => { const { verify, ...rest } = s; return { ...rest, verified: verify === "webfetch" ? "opened via a fetch service (direct fetch blocked by the site)" : "opened directly (HTTP 200)" }; };
   BELL_SOURCES.forEach((s) => { const i = doc.sources.findIndex((x) => x.id === s.id); if (i >= 0) doc.sources[i] = clean(s); else doc.sources.push(clean(s)); });
   writeFileSync(srcPath, JSON.stringify(doc, null, 2) + "\n");
-  // Chemistry pack: keep the hand-formatted file; insert or replace the one bell-bronze line.
+  // Chemistry pack: replace or append the bell-bronze entry by id. Works on the parsed file, so it never
+  // depends on formatting (a regex on a re-indented file could silently skip the insert).
   const chemPath = path.join(ATLAS, "packs/chemistry/entries.json");
-  let chem = readFileSync(chemPath, "utf8");
-  const line = "  " + JSON.stringify(out.bronzeEntry);
-  const re = /\n {2}\{"id":"bell-bronze".*\}(,?)(?=\n)/;
-  if (re.test(chem)) chem = chem.replace(re, (m, comma) => "\n" + line + comma);
-  else chem = chem.replace(/\n\] \}\s*$/, ",\n" + line + "\n] }\n");
-  writeFileSync(chemPath, chem);
-  JSON.parse(chem);
+  const chem = JSON.parse(readFileSync(chemPath, "utf8"));
+  const bi = chem.entries.findIndex((x) => x.id === out.bronzeEntry.id);
+  if (bi >= 0) chem.entries[bi] = out.bronzeEntry; else chem.entries.push(out.bronzeEntry);
+  writeFileSync(chemPath, JSON.stringify(chem, null, 2) + "\n");
   console.log(`built ${out.records.length} bell records, ${out.entries.length} bells-pack entries, bell-bronze, ${BELL_SOURCES.length} sources`);
 }

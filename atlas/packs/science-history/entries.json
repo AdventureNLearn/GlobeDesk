@@ -1,0 +1,164 @@
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "science-history",
+  "entries": [
+    {
+      "id": "international-system-of-units-si",
+      "title": "International System of Units (SI)",
+      "kind": "topic",
+      "category_path": [
+        "science-history",
+        "measurement-units"
+      ],
+      "tier": "student",
+      "summary": "Established following the May 20, 1875 Metre Convention, the SI defines seven base units (meter, kilogram, second, ampere, kelvin, mole, candela) and 22 named derived units. The 2019 SI redefinition (effective May 20, 2019) anchors every unit to seven defining physical constants.",
+      "places": [
+        {
+          "region": "FR",
+          "precision": "country",
+          "note": "Metre Convention signed in Paris; BIPM in Sevres"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1875-05-20",
+          "precision": "day",
+          "approximate": false,
+          "label": "Metre Convention signed"
+        },
+        {
+          "date": "2019-05-20",
+          "precision": "day",
+          "approximate": false,
+          "label": "Revised SI effective"
+        }
+      ],
+      "sources": [
+        "bipm-si",
+        "nist-si"
+      ],
+      "related": [],
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "galileo-telescopic-observations-1609",
+      "title": "Galileo's telescopic Moon observations (1609-1610)",
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "discoveries"
+      ],
+      "tier": "student",
+      "summary": "In 1609-1610, Galileo Galilei turned an improved telescope skyward and published Sidereus Nuncius (1610), showing from shadow geometry across lunar craters and mountains that the Moon is not a smooth translucent sphere.",
+      "places": [
+        {
+          "region": "IT",
+          "precision": "country",
+          "note": "Padua and Venice, Italy"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1610",
+          "precision": "year",
+          "approximate": false,
+          "label": "Sidereus Nuncius published"
+        }
+      ],
+      "sources": [
+        "loc-galileo"
+      ],
+      "related": [],
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "transistor-effect-nobel-1956",
+      "title": "Transistor effect discovery (1956 Nobel Prize)",
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "inventions"
+      ],
+      "tier": "student",
+      "summary": "The 1956 Nobel Prize in Physics was awarded jointly to William Bradford Shockley, John Bardeen, and Walter Houser Brattain for their semiconductor research and discovery of the transistor effect.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1956",
+          "precision": "year",
+          "approximate": false,
+          "label": "Nobel Prize in Physics"
+        }
+      ],
+      "sources": [
+        "nobel-physics-1956"
+      ],
+      "related": [],
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "early-electronic-computing-timeline",
+      "title": "Early relay and electronic computing (1939-1942)",
+      "kind": "topic",
+      "category_path": [
+        "science-history",
+        "computing"
+      ],
+      "tier": "student",
+      "summary": "Per the Computer History Museum timeline, landmark 1939-1942 machines included George Stibitz's Complex Number Calculator (1939, demonstrated remotely over telephone lines in 1940), Konrad Zuse's binary relay Z3 (1941), the Turing/Keen Bombe, and the Atanasoff-Berry Computer (1939-1942).",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        },
+        {
+          "region": "GB",
+          "precision": "country"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1939",
+          "end": "1942",
+          "precision": "year",
+          "approximate": false,
+          "label": "Early relay and ABC computers"
+        }
+      ],
+      "sources": [
+        "chm-computers"
+      ],
+      "related": [],
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    }
+  ]
+}

@@ -149,6 +149,7 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 | Doc | What's in it |
 |---|---|
 | [USER-GUIDE.md](USER-GUIDE.md) | A walkthrough of making a story, adding sound, placing media, assist, and saving |
+| [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md) | Add your own Atlas 3D object or kit layer from the bag solar kit sample |
 | [docs/REFERENCE.md](docs/REFERENCE.md) | Every panel and tab, the GlobeDesk look, the episode model, Event Layers, map credits, the roadmap and known gaps |
 | [docs/STORY-FORMAT.md](docs/STORY-FORMAT.md) | The `globedesk.episode/2` JSON format |
 | [docs/SIDECARS.md](docs/SIDECARS.md) | Sidecar catalogs and schema rules for native tools |

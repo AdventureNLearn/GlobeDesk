@@ -1,12 +1,209 @@
-{ "schema": "globedesk.atlas-entries/1", "pack": "objects", "entries": [
-  { "id": "bag-solar-kit", "title": "Bag solar kit", "aliases": ["Personal solar array with battery pack"], "kind": "object", "category_path": ["objects", "energy-kits"], "see_also_paths": [["energy", "portable-power"]], "tier": "everyday",
-    "summary": "DRAFT, not built or tested. A folding 100 W panel, an MPPT controller and a 4S LiFePO4 pack with BMS and fuses, in S, M and L sizes, built from common parts.",
-    "places": [], "dates": [], "sources": ["bu-205", "faa-packsafe", "cell-fullbattery", "cell-sheet-blivex", "cell-sheet-dtp", "mppt-vpp", "panel-listing"],
-    "related": [{ "type": "uses", "to": "lifepo4-vs-nmc" }, { "type": "priced-in", "to": "bag-solar-kit-prices" }, { "type": "see-also", "to": "lithium-batteries-air-travel" }, { "type": "see-also", "to": "portable-solar-power" }],
-    "record": "data/atlas/objects/bag-solar-kit.json",
-    "pack": "objects", "status": "draft", "confidence": "low", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false },
-  { "id": "water-filter-kit", "title": "[PLACEHOLDER] Water filter kit", "kind": "object", "category_path": ["objects", "water-systems"], "tier": "everyday",
-    "summary": "PLACEHOLDER. A second buildable object, to show the pattern. Design, parts and sources [UNKNOWN].",
-    "places": [], "dates": [], "sources": [], "related": [],
-    "pack": "objects", "status": "placeholder", "confidence": "[UNKNOWN]", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false }
-] }
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "objects",
+  "entries": [
+    {
+      "id": "bag-solar-kit",
+      "title": "Bag solar kit",
+      "aliases": [
+        "Personal solar array with battery pack"
+      ],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "energy-kits"
+      ],
+      "see_also_paths": [
+        [
+          "energy",
+          "portable-power"
+        ]
+      ],
+      "tier": "everyday",
+      "summary": "DRAFT, not built or tested. A folding 100 W panel, an MPPT controller and a 4S LiFePO4 pack with BMS and fuses, in S, M and L sizes, built from common parts.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "bu-205",
+        "faa-packsafe",
+        "cell-fullbattery",
+        "cell-sheet-blivex",
+        "cell-sheet-dtp",
+        "mppt-vpp",
+        "panel-listing"
+      ],
+      "related": [
+        {
+          "type": "uses",
+          "to": "lifepo4-vs-nmc"
+        },
+        {
+          "type": "priced-in",
+          "to": "bag-solar-kit-prices"
+        },
+        {
+          "type": "see-also",
+          "to": "lithium-batteries-air-travel"
+        },
+        {
+          "type": "see-also",
+          "to": "portable-solar-power"
+        }
+      ],
+      "record": "data/atlas/objects/bag-solar-kit.json",
+      "pack": "objects",
+      "status": "draft",
+      "confidence": "low",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "water-filter-kit",
+      "title": "Emergency water treatment and filter kit",
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "water-systems"
+      ],
+      "tier": "everyday",
+      "summary": "DRAFT, not built or tested. Per EPA and Ready.gov, settle cloudy water and strain through a clean cloth or coffee filter before boiling (1 minute rolling boil; 3 minutes above 1,000 m) or disinfecting with unscented sodium hypochlorite bleach. Boiling and chlorination kill microbes but do not remove heavy metals or salts (distillation removes those). No parts list or regional prices are bundled; this is official treatment guidance, not a kit build.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "epa-emergency-water",
+        "ready-water"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "basic-disaster-supply-kit"
+        }
+      ],
+      "pack": "objects",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "preparedness",
+          "water-sanitation"
+        ]
+      ]
+    },
+    {
+      "id": "hand-and-power-tools-safety",
+      "title": "Hand and power tool safety fundamentals",
+      "kind": "topic",
+      "category_path": [
+        "objects",
+        "tools"
+      ],
+      "tier": "everyday",
+      "summary": "DRAFT. OSHA standards address hand and power tool hazards across general industry, maritime, and construction, emphasizing proper tool maintenance, machine guarding, and electrical safety practices for powered equipment.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "osha-hand-power-tools"
+      ],
+      "related": [],
+      "pack": "objects",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "emergency-shelter-and-room-sealing",
+      "title": "Emergency shelter and indoor room sealing",
+      "kind": "topic",
+      "category_path": [
+        "objects",
+        "shelter"
+      ],
+      "tier": "everyday",
+      "summary": "DRAFT. Ready.gov distinguishes stay-at-home, mass care shelters, and sheltering in place: for airborne hazards, move to an interior room, turn off fans, cooling, and forced-air heating, and seal windows, doors, and air vents with thick plastic sheeting cut wider than the openings and duct tape.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "ready-shelter"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "basic-disaster-supply-kit"
+        }
+      ],
+      "pack": "objects",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "preparedness",
+          "kits-checklists"
+        ]
+      ]
+    },
+    {
+      "id": "bicycle-road-safety-equipment",
+      "title": "Bicycle road safety and visibility gear",
+      "kind": "topic",
+      "category_path": [
+        "objects",
+        "transport"
+      ],
+      "tier": "kids",
+      "summary": "DRAFT. NHTSA reports 1,103 bicyclists killed in U.S. traffic crashes in 2024. Safety guidance calls for a properly fitted helmet, working brakes, bright daytime clothing, and a white front light plus red rear light and reflectors at night or in low visibility.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2024",
+          "precision": "year",
+          "approximate": false,
+          "label": "NHTSA crash data year"
+        }
+      ],
+      "sources": [
+        "nhtsa-bicycle-safety"
+      ],
+      "related": [],
+      "pack": "objects",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    }
+  ]
+}

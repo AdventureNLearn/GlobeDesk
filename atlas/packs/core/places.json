@@ -55,6 +55,7 @@
       "precision": "site",
       "entries": [
         "emmanuel-notre-dame",
+        "international-system-of-units-si",
         "savoyarde"
       ]
     },
@@ -65,6 +66,7 @@
         "bag-solar-kit-prices",
         "big-ben-great-bell",
         "bow-bells",
+        "early-electronic-computing-timeline",
         "liverpool-great-george",
         "great-paul",
         "great-tom-oxford",
@@ -98,7 +100,8 @@
       "key": "IT",
       "precision": "country",
       "entries": [
-        "bag-solar-kit-prices"
+        "bag-solar-kit-prices",
+        "galileo-telescopic-observations-1609"
       ]
     },
     {
@@ -125,6 +128,13 @@
       "entries": [
         "dhammazedi-bell",
         "mingun-bell"
+      ]
+    },
+    {
+      "key": "MU",
+      "precision": "site",
+      "entries": [
+        "usgs-m64-mauritius-reunion-2026-11-24"
       ]
     },
     {
@@ -177,21 +187,45 @@
       "precision": "country",
       "entries": [
         "thirteenth-amendment-1865",
+        "usda-plant-hardiness-zones",
         "ada-1990",
         "bag-solar-kit-prices",
+        "basic-disaster-supply-kit",
         "bicentennial-bell",
+        "bicycle-road-safety-equipment",
         "bill-of-rights-1791",
         "bok-tower-carillon",
+        "us-constitutional-branches",
         "centennial-bell",
+        "ghs-hazard-communication",
         "civil-rights-act-1964",
+        "commodity-plastics-resins",
+        "early-electronic-computing-timeline",
+        "emergency-shelter-and-room-sealing",
+        "water-filter-kit",
+        "family-emergency-communications-plan",
+        "us-federal-register-and-foia",
+        "first-aid-and-emergency-911",
+        "hand-and-power-tools-safety",
         "un-japanese-peace-bell",
         "justice-bell",
         "liberty-bell",
         "lithium-batteries-air-travel",
+        "nasa-earth-and-nlcd-land-cover",
+        "severe-weather-hazard-safety",
         "netherlands-carillon",
+        "currency-conversion",
         "old-north-bells",
+        "power-outage-generator-safety",
+        "public-health-records-gho-nchs",
+        "safe-home-food-freezing",
         "social-security-act-1935",
         "edmund-fitzgerald-bell",
+        "transistor-effect-nobel-1956",
+        "us-census-and-building-permits",
+        "us-supreme-court-judicial-review",
+        "usaspending-federal-budget",
+        "usda-fooddata-central",
         "uss-arizona-bell",
         "wilbank-bell",
         "world-peace-bell"
@@ -220,8 +254,9 @@
     },
     {
       "key": "US-CA",
-      "precision": "site",
+      "precision": "subdivision",
       "entries": [
+        "earthquakes-and-plate-faults",
         "gold-discovery-1848",
         "un-charter-1945"
       ]
@@ -376,14 +411,21 @@
     }
   ],
   "no_place": [
-    "currency-conversion",
-    "lithium-element",
-    "solar-resource-by-region",
-    "water-filter-kit",
     "bag-solar-kit",
     "bell-bronze",
     "bells-overview",
+    "copper-element",
+    "dna-and-human-genome-basics",
+    "earth-ocean-water-volume",
+    "faostat-global-food-supply",
+    "human-anatomy-organ-systems",
+    "iron-and-steel-alloys",
     "lifepo4-vs-nmc",
-    "portable-solar-power"
+    "lithium-element",
+    "noaa-global-climate-monitoring",
+    "noaa-october-2026-global-climate",
+    "portable-solar-power",
+    "silica-and-quartz-glass",
+    "solar-resource-by-region"
   ]
 }

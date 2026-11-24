@@ -23,6 +23,8 @@ Rebuild and check from the repo root:
     node tools/atlas/build-object.mjs && node tools/atlas/build-bells.mjs && node tools/atlas/build-packs.mjs && node tools/atlas/build-js.mjs
     node tools/atlas/validate.mjs
 
+`build-object.mjs` only regenerates the bag solar kit sample; skip it when you are adding a different object. To check one object record on its own: `node tools/atlas/validate.mjs data/atlas/objects/<id>.json`. To add your own buildable 3D object or kit layer, copy the bag solar kit sample and follow [docs/BUILD-YOUR-OWN-OBJECT.md](../docs/BUILD-YOUR-OWN-OBJECT.md).
+
 Rules: no entry about a living person (`subject_person_living` must be false; officials only by public role inside an event entry). A current event leaves Now after about 90 days and stays in its home category. Every pack is under 50 MB. Sources carry a class: **official** (government, standards body, dataset with a named licence), **reference**, or **experimental** (the owner's own repos and Learning Lab cards: labelled "Experimental (not an official source)", never a record backing a claim). New pack versions are promoted only with the owner's YES.
 
 Reading levels: an entry may carry `tiers` (kids, everyday, student, professional). The summary is the text at `tier`; the reading-level switch shows the chosen level, or "not written yet [UNKNOWN]".

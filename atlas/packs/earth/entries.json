@@ -1,0 +1,141 @@
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "earth",
+  "entries": [
+    {
+      "id": "noaa-global-climate-monitoring",
+      "title": "NOAA NCEI global climate monitoring",
+      "kind": "dataset",
+      "category_path": [
+        "earth",
+        "climate-weather"
+      ],
+      "tier": "student",
+      "summary": "NOAA's National Centers for Environmental Information (NCEI) tracks global surface, land, and ocean temperature anomalies since 1850 alongside Northern Hemisphere snow cover, Arctic and Antarctic sea ice extent, and global tropical cyclone counts.",
+      "places": [],
+      "dates": [
+        {
+          "date": "1850",
+          "end": "2026",
+          "precision": "year",
+          "approximate": false,
+          "label": "NCEI global surface record"
+        }
+      ],
+      "sources": [
+        "noaa-ncei-climate"
+      ],
+      "related": [],
+      "pack": "earth",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "earthquakes-and-plate-faults",
+      "title": "Earthquakes and tectonic plate faults",
+      "kind": "topic",
+      "category_path": [
+        "earth",
+        "geology-minerals"
+      ],
+      "tier": "everyday",
+      "summary": "Per USGS, earthquakes occur when tectonic plate stress overcomes friction in a sudden fault slip, radiating seismic waves through the crust. Larger mainshocks are followed by readjustment aftershocks along the fault zone that decrease in frequency over time.",
+      "places": [
+        {
+          "region": "US-CA",
+          "precision": "subdivision"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "usgs-earthquakes-faq"
+      ],
+      "related": [],
+      "pack": "earth",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "earth-ocean-water-volume",
+      "title": "Earth's ocean area and water distribution",
+      "kind": "topic",
+      "category_path": [
+        "earth",
+        "oceans-rivers"
+      ],
+      "tier": "kids",
+      "summary": "Per NOAA and USGS, the ocean covers over 70 percent of Earth's surface and holds about 97 percent of Earth's water—roughly 1,335,000,000 cubic kilometers of 1,386,000,000 cubic kilometers total—while about 2 percent is frozen in glaciers and ice caps and under 1 percent is fresh.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "noaa-ocean-water"
+      ],
+      "related": [],
+      "pack": "earth",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "nasa-earth-and-nlcd-land-cover",
+      "title": "NASA Earth observations and USGS Land Cover (NLCD)",
+      "kind": "dataset",
+      "category_path": [
+        "earth",
+        "land-cover"
+      ],
+      "tier": "student",
+      "summary": "NASA Earth Observatory and NASA POWER publish global satellite observations of Earth systems and solar parameters, while the USGS National Land Cover Database (NLCD) maps conterminous U.S. land cover and urban imperviousness at 30-meter resolution across 2001-2021 epochs.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2001",
+          "end": "2021",
+          "precision": "year",
+          "approximate": false,
+          "label": "Legacy NLCD epochs"
+        }
+      ],
+      "sources": [
+        "nasa-earth-observatory",
+        "usgs-nlcd",
+        "nasa-power"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "solar-resource-by-region"
+        }
+      ],
+      "pack": "earth",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "earth",
+          "solar-resource"
+        ]
+      ]
+    }
+  ]
+}

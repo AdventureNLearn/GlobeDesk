@@ -49,9 +49,31 @@
           "class": "experimental"
         }
       ],
-      "official_sources": [],
-      "official_status": "[UNKNOWN]",
-      "official_note": "Each news story cites its own official pages on its card. A desk-level official source list is [UNKNOWN]."
+      "official_sources": [
+        {
+          "label": "Library of Congress Digital Collections",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/collections/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "U.S. National Archives (Archives.gov)",
+          "publisher": "U.S. National Archives and Records Administration",
+          "url": "https://www.archives.gov/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "USAGov: About the U.S. and its Government",
+          "publisher": "U.S. General Services Administration",
+          "url": "https://www.usa.gov/about-the-us",
+          "class": "official",
+          "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed",
+      "official_note": "Desk-level official record portals are listed alongside per-story official pages cited on each news card."
     },
     {
       "n": 2,
@@ -100,8 +122,30 @@
           "class": "experimental"
         }
       ],
-      "official_sources": [],
-      "official_status": "[UNKNOWN]"
+      "official_sources": [
+        {
+          "label": "U.S. Census Bureau Building Permits Survey (BPS)",
+          "publisher": "U.S. Census Bureau",
+          "url": "https://www.census.gov/construction/bps/index.html",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "FEMA Building Science and Building Code Adoption Tracking",
+          "publisher": "Federal Emergency Management Agency",
+          "url": "https://www.fema.gov/emergency-managers/risk-management/building-science",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "USAGov State Governments Directory",
+          "publisher": "U.S. General Services Administration",
+          "url": "https://www.usa.gov/state-governments",
+          "class": "official",
+          "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed"
     },
     {
       "n": 3,
@@ -137,8 +181,23 @@
           "class": "experimental"
         }
       ],
-      "official_sources": [],
-      "official_status": "[UNKNOWN]"
+      "official_sources": [
+        {
+          "label": "OSHA Construction Industry Standards (29 CFR 1926)",
+          "publisher": "U.S. Occupational Safety and Health Administration",
+          "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1926",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "USGS The National Map",
+          "publisher": "U.S. Geological Survey",
+          "url": "https://www.usgs.gov/programs/national-geospatial-program/national-map",
+          "class": "official",
+          "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed"
     },
     {
       "n": 4,
@@ -175,8 +234,30 @@
           "class": "experimental"
         }
       ],
-      "official_sources": [],
-      "official_status": "[UNKNOWN]"
+      "official_sources": [
+        {
+          "label": "BLS Occupational Outlook Handbook",
+          "publisher": "U.S. Bureau of Labor Statistics",
+          "url": "https://www.bls.gov/ooh/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "Apprenticeship.gov Registered Apprenticeships",
+          "publisher": "U.S. Department of Labor",
+          "url": "https://www.apprenticeship.gov/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "OSHA Training and Reference Materials",
+          "publisher": "U.S. Occupational Safety and Health Administration",
+          "url": "https://www.osha.gov/training",
+          "class": "official",
+          "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed"
     },
     {
       "n": 5,
@@ -375,8 +456,30 @@
           "class": "experimental"
         }
       ],
-      "official_sources": [],
-      "official_status": "[UNKNOWN]"
+      "official_sources": [
+        {
+          "label": "National Transportation Atlas Database (NTAD)",
+          "publisher": "U.S. Bureau of Transportation Statistics",
+          "url": "https://www.bts.gov/ntad",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "U.S. Census Bureau International Trade Statistics",
+          "publisher": "U.S. Census Bureau",
+          "url": "https://www.census.gov/foreign-trade/index.html",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "Panama Canal Authority (Autoridad del Canal de Panama)",
+          "publisher": "Panama Canal Authority",
+          "url": "https://pancanal.com/en/",
+          "class": "official",
+          "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed"
     },
     {
       "n": 8,
@@ -436,8 +539,51 @@
           "class": "experimental"
         }
       ],
-      "official_sources": [],
-      "official_status": "[UNKNOWN]"
+      "official_sources": [
+        {
+          "label": "Congress.gov Legislative Records",
+          "publisher": "Library of Congress",
+          "url": "https://www.congress.gov/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "Federal Register",
+          "publisher": "Office of the Federal Register (NARA / GPO)",
+          "url": "https://www.federalregister.gov/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "USAspending.gov Federal Spending Open Data",
+          "publisher": "U.S. Department of the Treasury",
+          "url": "https://www.usaspending.gov/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "FEC Campaign Finance Data",
+          "publisher": "U.S. Federal Election Commission",
+          "url": "https://www.fec.gov/data/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "USCIS EB-5 Immigrant Investor Program",
+          "publisher": "U.S. Citizenship and Immigration Services",
+          "url": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/eb-5-immigrant-investor-program",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "Florida Telemarketing and Do Not Call Consumer Guidance",
+          "publisher": "Florida Department of Agriculture and Consumer Services",
+          "url": "https://www.fdacs.gov/Consumer-Resources/Consumer-Rights-and-Responsibilities/Telemarketing-Do-Not-Call",
+          "class": "official",
+          "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed"
     },
     {
       "n": 9,
@@ -506,8 +652,37 @@
           "class": "experimental"
         }
       ],
-      "official_sources": [],
-      "official_status": "[UNKNOWN]"
+      "official_sources": [
+        {
+          "label": "Privacy and Civil Liberties Oversight Board (PCLOB)",
+          "publisher": "U.S. Privacy and Civil Liberties Oversight Board",
+          "url": "https://www.pclob.gov/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "FOIA.gov Freedom of Information Act Portal",
+          "publisher": "U.S. Department of Justice",
+          "url": "https://www.foia.gov/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "DHS Privacy Office",
+          "publisher": "U.S. Department of Homeland Security",
+          "url": "https://www.dhs.gov/topics/privacy",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "Bureau of Justice Statistics (BJS)",
+          "publisher": "U.S. Department of Justice",
+          "url": "https://bjs.ojp.gov/",
+          "class": "official",
+          "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed"
     },
     {
       "n": 10,
@@ -544,8 +719,30 @@
           "class": "internal"
         }
       ],
-      "official_sources": [],
-      "official_status": "[UNKNOWN]"
+      "official_sources": [
+        {
+          "label": "U.S. Department of State Country Reports on Terrorism",
+          "publisher": "U.S. Department of State",
+          "url": "https://www.state.gov/country-reports-on-terrorism/",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "UN Office of Counter-Terrorism (UNOCT)",
+          "publisher": "United Nations",
+          "url": "https://www.un.org/counterterrorism/en",
+          "class": "official",
+          "checked": "2026-11-24"
+        },
+        {
+          "label": "Privacy and Civil Liberties Oversight Board (PCLOB)",
+          "publisher": "U.S. Privacy and Civil Liberties Oversight Board",
+          "url": "https://www.pclob.gov/",
+          "class": "official",
+          "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed"
     }
   ]
 }

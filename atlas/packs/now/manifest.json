@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "now",
+  "title": "Atlas pack: Now",
+  "kind": "category",
+  "category": "now",
+  "refresh": "weekly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "ae01e7bc6783b300603eb69d923fa9540c10358d9fc820552231ad8a933577fb",
+  "entry_count": 2,
+  "size_bytes": 2562,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 2562,
+      "sha256": "c6ff443ed98a1642c533cefe8491206bd21da68a5ed8bc4146f2e87c28104834"
+    }
+  ]
+}

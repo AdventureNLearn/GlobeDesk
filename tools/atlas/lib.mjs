@@ -7,7 +7,7 @@ import path from "node:path";
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");  // repo root
 export const ATLAS = path.join(ROOT, "atlas");
 export const MAX_BYTES = 50 * 1024 * 1024;
-export const CATEGORY_PACKS = ["history-places", "energy", "objects", "chemistry", "economics", "bells"]; // packs written so far
+export const CATEGORY_PACKS = ["history-places", "civic", "energy", "objects", "chemistry", "food", "preparedness", "health", "economics", "earth", "science-history", "now", "bells"]; // every category pack plus the Bells extra pack (under objects)
 // The category that owns a pack: its main pack, or an extra pack listed under it (bells lives under objects).
 export const packCategory = (cats, id) => cats.find((c) => c.pack === id) || cats.find((c) => (c.extra_packs || []).includes(id)) || null;
 export const categoryPacks = (c) => (c ? [c.pack, ...(c.extra_packs || [])] : []);

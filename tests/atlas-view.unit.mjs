@@ -50,14 +50,16 @@ t("by year: years, then months and weeks in the current year, and This week", ()
   assert.equal(y.range.min, minYear); assert.ok(minYear < 0, "the Bells pack reaches back before 1 CE"); assert.equal(y.range.max, 2026); assert.ok(y.undated.length > 0);
   const hp = M.byYear(D, { pack: "history-places" }, { today: "2026-11-24" });
   assert.equal(hp.range.min, 1775); assert.ok(hp.rows.some((d) => d.date === "1776-07-04")); assert.ok(hp.rows.some((d) => d.date === "2026-07-04"));
-  assert.deepEqual(M.byYear(D, {}, { today: "2026-11-24", year: 1996 }).rows.map((d) => d.entry), ["phosphate-cathode-discovery"]);
+  assert.ok(M.byYear(D, {}, { today: "2026-11-24", year: 1996 }).rows.some((d) => d.entry === "phosphate-cathode-discovery"));
+  assert.ok(M.byYear(D, {}, { today: "2026-11-24", year: 1610 }).rows.some((d) => d.entry === "galileo-telescopic-observations-1609"));
   const m = M.byYear(D, {}, { today: "2026-11-24", zoom: "months" });
-  assert.equal(m.buckets.length, 12); assert.equal(m.buckets[10].rows.length, 1);
+  assert.equal(m.buckets.length, 12); assert.equal(m.buckets[10].rows.length, 5);
   const w = M.byYear(D, {}, { today: "2026-11-24", zoom: "weeks" });
-  assert.equal(w.buckets[0].key, "2026-W27"); assert.ok(w.buckets.some((b) => b.key === "2026-W48"));
-  assert.equal(m.buckets[6].rows[0].entry, "america-250-2026");
+  const firstWeek = M.isoWeek([...D.entries.flatMap((e) => (e.dates || []).map((d) => d.date))].filter((d) => /^2026-\d\d-\d\d$/.test(d)).sort()[0]);
+  assert.equal(w.buckets[0].key, firstWeek.year + "-W" + String(firstWeek.week).padStart(2, "0")); assert.ok(w.buckets.some((b) => b.key === "2026-W48"));
+  assert.ok(m.buckets[6].rows.some((r) => r.entry === "america-250-2026"));
   const tw = M.byYear(D, {}, { today: "2026-11-24", zoom: "this-week" });
-  assert.equal(tw.key, "2026-W48"); assert.equal(tw.rows[0].entry, "bag-solar-kit-prices");
+  assert.equal(tw.key, "2026-W48"); assert.ok(tw.rows.some((r) => r.entry === "bag-solar-kit-prices"));
   assert.equal(M.byYear(D, {}, { today: "2026-12-10", zoom: "this-week" }).rows.length, 0);
   assert.equal(M.yearLabel(0), "1 BCE");
 });
@@ -69,9 +71,10 @@ t("Now status: this week, this month, leaving soon, left after now_until", () =>
   assert.equal(M.nowStatus(e, "2027-02-19"), "left");
   assert.equal(M.nowStatus({ current: false }, "2026-11-24"), "not-current");
 });
-t("tree: 5 bundled packs installed, 7 categories greyed, Now weekly", () => {
+t("tree: all 12 category packs installed (Bells rides under objects), none greyed, Now weekly", () => {
   const tr = M.tree(D);
-  assert.deepEqual(tr.filter((c) => c.installed).map((c) => c.id), ["history-places", "energy", "objects", "chemistry", "economics"]);
+  assert.deepEqual(tr.filter((c) => c.installed).map((c) => c.id), ["history-places", "civic", "energy", "objects", "chemistry", "food", "preparedness", "health", "economics", "earth", "science-history", "now"]);
+  assert.equal(tr.filter((c) => !c.installed).length, 0);
   assert.equal(tr.find((c) => c.id === "now").refresh, "weekly");
 });
 t("tier switch: other levels say not written yet [UNKNOWN]", () => {

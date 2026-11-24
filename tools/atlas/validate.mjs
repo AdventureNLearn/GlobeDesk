@@ -1,6 +1,6 @@
 // Atlas validator. Pure Node. Returns a list of problems; empty means valid.
 import path from "node:path";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { validateSchema } from "../../tests/jsonschema-lite.mjs";
 import { ATLAS, J, JR, MAX_BYTES, CATEGORY_PACKS, allEntries, fileInfo, packSha, exists, daysBetween, DATE_FORM, packCategory, categoryPacks } from "./lib.mjs";
@@ -142,6 +142,40 @@ export function packRules(m, dir) {
   return p;
 }
 
+
+// Object and price records referenced by entries, or passed as a single file.
+export function objectRules(rel, rec) {
+  const p = [];
+  const schema = JR("schema/globedesk-object.schema.json");
+  asList(validateSchema(schema, rec)).forEach((x) => p.push(`record ${rel}: ${x}`));
+  const citeIds = new Set((rec.citations || []).map((c) => c.id));
+  (rec.parts || []).forEach((part) => (part.citations || []).forEach((c) => {
+    if (!citeIds.has(c)) p.push(`record ${rel}: part ${part.id} cites unknown ${c}`);
+  }));
+  (rec.safety || []).forEach((s) => (s.citations || []).forEach((c) => {
+    if (!citeIds.has(c)) p.push(`record ${rel}: safety ${s.id} cites unknown ${c}`);
+  }));
+  return p;
+}
+
+export function priceRules(rel, rec) {
+  const p = [];
+  const schema = JR("schema/globedesk-prices.schema.json");
+  asList(validateSchema(schema, rec)).forEach((x) => p.push(`record ${rel}: ${x}`));
+  return p;
+}
+
+export function validateRecordFile(filePath) {
+  const abs = path.isAbsolute(filePath) ? filePath : path.resolve(process.cwd(), filePath);
+  if (!existsSync(abs)) return [`${filePath}: file not found`];
+  let rec;
+  try { rec = JSON.parse(readFileSync(abs, "utf8")); }
+  catch { return [`${filePath}: not valid JSON`]; }
+  if (rec && rec.schema === "globedesk.object/1") return objectRules(filePath, rec);
+  if (rec && rec.schema === "globedesk.prices/1") return priceRules(filePath, rec);
+  return [`${filePath}: unknown record schema ${rec && rec.schema ? rec.schema : "[UNKNOWN]"}`];
+}
+
 export function validateAtlas() {
   const problems = [];
   const entrySchema = JR("schema/atlas-entry.schema.json");
@@ -179,6 +213,16 @@ export function validateAtlas() {
   const index = J("packs/core/index.json").entries.map((e) => e.id).sort();
   if (JSON.stringify(index) !== JSON.stringify([...ids].sort())) problems.push("core index does not list exactly the pack entries");
   problems.push(...deskRules(JR("desks/work-desks.json")));
+  const recordPaths = new Set();
+  for (const e of entries) {
+    [e.record, ...(e.records || [])].filter(Boolean).forEach((r) => recordPaths.add(r));
+  }
+  for (const r of recordPaths) {
+    if (!exists(r)) continue;
+    const rec = JR(r);
+    if (rec.schema === "globedesk.object/1") problems.push(...objectRules(r, rec));
+    if (rec.schema === "globedesk.prices/1") problems.push(...priceRules(r, rec));
+  }
   // Hygiene: shareable files carry no home paths, emails or key-like strings.
   for (const rel of ["categories.json", "views.json", "packs/core/sources.json", ...CATEGORY_PACKS.map((p) => `packs/${p}/entries.json`)]) {
     const s = readFileSync(path.join(ATLAS, rel), "utf8");
@@ -192,8 +236,9 @@ export function validateAtlas() {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const p = validateAtlas();
+  const target = process.argv[2];
+  const p = target ? validateRecordFile(target) : validateAtlas();
   p.forEach((x) => console.log("FAIL", x));
-  console.log(p.length ? `${p.length} problems` : "atlas valid");
+  console.log(p.length ? `${p.length} problems` : (target ? "record valid" : "atlas valid"));
   process.exit(p.length ? 1 : 0);
 }

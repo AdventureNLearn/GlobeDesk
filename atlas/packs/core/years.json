@@ -108,6 +108,12 @@
       "entry": "dhammazedi-bell"
     },
     {
+      "date": "1610",
+      "precision": "year",
+      "approximate": false,
+      "entry": "galileo-telescopic-observations-1609"
+    },
+    {
       "date": "1636",
       "precision": "year",
       "approximate": false,
@@ -330,6 +336,12 @@
       "entry": "lutine-bell"
     },
     {
+      "date": "1803",
+      "precision": "year",
+      "approximate": false,
+      "entry": "us-supreme-court-judicial-review"
+    },
+    {
       "date": "1803-12-20",
       "precision": "day",
       "approximate": false,
@@ -438,6 +450,13 @@
       "approximate": false,
       "end": "1848-07-20",
       "entry": "seneca-falls-1848"
+    },
+    {
+      "date": "1850",
+      "precision": "year",
+      "approximate": false,
+      "end": "2026",
+      "entry": "noaa-global-climate-monitoring"
     },
     {
       "date": "1855",
@@ -553,6 +572,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "petersglocke-cologne"
+    },
+    {
+      "date": "1875-05-20",
+      "precision": "day",
+      "approximate": false,
+      "entry": "international-system-of-units-si"
     },
     {
       "date": "1876",
@@ -821,6 +846,13 @@
       "entry": "pummerin"
     },
     {
+      "date": "1939",
+      "precision": "year",
+      "approximate": false,
+      "end": "1942",
+      "entry": "early-electronic-computing-timeline"
+    },
+    {
       "date": "1940",
       "precision": "year",
       "approximate": false,
@@ -957,6 +989,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "bow-bells"
+    },
+    {
+      "date": "1956",
+      "precision": "year",
+      "approximate": false,
+      "entry": "transistor-effect-nobel-1956"
     },
     {
       "date": "1957",
@@ -1151,10 +1189,23 @@
       "entry": "swan-bells-perth"
     },
     {
+      "date": "2001",
+      "precision": "year",
+      "approximate": false,
+      "end": "2021",
+      "entry": "nasa-earth-and-nlcd-land-cover"
+    },
+    {
       "date": "2001-09-11",
       "precision": "day",
       "approximate": false,
       "entry": "september-11-2001"
+    },
+    {
+      "date": "2006-09-26",
+      "precision": "day",
+      "approximate": false,
+      "entry": "usaspending-federal-budget"
     },
     {
       "date": "2011",
@@ -1173,6 +1224,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "mechelen-carillons"
+    },
+    {
+      "date": "2014-05-09",
+      "precision": "day",
+      "approximate": false,
+      "entry": "usaspending-federal-budget"
     },
     {
       "date": "2015",
@@ -1211,6 +1268,12 @@
       "entry": "emmanuel-notre-dame"
     },
     {
+      "date": "2019-05-20",
+      "precision": "day",
+      "approximate": false,
+      "entry": "international-system-of-units-si"
+    },
+    {
       "date": "2020-01-20",
       "precision": "day",
       "approximate": false,
@@ -1229,10 +1292,46 @@
       "entry": "covid-19-pandemic-2020"
     },
     {
+      "date": "2022-08-16",
+      "precision": "day",
+      "approximate": false,
+      "entry": "dna-and-human-genome-basics"
+    },
+    {
+      "date": "2023",
+      "precision": "year",
+      "approximate": false,
+      "entry": "usda-plant-hardiness-zones"
+    },
+    {
       "date": "2024",
       "precision": "year",
       "approximate": true,
       "entry": "bicentennial-bell"
+    },
+    {
+      "date": "2024",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bicycle-road-safety-equipment"
+    },
+    {
+      "date": "2024-08-09",
+      "precision": "day",
+      "approximate": false,
+      "entry": "safe-home-food-freezing"
+    },
+    {
+      "date": "2026-06-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "power-outage-generator-safety"
+    },
+    {
+      "date": "2026-07-01",
+      "precision": "day",
+      "approximate": false,
+      "entry": "basic-disaster-supply-kit"
     },
     {
       "date": "2026-07-04",
@@ -1241,23 +1340,75 @@
       "entry": "america-250-2026"
     },
     {
+      "date": "2026-09-01",
+      "precision": "day",
+      "approximate": false,
+      "entry": "family-emergency-communications-plan"
+    },
+    {
+      "date": "2026-10",
+      "precision": "month",
+      "approximate": false,
+      "entry": "usda-fooddata-central"
+    },
+    {
+      "date": "2026-11-12",
+      "precision": "day",
+      "approximate": false,
+      "entry": "noaa-october-2026-global-climate"
+    },
+    {
+      "date": "2026-11-23",
+      "precision": "day",
+      "approximate": false,
+      "entry": "currency-conversion"
+    },
+    {
       "date": "2026-11-24",
       "precision": "day",
       "approximate": false,
       "entry": "bag-solar-kit-prices"
+    },
+    {
+      "date": "2026-11-24",
+      "precision": "day",
+      "approximate": false,
+      "entry": "usgs-m64-mauritius-reunion-2026-11-24"
+    },
+    {
+      "date": "2026-11-24",
+      "precision": "day",
+      "approximate": false,
+      "entry": "currency-conversion"
     }
   ],
   "undated": [
-    "currency-conversion",
-    "lithium-element",
-    "solar-resource-by-region",
-    "water-filter-kit",
     "bag-solar-kit",
     "bell-bronze",
     "bells-overview",
     "bok-tower-carillon",
+    "us-constitutional-branches",
+    "ghs-hazard-communication",
+    "commodity-plastics-resins",
+    "copper-element",
+    "earth-ocean-water-volume",
+    "earthquakes-and-plate-faults",
+    "emergency-shelter-and-room-sealing",
+    "water-filter-kit",
+    "faostat-global-food-supply",
+    "us-federal-register-and-foia",
+    "first-aid-and-emergency-911",
+    "hand-and-power-tools-safety",
+    "human-anatomy-organ-systems",
+    "iron-and-steel-alloys",
     "lifepo4-vs-nmc",
+    "lithium-element",
     "lithium-batteries-air-travel",
-    "portable-solar-power"
+    "severe-weather-hazard-safety",
+    "portable-solar-power",
+    "public-health-records-gho-nchs",
+    "silica-and-quartz-glass",
+    "solar-resource-by-region",
+    "us-census-and-building-permits"
   ]
 }

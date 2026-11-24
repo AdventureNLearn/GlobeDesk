@@ -1,0 +1,12 @@
+{
+  "schema": "globedesk.prices/1",
+  "region": "US",
+  "currency": "USD",
+  "rows": [
+    { "object": "sample-lamp", "part": "base", "status": "unknown" },
+    { "object": "sample-lamp", "part": "shade", "status": "unknown" },
+    { "object": "sample-lamp", "part": "bulb", "status": "unknown" },
+    { "object": "sample-lamp", "part": "switch", "status": "unknown" },
+    { "object": "sample-lamp", "part": "cord", "status": "unknown" }
+  ]
+}

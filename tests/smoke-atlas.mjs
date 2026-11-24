@@ -123,7 +123,7 @@ try {
   if (!out.az.open || out.az.rows !== exp.az) throw new Error("A-Z: " + JSON.stringify(out.az));
   await q(`document.querySelector('[data-at-view="cats"]').click()`);
   out.cats = await q(`({ cats: document.querySelectorAll(".at-cat").length, greyed: document.querySelectorAll(".at-cat.not-installed").length })`);
-  if (out.cats.cats !== 12 || out.cats.greyed !== 7) throw new Error("categories: " + JSON.stringify(out.cats));
+  if (out.cats.cats !== 12 || out.cats.greyed !== 0) throw new Error("categories: " + JSON.stringify(out.cats));
   await q(`document.querySelector('[data-at-view="place"]').click()`);
   out.place = await q(`({ places: document.querySelectorAll(".at-place").length, markers: document.querySelectorAll(".atlas-count").length })`);
   if (out.place.places !== exp.places || out.place.markers !== exp.markers || exp.places < 20) throw new Error("by place: " + JSON.stringify(out.place));
@@ -204,8 +204,8 @@ try {
 
   // Desks: switch to Permits and Codes, check labels, then back to News.
   await q(`(() => { const s = document.getElementById("deskSelect"); s.value = "permits-codes"; s.dispatchEvent(new Event("change")); })()`);
-  out.desk = await q(`({ shown: !document.getElementById("workDesk").hidden, cardsHidden: getComputedStyle(document.getElementById("ndCards")).display === "none", exp: (document.getElementById("workDesk").innerText.match(/Experimental \\(not an official source\\)/g) || []).length, unknown: /Official source \\[UNKNOWN\\]/.test(document.getElementById("workDesk").innerText), links: [...document.querySelectorAll("#workDesk a")].map((a) => a.href) })`);
-  if (!out.desk.shown || !out.desk.cardsHidden || out.desk.exp !== 4 || !out.desk.unknown || out.desk.links.some((h) => !/^https:\/\/(github\.com\/AdventureNLearn\/|learninglab\.grok\.me\/)/.test(h))) throw new Error("desk: " + JSON.stringify(out.desk));
+  out.desk = await q(`({ shown: !document.getElementById("workDesk").hidden, cardsHidden: getComputedStyle(document.getElementById("ndCards")).display === "none", exp: (document.getElementById("workDesk").innerText.match(/Experimental \\(not an official source\\)/g) || []).length, official: [...document.querySelectorAll("#workDesk .wd-official a")].map((a) => a.href), links: [...document.querySelectorAll("#workDesk .wd-backing a")].map((a) => a.href) })`);
+  if (!out.desk.shown || !out.desk.cardsHidden || out.desk.exp !== 4 || !out.desk.official.length || out.desk.links.some((h) => !/^https:\/\/(github\.com\/AdventureNLearn\/|learninglab\.grok\.me\/)/.test(h))) throw new Error("desk: " + JSON.stringify(out.desk));
   await q(`(() => { const s = document.getElementById("deskSelect"); s.value = "news"; s.dispatchEvent(new Event("change")); })()`);
   out.back = await q(`({ cards: document.querySelectorAll(".nd-card").length, visible: getComputedStyle(document.getElementById("ndCards")).display !== "none" })`);
   if (out.back.cards !== 50 || !out.back.visible) throw new Error("news desk after switch: " + JSON.stringify(out.back));
