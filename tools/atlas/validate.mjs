@@ -127,6 +127,28 @@ export function bellRules(entry, rec, ctx) {
   return p;
 }
 
+// Bells overview (globedesk.bell-overview/1): schema, id matches its entry, every section cites registered
+// sources and links entries that exist, and the per-region counts match the bell records.
+export function bellOverviewRules(entry, rec, ctx) {
+  const p = [];
+  const at = `bell overview ${entry.id}`;
+  asList(validateSchema(ctx.overviewSchema, rec)).forEach((x) => p.push(`${at}: ${x}`));
+  if (rec.id !== entry.id) p.push(`${at}: record id ${rec.id} does not match its entry`);
+  (rec.sections || []).forEach((sec) => {
+    (sec.sources || []).forEach((id) => { if (!ctx.sourceById.has(id)) p.push(`${at}: section ${sec.id} cites ${id}, not in core/sources.json`); });
+    (sec.bells || []).forEach((id) => { if (!ctx.entryIds.has(id)) p.push(`${at}: section ${sec.id} links ${id}, not an Atlas entry`); });
+  });
+  if (ctx.bellRegions) {
+    const want = {};
+    ctx.bellRegions.forEach((r) => { want[r] = (want[r] || 0) + 1; });
+    const got = rec.counts || {};
+    new Set([...Object.keys(want), ...Object.keys(got)]).forEach((k) => {
+      if ((want[k] || 0) !== (got[k] || 0)) p.push(`${at}: count for ${k} is ${got[k] || 0}, bell records give ${want[k] || 0}`);
+    });
+  }
+  return p;
+}
+
 export function packRules(m, dir) {
   const p = [];
   let size = 0;
@@ -210,6 +232,10 @@ export function validateAtlas() {
     if (!e.record || !exists(e.record)) { problems.push(`bell ${e.id}: record missing`); return; }
     problems.push(...bellRules(e, JR(e.record), { ...ctx, bellSchema }));
   });
+  const overviewSchema = JR("schema/globedesk-bell-overview.schema.json");
+  const bellRegions = entries.filter((e) => e.layer === "bells" && e.kind === "object" && e.record && exists(e.record)).map((e) => JR(e.record).region);
+  entries.filter((e) => e.record && exists(e.record) && JR(e.record).schema === "globedesk.bell-overview/1")
+    .forEach((e) => problems.push(...bellOverviewRules(e, JR(e.record), { ...ctx, overviewSchema, bellRegions })));
   const index = J("packs/core/index.json").entries.map((e) => e.id).sort();
   if (JSON.stringify(index) !== JSON.stringify([...ids].sort())) problems.push("core index does not list exactly the pack entries");
   problems.push(...deskRules(JR("desks/work-desks.json")));

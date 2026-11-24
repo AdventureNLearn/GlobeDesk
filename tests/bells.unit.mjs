@@ -5,7 +5,7 @@ import { readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import vm from "node:vm";
 import { validateSchema } from "./jsonschema-lite.mjs";
-import { validateAtlas, bellRules } from "../tools/atlas/validate.mjs";
+import { validateAtlas, bellRules, bellOverviewRules } from "../tools/atlas/validate.mjs";
 import { J, JR } from "../tools/atlas/lib.mjs";
 const require = createRequire(import.meta.url);
 const Bell = require("../js/atlas/models/bell.js");
@@ -123,5 +123,16 @@ t("validator rejects a Wikipedia-only bell, an unflagged approximate pin and a s
   assert.ok(bellRules(e, a, c).some((x) => /approximate/.test(x)));
   const m = JSON.parse(JSON.stringify(r)); m.diameter_m = null;
   assert.ok(bellRules(e, m, c).some((x) => /diameter/.test(x)));
+});
+t("bells overview: matches its schema; validator rejects a bad overview (unknown source, unknown bell, wrong count, extra field)", () => {
+  const e = D.entries.find((x) => x.id === "bells-overview");
+  const r = JSON.parse(JSON.stringify(D.records[e.record]));
+  const c = { sourceById: new Map(J("packs/core/sources.json").sources.map((s) => [s.id, s])), entryIds: new Set(D.entries.map((x) => x.id)),
+    overviewSchema: JR("schema/globedesk-bell-overview.schema.json"), bellRegions: bells.map((b) => rec(b).region) };
+  assert.deepEqual(bellOverviewRules(e, r, c), []);
+  const bad = JSON.parse(JSON.stringify(r));
+  bad.sections[0].sources.push("no-such-source"); bad.sections[0].bells.push("no-such-bell"); bad.counts.Europe += 1; bad.extra = true;
+  const p = bellOverviewRules(e, bad, c).join("\n");
+  for (const want of [/no-such-source/, /no-such-bell/, /count for Europe/, /extra/]) assert.match(p, want);
 });
 console.log(`${n} bells tests ok`);
