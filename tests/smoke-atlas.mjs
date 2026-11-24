@@ -146,10 +146,10 @@ try {
   if (!/Carry-on day kit|S · /.test(tabs.object) || !/\[UNKNOWN\]/.test(tabs.parts) || !/LFP/.test(tabs.chemistry) || !/Official sources/.test(tabs.sources) || !/Community lane is off/.test(tabs.sources)) throw new Error("tabs: " + JSON.stringify(Object.keys(tabs).map((k) => [k, tabs[k].slice(0, 120)])));
   out.official = /FAA PackSafe/.test(tabs.sources);
 
-  // History pack: 41 entries (1775 prologue, 1776-2026); by-year slider spans the history range to 2026. Bells link by id.
+  // History pack: 76 entries (1775 prologue, 1776-2026); by-year slider spans the history range to 2026. Bells link by id.
   await q(`(() => { GD.atlas.st.category = "history-places"; GD.atlas.st.view = "year"; GD.atlas.st.zoom = "years"; GD.atlas.st.year = null; GD.atlas.render(); })()`);
   out.history = await q(`(() => { const y = document.getElementById("atYear"); const t = document.getElementById("atBrowse").innerText; return { min: +y.min, max: +y.max, rows: document.querySelectorAll("#atBrowse .at-years li").length, has1776: /1776/.test(t), has2026: /2026/.test(t), pack: GD.atlasData.manifests["history-places"] && GD.atlasData.manifests["history-places"].entry_count }; })()`);
-  if (out.history.pack !== 41 || out.history.max !== 2026 || out.history.min > 1776 || !out.history.has1776 || !out.history.has2026 || out.history.rows < 40) throw new Error("history by year: " + JSON.stringify(out.history));
+  if (out.history.pack !== 76 || out.history.max !== 2026 || out.history.min > 1776 || !out.history.has1776 || !out.history.has2026 || out.history.rows < 75) throw new Error("history by year: " + JSON.stringify(out.history));
   await q(`(() => { const s = document.getElementById("atYear"); s.value = "1776"; s.dispatchEvent(new Event("change")); })()`);
   out.y1776 = await q(`(document.getElementById("atBrowse").innerText.match(/Declaration of Independence/g) || []).length`);
   if (out.y1776 < 1) throw new Error("1776 slider: " + out.y1776);

@@ -5,7 +5,7 @@ GlobeDesk's own encyclopedia: 12 categories, an index entry schema, packs with m
     categories.json                       12 categories with subcategories, scope, pack and refresh
     views.json                            A-Z, by place, by year (years, then months and weeks in the current year, This week)
     packs/core/                           index, categories, places, years, sources (each with a class) + manifest
-    packs/history-places/                 History and places: US history 1776-2026 (41 sourced event entries, draft)
+    packs/history-places/                 History and places: US history 1776-2026 (76 sourced event entries in date order, 1775 prologue, draft)
     packs/energy|objects|chemistry|economics/  entries.json + manifest.json
     packs/bells/                          the Bells pack (extra pack of "3D objects and builds"): overview + worldwide bells
     community/community.json              reviewed contributor cards, community links and pins (empty until review)

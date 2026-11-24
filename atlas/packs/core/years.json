@@ -445,6 +445,12 @@
       "entry": "gold-discovery-1848"
     },
     {
+      "date": "1848-02-02",
+      "precision": "day",
+      "approximate": false,
+      "entry": "guadalupe-hidalgo-1848"
+    },
+    {
       "date": "1848-07-19",
       "precision": "day",
       "approximate": false,
@@ -550,16 +556,40 @@
       "entry": "thirteenth-amendment-1865"
     },
     {
+      "date": "1866-06-13",
+      "precision": "day",
+      "approximate": false,
+      "entry": "fourteenth-amendment-1868"
+    },
+    {
       "date": "1867-10-18",
       "precision": "day",
       "approximate": false,
       "entry": "alaska-transfer-1867"
     },
     {
+      "date": "1868-07-09",
+      "precision": "day",
+      "approximate": false,
+      "entry": "fourteenth-amendment-1868"
+    },
+    {
+      "date": "1869-02-26",
+      "precision": "day",
+      "approximate": false,
+      "entry": "fifteenth-amendment-1870"
+    },
+    {
       "date": "1869-05-10",
       "precision": "day",
       "approximate": false,
       "entry": "golden-spike-1869"
+    },
+    {
+      "date": "1870-02-03",
+      "precision": "day",
+      "approximate": false,
+      "entry": "fifteenth-amendment-1870"
     },
     {
       "date": "1871",
@@ -592,10 +622,28 @@
       "entry": "centennial-bell"
     },
     {
+      "date": "1876",
+      "precision": "year",
+      "approximate": false,
+      "entry": "centennial-exposition-1876"
+    },
+    {
       "date": "1876-07-04",
       "precision": "day",
       "approximate": false,
       "entry": "centennial-bell"
+    },
+    {
+      "date": "1876-07-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "centennial-exposition-1876"
+    },
+    {
+      "date": "1877",
+      "precision": "year",
+      "approximate": false,
+      "entry": "end-of-reconstruction-1877"
     },
     {
       "date": "1877",
@@ -610,6 +658,12 @@
       "entry": "great-paul"
     },
     {
+      "date": "1879",
+      "precision": "year",
+      "approximate": false,
+      "entry": "edison-light-1879"
+    },
+    {
       "date": "1881",
       "precision": "year",
       "approximate": false,
@@ -622,10 +676,34 @@
       "entry": "great-paul"
     },
     {
+      "date": "1882-09-04",
+      "precision": "day",
+      "approximate": false,
+      "entry": "edison-light-1879"
+    },
+    {
+      "date": "1883-05-24",
+      "precision": "day",
+      "approximate": false,
+      "entry": "brooklyn-bridge-1883"
+    },
+    {
+      "date": "1883-11-18",
+      "precision": "day",
+      "approximate": false,
+      "entry": "standard-time-1883"
+    },
+    {
       "date": "1886-10-28",
       "precision": "day",
       "approximate": false,
       "entry": "statue-of-liberty-1886"
+    },
+    {
+      "date": "1890-12-29",
+      "precision": "day",
+      "approximate": false,
+      "entry": "wounded-knee-1890"
     },
     {
       "date": "1891",
@@ -659,6 +737,12 @@
       "entry": "uglich-exile-bell"
     },
     {
+      "date": "1892-06-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "plessy-v-ferguson-1896"
+    },
+    {
       "date": "1894",
       "precision": "year",
       "approximate": false,
@@ -677,10 +761,40 @@
       "entry": "dolores-bell"
     },
     {
+      "date": "1896-05-18",
+      "precision": "day",
+      "approximate": false,
+      "entry": "plessy-v-ferguson-1896"
+    },
+    {
+      "date": "1898-02-15",
+      "precision": "day",
+      "approximate": false,
+      "entry": "spanish-american-war-1898"
+    },
+    {
+      "date": "1898-04-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "spanish-american-war-1898"
+    },
+    {
+      "date": "1898-12-10",
+      "precision": "day",
+      "approximate": false,
+      "entry": "spanish-american-war-1898"
+    },
+    {
       "date": "1901",
       "precision": "year",
       "approximate": false,
       "entry": "balangiga-bells"
+    },
+    {
+      "date": "1903-11-03",
+      "precision": "day",
+      "approximate": false,
+      "entry": "panama-canal-1903"
     },
     {
       "date": "1903-12-17",
@@ -693,6 +807,67 @@
       "precision": "year",
       "approximate": false,
       "entry": "balangiga-bells"
+    },
+    {
+      "date": "1906-04-18",
+      "precision": "day",
+      "approximate": false,
+      "entry": "san-francisco-earthquake-1906"
+    },
+    {
+      "date": "1908",
+      "precision": "year",
+      "approximate": false,
+      "entry": "model-t-1908"
+    },
+    {
+      "date": "1909-02-12",
+      "precision": "day",
+      "approximate": false,
+      "entry": "naacp-founding-1909"
+    },
+    {
+      "date": "1909-05-31",
+      "precision": "day",
+      "approximate": false,
+      "end": "1909-06-01",
+      "entry": "naacp-founding-1909"
+    },
+    {
+      "date": "1909-07-02",
+      "precision": "day",
+      "approximate": false,
+      "entry": "sixteenth-amendment-1913"
+    },
+    {
+      "date": "1912-05-13",
+      "precision": "day",
+      "approximate": false,
+      "entry": "seventeenth-amendment-1913"
+    },
+    {
+      "date": "1913-02-03",
+      "precision": "day",
+      "approximate": false,
+      "entry": "sixteenth-amendment-1913"
+    },
+    {
+      "date": "1913-04-08",
+      "precision": "day",
+      "approximate": false,
+      "entry": "seventeenth-amendment-1913"
+    },
+    {
+      "date": "1913-10",
+      "precision": "month",
+      "approximate": false,
+      "entry": "model-t-1908"
+    },
+    {
+      "date": "1914",
+      "precision": "year",
+      "approximate": false,
+      "entry": "panama-canal-1903"
     },
     {
       "date": "1915",
@@ -719,10 +894,28 @@
       "entry": "liberty-bell"
     },
     {
+      "date": "1917-04-02",
+      "precision": "day",
+      "approximate": false,
+      "entry": "us-enters-world-war-i-1917"
+    },
+    {
+      "date": "1917-04-06",
+      "precision": "day",
+      "approximate": false,
+      "entry": "us-enters-world-war-i-1917"
+    },
+    {
       "date": "1918",
       "precision": "year",
       "approximate": false,
       "entry": "petersglocke-cologne"
+    },
+    {
+      "date": "1918-11-11",
+      "precision": "day",
+      "approximate": false,
+      "entry": "armistice-1918"
     },
     {
       "date": "1920",
@@ -771,6 +964,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "wilbank-bell"
+    },
+    {
+      "date": "1924-06-02",
+      "precision": "day",
+      "approximate": false,
+      "entry": "indian-citizenship-act-1924"
     },
     {
       "date": "1925",
@@ -877,10 +1076,22 @@
       "entry": "pearl-harbor-1941"
     },
     {
+      "date": "1942-02-19",
+      "precision": "day",
+      "approximate": false,
+      "entry": "executive-order-9066-1942"
+    },
+    {
       "date": "1944-06",
       "precision": "month",
       "approximate": false,
       "entry": "uss-arizona-bell"
+    },
+    {
+      "date": "1944-06-06",
+      "precision": "day",
+      "approximate": false,
+      "entry": "d-day-1944"
     },
     {
       "date": "1945-04",
@@ -889,16 +1100,59 @@
       "entry": "pummerin"
     },
     {
+      "date": "1945-05-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "v-e-day-1945"
+    },
+    {
+      "date": "1945-05-08",
+      "precision": "day",
+      "approximate": false,
+      "entry": "v-e-day-1945"
+    },
+    {
       "date": "1945-06-26",
       "precision": "day",
       "approximate": false,
       "entry": "un-charter-1945"
     },
     {
+      "date": "1945-08-06",
+      "precision": "day",
+      "approximate": false,
+      "entry": "hiroshima-nagasaki-1945"
+    },
+    {
+      "date": "1945-08-09",
+      "precision": "day",
+      "approximate": false,
+      "entry": "hiroshima-nagasaki-1945"
+    },
+    {
+      "date": "1945-08-14",
+      "precision": "day",
+      "approximate": false,
+      "entry": "japan-surrender-1945"
+    },
+    {
+      "date": "1945-09-02",
+      "precision": "day",
+      "approximate": false,
+      "entry": "japan-surrender-1945"
+    },
+    {
       "date": "1946-10-27",
       "precision": "day",
       "approximate": false,
       "entry": "uss-arizona-bell"
+    },
+    {
+      "date": "1948-06-24",
+      "precision": "day",
+      "approximate": false,
+      "end": "1949-05-12",
+      "entry": "berlin-airlift-1948"
     },
     {
       "date": "1950",
@@ -1033,6 +1287,18 @@
       "entry": "cape-town-st-georges-bells"
     },
     {
+      "date": "1962-10-14",
+      "precision": "day",
+      "approximate": false,
+      "entry": "cuban-missile-crisis-1962"
+    },
+    {
+      "date": "1962-10-22",
+      "precision": "day",
+      "approximate": false,
+      "entry": "cuban-missile-crisis-1962"
+    },
+    {
       "date": "1962-12-20",
       "precision": "day",
       "approximate": false,
@@ -1057,6 +1323,18 @@
       "entry": "civil-rights-act-1964"
     },
     {
+      "date": "1964-08-02",
+      "precision": "day",
+      "approximate": false,
+      "entry": "gulf-of-tonkin-1964"
+    },
+    {
+      "date": "1964-08-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "gulf-of-tonkin-1964"
+    },
+    {
       "date": "1964-09-20",
       "precision": "day",
       "approximate": false,
@@ -1067,6 +1345,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "selma-bloody-sunday-1965"
+    },
+    {
+      "date": "1965-08-06",
+      "precision": "day",
+      "approximate": false,
+      "entry": "voting-rights-act-1965"
     },
     {
       "date": "1969-07-16",
@@ -1081,16 +1365,34 @@
       "entry": "apollo-11-1969"
     },
     {
+      "date": "1969-10-29",
+      "precision": "day",
+      "approximate": false,
+      "entry": "arpanet-1969"
+    },
+    {
       "date": "1970-04-26",
       "precision": "day",
       "approximate": false,
       "entry": "national-carillon-canberra"
     },
     {
+      "date": "1973-01-27",
+      "precision": "day",
+      "approximate": false,
+      "entry": "fall-of-saigon-1975"
+    },
+    {
       "date": "1975",
       "precision": "year",
       "approximate": false,
       "entry": "old-north-bells"
+    },
+    {
+      "date": "1975-04-30",
+      "precision": "day",
+      "approximate": false,
+      "entry": "fall-of-saigon-1975"
     },
     {
       "date": "1975-11-10",
@@ -1129,10 +1431,22 @@
       "entry": "mechelen-carillons"
     },
     {
+      "date": "1982-11-11",
+      "precision": "day",
+      "approximate": false,
+      "entry": "vietnam-veterans-memorial-1982"
+    },
+    {
       "date": "1986",
       "precision": "year",
       "approximate": false,
       "entry": "wellington-carillon"
+    },
+    {
+      "date": "1986",
+      "precision": "year",
+      "approximate": false,
+      "entry": "nsfnet-public-internet-1986"
     },
     {
       "date": "1988",
@@ -1141,16 +1455,34 @@
       "entry": "swan-bells-perth"
     },
     {
+      "date": "1989-11-09",
+      "precision": "day",
+      "approximate": false,
+      "entry": "berlin-wall-falls-1989"
+    },
+    {
       "date": "1990-07-26",
       "precision": "day",
       "approximate": false,
       "entry": "ada-1990"
     },
     {
+      "date": "1991-12-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "soviet-union-dissolves-1991"
+    },
+    {
       "date": "1992",
       "precision": "year",
       "approximate": false,
       "entry": "balangiga-bells"
+    },
+    {
+      "date": "1995",
+      "precision": "year",
+      "approximate": false,
+      "entry": "nsfnet-public-internet-1986"
     },
     {
       "date": "1995-07-04",

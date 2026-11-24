@@ -118,7 +118,7 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "California State Parks",
-      "license": "State of California web content; reuse terms [UNKNOWN]"
+      "license": "California State Parks Conditions of Use (parks.ca.gov/ConditionsOfUse): copying or republishing only as fair use; non-commercial educational use with citation and no changes; commercial use needs written permission. GlobeDesk links and uses its own wording."
     },
     {
       "id": "cdc-covid-timeline",
@@ -136,7 +136,7 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Federal Reserve History (Federal Reserve System)",
-      "license": "Federal Reserve History site terms; reuse terms [UNKNOWN]"
+      "license": "Federal Reserve History Terms of Use (federalreservehistory.org/terms-of-use): no reproduction, modification or derivative works without authorization; linking allowed with conditions. GlobeDesk links and uses its own wording."
     },
     {
       "id": "hoover-finishing-touches",
@@ -1952,6 +1952,384 @@
       "class": "official",
       "publisher": "Computer History Museum",
       "license": "[UNKNOWN]: linked only, no text copied"
+    },
+    {
+      "id": "abmc-normandy",
+      "title": "History of Normandy American Cemetery",
+      "url": "https://www.abmc.gov/history/discover-the-history-of-normandy-american-cemetery/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "American Battle Monuments Commission",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "darpa-arpanet",
+      "title": "ARPANET (DARPA feature)",
+      "url": "https://www.darpa.mil/news/features/arpanet",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Defense Advanced Research Projects Agency",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "loc-1906",
+      "title": "Today in History, April 18: San Francisco earthquake",
+      "url": "https://www.loc.gov/item/today-in-history/april-18/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "Library of Congress web text (federal work); individual items may carry other rights"
+    },
+    {
+      "id": "loc-brooklyn-guide",
+      "title": "Brooklyn Bridge, Fanfare and Fatalities (Chronicling America guide)",
+      "url": "https://guides.loc.gov/chronicling-america-brooklyn-bridge",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "Library of Congress web text (federal work); individual items may carry other rights"
+    },
+    {
+      "id": "loc-brooklyn-roebling",
+      "title": "Today in History, June 12: Roebling and the Brooklyn Bridge",
+      "url": "https://www.loc.gov/item/today-in-history/june-12/roebling-and-the-brooklyn-bridge/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "Library of Congress web text (federal work); individual items may carry other rights"
+    },
+    {
+      "id": "loc-ford-guide",
+      "title": "Ford implements the moving assembly line (This Month in Business History)",
+      "url": "https://guides.loc.gov/this-month-in-business-history/October/Ford",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "Library of Congress web text (federal work); individual items may carry other rights"
+    },
+    {
+      "id": "loc-icact",
+      "title": "United States Citizenship for the Native American (LOC classroom materials)",
+      "url": "https://www.loc.gov/classroom-materials/immigration/native-american/united-states-citizenship-for-the-native-american/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "Library of Congress web text (federal work); individual items may carry other rights"
+    },
+    {
+      "id": "loc-naacp-founding",
+      "title": "NAACP: A Century in the Fight for Freedom, Founding and Early Years",
+      "url": "https://www.loc.gov/exhibits/naacp/founding-and-early-years.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "Library of Congress web text (federal work); individual items may carry other rights"
+    },
+    {
+      "id": "loc-standard-time",
+      "title": "Today in History, November 18: standard railway time",
+      "url": "https://www.loc.gov/item/today-in-history/november-18/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "Library of Congress web text (federal work); individual items may carry other rights"
+    },
+    {
+      "id": "loc-wounded-knee",
+      "title": "Disaster at Wounded Knee (LOC classroom materials)",
+      "url": "https://www.loc.gov/classroom-materials/immigration/native-american/disaster-at-wounded-knee/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "Library of Congress web text (federal work); individual items may carry other rights"
+    },
+    {
+      "id": "nara-14th",
+      "title": "14th Amendment (Milestone Documents)",
+      "url": "https://www.archives.gov/milestone-documents/14th-amendment",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-15th",
+      "title": "15th Amendment (Milestone Documents)",
+      "url": "https://www.archives.gov/milestone-documents/15th-amendment",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-16th",
+      "title": "16th Amendment (Milestone Documents)",
+      "url": "https://www.archives.gov/milestone-documents/16th-amendment",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-17th",
+      "title": "17th Amendment (Milestone Documents)",
+      "url": "https://www.archives.gov/milestone-documents/17th-amendment",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-armistice-blog",
+      "title": "The 11th Hour of the 11th Day of the 11th Month, 1918 (The Text Message blog)",
+      "url": "https://text-message.blogs.archives.gov/2018/11/09/the-11th-hour-of-the-11th-day-of-the-11th-month-1918/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-eo9066",
+      "title": "Executive Order 9066 (Milestone Documents)",
+      "url": "https://www.archives.gov/milestone-documents/executive-order-9066",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-guadalupe",
+      "title": "Treaty of Guadalupe Hidalgo (Milestone Documents)",
+      "url": "https://www.archives.gov/milestone-documents/treaty-of-guadalupe-hidalgo",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-icact-1924",
+      "title": "Indian Citizenship Act of 1924 (enrolled act, PDF)",
+      "url": "https://www.archives.gov/files/historical-docs/doc-content/images/indian-citizenship-act-1924.pdf",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-immigration-laws",
+      "title": "Major United States Laws Relating to Immigration and Naturalization, 1790-2005 (PDF)",
+      "url": "https://www.archives.gov/files/research/naturalization/420-major-immigration-laws.pdf",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-plessy",
+      "title": "Plessy v. Ferguson (Milestone Documents)",
+      "url": "https://www.archives.gov/milestone-documents/plessy-v-ferguson",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-surrender-germany",
+      "title": "Surrender of Germany (Milestone Documents)",
+      "url": "https://www.archives.gov/milestone-documents/surrender-of-germany",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-tonkin",
+      "title": "Tonkin Gulf Resolution (Milestone Documents)",
+      "url": "https://www.archives.gov/milestone-documents/tonkin-gulf-resolution",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-ve-day-docs",
+      "title": "National Archives displays surrender documents for the 75th anniversary of V-E Day",
+      "url": "https://www.archives.gov/news/articles/v-e-day-surrender-documents-displayed",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-vra",
+      "title": "Voting Rights Act (Milestone Documents)",
+      "url": "https://www.archives.gov/milestone-documents/voting-rights-act",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-wwi-address",
+      "title": "Joint Address to Congress Leading to a Declaration of War Against Germany (1917)",
+      "url": "https://www.archives.gov/milestone-documents/address-to-congress-declaration-of-war-against-germany",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nara-wwi-press",
+      "title": "National Archives display for the 100th anniversary of U.S. entry into World War I (press release)",
+      "url": "https://www.archives.gov/press/press-releases/2017/nr17-44",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Archives and Records Administration",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nhhc-japan-surrender",
+      "title": "Victory in the Pacific: Japan's Surrender and Aftermath",
+      "url": "https://www.history.navy.mil/browse-by-topic/wars-conflicts-and-operations/world-war-ii/1945/victory-in-pacific.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Naval History and Heritage Command (US Navy)",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nps-centennial-grant",
+      "title": "President Grant and the 1876 Centennial Exposition in Philadelphia",
+      "url": "https://www.nps.gov/articles/000/president-grant-and-the-1876-centennial-exposition-in-philadelphia.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nps-edis-timeline",
+      "title": "Timeline of Edison and his inventions (Thomas Edison NHP)",
+      "url": "https://www.nps.gov/edis/learn/kidsyouth/timeline-of-edison-and-his-inventions.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nps-vick-end-recon",
+      "title": "The End of Reconstruction (Vicksburg NMP)",
+      "url": "https://www.nps.gov/vick/learn/historyculture/the-end-of-reconstruction.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nps-vive-overview",
+      "title": "Vietnam Veterans Memorial overview",
+      "url": "https://www.nps.gov/vive/learn/historyculture/vvmoverview.htm",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Park Service",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "nsf-internet",
+      "title": "Birth of the Commercial Internet (NSF Impacts)",
+      "url": "https://www.nsf.gov/impacts/internet",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US National Science Foundation",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "state-airlift",
+      "title": "The Berlin Airlift, 1948-1949 (Milestones)",
+      "url": "https://history.state.gov/milestones/1945-1952/berlin-airlift",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Department of State, Office of the Historian",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "state-cuba",
+      "title": "The Cuban Missile Crisis, October 1962 (Milestones)",
+      "url": "https://history.state.gov/milestones/1961-1968/cuban-missile-crisis",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Department of State, Office of the Historian",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "state-ending-vietnam",
+      "title": "Ending the Vietnam War, 1969-1973 (Milestones)",
+      "url": "https://history.state.gov/milestones/1969-1976/ending-vietnam",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Department of State, Office of the Historian",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "state-fall-communism",
+      "title": "Fall of Communism in Eastern Europe, 1989 (Milestones)",
+      "url": "https://history.state.gov/milestones/1989-1992/fall-of-communism",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Department of State, Office of the Historian",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "state-frus-armistice",
+      "title": "Terms of the Armistice With Germany, Signed November 11, 1918 (FRUS)",
+      "url": "https://history.state.gov/historicaldocuments/frus1919Parisv02/d1",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Department of State, Office of the Historian",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "state-panama",
+      "title": "Building the Panama Canal, 1903-1914 (Milestones)",
+      "url": "https://history.state.gov/milestones/1899-1913/panama-canal",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Department of State, Office of the Historian",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "state-spanam",
+      "title": "The Spanish-American War, 1898 (Milestones)",
+      "url": "https://history.state.gov/milestones/1866-1898/spanish-american-war",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Department of State, Office of the Historian",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "state-ussr-ends",
+      "title": "The Berlin Wall Falls and USSR Dissolves (Department history)",
+      "url": "https://history.state.gov/departmenthistory/short-history/berlinwall",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Department of State, Office of the Historian",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "state-wwi",
+      "title": "U.S. Entry into World War I, 1917 (Milestones)",
+      "url": "https://history.state.gov/milestones/1914-1920/wwi",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Department of State, Office of the Historian",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
+    },
+    {
+      "id": "usgs-1906",
+      "title": "M 7.9 April 18, 1906 San Francisco Earthquake",
+      "url": "https://earthquake.usgs.gov/earthquakes/events/1906calif/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "US Geological Survey",
+      "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights"
     }
   ]
 }

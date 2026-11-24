@@ -42,21 +42,34 @@
       ]
     },
     {
-      "key": "DE",
-      "precision": "site",
+      "key": "CU",
+      "precision": "country",
       "entries": [
+        "cuban-missile-crisis-1962",
+        "spanish-american-war-1898"
+      ]
+    },
+    {
+      "key": "DE",
+      "precision": "city",
+      "entries": [
+        "berlin-airlift-1948",
         "freedom-bell-berlin",
         "gloriosa-erfurt",
-        "petersglocke-cologne"
+        "petersglocke-cologne",
+        "berlin-wall-falls-1989"
       ]
     },
     {
       "key": "FR",
-      "precision": "site",
+      "precision": "country",
       "entries": [
+        "armistice-1918",
+        "d-day-1944",
         "emmanuel-notre-dame",
         "international-system-of-units-si",
-        "savoyarde"
+        "savoyarde",
+        "v-e-day-1945"
       ]
     },
     {
@@ -106,11 +119,13 @@
     },
     {
       "key": "JP",
-      "precision": "site",
+      "precision": "city",
       "entries": [
+        "hiroshima-nagasaki-1945",
         "byodoin-bell",
         "chion-in-bell",
         "todaiji-bell",
+        "japan-surrender-1945",
         "hiroshima-peace-bell"
       ]
     },
@@ -141,7 +156,8 @@
       "key": "MX",
       "precision": "site",
       "entries": [
-        "dolores-bell"
+        "dolores-bell",
+        "guadalupe-hidalgo-1848"
       ]
     },
     {
@@ -149,6 +165,13 @@
       "precision": "site",
       "entries": [
         "wellington-carillon"
+      ]
+    },
+    {
+      "key": "PA",
+      "precision": "subdivision",
+      "entries": [
+        "panama-canal-1903"
       ]
     },
     {
@@ -178,6 +201,7 @@
       "entries": [
         "bolshoy-uspensky-bell",
         "sysoy-bell",
+        "soviet-union-dissolves-1991",
         "tsar-bell",
         "uglich-exile-bell"
       ]
@@ -187,6 +211,10 @@
       "precision": "country",
       "entries": [
         "thirteenth-amendment-1865",
+        "fourteenth-amendment-1868",
+        "fifteenth-amendment-1870",
+        "sixteenth-amendment-1913",
+        "seventeenth-amendment-1913",
         "usda-plant-hardiness-zones",
         "ada-1990",
         "bag-solar-kit-prices",
@@ -200,13 +228,16 @@
         "ghs-hazard-communication",
         "civil-rights-act-1964",
         "commodity-plastics-resins",
+        "end-of-reconstruction-1877",
         "early-electronic-computing-timeline",
         "emergency-shelter-and-room-sealing",
         "water-filter-kit",
+        "executive-order-9066-1942",
         "family-emergency-communications-plan",
         "us-federal-register-and-foia",
         "first-aid-and-emergency-911",
         "hand-and-power-tools-safety",
+        "indian-citizenship-act-1924",
         "un-japanese-peace-bell",
         "justice-bell",
         "liberty-bell",
@@ -214,10 +245,12 @@
         "nasa-earth-and-nlcd-land-cover",
         "severe-weather-hazard-safety",
         "netherlands-carillon",
+        "nsfnet-public-internet-1986",
         "currency-conversion",
         "old-north-bells",
         "power-outage-generator-safety",
         "public-health-records-gho-nchs",
+        "standard-time-1883",
         "safe-home-food-freezing",
         "social-security-act-1935",
         "edmund-fitzgerald-bell",
@@ -227,6 +260,7 @@
         "usaspending-federal-budget",
         "usda-fooddata-central",
         "uss-arizona-bell",
+        "voting-rights-act-1965",
         "wilbank-bell",
         "world-peace-bell"
       ]
@@ -257,7 +291,9 @@
       "precision": "subdivision",
       "entries": [
         "earthquakes-and-plate-faults",
+        "arpanet-1969",
         "gold-discovery-1848",
+        "san-francisco-earthquake-1906",
         "un-charter-1945"
       ]
     },
@@ -269,7 +305,9 @@
         "brown-v-board-1954",
         "emancipation-proclamation-1863",
         "march-on-washington-1963",
-        "telegraph-message-1844"
+        "telegraph-message-1844",
+        "us-enters-world-war-i-1917",
+        "vietnam-veterans-memorial-1982"
       ]
     },
     {
@@ -290,7 +328,8 @@
       "key": "US-LA",
       "precision": "site",
       "entries": [
-        "louisiana-transfer-1803"
+        "louisiana-transfer-1803",
+        "plessy-v-ferguson-1896"
       ]
     },
     {
@@ -308,10 +347,24 @@
       ]
     },
     {
+      "key": "US-MI",
+      "precision": "city",
+      "entries": [
+        "model-t-1908"
+      ]
+    },
+    {
       "key": "US-NC",
       "precision": "site",
       "entries": [
         "first-flight-1903"
+      ]
+    },
+    {
+      "key": "US-NJ",
+      "precision": "city",
+      "entries": [
+        "edison-light-1879"
       ]
     },
     {
@@ -325,12 +378,14 @@
       "key": "US-NY",
       "precision": "site",
       "entries": [
+        "brooklyn-bridge-1883",
         "ellis-island-1892",
         "erie-canal-1825",
         "washington-inauguration-1789",
         "seneca-falls-1848",
         "statue-of-liberty-1886",
-        "stock-crash-1929"
+        "stock-crash-1929",
+        "naacp-founding-1909"
       ]
     },
     {
@@ -346,6 +401,7 @@
       "entries": [
         "america-250-2026",
         "gettysburg-1863",
+        "centennial-exposition-1876",
         "constitution-signed-1787",
         "declaration-of-independence-1776",
         "september-11-2001"
@@ -356,6 +412,13 @@
       "precision": "site",
       "entries": [
         "fort-sumter-1861"
+      ]
+    },
+    {
+      "key": "US-SD",
+      "precision": "site",
+      "entries": [
+        "wounded-knee-1890"
       ]
     },
     {
@@ -400,6 +463,14 @@
       "precision": "site",
       "entries": [
         "campanone-st-peters"
+      ]
+    },
+    {
+      "key": "VN",
+      "precision": "site",
+      "entries": [
+        "fall-of-saigon-1975",
+        "gulf-of-tonkin-1964"
       ]
     },
     {

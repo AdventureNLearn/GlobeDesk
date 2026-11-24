@@ -19,8 +19,8 @@ const bellPack = J("packs/bells/entries.json").entries;
 const year = (d) => parseInt(d, 10);
 const ERAS = [[1775, 1799], [1800, 1860], [1861, 1869], [1870, 1913], [1914, 1945], [1946, 1980], [1981, 2026]];
 
-t("history pack: 30-45 sourced entries, dated 1776-2026 (one 1775 prologue), every era covered", () => {
-  assert.ok(hist.length >= 30 && hist.length <= 45, String(hist.length));
+t("history pack: 60-90 sourced entries, dated 1776-2026 (one 1775 prologue), every era covered", () => {
+  assert.ok(hist.length >= 60 && hist.length <= 90, String(hist.length));
   hist.forEach((e) => e.dates.forEach((d) => assert.ok((year(d.date) >= 1776 || e.id === "old-north-lanterns-1775") && year(d.date) <= 2026, e.id + " " + d.date)));
   ERAS.forEach(([a, b]) => assert.ok(hist.some((e) => { const y = year(e.dates[0].date); return y >= a && y <= b; }), `era ${a}-${b}`));
   assert.ok(hist.some((e) => e.dates.some((d) => d.date === "1776-07-04")) && hist.some((e) => e.dates.some((d) => d.date === "2026-07-04")));
