@@ -1,11 +1,12 @@
 // Bells layer source registry (authoring input for tools/atlas/build-bells.mjs).
 // Every URL was opened on 2026-11-24. "verify" records how: http-200 (direct fetch) or webfetch
 // (direct fetch blocked by the site, page read through a fetch service). Dead links were dropped.
-// Licences: US federal works and the Open Parliament Licence are named; everything else is
-// "[UNKNOWN]: linked only, no text copied". Our entry text is our own summary (CC BY 4.0).
+// Licences: US federal works and the Open Parliament Licence are named here. For every other source the
+// description of the page and its reuse terms live in tools/atlas/source-notes.mjs, which build-bells
+// applies over the placeholder below. Our entry text is our own summary (CC BY 4.0).
 const NPS = { publisher: "US National Park Service", license: "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights" };
 const OPL = { publisher: "UK Parliament", license: "Open Parliament Licence v3.0" };
-const U = "[UNKNOWN]: linked only, no text copied";
+const U = "see tools/atlas/source-notes.mjs"; // replaced at build time by the source note for this id
 const s = (id, title, url, cls, publisher, license, verify, extra) => ({ id, title, url, checked: "2026-11-24", class: cls, publisher, license, verify, ...(extra || {}) });
 
 export const BELL_SOURCES = [

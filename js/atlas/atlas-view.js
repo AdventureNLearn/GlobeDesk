@@ -242,7 +242,9 @@
     const refs = all.filter((s) => cls(s) === "reference");
     const outbound = (e.outbound || []).map((o) => Object.assign({}, o));
     const experimental = all.filter((s) => cls(s) === "experimental").concat(outbound.filter((o) => cls(o) === "experimental"));
-    const row = (s) => "<li>" + link(s.url, s.title) + (s.publisher ? ' <span class="muted">· ' + esc(s.publisher) + "</span>" : "") + ' <span class="muted">checked ' + esc(s.checked || UNKNOWN) + "</span></li>";
+    const row = (s) => "<li>" + link(s.url, s.title) + (s.publisher ? ' <span class="muted">· ' + esc(s.publisher) + "</span>" : "") + ' <span class="muted">checked ' + esc(s.checked || UNKNOWN) + "</span>" +
+      (s.description ? '<br><span class="small at-src-desc">' + esc(s.description) + "</span>" : "") +
+      (s.license ? '<br><span class="muted small at-src-terms">Reuse: ' + esc(s.license) + (s.terms_url ? " " + link(s.terms_url, "terms") : "") + "</span>" : "") + "</li>";
     let h = "<h4>Official sources</h4>" + (official.length ? '<ul class="small">' + official.map(row).join("") + "</ul>" : '<p class="muted small">Official source ' + UNKNOWN + ". Official means a primary or public record: government, a standards body, or a dataset with a named licence.</p>");
     h += "<h4>Other cited references</h4>" + (refs.length ? '<ul class="small">' + refs.map(row).join("") + "</ul>" : '<p class="muted small">None.</p>');
     const goDeeper = outbound.filter((o) => cls(o) !== "experimental");

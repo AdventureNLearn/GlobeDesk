@@ -8,6 +8,7 @@ import { writeFileSync, readFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { ROOT, ATLAS } from "./lib.mjs";
 import { BELL_SOURCES } from "./bells-sources.mjs";
+import { SOURCE_NOTES } from "./source-notes.mjs";
 import { BELLS, GEO, REGION_OF } from "./bells-content.mjs";
 import { OVERVIEW, BRONZE } from "./bells-overview.mjs";
 
@@ -114,6 +115,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const doc = JSON.parse(readFileSync(srcPath, "utf8"));
   const clean = (s) => { const { verify, ...rest } = s; return { ...rest, verified: verify === "webfetch" ? "opened via a fetch service (direct fetch blocked by the site)" : "opened directly (HTTP 200)" }; };
   BELL_SOURCES.forEach((s) => { const i = doc.sources.findIndex((x) => x.id === s.id); if (i >= 0) doc.sources[i] = clean(s); else doc.sources.push(clean(s)); });
+  // Source notes (tools/atlas/source-notes.mjs): a description of each linked page and its reuse terms,
+  // applied by id to every registry entry (bell and non-bell). This is the one place those notes live.
+  doc.sources.forEach((x, i) => { const note = SOURCE_NOTES[x.id]; if (note) { const { terms_url, ...rest } = x; doc.sources[i] = { ...rest, ...note }; } });
   writeFileSync(srcPath, JSON.stringify(doc, null, 2) + "\n");
   // Chemistry pack: replace or append the bell-bronze entry by id. Works on the parsed file, so it never
   // depends on formatting (a regex on a re-indented file could silently skip the insert).

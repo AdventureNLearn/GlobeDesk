@@ -626,8 +626,9 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "Central Council of Church Bell Ringers",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Central Council of Church Bell Ringers applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Chapter 2 of the Central Council of Church Bell Ringers' history of ringing (PDF): how bells are cast in a mould for a target pitch and tuned on a lathe by cutting metal from the inside, and how British bellfounding grew from monastic workshops into town foundries."
     },
     {
       "id": "hibberts-tuning",
@@ -636,8 +637,9 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "The Sound of Bells (hibberts.co.uk)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the author of hibberts.co.uk applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "The Sound of Bells (hibberts.co.uk) explainer 'Basic principles of bell tuning': a bell's many partial frequencies, one per vibration mode, and how founders tune a cast bell by removing rings of metal, usually from the inside, with references to Rossing, Lehr and Elphick."
     },
     {
       "id": "belltrust-named-bells",
@@ -646,9 +648,11 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "Loughborough Bellfoundry Trust (Taylor foundry museum)",
-      "license": "[UNKNOWN]: linked only, no text copied",
+      "license": "© Loughborough Bellfoundry Trust: all rights reserved (page footer reads \"© 2025 Loughborough Bellfoundry Trust\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
       "primary": true,
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "Loughborough Bellfoundry Trust story (February 2026) on named bells cast by John Taylor & Co: Great Paul (1881, St Paul's), Great Peter and Little John (1927), Great George at Liverpool Cathedral (cast 1940, installed 1951), Big Joe, Grandisson, Great Abel, Hosanna and Old Major, with weights and years.",
+      "terms_url": "https://belltrust.co.uk/terms-conditions/"
     },
     {
       "id": "unesco-whc-943",
@@ -657,8 +661,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "UNESCO World Heritage Centre",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "The site description is licensed CC BY-SA 3.0 IGO (stated on the page); other materials follow the UNESCO Terms of Use. GlobeDesk uses its own wording and links.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "UNESCO World Heritage List entry 943: the belfries of northern France and Belgium inscribed as civic towers of medieval origin that symbolise the towns' freedom and wealth, with the description, maps and documents.",
+      "terms_url": "https://www.unesco.org/en/terms-use"
     },
     {
       "id": "wiki-bell-metal",
@@ -678,8 +684,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Moscow Kremlin Museums",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© the Moscow Kremlin State Historical and Cultural Museum and Heritage Site: all rights reserved (page footer reads \"© 1997-2026 The Moscow Kremlin State Historical and Cultural Museum\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Moscow Kremlin Museums page on the Tsar Bell: cast 1733-1735 for Empress Anna Ioannovna by Ivan and Mikhail Motorin; its history, size, weight and decoration.",
+      "terms_url": "https://collectiononline.kreml.ru/en/terms-of-use"
     },
     {
       "id": "kreml-coll-tsar-bell",
@@ -688,8 +696,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Moscow Kremlin Museums",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "Moscow Kremlin Museums Terms of Use: personal, non-commercial and educational use only; reprinting needs the Museum's written permission; a link is required when quoting. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Moscow Kremlin Museums online-collection record for the Tsar Bell: masters Ivan and Mikhail Motorin, sculptor Fyodor Medvedev, dates 1733-1735 (cap 1835, installation 1836), material, dimensions and inscriptions.",
+      "terms_url": "https://collectiononline.kreml.ru/en/terms-of-use"
     },
     {
       "id": "kreml-coll-uspensky",
@@ -698,8 +708,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Moscow Kremlin Museums",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "Moscow Kremlin Museums Terms of Use: personal, non-commercial and educational use only; reprinting needs the Museum's written permission; a link is required when quoting. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Moscow Kremlin Museums online-collection record for the Bolshoy Uspensky (Great Assumption) Bell with its clapper: master Yakov Zavyalov with Rusinov, cast 1817 (clapper 1762/1774), place of origin Moscow, dimensions and weight.",
+      "terms_url": "https://collectiononline.kreml.ru/en/terms-of-use"
     },
     {
       "id": "rostmuseum-zvonnitsa",
@@ -708,8 +720,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Rostov Kremlin State Museum-Reserve",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© Rostov Kremlin State Museum-Reserve: all rights reserved (page footer reads \"©1883-2026 Ростовский кремль\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Rostov Kremlin Museum-Reserve page (Russian) on the cathedral belfry built about 1682 for Metropolitan Iona: the Polyeleyny (1,000 poods) and Lebed (500 poods) bells by Philip and Kiprian Andreev, the 2,000-pood Sysoy cast by Flor Terentyev in 1688, and the surviving set of 15 bells, with a list of museum research papers."
     },
     {
       "id": "culture-ru-uglich-bell",
@@ -718,8 +731,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Culture.RF (portal of the Russian Ministry of Culture)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of Culture.RF (ARTEFACT) applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Culture.RF (Russian Ministry of Culture portal) AR-guide exhibit for the Uglich bell in the Tobolsk Governor's Palace museum: the 1591 exile of the bell to Tobolsk after Tsarevich Dmitry's death, and a 1892 model by Florian Lachmayer (90 x 76 x 44 cm).",
+      "terms_url": "https://ar.culture.ru/terms.html"
     },
     {
       "id": "uglmus-history",
@@ -728,8 +743,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Uglich State Historical, Architectural and Art Museum",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© the Uglich Museum (Yaroslavl Region state autonomous cultural institution): all rights reserved (page footer reads \"© Государственное автономное учреждение культуры Ярославской области\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Uglich State Historical, Architectural and Art Museum page (Russian) on the museum's history: one of Russia's oldest museums, opened 3 (15) June 1892 in the presence of Grand Duke Sergei Alexandrovich and Grand Duchess Elizabeth Feodorovna."
     },
     {
       "id": "parl-great-bell",
@@ -768,8 +784,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "St Paul's Cathedral",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© St Paul's Cathedral: all rights reserved (page footer reads \"Copyright St Paul's Cathedral 2026\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "St Paul's Cathedral page on its bells: the Service Bell (cast by Philip Whiteman in 1700, hung 1701, 18.75 cwt), the cathedral's other bells, when they are rung and how change ringing works.",
+      "terms_url": "https://www.stpauls.co.uk/terms-of-use"
     },
     {
       "id": "chch-bells",
@@ -778,8 +796,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Christ Church, Oxford",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of Christ Church, Oxford applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Christ Church, Oxford page on its bells and ringers: the Osney Abbey bells re-hung in 1546, two bells cast about 1410 by John Bird still in the ring of twelve, and later recastings."
     },
     {
       "id": "stmarylebow-bells",
@@ -788,8 +807,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "St Mary-le-Bow",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© St Mary-le-Bow Church: all rights reserved (page footer reads \"© 2026 St Mary-le-Bow Church. All rights reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "St Mary-le-Bow page on the Bow Bells: their place in City of London life and Cockney identity, the Dick Whittington story, and the bells still rung from the tower."
     },
     {
       "id": "liverpool-cathedral-bells",
@@ -798,8 +818,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Liverpool Cathedral",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of Liverpool Cathedral applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Liverpool Cathedral page on its bells: the highest and heaviest ring of bells in the world, funded by the bequest of Thomas Bartlett, and the ring of twelve it paid for."
     },
     {
       "id": "lloyds-hms-lutine",
@@ -808,8 +829,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Lloyd's of London",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "Lloyd's terms and conditions: all rights reserved; extracts may be printed for personal use only; no reproduction on other websites without Lloyd's written permission. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Lloyd's of London history page on HMS Lutine: the 1799 loss of the ship, Lloyd's most famous maritime loss, and the ship's great bell, salvaged in 1857, that hangs in the atrium of the Underwriting Room.",
+      "terms_url": "https://www.lloyds.com/help/terms-and-conditions"
     },
     {
       "id": "rn-hood-bell-2016",
@@ -818,8 +841,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Royal Navy (UK Ministry of Defence)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "Crown copyright; royalnavy.mod.uk content is published under the Open Government Licence v3.0 (site terms). GlobeDesk uses its own wording and links.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Royal Navy news story (24 May 2016): HMS Hood's bell, from the wreck in the Denmark Strait, rededicated in Portsmouth 75 years to the day after the battle-cruiser sank with about 1,400 men.",
+      "terms_url": "https://www.royalnavy.mod.uk/terms-and-conditions"
     },
     {
       "id": "nmrn-hood-bell",
@@ -828,8 +853,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "National Museum of the Royal Navy",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "National Museum of the Royal Navy terms: material is owned by or licensed to the museum; reproduction prohibited except under its copyright notice. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "National Museum of the Royal Navy story 'The bell that survived three generations of Hoods': the Hood name in the Royal Navy and the bell's origin in the battleship Hood launched in 1891, now in the museum collection.",
+      "terms_url": "https://www.nmrn.org.uk/terms-and-conditions"
     },
     {
       "id": "stephansdom-pummerin",
@@ -838,8 +865,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Dompfarre St. Stephan, Vienna",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of Dompfarre St. Stephan applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "St. Stephen's Cathedral, Vienna page (German) on the Pummerin, Austria's largest bell in the north tower: successor of the historic Pummerin destroyed in the Second World War, when it rings, its history and how to visit by lift.",
+      "terms_url": "https://www.stephansdom.at/impressum"
     },
     {
       "id": "wien-geschichte-pummerin",
@@ -848,8 +877,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "City of Vienna (Wiener Stadt- und Landesarchiv)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the City of Vienna (Wiener Stadt- und Landesarchiv) applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Wien Geschichte Wiki (City of Vienna historical knowledge platform) entry 'Pummerin': dated data (from 1558), the history of the bell, a photo of the new Pummerin before its 1957 hoisting, and GND and Wikidata identifiers."
     },
     {
       "id": "culture-gouv-emmanuel",
@@ -858,8 +888,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Ministère de la Culture (France)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Ministère de la Culture applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "French Ministry of Culture page on Notre-Dame's bourdon Emmanuel: the Jacqueline bourdon recast and renamed Emmanuel in 1680-1686, hung in the south tower, listed as a historic monument on 24 July 1944, set in the context of the restoration after the 15 April 2019 fire.",
+      "terms_url": "http://www.culturecommunication.gouv.fr/Mentions-legales"
     },
     {
       "id": "nd-paris-emmanuel",
@@ -868,8 +900,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Cathédrale Notre-Dame de Paris",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Cathédrale Notre-Dame de Paris applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "Notre-Dame de Paris interactive-map entry 'Great Bourdon Emmanuel': the cathedral's oldest bell, by Florentin Le Guay (1686), about 13 tonnes, sponsored by Louis XIV, still in the cathedral and inaccessible since the fire."
     },
     {
       "id": "rebatir-nd-tours",
@@ -878,8 +911,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Établissement public Rebâtir Notre-Dame de Paris",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "Rebâtir Notre-Dame de Paris legal notice: any reproduction of the site, in part or whole, is forbidden without prior written authorisation. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Rebâtir Notre-Dame de Paris page (French) on restoring the towers, belfries and bells: the two timber belfries about 20 m tall, the return of the eight north-tower bells in September 2024 and the bourdons swung again on 17 July 2025.",
+      "terms_url": "https://www.rebatirnotredamedeparis.fr/fr/mentions-legales"
     },
     {
       "id": "sacrecoeur-savoyarde",
@@ -888,8 +923,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Basilique du Sacré-Cœur de Montmartre",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© the Basilique du Sacré-Cœur: all rights reserved (page footer reads \"© Basilique du Sacré-Cœur\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Basilique du Sacré-Cœur de Montmartre page (French) on La Savoyarde in the campanile: the largest bell in France and one of the largest swinging bells in the world, about 19 tonnes, low C tone, given by the four dioceses of Savoy.",
+      "terms_url": "https://www.sacre-coeur-montmartre.com/mentions-legales"
     },
     {
       "id": "erfurt-dom",
@@ -898,8 +935,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Landeshauptstadt Erfurt",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Landeshauptstadt Erfurt applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "City of Erfurt page (German) on St. Mary's Cathedral: history from Boniface's church about 725 to the late Gothic hall of 1455, and the Gloriosa, consecrated 1251, last recast 1497, 2.50 m high, 11,450 kg, 2.57 m diameter, the largest free-swinging medieval bell in the world."
     },
     {
       "id": "koelner-dom-petersglocke",
@@ -908,8 +946,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Hohe Domkirche Köln",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Hohe Domkirche Köln applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Cologne Cathedral page (German) on the Petersglocke: cast 5 May 1923 in Apolda by Heinrich Ulrich (inscription says 1922), 3.22 m diameter and 24 tonnes, the largest free-swinging bell in the world until the late 20th century.",
+      "terms_url": "https://www.koelner-dom.de/meta/impressum"
     },
     {
       "id": "berlin-freiheitsglocke",
@@ -918,8 +958,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Bezirksamt Tempelhof-Schöneberg von Berlin",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "berlin.de district imprint (Urheberrecht): layout, graphics, photos, video and texts are protected by copyright. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Tempelhof-Schöneberg district page (German) on the Freedom Bell in the Schöneberg Town Hall tower: its history, the Freedom Pledge, its installation, recordings of the ringing and the pledge, and the memorial plaque.",
+      "terms_url": "https://www.berlin.de/ba-tempelhof-schoeneberg/allgemeine-infos/artikel.350989.php"
     },
     {
       "id": "berlin-freiheitsglocke-75",
@@ -928,8 +970,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Bezirksamt Tempelhof-Schöneberg von Berlin",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "berlin.de district imprint (Urheberrecht): layout, graphics, photos, video and texts are protected by copyright. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Tempelhof-Schöneberg district article from the brochure '75 Jahre Freiheitsglocke in Berlin 1950-2025' by art historian Andreas Baudisch: the post-war origin of the Freedom Bell gift and its 75-year history.",
+      "terms_url": "https://www.berlin.de/ba-tempelhof-schoeneberg/allgemeine-infos/artikel.350989.php"
     },
     {
       "id": "wawel-zygmunt",
@@ -938,8 +982,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Wawel Royal Cathedral",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© the Parafia Archikatedralna św. Stanisława BM i św. Wacława: all rights reserved (page footer reads \"Copyright © 2007-2015 ... All Rights Reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Wawel Royal Cathedral page on the Royal Sigismund Bell: cast in Cracow in 1520 by Nuremberg founder Hans Behem, hung in a raised tower, first rung on 13 July 1521, and the new clapper in use since 14 April 2001."
     },
     {
       "id": "vatican-campane",
@@ -948,8 +993,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Holy See (vatican.va)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Holy See (vatican.va) applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Vatican (St Peter's Basilica) catalogue page 'Campane': the bells on the south attic of the façade, bronze, dated 1353-1932, with a history of the bell tower from the 8th century, the 1303 fire and the recastings under Boniface VIII and Innocent VI."
     },
     {
       "id": "vatican-campane-info",
@@ -958,8 +1004,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Holy See (vatican.va)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Holy See (vatican.va) applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Vatican table 'Campane: altre informazioni': the six bells of St Peter's (Campanone, Campanoncino, Rota, Predica, Ave Maria, Campanella) with nominal note, year of casting (1785, 1725, 13th century, 1909, 1932, 1825) and founder (Luigi Valadier and others)."
     },
     {
       "id": "visitmechelen-carillon",
@@ -968,8 +1015,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "City of Mechelen (Visit Mechelen)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© Visit Mechelen: all rights reserved (page footer reads \"© Visit Mechelen - All rights reserved 2026\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Visit Mechelen page on carillon culture: the city's six carillons (two in St Rumbold's Tower), carillon music heard up to eight times an hour, and UNESCO's 2014 recognition of Belgian carillon culture."
     },
     {
       "id": "mechelen-onzetoren",
@@ -978,8 +1026,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "City of Mechelen (Visit Mechelen)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© Visit Mechelen: all rights reserved (page footer reads \"© Visit Mechelen - All rights reserved 2026\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Visit Mechelen timeline of St Rumbold's Tower: foundations 1448-1452, first stone laid 22 May 1452, 55 m reached by 1481, and the later building stages of this UNESCO monument."
     },
     {
       "id": "visitbruges-carillon",
@@ -988,8 +1037,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "City of Bruges (Visit Bruges)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "Visit Bruges disclaimer: content may not be reproduced, modified, distributed or transmitted without permission. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Visit Bruges page on the Belfry carillon: the 83 m belfry with 47 bells weighing 27 tonnes in total, the 1680 victory bell (six tonnes, two metres across), mostly 18th-century bells recently restored, and visitor details.",
+      "terms_url": "https://www.visitbruges.be/en/disclaimer"
     },
     {
       "id": "hbww-zeng-bianzhong",
@@ -998,8 +1049,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Hubei Provincial Museum",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© the Hubei Provincial Museum: all rights reserved (page footer reads \"＠1953-2026 湖北省博物馆 版权所有\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Hubei Provincial Museum treasures page (Chinese) on the chime bells of Marquis Yi of Zeng: excavated 1978 at Suizhou, early Warring States; 65 bells on a three-tier rack 7.48 m long and 2.65 m high (19 niu, 45 yong and a bo from King Hui of Chu); 3,755 inscribed characters; two tones per bell over five and a half octaves."
     },
     {
       "id": "unesco-mow-zeng",
@@ -1008,8 +1060,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "UNESCO",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "UNESCO Terms of Use: materials may be consulted and cited with attribution for non-commercial educational and research purposes; only materials marked with a Creative Commons IGO licence carry that licence. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "UNESCO Memory of the World register entry for the Suizhou Bianzhong of Marquis Yi of Zeng: the bronze bell set found in 1978 in Suizhou, about 2,400 years old, the largest and best-preserved set known, with 3,755 characters of inscriptions that are the only known music-theory documents of the 5th century BCE.",
+      "terms_url": "https://www.unesco.org/en/terms-use"
     },
     {
       "id": "beijing-dazhongsi",
@@ -1018,8 +1072,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "People's Government of Beijing Municipality",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the People's Government of Beijing Municipality applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Beijing municipal government English page on the Dazhong Temple Ancient Bell Museum (former Juesheng Temple): the Yongle Big Bell of the Ming Yongle period (1403-1424) in the Bell Tower, 6.75 m tall, 3.3 m across, 46.5 tonnes, inscribed inside and out with Buddhist texts."
     },
     {
       "id": "wwj-yongle-bell",
@@ -1028,8 +1083,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Beijing Municipal Cultural Heritage Bureau",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Beijing Municipal Cultural Heritage Bureau applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Beijing Municipal Cultural Heritage Bureau article (Chinese, 20 Oct 2022) 'The Yongle Bell in historical space': the bell in the Juesheng Temple bell tower, 5.5 m tall, 3.3 m rim diameter, about 46 tonnes, about 230,000 characters of Buddhist scripture, and its three moves and changing uses."
     },
     {
       "id": "khs-seongdeok",
@@ -1038,8 +1094,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Korea Heritage Service",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Korea Heritage Service applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "Korea Heritage Service Heritage Search record for the Sacred Bell of Great King Seongdeok (National Treasure, designated 20 Dec 1962): cast 771 under King Hyegong, 3.75 m high, 2.27 m rim diameter, 11-25 cm wall, about 18.9 tonnes, now at Gyeongju National Museum; also called the Bongdeoksa or Emille Bell."
     },
     {
       "id": "gyeongju-seongdeok",
@@ -1048,8 +1105,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Gyeongju City",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© Gyeongju-si: all rights reserved (page footer reads \"ⓒ 2026 Gyeongju-si. All rights reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Gyeongju City tourism heritage page (Korean) on the Sacred Bell of Great King Seongdeok: National Treasure designated 20 Dec 1962, Unified Silla (771), at Gyeongju National Museum; 3.66 m high, 2.27 m across, 11-25 cm thick, 18.9 tonnes by the museum's 1997 weighing."
     },
     {
       "id": "khs-sangwonsa",
@@ -1058,8 +1116,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Korea Heritage Service",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Korea Heritage Service applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "Korea Heritage Service Heritage Search record for the Bronze Bell of Sangwonsa Temple (National Treasure, designated 20 Dec 1962): cast 725 under King Seongdeok of Silla, 1.67 m high, 0.91 m rim diameter, the oldest bell in Korea, with dragon hook, sound tube and flying Apsaras."
     },
     {
       "id": "todaiji-shoro",
@@ -1068,8 +1127,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Tōdai-ji",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "Tōdai-ji site notice: use, reprinting or copying of copyrighted material on the site is prohibited without the copyright holder's permission (Copyright 2009-2025 Tōdai-ji, All Rights Reserved). GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Tōdai-ji page on its Bell Tower (National Treasure, 13th century): built 1207-1210 by the Zen priest Yōsai (1141-1215), who succeeded Chōgen in restoring the temple."
     },
     {
       "id": "nara-todaiji-shoro",
@@ -1078,8 +1138,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Nara City Tourism Association",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© Nara City: all rights reserved (page footer reads \"Copyright © Nara city. All Rights Reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Nara City tourism page on Tōdai-ji's Shōrō bell tower: rebuilt in 1210; the National Treasure bell from the temple's founding is 3.86 m tall, 2.71 m across and 26.3 tonnes; the zelkova striker is 4.48 m long and about 180-200 kg."
     },
     {
       "id": "chionin-daishoro",
@@ -1088,8 +1149,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Chion-in",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© Chion-in: all rights reserved (page footer reads \"Copyright © 2018 - 2026 CHION-IN. All Rights Reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Chion-in page on the Ōgane (large bell) and Daishōrō (great bell tower), Important Cultural Properties: the bell is 3.3 m high, 2.7 m across and about 70 tonnes."
     },
     {
       "id": "byodoin-sculpture",
@@ -1098,8 +1160,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Byodoin",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of Byōdō-in applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Byōdō-in page on its sculpture and crafts: the Amida Buddha by Jōchō completed 1053 in yosegi-zukuri technique, and the temple's other sculpture and crafts."
     },
     {
       "id": "hiroshima-pcf-peacebell",
@@ -1108,8 +1171,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Hiroshima Peace Culture Foundation",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Hiroshima Peace Culture Foundation applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Hiroshima Peace Memorial Park virtual-tour stop 8, the Peace Bell: completed 20 Sep 1964 by the A-bomb Survivor Hiroshima Hope Fruition Society, designed by Masahiko Katori; bell about 1 m across, 1.7 m high, about 1,200 kg, under a dome on four pillars over a pond."
     },
     {
       "id": "mdn-mingun",
@@ -1118,8 +1182,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Myanmar Digital News (Ministry of Information)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© Myanmar Digital News: all rights reserved (page footer reads \"© Copyright © 2018 Myanmar Digital News. All rights reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Myanmar Digital News feature (5 Dec 2020, Ministry of Information) '705 years old Zeyapura Sagaing' by Maung Tha (Archaeology): Sagaing, founded in 1315, and its pagodas and other Konbaung-era heritage."
     },
     {
       "id": "dagon-bells-paper",
@@ -1128,8 +1193,9 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "Dagon University",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of Dagon University and the author applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Dagon University Research Journal vol. 9 no. 1 (25th-anniversary issue), paper 'The World Famous Bells (Myanmar and Russia)' by Swe Swe Aung: compares the Tsar Bell (weight, height 6.14 m, diameter 6.6 m) with the Mingun Bell in Sagaing Region."
     },
     {
       "id": "bbc-dhammazedi",
@@ -1138,8 +1204,10 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "BBC News",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "BBC terms: content is © BBC; sharing only via the BBC's own share tools with credit; no other reuse without permission. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "BBC News report by Jonah Fisher from Yangon on the search for the Dhammazedi Bell, 'one of Myanmar's murkiest mysteries': some doubt the bell ever existed, others think the search is cursed.",
+      "terms_url": "https://www.bbc.co.uk/usingthebbc/terms/can-i-share-things-from-the-bbc"
     },
     {
       "id": "af-balangiga",
@@ -1158,8 +1226,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Goa Tourism Development Corporation",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "GTDC Copyright Policy: site material may be reproduced free of charge without specific permission if reproduced accurately, not used in a misleading context, and the source is acknowledged; third-party material excluded. GlobeDesk uses its own wording and links.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Goa Tourism Development Corporation page on Our Lady of the Immaculate Conception Church in Panaji, a notable church outside Old Goa, and its history.",
+      "terms_url": "https://goa-tourism.com/copyright-policy/"
     },
     {
       "id": "bm-n162",
@@ -1168,8 +1238,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "The British Museum",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "license": "British Museum terms of use: collection information is offered under the museum's Creative Commons terms described on its Copyright and permissions page; the record text was not copied. GlobeDesk uses its own wording and links.",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "British Museum collection record N.162: a Neo-Assyrian bronze bell (800-700 BCE) with straight sides, a loop handle and its iron clapper still in place, excavated by Austen Henry Layard at Fort Shalmaneser (Nimrud), Room AB; 5.2 cm high, 3.45 cm across; not on display.",
+      "terms_url": "https://www.britishmuseum.org/terms-use"
     },
     {
       "id": "nps-liberty-bell-sheet",
@@ -1268,9 +1340,10 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "Old North Illuminated (operator of Old North Church)",
-      "license": "Site content; reuse terms [UNKNOWN]",
+      "license": "© The Old North Church & Historic Site: all rights reserved (page footer reads \"© 2025 The Old North Church & Historic Site. All Rights Reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
       "primary": true,
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "Old North Church (operated by Old North Illuminated) page on the Steeple and Bell Chamber: the steeple, the historic change-ringing bells, bell-chamber tours and history resources."
     },
     {
       "id": "boston-blc-old-north",
@@ -1279,8 +1352,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "City of Boston, Boston Landmarks Commission",
-      "license": "City of Boston public record; reuse terms [UNKNOWN]",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the City of Boston (Boston Landmarks Commission) applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Boston Landmarks Commission study report (petition 265.19, approved 1 Apr 2025) on Old North Church and Campus, 193 Salem Street, North End: the property's history and significance for landmark designation, cited here for the bells' casting year."
     },
     {
       "id": "nps-nrhp-inde",
@@ -1299,8 +1373,9 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "NPS History (archive of National Park Service publications)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "The OCR text names no author's employer or licence; the archive site npshistory.com adds none. Treated as link-and-summarise only; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Scanned preliminary report on the Christ Church (Old North) bell tower by Charlotte Worsham, from National Park Service cultural-resources files (archived on npshistory.com): the 1723 brick church, the tower and wooden steeple of 1740, and the ring of eight bells cast by Abel Rudhall of Gloucester in 1744."
     },
     {
       "id": "paccard-world-peace-bell",
@@ -1309,9 +1384,11 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "Paccard bell foundry",
-      "license": "[UNKNOWN]: linked only, no text copied",
+      "license": "© Paccard: all rights reserved (page footer reads \"© Copyright 2025\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
       "primary": true,
-      "verified": "opened directly (HTTP 200)"
+      "verified": "opened directly (HTTP 200)",
+      "description": "Paccard bell foundry portfolio page on the World Peace Bell: cast 1999, 33 tons, 11.5 ft high, installed at the Millennium Monument in Newport, Kentucky, as the largest free-swinging bell in the world at the time.",
+      "terms_url": "https://paccard.com/mentions-legales-ars-sonora/"
     },
     {
       "id": "un-gifts-peace-bell",
@@ -1320,8 +1397,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "United Nations",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "UN copyright notice: © United Nations, all rights reserved; materials may not be used or reproduced without permission. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "United Nations Gifts page on the Japanese Peace Bell and Garden: cast in 1952 from coins given by delegates of 60 nations, presented by the UN Association of Japan on 8 June 1954, as a symbol of peace.",
+      "terms_url": "https://www.un.org/en/about-us/copyright"
     },
     {
       "id": "nps-netherlands-carillon",
@@ -1340,8 +1419,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Bok Tower Gardens",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© Bok Tower Gardens: all rights reserved (page footer reads \"© 2026 Bok Tower Gardens. All Rights Reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Bok Tower Gardens page on the Singing Tower: what a carillon is (at least 23 tuned bells), the tower's carillon and its parts, and recitals."
     },
     {
       "id": "ua-uss-arizona",
@@ -1350,8 +1430,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "University of Arizona Libraries",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "University of Arizona Libraries: rights are reviewed per item and a copyright take-down policy applies; no open licence is stated for exhibit text. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "University of Arizona Libraries online exhibit (75th anniversary of Pearl Harbor) on the USS Arizona: how alumnus Wilbur Bowers (class of 1927) came across the ship's bell three years after 7 December 1941, and the papers, photographs and memorabilia the library holds.",
+      "terms_url": "https://lib.arizona.edu/policies/copyright-take-down-request"
     },
     {
       "id": "glshs-fitzgerald",
@@ -1360,8 +1442,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Great Lakes Shipwreck Historical Society",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "license": "© the Great Lakes Shipwreck Historical Society: all rights reserved (page footer reads \"© Copyright 2026 | All Rights Reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "Great Lakes Shipwreck Museum (Great Lakes Shipwreck Historical Society) page on the Edmund Fitzgerald: the 1975 loss, the legend around it, and the museum's annual memorial ceremony (the 51st on 10 Nov 2026)."
     },
     {
       "id": "ourcommons-carillon",
@@ -1370,8 +1453,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "House of Commons of Canada",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "House of Commons notices: content is covered by the Copyright Act; permission to reproduce must be sought. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "House of Commons of Canada heritage page on the Peace Tower Carillon: 53 bells cast and tuned 1925-1927 by Gillett & Johnston of Croydon to commemorate the 1918 Armistice and Canada's First World War sacrifice; belfry layout and the keyboard room 45 m above ground.",
+      "terms_url": "https://www.ourcommons.ca/en/important-notices"
     },
     {
       "id": "canada-peace-tower",
@@ -1380,8 +1465,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Public Services and Procurement Canada",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "PSPC terms: unless otherwise stated, materials may be reproduced for non-commercial purposes without charge or permission, with title, author and source URL; commercial reproduction needs written permission. GlobeDesk uses its own wording and links.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Public Services and Procurement Canada page on the Peace Tower: 92.2 m high on Parliament Hill, its flag, clock, carillon, Memorial Chamber and stone carvings.",
+      "terms_url": "https://www.canada.ca/en/public-services-procurement/terms.html"
     },
     {
       "id": "inah-grito",
@@ -1390,8 +1477,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Instituto Nacional de Antropología e Historia (Mexico)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "gob.mx terms (INAH site footer: 'algunos derechos reservados'): materials may be used for personal, non-commercial purposes keeping all copyright notices; no modification or commercial display. GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "INAH (Mexico's National Institute of Anthropology and History) article (15 Sep 2023) on El Grito de Independencia in the Zócalo and the National Palace: the history and meaning of the 15 September ceremony.",
+      "terms_url": "https://www.gob.mx/terminos"
     },
     {
       "id": "cusco-catedral-historia",
@@ -1400,8 +1489,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "catalogacion.cusco.gob.pe (Cusco government heritage catalogue)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Cusco regional government heritage catalogue applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Cusco regional heritage catalogue PDF 'Historia de la Basílica Catedral del Cusco' (Spanish): the cathedral built over the Inca Wiracocha hall at Quishuarcancha, the 1536 papal bull creating the diocese, the 1552 site decision and its construction history."
     },
     {
       "id": "nca-national-carillon",
@@ -1410,8 +1500,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "National Capital Authority (Australian Government)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "license": "NCA terms of use: unless otherwise noted, material on the site is licensed CC BY 4.0 (Australia), except logos and the Coat of Arms. GlobeDesk uses its own wording and links.",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "National Capital Authority page on the National Carillon on Aspen Island, Canberra: free recitals on Wednesdays and Sundays, guided tours and visitor information.",
+      "terms_url": "https://www.nca.gov.au/about-us/corporate-documents/corporate-policies/terms-use"
     },
     {
       "id": "wa-gov-swan-bells",
@@ -1420,8 +1512,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Government of Western Australia",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "WA.gov.au terms of use: material may be copied for personal, non-commercial educational or organisational use with attribution; no commercial reuse without permission. GlobeDesk uses its own wording and links.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Government of Western Australia media statement (10 Dec 2000) 'Historic Swan Bells ring out in Western Australia': the Swan Bells, the State's millennium project, officially handed over to the people of Western Australia that afternoon.",
+      "terms_url": "https://www.wa.gov.au/terms-of-use"
     },
     {
       "id": "belltower-perth-about",
@@ -1430,9 +1524,10 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "The Bell Tower, Perth (operator)",
-      "license": "[UNKNOWN]: linked only, no text copied",
+      "license": "© The Swan Bells Foundation Inc.: all rights reserved (page footer reads \"Copyright © 2023 - 2026. All rights reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
       "primary": true,
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "The Bell Tower, Perth (Swan Bells Foundation) 'About' page: the Riverside Drive tower overlooking the Swan River that houses the Swan Bells, its design, exhibits and visits."
     },
     {
       "id": "nzhistory-carillon",
@@ -1441,8 +1536,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Manatū Taonga Ministry for Culture and Heritage (NZ)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "license": "NZHistory states its own copyright terms on the site; the page itself names none and the copyright page could not be opened on 2026-11-24 (404/403). Treated as link-and-summarise only; nothing copied.",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "NZHistory (Manatū Taonga Ministry for Culture and Heritage) 'Bells of remembrance', page 2: the 1926 Wellington War Memorial Carillon Society appeal for 49 bells, their dedication to the fallen, casting by Gillett & Johnston at Croydon from late 1927, the tower begun 1931 and dedication on Anzac Day 1932, and a list of carillonists."
     },
     {
       "id": "hnz-national-war-memorial",
@@ -1451,8 +1547,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Heritage New Zealand Pouhere Taonga",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "Heritage New Zealand terms and conditions apply to List text; images on the page carry their own credited licences (e.g. CC BY 4.0, CC BY-NC 2.0). GlobeDesk links and summarises; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Heritage New Zealand Pouhere Taonga List entry 1410, National War Memorial (Wellington): the 1932 Carillon, the Hall of Memories completed 1964 and the Tomb of the Unknown Warrior (2004); history from the 1919 decision, the 49 bells gifted in 1927, design by Gummer and Ford, the 51 m Art Deco tower opened on Anzac Day 1932, legal description and significance.",
+      "terms_url": "https://www.heritage.org.nz/terms-and-conditions"
     },
     {
       "id": "sgcathedral-bellringers",
@@ -1461,8 +1559,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "St George's Cathedral, Cape Town",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "© St George's Cathedral, Cape Town: all rights reserved (page footer reads \"© Copyright 2025. All Rights Reserved\", checked 2026-11-24). No open licence. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "St George's Cathedral, Cape Town page on its bell ringers: change ringing on a ring of ten bells from 300 kg to 1,300 kg, rung on Sunday mornings to call people to worship."
     },
     {
       "id": "dove-cape-town",
@@ -1471,8 +1570,9 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "Central Council of Church Bell Ringers (Dove's Guide)",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened via a fetch service (direct fetch blocked by the site)"
+      "license": "No licence or copyright notice found on the page (checked 2026-11-24); default copyright of the Central Council of Church Bell Ringers (Dove's Guide) applies. GlobeDesk links and summarises in its own words; nothing copied.",
+      "verified": "opened via a fetch service (direct fetch blocked by the site)",
+      "description": "Dove's Guide for Church Bell Ringers (CCCBR) tower 13736, Cape Town, Cathedral Church of St George: a full-circle ring of ten (tenor 25-0-0, 1,270 kg, E flat), cast 1962 by Mears & Stainbank as a chime in the car park and moved into the tower in 1979; per-bell weights, notes, diameters and the cast-iron frame."
     },
     {
       "id": "dai-ghana-bells",
@@ -1481,8 +1581,10 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Deutsches Archäologisches Institut",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "Dataset licence: Creative Commons Attribution 4.0 (CC BY 4.0), stated on the dataset page. GlobeDesk uses its own wording and links.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "German Archaeological Institute (DAI) TransArea Network Africa dataset (DOI 10.34780/7j79w9en): booklet resources including PDF 13, 'Bells as a shared German-Ghanaian cultural heritage: a survey in the Volta Region'.",
+      "terms_url": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "id": "fau-ghana-bells",
@@ -1491,8 +1593,9 @@
       "checked": "2026-11-24",
       "class": "reference",
       "publisher": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
-      "license": "[UNKNOWN]: linked only, no text copied",
-      "verified": "opened directly (HTTP 200)"
+      "license": "[UNKNOWN]: the page and its terms could not be opened on 2026-11-24 (bot check, HTTP 403 by curl and fetch service). GlobeDesk links only; nothing copied.",
+      "verified": "opened directly (HTTP 200)",
+      "description": "Friedrich-Alexander-Universität Erlangen-Nürnberg (Christian Archaeology) research-project page titled 'Colonial and post-colonial church bells in Ghana' (title and URL). The page body sits behind a bot check and returned 403 to the fetch service on 2026-11-24, so its contents are not described further here."
     },
     {
       "id": "usa-branches",
@@ -1735,7 +1838,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Food and Agriculture Organization of the United Nations (FAO)",
-      "license": "[UNKNOWN]: linked only, no text copied"
+      "license": "FAO statistical databases are licensed CC BY 4.0 plus FAO's additional database terms of use (attribution to FAO required).",
+      "description": "FAOSTAT, the FAO corporate statistical database: free food and agriculture data for over 245 countries and territories from 1961 to the latest year (production, trade, food balances, prices, land use and more).",
+      "terms_url": "https://www.fao.org/contact-us/terms/db-terms-of-use/en/"
     },
     {
       "id": "ready-power-outages",
@@ -1807,7 +1912,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "World Health Organization",
-      "license": "[UNKNOWN]: linked only, no text copied"
+      "license": "WHO website terms: © WHO; extracts may be reproduced for research, private study or non-commercial education with acknowledgement and URL; substantial reproduction or other use needs prior permission (WHO publications themselves are CC BY-NC-SA 3.0 IGO).",
+      "description": "WHO Global Health Observatory: WHO's data repository of over 1,000 health indicators for its 194 Member States, with country pages, a map gallery and the GHO OData API.",
+      "terms_url": "https://www.who.int/about/policies/terms-of-use"
     },
     {
       "id": "cdc-fastats",
@@ -1915,7 +2022,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Bureau International des Poids et Mesures (BIPM)",
-      "license": "[UNKNOWN]: linked only, no text copied"
+      "license": "BIPM copyright: unless otherwise stated, material on bipm.org is licensed CC BY 4.0.",
+      "description": "BIPM page on the International System of Units (SI): what the SI is, the globally agreed system of measurement for science, industry and trade, and links to its definitions and the SI Brochure.",
+      "terms_url": "https://www.bipm.org/en/copyright"
     },
     {
       "id": "nist-si",
@@ -1942,7 +2051,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "The Nobel Foundation",
-      "license": "[UNKNOWN]: linked only, no text copied"
+      "license": "Nobel Prize Outreach terms of use: all content is proprietary; no reproduction, adaptation or other use without prior written permission. GlobeDesk links and summarises; nothing copied.",
+      "description": "NobelPrize.org summary of the 1956 Nobel Prize in Physics: awarded jointly to William B. Shockley, John Bardeen and Walter H. Brattain 'for their researches on semiconductors and their discovery of the transistor effect', with prize shares and links to biographies and the presentation speech.",
+      "terms_url": "https://www.nobelprize.org/about/terms-of-use/"
     },
     {
       "id": "chm-computers",
@@ -1951,7 +2062,9 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "Computer History Museum",
-      "license": "[UNKNOWN]: linked only, no text copied"
+      "license": "Computer History Museum terms of use: no content may be used commercially without written permission; uses beyond fair use need CHM's permission. GlobeDesk links and summarises; nothing copied.",
+      "description": "Computer History Museum 'Timeline of Computer History', Computers category: dated milestones from George Stibitz's 1937 relay 'Model K' adder onward, with short descriptions and images.",
+      "terms_url": "https://computerhistory.org/terms/"
     },
     {
       "id": "abmc-normandy",
