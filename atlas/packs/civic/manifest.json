@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "civic",
+  "title": "Atlas pack: Civic and public records",
+  "kind": "category",
+  "category": "civic",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "2b629ee1880b816a3de9459b71c0f95b472ce3c3a29e40b7c12d40bced840d60",
+  "entry_count": 5,
+  "size_bytes": 5501,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 5501,
+      "sha256": "3f9034cf581ff4fb22c103449208fc53707a8592fcb21539007d90dd88002360"
+    }
+  ]
+}

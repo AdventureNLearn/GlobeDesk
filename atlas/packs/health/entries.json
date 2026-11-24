@@ -1,0 +1,131 @@
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "health",
+  "entries": [
+    {
+      "id": "human-anatomy-organ-systems",
+      "title": "Human anatomy and organ systems overview",
+      "kind": "topic",
+      "category_path": [
+        "health",
+        "anatomy-systems"
+      ],
+      "tier": "student",
+      "summary": "MedlinePlus (U.S. National Library of Medicine) defines anatomy as the study of the body's structure, organizing reference resources across cardiovascular, respiratory, nervous, digestive, musculoskeletal, endocrine, immune, and urinary systems.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "medlineplus-anatomy"
+      ],
+      "related": [],
+      "pack": "health",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "dna-and-human-genome-basics",
+      "title": "DNA, chromosomes, and the human genome",
+      "kind": "topic",
+      "category_path": [
+        "health",
+        "biology-cells"
+      ],
+      "tier": "student",
+      "summary": "Per NIH NHGRI, DNA is a double helix built from four nucleotide bases (A pairs with T; C pairs with G). The human genome comprises roughly 3 billion base pairs and an estimated 20,000 to 25,000 genes organized on 23 pairs of chromosomes in the cell nucleus.",
+      "places": [],
+      "dates": [
+        {
+          "date": "2022-08-16",
+          "precision": "day",
+          "approximate": false,
+          "label": "NHGRI fact sheet update"
+        }
+      ],
+      "sources": [
+        "nhgri-genomics"
+      ],
+      "related": [],
+      "pack": "health",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "first-aid-and-emergency-911",
+      "title": "First aid overview and emergency 911 guidance",
+      "kind": "topic",
+      "category_path": [
+        "health",
+        "first-aid"
+      ],
+      "tier": "everyday",
+      "summary": "MedlinePlus defines first aid as immediate care provided for an injury or sudden illness before medical help arrives, emphasizing calling 911 for life-threatening emergencies (or U.S. Poison Control at 1-800-222-1222) and maintaining basic kit supplies. Educational overview only; not personal medical advice.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "medlineplus-firstaid"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "basic-disaster-supply-kit"
+        }
+      ],
+      "pack": "health",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "health",
+          "emergency-services"
+        ]
+      ]
+    },
+    {
+      "id": "public-health-records-gho-nchs",
+      "title": "Public health statistics (WHO GHO and CDC FastStats)",
+      "kind": "dataset",
+      "category_path": [
+        "health",
+        "public-health-records"
+      ],
+      "tier": "student",
+      "summary": "WHO's Global Health Observatory and CDC's National Center for Health Statistics (FastStats) publish population-level health indicators covering mortality, life expectancy, infectious disease surveillance, and health care utilization.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "who-gho",
+        "cdc-fastats"
+      ],
+      "related": [],
+      "pack": "health",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    }
+  ]
+}

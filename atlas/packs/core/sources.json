@@ -101,6 +101,465 @@
       "url": "https://www.amazon.com/TalentCell-LiFePO4-Battery-Rechargeable-Phosphate/dp/B08R1FWW5P",
       "checked": "2026-11-24",
       "class": "reference"
+    },
+    {
+      "id": "usa-branches",
+      "title": "Branches of the U.S. Government",
+      "url": "https://www.usa.gov/branches-of-government",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. General Services Administration (USAGov)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "archives-founding",
+      "title": "America's Founding Documents",
+      "url": "https://www.archives.gov/founding-docs",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. National Archives and Records Administration",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "scotus-constitutional",
+      "title": "The Court and Constitutional Interpretation",
+      "url": "https://www.supremecourt.gov/about/constitutional.aspx",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Supreme Court of the United States",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "federal-register",
+      "title": "Federal Register: The Daily Journal of the United States Government",
+      "url": "https://www.federalregister.gov/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Office of the Federal Register (NARA / GPO)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "foia-gov",
+      "title": "FOIA.gov: Freedom of Information Act Portal",
+      "url": "https://www.foia.gov/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Department of Justice",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usaspending-gov",
+      "title": "About USAspending.gov (FFATA and DATA Act)",
+      "url": "https://www.usaspending.gov/about",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Department of the Treasury",
+      "license": "U.S. Treasury open data (CC0 code; data terms noted on site)"
+    },
+    {
+      "id": "census-population",
+      "title": "U.S. Census Bureau Population Topics",
+      "url": "https://www.census.gov/topics/population.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Census Bureau",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "census-bps",
+      "title": "Building Permits Survey (BPS)",
+      "url": "https://www.census.gov/construction/bps/index.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Census Bureau",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "epa-emergency-water",
+      "title": "Emergency Disinfection of Drinking Water",
+      "url": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Environmental Protection Agency",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "ready-water",
+      "title": "Ready.gov: Water",
+      "url": "https://www.ready.gov/water",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Federal Emergency Management Agency (Ready.gov)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "osha-hand-power-tools",
+      "title": "OSHA Hand and Power Tools Overview",
+      "url": "https://www.osha.gov/hand-power-tools",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Occupational Safety and Health Administration",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "ready-shelter",
+      "title": "Ready.gov: Shelter",
+      "url": "https://www.ready.gov/shelter",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Federal Emergency Management Agency (Ready.gov)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "nhtsa-bicycle-safety",
+      "title": "NHTSA Bicycle Safety",
+      "url": "https://www.nhtsa.gov/road-safety/bicycle-safety",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. National Highway Traffic Safety Administration",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "nasa-power",
+      "title": "NASA POWER (Prediction Of Worldwide Energy Resources)",
+      "url": "https://power.larc.nasa.gov/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "NASA Langley Research Center",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "nist-atomic-li",
+      "title": "NIST Atomic Weights and Isotopic Compositions: Lithium (Li)",
+      "url": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=Li&ascii=html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "nist-atomic-cu",
+      "title": "NIST Atomic Weights and Isotopic Compositions: Copper (Cu)",
+      "url": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=Cu&ascii=html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "nist-atomic-fe",
+      "title": "NIST Atomic Weights and Isotopic Compositions: Iron (Fe)",
+      "url": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=Fe&ascii=html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usgs-lithium",
+      "title": "USGS Lithium Statistics and Information",
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/lithium-statistics-and-information",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Geological Survey",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usgs-copper",
+      "title": "USGS Copper Statistics and Information",
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/copper-statistics-and-information",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Geological Survey",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usgs-iron",
+      "title": "USGS Iron and Steel Statistics and Information",
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/iron-and-steel-statistics-and-information",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Geological Survey",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usgs-silica",
+      "title": "USGS Silica Statistics and Information",
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/silica-statistics-and-information",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Geological Survey",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "epa-plastics",
+      "title": "EPA Plastics: Material-Specific Data",
+      "url": "https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling/plastics-material-specific-data",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Environmental Protection Agency",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "osha-hazcom",
+      "title": "OSHA Hazard Communication Standard (HCS / GHS)",
+      "url": "https://www.osha.gov/hazcom",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Occupational Safety and Health Administration",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usda-hardiness",
+      "title": "2023 USDA Plant Hardiness Zone Map",
+      "url": "https://planthardiness.ars.usda.gov/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "USDA Agricultural Research Service",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usda-fdc",
+      "title": "USDA FoodData Central",
+      "url": "https://fdc.nal.usda.gov/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "USDA Beltsville Human Nutrition Research Center",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usda-fsis-freezing",
+      "title": "USDA FSIS: Freezing and Food Safety",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/freezing-and-food-safety",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "faostat",
+      "title": "FAOSTAT Food and Agriculture Statistics",
+      "url": "https://www.fao.org/faostat/en/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Food and Agriculture Organization of the United Nations (FAO)",
+      "license": "[UNKNOWN]: linked only, no text copied"
+    },
+    {
+      "id": "ready-power-outages",
+      "title": "Ready.gov: Power Outages",
+      "url": "https://www.ready.gov/power-outages",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Federal Emergency Management Agency (Ready.gov)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "ready-kit",
+      "title": "Ready.gov: Build A Kit",
+      "url": "https://www.ready.gov/kit",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Federal Emergency Management Agency (Ready.gov)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "ready-plan",
+      "title": "Ready.gov: Make A Plan",
+      "url": "https://www.ready.gov/plan",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Federal Emergency Management Agency (Ready.gov)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "nws-safety",
+      "title": "NOAA National Weather Service: Weather Safety for All Hazards",
+      "url": "https://www.weather.gov/safety/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "NOAA National Weather Service",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "medlineplus-anatomy",
+      "title": "MedlinePlus: Anatomy",
+      "url": "https://medlineplus.gov/anatomy.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. National Library of Medicine (NIH)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "nhgri-genomics",
+      "title": "NHGRI: A Brief Guide to Genomics",
+      "url": "https://www.genome.gov/about-genomics/fact-sheets/A-Brief-Guide-to-Genomics",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "National Human Genome Research Institute (NIH)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "medlineplus-firstaid",
+      "title": "MedlinePlus: First Aid",
+      "url": "https://medlineplus.gov/firstaid.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. National Library of Medicine (NIH)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "who-gho",
+      "title": "WHO Global Health Observatory",
+      "url": "https://www.who.int/data/gho",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "World Health Organization",
+      "license": "[UNKNOWN]: linked only, no text copied"
+    },
+    {
+      "id": "cdc-fastats",
+      "title": "CDC National Center for Health Statistics: FastStats",
+      "url": "https://www.cdc.gov/nchs/fastats/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "fed-h10-fx",
+      "title": "Federal Reserve Board: Foreign Exchange Rates - H.10 (Nov 23, 2026)",
+      "url": "https://www.federalreserve.gov/releases/h10/current/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "ecb-fx-rates",
+      "title": "ECB Euro foreign exchange reference rates",
+      "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "European Central Bank",
+      "license": "ECB open reference rates (information purposes only)"
+    },
+    {
+      "id": "noaa-ncei-climate",
+      "title": "NOAA NCEI: Climate Monitoring",
+      "url": "https://www.ncei.noaa.gov/products/climate-monitoring",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "NOAA National Centers for Environmental Information",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "noaa-ncei-oct-2026",
+      "title": "NOAA NCEI: Monitoring Global Temperature and Precipitation in October 2026",
+      "url": "https://www.ncei.noaa.gov/news/global-climate-202610",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "NOAA National Centers for Environmental Information",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usgs-earthquakes-faq",
+      "title": "USGS: What is an earthquake and what causes them to happen?",
+      "url": "https://www.usgs.gov/faqs/what-earthquake-and-what-causes-them-happen",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Geological Survey",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usgs-eq-us6000ud6h",
+      "title": "USGS Event us6000ud6h: M 6.4 - Mauritius - Reunion region (2026-11-24)",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ud6h/executive",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Geological Survey",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usgs-eq-significant-month",
+      "title": "USGS Significant Earthquakes (Past 30 Days GeoJSON Feed)",
+      "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Geological Survey",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "noaa-ocean-water",
+      "title": "NOAA National Ocean Service: How much water is in the ocean?",
+      "url": "https://oceanservice.noaa.gov/facts/oceanwater.html",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "NOAA National Ocean Service",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "nasa-earth-observatory",
+      "title": "NASA Earth Observatory",
+      "url": "https://science.nasa.gov/earth/earth-observatory/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "National Aeronautics and Space Administration (NASA)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "usgs-nlcd",
+      "title": "USGS National Land Cover Database (NLCD)",
+      "url": "https://www.usgs.gov/centers/eros/science/national-land-cover-database",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "U.S. Geological Survey (EROS Center)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "bipm-si",
+      "title": "BIPM: The International System of Units (SI)",
+      "url": "https://www.bipm.org/en/measurement-units",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Bureau International des Poids et Mesures (BIPM)",
+      "license": "[UNKNOWN]: linked only, no text copied"
+    },
+    {
+      "id": "nist-si",
+      "title": "NIST: SI Units",
+      "url": "https://www.nist.gov/pml/owm/metric-si/si-units",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "loc-galileo",
+      "title": "Library of Congress: Galileo and the Telescope",
+      "url": "https://www.loc.gov/collections/finding-our-place-in-the-cosmos-with-carl-sagan/articles-and-essays/modeling-the-cosmos/galileo-and-the-telescope",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Library of Congress",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)"
+    },
+    {
+      "id": "nobel-physics-1956",
+      "title": "The Nobel Prize in Physics 1956 (Summary)",
+      "url": "https://www.nobelprize.org/prizes/physics/1956/summary/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "The Nobel Foundation",
+      "license": "[UNKNOWN]: linked only, no text copied"
+    },
+    {
+      "id": "chm-computers",
+      "title": "Computer History Museum: Timeline of Computer History - Computers",
+      "url": "https://www.computerhistory.org/timeline/computers/",
+      "checked": "2026-11-24",
+      "class": "official",
+      "publisher": "Computer History Museum",
+      "license": "[UNKNOWN]: linked only, no text copied"
     }
   ]
 }

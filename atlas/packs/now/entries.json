@@ -1,0 +1,89 @@
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "now",
+  "entries": [
+    {
+      "id": "noaa-october-2026-global-climate",
+      "title": "October 2026 global surface and ocean temperature record",
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "climate-weather"
+      ],
+      "tier": "everyday",
+      "summary": "NOAA NCEI reported on Nov 12, 2026 that October 2026 set an all-time monthly global surface temperature departure record of +2.57 F (+1.43 C) above the 20th-century average, with record ocean warmth (+2.05 F / +1.14 C) and 15 global tropical storms.",
+      "places": [],
+      "dates": [
+        {
+          "date": "2026-11-12",
+          "precision": "day",
+          "approximate": false,
+          "label": "NCEI October 2026 report"
+        }
+      ],
+      "sources": [
+        "noaa-ncei-oct-2026"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "noaa-global-climate-monitoring"
+        }
+      ],
+      "pack": "now",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": true,
+      "subject_person_living": false,
+      "now_until": "2027-02-10"
+    },
+    {
+      "id": "usgs-m64-mauritius-reunion-2026-11-24",
+      "title": "M 6.4 earthquake in Mauritius-Reunion region (Nov 24, 2026)",
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "geology-minerals"
+      ],
+      "tier": "everyday",
+      "summary": "On November 24, 2026 (03:06 AM PT), USGS recorded a magnitude 6.4 earthquake at 10 km depth in the Mauritius-Reunion region (17.70 S, 65.70 E), with no tsunami flag in the USGS feed.",
+      "places": [
+        {
+          "region": "MU",
+          "precision": "site",
+          "lat": -17.7049,
+          "lng": 65.6995,
+          "note": "USGS epicenter in Mauritius-Reunion region"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2026-11-24",
+          "precision": "day",
+          "approximate": false,
+          "label": "M 6.4 earthquake (03:06 AM PT)"
+        }
+      ],
+      "sources": [
+        "usgs-eq-us6000ud6h",
+        "usgs-eq-significant-month"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "earthquakes-and-plate-faults"
+        }
+      ],
+      "pack": "now",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": true,
+      "subject_person_living": false,
+      "now_until": "2027-02-22"
+    }
+  ]
+}

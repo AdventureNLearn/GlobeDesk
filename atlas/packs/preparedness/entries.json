@@ -1,0 +1,164 @@
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "preparedness",
+  "entries": [
+    {
+      "id": "power-outage-generator-safety",
+      "title": "Power outage and portable generator safety",
+      "kind": "topic",
+      "category_path": [
+        "preparedness",
+        "power-outages"
+      ],
+      "tier": "everyday",
+      "summary": "Per Ready.gov, operate generators, camp stoves, and charcoal grills strictly outdoors at least 20 feet from windows, doors, and attached garages to prevent carbon monoxide poisoning; keep refrigerators closed (cold about 4 hours) and full freezers closed (about 48 hours).",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2026-06-04",
+          "precision": "day",
+          "approximate": false,
+          "label": "Ready.gov update"
+        }
+      ],
+      "sources": [
+        "ready-power-outages"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "basic-disaster-supply-kit"
+        }
+      ],
+      "pack": "preparedness",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "basic-disaster-supply-kit",
+      "title": "Basic emergency disaster supply kit",
+      "kind": "topic",
+      "category_path": [
+        "preparedness",
+        "kits-checklists"
+      ],
+      "tier": "kids",
+      "summary": "Ready.gov recommends stocking one gallon of water per person per day for several days, non-perishable food, a battery or hand-crank NOAA Weather Radio, flashlight, first aid kit, extra batteries, whistle, dust mask, plastic sheeting and duct tape, wrench or pliers, manual can opener, and phone backup power.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2026-07-01",
+          "precision": "day",
+          "approximate": false,
+          "label": "Ready.gov update"
+        }
+      ],
+      "sources": [
+        "ready-kit",
+        "ready-water"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "water-filter-kit"
+        },
+        {
+          "type": "see-also",
+          "to": "emergency-shelter-and-room-sealing"
+        }
+      ],
+      "pack": "preparedness",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "preparedness",
+          "water-sanitation"
+        ]
+      ]
+    },
+    {
+      "id": "severe-weather-hazard-safety",
+      "title": "National Weather Service hazard safety",
+      "kind": "topic",
+      "category_path": [
+        "preparedness",
+        "storms-hazards"
+      ],
+      "tier": "everyday",
+      "summary": "NOAA's National Weather Service maintains hazard-specific forecast and safety guidance across 18 weather and environmental hazards—including floods, flash floods, hurricanes, tornadoes, lightning, extreme heat, winter storms, tsunamis, and wildfires.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "nws-safety"
+      ],
+      "related": [],
+      "pack": "preparedness",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "family-emergency-communications-plan",
+      "title": "Family emergency communication planning",
+      "kind": "topic",
+      "category_path": [
+        "preparedness",
+        "communications"
+      ],
+      "tier": "everyday",
+      "summary": "Ready.gov advises households to create and practice a written plan covering alert reception, shelter and evacuation routes, a shared contact and meeting place, and household medical, disability, language, and pet needs.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2026-09-01",
+          "precision": "day",
+          "approximate": false,
+          "label": "Ready.gov update"
+        }
+      ],
+      "sources": [
+        "ready-plan"
+      ],
+      "related": [],
+      "pack": "preparedness",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    }
+  ]
+}

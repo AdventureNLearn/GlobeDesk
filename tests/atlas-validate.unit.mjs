@@ -69,7 +69,7 @@ t("pack over 50 MB is refused; tampered file is caught", () => {
   writeFileSync(path.join(dir, "entries.json"), "{ }");
   assert.ok(packRules(m, dir).length > 0);
 });
-t("every real pack is under 50 MB", () => ["core", "energy", "objects", "chemistry", "economics"].forEach((p) => assert.ok(J(`packs/${p}/manifest.json`).size_bytes < MAX_BYTES)));
+t("every real pack is under 50 MB", () => ["core", "civic", "energy", "objects", "chemistry", "food", "preparedness", "health", "economics", "earth", "science-history", "now"].forEach((p) => assert.ok(J(`packs/${p}/manifest.json`).size_bytes < MAX_BYTES)));
 t("reused records stay marked draft", () => ["bag-solar-kit", "lifepo4-vs-nmc", "bag-solar-kit-prices"].forEach((id) => assert.equal(allEntries().find((e) => e.id === id).status, "draft")));
 t("owner rule: an owner repo or Learning Lab card can't be tagged official, and never backs a claim", () => {
   const ok = J("packs/core/sources.json").sources;

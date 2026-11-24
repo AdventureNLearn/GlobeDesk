@@ -7,7 +7,7 @@ import { ROOT, J, JR, CATEGORY_PACKS } from "./lib.mjs";
 import { readFileSync } from "node:fs";
 
 // Coarse ISO 3166-1 alpha-2 -> alpha-3 for the bundled world outline (Natural Earth a3). Only codes in use.
-const A3 = { US: "USA", GB: "GBR", IT: "ITA", IN: "IND" };
+const A3 = { US: "USA", GB: "GBR", IT: "ITA", IN: "IND", FR: "FRA", MU: "MUS" };
 
 export function buildData() {
   const entries = CATEGORY_PACKS.flatMap((p) => J(`packs/${p}/entries.json`).entries);

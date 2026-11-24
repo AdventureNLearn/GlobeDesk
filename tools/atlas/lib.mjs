@@ -7,7 +7,7 @@ import path from "node:path";
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");  // repo root
 export const ATLAS = path.join(ROOT, "atlas");
 export const MAX_BYTES = 50 * 1024 * 1024;
-export const CATEGORY_PACKS = ["energy", "objects", "chemistry", "economics"]; // packs written so far
+export const CATEGORY_PACKS = ["civic", "energy", "objects", "chemistry", "food", "preparedness", "health", "economics", "earth", "science-history", "now"]; // packs written so far (history-places on history branch)
 export const J = (p) => JSON.parse(readFileSync(path.join(ATLAS, p), "utf8"));
 export const JR = (p) => JSON.parse(readFileSync(path.join(ROOT, p), "utf8")); // repo-root relative (schemas, records)
 export const sha = (buf) => createHash("sha256").update(buf).digest("hex");

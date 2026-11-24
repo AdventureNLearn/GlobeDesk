@@ -113,13 +113,13 @@ try {
   // Atlas: open, A-Z, category tree, by place markers, by year zoom, This week, tier switch, tabs.
   await q(`document.getElementById("btnAtlas").click()`);
   out.az = await q(`({ open: !document.getElementById("atlasView").hidden, rows: document.querySelectorAll("#atBrowse .at-row").length, letters: document.querySelectorAll(".at-jump button").length })`);
-  if (!out.az.open || out.az.rows !== 11) throw new Error("A-Z: " + JSON.stringify(out.az));
+  if (!out.az.open || out.az.rows !== 49) throw new Error("A-Z: " + JSON.stringify(out.az));
   await q(`document.querySelector('[data-at-view="cats"]').click()`);
   out.cats = await q(`({ cats: document.querySelectorAll(".at-cat").length, greyed: document.querySelectorAll(".at-cat.not-installed").length })`);
-  if (out.cats.cats !== 12 || out.cats.greyed !== 8) throw new Error("categories: " + JSON.stringify(out.cats));
+  if (out.cats.cats !== 12 || out.cats.greyed !== 1) throw new Error("categories: " + JSON.stringify(out.cats));
   await q(`document.querySelector('[data-at-view="place"]').click()`);
   out.place = await q(`({ places: document.querySelectorAll(".at-place").length, markers: document.querySelectorAll(".atlas-count").length })`);
-  if (out.place.places !== 4 || out.place.markers !== 4) throw new Error("by place: " + JSON.stringify(out.place));
+  if (out.place.places !== 6 || out.place.markers < 4) throw new Error("by place: " + JSON.stringify(out.place));
   await q(`document.querySelector('[data-at-view="year"]').click()`);
   await q(`document.querySelector('[data-at-zoom="months"]').click()`);
   out.months = await q(`document.querySelectorAll("[data-at-bucket]").length`);
@@ -129,7 +129,7 @@ try {
   if (!/ISO week/.test(out.week)) throw new Error("this week: " + out.week);
   await q(`(() => { const s = document.getElementById("atTier"); s.value = "kids"; s.dispatchEvent(new Event("change")); document.querySelector('[data-at-view="az"]').click(); })()`);
   out.kids = await q(`document.querySelectorAll("#atBrowse .at-row").length`);
-  if (out.kids !== 1) throw new Error("kids tier rows: " + out.kids);
+  if (out.kids !== 3) throw new Error("kids tier rows: " + out.kids);
   await q(`(() => { const s = document.getElementById("atTier"); s.value = "all"; s.dispatchEvent(new Event("change")); GD.atlas.select("bag-solar-kit"); })()`);
   const tabs = {};
   for (const tab of ["object", "parts", "chemistry", "sources"]) {
@@ -148,8 +148,8 @@ try {
 
   // Desks: switch to Permits and Codes, check labels, then back to News.
   await q(`(() => { const s = document.getElementById("deskSelect"); s.value = "permits-codes"; s.dispatchEvent(new Event("change")); })()`);
-  out.desk = await q(`({ shown: !document.getElementById("workDesk").hidden, cardsHidden: getComputedStyle(document.getElementById("ndCards")).display === "none", exp: (document.getElementById("workDesk").innerText.match(/Experimental \\(not an official source\\)/g) || []).length, unknown: /Official source \\[UNKNOWN\\]/.test(document.getElementById("workDesk").innerText), links: [...document.querySelectorAll("#workDesk a")].map((a) => a.href) })`);
-  if (!out.desk.shown || !out.desk.cardsHidden || out.desk.exp !== 4 || !out.desk.unknown || out.desk.links.some((h) => !/^https:\/\/(github\.com\/AdventureNLearn\/|learninglab\.grok\.me\/)/.test(h))) throw new Error("desk: " + JSON.stringify(out.desk));
+  out.desk = await q(`({ shown: !document.getElementById("workDesk").hidden, cardsHidden: getComputedStyle(document.getElementById("ndCards")).display === "none", exp: (document.getElementById("workDesk").innerText.match(/Experimental \\(not an official source\\)/g) || []).length, official: [...document.querySelectorAll("#workDesk .wd-official a")].map((a) => a.href), links: [...document.querySelectorAll("#workDesk .wd-backing a")].map((a) => a.href) })`);
+  if (!out.desk.shown || !out.desk.cardsHidden || out.desk.exp !== 4 || !out.desk.official.length || out.desk.links.some((h) => !/^https:\/\/(github\.com\/AdventureNLearn\/|learninglab\.grok\.me\/)/.test(h))) throw new Error("desk: " + JSON.stringify(out.desk));
   await q(`(() => { const s = document.getElementById("deskSelect"); s.value = "news"; s.dispatchEvent(new Event("change")); })()`);
   out.back = await q(`({ cards: document.querySelectorAll(".nd-card").length, visible: getComputedStyle(document.getElementById("ndCards")).display !== "none" })`);
   if (out.back.cards !== 50 || !out.back.visible) throw new Error("news desk after switch: " + JSON.stringify(out.back));

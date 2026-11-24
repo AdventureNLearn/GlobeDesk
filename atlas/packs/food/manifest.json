@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "food",
+  "title": "Atlas pack: Food and growing",
+  "kind": "category",
+  "category": "food",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "20d85f8665f0e6c4b82e370df4c2b9dfa8847366b8da6d3c38ec376786f2eb29",
+  "entry_count": 4,
+  "size_bytes": 4120,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 4120,
+      "sha256": "d452f119d77b078dabbf24c6999c26cd1b71035db9b1305d79a38c6761a6e43b"
+    }
+  ]
+}

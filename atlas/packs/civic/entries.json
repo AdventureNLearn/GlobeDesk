@@ -1,0 +1,192 @@
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "civic",
+  "entries": [
+    {
+      "id": "us-constitutional-branches",
+      "title": "Branches of the U.S. federal government",
+      "kind": "topic",
+      "category_path": [
+        "civic",
+        "government-elections"
+      ],
+      "tier": "student",
+      "summary": "The U.S. Constitution divides federal authority into three branches—Legislative (Congress: Senate and House of Representatives), Executive (President and federal agencies), and Judicial (Supreme Court and federal courts)—so no single branch holds unchecked power.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "usa-branches",
+        "archives-founding"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "us-supreme-court-judicial-review"
+        }
+      ],
+      "pack": "civic",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "us-supreme-court-judicial-review",
+      "title": "U.S. Supreme Court and constitutional review",
+      "kind": "topic",
+      "category_path": [
+        "civic",
+        "laws-courts"
+      ],
+      "tier": "student",
+      "summary": "The Supreme Court's authority to review and invalidate legislation conflicting with the U.S. Constitution was articulated by Chief Justice John Marshall in Marbury v. Madison (1803), declaring it the judicial branch's duty to say what the law is.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1803",
+          "precision": "year",
+          "approximate": false,
+          "label": "Marbury v. Madison"
+        }
+      ],
+      "sources": [
+        "scotus-constitutional",
+        "archives-founding"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "us-constitutional-branches"
+        }
+      ],
+      "pack": "civic",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "us-federal-register-and-foia",
+      "title": "Federal Register and FOIA public records",
+      "kind": "topic",
+      "category_path": [
+        "civic",
+        "laws-courts"
+      ],
+      "tier": "everyday",
+      "summary": "The Federal Register publishes U.S. federal agency rules, proposed regulations, and notices each business day, while FOIA.gov guides Freedom of Information Act requests across more than 100 federal agencies subject to nine statutory exemptions.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "federal-register",
+        "foia-gov"
+      ],
+      "related": [],
+      "pack": "civic",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "usaspending-federal-budget",
+      "title": "USAspending.gov federal budget and award data",
+      "kind": "dataset",
+      "category_path": [
+        "civic",
+        "public-budgets"
+      ],
+      "tier": "student",
+      "summary": "USAspending.gov publishes U.S. federal appropriations, contract, grant, and loan awards under FFATA (2006) and the DATA Act (2014), linking direct agency expenditures to federal programs.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2006-09-26",
+          "precision": "day",
+          "approximate": false,
+          "label": "FFATA enacted"
+        },
+        {
+          "date": "2014-05-09",
+          "precision": "day",
+          "approximate": false,
+          "label": "DATA Act enacted"
+        }
+      ],
+      "sources": [
+        "usaspending-gov",
+        "usa-branches"
+      ],
+      "related": [],
+      "pack": "civic",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "us-census-and-building-permits",
+      "title": "U.S. Census population and Building Permits Survey",
+      "kind": "dataset",
+      "category_path": [
+        "civic",
+        "census-population"
+      ],
+      "tier": "student",
+      "summary": "The U.S. Census Bureau publishes national demographic statistics alongside the Building Permits Survey (authorized under Title 13), which tracks new privately owned residential construction permits across national, state, and local jurisdictions.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "census-population",
+        "census-bps"
+      ],
+      "related": [],
+      "pack": "civic",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "civic",
+          "infrastructure"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "earth",
+  "title": "Atlas pack: Earth and environment",
+  "kind": "category",
+  "category": "earth",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "5578dfbc3398c9b4b4a2b70810fd559e1cbbdd160d0678f7e4f7f2ce8dfc0a63",
+  "entry_count": 4,
+  "size_bytes": 4246,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 4246,
+      "sha256": "317365bccc59c0c038ec8277dfacb76ff799c40568af7b911be613650f7dcda4"
+    }
+  ]
+}

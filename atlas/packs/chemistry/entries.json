@@ -1,15 +1,261 @@
-{ "schema": "globedesk.atlas-entries/1", "pack": "chemistry", "entries": [
-  { "id": "lifepo4-vs-nmc", "title": "LiFePO4 (LFP) vs NMC lithium-ion", "kind": "chemistry", "category_path": ["chemistry", "battery-chemistry"], "tier": "student",
-    "summary": "DRAFT. Per BU-205: LFP 3.2-3.3 V, 90-120 Wh/kg, 2000+ cycles, thermal runaway 270 C; NMC 3.6-3.7 V, 150-220 Wh/kg, 1000-2000 cycles, 210 C.",
-    "places": [], "dates": [], "sources": ["bu-205"], "related": [{ "type": "see-also", "to": "phosphate-cathode-discovery" }, { "type": "cited-by", "to": "bag-solar-kit" }],
-    "record": "data/atlas/chemistry/lifepo4-vs-nmc.json",
-    "pack": "chemistry", "status": "draft", "confidence": "medium", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false },
-  { "id": "phosphate-cathode-discovery", "title": "Phosphate found as a lithium battery cathode (1996)", "kind": "event", "category_path": ["chemistry", "battery-chemistry"], "see_also_paths": [["science-history", "discoveries"]], "tier": "student",
-    "summary": "DRAFT. BU-205 states that in 1996 the University of Texas and other contributors discovered phosphate as a cathode material for rechargeable lithium batteries.",
-    "places": [{ "region": "US-TX", "precision": "subdivision" }], "dates": [{ "date": "1996", "precision": "year", "approximate": false }], "sources": ["bu-205"], "related": [{ "type": "see-also", "to": "lifepo4-vs-nmc" }],
-    "pack": "chemistry", "status": "draft", "confidence": "medium", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false },
-  { "id": "lithium-element", "title": "[PLACEHOLDER] Lithium (element)", "kind": "chemistry", "category_path": ["chemistry", "elements"], "tier": "kids",
-    "summary": "PLACEHOLDER. Element entry pattern. Facts and open-licence sources [UNKNOWN].",
-    "places": [], "dates": [], "sources": [], "related": [],
-    "pack": "chemistry", "status": "placeholder", "confidence": "[UNKNOWN]", "license": "CC BY 4.0", "checked": "2026-11-24", "current": false, "subject_person_living": false }
-] }
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "chemistry",
+  "entries": [
+    {
+      "id": "lifepo4-vs-nmc",
+      "title": "LiFePO4 (LFP) vs NMC lithium-ion",
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "battery-chemistry"
+      ],
+      "tier": "student",
+      "summary": "DRAFT. Per BU-205: LFP 3.2-3.3 V, 90-120 Wh/kg, 2000+ cycles, thermal runaway 270 C; NMC 3.6-3.7 V, 150-220 Wh/kg, 1000-2000 cycles, 210 C.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "bu-205"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "phosphate-cathode-discovery"
+        },
+        {
+          "type": "cited-by",
+          "to": "bag-solar-kit"
+        }
+      ],
+      "record": "data/atlas/chemistry/lifepo4-vs-nmc.json",
+      "pack": "chemistry",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "phosphate-cathode-discovery",
+      "title": "Phosphate found as a lithium battery cathode (1996)",
+      "kind": "event",
+      "category_path": [
+        "chemistry",
+        "battery-chemistry"
+      ],
+      "see_also_paths": [
+        [
+          "science-history",
+          "discoveries"
+        ]
+      ],
+      "tier": "student",
+      "summary": "DRAFT. BU-205 states that in 1996 the University of Texas and other contributors discovered phosphate as a cathode material for rechargeable lithium batteries.",
+      "places": [
+        {
+          "region": "US-TX",
+          "precision": "subdivision"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1996",
+          "precision": "year",
+          "approximate": false
+        }
+      ],
+      "sources": [
+        "bu-205"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "lifepo4-vs-nmc"
+        }
+      ],
+      "pack": "chemistry",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "lithium-element",
+      "title": "Lithium (Li, element 3)",
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "summary": "DRAFT. Lithium (Li, atomic number 3) has NIST standard atomic weight [6.938, 6.997] and naturally occurring isotopes Li-6 and Li-7. USGS tracks global lithium mineral commodity supply and demand, centered on rechargeable battery production.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "nist-atomic-li",
+        "usgs-lithium"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "lifepo4-vs-nmc"
+        },
+        {
+          "type": "see-also",
+          "to": "phosphate-cathode-discovery"
+        }
+      ],
+      "pack": "chemistry",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "aliases": [
+        "Li (atomic number 3)"
+      ]
+    },
+    {
+      "id": "copper-element",
+      "title": "Copper (Cu, element 29)",
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "summary": "DRAFT. Copper (Cu, atomic number 29) has NIST standard atomic weight 63.546(3) and stable isotopes Cu-63 and Cu-65. Per USGS, high ductility, thermal and electrical conductivity, and corrosion resistance make copper the third most consumed industrial metal, with electrical uses accounting for roughly three quarters of demand.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "nist-atomic-cu",
+        "usgs-copper"
+      ],
+      "related": [],
+      "pack": "chemistry",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "aliases": [
+        "Cu (atomic number 29)"
+      ]
+    },
+    {
+      "id": "iron-and-steel-alloys",
+      "title": "Iron (Fe) and steel alloys",
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "metals-alloys"
+      ],
+      "tier": "student",
+      "summary": "DRAFT. Iron (Fe, atomic number 26) has NIST standard atomic weight 55.845(2). Per USGS, steel is iron alloyed with a small amount of carbon, and iron and steel together account for about 95 percent of all metal tonnage produced annually worldwide.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "nist-atomic-fe",
+        "usgs-iron"
+      ],
+      "related": [],
+      "pack": "chemistry",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false,
+      "aliases": [
+        "Fe (atomic number 26)"
+      ]
+    },
+    {
+      "id": "commodity-plastics-resins",
+      "title": "Commodity plastics and polymer resins",
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "polymers"
+      ],
+      "tier": "student",
+      "summary": "DRAFT. EPA materials-specific data tracks major polymer resins in packaging and durable goods, including polyethylene terephthalate (PET) bottles, high-density polyethylene (HDPE) containers, low-density polyethylene (LDPE) films, and polystyrene food-service items.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "epa-plastics"
+      ],
+      "related": [],
+      "pack": "chemistry",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "silica-and-quartz-glass",
+      "title": "Silica, glassmaking sand, and high-purity quartz",
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "glass-ceramics"
+      ],
+      "tier": "student",
+      "summary": "DRAFT. USGS classifies silica into industrial sand and gravel (used in glassmaking and foundry work), high-purity quartz (at least 99.99% silica, used for fused quartz crucibles in semiconductors), industrial quartz crystal, silica stone, and tripoli.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "usgs-silica"
+      ],
+      "related": [],
+      "pack": "chemistry",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "ghs-hazard-communication",
+      "title": "Chemical safety labels and GHS Safety Data Sheets",
+      "kind": "topic",
+      "category_path": [
+        "chemistry",
+        "safety-data"
+      ],
+      "tier": "everyday",
+      "summary": "DRAFT. OSHA's Hazard Communication Standard aligns with the UN Globally Harmonized System (GHS), requiring standardized 16-section Safety Data Sheets (SDS) and chemical labels bearing a harmonized signal word, pictogram, hazard statement, and precautionary statements.",
+      "places": [
+        {
+          "region": "US",
+          "precision": "country"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "osha-hazcom"
+      ],
+      "related": [],
+      "pack": "chemistry",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-24",
+      "current": false,
+      "subject_person_living": false
+    }
+  ]
+}

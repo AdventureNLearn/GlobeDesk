@@ -3,59 +3,17 @@
   "generated": "2026-11-24",
   "entries": [
     {
-      "id": "currency-conversion",
-      "title": "[PLACEHOLDER] Currency conversion for prices",
+      "id": "usda-plant-hardiness-zones",
+      "title": "2023 USDA Plant Hardiness Zone Map",
       "aliases": [],
       "kind": "dataset",
       "category_path": [
-        "economics",
-        "currencies"
-      ],
-      "tier": "student",
-      "pack": "economics",
-      "status": "placeholder",
-      "current": false
-    },
-    {
-      "id": "lithium-element",
-      "title": "[PLACEHOLDER] Lithium (element)",
-      "aliases": [],
-      "kind": "chemistry",
-      "category_path": [
-        "chemistry",
-        "elements"
-      ],
-      "tier": "kids",
-      "pack": "chemistry",
-      "status": "placeholder",
-      "current": false
-    },
-    {
-      "id": "solar-resource-by-region",
-      "title": "[PLACEHOLDER] Solar resource by region",
-      "aliases": [],
-      "kind": "dataset",
-      "category_path": [
-        "energy",
-        "solar"
-      ],
-      "tier": "student",
-      "pack": "energy",
-      "status": "placeholder",
-      "current": false
-    },
-    {
-      "id": "water-filter-kit",
-      "title": "[PLACEHOLDER] Water filter kit",
-      "aliases": [],
-      "kind": "object",
-      "category_path": [
-        "objects",
-        "water-systems"
+        "food",
+        "gardening-crops"
       ],
       "tier": "everyday",
-      "pack": "objects",
-      "status": "placeholder",
+      "pack": "food",
+      "status": "draft",
       "current": false
     },
     {
@@ -89,6 +47,304 @@
       "current": false
     },
     {
+      "id": "basic-disaster-supply-kit",
+      "title": "Basic emergency disaster supply kit",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "preparedness",
+        "kits-checklists"
+      ],
+      "tier": "kids",
+      "pack": "preparedness",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bicycle-road-safety-equipment",
+      "title": "Bicycle road safety and visibility gear",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "objects",
+        "transport"
+      ],
+      "tier": "kids",
+      "pack": "objects",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "us-constitutional-branches",
+      "title": "Branches of the U.S. federal government",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "civic",
+        "government-elections"
+      ],
+      "tier": "student",
+      "pack": "civic",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ghs-hazard-communication",
+      "title": "Chemical safety labels and GHS Safety Data Sheets",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "chemistry",
+        "safety-data"
+      ],
+      "tier": "everyday",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "commodity-plastics-resins",
+      "title": "Commodity plastics and polymer resins",
+      "aliases": [],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "polymers"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "copper-element",
+      "title": "Copper (Cu, element 29)",
+      "aliases": [
+        "Cu (atomic number 29)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "dna-and-human-genome-basics",
+      "title": "DNA, chromosomes, and the human genome",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "health",
+        "biology-cells"
+      ],
+      "tier": "student",
+      "pack": "health",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "early-electronic-computing-timeline",
+      "title": "Early relay and electronic computing (1939-1942)",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "science-history",
+        "computing"
+      ],
+      "tier": "student",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "earth-ocean-water-volume",
+      "title": "Earth's ocean area and water distribution",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "earth",
+        "oceans-rivers"
+      ],
+      "tier": "kids",
+      "pack": "earth",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "earthquakes-and-plate-faults",
+      "title": "Earthquakes and tectonic plate faults",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "earth",
+        "geology-minerals"
+      ],
+      "tier": "everyday",
+      "pack": "earth",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "emergency-shelter-and-room-sealing",
+      "title": "Emergency shelter and indoor room sealing",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "objects",
+        "shelter"
+      ],
+      "tier": "everyday",
+      "pack": "objects",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "water-filter-kit",
+      "title": "Emergency water treatment and filter kit",
+      "aliases": [],
+      "kind": "object",
+      "category_path": [
+        "objects",
+        "water-systems"
+      ],
+      "tier": "everyday",
+      "pack": "objects",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "family-emergency-communications-plan",
+      "title": "Family emergency communication planning",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "preparedness",
+        "communications"
+      ],
+      "tier": "everyday",
+      "pack": "preparedness",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "faostat-global-food-supply",
+      "title": "FAOSTAT global food and agriculture statistics",
+      "aliases": [],
+      "kind": "dataset",
+      "category_path": [
+        "food",
+        "food-supply"
+      ],
+      "tier": "student",
+      "pack": "food",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "us-federal-register-and-foia",
+      "title": "Federal Register and FOIA public records",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "civic",
+        "laws-courts"
+      ],
+      "tier": "everyday",
+      "pack": "civic",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "first-aid-and-emergency-911",
+      "title": "First aid overview and emergency 911 guidance",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "health",
+        "first-aid"
+      ],
+      "tier": "everyday",
+      "pack": "health",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "galileo-telescopic-observations-1609",
+      "title": "Galileo's telescopic Moon observations (1609-1610)",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "discoveries"
+      ],
+      "tier": "student",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "hand-and-power-tools-safety",
+      "title": "Hand and power tool safety fundamentals",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "objects",
+        "tools"
+      ],
+      "tier": "everyday",
+      "pack": "objects",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "human-anatomy-organ-systems",
+      "title": "Human anatomy and organ systems overview",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "health",
+        "anatomy-systems"
+      ],
+      "tier": "student",
+      "pack": "health",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "international-system-of-units-si",
+      "title": "International System of Units (SI)",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "science-history",
+        "measurement-units"
+      ],
+      "tier": "student",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "iron-and-steel-alloys",
+      "title": "Iron (Fe) and steel alloys",
+      "aliases": [
+        "Fe (atomic number 26)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "metals-alloys"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "lifepo4-vs-nmc",
       "title": "LiFePO4 (LFP) vs NMC lithium-ion",
       "aliases": [],
@@ -96,6 +352,22 @@
       "category_path": [
         "chemistry",
         "battery-chemistry"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "lithium-element",
+      "title": "Lithium (Li, element 3)",
+      "aliases": [
+        "Li (atomic number 3)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
       ],
       "tier": "student",
       "pack": "chemistry",
@@ -113,6 +385,92 @@
       ],
       "tier": "everyday",
       "pack": "energy",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "usgs-m64-mauritius-reunion-2026-11-24",
+      "title": "M 6.4 earthquake in Mauritius-Reunion region (Nov 24, 2026)",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "geology-minerals"
+      ],
+      "tier": "everyday",
+      "pack": "now",
+      "status": "draft",
+      "current": true,
+      "now_until": "2027-02-22"
+    },
+    {
+      "id": "nasa-earth-and-nlcd-land-cover",
+      "title": "NASA Earth observations and USGS Land Cover (NLCD)",
+      "aliases": [],
+      "kind": "dataset",
+      "category_path": [
+        "earth",
+        "land-cover"
+      ],
+      "tier": "student",
+      "pack": "earth",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "severe-weather-hazard-safety",
+      "title": "National Weather Service hazard safety",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "preparedness",
+        "storms-hazards"
+      ],
+      "tier": "everyday",
+      "pack": "preparedness",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "noaa-global-climate-monitoring",
+      "title": "NOAA NCEI global climate monitoring",
+      "aliases": [],
+      "kind": "dataset",
+      "category_path": [
+        "earth",
+        "climate-weather"
+      ],
+      "tier": "student",
+      "pack": "earth",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "noaa-october-2026-global-climate",
+      "title": "October 2026 global surface and ocean temperature record",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "climate-weather"
+      ],
+      "tier": "everyday",
+      "pack": "now",
+      "status": "draft",
+      "current": true,
+      "now_until": "2027-02-10"
+    },
+    {
+      "id": "currency-conversion",
+      "title": "Official currency reference exchange rates",
+      "aliases": [],
+      "kind": "dataset",
+      "category_path": [
+        "economics",
+        "currencies"
+      ],
+      "tier": "student",
+      "pack": "economics",
       "status": "draft",
       "current": false
     },
@@ -141,6 +499,146 @@
       ],
       "tier": "everyday",
       "pack": "energy",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "power-outage-generator-safety",
+      "title": "Power outage and portable generator safety",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "preparedness",
+        "power-outages"
+      ],
+      "tier": "everyday",
+      "pack": "preparedness",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "public-health-records-gho-nchs",
+      "title": "Public health statistics (WHO GHO and CDC FastStats)",
+      "aliases": [],
+      "kind": "dataset",
+      "category_path": [
+        "health",
+        "public-health-records"
+      ],
+      "tier": "student",
+      "pack": "health",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "safe-home-food-freezing",
+      "title": "Safe food freezing and cold storage temperatures",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "food",
+        "storage-preserving"
+      ],
+      "tier": "everyday",
+      "pack": "food",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "silica-and-quartz-glass",
+      "title": "Silica, glassmaking sand, and high-purity quartz",
+      "aliases": [],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "glass-ceramics"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "solar-resource-by-region",
+      "title": "Solar resource by region",
+      "aliases": [],
+      "kind": "dataset",
+      "category_path": [
+        "energy",
+        "solar"
+      ],
+      "tier": "student",
+      "pack": "energy",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "transistor-effect-nobel-1956",
+      "title": "Transistor effect discovery (1956 Nobel Prize)",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "inventions"
+      ],
+      "tier": "student",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "us-census-and-building-permits",
+      "title": "U.S. Census population and Building Permits Survey",
+      "aliases": [],
+      "kind": "dataset",
+      "category_path": [
+        "civic",
+        "census-population"
+      ],
+      "tier": "student",
+      "pack": "civic",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "us-supreme-court-judicial-review",
+      "title": "U.S. Supreme Court and constitutional review",
+      "aliases": [],
+      "kind": "topic",
+      "category_path": [
+        "civic",
+        "laws-courts"
+      ],
+      "tier": "student",
+      "pack": "civic",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "usaspending-federal-budget",
+      "title": "USAspending.gov federal budget and award data",
+      "aliases": [],
+      "kind": "dataset",
+      "category_path": [
+        "civic",
+        "public-budgets"
+      ],
+      "tier": "student",
+      "pack": "civic",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "usda-fooddata-central",
+      "title": "USDA FoodData Central nutrition database",
+      "aliases": [],
+      "kind": "dataset",
+      "category_path": [
+        "food",
+        "nutrition-facts"
+      ],
+      "tier": "student",
+      "pack": "food",
       "status": "draft",
       "current": false
     }

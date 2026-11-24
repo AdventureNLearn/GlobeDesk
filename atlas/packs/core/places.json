@@ -3,10 +3,18 @@
   "generated": "2026-11-24",
   "places": [
     {
+      "key": "FR",
+      "precision": "country",
+      "entries": [
+        "international-system-of-units-si"
+      ]
+    },
+    {
       "key": "GB",
       "precision": "country",
       "entries": [
-        "bag-solar-kit-prices"
+        "bag-solar-kit-prices",
+        "early-electronic-computing-timeline"
       ]
     },
     {
@@ -20,15 +28,54 @@
       "key": "IT",
       "precision": "country",
       "entries": [
-        "bag-solar-kit-prices"
+        "bag-solar-kit-prices",
+        "galileo-telescopic-observations-1609"
+      ]
+    },
+    {
+      "key": "MU",
+      "precision": "site",
+      "entries": [
+        "usgs-m64-mauritius-reunion-2026-11-24"
       ]
     },
     {
       "key": "US",
       "precision": "country",
       "entries": [
+        "usda-plant-hardiness-zones",
         "bag-solar-kit-prices",
-        "lithium-batteries-air-travel"
+        "basic-disaster-supply-kit",
+        "bicycle-road-safety-equipment",
+        "us-constitutional-branches",
+        "ghs-hazard-communication",
+        "commodity-plastics-resins",
+        "early-electronic-computing-timeline",
+        "emergency-shelter-and-room-sealing",
+        "water-filter-kit",
+        "family-emergency-communications-plan",
+        "us-federal-register-and-foia",
+        "first-aid-and-emergency-911",
+        "hand-and-power-tools-safety",
+        "lithium-batteries-air-travel",
+        "nasa-earth-and-nlcd-land-cover",
+        "severe-weather-hazard-safety",
+        "currency-conversion",
+        "power-outage-generator-safety",
+        "public-health-records-gho-nchs",
+        "safe-home-food-freezing",
+        "transistor-effect-nobel-1956",
+        "us-census-and-building-permits",
+        "us-supreme-court-judicial-review",
+        "usaspending-federal-budget",
+        "usda-fooddata-central"
+      ]
+    },
+    {
+      "key": "US-CA",
+      "precision": "subdivision",
+      "entries": [
+        "earthquakes-and-plate-faults"
       ]
     },
     {
@@ -40,12 +87,19 @@
     }
   ],
   "no_place": [
-    "currency-conversion",
-    "lithium-element",
-    "solar-resource-by-region",
-    "water-filter-kit",
     "bag-solar-kit",
+    "copper-element",
+    "dna-and-human-genome-basics",
+    "earth-ocean-water-volume",
+    "faostat-global-food-supply",
+    "human-anatomy-organ-systems",
+    "iron-and-steel-alloys",
     "lifepo4-vs-nmc",
-    "portable-solar-power"
+    "lithium-element",
+    "noaa-global-climate-monitoring",
+    "noaa-october-2026-global-climate",
+    "portable-solar-power",
+    "silica-and-quartz-glass",
+    "solar-resource-by-region"
   ]
 }
