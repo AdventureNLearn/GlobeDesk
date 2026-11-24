@@ -4,7 +4,7 @@ import { mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { validateSchema } from "./jsonschema-lite.mjs";
-import { validateAtlas, entryRules, packRules, sourceRules } from "../tools/atlas/validate.mjs";
+import { validateAtlas, entryRules, packRules, sourceRules, validateRecordFile } from "../tools/atlas/validate.mjs";
 import { J, JR, allEntries, fileInfo, packSha, MAX_BYTES } from "../tools/atlas/lib.mjs";
 
 let n = 0;
@@ -18,6 +18,8 @@ const fix = (over) => ({ ...structuredClone(base), ...over });
 const bad = (e) => errs(validateSchema(schema, e)).length + entryRules(e, ctx).length > 0;
 
 t("whole atlas validates (schemas, links, sources, manifests, sizes, hygiene)", () => assert.deepEqual(validateAtlas(), []));
+t("bag-solar-kit object record validates as a stand-alone file", () => assert.deepEqual(validateRecordFile("data/atlas/objects/bag-solar-kit.json"), []));
+
 t("12 categories, each with 3-6 subcategories; category 8 and 12 as approved", () => {
   assert.equal(cats.length, 12);
   assert.equal(cats[7].title, "Health, anatomy and first aid"); assert.match(cats[7].scope, /No personal treatment advice/);

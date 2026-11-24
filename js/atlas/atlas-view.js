@@ -117,9 +117,11 @@
     if (kit && e.kind === "object") {
       h += '<h4>Sizes</h4><div class="seg small" role="group" aria-label="Kit size">' + kit.options.map((o) => '<button type="button" data-at-option="' + esc(o.id) + '" aria-pressed="' + (st.option === o.id) + '">' + esc(o.id + " · " + o.name) + "</button>").join("") + "</div>";
       const o = kit.options.find((x) => x.id === st.option) || kit.options[0];
+      const derived = (o.derived && typeof o.derived === "object") ? o.derived : {};
+      const facts = (kit.facts && typeof kit.facts === "object") ? kit.facts : {};
       h += '<table class="at-table small"><tr><th>Config</th><td>' + esc(o.config) + "</td></tr><tr><th>Energy</th><td>" + esc(o.wh) + " Wh</td></tr><tr><th>Air travel (US)</th><td>" + esc(o.air_rule) + "</td></tr>" +
-        Object.keys(o.derived).map((k) => "<tr><th>" + esc(k.replace(/_/g, " ")) + "</th><td>" + esc(o.derived[k]) + "</td></tr>").join("") + "</table>";
-      h += "<h4>Key facts</h4><table class=\"at-table small\">" + Object.keys(kit.facts).map((k) => "<tr><th>" + esc(k) + "</th><td>" + esc(kit.facts[k]) + "</td></tr>").join("") + "</table>";
+        Object.keys(derived).map((k) => "<tr><th>" + esc(k.replace(/_/g, " ")) + "</th><td>" + esc(derived[k]) + "</td></tr>").join("") + "</table>";
+      if (Object.keys(facts).length) h += "<h4>Key facts</h4><table class=\"at-table small\">" + Object.keys(facts).map((k) => "<tr><th>" + esc(k) + "</th><td>" + esc(facts[k]) + "</td></tr>").join("") + "</table>";
       h += "<h4>Safety rules in the record</h4><ul class=\"small\">" + kit.safety.map((s) => "<li><b>" + esc(s.topic) + ":</b> " + esc(s.rule) + "</li>").join("") + "</ul>";
       h += '<p class="muted small">Draft: not built or tested. Model is an artistic layout from the parametric record, not a build drawing.</p>';
     }
@@ -318,8 +320,10 @@
     const kit = kitRecord(e);
     if (!e || !kit || e.kind !== "object" || !GD.atlas3d) { box.classList.add("stub"); box.textContent = "No 3D model for this entry " + UNKNOWN + "."; return; }
     const opt = kit.options.find((o) => o.id === st.option) || kit.options[0];
-    const parallel = parseInt((/4S(\d)P/.exec(opt.config) || [])[1] || "1", 10);
-    GD.atlas3d.show(box, "bag-solar-kit", parallel).then((r) => { if (note) note.textContent = r.ok ? "Artistic layout from the parametric record (mm), size " + opt.id + ". Drag to turn. Not a build drawing." : "3D view unavailable here: " + r.reason; });
+    const gen = kit.model && kit.model.generator;
+    const modelId = ((gen && /(?:^|\/)([a-z0-9-]+)\.js$/.exec(gen)) || [])[1] || kit.id;
+    const parallel = parseInt((/(\d+)P/.exec(opt.config || "") || [])[1] || "1", 10);
+    GD.atlas3d.show(box, modelId, parallel).then((r) => { if (note) note.textContent = r.ok ? "Artistic layout from the parametric record (mm), size " + opt.id + ". Drag to turn. Not a build drawing." : "3D view unavailable here: " + r.reason; });
   }
 
   // ---------- open / close ----------

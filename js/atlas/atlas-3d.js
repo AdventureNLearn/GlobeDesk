@@ -36,7 +36,7 @@
     const scene = new THREE.Scene();
     const group = new THREE.Group();
     const cellMat = new THREE.MeshStandardMaterial({ color: 0x5ee7ff, metalness: 0.2, roughness: 0.5 });
-    L.cells.forEach((c) => {
+    (L.cells || []).forEach((c) => {
       const g = new THREE.CylinderGeometry(c.d / 2, c.d / 2, c.h, 24);
       const m = new THREE.Mesh(g, cellMat);
       m.position.set(c.x - L.inner.w / 2, c.h / 2 + 4, c.y - L.inner.d / 2);
@@ -91,7 +91,7 @@
       };
       tick();
       el.setAttribute("data-3d", "ok");
-      return { ok: true, cells: L.cells.length };
+      return { ok: true, cells: (L.cells || []).length };
     }).catch((err) => {
       el.classList.add("stub");
       el.setAttribute("data-3d", "stub");

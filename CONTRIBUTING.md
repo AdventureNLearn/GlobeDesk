@@ -11,8 +11,13 @@ By taking part you agree to the [Code of Conduct](CODE_OF_CONDUCT.md). Want to t
 - **Fixes.** Bugs, accessibility, performance, layout on small screens.
 - **Translations.** UI strings and docs. Keep source citations in their original language and add a translated summary.
 - **Docs.** Clearer guides, examples, and corrections.
+- **Atlas 3D objects.** A buildable object or kit layer copied from the bag solar kit sample. See [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md).
 
 Not a fit: tracking or locating private people, scraped data that breaks a site's terms, paid or restricted datasets, ads or telemetry, or anything that needs a GlobeDesk server or account.
+
+## Build your own object
+
+The release ships the 3D workshop and the bag solar kit as a demo sample. To add a buildable object or kit layer of your own, copy that sample, rebuild, validate and load it in Atlas. The steps and every schema field are in [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md). You do not need to do a real kit build or fill in prices.
 
 ## Source and citation rules
 
