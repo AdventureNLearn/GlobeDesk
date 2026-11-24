@@ -113,13 +113,13 @@ try {
   // Atlas: open, A-Z, category tree, by place markers, by year zoom, This week, tier switch, tabs.
   await q(`document.getElementById("btnAtlas").click()`);
   out.az = await q(`({ open: !document.getElementById("atlasView").hidden, rows: document.querySelectorAll("#atBrowse .at-row").length, letters: document.querySelectorAll(".at-jump button").length })`);
-  if (!out.az.open || out.az.rows !== 52) throw new Error("A-Z: " + JSON.stringify(out.az));
+  if (!out.az.open || out.az.rows !== 87) throw new Error("A-Z: " + JSON.stringify(out.az));
   await q(`document.querySelector('[data-at-view="cats"]').click()`);
   out.cats = await q(`({ cats: document.querySelectorAll(".at-cat").length, greyed: document.querySelectorAll(".at-cat.not-installed").length })`);
   if (out.cats.cats !== 12 || out.cats.greyed !== 7) throw new Error("categories: " + JSON.stringify(out.cats));
   await q(`document.querySelector('[data-at-view="place"]').click()`);
   out.place = await q(`({ places: document.querySelectorAll(".at-place").length, markers: document.querySelectorAll(".atlas-count").length })`);
-  if (out.place.places !== 4 || out.place.markers !== 4) throw new Error("by place: " + JSON.stringify(out.place));
+  if (out.place.places !== 12 || out.place.markers !== 4) throw new Error("by place: " + JSON.stringify(out.place));
   await q(`document.querySelector('[data-at-view="year"]').click()`);
   await q(`document.querySelector('[data-at-zoom="months"]').click()`);
   out.months = await q(`document.querySelectorAll("[data-at-bucket]").length`);
@@ -129,7 +129,7 @@ try {
   if (!/ISO week/.test(out.week)) throw new Error("this week: " + out.week);
   await q(`(() => { const s = document.getElementById("atTier"); s.value = "kids"; s.dispatchEvent(new Event("change")); document.querySelector('[data-at-view="az"]').click(); })()`);
   out.kids = await q(`document.querySelectorAll("#atBrowse .at-row").length`);
-  if (out.kids !== 42) throw new Error("kids tier rows: " + out.kids);
+  if (out.kids !== 77) throw new Error("kids tier rows: " + out.kids);
   await q(`(() => { const s = document.getElementById("atTier"); s.value = "all"; s.dispatchEvent(new Event("change")); GD.atlas.select("bag-solar-kit"); })()`);
   const tabs = {};
   for (const tab of ["object", "parts", "chemistry", "sources"]) {
@@ -139,10 +139,10 @@ try {
   if (!/Carry-on day kit|S · /.test(tabs.object) || !/\[UNKNOWN\]/.test(tabs.parts) || !/LFP/.test(tabs.chemistry) || !/Official sources/.test(tabs.sources) || !/Community lane is off/.test(tabs.sources)) throw new Error("tabs: " + JSON.stringify(Object.keys(tabs).map((k) => [k, tabs[k].slice(0, 120)])));
   out.official = /FAA PackSafe/.test(tabs.sources);
 
-  // History pack: 41 entries (1775 prologue, 1776-2026); by-year slider spans the history range to 2026. Bells link by id.
+  // History pack: 76 entries (1775 prologue, 1776-2026); by-year slider spans the history range to 2026. Bells link by id.
   await q(`(() => { GD.atlas.st.category = "history-places"; GD.atlas.st.view = "year"; GD.atlas.st.zoom = "years"; GD.atlas.st.year = null; GD.atlas.render(); })()`);
   out.history = await q(`(() => { const y = document.getElementById("atYear"); const t = document.getElementById("atBrowse").innerText; return { min: +y.min, max: +y.max, rows: document.querySelectorAll("#atBrowse .at-years li").length, has1776: /1776/.test(t), has2026: /2026/.test(t), pack: GD.atlasData.manifests["history-places"] && GD.atlasData.manifests["history-places"].entry_count }; })()`);
-  if (out.history.pack !== 41 || out.history.max !== 2026 || out.history.min > 1776 || !out.history.has1776 || !out.history.has2026 || out.history.rows < 40) throw new Error("history by year: " + JSON.stringify(out.history));
+  if (out.history.pack !== 76 || out.history.max !== 2026 || out.history.min > 1776 || !out.history.has1776 || !out.history.has2026 || out.history.rows < 75) throw new Error("history by year: " + JSON.stringify(out.history));
   await q(`(() => { const s = document.getElementById("atYear"); s.value = "1776"; s.dispatchEvent(new Event("change")); })()`);
   out.y1776 = await q(`(document.getElementById("atBrowse").innerText.match(/Declaration of Independence/g) || []).length`);
   if (out.y1776 < 1) throw new Error("1776 slider: " + out.y1776);

@@ -21,7 +21,7 @@ t("A-Z lists every title and alias, sorted, with jump letters; placeholders sort
   const rows = M.azRows(D, {});
   assert.equal(rows.filter((r) => !r.alias).length, D.entries.length);
   assert.ok(rows.some((r) => r.alias && r.id === "bag-solar-kit"));
-  assert.deepEqual(M.letters(rows), ["#", "A", "B", "C", "D", "E", "F", "G", "H", "L", "M", "P", "S", "T", "U", "W"]);
+  assert.deepEqual(M.letters(rows), ["#", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "L", "M", "N", "P", "R", "S", "T", "U", "V", "W"]);
 });
 t("search, category and tier filters", () => {
   assert.deepEqual(M.azRows(D, { q: "zzqx nothing" }).map((r) => r.id), []);

@@ -73,6 +73,62 @@
       "current": false
     },
     {
+      "id": "fourteenth-amendment-1868",
+      "title": "14th Amendment ratified",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "fifteenth-amendment-1870",
+      "title": "15th Amendment ratified",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "sixteenth-amendment-1913",
+      "title": "16th Amendment: federal income tax",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "seventeenth-amendment-1913",
+      "title": "17th Amendment: voters elect senators",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "nineteenth-amendment-1920",
       "title": "19th Amendment certified",
       "aliases": [],
@@ -143,6 +199,34 @@
       "current": false
     },
     {
+      "id": "armistice-1918",
+      "title": "Armistice ends the fighting of World War I",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "hiroshima-nagasaki-1945",
+      "title": "Atomic bombs on Hiroshima and Nagasaki",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "pearl-harbor-1941",
       "title": "Attack on Pearl Harbor",
       "aliases": [],
@@ -201,6 +285,20 @@
       "current": false
     },
     {
+      "id": "berlin-airlift-1948",
+      "title": "Berlin Airlift",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "bill-of-rights-1791",
       "title": "Bill of Rights ratified",
       "aliases": [],
@@ -215,8 +313,50 @@
       "current": false
     },
     {
+      "id": "brooklyn-bridge-1883",
+      "title": "Brooklyn Bridge opens",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "routes"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "brown-v-board-1954",
       "title": "Brown v. Board of Education",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "panama-canal-1903",
+      "title": "Building the Panama Canal",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "routes"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "centennial-exposition-1876",
+      "title": "Centennial Exposition and the 100th birthday",
       "aliases": [],
       "kind": "event",
       "category_path": [
@@ -257,6 +397,20 @@
       "current": false
     },
     {
+      "id": "end-of-reconstruction-1877",
+      "title": "Compromise of 1877 ends Reconstruction",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "constitution-signed-1787",
       "title": "Constitution signed",
       "aliases": [],
@@ -285,8 +439,50 @@
       "current": false
     },
     {
+      "id": "cuban-missile-crisis-1962",
+      "title": "Cuban Missile Crisis",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "d-day-1944",
+      "title": "D-Day: the Normandy landings",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "declaration-of-independence-1776",
       "title": "Declaration of Independence",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "edison-light-1879",
+      "title": "Edison's long-lasting light bulb",
       "aliases": [],
       "kind": "event",
       "category_path": [
@@ -355,6 +551,48 @@
       "current": false
     },
     {
+      "id": "executive-order-9066-1942",
+      "title": "Executive Order 9066",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "fall-of-saigon-1975",
+      "title": "Fall of Saigon",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "arpanet-1969",
+      "title": "First ARPANET message",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "first-flight-1903",
       "title": "First powered flight",
       "aliases": [],
@@ -385,6 +623,20 @@
     {
       "id": "seneca-falls-1848",
       "title": "First Women's Rights Convention",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "model-t-1908",
+      "title": "Ford Model T and the moving assembly line",
       "aliases": [],
       "kind": "event",
       "category_path": [
@@ -439,8 +691,50 @@
       "current": false
     },
     {
+      "id": "gulf-of-tonkin-1964",
+      "title": "Gulf of Tonkin Resolution",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "hoover-dam-1935",
       "title": "Hoover Dam dedicated",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "indian-citizenship-act-1924",
+      "title": "Indian Citizenship Act",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "japan-surrender-1945",
+      "title": "Japan surrenders: the end of World War II",
       "aliases": [],
       "kind": "event",
       "category_path": [
@@ -537,6 +831,20 @@
       "current": false
     },
     {
+      "id": "nsfnet-public-internet-1986",
+      "title": "NSFNET and the public internet",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "phosphate-cathode-discovery",
       "title": "Phosphate found as a lithium battery cathode (1996)",
       "aliases": [],
@@ -551,6 +859,20 @@
       "current": false
     },
     {
+      "id": "plessy-v-ferguson-1896",
+      "title": "Plessy v. Ferguson",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "portable-solar-power",
       "title": "Portable solar power",
       "aliases": [],
@@ -561,6 +883,34 @@
       ],
       "tier": "everyday",
       "pack": "energy",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "standard-time-1883",
+      "title": "Railroads adopt standard time",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "routes"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "san-francisco-earthquake-1906",
+      "title": "San Francisco earthquake and fire",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
       "status": "draft",
       "current": false
     },
@@ -581,6 +931,20 @@
     {
       "id": "social-security-act-1935",
       "title": "Social Security Act",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "spanish-american-war-1898",
+      "title": "Spanish-American War",
       "aliases": [],
       "kind": "event",
       "category_path": [
@@ -663,6 +1027,48 @@
       "current": false
     },
     {
+      "id": "berlin-wall-falls-1989",
+      "title": "The Berlin Wall falls",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "naacp-founding-1909",
+      "title": "The Call and the founding of the NAACP",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "soviet-union-dissolves-1991",
+      "title": "The Soviet Union dissolves",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "golden-spike-1869",
       "title": "Transcontinental railroad completed",
       "aliases": [],
@@ -670,6 +1076,20 @@
       "category_path": [
         "history-places",
         "routes"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "guadalupe-hidalgo-1848",
+      "title": "Treaty of Guadalupe Hidalgo",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
       ],
       "tier": "student",
       "pack": "history-places",
@@ -705,8 +1125,78 @@
       "current": false
     },
     {
+      "id": "us-enters-world-war-i-1917",
+      "title": "United States enters World War I",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "v-e-day-1945",
+      "title": "V-E Day: Germany surrenders",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "vietnam-veterans-memorial-1982",
+      "title": "Vietnam Veterans Memorial dedicated",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "voting-rights-act-1965",
+      "title": "Voting Rights Act",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "fort-clatsop-1805",
       "title": "Winter at Fort Clatsop",
+      "aliases": [],
+      "kind": "event",
+      "category_path": [
+        "history-places",
+        "events-eras"
+      ],
+      "tier": "student",
+      "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "wounded-knee-1890",
+      "title": "Wounded Knee Massacre",
       "aliases": [],
       "kind": "event",
       "category_path": [
