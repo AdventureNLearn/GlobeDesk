@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",
@@ -11,28 +11,28 @@
   "files": [
     {
       "path": ".github/ISSUE_TEMPLATE/bug_report.md",
-      "size": 505,
-      "sha256": "d484fb97da86f703b8f9fc041f1f3e1af34d980accfbcf077f451f5c0ce3d381"
+      "size": 593,
+      "sha256": "1df0d34ad8a1c457cd14acdd2b2ecc63be3256febbea506ae7a4d924b9c4261c"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/feature_request.md",
-      "size": 412,
-      "sha256": "83bd724da5fb7920c62ed673be0e6716b249fd2968e2da9f31f749a518ecd33d"
+      "size": 563,
+      "sha256": "a7335d2a34bde5cbabc3c5177d6efb7c4eef3300206c05b2da6fe2c067de1c53"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/layer_data_proposal.md",
-      "size": 948,
-      "sha256": "f5cb5cd88d54da5a8669a52becd2ec57c60cb00d969e9cdbadb9d429bd98300b"
+      "size": 1604,
+      "sha256": "57953c10cf01100792bdb73b0c02073ef45fea51844874957220c645a45afb72"
     },
     {
       "path": ".github/PULL_REQUEST_TEMPLATE.md",
-      "size": 1570,
-      "sha256": "dd7c364b5970b1a65f557b81f83e95df49a53c6e79217cec3cd03c16b4ef1dc1"
+      "size": 1952,
+      "sha256": "85c0a746460851b0858e442316f674ba7cd12d69d232b25f9a62141bba33532e"
     },
     {
       "path": "CHANGELOG.md",
-      "size": 32218,
-      "sha256": "980c807c6042530b975be91c05b374a7808a47aa54245eff55975fe3d8258fa9"
+      "size": 32782,
+      "sha256": "1894ca7956ef98f4063afea98b4098f87d5d18c1d56b5bea58f78cc7373700de"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -41,8 +41,8 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "size": 8875,
-      "sha256": "802871725b2fa7e76fc78d1b4aec3c874e50e419e591b6e9ae406edd02d4d0b3"
+      "size": 12335,
+      "sha256": "be6f7b9fe86b668e1764bcefa39bbb1249612ca3657fbaf6896ebb1025947982"
     },
     {
       "path": "CREDITS.md",
@@ -56,8 +56,8 @@
     },
     {
       "path": "GROK-ME-BUILD.md",
-      "size": 6529,
-      "sha256": "457763103d193a7c5fad44dfa5fc623f7dfb1687debae99806a62d23f7eac047"
+      "size": 7241,
+      "sha256": "9890e286b34424041036260e879dd2f25cc896098156b9322aa95da25e7a2874"
     },
     {
       "path": "LICENSE",
@@ -71,28 +71,28 @@
     },
     {
       "path": "README.md",
-      "size": 15655,
-      "sha256": "26805f186140e4e8afb9bc4840552ebb6e2a15580e6e777d74bc4eaa8e2aa7c7"
+      "size": 17931,
+      "sha256": "54d3d0c7aa7aa8f6adbd76f9843328ab3e45fed908fc21fd8ffea8773439c34e"
     },
     {
       "path": "SECURITY.md",
-      "size": 1165,
-      "sha256": "e971aef1447b5146ba5745b0f03da9c0d909f81fe2f0f95dbfcd06ee48d2182a"
+      "size": 1244,
+      "sha256": "f6b45b2713255c76d8393c78a45e44f17dd36b1c540c847ca69757235a5c161d"
     },
     {
       "path": "USER-GUIDE.md",
-      "size": 8397,
-      "sha256": "83b9e9944a8b2ce7b82a852847dddc53d4e26997366a05df3c7dd0a6fa15cb23"
+      "size": 10202,
+      "sha256": "0459d0d0ebb934c1a2674dc0d628a9f1354236b6bacee7cf72a51026fdc48cef"
     },
     {
       "path": "WINDOWS-RUN.md",
       "size": 4435,
-      "sha256": "3ceb4b41b997d209055d923c82d1b08bc86fcd42c7ecae8cedcb8eb1efd9e46e"
+      "sha256": "e995d6c1b8acfb63205c9399850de0f85002ba0468e95c1e2a2d09ed2331b5d2"
     },
     {
       "path": "atlas/README.md",
-      "size": 2769,
-      "sha256": "7764693929a96f4fe3fe93123a004ee8e297c183407b2c11767780d741d611cd"
+      "size": 4470,
+      "sha256": "9e698eabec4530b8e1aad7157fc61fdd80521525fbb41f1b454ddeb6d88df0b9"
     },
     {
       "path": "atlas/categories.json",
@@ -106,23 +106,33 @@
     },
     {
       "path": "atlas/packs/bells/entries.json",
-      "size": 139519,
-      "sha256": "25ac6d7ebcdae281af4be93fb2d69dd07e4902bae623e16e073ce1dac7611f40"
+      "size": 140068,
+      "sha256": "d34e49fa1edd648263d2c3ad43d67addc20f7ed8854345d9c0aba8760ff4103b"
     },
     {
       "path": "atlas/packs/bells/manifest.json",
       "size": 639,
-      "sha256": "7d234913a863fa0a92b166c1c31227075cd21d3129fc42778492a8efd9c8e52b"
+      "sha256": "7b3f9ade20100c76e77ded46a9af8ec449928626057b7dfdf966a82910d097c3"
     },
     {
       "path": "atlas/packs/chemistry/entries.json",
-      "size": 3503,
-      "sha256": "bd4428559270ff5acb06d272838156aeee64a9fc1cefc4199a062bac6e34b07e"
+      "size": 9608,
+      "sha256": "43c297d62fccf694bc12e0dcdf2bec88301acd6ab860721b09b233dfdcd6c765"
     },
     {
       "path": "atlas/packs/chemistry/manifest.json",
       "size": 635,
-      "sha256": "d3c2b8d443ab8ee97b6bd73b5452b107917422bef00c8404249d4b0c1560ed3f"
+      "sha256": "06c174932b77cca32ce9aa666cd7e604d16e2e1aa3c37158738e10b57c608e34"
+    },
+    {
+      "path": "atlas/packs/civic/entries.json",
+      "size": 5501,
+      "sha256": "3f9034cf581ff4fb22c103449208fc53707a8592fcb21539007d90dd88002360"
+    },
+    {
+      "path": "atlas/packs/civic/manifest.json",
+      "size": 628,
+      "sha256": "63db8a73c55fae326b9ceb6ba5943c347216859cb75ed380b6ca737cc2f812b2"
     },
     {
       "path": "atlas/packs/core/categories.json",
@@ -131,58 +141,128 @@
     },
     {
       "path": "atlas/packs/core/index.json",
-      "size": 22166,
-      "sha256": "2aba9c01b151130de4c72c6e6f5afec953e07bdbefafcae47c5869849c9592c4"
+      "size": 58911,
+      "sha256": "fc99a90322cec618f2115d7c8edce8c6fcd9b9c7f897171abcfaa37e7e55df8d"
     },
     {
       "path": "atlas/packs/core/manifest.json",
-      "size": 1214,
-      "sha256": "d06667a9eda6f570b2df811071fa0044b90fa9a8c9ebe1e336fd358b40a2c786"
+      "size": 1218,
+      "sha256": "a0cb2928579d36fa5da48f776e3a3aa71b2bbd52e96f423e6ada0576a453b1ad"
     },
     {
       "path": "atlas/packs/core/places.json",
-      "size": 4215,
-      "sha256": "710f1671f8f69a6e74f57199031b94af93350528bf0482f699d0197e8b6f8df8"
+      "size": 10578,
+      "sha256": "026ed2320e0c0420664e7fed408df88dca1d70c972366a78faa4883c988055ec"
     },
     {
       "path": "atlas/packs/core/sources.json",
-      "size": 44185,
-      "sha256": "d602293a7397ca955c6e00fcfd23f990419001564fc047920dba7ecd8338c8cc"
+      "size": 146845,
+      "sha256": "210425e88c9b64d1c85d8f628d6c8fe3483346fe1bfeed24709b2b09fdd7f5eb"
     },
     {
       "path": "atlas/packs/core/years.json",
-      "size": 20006,
-      "sha256": "f2306a14aea0c7dc4b47299718d55c194939a0901ce42b7149e47321b63fd437"
+      "size": 38116,
+      "sha256": "c177cfc29fac2ffe279d2d63650af152b7ab828f172ccd48cda7af3227646279"
+    },
+    {
+      "path": "atlas/packs/earth/entries.json",
+      "size": 4246,
+      "sha256": "317365bccc59c0c038ec8277dfacb76ff799c40568af7b911be613650f7dcda4"
+    },
+    {
+      "path": "atlas/packs/earth/manifest.json",
+      "size": 625,
+      "sha256": "04100cd38a99f62cbf527c18d87b1e0fcf2d1692a776c0d50acacd2faeed7a73"
     },
     {
       "path": "atlas/packs/economics/entries.json",
-      "size": 1791,
-      "sha256": "38e0ae47dbf60b195fd18f4adcdf038bf1528e78c87f1ce1527bc6b6b5dc0d55"
+      "size": 3140,
+      "sha256": "e6f90a52a066dc4889c72fe683eabc2f69ac5ead6a72cc4cb5b2d60298a63422"
     },
     {
       "path": "atlas/packs/economics/manifest.json",
       "size": 632,
-      "sha256": "aaaa2146d62c19c95be2c4f335ca0ec7b6e24b00147e66ecef5d1518afcee2bb"
+      "sha256": "d81f1eed4c16130c5f00e1c89a83527665ad713b784a284af3b73f6c94a21638"
     },
     {
       "path": "atlas/packs/energy/entries.json",
-      "size": 2299,
-      "sha256": "df5c2bc69fe549dc14ad602a2c853d290677eb8bd56fe2c6ee1bfd1246555fb2"
+      "size": 3493,
+      "sha256": "3227542bece181078d589818f2458fbeedbb278016dbbc878fb2d96c90adb1a4"
     },
     {
       "path": "atlas/packs/energy/manifest.json",
       "size": 622,
-      "sha256": "8a7315694cad839260b68c04c2afb7ff1fd588da1ca94274c227ee86efca060a"
+      "sha256": "79ed5ea37c46cb90baccd10ac1a4aa5f4cf17b3601a63e99e1e27ae5ebc216ae"
+    },
+    {
+      "path": "atlas/packs/food/entries.json",
+      "size": 4120,
+      "sha256": "d452f119d77b078dabbf24c6999c26cd1b71035db9b1305d79a38c6761a6e43b"
+    },
+    {
+      "path": "atlas/packs/food/manifest.json",
+      "size": 618,
+      "sha256": "c4f1590135dbbbffd2334e345cf60f4d429e38863d88dc22c49b159a7d63ab1c"
+    },
+    {
+      "path": "atlas/packs/health/entries.json",
+      "size": 4014,
+      "sha256": "af99f9693eecf0925c3306eafbaaadcc4eb02c268612cf6103ced074ed7e184f"
+    },
+    {
+      "path": "atlas/packs/health/manifest.json",
+      "size": 635,
+      "sha256": "cdb6a8f38c7c3365d571a7b4af3cf08d810bb2a2da322a7afb73458d864d59a5"
+    },
+    {
+      "path": "atlas/packs/history-places/entries.json",
+      "size": 124432,
+      "sha256": "22d965f3f386724fcb21eed76f948ee27996427de173f344a075201e0a68149d"
+    },
+    {
+      "path": "atlas/packs/history-places/manifest.json",
+      "size": 645,
+      "sha256": "cb50b678046a94c5e2624a4ebfc7de15382eb593a5580f6d29c1d0c352c23444"
+    },
+    {
+      "path": "atlas/packs/now/entries.json",
+      "size": 2562,
+      "sha256": "c6ff443ed98a1642c533cefe8491206bd21da68a5ed8bc4146f2e87c28104834"
+    },
+    {
+      "path": "atlas/packs/now/manifest.json",
+      "size": 600,
+      "sha256": "84c710bb85fc0750fcc193cdd809bd0b2800f1e8ac5e18ec20738f13280b5383"
     },
     {
       "path": "atlas/packs/objects/entries.json",
-      "size": 1613,
-      "sha256": "6c8507b8faba82ddfb05a16dcd3f8303a1dc73dafa0817adb79c2d1b64f36a71"
+      "size": 5987,
+      "sha256": "deb5e7c1f2a40b8b2d3965ed3bf9a1a46663a523e12b7f54f4f0c92a21268f12"
     },
     {
       "path": "atlas/packs/objects/manifest.json",
       "size": 629,
-      "sha256": "428ca5d4f99f3f132f412a1d1e485cc31ae7a6afb0cc0443a7befa98e633ded7"
+      "sha256": "66219b5771533d83a330c185eb2857f4f0382fc0809cda8aad714d6c92f85467"
+    },
+    {
+      "path": "atlas/packs/preparedness/entries.json",
+      "size": 4727,
+      "sha256": "bdcaeb5c0f453f76470815940a8eac193ecf1d7d59a3f49ce492502cb5e586c6"
+    },
+    {
+      "path": "atlas/packs/preparedness/manifest.json",
+      "size": 643,
+      "sha256": "aaf1438239c8ccd3ab687f28218919f272458f496ec4d7ca802ba9ed695168bb"
+    },
+    {
+      "path": "atlas/packs/science-history/entries.json",
+      "size": 4860,
+      "sha256": "cf83eb9d6cad13428f8b0239a2faaecef6151ba20a1f4b3188bb2facb9d8c831"
+    },
+    {
+      "path": "atlas/packs/science-history/manifest.json",
+      "size": 654,
+      "sha256": "93291a8b26df3c89c23c0162bc5c98d170902945d7602e8a587c7bf38ad8df45"
     },
     {
       "path": "atlas/views.json",
@@ -191,8 +271,18 @@
     },
     {
       "path": "css/app.css",
-      "size": 49702,
-      "sha256": "d32b88c3ae155952e4a247c6ec61931d4efdce871a259edd481c22203d692714"
+      "size": 52823,
+      "sha256": "7c290ec9487d3f8ede397f481ff80875f75e07a604e44af2309eda1244ebf5de"
+    },
+    {
+      "path": "data/atlas/artifacts/constitution-1787.json",
+      "size": 1446,
+      "sha256": "8ad10868cf63cca96fd40c5b53bdd709ef2a9ebf59b9f733110866cead6de1e9"
+    },
+    {
+      "path": "data/atlas/artifacts/telegraph-tape-1844.json",
+      "size": 1764,
+      "sha256": "8db0eee8a599ccb40b122a785bbb681f6feed12fef311858a4d3cb6055809d5e"
     },
     {
       "path": "data/atlas/bells/amedzofe-bell.json",
@@ -206,8 +296,8 @@
     },
     {
       "path": "data/atlas/bells/balangiga-bells.json",
-      "size": 2754,
-      "sha256": "53817fbd0e54dda80d330243f2dc201f24e5fc13f6ca7459fb30337ad9546323"
+      "size": 3318,
+      "sha256": "c200fb66bbef3866402badf4639abe7ae52dfed5361a3be7a0527b0c665e22f7"
     },
     {
       "path": "data/atlas/bells/bells-overview.json",
@@ -531,8 +621,18 @@
     },
     {
       "path": "desks/work-desks.json",
-      "size": 19296,
-      "sha256": "06dc2237385343a47bef36f7d650a239c05e0a87db1fabd0caf920032ab82d9b"
+      "size": 26616,
+      "sha256": "c6c53d2db18fb0b4cdab49a6e435142ef41ebe27ec4819a6181e372c7e580a70"
+    },
+    {
+      "path": "docs/BUILD-YOUR-OWN-OBJECT.md",
+      "size": 8599,
+      "sha256": "40173635e84b8a4a023db68f39da9ba874fe6dff50d16cbfcc3b1af79affbd92"
+    },
+    {
+      "path": "docs/FEATURES.md",
+      "size": 7141,
+      "sha256": "e6aeea234f7ea00ec1e4d8190ca4c1dc3d7f0ee4094d258e4ec5827228dd5bbd"
     },
     {
       "path": "docs/PROMOTE.md",
@@ -541,8 +641,18 @@
     },
     {
       "path": "docs/REFERENCE.md",
-      "size": 26091,
-      "sha256": "683a472622e60b885cdb32ff2141504e26f42e38cc38b8aea7d92474ad1b549d"
+      "size": 26312,
+      "sha256": "eedae8606004964470588bced6e77dccdaf8b1186c4344bbc7bbeef946fdf554"
+    },
+    {
+      "path": "docs/RELEASE-NOTES-v1.4.0.md",
+      "size": 4459,
+      "sha256": "5104f6ea8772d6968508fa1ff8db4d4ce25f2447f6ac201628d4a8d16d14a9e3"
+    },
+    {
+      "path": "docs/RELEASE-NOTES-v1.4.1.md",
+      "size": 3298,
+      "sha256": "26d765cdc56fbc491e206db5017d03acc9a77512a3458da88990e035d307aff8"
     },
     {
       "path": "docs/SHARE-PACK.md",
@@ -553,6 +663,11 @@
       "path": "docs/SIDECARS.md",
       "size": 13637,
       "sha256": "29c677be20043677015f4999b132e390b3bd20d108361353d2da22c900e6521c"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "size": 3573,
+      "sha256": "08dfbec9293278fb3e41d7b2b99581a67e387f169bd18c4fc1fad15bffe36528"
     },
     {
       "path": "docs/STORY-FORMAT.md",
@@ -591,28 +706,28 @@
     },
     {
       "path": "grokme/APP-BRIEF.txt",
-      "size": 1023,
-      "sha256": "e8e32ef90c0c145052d8a48013b5d1b399971074e95628c30d765fb1b917aa7b"
+      "size": 1296,
+      "sha256": "506ccb439dd3f7c01a68854658e47daf0d3575b7de08266fcefe0efb7eb9de94"
     },
     {
       "path": "grokme/BUILDER-PROMPT.txt",
-      "size": 3048,
-      "sha256": "abe9b31f83c5a07ec2ebda3fdfea55983f73c9be3f913b0c5d0db386859a306e"
+      "size": 3634,
+      "sha256": "46497d5bad50fbd97948241e62a560334fed72099c6b7318ad6c467d74f99338"
     },
     {
       "path": "grokme/FEATURES.txt",
-      "size": 1682,
-      "sha256": "86b58fc45057a77f5e9630712bfc4a2554cf72c4b55b18d9d39b65179a223e72"
+      "size": 2156,
+      "sha256": "6393da4e4a1644a42384ea6a2d1b81bc3ebf89502e91e58eeec186cfcfd3ee60"
     },
     {
       "path": "grokme/UPDATE-PROMPT.txt",
-      "size": 1273,
-      "sha256": "4a07d3361aae312ae57652f8335a7c029a3727af1632e6ddc61d9ddbddcf96cc"
+      "size": 2385,
+      "sha256": "f950d02625c55b3714916aa3fb17aa2a0ed2c22dc1de9fa55bb6efca7f0a5db6"
     },
     {
       "path": "index.html",
-      "size": 18368,
-      "sha256": "8c63139b9aa0fef318daefbcd09b90bc06c10b10025c9cdc5527ae59ee2f5838"
+      "size": 19830,
+      "sha256": "f4dd1919fff854344be0735bdf95924d8aa764a2c3a9bb0db7b068aa1bd823dc"
     },
     {
       "path": "js/archive.js",
@@ -626,13 +741,13 @@
     },
     {
       "path": "js/atlas/atlas-3d.js",
-      "size": 5769,
-      "sha256": "50d84f9bd3a66f37215f29989e5b132c1c5393c21ffe8f232c3524bba3bca5d2"
+      "size": 5777,
+      "sha256": "3b59a31a23735110918c7880e80c946b786bc5765314cd973b4948c14e397239"
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 336884,
-      "sha256": "8a3d0fc1df21b7ff3ccdb0fd67e81c2f1431e0f9b8414a46d32bc43fb24e8388"
+      "size": 628926,
+      "sha256": "366372d9d3c4b52dd50981b4c0f76feab936b5b0321d1058debdd18e2c063220"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -641,8 +756,8 @@
     },
     {
       "path": "js/atlas/atlas-view.js",
-      "size": 36885,
-      "sha256": "16973cbd835d8ec8c302e0dc7c0b587991dbfaccab4ecea8365159dc02afcd50"
+      "size": 41005,
+      "sha256": "b15d0258775b7f49e6f9f36a58c7f3ee9912da25fc55cd2b6a764e323cd587df"
     },
     {
       "path": "js/atlas/bells-layer.js",
@@ -706,8 +821,8 @@
     },
     {
       "path": "js/events-map.js",
-      "size": 14361,
-      "sha256": "64c07d049694d4c24c7c0ea65fbf1551d442a82ad160546af531113d0ed6dcaa"
+      "size": 14643,
+      "sha256": "84d95af99088beb22b4da1e9970ea19a193016d0cf206bd7f21fc2ffc83c5347"
     },
     {
       "path": "js/events-model.js",
@@ -731,13 +846,13 @@
     },
     {
       "path": "js/gis.js",
-      "size": 33058,
-      "sha256": "af78559a4f916c9eaa35860c35c8787d1e34445206a3026ffa1e894b5a84f742"
+      "size": 33318,
+      "sha256": "508468e99794dea3b773ced80af5017770fb57cf1608199adc7c555cab57f4e4"
     },
     {
       "path": "js/globe.js",
-      "size": 45743,
-      "sha256": "9626635b6c80242a0b4071ff610575893062c53223abe762339067754de15533"
+      "size": 47296,
+      "sha256": "09f522ebbe535df5a6f9103f284b16e9ca4da94b04866af8cc5abf5559518c76"
     },
     {
       "path": "js/layers-panel.js",
@@ -751,13 +866,13 @@
     },
     {
       "path": "js/layout.js",
-      "size": 39203,
-      "sha256": "5f90e37a8721e953f19f6015987ffe065da0a5d3e8f36ce42718ef30fbb0f91e"
+      "size": 39458,
+      "sha256": "bfabda70c5fb61cee41cfda12afa563dfd049e315ecd5fbd02b8ae204fbcfc78"
     },
     {
       "path": "js/map-pointer.js",
-      "size": 11385,
-      "sha256": "e2977aee6a293ed3f4b6008e1278a64a61bde0654ca94d78f4e5169a031cded5"
+      "size": 11779,
+      "sha256": "ed818734e17c3de74783ee244851b9e4da76e3efbfbbc70c4191257e90a97cca"
     },
     {
       "path": "js/media.js",
@@ -845,6 +960,11 @@
       "sha256": "99d1de2a00a159e2ee97325da613aa6354f8f9526b5bab59dc43c2f332399ac7"
     },
     {
+      "path": "js/start-guide.js",
+      "size": 6818,
+      "sha256": "c83ae4c99c3ae99bff76b6aeaa875622b962309b1461a1e30fe1e1e78a0df777"
+    },
+    {
       "path": "js/store.js",
       "size": 5063,
       "sha256": "4ad68b59a84f6e4c9af1d9a7e6e2d761b979cd84c116fd81d5c3724c381dd2c6"
@@ -855,9 +975,14 @@
       "sha256": "6b07baeb3713163d14a6fee2ecdd58b753fa5bd0869455b46587a3ddc4a29d68"
     },
     {
+      "path": "js/tutorial-features.js",
+      "size": 10690,
+      "sha256": "20d9076614c92ddeb6af711db45e15a7091a8cb127cc77056dc380854482d115"
+    },
+    {
       "path": "js/ui.js",
-      "size": 85131,
-      "sha256": "5a55595f5fc63098f4efa9315f06ace9e8cdc3f4e5969ed3e46acacc9b81e497"
+      "size": 85248,
+      "sha256": "81381e508602565fc0612efddb2f553af82bff934d99d2de698fb24084602a53"
     },
     {
       "path": "js/user-layers.js",
@@ -866,8 +991,8 @@
     },
     {
       "path": "js/version.js",
-      "size": 958,
-      "sha256": "aad6a28cf2f9562ad4230e2021b261325e41cbb059afe202feceaf3da7c6f4a1"
+      "size": 877,
+      "sha256": "26b57944075bbee068208840429669fbc185e1a83a0698525d5e83465ae53036"
     },
     {
       "path": "js/work-desks.js",
@@ -946,8 +1071,8 @@
     },
     {
       "path": "package.json",
-      "size": 1325,
-      "sha256": "2c002ff47b87b2d808f9d29d2d96ffc951b4605243895c46c69074fff1c7f7d8"
+      "size": 1632,
+      "sha256": "f5e260a4c2bd7a55c620a0c0bff56d8d14e57d794d841bd6e260028d57ca1c97"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -958,6 +1083,16 @@
       "path": "schema/atlas-pack-manifest.schema.json",
       "size": 2112,
       "sha256": "62e963c6d652062e3b6f1e59b34b0d63baff608adb6282fe1679ad367c0274ec"
+    },
+    {
+      "path": "schema/globedesk-artifact.schema.json",
+      "size": 3334,
+      "sha256": "96412168e7ad4796790b75838882d56a070d13b8876ad101abe6adf11fb01bf5"
+    },
+    {
+      "path": "schema/globedesk-bell-overview.schema.json",
+      "size": 2160,
+      "sha256": "dfe55845ca6e492f8e3883142849c62ef1dd35bec678fd502099794a9078c87f"
     },
     {
       "path": "schema/globedesk-bell.schema.json",
@@ -1046,8 +1181,8 @@
     },
     {
       "path": "vendor/MAPLIBRE-PATCHES.md",
-      "size": 1708,
-      "sha256": "8dd63d3cb6767577f4e26500542569cb323a6f9d56d787a38204d5fae310b2db"
+      "size": 3999,
+      "sha256": "a0238b7c55f5697490c854cb7a443b96d8d11dd82a6e713df0683f3b2ebe1038"
     },
     {
       "path": "vendor/MEDIABUNNY.md",
@@ -1061,8 +1196,8 @@
     },
     {
       "path": "vendor/maplibre-gl.js",
-      "size": 1058116,
-      "sha256": "0cbd608d819c9d824070c26243afc1a0e28820ec7bf0e6090bf998e5339d8d1d"
+      "size": 1058182,
+      "sha256": "83dbb5d6452aa02899f9cca17227523445462bf347323693cf69c841ea057eee"
     },
     {
       "path": "vendor/mediabunny-1.66.2.min.js",
@@ -1073,10 +1208,15 @@
       "path": "vendor/three-0.158.0.min.js",
       "size": 651651,
       "sha256": "3b3a1c97de3ce65ec5b28c28d9f2805a738e9651622691ba771aa95c79d41d51"
+    },
+    {
+      "path": "videos.html",
+      "size": 4685,
+      "sha256": "dfb9564554cc2ea17d09db213f15aad411b0849922e7dae14b23a1e7c22d2c06"
     }
   ],
   "totals": {
-    "files": 213,
-    "bytes": 6188287
+    "files": 241,
+    "bytes": 6911838
   }
 }
