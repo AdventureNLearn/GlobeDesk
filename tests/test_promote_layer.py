@@ -28,6 +28,16 @@ def run(args, env=None):
     return subprocess.run(PY + args, cwd=str(ROOT), env=e, capture_output=True, text=True)
 
 
+def git_head(path):
+    """HEAD sha of the repo containing path, or None when path is not inside a git work tree
+    (for example an unpacked starter zip), so the test runs with or without a repo."""
+    try:
+        r = subprocess.run(["git", "-C", str(path), "rev-parse", "HEAD"], capture_output=True, text=True)
+    except FileNotFoundError:
+        return None
+    return r.stdout.strip() if r.returncode == 0 else None
+
+
 class PromoteLayerTests(unittest.TestCase):
     def test_missing_source_and_license_blocks_and_marks_unknown(self):
         with tempfile.TemporaryDirectory() as td:
@@ -51,6 +61,8 @@ class PromoteLayerTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             dest = Path(td) / "out.json"
             pats = patterns_file(td)
+            head_before = git_head(ROOT)
+            had_git = (ROOT / ".git").exists()
             r = run(["--item", str(FIXTURES / "good.json"), "--label", "RECORDED", "--dest", str(dest), "--patterns", str(pats), "--yes"])
             self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
             self.assertTrue(dest.is_file())
@@ -64,9 +76,9 @@ class PromoteLayerTests(unittest.TestCase):
             self.assertIn("license", rec)
             self.assertIn("citations", rec)
             self.assertIn("Nothing was committed", r.stdout)
-            # The helper must not have created a git commit in this repo.
-            head = subprocess.check_output(["git", "-C", str(ROOT), "log", "-1", "--pretty=%s"], text=True).strip()
-            self.assertNotIn("promote", head.lower())
+            # The helper must not commit: HEAD is unchanged inside a repo, and outside one no repo appears.
+            self.assertEqual(git_head(ROOT), head_before)
+            self.assertEqual((ROOT / ".git").exists(), had_git)
 
     def test_name_scan_hit_blocks_write(self):
         with tempfile.TemporaryDirectory() as td:
