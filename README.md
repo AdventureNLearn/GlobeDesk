@@ -162,6 +162,7 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 |---|---|
 | [USER-GUIDE.md](USER-GUIDE.md) | A walkthrough of making a story, adding sound, placing media, assist, and saving |
 | [docs/FEATURES.md](docs/FEATURES.md) | Every feature with its Live / Coming soon label and how it was checked |
+| [docs/SOURCES.md](docs/SOURCES.md) | Adding a source (source plus licence, or `[UNKNOWN]`) or an Atlas, bells or history entry; the hard-history rule |
 | [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md) | Add your own Atlas 3D object or kit layer from the bag solar kit sample |
 | [docs/REFERENCE.md](docs/REFERENCE.md) | Every panel and tab, the GlobeDesk look, the episode model, Event Layers, map credits, the roadmap and known gaps |
 | [docs/STORY-FORMAT.md](docs/STORY-FORMAT.md) | The `globedesk.episode/2` JSON format |

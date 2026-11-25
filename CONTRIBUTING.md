@@ -6,11 +6,12 @@ By taking part you agree to the [Code of Conduct](CODE_OF_CONDUCT.md). Want to t
 
 ## What's welcome
 
+- **Atlas entries.** Cited encyclopedia entries (history, bells, objects, energy, and the other packs). See [atlas/README.md](atlas/README.md) and [docs/SOURCES.md](docs/SOURCES.md).
 - **Civic data layers.** Public-record layers (boundaries, infrastructure, hazards, history) with a named source and licence. See `episodes/layers/` and [docs/PROMOTE.md](docs/PROMOTE.md).
-- **Public-record sources.** Better citations for existing stories and cards, especially primary sources (agencies, archives, court and legislative records).
+- **Public-record sources.** New or better citations, in the source registry format (source plus licence; write `[UNKNOWN]` when the licence is unclear). See [docs/SOURCES.md](docs/SOURCES.md).
 - **Fixes.** Bugs, accessibility, performance, layout on small screens.
 - **Translations.** UI strings and docs. Keep source citations in their original language and add a translated summary.
-- **Docs.** Clearer guides, examples, and corrections.
+- **Docs.** Clearer guides, examples, and corrections. If you add or change a feature, keep [docs/FEATURES.md](docs/FEATURES.md) in step (Live vs Coming soon).
 - **Atlas 3D objects.** A buildable object or kit layer copied from the bag solar kit sample. See [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md).
 
 Not a fit: tracking or locating private people, scraped data that breaks a site's terms, paid or restricted datasets, ads or telemetry, or anything that needs a GlobeDesk server or account.
@@ -19,10 +20,23 @@ Not a fit: tracking or locating private people, scraped data that breaks a site'
 
 The release ships the 3D workshop and the bag solar kit as a demo sample. To add a buildable object or kit layer of your own, copy that sample, rebuild, validate and load it in Atlas. The steps and every schema field are in [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md). You do not need to do a real kit build or fill in prices.
 
+## Atlas entries, bells and history
+
+GlobeDesk's Atlas (v1.4.0-draft, not released) is a cited encyclopedia in this repo. The layout, rebuild commands and pack rules are in [atlas/README.md](atlas/README.md). The source-record format is in [docs/SOURCES.md](docs/SOURCES.md).
+
+- **Entries.** Each entry lives in a pack (`atlas/packs/<pack>/entries.json`), cites sources by id, and carries a licence on the entry itself (AdventureNLearn's Atlas text is CC BY 4.0). After you edit, run `node tools/atlas/build-packs.mjs && node tools/atlas/build-js.mjs && node tools/atlas/validate.mjs`. No entry is about a living person (`subject_person_living` must be false). Officials appear only by public role inside an event. Unknowns stay `[UNKNOWN]`.
+- **Bells.** All bell entries belong in the Bells pack. Every bell cites at least one source with a publisher and a licence (official or primary where one exists). Wikipedia is only a secondary pointer and never the only source. Approximate pins say so. Other packs link to bells by id (`see_also_ids` or `related`), and never copy the bell entry.
+- **History.** The history pack is US history from 1775 to 2026. Every history entry needs at least one official source (the validator checks this). The timeline starts at 1775 (the Old North lanterns of April 1775 sit inside the range).
+- **Hard history.** Include hard history; never leave it out. Difficult events, violence, injustice and the official record of them belong in the pack when they are part of the period. Do not drop, soften or skip an event to make the timeline more comfortable. Cite official sources, mark unknowns as `[UNKNOWN]`, and do not invent facts.
+
+## Live and Coming soon
+
+[docs/FEATURES.md](docs/FEATURES.md) is the feature status table the in-app tutorial uses. A feature is **Live** only when it has been run and checked; **Coming soon** means it is not wired yet, it is a placeholder, or it could not be verified end to end. Do not describe a Coming soon item as if it already works. If you add or change a feature, update the table (and `js/tutorial-features.js`) from a real run, not from a guess. Anything you cannot verify stays `[UNKNOWN]` in the docs.
+
 ## Source and citation rules
 
 - **Public records only.** Every fact, layer or card needs a source a reader can check: an https link to the original record, plus the publisher's name.
-- **Name the licence.** Each layer or dataset states its licence (for example public domain, CC BY 4.0, ODbL). If you can't find it, write `[UNKNOWN]` and say so in the PR. Unknown-licence data stays out of the public tree until it is resolved.
+- **Name the licence.** Each source record has a `license` field (for example public domain, CC BY 4.0, ODbL, or the site's stated reuse terms). If you cannot confirm it from the source, write `[UNKNOWN]` and say so in the PR. Never guess a licence. Unknown-licence data is not copied into the tree; GlobeDesk may link and summarise in its own words. Restricted or unlicensed datasets stay out of public layers until the licence is resolved. The JSON field name is `license`; prose in this repo also uses "licence".
 - **No restricted or traced data.** No non-commercial (NC / NC-SA) or no-derivatives data in public layers, nothing behind a paywall or login, nothing marked restricted or for official use only, and no shapes traced from copyrighted maps or imagery.
 - **Label what kind of claim it is.** Use the item labels **PUBLIC** (published record), **RECORDED** (documented observation) or **PROJECTED** (forecast or model). Reconstructions (for example a historical route rebuilt from accounts) must set `reconstruction: true` and say what they are based on.
 - **Don't invent facts.** Mark unknowns as `[UNKNOWN]`. Keep "as reported, not verified" unless you checked the claim yourself.
@@ -50,6 +64,7 @@ npm test                                            # unit suites (Node 20+), in
 python3 -m unittest discover -s tests -p "test_*.py" # Python tool and server tests
 node tests/smoke-basic.mjs                          # headless Chrome load; must report 0 errors
 node tests/smoke-atlas.mjs                          # if you changed the Atlas, desks or user layers
+node tests/firstload.mjs                            # if you changed first open, Lite view (?lite=1) or the tutorial
 node tools/atlas/build-packs.mjs && node tools/atlas/build-js.mjs  # after editing atlas/, data/atlas/ or desks/
 python3 tools/make_grokme_manifest.py               # if you changed any file the app serves...
 python3 tools/make_grokme_manifest.py --check       # ...then this must print ok

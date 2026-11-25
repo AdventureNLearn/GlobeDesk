@@ -9,7 +9,7 @@ GlobeDesk's own encyclopedia: 12 categories, an index entry schema, packs with m
     packs/energy|objects|chemistry|economics/  entries.json + manifest.json
     packs/bells/                          the Bells pack (extra pack of "3D objects and builds"): overview + worldwide bells
     community/community.json              reviewed contributor cards, community links and pins (empty until review)
-    OPEN-ITEMS.md                         open owner questions (all OPEN)
+    OPEN-ITEMS.md                         open owner questions (resolved items are marked in the table)
     ../schema/atlas-entry.schema.json, atlas-pack-manifest.schema.json, globedesk-object, globedesk-prices,
       globedesk-contributor-card, globedesk-community, globedesk-personal-layer, globedesk-work-desks, globedesk-artifact, globedesk-bell
     ../data/atlas/                        object, chemistry, price and bell (data/atlas/bells/) records referenced by entries
@@ -25,12 +25,12 @@ Rebuild and check from the repo root:
 
 `build-object.mjs` only regenerates the bag solar kit sample; skip it when you are adding a different object. To check one object record on its own: `node tools/atlas/validate.mjs data/atlas/objects/<id>.json`. To add your own buildable 3D object or kit layer, copy the bag solar kit sample and follow [docs/BUILD-YOUR-OWN-OBJECT.md](../docs/BUILD-YOUR-OWN-OBJECT.md).
 
-Rules: no entry about a living person (`subject_person_living` must be false; officials only by public role inside an event entry). A current event leaves Now after about 90 days and stays in its home category. Every pack is under 50 MB. Sources carry a class: **official** (government, standards body, dataset with a named licence), **reference**, or **experimental** (the owner's own repos and Learning Lab cards: labelled "Experimental (not an official source)", never a record backing a claim). New pack versions are promoted only with the owner's YES.
+Rules: no entry about a living person (`subject_person_living` must be false; officials only by public role inside an event entry). A current event leaves Now after about 90 days and stays in its home category. Every pack is under 50 MB. Sources carry a class: **official** (government, standards body, dataset with a named licence), **reference**, or **experimental** (the owner's own repos and Learning Lab cards: labelled "Experimental (not an official source)", never a record backing a claim). Each source also has a `license` field: the licence or reuse terms as stated on the source, or `[UNKNOWN]` when that is not confirmed. Never guess a licence. The record format is in [docs/SOURCES.md](../docs/SOURCES.md). New pack versions are promoted only with the owner's YES.
 
 Reading levels: an entry may carry `tiers` (kids, everyday, student, professional). The summary is the text at `tier`; the reading-level switch shows the chosen level, or "not written yet [UNKNOWN]".
 
 Links by id: `see_also_ids` points at entries that may live in another pack or branch (for example the Bells layer). They show as links when present and as "not in this copy" otherwise; they are never duplicated.
 
-History rule: every History entry needs at least one official source (validator). No living person is a subject; recent decades use events, laws and places. Picking an entry with a pin flies to the pin (zoom by precision).
+History rule: every History entry needs at least one official source (validator). The timeline starts at 1775. No living person is a subject; recent decades use events, laws and places. Picking an entry with a pin flies to the pin (zoom by precision). **Hard history:** include hard history; never leave it out. Do not drop, soften or skip a difficult event to make the timeline more comfortable.
 
 Bells: every bell cites at least one source with publisher and licence (official or primary where one exists; otherwise confidence is low). Wikipedia is only a secondary pointer and never the only source. Approximate pins say so. The Bells pack owns all bell entries; other packs link to them by id (`see_also_ids`).

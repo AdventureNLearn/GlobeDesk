@@ -15,10 +15,11 @@ labels: bug
 3. 
 
 **Version and setup**
-- GlobeDesk version (Menu → Help → Version):
+- GlobeDesk version (Menu → Help → Version; current draft is v1.4.0-draft · not released):
 - Browser and version:
 - OS:
 - How you run it (`START-GLOBEDESK`, `python3 tools/serve.py`, other):
+- Layout: desktop, phone, or Lite view (`?lite=1`):
 
 **Console errors or screenshots**
 <!-- No private tabs, names, local paths or keys in view. Security problems: use SECURITY.md, not an issue. -->

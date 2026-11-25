@@ -16,3 +16,4 @@ labels: enhancement
 - [ ] Works locally with no GlobeDesk server or account
 - [ ] Adds no tracking or telemetry
 - [ ] Any new network host is optional and off by default
+- [ ] I have checked [docs/FEATURES.md](../../docs/FEATURES.md): this is not already Live, and I am not asking to treat a Coming soon item as finished
