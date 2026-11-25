@@ -169,7 +169,8 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 | [docs/SIDECARS.md](docs/SIDECARS.md) | Sidecar catalogs and schema rules for native tools |
 | [demo/README.md](demo/README.md) | The mission demo and guide packs |
 | [GROK-ME-BUILD.md](GROK-ME-BUILD.md) | Rebuilding a hosted copy on Grok.me, including host-shell notes |
-| [CHANGELOG.md](CHANGELOG.md) | Release notes |
+| [docs/RELEASE-NOTES-v1.4.0.md](docs/RELEASE-NOTES-v1.4.0.md) | v1.4.0 Atlas: what is new, Coming soon and `[UNKNOWN]` items, credits |
+| [CHANGELOG.md](CHANGELOG.md) | Full changelog |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
 
 ## Tests
