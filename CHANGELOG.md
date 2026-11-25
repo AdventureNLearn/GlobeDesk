@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- The US history film (1775–2026) is **Live**: [videos.html](videos.html) plays the hosted 720p copy with captions and chapters. The tutorial History video step links there.
+- Desk servers (`serve.py`, `serve.ps1`) do not attach the main-app CSP header to `/videos.html`, so that page's own policy can apply.
+
 ## v1.4.0 — Atlas — 2026-11-25
 
 User-facing notes: [docs/RELEASE-NOTES-v1.4.0.md](docs/RELEASE-NOTES-v1.4.0.md).

@@ -51,7 +51,10 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         # The mission demo under /demo/ loads live radio streams and pack media.
         # Do not apply the desk CSP there (it would block the radio). Prefer
         # `python3 demo/tools/serve.py` to run the demo on its own port.
-        if not (path == "/demo" or path.startswith("/demo/")):
+        # videos.html has its own meta CSP (hosted film, inline script/style).
+        # Match that path exactly (query strings are stripped above); do not
+        # prefix-match /videos.htmlx or /videos.html.bak.
+        if not (path == "/demo" or path.startswith("/demo/") or path == "/videos.html"):
             self.send_header("Content-Security-Policy",
                 "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov; connect-src 'self' https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov https://photon.komoot.io; font-src 'self' data: https://tiles.openfreemap.org; media-src 'self' blob: data:; frame-src https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'")
         super().end_headers()

@@ -143,7 +143,7 @@ when they need **Full view**). Labels come only from running each feature in hea
 (`tests/smoke-features.mjs`); anything that could not be run end to end is marked `[UNKNOWN]` and
 labelled Coming soon. The full table is in [docs/FEATURES.md](docs/FEATURES.md).
 
-The tutorial's **History video** step is a marked placeholder. No video is included.
+The tutorial's **History video** step is **Live**. Watch it on [videos.html](videos.html) (720p, with captions and chapters).
 
 ## Privacy and safety
 
@@ -162,6 +162,7 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 |---|---|
 | [USER-GUIDE.md](USER-GUIDE.md) | A walkthrough of making a story, adding sound, placing media, assist, and saving |
 | [docs/FEATURES.md](docs/FEATURES.md) | Every feature with its Live / Coming soon label and how it was checked |
+| [videos.html](videos.html) | US history film (1775–2026), 720p, with captions and chapters |
 | [docs/SOURCES.md](docs/SOURCES.md) | Adding a source (source plus licence, or `[UNKNOWN]`) or an Atlas, bells or history entry; the hard-history rule |
 | [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md) | Add your own Atlas 3D object or kit layer from the bag solar kit sample |
 | [docs/REFERENCE.md](docs/REFERENCE.md) | Every panel and tab, the GlobeDesk look, the episode model, Event Layers, map credits, the roadmap and known gaps |

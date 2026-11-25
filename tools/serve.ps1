@@ -28,7 +28,13 @@ try {
       $bytes = [System.IO.File]::ReadAllBytes($path)
     }
     $res.Headers.Add("Cache-Control", "no-cache")
-    $res.Headers.Add("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov; connect-src 'self' https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov https://photon.komoot.io; font-src 'self' data: https://tiles.openfreemap.org; media-src 'self' blob: data:; frame-src https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'")
+    # videos.html has its own meta CSP (hosted film, inline script/style).
+    # Match that path exactly (AbsolutePath has no query); do not prefix-match
+    # /videos.htmlx or /videos.html.bak.
+    $urlPath = [System.Uri]::UnescapeDataString($ctx.Request.Url.AbsolutePath)
+    if ($urlPath -ine "/videos.html") {
+      $res.Headers.Add("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov; connect-src 'self' https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov https://photon.komoot.io; font-src 'self' data: https://tiles.openfreemap.org; media-src 'self' blob: data:; frame-src https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'")
+    }
     $res.ContentLength64 = $bytes.Length
     $res.OutputStream.Write($bytes, 0, $bytes.Length)
     $res.OutputStream.Close()

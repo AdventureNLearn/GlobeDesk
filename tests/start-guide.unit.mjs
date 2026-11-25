@@ -98,17 +98,18 @@ t("every label names a real check or smoke", () => {
     if (f.smoke) assert.ok(readFileSync(new URL("../" + f.smoke, import.meta.url)), f.smoke);
   }
 });
-t("history video step is a clearly marked placeholder with no video, link or embed", () => {
+t("history video step is Live and links to videos.html", () => {
   const h = harness("");
   const i = h.G.st.steps.findIndex((s) => s.id === "history-video");
   assert.ok(i > 0); h.G.open(i);
   assert.equal(h.els.sgVideo.hidden, false);
-  assert.match(h.els.sgVideo.textContent, /^PLACEHOLDER: history video/);
-  assert.equal(h.els.sgLabel.textContent, "Coming soon");
+  assert.match(h.els.sgVideo.innerHTML, /href="videos.html"/);
+  assert.doesNotMatch(h.els.sgVideo.innerHTML, /placeholder/i);
+  assert.equal(h.els.sgLabel.textContent, "Live");
   const hv = FEATURES.find((f) => f.id === "history-video");
-  assert.equal(hv.videoUrl, null);
-  assert.equal(hv.status, "Coming soon");
-  for (const s of [src, featSrc, html]) assert.doesNotMatch(s, /<video|<iframe[^>]*history|\.mp4|youtube\.com\/watch|youtu\.be/i);
+  assert.equal(hv.status, "Live");
+  assert.equal(hv.videoUrl, "https://globedesk-assets.idontwanttodothisshit.com/globedesk/us-history-1775-2026/GlobeDesk-1.4-US-history-1775-2026-share-720p.mp4");
+  for (const s of [src, html]) assert.doesNotMatch(s, /<video|<iframe[^>]*history|youtube\.com\/watch|youtu\.be/i);
 });
 t("docs/FEATURES.md lists every feature with the same label as the tutorial", () => {
   const doc = read("docs/FEATURES.md");

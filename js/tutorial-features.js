@@ -8,9 +8,8 @@
   "use strict";
   const GD = (window.GD = window.GD || {});
   const L = "Live", C = "Coming soon";
-  // Slot for a future hosted history-film URL. Keep null while Coming soon.
-  // Assign a hosted https URL here (one line) when the film is published; do not invent a domain.
-  const HISTORY_VIDEO_URL = null;
+  // Hosted US-history film (720p). Set to null to return the tutorial step to Coming soon.
+  const HISTORY_VIDEO_URL = "https://globedesk-assets.idontwanttodothisshit.com/globedesk/us-history-1775-2026/GlobeDesk-1.4-US-history-1775-2026-share-720p.mp4";
   GD.historyVideoUrl = HISTORY_VIDEO_URL;
   GD.tutorialFeatures = [
     { id: "globe", title: "The globe", status: L, check: "globe", body: "Drag to move the globe. Scroll, pinch or use + and − to zoom. The compass resets north." },
@@ -55,7 +54,7 @@
     { id: "cloud-voice", title: "Cloud voices", status: C, check: "cloudVoice", body: "Cloud text-to-speech for scripts. Not wired yet." },
     { id: "cloud-ai", title: "Cloud AI suggestions", status: C, check: "cloudAi", body: "AI summaries and card suggestions from a cloud model. Not wired yet; the Assist tab works today." },
     { id: "historical-map", title: "Historical map (OpenHistoricalMap)", status: C, check: "historicalMap", target: "btnLayers", body: "A historical base map. Listed in Layers, not wired yet." },
-    { id: "history-video", title: "History video", status: HISTORY_VIDEO_URL ? L : C, check: "historyVideo", video: true, videoUrl: HISTORY_VIDEO_URL, body: "A short video about the history timeline will go here." },
+    { id: "history-video", title: "History video", status: HISTORY_VIDEO_URL ? L : C, check: "historyVideo", video: true, videoUrl: HISTORY_VIDEO_URL, body: "A short film of the US history timeline (1775–2026). Open <a href=\"videos.html\">videos.html</a> to watch it with captions and chapters." },
     { id: "help", title: "Help", status: L, check: "tutorial", target: "btnHelp", body: "<strong>? Help</strong> opens this tour again at any time. Skip closes it." }
   ];
 })();
