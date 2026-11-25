@@ -1,5 +1,6 @@
 // Ten desks: lineup, schema, public-only links, withheld projects unlinked, owner repos experimental (never official).
 import assert from "node:assert/strict";
+import { hygieneHits } from "../tools/atlas/hygiene.mjs";
 import { readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import vm from "node:vm";
@@ -72,6 +73,7 @@ t("rendered desk: experimental label on every owner link, separate group, offici
 });
 t("OPSEC: desk text has no private paths, emails or secrets", () => {
   const s = readFileSync(new URL("../desks/work-desks.json", import.meta.url), "utf8");
-  assert.doesNotMatch(s, /\/home\/|\/workspace\/|C:\\\\|namemap|[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}|api[_-]?key|secret|token|password/i);
+  assert.doesNotMatch(s, /\/home\/|\/workspace\/|C:\\\\|namemap|[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}|api[_-]?key|\bsecrets?\b|token|password/i);
+  assert.deepEqual(hygieneHits(s), []);
 });
 console.log(`${n} work desk tests ok`);

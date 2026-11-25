@@ -1,4 +1,5 @@
 import { readFileSync, readdirSync } from "node:fs";
+import { hygieneHits } from "../tools/atlas/hygiene.mjs";
 import { createRequire } from "node:module";
 import assert from "node:assert/strict";
 import { validateSchema } from "./jsonschema-lite.mjs";
@@ -43,6 +44,6 @@ t("model: S box holds 4 cells in a row", () => { const M = require("../js/atlas/
 t("hygiene: no home paths, emails or key-like strings", () => {
   const files = ["data/atlas/objects/bag-solar-kit.json", ...regions.map((r) => `data/atlas/prices/${r}.json`), "data/atlas/chemistry/lifepo4-vs-nmc.json"];
   files.forEach((f) => { const s = readFileSync(new URL("../" + f, import.meta.url), "utf8");
-    assert.doesNotMatch(s, /\/home\/|C:\\\\Users|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}|api[_-]?key|secret|token/i, f); });
+    assert.doesNotMatch(s, /\/home\/|C:\\\\Users|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,}|api[_-]?key|\bsecrets?\b|token/i, f); assert.deepEqual(hygieneHits(s), [], f); });
 });
 console.log(`${n} passed`);

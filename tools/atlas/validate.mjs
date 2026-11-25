@@ -3,6 +3,7 @@ import path from "node:path";
 import { existsSync, readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { validateSchema } from "../../tests/jsonschema-lite.mjs";
+import { hygieneHits } from "./hygiene.mjs";
 import { ATLAS, J, JR, MAX_BYTES, CATEGORY_PACKS, allEntries, fileInfo, packSha, exists, daysBetween, DATE_FORM, packCategory, categoryPacks } from "./lib.mjs";
 
 const NOW_MAX_DAYS = 92; // "about 90 days"
@@ -252,11 +253,11 @@ export function validateAtlas() {
   // Hygiene: shareable files carry no home paths, emails or key-like strings.
   for (const rel of ["categories.json", "views.json", "packs/core/sources.json", ...CATEGORY_PACKS.map((p) => `packs/${p}/entries.json`)]) {
     const s = readFileSync(path.join(ATLAS, rel), "utf8");
-    if (/\/home\/|\/workspace\/|C:\\\\|[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}|api[_-]?key|\bsecrets?\b|password|bearer /i.test(s)) problems.push(`hygiene: ${rel} has a path, email or key-like string`);
+    { const hits = hygieneHits(s); if (hits.length) problems.push(`hygiene: ${rel} has a path, email or key-like string (${hits.join(", ")})`); }
   }
   for (const rel of artifactRecs) {
     const s = readFileSync(path.join(ATLAS, "..", rel), "utf8");
-    if (/\/home\/|\/workspace\/|C:\\\\|[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}|api[_-]?key|\bsecrets?\b|password|bearer /i.test(s)) problems.push(`hygiene: ${rel} has a path, email or key-like string`);
+    { const hits = hygieneHits(s); if (hits.length) problems.push(`hygiene: ${rel} has a path, email or key-like string (${hits.join(", ")})`); }
   }
   return problems;
 }
