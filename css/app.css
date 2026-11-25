@@ -780,3 +780,5 @@ body.lite .stage { width: 100% !important; height: 100% !important; }
   body.lite .stage-wrap { height: calc(100vh - 120px); min-height: 320px; }
   body.lite .tools-essential { flex-wrap: wrap; gap: 6px; }
 }
+.start-guide .sg-jump { display: block; margin: 4px 0 2px; }
+.start-guide .sg-jump select { max-width: 100%; }

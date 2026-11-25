@@ -12,7 +12,9 @@ Do not open `index.html` as a `file://` URL. The browser will block parts of the
 
 ### First open, Home, Help and Lite view
 
-- On the first visit a short **guide** opens over the globe (Welcome, Home, Layers, Help). **Skip guide** or **Done** closes it, and this browser remembers that, so it does not come back on its own. **? Help** in the toolbar opens it again.
+- On the first visit the **tutorial** opens over the globe: a welcome step, then one step per feature, each marked **Live** or **Coming soon**. **Next** and **Back** move through it, **Jump to** picks a feature, and the step's button is outlined in gold. **Skip guide** (any step) or **Done** closes it, and this browser remembers that, so it does not come back on its own. **? Help** in the toolbar (or Menu → Help → Start guide) opens it again. In Lite view, steps for editing tools say when they need **Full view**.
+- The **History video** step is a marked placeholder. No video is included in this build.
+- What each label is based on: [docs/FEATURES.md](docs/FEATURES.md).
 - **⌂ Home** (or the H key) brings the globe back to the start view from anywhere.
 - **Touch** (phone, tablet, Lite view): drag with one finger to move the globe; pinch with two fingers to zoom. A pinch never rotates or tilts the globe. To rotate or tilt, use the compass and tilt buttons on the map. Swipe outside the map to scroll the page; swipe inside a panel to scroll the panel.
 - The **sample** is never loaded by itself. Open it from the guide (**Open the sample (Washington, DC)**), Menu → File → **Sample**, or `?sample=1`.

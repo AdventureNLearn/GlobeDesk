@@ -39,6 +39,7 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 - [Quick start](#quick-start)
 - [Make your own show (starter kit)](#make-your-own-show-starter-kit)
 - [News desk and sample](#news-desk-and-sample)
+- [Tutorial and feature status](#tutorial-and-feature-status)
 - [Privacy and safety](#privacy-and-safety)
 - [Documentation](#documentation)
 - [Tests](#tests)
@@ -127,11 +128,22 @@ Open the episode in GlobeDesk (**Open**), replace every `[UNKNOWN]`, and save. T
 
 ## News desk and sample
 
-GlobeDesk opens on the **news desk**, with no episode preloaded. On the first visit a short, skippable guide points at **⌂ Home**, **Layers** and **? Help**; Help reopens it later. **Lite view** (`?lite=1`, or the Lite view button) shows just the globe and the main buttons; **Full view** brings every tool back. Section tabs and story cards browse a 50-topic example feed in 10 sections (world, politics, climate, science, history, economy, conflict, culture, tech, and local civic). Cards keep `[UNKNOWN]` marks and approximate-pin notes as they were written. Click a card and the globe flies to that pin. **Workspace** opens the full editor.
+GlobeDesk opens on the **news desk**, with no episode preloaded. On the first visit a skippable step-by-step tutorial covers every feature (see [Tutorial and feature status](#tutorial-and-feature-status)); **? Help** reopens it later. **Lite view** (`?lite=1`, or the Lite view button) shows just the globe and the main buttons; **Full view** brings every tool back. Section tabs and story cards browse a 50-topic example feed in 10 sections (world, politics, climate, science, history, economy, conflict, culture, tech, and local civic). Cards keep `[UNKNOWN]` marks and approximate-pin notes as they were written. Click a card and the globe flies to that pin. **Workspace** opens the full editor.
 
 - **Sample** loads a short Washington, DC National Mall walk (two stories, approximate pins, official sources). Locations are approximate, and claims are as reported, not verified.
 - Every card in the sample and in the topic feed links its source.
 - **New blank** starts your own show.
+
+## Tutorial and feature status
+
+**? Help** opens a step-by-step tutorial: a welcome step, then one step per feature, each marked
+**Live** or **Coming soon**. It opens by itself on the first visit only; **Skip guide** closes it at any
+step and is remembered. It works on desktop, on phones and in Lite view (steps for editing tools say
+when they need **Full view**). Labels come only from running each feature in headless Chrome
+(`tests/smoke-features.mjs`); anything that could not be run end to end is marked `[UNKNOWN]` and
+labelled Coming soon. The full table is in [docs/FEATURES.md](docs/FEATURES.md).
+
+The tutorial's **History video** step is a marked placeholder. No video is included.
 
 ## Privacy and safety
 
@@ -149,6 +161,7 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 | Doc | What's in it |
 |---|---|
 | [USER-GUIDE.md](USER-GUIDE.md) | A walkthrough of making a story, adding sound, placing media, assist, and saving |
+| [docs/FEATURES.md](docs/FEATURES.md) | Every feature with its Live / Coming soon label and how it was checked |
 | [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md) | Add your own Atlas 3D object or kit layer from the bag solar kit sample |
 | [docs/REFERENCE.md](docs/REFERENCE.md) | Every panel and tab, the GlobeDesk look, the episode model, Event Layers, map credits, the roadmap and known gaps |
 | [docs/STORY-FORMAT.md](docs/STORY-FORMAT.md) | The `globedesk.episode/2` JSON format |
@@ -169,6 +182,7 @@ node tests/smoke-events.mjs                  # Event Layers in the browser
 node tests/smoke-callouts.mjs                # several open cards at zoom 1.5/3/6/12, desktop and phone
 node tests/firstload.mjs                     # empty-cache first visit: desktop, phone (390x844, touch) and Lite view
 node tests/smoke-touch.mjs                   # touch: one-finger pan, pinch zoom only, page and panel scrolling
+node tests/smoke-features.mjs                # runs every feature once; fails if a tutorial label disagrees
 python3 tools/make_grokme_manifest.py --check
 python3 tools/scrub_scan.py                  # no private paths, emails or internal IDs in the tree
 python3 tools/make_starter_zip.py            # builds the starter zip and scans it

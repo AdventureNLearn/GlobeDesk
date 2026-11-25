@@ -1,6 +1,7 @@
-/* GlobeDesk start view, short guide and Lite view.
- * First open: a clean globe and a short guide (Welcome, Home, Layers, Help). Skip or Done is
- * remembered in localStorage, so the guide does not come back on its own; Help reopens it.
+/* GlobeDesk start view, step-by-step tutorial and Lite view.
+ * First open: a clean globe and the tutorial: a welcome step, then one step per feature
+ * (js/tutorial-features.js), each labelled Live or Coming soon. Skip (any step) or Done is
+ * remembered in localStorage, so it does not come back on its own; Help reopens it.
  * The sample episode is one click away (guide, menu File → Sample) but is never loaded by default.
  * Lite view (?lite=1, or the "Lite view" switch) keeps the globe, Home, Layers, Atlas and Help and
  * hides the editing docks, news desk and export tools; "Full view" brings everything back. */
@@ -15,16 +16,10 @@
     set(k, v) { try { if (window.localStorage) { if (v == null) window.localStorage.removeItem(k); else window.localStorage.setItem(k, v); } } catch (e) { /* private mode */ } }
   };
 
-  const STEPS = [
-    { id: "welcome", title: "Welcome to GlobeDesk", target: null,
-      body: "A globe for map-led stories. Drag to move the globe. Pinch or scroll to zoom." },
-    { id: "home", title: "Home", target: "btnReset",
-      body: "Lost? <strong>Home</strong> brings the globe back to the start view. The H key does the same." },
-    { id: "layers", title: "Layers", target: "btnLayers",
-      body: "<strong>Layers</strong> turns base maps and overlays on or off." },
-    { id: "help", title: "Help", target: "btnHelp",
-      body: "<strong>Help</strong> opens this guide again at any time. The sample episode is under Menu → File → Sample." }
-  ];
+  const WELCOME = { id: "welcome", title: "Welcome to GlobeDesk", target: null,
+    body: "A globe for map-led stories. Drag to move the globe. Pinch or scroll to zoom. <strong>Next</strong> walks through every feature, one step each, marked <em>Live</em> or <em>Coming soon</em>. <strong>Skip guide</strong> closes it; <strong>? Help</strong> brings it back." };
+  const STEPS = [WELCOME].concat((GD.tutorialFeatures || []).map((f) => Object.assign({ label: f.status }, f)));
+  const VIDEO_PLACEHOLDER = "PLACEHOLDER: history video. No video is included in this build; this box marks where it will go.";
 
   const st = { step: 0, open: false, steps: STEPS };
 
@@ -51,7 +46,15 @@
     if (s.target && $(s.target)) $(s.target).classList.add("sg-target");
     $("sgCount").textContent = "Step " + (st.step + 1) + " of " + st.steps.length;
     $("sgTitle").textContent = s.title;
-    $("sgBody").innerHTML = s.body;
+    let body = s.body;
+    const tgt = s.target && $(s.target);
+    const hiddenTarget = s.needsFull && isLite() && (!tgt || tgt.getBoundingClientRect().width === 0);
+    if (hiddenTarget) body += " <em>In Lite view, press <strong>Full view</strong> to see this.</em>";
+    $("sgBody").innerHTML = body;
+    const vid = $("sgVideo");
+    if (vid) { vid.hidden = !s.video; vid.textContent = s.video ? VIDEO_PLACEHOLDER : ""; }
+    const jump = $("sgJump");
+    if (jump) jump.value = String(st.step);
     $("sgLinks").hidden = st.step !== 0;
     $("sgBack").disabled = st.step === 0;
     const last = st.step === st.steps.length - 1;
@@ -94,6 +97,11 @@
     on("sgSample", () => { close("sample"); const b = $("btnDemo"); if (b) b.click(); });
     on("sgAtlas", () => { close("atlas"); const b = $("btnAtlas"); if (b) b.click(); });
     on("sgLite", () => setLite(!isLite()));
+    const jump = $("sgJump");
+    if (jump) {
+      jump.innerHTML = st.steps.map((s, i) => "<option value=\"" + i + "\">" + (i === 0 ? "Welcome" : i + ". " + s.title + " (" + s.label + ")") + "</option>").join("");
+      jump.addEventListener("change", () => { st.step = Number(jump.value) || 0; render(); });
+    }
     const box = $("startGuide");
     if (box) box.addEventListener("keydown", (e) => { if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); close("skip"); } });
   }
@@ -109,5 +117,5 @@
     if (!guideDone() && !directLink && p.get("guide") !== "0") open(0);
   }
 
-  GD.startGuide = { boot, open, close, next, back, setLite, isLite, guideDone, st, STEPS, GUIDE_KEY, LITE_KEY };
+  GD.startGuide = { boot, open, close, next, back, setLite, isLite, guideDone, st, STEPS, GUIDE_KEY, LITE_KEY, VIDEO_PLACEHOLDER };
 })();

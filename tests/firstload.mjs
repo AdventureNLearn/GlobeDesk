@@ -140,7 +140,15 @@ async function runMode(name, dbg) {
     await ev(`document.getElementById("btnHelp").click()`); await sleep(300);
     fo.helpReopens = await ev(`!document.getElementById("startGuide").hidden && GD.startGuide.st.step === 0`);
     await shot("help-reopened");
-    await ev(`document.getElementById("sgSkip").click()`);
+    // Walk the whole tutorial with Next: every feature step shows a Live or Coming soon label.
+    const walk = await ev(`(() => { const out = []; const n = GD.startGuide.st.steps.length; for (let i = 1; i < n; i++) { document.getElementById("sgNext").click(); const l = document.getElementById("sgLabel"); out.push({ id: GD.startGuide.st.steps[GD.startGuide.st.step].id, label: l.hidden ? null : l.textContent, video: !document.getElementById("sgVideo").hidden }); } return { steps: n, out }; })()`);
+    fo.tutorialEveryFeatureLabelled = walk.out.length === walk.steps - 1 && walk.out.every((x) => x.label === "Live" || x.label === "Coming soon");
+    fo.tutorialVideoPlaceholder = walk.out.filter((x) => x.video).map((x) => x.id).join(",") === "history-video";
+    out.tutorialSteps = walk.steps;
+    await ev(`GD.startGuide.open(GD.startGuide.st.steps.findIndex((s) => s.id === "history-video"))`); await sleep(200);
+    await shot("tutorial-video-placeholder");
+    await ev(`GD.startGuide.open(GD.startGuide.st.steps.length - 1); document.getElementById("sgNext").click()`);
+    fo.tutorialDoneCloses = await ev(`document.getElementById("startGuide").hidden`);
     fo.homeWorks = await ev(`(() => { const m = GD.globe.st.map; m.jumpTo({ center: [100, -30], zoom: 4 }); document.getElementById("btnReset").click(); return new Promise((r) => setTimeout(() => { const c = m.getCenter(); r(Math.abs(c.lng - 100) > 20 || Math.abs(c.lat + 30) > 10); }, 2500)); })()`);
     out.firstOpen = fo;
     out.firstOpenPass = Object.values(fo).every((v) => v === true || Array.isArray(v));

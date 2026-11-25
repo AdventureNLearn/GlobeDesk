@@ -192,7 +192,8 @@
   </dialog>
   <dialog id="settings"><form method="dialog"><h2>Optional paid features</h2><div id="settingsBody"></div><button>Close</button></form></dialog>
   <section id="startGuide" class="start-guide" role="dialog" aria-modal="false" aria-labelledby="sgTitle" hidden>
-    <p id="sgCount" class="sg-count small muted">Step 1 of 4</p>
+    <p id="sgCount" class="sg-count small muted">Step 1</p>
+    <label class="sg-jump small">Jump to <select id="sgJump" aria-label="Jump to a feature"></select></label>
     <h2 id="sgTitle">Welcome to GlobeDesk</h2>
     <span id="sgLabel" class="sg-label" hidden></span>
     <div id="sgBody" class="sg-body"></div>
@@ -266,6 +267,7 @@
   <script src="js/atlas/atlas-3d.js"></script>
   <script src="js/atlas/atlas-view.js"></script>
   <script src="js/share-pack.js"></script>
+  <script src="js/tutorial-features.js"></script>
   <script src="js/start-guide.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/commands.js"></script>
