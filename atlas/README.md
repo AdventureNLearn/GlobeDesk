@@ -1,4 +1,4 @@
-# GlobeDesk Atlas (v1.4.0 Atlas)
+# GlobeDesk Atlas (v1.4.1 Atlas)
 
 GlobeDesk's own encyclopedia: 12 categories, an index entry schema, packs with manifests, and the views in the Atlas panel. All entries are our own cited text (CC BY 4.0). Draft only.
 

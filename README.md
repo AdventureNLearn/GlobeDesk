@@ -4,7 +4,7 @@
 
 Pick your stories and the globe flies from orbit down to street level for each one. Cards pin to the place, every source carries a verified or unverified label, captions are always on, and you can record the result as a 16:9 or 9:16 video. It runs in your browser. You don't need an account, a server or an API key.
 
-> **v1.4.0 · Atlas** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · Live: [globedesk.grok.me](https://globedesk.grok.me).
+> **v1.4.1 · Atlas** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · Live: [globedesk.grok.me](https://globedesk.grok.me).
 
 ## Civic Intelligence Project, open source
 
@@ -171,6 +171,7 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 | [demo/README.md](demo/README.md) | The mission demo and guide packs |
 | [GROK-ME-BUILD.md](GROK-ME-BUILD.md) | Rebuilding a hosted copy on Grok.me, including host-shell notes |
 | [docs/RELEASE-NOTES-v1.4.0.md](docs/RELEASE-NOTES-v1.4.0.md) | v1.4.0 Atlas: what is new, Coming soon and `[UNKNOWN]` items, credits |
+| [docs/RELEASE-NOTES-v1.4.1.md](docs/RELEASE-NOTES-v1.4.1.md) | v1.4.1: History video Live, Grok.me kit list repaired |
 | [CHANGELOG.md](CHANGELOG.md) | Full changelog |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
 
