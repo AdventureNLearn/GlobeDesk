@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>US history, 1775–2026 — GlobeDesk</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src https://globedesk-assets.idontwanttodothisshit.com; connect-src https://globedesk-assets.idontwanttodothisshit.com; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none';">
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: #02040c; color: #eaf6ff;
+      max-width: 980px; margin-left: auto; margin-right: auto; padding: 32px 20px 64px; line-height: 1.5; }
+    a { color: #5ee7ff; }
+    h1 { font-weight: 650; letter-spacing: .02em; }
+    h1 b { color: #5ee7ff; }
+    .tag { color: #7f93ad; margin: -8px 0 24px; }
+    .clip { margin: 0 0 28px; }
+    video { width: 100%; height: auto; background: #000; border: 1px solid rgba(94,231,255,.24); }
+    figcaption { color: #b3c6de; font-size: 14px; margin-top: 8px; }
+    .chapters { list-style: none; padding: 0; margin: 0 0 28px; }
+    .chapters li { margin: 0 0 6px; }
+    .chapters a { text-decoration: none; border-bottom: 1px solid rgba(94,231,255,.35); }
+    .chapters .t { color: #f0c060; font-variant-numeric: tabular-nums; margin-right: 10px; }
+    .credit { color: #7f93ad; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <p><a href="./">Open GlobeDesk</a></p>
+  <h1>US history, 1775–2026</h1>
+  <p class="tag">A GlobeDesk 1.4 film · 720p · every stop is a card in the Atlas, with its sources one tap away.</p>
+  <figure class="clip" id="film">
+    <video id="historyFilm" controls preload="metadata" crossorigin="anonymous" title="US history, 1775–2026">
+      <source src="https://globedesk-assets.idontwanttodothisshit.com/globedesk/us-history-1775-2026/GlobeDesk-1.4-US-history-1775-2026-share-720p.mp4" type="video/mp4">
+      <track kind="captions" srclang="en" label="English" default crossorigin src="https://globedesk-assets.idontwanttodothisshit.com/globedesk/us-history-1775-2026/GlobeDesk-1.4-US-history-1775-2026.vtt">
+      Sorry, your browser cannot play this video.
+    </video>
+    <figcaption><b>US history, 1775–2026</b> — 720p. Captions:
+      <a href="https://globedesk-assets.idontwanttodothisshit.com/globedesk/us-history-1775-2026/GlobeDesk-1.4-US-history-1775-2026.vtt">WebVTT</a>
+      ·
+      <a href="https://globedesk-assets.idontwanttodothisshit.com/globedesk/us-history-1775-2026/GlobeDesk-1.4-US-history-1775-2026.srt">SubRip (.srt)</a>.
+    </figcaption>
+  </figure>
+  <h2>Chapters</h2>
+  <ol class="chapters">
+    <li><a href="#t=0" data-start="0"><span class="t">0:00</span> Cold open</a></li>
+    <li><a href="#t=20" data-start="20"><span class="t">0:20</span> Chapter 1 · A new nation</a></li>
+    <li><a href="#t=104" data-start="104"><span class="t">1:44</span> Chapter 2 · A growing country</a></li>
+    <li><a href="#t=227" data-start="227"><span class="t">3:47</span> Chapter 3 · Civil War and Reconstruction</a></li>
+    <li><a href="#t=369" data-start="369"><span class="t">6:09</span> Chapter 4 · Industry, immigration and empire</a></li>
+    <li><a href="#t=576" data-start="576"><span class="t">9:36</span> Chapter 5 · World wars and the Depression</a></li>
+    <li><a href="#t=744" data-start="744"><span class="t">12:24</span> Chapter 6 · Cold War, civil rights and space</a></li>
+    <li><a href="#t=908" data-start="908"><span class="t">15:08</span> Chapter 7 · Our own times</a></li>
+    <li><a href="#t=1022" data-start="1022"><span class="t">17:02</span> Close and credits</a></li>
+  </ol>
+  <p class="credit">GlobeDesk by AdventureNLearn. Code MIT; AdventureNLearn content CC BY 4.0. See <a href="CREDITS.md">CREDITS.md</a>, <a href="LICENSE">LICENSE</a> and <a href="LICENSE-CONTENT">LICENSE-CONTENT</a>.</p>
+  <script>
+    (function () {
+      var v = document.getElementById("historyFilm");
+      function seek(sec) { if (!v) return; v.currentTime = sec; }
+      document.querySelectorAll("[data-start]").forEach(function (a) {
+        a.addEventListener("click", function (e) {
+          e.preventDefault();
+          seek(Number(a.getAttribute("data-start")) || 0);
+        });
+      });
+      var m = /(?:^|#)t=(\d+)/.exec(location.hash || "");
+      if (m) seek(Number(m[1]));
+    })();
+  </script>
+</body>
+</html>

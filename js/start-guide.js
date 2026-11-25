@@ -55,8 +55,13 @@
     if (vid) {
       const url = s.videoUrl || GD.historyVideoUrl || null;
       vid.hidden = !s.video;
-      // No player is created while the URL is null. Filling HISTORY_VIDEO_URL is the slot for a later hosted film.
-      vid.textContent = s.video && !url ? VIDEO_PLACEHOLDER : "";
+      if (s.video && url) {
+        vid.innerHTML = '<a href="videos.html">Watch the US history film (1775–2026)</a>';
+      } else if (s.video) {
+        vid.textContent = VIDEO_PLACEHOLDER;
+      } else {
+        vid.textContent = "";
+      }
     }
     const jump = $("sgJump");
     if (jump) jump.value = String(st.step);

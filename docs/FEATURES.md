@@ -7,7 +7,7 @@ the app itself says it is not wired yet, it is a placeholder, or it could not be
 its result disagree. The labels live in `js/tutorial-features.js`; this file is written by
 `node tools/features-table.mjs <evidence.json>`.
 
-38 Live, 6 Coming soon, 44 features.
+39 Live, 5 Coming soon, 44 features.
 
 | # | Feature | Status | How it was checked | What the run showed |
 |---|---|---|---|---|
@@ -53,15 +53,16 @@ its result disagree. The labels live in `js/tutorial-features.js`; this file is 
 | 40 | Cloud voices | **Coming soon** | tests/smoke-features.mjs → `cloudVoice` | the settings panel marks it "stub" and "not wired" |
 | 41 | Cloud AI suggestions | **Coming soon** | tests/smoke-features.mjs → `cloudAi` | the settings panel marks it "stub" and "not wired" |
 | 42 | Historical map (OpenHistoricalMap) | **Coming soon** | tests/smoke-features.mjs → `historicalMap` | Layers lists it as "Historical map (OpenHistoricalMap) [UNKNOWN] — not wired yet" |
-| 43 | History video | **Coming soon** | tests/smoke-features.mjs → `historyVideo` | the tutorial step shows the marked placeholder; HISTORY_VIDEO_URL is null; no video, link or embed |
+| 43 | History video | **Live** | tests/smoke-features.mjs → `historyVideo` | tutorial step is Live, links to videos.html, HISTORY_VIDEO_URL is the hosted 720p film |
 | 44 | Help | **Live** | tests/smoke-features.mjs → `tutorial` | Help opened the tour (45 steps); Skip closed it |
 
 ## History video
 
-The tutorial has a **History video** step with a dashed box marked
-`PLACEHOLDER: history video`. `HISTORY_VIDEO_URL` in `js/tutorial-features.js` is
-null (a slot for a future hosted URL; do not invent a domain). No video is
-embedded, linked or uploaded in this build. There is no videos page in this release.
+The tutorial has a **History video** step, labelled **Live**, that links to
+[videos.html](../videos.html). That page plays the hosted 720p film
+(US history, 1775–2026) with captions (WebVTT and SubRip) and a chapter list.
+`HISTORY_VIDEO_URL` in `js/tutorial-features.js` is the 720p MP4 on the public
+asset host. The film file is not in this repository.
 
 ## Lite view
 
