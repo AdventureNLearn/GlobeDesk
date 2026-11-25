@@ -1,8 +1,8 @@
-// History pack (US 1776-2026, with a 1775 prologue): sourcing, reading levels, eras, records, links by id to the Bells layer, validator rules.
+// History pack (US 1775-2026; the timeline starts at 1775, OPEN-ITEMS #30): sourcing, reading levels, eras, records, links by id to the Bells layer, validator rules.
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 import { validateSchema } from "./jsonschema-lite.mjs";
-import { historyRules, artifactRules, entryRules } from "../tools/atlas/validate.mjs";
+import { historyRules, artifactRules, entryRules, HISTORY_RANGE } from "../tools/atlas/validate.mjs";
 import { J, JR, allEntries } from "../tools/atlas/lib.mjs";
 const require = createRequire(import.meta.url);
 let n = 0; const t = (name, fn) => { fn(); n++; console.log("ok", name); };
@@ -19,9 +19,9 @@ const bellPack = J("packs/bells/entries.json").entries;
 const year = (d) => parseInt(d, 10);
 const ERAS = [[1775, 1799], [1800, 1860], [1861, 1869], [1870, 1913], [1914, 1945], [1946, 1980], [1981, 2026]];
 
-t("history pack: 60-90 sourced entries, dated 1776-2026 (one 1775 prologue), every era covered", () => {
+t("history pack: 60-90 sourced entries, dated 1775-2026, every era covered", () => {
   assert.ok(hist.length >= 60 && hist.length <= 90, String(hist.length));
-  hist.forEach((e) => e.dates.forEach((d) => assert.ok((year(d.date) >= 1776 || e.id === "old-north-lanterns-1775") && year(d.date) <= 2026, e.id + " " + d.date)));
+  hist.forEach((e) => e.dates.forEach((d) => assert.ok(year(d.date) >= 1775 && year(d.date) <= 2026, e.id + " " + d.date)));
   ERAS.forEach(([a, b]) => assert.ok(hist.some((e) => { const y = year(e.dates[0].date); return y >= a && y <= b; }), `era ${a}-${b}`));
   assert.ok(hist.some((e) => e.dates.some((d) => d.date === "1776-07-04")) && hist.some((e) => e.dates.some((d) => d.date === "2026-07-04")));
 });
@@ -64,6 +64,11 @@ t("validator: history entry with no official source, a layer entry with no pin, 
   assert.ok(historyRules(b, ctx).some((x) => /lat\/lng pin/.test(x)));
   const r = structuredClone(JR("data/atlas/artifacts/constitution-1787.json")); r.facts[0].source = "made-up-source";
   assert.ok(artifactRules("x", r, ctx, JR("schema/globedesk-artifact.schema.json")).some((x) => /unknown source/.test(x)));
+  assert.deepEqual(HISTORY_RANGE, { min: 1775, max: 2026 });
+  assert.equal(Math.min(...hist.flatMap((e) => e.dates.map((d) => year(d.date)))), 1775, "timeline starts at 1775");
+  assert.ok(!historyRules(hist[0], ctx).some((x) => /outside/.test(x)), "1775 is inside the range");
+  const early = structuredClone(hist[0]); early.dates = [{ date: "1774-12-01" }]; assert.ok(historyRules(early, ctx).some((x) => /outside 1775-2026/.test(x)));
+  const late = structuredClone(hist[0]); late.dates = [{ date: "2027-01-01" }]; assert.ok(historyRules(late, ctx).some((x) => /outside 1775-2026/.test(x)));
   const tl = structuredClone(hist[0]); tl.tiers.student = "different"; assert.ok(historyRules(tl, ctx).some((x) => /must equal the summary/.test(x)));
 });
 t("history entries pass the shared entry rules (no Now home, known subcategories, related links exist)", () => hist.forEach((e) => assert.deepEqual(entryRules(e, ctx), [], e.id)));

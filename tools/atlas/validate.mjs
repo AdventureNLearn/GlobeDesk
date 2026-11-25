@@ -89,10 +89,15 @@ export function artifactRules(rel, rec, ctx, schema) {
 
 // History pack and object layers: at least one official source, reading-level text agrees with the summary,
 // and a globe layer object needs a lat/lng pin (a layer overview topic, such as bells-overview, has no single place).
+// History timeline range (owner decision 2026-11-24, OPEN-ITEMS #30): it starts at 1775 so the Old North
+// lanterns of April 1775 sit inside the timeline, and ends at the current release year.
+export const HISTORY_RANGE = { min: 1775, max: 2026 };
+
 export function historyRules(e, ctx) {
   const p = [];
   const at = `entry ${e.id}`;
   if (e.pack === "history-places" && e.status !== "placeholder" && !e.sources.some((s) => { const src = ctx.sourceById.get(s); return src && SC.classOf(src) === "official"; })) p.push(`${at}: a history entry needs at least one official source`);
+  if (e.pack === "history-places") (e.dates || []).forEach((d) => { const y = parseInt(String(d.date), 10); if (!(y >= HISTORY_RANGE.min && y <= HISTORY_RANGE.max)) p.push(`${at}: history date ${d.date} is outside ${HISTORY_RANGE.min}-${HISTORY_RANGE.max}`); });
   if (e.tiers && e.tiers[e.tier] && e.tiers[e.tier] !== e.summary) p.push(`${at}: tiers.${e.tier} must equal the summary`);
   if (e.layer && e.kind === "object" && !e.places.some((pl) => pl.lat != null && pl.lng != null)) p.push(`${at}: an object-layer entry needs a lat/lng pin`);
   if (e.layer && e.status !== "placeholder" && !e.record) p.push(`${at}: an object-layer entry needs a record`);
