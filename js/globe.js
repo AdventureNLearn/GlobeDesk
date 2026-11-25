@@ -373,6 +373,12 @@
     return null;
   }
 
+  // True when a raster source already serves exactly this one tile URL template.
+  function sameTiles(src, tiles) {
+    const cur = src && ((src._options && src._options.tiles) || src.tiles);
+    return !!cur && cur.length === 1 && cur[0] === tiles;
+  }
+
   function safeRemoveLayerSource(map, id) {
     try { if (map.getLayer(id)) map.removeLayer(id); } catch (e) { /* TypeError during a failed load */ }
     try { if (map.getSource(id)) map.removeSource(id); } catch (e) { /* TypeError during a failed load */ }
@@ -387,7 +393,10 @@
     if (rebuild) safeRemoveLayerSource(map, id);
     const after = map.getSource(id);
     if (after && after.setTiles) {
-      try { after.setTiles([tiles]); } catch (e) { /* TypeError during a failed load */ }
+      // setTiles() reloads every tile of the source even when the URL is the same; only call it on a real change.
+      if (!sameTiles(after, tiles)) {
+        try { after.setTiles([tiles]); } catch (e) { /* TypeError during a failed load */ }
+      }
       setSourceAttribution(map, id, attribution);
     } else if (!map.getSource(id)) {
       try {
@@ -600,6 +609,7 @@
     return st.map ? camera() : { center: HOME_VIEW.center.slice(), zoom: HOME_VIEW.zoom, pitch: HOME_VIEW.pitch, bearing: HOME_VIEW.bearing };
   }
 
+  const RECREATE_TIMEOUT_MS = 15000;
   function recreateMap() {
     if (!st.container) return Promise.resolve();
     if (st.recreating) return st.recreating;
@@ -616,17 +626,40 @@
     const map = new maplibregl.Map(mapConstructorOptions(cam));
     st.map = map;
     bindMapEvents(map);
-    st.recreating = new Promise((resolve) => {
-      const done = () => {
-        try { map.jumpTo({ center: cam.center, zoom: cam.zoom, pitch: cam.pitch, bearing: cam.bearing }); } catch (e) { /* ignore */ }
-        if (ep) setEpisode(ep, active);
-        st.recreating = null;
-        resolve();
+    // Finishes exactly once: on "load", on a style-level "error" before the style loads, or after a timeout,
+    // so a map that never loads cannot leave st.recreating set (Event Layers stay paused while it is set and
+    // the next recreateMap() would return the same stuck promise). st.recreating is always cleared.
+    let settled = false;
+    let timer = 0;
+    const p = new Promise((resolve, reject) => {
+      const finish = (outcome) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        try { map.off("load", onLoad); map.off("error", onError); } catch (e) { /* ignore */ }
+        st.recreateOutcome = outcome;
+        let failure = null;
+        try {
+          if (st.map === map) {
+            try { map.jumpTo({ center: cam.center, zoom: cam.zoom, pitch: cam.pitch, bearing: cam.bearing }); } catch (e) { /* ignore */ }
+            if (ep) setEpisode(ep, active);
+          }
+        } catch (e) {
+          failure = e;
+        } finally {
+          st.recreating = null;
+          if (failure) reject(failure); else resolve(outcome);
+        }
       };
-      if (map.loaded()) done();
-      else map.once("load", done);
+      const onLoad = () => finish("load");
+      // Tile and source errors are normal while loading; only a style-level error before the style loads ends the wait.
+      const onError = (e) => { if (!(e && (e.tile || e.sourceId)) && !(map.isStyleLoaded && map.isStyleLoaded())) finish("error"); };
+      timer = setTimeout(() => finish("timeout"), st.recreateTimeoutMs || RECREATE_TIMEOUT_MS);
+      if (map.loaded()) finish("load");
+      else { map.on("load", onLoad); map.on("error", onError); }
     });
-    return st.recreating;
+    st.recreating = settled ? null : p;
+    return p;
   }
 
   function isDrawingBufferPreserved() {

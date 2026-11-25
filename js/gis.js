@@ -255,7 +255,11 @@
         if (tiles) {
           const src = map.getSource(sid);
           if (src && src.setTiles) {
-            try { src.setTiles([tiles]); } catch (e) { /* TypeError during a failed load */ }
+            // setTiles() reloads every tile even for the same URL; only call it when the URL changed.
+            const cur = (src._options && src._options.tiles) || src.tiles;
+            if (!(cur && cur.length === 1 && cur[0] === tiles)) {
+              try { src.setTiles([tiles]); } catch (e) { /* TypeError during a failed load */ }
+            }
             if (src.attribution == null || src.attribution !== (l.credit || "")) {
               try { src.attribution = l.credit || ""; } catch (e) { /* ignore */ }
             }
