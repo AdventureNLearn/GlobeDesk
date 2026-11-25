@@ -95,6 +95,7 @@ After a Grok.me (or local) build:
 - [ ] CSP is present; no unpaid keys in the tree.
 - [ ] Sample is labelled Sample and is removable.
 - [ ] A fresh open (empty save) shows the GlobeDesk news desk with the GLOBEDESK badge, @AdventureNLearn, and version "v1.4.1 · Atlas" in the top bar. A skippable tutorial covers every feature (Help reopens it). The 50-topic example feed and the 2-story Washington, DC sample are not preloaded (open the sample from the guide, Menu → File → Sample, or ?sample=1).
+- [ ] The tutorial History video step is Live and links to `videos.html`. Opening `/videos.html` plays the hosted 720p film and captions.
 - [ ] Archive opens a card for every story (Washington, DC sample plus the news-desk topic set). A story deleted from the rundown is still in the Archive and **Bring back** restores it.
 - [ ] The Layers button (or the L key) opens the layer list. Show all and Hide all update the visible map layers in one go on the Offline globe and on Satellite + streets (not only the summary text). Home (or H) returns to the default globe.
 - [ ] At phone width (about 390 px) the globe shows first at full width; the ☰ Menu opens the top-bar buttons; panels fold. One-finger drag pans the globe; a two-finger pinch only zooms.

@@ -171,6 +171,7 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 | [demo/README.md](demo/README.md) | The mission demo and guide packs |
 | [GROK-ME-BUILD.md](GROK-ME-BUILD.md) | Rebuilding a hosted copy on Grok.me, including host-shell notes |
 | [docs/RELEASE-NOTES-v1.4.0.md](docs/RELEASE-NOTES-v1.4.0.md) | v1.4.0 Atlas: what is new, Coming soon and `[UNKNOWN]` items, credits |
+| [docs/RELEASE-NOTES-v1.4.1.md](docs/RELEASE-NOTES-v1.4.1.md) | v1.4.1: History video Live, Grok.me kit list repaired |
 | [CHANGELOG.md](CHANGELOG.md) | Full changelog |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
 

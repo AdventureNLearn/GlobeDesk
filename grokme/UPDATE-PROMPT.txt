@@ -12,11 +12,13 @@ Update this GlobeDesk copy from the public repository.
 
 Then run the test checklist in GROK-ME-BUILD.md.
 
-This documentation describes GlobeDesk v1.4.0 Atlas. After rebuilding, check that:
+This documentation describes GlobeDesk v1.4.1 Atlas. After rebuilding, check that:
 
-- The version string reads v1.4.0 · Atlas.
+- The version string reads v1.4.1 · Atlas.
 - A first open shows a skippable step-by-step tutorial (Welcome, then one step per feature, each marked Live or Coming soon). Skip is remembered; the Help button reopens it. The Washington, DC sample is not loaded by default (open it from the guide, Menu → File → Sample, or ?sample=1).
+- The tutorial History video step is Live and links to videos.html. Opening videos.html plays the hosted 720p US history film (1775–2026) with captions and chapters. The film file itself is not in the kit; it loads from the public asset host listed on that page.
 - Lite view (?lite=1, or the Lite view button) keeps the globe and the main buttons (Home, Layers, Atlas, Help). Full view brings every tool back.
 - On a touch screen, one finger pans the globe and a two-finger pinch only zooms (it does not rotate or tilt).
 - Live official GIS, dated imagery, and address search are still off by default.
 - Home (or H) returns to the start globe. Layers Show all and Hide all update the visible map in one go.
+- The copied tree includes every path in grokme/manifest.json, including videos.html, js/start-guide.js and js/tutorial-features.js, and the listed sizes and SHA-256 values match.

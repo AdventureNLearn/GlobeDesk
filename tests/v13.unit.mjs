@@ -128,6 +128,7 @@ await t("Version is v1.4.1 Atlas in the app, package.json and the CHANGELOG", ()
   assert.doesNotMatch(read("js", "version.js"), /1\.4\.0-draft|not released/);
   assert.equal(JSON.parse(read("package.json")).version, "1.4.1");
   assert.match(read("index.html"), /v1\.4\.1 · Atlas/);
+  assert.match(read("CHANGELOG.md"), /v1\.4\.1[^\n]*Atlas/);
   assert.match(read("CHANGELOG.md"), /v1\.4\.0[^\n]*Atlas/);
   assert.match(read("CHANGELOG.md"), /1\.3\.1/);
 });
