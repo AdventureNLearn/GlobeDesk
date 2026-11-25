@@ -7,7 +7,8 @@
       "title": "Battery University BU-205: Types of Lithium-ion",
       "url": "https://batteryuniversity.com/article/bu-205-types-of-lithium-ion",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "faa-packsafe",
@@ -15,7 +16,8 @@
       "url": "https://www.faa.gov/hazmat/packsafe/lithium-batteries",
       "checked": "2026-11-24",
       "class": "official",
-      "publisher": "US Federal Aviation Administration"
+      "publisher": "US Federal Aviation Administration",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "pvgis-usage",
@@ -23,84 +25,96 @@
       "url": "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis/general-information/usage-conditions-data-protection_en",
       "checked": "2026-11-24",
       "class": "official",
-      "publisher": "European Commission Joint Research Centre"
+      "publisher": "European Commission Joint Research Centre",
+      "license": "PVGIS usage conditions (checked 2026-11-24): The information provided by PVGIS is free and there are no restrictions on its use. For commercial software, you can use PVGIS results as long as you clearly acknowledge the source and do not suggest that the European Commission endorses your product."
     },
     {
       "id": "mppt-vpp",
       "title": "VanPartPicker: Victron SmartSolar MPPT 75/10",
       "url": "https://vanpartpicker.co.uk/part/victron-smartsolar-mppt-75-10",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "cell-fullbattery",
       "title": "Full Battery: LiFePO4 32700 6000 mAh cell",
       "url": "https://fullbattery.com/products/32700",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "cell-sheet-blivex",
       "title": "Blivex 32700 6.0Ah listing (supplier sheet)",
       "url": "https://www.alibaba.com/product-detail/Blivex-Electric-Car-Battery-Cell-32700_1601267023888.html",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "cell-sheet-dtp",
       "title": "DTP 32700 LiFePO4 cell listing (supplier sheet)",
       "url": "https://dtpbattery.en.made-in-china.com/product/zNImKXovwbhs/China-Un38-3-Approved-32700-LiFePO4-Battery-Cell-3-2V-6ah-6000mAh.html",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "panel-listing",
       "title": "100 W folding panel listing (example)",
       "url": "https://www.amazon.com/SOKIOVOLA-Portable-Waterproof-Lightweight-Activities/dp/B0CRB3DFRV",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "price-us-critpro",
       "title": "critpro.com: Victron SmartSolar MPPT 75/10",
       "url": "https://critpro.com/victron-smartsolar-mppt-75-10-solar-charge-controller/",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "price-gb-idealo",
       "title": "idealo.co.uk: Victron SmartSolar MPPT 75/10 offers",
       "url": "https://www.idealo.co.uk/compare/6042755/victron-smartsolar-mppt-75-10.html",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "price-it-idealo",
       "title": "idealo.it: Victron SmartSolar MPPT 75/10 offers",
       "url": "https://www.idealo.it/confronta-prezzi/6042755/victron-smartsolar-mppt-75-10.html",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "price-in-flyrobo",
       "title": "flyrobo.in: 32700 LiFePO4 cell",
       "url": "https://www.flyrobo.in/32700-3.2v-6000mah-lifepo4-battery-3c",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "price-in-electroncomponents",
       "title": "electroncomponents.com: 32700 LiFePO4 cell",
       "url": "https://www.electroncomponents.com/32700-lifepo-3v2-battery-rechargeable-high-power-6k",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "price-us-pack-listing",
       "title": "12.8 V 6 Ah LiFePO4 pack listing",
       "url": "https://www.amazon.com/TalentCell-LiFePO4-Battery-Rechargeable-Phosphate/dp/B08R1FWW5P",
       "checked": "2026-11-24",
-      "class": "reference"
+      "class": "reference",
+      "license": "[UNKNOWN]"
     },
     {
       "id": "ada-gov-guide",
