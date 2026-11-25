@@ -26,7 +26,7 @@
       "checked": "2026-11-24",
       "class": "official",
       "publisher": "European Commission Joint Research Centre",
-      "license": "PVGIS usage conditions (checked 2026-11-24): The information provided by PVGIS is free and there are no restrictions on its use. For commercial software, you can use PVGIS results as long as you clearly acknowledge the source and do not suggest that the European Commission endorses your product."
+      "license": "[UNKNOWN]"
     },
     {
       "id": "mppt-vpp",
@@ -143,8 +143,8 @@
       "publisher": "US Centers for Disease Control and Prevention",
       "license": "US federal government work: public domain in the US (17 U.S.C. 105); individual images may carry other rights",
       "description": "CDC Museum COVID-19 Timeline: dated entries from the first Wuhan cluster (December 12, 2019) through mid-2022, covering WHO and CDC actions, the first US cases, declarations, testing, vaccines and variants. Last reviewed July 8, 2024.",
-      "terms_url": "https://www.cdc.gov/other/agencymaterials.html",
-      "verified": "opened via a fetch service on 2026-11-24 (direct fetch returns HTTP 403)"
+      "verified": "opened via a fetch service on 2026-11-24 (direct fetch returns HTTP 403)",
+      "terms_url": "https://www.cdc.gov/other/agencymaterials.html"
     },
     {
       "id": "frh-crash-1929",
