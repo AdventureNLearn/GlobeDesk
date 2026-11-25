@@ -61,7 +61,7 @@ Offline, the bundled Natural Earth globe still runs (`?base=offline` or Layers �
 
 ## Host notes (Grok.me)
 
-These notes came from the v1.3.0 rebuild and were rechecked against the public live copy on Nov 22, 2026 (ET). They still apply in v1.4.0 Atlas. Build from https://github.com/AdventureNLearn/GlobeDesk (main branch):
+These notes came from the v1.3.0 rebuild and were rechecked against the public live copy on Nov 22, 2026 (ET). They still apply in v1.4.1 Atlas. Build from https://github.com/AdventureNLearn/GlobeDesk (main branch):
 
 - The kit is exactly the files listed in `grokme/manifest.json`. Copy them unchanged. Do not invent a new tree.
 - In this repository the entry page stays `index.html`. Do not add `desk.html` to the repo: on Grok.me, `/` is the host shell, which iframes `/desk.html`. A check of the live v1.3.1 copy found `/desk.html` byte-identical to this kit's `index.html`, and `/index.html` returned 404. How the builder maps those paths is [UNKNOWN].
@@ -75,7 +75,7 @@ These notes came from the v1.3.0 rebuild and were rechecked against the public l
 
 ## GROK-ME-UPDATE
 
-1. Each copy can show its local version from `js/version.js` (`1.4.0`). A remote version-check host is [UNKNOWN] and disabled.
+1. Each copy can show its local version from `js/version.js` (`1.4.1`). A remote version-check host is [UNKNOWN] and disabled.
 2. When a new GlobeDesk release is published, point the builder at https://github.com/AdventureNLearn/GlobeDesk (main) and paste `grokme/UPDATE-PROMPT.txt`.
 3. The builder rebuilds from that release's `grokme/manifest.json` and changes nothing else.
 4. If the copy looks wrong, roll back with the builder's own history (how Grok.me keeps history is [UNKNOWN]).
@@ -94,7 +94,7 @@ After a Grok.me (or local) build:
 - [ ] Assist tab rejects invalid JSON and accepts a valid episode.
 - [ ] CSP is present; no unpaid keys in the tree.
 - [ ] Sample is labelled Sample and is removable.
-- [ ] A fresh open (empty save) shows the GlobeDesk news desk with the GLOBEDESK badge, @AdventureNLearn, and version "v1.4.0 · Atlas" in the top bar. A skippable tutorial covers every feature (Help reopens it). The 50-topic example feed and the 2-story Washington, DC sample are not preloaded (open the sample from the guide, Menu → File → Sample, or ?sample=1).
+- [ ] A fresh open (empty save) shows the GlobeDesk news desk with the GLOBEDESK badge, @AdventureNLearn, and version "v1.4.1 · Atlas" in the top bar. A skippable tutorial covers every feature (Help reopens it). The 50-topic example feed and the 2-story Washington, DC sample are not preloaded (open the sample from the guide, Menu → File → Sample, or ?sample=1).
 - [ ] Archive opens a card for every story (Washington, DC sample plus the news-desk topic set). A story deleted from the rundown is still in the Archive and **Bring back** restores it.
 - [ ] The Layers button (or the L key) opens the layer list. Show all and Hide all update the visible map layers in one go on the Offline globe and on Satellite + streets (not only the summary text). Home (or H) returns to the default globe.
 - [ ] At phone width (about 390 px) the globe shows first at full width; the ☰ Menu opens the top-bar buttons; panels fold. One-finger drag pans the globe; a two-finger pinch only zooms.

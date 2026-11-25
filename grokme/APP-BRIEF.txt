@@ -6,4 +6,4 @@ No account, no required API key. Code is MIT; AdventureNLearn content is CC BY 4
 
 The base map is a separate core layer. User content never modifies the map style or tiles.
 
-This pack is v1.4.0 · Atlas. Build from the public repository, main branch: https://github.com/AdventureNLearn/GlobeDesk. Dated imagery, official GIS, and online address search stay off until the visitor opts in. On a touch screen, one finger pans the globe; a two-finger pinch only zooms.
+This pack is v1.4.1 · Atlas. Build from the public repository, main branch: https://github.com/AdventureNLearn/GlobeDesk. Dated imagery, official GIS, and online address search stay off until the visitor opts in. On a touch screen, one finger pans the globe; a two-finger pinch only zooms.
