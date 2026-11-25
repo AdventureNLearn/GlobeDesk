@@ -2,8 +2,8 @@ GlobeDesk is a local, free newsdesk and video studio on a talking globe, built b
 
 People create their own stories, drop pins on a free street-level globe, write cards and captions, attach their own video, images and audio (kept in the browser, never uploaded to a server), place that media as cards, popups, screen overlays or geo-anchored panels, mix sound, and export a .globedesk project or a local WebM recording.
 
-No account, no required API key. Code is MIT; AdventureNLearn content is CC BY 4.0. It opens on the news desk with no episode preloaded. A Washington, DC sample and a 50-topic example feed are optional. An Archive page keeps a card for every show and story ever added.
+No account, no required API key. Code is MIT; AdventureNLearn content is CC BY 4.0. It opens on the news desk with no episode preloaded. On the first visit a skippable tutorial covers every feature (Help reopens it). Lite view (?lite=1) shows the globe and the main buttons. A Washington, DC sample and a 50-topic example feed are optional and not loaded by default. An Archive page keeps a card for every show and story ever added.
 
 The base map is a separate core layer. User content never modifies the map style or tiles.
 
-This pack is v1.3.1 · Share & Export. Dated imagery, official GIS, and online address search stay off until the visitor opts in. The public globedesk.grok.me copy showed v1.3.1 on Nov 22, 2026 (checked that afternoon, ET).
+This pack is v1.4.0-draft · not released. Build from the public repository, main branch: https://github.com/AdventureNLearn/GlobeDesk. Dated imagery, official GIS, and online address search stay off until the visitor opts in. On a touch screen, one finger pans the globe; a two-finger pinch only zooms.

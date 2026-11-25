@@ -17,5 +17,10 @@
 - Opt-in dated NASA GIBS imagery (off by default); Blue Marble stays undated
 - EOX 2018-2025 mosaics behind a CC BY-NC-SA acknowledgement; 2016 remains the default; 2017 is not offered
 - Official USGS, Census TIGERweb, and nowCOAST overlays, off until live GIS is opted in
-- Version v1.3.1 · Share & Export
-- Layers panel (L) with Show all / Hide all, Reset (H), frame-accurate MP4 export, and an offline share pack (share pack needs the local server)
+- Version v1.4.0-draft · not released
+- Layers panel (L) with Show all / Hide all, Home (H), frame-accurate MP4 export, and an offline share pack (share pack needs the local server)
+- First open: a skippable step-by-step tutorial (Welcome, then one step per feature, Live or Coming soon); Help reopens it; the sample is not the default
+- Lite view (?lite=1, or the Lite view button): globe plus Home, Layers, Atlas and Help; Full view restores every tool
+- Touch: one-finger drag pans the globe; two-finger pinch only zooms
+- Atlas (draft): cited encyclopedia, work desks, bells and 3D objects
+- Build from https://github.com/AdventureNLearn/GlobeDesk (main branch)

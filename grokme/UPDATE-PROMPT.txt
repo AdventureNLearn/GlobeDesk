@@ -1,6 +1,7 @@
-Update this GlobeDesk copy to the newly published GlobeDesk release.
+Update this GlobeDesk copy from the public repository.
 
-- Use that release's grokme/manifest.json and copy every listed file unchanged.
+- Point the builder at the public repo's main branch: https://github.com/AdventureNLearn/GlobeDesk
+- Use that tree's grokme/manifest.json and copy every listed file unchanged.
 - Do not change behaviour that the manifest does not change.
 - Keep the safety rules in GROK-ME-BUILD.md and grokme/BUILDER-PROMPT.txt (local-only media, sanitizing, no keys in files, credit, not-verified labels, CSP hosts, base map vs content split).
 - Entry page stays index.html. desk.html is only the Grok.me host shell; never add it to the repo.
@@ -11,4 +12,11 @@ Update this GlobeDesk copy to the newly published GlobeDesk release.
 
 Then run the test checklist in GROK-ME-BUILD.md.
 
-This update is GlobeDesk v1.3.1 · Share & Export. After rebuilding, check that live GIS, dated imagery, and address search are still off by default, that the version string reads v1.3.1 · Share & Export, and that Layers Show all and Hide all update the visible map in one go.
+This documentation describes GlobeDesk v1.4.0-draft (not released). After rebuilding, check that:
+
+- The version string reads v1.4.0-draft · not released.
+- A first open shows a skippable step-by-step tutorial (Welcome, then one step per feature, each marked Live or Coming soon). Skip is remembered; the Help button reopens it. The Washington, DC sample is not loaded by default (open it from the guide, Menu → File → Sample, or ?sample=1).
+- Lite view (?lite=1, or the Lite view button) keeps the globe and the main buttons (Home, Layers, Atlas, Help). Full view brings every tool back.
+- On a touch screen, one finger pans the globe and a two-finger pinch only zooms (it does not rotate or tilt).
+- Live official GIS, dated imagery, and address search are still off by default.
+- Home (or H) returns to the start globe. Layers Show all and Hide all update the visible map in one go.
