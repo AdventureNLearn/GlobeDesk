@@ -148,10 +148,10 @@ Keys are typed into **Optional paid** and stored **only in this browser's `local
 3. Wire the optional TTS and AI adapters behind the existing toggles (bring your own key).
 4. Media relinking by file name and hash after opening a saved episode. A bundled project folder (`.globedesk` zip) with media.
 5. Higher-detail admin drill-down (state → county → town) from additional Natural Earth / gazetteer packs.
-6. MP4 export: shipped in v1.3 (browser WebCodecs + vendored Mediabunny; optional local ffmpeg). See "Share & Export (v1.3)".
+6. MP4 export: shipped in v1.3 and included in v1.4.0 (browser WebCodecs + vendored Mediabunny; optional local ffmpeg). See "Share & Export (v1.4.0)".
 7. Mobile layout for the editor (the outputs are already 9:16).
 
-## Share & Export (v1.3)
+## Share & Export (v1.4.0)
 
 - **Layers panel** (`js/layers-panel.js`): toolbar **Layers** / L. Rows come from `GD.layers` (bases, overlays), dated imagery, and the official-GIS registry, so it always matches the Inspector Layers tab. Show all / Hide all; first-run hint key `globedesk.hint.layers.v1` in localStorage.
 - **Frame export** (`js/frame-export.js`): deterministic camera (`cameraAtTime`), frame n at n / fps, WebCodecs + vendored Mediabunny 1.66.2 (MPL-2.0, unmodified). Fallbacks: the user's own optional ffmpeg install through `GET/POST /api/export/mp4` (loopback and app-origin only, fixed argv in `tools/ffmpeg_export.py`, 60 s upload read timeout, output streamed from a temp file), then WebM. FFmpeg is not shipped; its own GPL/LGPL licence applies. Caps 15 minutes and 2 GiB.
@@ -160,7 +160,7 @@ Keys are typed into **Optional paid** and stored **only in this browser's `local
 ## Stubbed / known gaps
 
 - **MP4 export** renders frames as fast as the GPU allows, which may be slower than real time; video b-roll audio is not mixed (voice-over and sound overlays are). AAC needs a browser AAC encoder: Chrome on Linux has none, so there the MP4 is video-only unless the local ffmpeg path is used.
-- **Share packs** do not carry local media, the content layer or event layers in v1.3.
+- **Share packs** do not carry local media, the content layer or event layers in v1.4.0.
 - **TTS and AI adapters** are stubs: the toggles and key storage work, but no provider is called.
 - **Browser voice** is for previews only. `speechSynthesis` audio cannot be captured, so it is not in recordings. Drop in a pre-recorded voiceover to record audio.
 - **Recording** is real-time capture of the live view. Audio is mixed only when the episode has a voiceover or video shot. Recording with audio was not exercised headless: [UNKNOWN] on every browser. Video-only capture was verified in headless Chrome.
