@@ -13,7 +13,7 @@ Exactly the files listed in `grokme/manifest.json` (path, size, SHA-256), copied
 Left out of the kit (keep them in the git repo, do not upload unless you choose to):
 
 - `shots/` (screenshots)
-- `starter/` (the take-away starter kit; it ships as `globedesk-starter-v1.4.0.zip` on the GitHub release)
+- `starter/` (the take-away starter kit; it ships as `globedesk-starter-v1.4.1.zip` on the GitHub release)
 - `demo/` (interactive mission tour and guide packs; over the 20 MiB kit budget)
 - `.git/`
 - zip artifacts outside this folder

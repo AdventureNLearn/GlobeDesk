@@ -115,7 +115,7 @@ Useful URL options:
 
 ## Make your own show (starter kit)
 
-The [`starter/`](starter/) folder is a clean baseline to take away. It also ships as **`globedesk-starter-v1.4.0.zip`** from the [GitHub Releases](https://github.com/AdventureNLearn/GlobeDesk/releases) page: [globedesk-starter-v1.4.0.zip](https://github.com/AdventureNLearn/GlobeDesk/releases/download/v1.4.0/globedesk-starter-v1.4.0.zip).
+The [`starter/`](starter/) folder is a clean baseline to take away. It also ships as **`globedesk-starter-v1.4.1.zip`** from the [GitHub Releases](https://github.com/AdventureNLearn/GlobeDesk/releases) page: [globedesk-starter-v1.4.1.zip](https://github.com/AdventureNLearn/GlobeDesk/releases/download/v1.4.1/globedesk-starter-v1.4.1.zip).
 
 | File | Use it for |
 |---|---|
