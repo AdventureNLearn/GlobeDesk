@@ -74,7 +74,7 @@ try {
   if (!(play.t > 2 && play.playing)) errors.push("playback clock did not advance");
   await ev("GD.playback.stop(); true");
   // Record path: start + stop a 2 s capture and check bytes are produced.
-  const recBytes = await ev(`(async () => { await GD.recorder.start('16:9'); await new Promise(r => setTimeout(r, 2000)); const rec = GD.recorder._rec; const sample = rec.ctx.getImageData(Math.floor(rec.canvas.width/2), Math.floor(rec.canvas.height/2), 1, 1).data; const pixelSum = sample[0]+sample[1]+sample[2]+sample[3]; const blob = await GD.recorder.stop('smoke.webm', { download: false }); return { bytes: blob && blob.size || 0, pixelSum, pdbAfter: GD.globe.isDrawingBufferPreserved && GD.globe.isDrawingBufferPreserved() }; })()`);
+  const recBytes = await ev(`(async () => { await Promise.race([GD.recorder.start('16:9'), new Promise((_, no) => setTimeout(() => no(new Error('recorder.start did not resolve in 30 s (map load stalled)')), 30000))]); await new Promise(r => setTimeout(r, 2000)); const rec = GD.recorder._rec; const sample = rec.ctx.getImageData(Math.floor(rec.canvas.width/2), Math.floor(rec.canvas.height/2), 1, 1).data; const pixelSum = sample[0]+sample[1]+sample[2]+sample[3]; const blob = await GD.recorder.stop('smoke.webm', { download: false }); return { bytes: blob && blob.size || 0, pixelSum, pdbAfter: GD.globe.isDrawingBufferPreserved && GD.globe.isDrawingBufferPreserved() }; })()`).catch((e) => { errors.push(String(e.message || e)); return null; });
   console.log("recorder (2 s):", JSON.stringify(recBytes));
   if (!(recBytes && recBytes.bytes > 0)) errors.push("recorder produced no data");
   if (recBytes && recBytes.pdbAfter) errors.push("drawing buffer still preserved after export");
@@ -159,7 +159,7 @@ try {
   await ev(`(() => { const m = GD.globe.st.map; m.jumpTo({ center: [30.56, 50.45], zoom: 6.5, pitch: 20, bearing: 0 }); return true; })()`);
   await idle(); await sleep(1200); await shot("15-geo-panel.png");
 
-  const rec2 = await ev(`(async () => { await GD.recorder.start('16:9'); await new Promise(r => setTimeout(r, 2000)); const rec = GD.recorder._rec; cancelAnimationFrame(rec.raf); return await new Promise(res => { rec.mr.onstop = () => res(rec.chunks.reduce((a, b) => a + b.size, 0)); rec.mr.stop(); rec.mr = null; }); })()`);
+  const rec2 = await ev(`(async () => { await Promise.race([GD.recorder.start('16:9'), new Promise((_, no) => setTimeout(() => no(new Error('recorder.start did not resolve in 30 s (map load stalled)')), 30000))]); await new Promise(r => setTimeout(r, 2000)); const rec = GD.recorder._rec; cancelAnimationFrame(rec.raf); return await new Promise(res => { rec.mr.onstop = () => res(rec.chunks.reduce((a, b) => a + b.size, 0)); rec.mr.stop(); rec.mr = null; }); })()`).catch((e) => { errors.push(String(e.message || e)); return null; });
   console.log("recorder bytes after reimport (2 s):", rec2);
   if (!(rec2 > 0)) errors.push("recorder after reimport produced no data");
   // Phone width (390 x 844): the globe comes first; screenshot for the README.

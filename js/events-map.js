@@ -126,6 +126,9 @@
     const m = em.map;
     if (!m || !GD.state.episode) return;
     if (GD.globe && GD.globe.st && GD.globe.st.map && GD.globe.st.map !== m) return;
+    // Hold the animation while the globe rebuilds its map (export, render options): setData every 40 ms keeps
+    // the sources from settling, so the new map's "load" never fires and recreateMap() never resolves.
+    if (GD.globe && GD.globe.st && GD.globe.st.recreating) return;
     let pulse;
     try { pulse = m.getLayer("ev-pt-pulse"); } catch (e) { return; }
     if (!pulse) return;
