@@ -15,7 +15,7 @@ Status as of Nov 25, 2026 (v1.4.0 Atlas). This file is the single list of open i
 | 9 | Chemistry 3D models (crystal or molecule) | OPEN | Needs an open-licence structure source [UNKNOWN]. |
 | 10 | DIY safety note on battery and build entries | OPEN | |
 | 11 | A real kit build and test | out of scope (owner decision 2026-11-24): demo sample; users populate their own 3D layers | The kit stays a draft demo sample, not built or tested. |
-| 12 | Release name v1.4.0 Atlas | OPEN | Build is labelled v1.4.0 · Atlas until this is decided. |
+| 12 | Release name v1.4.0 Atlas | RESOLVED (owner decision 2026-11-25) | The release name is v1.4.0 Atlas. The app, package, and docs show "v1.4.0 · Atlas". |
 | 13 | Official sources for 8 desks | RESOLVED (catalog) | All 10 desks now list primary/public-record official sources (verified Nov 24, 2026). Owner repos and Learning Lab cards remain separated under experimental references and never back claims. |
 | 14 | Withheld owner projects in desks | OPEN | Four desk rows show "owner project (link pending)" with no link: a state-level permitting prototype (Permits and Codes), a highway right-of-way record kernel (private repo) and a historic routes atlas (Infrastructure Trade and Routes), and a primary-law quotation collection (Regulatory and Public Records). Whether and how to link them is the owner's call. |
 | 15 | Learning Lab deep links | OPEN | Cards are linked to the Learning Lab home page with a card number; per-card links are [UNKNOWN]. |
