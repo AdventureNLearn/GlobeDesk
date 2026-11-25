@@ -494,18 +494,17 @@
       pixelRatio: R ? R.pixelRatio(dpr, prefs.pixelRatioCap) : Math.min(dpr, prefs.pixelRatioCap),
       attributionControl: { compact: true, customAttribution: "Made with Natural Earth" },
       canvasContextAttributes: attrs,
-      cooperativeGestures: !!(GD.mapPointer && GD.mapPointer.isPhoneLayout && GD.mapPointer.isPhoneLayout())
+      // Touch: one finger pans the globe, a two-finger pinch only zooms (no twist-rotate, no two-finger
+      // tilt). cooperativeGestures stays off so one finger moves the map instead of asking for two.
+      cooperativeGestures: false,
+      touchPitch: false
     };
   }
 
   function bindMapEvents(map) {
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
     map.addControl(panControl(), "top-right");
-    if (GD.mapPointer && GD.mapPointer.syncCooperativeGestures) GD.mapPointer.syncCooperativeGestures(map);
-    if (typeof window !== "undefined" && !window._gdCoopResize) {
-      window._gdCoopResize = true;
-      window.addEventListener("resize", () => { if (st.map && GD.mapPointer) GD.mapPointer.syncCooperativeGestures(st.map); });
-    }
+    if (GD.mapPointer && GD.mapPointer.applyTouchGestures) GD.mapPointer.applyTouchGestures(map);
     map.on("style.load", () => {
       try { map.setProjection({ type: "globe" }); } catch (e) { /* ignore */ }
       st.tileErrors = 0;

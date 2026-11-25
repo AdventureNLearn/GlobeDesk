@@ -14,6 +14,7 @@ Do not open `index.html` as a `file://` URL. The browser will block parts of the
 
 - On the first visit a short **guide** opens over the globe (Welcome, Home, Layers, Help). **Skip guide** or **Done** closes it, and this browser remembers that, so it does not come back on its own. **? Help** in the toolbar opens it again.
 - **⌂ Home** (or the H key) brings the globe back to the start view from anywhere.
+- **Touch** (phone, tablet, Lite view): drag with one finger to move the globe; pinch with two fingers to zoom. A pinch never rotates or tilts the globe. To rotate or tilt, use the compass and tilt buttons on the map. Swipe outside the map to scroll the page; swipe inside a panel to scroll the panel.
 - The **sample** is never loaded by itself. Open it from the guide (**Open the sample (Washington, DC)**), Menu → File → **Sample**, or `?sample=1`.
 - **Lite view** keeps the globe and the main buttons (Home, Layers, Atlas, Help) and hides the news desk, editing panels, playback bar and export tools. Turn it on with the **Lite view** button, Menu → View → **Lite view / Full view**, or `?lite=1`; **Full view** (or `?lite=0`) brings every tool back. The choice is remembered in this browser.
 

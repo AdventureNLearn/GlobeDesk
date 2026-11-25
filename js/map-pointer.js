@@ -297,12 +297,17 @@
     });
   }
 
-  function syncCooperativeGestures(map) {
-    if (!map || !map.cooperativeGestures) return;
-    try {
-      if (isPhoneLayout()) map.cooperativeGestures.enable();
-      else map.cooperativeGestures.disable();
-    } catch (e) { /* older MapLibre */ }
+  // Touch gestures on every layout (desktop, phone, Lite): one-finger drag pans the globe; a two-finger
+  // pinch zooms only, so rotate and tilt never happen by accident. Mouse rotate (right-drag) and the
+  // compass are unchanged. Page and panel scrolling work outside the map.
+  function applyTouchGestures(map) {
+    if (!map) return;
+    const call = (h, fn) => { try { if (h && h[fn]) h[fn](); } catch (e) { /* older MapLibre */ } };
+    call(map.cooperativeGestures, "disable");
+    call(map.dragPan, "enable");
+    call(map.touchZoomRotate, "enable");
+    call(map.touchZoomRotate, "disableRotation");
+    call(map.touchPitch, "disable");
   }
 
   GD.mapPointer = {
@@ -311,6 +316,6 @@
     shouldSeekOnSelect, actionFor, nextSelection, getSelection, setSelection, clearSelection, apply,
     dropStoryPinAt, bind, eventPoint, hitsAt, dispatchClick,
     pointerIsDown, notePointerDown, notePointerUp, requestCamera, stopMotion, resetPointerState,
-    syncCooperativeGestures
+    applyTouchGestures
   };
 })();

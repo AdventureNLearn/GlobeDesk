@@ -525,7 +525,7 @@ t("P3: reduced-motion, 24 px hits, and docs no longer say click the globe", () =
   assert.equal(mapPointer.reduceMotion(), false);
   const globeSrc = fs.readFileSync(path.join(root, "js", "globe.js"), "utf8");
   assert.ok(globeSrc.includes("essential: false"));
-  assert.ok(globeSrc.includes("cooperativeGestures"));
+  assert.ok(globeSrc.includes("cooperativeGestures: false") && globeSrc.includes("touchPitch: false") && globeSrc.includes("applyTouchGestures"));
   assert.ok(globeSrc.includes("gd-pan-ctrl"));
   const evSrc = fs.readFileSync(path.join(root, "js", "events-map.js"), "utf8");
   assert.ok(evSrc.includes("reduceMotion"));

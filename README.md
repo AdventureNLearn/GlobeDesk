@@ -168,6 +168,7 @@ node tests/smoke.mjs                         # headless Chrome load, fails on co
 node tests/smoke-events.mjs                  # Event Layers in the browser
 node tests/smoke-callouts.mjs                # several open cards at zoom 1.5/3/6/12, desktop and phone
 node tests/firstload.mjs                     # empty-cache first visit: desktop, phone (390x844, touch) and Lite view
+node tests/smoke-touch.mjs                   # touch: one-finger pan, pinch zoom only, page and panel scrolling
 python3 tools/make_grokme_manifest.py --check
 python3 tools/scrub_scan.py                  # no private paths, emails or internal IDs in the tree
 python3 tools/make_starter_zip.py            # builds the starter zip and scans it
