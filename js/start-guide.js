@@ -52,7 +52,12 @@
     if (hiddenTarget) body += " <em>In Lite view, press <strong>Full view</strong> to see this.</em>";
     $("sgBody").innerHTML = body;
     const vid = $("sgVideo");
-    if (vid) { vid.hidden = !s.video; vid.textContent = s.video ? VIDEO_PLACEHOLDER : ""; }
+    if (vid) {
+      const url = s.videoUrl || GD.historyVideoUrl || null;
+      vid.hidden = !s.video;
+      // No player is created while the URL is null. Filling HISTORY_VIDEO_URL is the slot for a later hosted film.
+      vid.textContent = s.video && !url ? VIDEO_PLACEHOLDER : "";
+    }
     const jump = $("sgJump");
     if (jump) jump.value = String(st.step);
     $("sgLinks").hidden = st.step !== 0;

@@ -53,13 +53,15 @@ its result disagree. The labels live in `js/tutorial-features.js`; this file is 
 | 40 | Cloud voices | **Coming soon** | tests/smoke-features.mjs → `cloudVoice` | the settings panel marks it "stub" and "not wired" |
 | 41 | Cloud AI suggestions | **Coming soon** | tests/smoke-features.mjs → `cloudAi` | the settings panel marks it "stub" and "not wired" |
 | 42 | Historical map (OpenHistoricalMap) | **Coming soon** | tests/smoke-features.mjs → `historicalMap` | Layers lists it as "Historical map (OpenHistoricalMap) [UNKNOWN] — not wired yet" |
-| 43 | History video | **Coming soon** | tests/smoke-features.mjs → `historyVideo` | the tutorial step shows the marked placeholder; no video, link or embed |
+| 43 | History video | **Coming soon** | tests/smoke-features.mjs → `historyVideo` | the tutorial step shows the marked placeholder; HISTORY_VIDEO_URL is null; no video, link or embed |
 | 44 | Help | **Live** | tests/smoke-features.mjs → `tutorial` | Help opened the tour (45 steps); Skip closed it |
 
 ## History video
 
 The tutorial has a **History video** step with a dashed box marked
-`PLACEHOLDER: history video`. No video is embedded, linked or uploaded in this build.
+`PLACEHOLDER: history video`. `HISTORY_VIDEO_URL` in `js/tutorial-features.js` is
+null (a slot for a future hosted URL; do not invent a domain). No video is
+embedded, linked or uploaded in this build. There is no videos page in this release.
 
 ## Lite view
 

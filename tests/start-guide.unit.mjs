@@ -105,6 +105,9 @@ t("history video step is a clearly marked placeholder with no video, link or emb
   assert.equal(h.els.sgVideo.hidden, false);
   assert.match(h.els.sgVideo.textContent, /^PLACEHOLDER: history video/);
   assert.equal(h.els.sgLabel.textContent, "Coming soon");
+  const hv = FEATURES.find((f) => f.id === "history-video");
+  assert.equal(hv.videoUrl, null);
+  assert.equal(hv.status, "Coming soon");
   for (const s of [src, featSrc, html]) assert.doesNotMatch(s, /<video|<iframe[^>]*history|\.mp4|youtube\.com\/watch|youtu\.be/i);
 });
 t("docs/FEATURES.md lists every feature with the same label as the tutorial", () => {
