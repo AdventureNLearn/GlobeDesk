@@ -127,7 +127,7 @@ Open the episode in GlobeDesk (**Open**), replace every `[UNKNOWN]`, and save. T
 
 ## News desk and sample
 
-GlobeDesk opens on the **news desk**, with no episode preloaded. Section tabs and story cards browse a 50-topic example feed in 10 sections (world, politics, climate, science, history, economy, conflict, culture, tech, and local civic). Cards keep `[UNKNOWN]` marks and approximate-pin notes as they were written. Click a card and the globe flies to that pin. **Workspace** opens the full editor.
+GlobeDesk opens on the **news desk**, with no episode preloaded. On the first visit a short, skippable guide points at **⌂ Home**, **Layers** and **? Help**; Help reopens it later. **Lite view** (`?lite=1`, or the Lite view button) shows just the globe and the main buttons; **Full view** brings every tool back. Section tabs and story cards browse a 50-topic example feed in 10 sections (world, politics, climate, science, history, economy, conflict, culture, tech, and local civic). Cards keep `[UNKNOWN]` marks and approximate-pin notes as they were written. Click a card and the globe flies to that pin. **Workspace** opens the full editor.
 
 - **Sample** loads a short Washington, DC National Mall walk (two stories, approximate pins, official sources). Locations are approximate, and claims are as reported, not verified.
 - Every card in the sample and in the topic feed links its source.
@@ -167,6 +167,7 @@ npm test                                     # unit suites (model, events, v0.4,
 node tests/smoke.mjs                         # headless Chrome load, fails on console errors, writes shots/
 node tests/smoke-events.mjs                  # Event Layers in the browser
 node tests/smoke-callouts.mjs                # several open cards at zoom 1.5/3/6/12, desktop and phone
+node tests/firstload.mjs                     # empty-cache first visit: desktop, phone (390x844, touch) and Lite view
 python3 tools/make_grokme_manifest.py --check
 python3 tools/scrub_scan.py                  # no private paths, emails or internal IDs in the tree
 python3 tools/make_starter_zip.py            # builds the starter zip and scans it

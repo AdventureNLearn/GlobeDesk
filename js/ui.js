@@ -1268,6 +1268,7 @@
     // ?callouts=slug-a,slug-b opens several cards on the globe at once.
     if (params.get("callouts") && GD.callouts) { GD.callouts.openSlugs(params.get("callouts").split(",").map((x) => x.trim()).filter(Boolean)); renderRundown(); }
     GD.globe.st.onReady.push(() => { GD.globe.setEpisode(S.episode); renderOverlays(); });
+    if (GD.startGuide) { try { GD.startGuide.boot(params); } catch (e) { console.error("start guide failed", e); } }
     window.__globedesk = window.__gobedesk = { ready: true }; // smoke-test hook (legacy alias kept)
   }
 

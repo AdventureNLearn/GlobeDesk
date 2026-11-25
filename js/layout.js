@@ -613,7 +613,8 @@
       { id: "view-compact", label: "Layout: Compact / laptop", kind: "template", template: "compact", run: () => applyTemplate("compact") },
       { id: "view-lock-all", label: "Lock all panels", kind: "toggle", run: () => setLockAll(!state.lockAll) },
       { id: "view-reset", label: "Reset layout", run: () => reset() },
-      { id: "view-reset-globe", label: "Reset globe", shortcut: "H", run: () => GD.resetView && GD.resetView() },
+      { id: "view-reset-globe", label: "Home (reset globe)", shortcut: "H", run: () => GD.resetView && GD.resetView() },
+      { id: "view-lite", label: "Lite view / Full view", run: () => GD.startGuide && GD.startGuide.setLite(!GD.startGuide.isLite()) },
       { id: "view-layers", label: "Layers (turn map layers on or off)", shortcut: "L", run: () => GD.layersPanel && GD.layersPanel.open() },
       { id: "vis-rundown", label: "Show Rundown", kind: "visibility", panel: "rundown", run: () => setPanelVisible("rundown", !state.panels.rundown.visible) },
       { id: "vis-bin", label: "Show Media bin", kind: "visibility", panel: "bin", run: () => setPanelVisible("bin", !state.panels.bin.visible) },
@@ -628,6 +629,7 @@
       { id: "ex-webm", label: "Record WebM", run: () => clickId("btnRecord") }
     ]},
     { group: "Help", items: [
+      { id: "help-start-guide", label: "Start guide (step by step)", run: () => GD.startGuide && GD.startGuide.open(0) },
       { id: "help-guide", label: "Guide", run: () => openHelp("guide") },
       { id: "help-shortcuts", label: "Keyboard shortcuts", run: () => openHelp("shortcuts") },
       { id: "help-version", label: "Version", run: () => openHelp("version") },

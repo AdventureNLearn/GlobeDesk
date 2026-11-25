@@ -14,7 +14,7 @@ await t("Reset sits in the main toolbar with a tooltip and an H shortcut, not ov
   const header = html.slice(html.indexOf('<header class="topbar"'), html.indexOf("</header>"));
   const ess = header.slice(header.indexOf('id="toolsEssential"'), header.indexOf('id="tools"'));
   assert.match(ess, /id="btnReset"/);
-  assert.match(ess, /title="Reset to the default globe \(H\)"/);
+  assert.match(ess, /title="Home: back to the start globe \(H\)"/); // labelled Home since the start-view change
   assert.match(ess, /aria-keyshortcuts="h"/);
   const transportAt = html.indexOf('id="transportBar"');
   const resetAt = header.indexOf('id="btnReset"');

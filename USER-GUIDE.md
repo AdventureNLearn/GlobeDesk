@@ -10,6 +10,13 @@ GlobeDesk is a local studio. There is no account and no server. Everything you c
 
 Do not open `index.html` as a `file://` URL. The browser will block parts of the app.
 
+### First open, Home, Help and Lite view
+
+- On the first visit a short **guide** opens over the globe (Welcome, Home, Layers, Help). **Skip guide** or **Done** closes it, and this browser remembers that, so it does not come back on its own. **? Help** in the toolbar opens it again.
+- **⌂ Home** (or the H key) brings the globe back to the start view from anywhere.
+- The **sample** is never loaded by itself. Open it from the guide (**Open the sample (Washington, DC)**), Menu → File → **Sample**, or `?sample=1`.
+- **Lite view** keeps the globe and the main buttons (Home, Layers, Atlas, Help) and hides the news desk, editing panels, playback bar and export tools. Turn it on with the **Lite view** button, Menu → View → **Lite view / Full view**, or `?lite=1`; **Full view** (or `?lite=0`) brings every tool back. The choice is remembered in this browser.
+
 ## Make your own story
 
 - In the rundown, click **+ story**. You can also duplicate, reorder, or delete a story.

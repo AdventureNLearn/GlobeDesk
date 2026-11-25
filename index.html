@@ -20,7 +20,7 @@
       <span class="brand-sub"><a id="handleLink" href="https://x.com/AdventureNLearn" target="_blank" rel="noopener noreferrer">@AdventureNLearn</a> · <span id="appVersion" class="ver">v1.4.0-draft · not released</span></span></div>
     <input id="epTitle" class="ep-title" aria-label="Episode title" placeholder="Episode title">
     <div class="tools tools-essential" id="toolsEssential">
-      <button id="btnReset" type="button" title="Reset to the default globe (H)" aria-keyshortcuts="h">Reset</button>
+      <button id="btnReset" type="button" title="Home: back to the start globe (H)" aria-keyshortcuts="h"><span aria-hidden="true">⌂</span> Home</button>
       <span class="lp-anchor">
         <button id="btnLayers" type="button" title="Map layers: turn each one on or off (L)" aria-keyshortcuts="l" aria-haspopup="dialog" aria-controls="layersPanel" aria-expanded="false"><span aria-hidden="true">◧</span> Layers</button>
         <span id="layersHint" class="lp-hint" role="note" hidden><span>All map layers live here. Turn each one on or off, or press Show all.</span> <button id="layersHintOpen" type="button" class="mini">Open Layers</button> <button id="layersHintOk" type="button" class="mini">Got it</button></span>
@@ -32,6 +32,8 @@
       <button id="btnExport" type="button" title="Export an MP4 video or an offline share pack" aria-haspopup="dialog" aria-controls="exportDialog">Export</button>
       <button id="btnViewToggle" type="button" aria-pressed="false" title="Open the full editor suite">Workspace</button>
       <button id="btnAtlas" type="button" aria-pressed="false" aria-controls="atlasView" title="Atlas: GlobeDesk's own cited encyclopedia (draft)">Atlas</button>
+      <button id="btnLiteToggle" type="button" aria-pressed="false" title="Simple view: globe, Home, Layers, Atlas and Help">Lite view</button>
+      <button id="btnHelp" type="button" aria-haspopup="dialog" aria-controls="startGuide" title="Help: open the guide"><span aria-hidden="true">?</span> Help</button>
     </div>
     <div class="tools tools-overflow" id="tools">
       <button id="btnArchive" title="Every show and story ever added. Open one to bring it back.">Archive</button>
@@ -189,6 +191,22 @@
     <div id="archiveBody" class="archive-body"></div>
   </dialog>
   <dialog id="settings"><form method="dialog"><h2>Optional paid features</h2><div id="settingsBody"></div><button>Close</button></form></dialog>
+  <section id="startGuide" class="start-guide" role="dialog" aria-modal="false" aria-labelledby="sgTitle" hidden>
+    <p id="sgCount" class="sg-count small muted">Step 1 of 4</p>
+    <h2 id="sgTitle">Welcome to GlobeDesk</h2>
+    <span id="sgLabel" class="sg-label" hidden></span>
+    <div id="sgBody" class="sg-body"></div>
+    <div id="sgVideo" class="sg-video" hidden></div>
+    <div id="sgLinks" class="sg-links">
+      <button id="sgSample" type="button">Open the sample (Washington, DC)</button>
+      <button id="sgAtlas" type="button">Open the Atlas</button>
+      <button id="sgLite" type="button">Switch Lite / Full view</button>
+    </div>
+    <div class="sg-actions">
+      <button id="sgSkip" type="button" class="sg-skip">Skip guide</button>
+      <span class="sg-nav"><button id="sgBack" type="button">Back</button> <button id="sgNext" type="button" class="sg-next">Next</button></span>
+    </div>
+  </section>
   <div id="toast" class="toast" role="status"></div>
 
   <script src="vendor/maplibre-gl.js"></script>
@@ -248,6 +266,7 @@
   <script src="js/atlas/atlas-3d.js"></script>
   <script src="js/atlas/atlas-view.js"></script>
   <script src="js/share-pack.js"></script>
+  <script src="js/start-guide.js"></script>
   <script src="js/ui.js"></script>
   <script src="js/commands.js"></script>
 </body>

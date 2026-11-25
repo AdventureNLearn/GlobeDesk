@@ -742,3 +742,41 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
   .atlas-view button, .atlas-view select, .atlas-view input { min-height: 44px; }
 }
 @media (prefers-reduced-transparency: reduce) { .atlas-view { background: var(--gd-surface); } }
+
+/* ---------- Start guide (first open, Help reopens it) ---------- */
+.start-guide { position: fixed; z-index: 60; right: 16px; bottom: 16px; width: min(360px, calc(100vw - 24px)); max-height: calc(100vh - 32px); overflow: auto;
+  background: var(--gd-bg-deep, #050a14); color: var(--gd-text, #e8f0ff); border: 1px solid var(--gd-cyan, #57d6ff); border-radius: 10px; padding: 14px 16px; box-shadow: 0 8px 30px rgba(0,0,0,.55); }
+.start-guide[hidden] { display: none; }
+.start-guide h2 { margin: 2px 0 6px; font-size: 18px; }
+.start-guide .sg-count { margin: 0; }
+.start-guide .sg-body { font-size: 14px; line-height: 1.45; }
+.start-guide .sg-body p { margin: 0 0 6px; }
+.start-guide .sg-links { display: flex; flex-direction: column; gap: 6px; margin: 10px 0 4px; }
+.start-guide .sg-links[hidden] { display: none; }
+.start-guide .sg-links button { text-align: left; }
+.start-guide .sg-actions { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 12px; }
+.start-guide .sg-next { font-weight: 700; border-color: var(--gd-cyan, #57d6ff); }
+.start-guide .sg-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border-radius: 99px; margin-bottom: 6px; }
+.start-guide .sg-label[data-status="Live"] { background: #1d6b45; color: #eafff3; }
+.start-guide .sg-label[data-status="Coming soon"] { background: #6b5a1d; color: #fff8e0; }
+.start-guide .sg-video { border: 2px dashed var(--gd-gold, #f0c060); border-radius: 8px; padding: 10px; margin-top: 8px; font-size: 13px; }
+.start-guide .sg-video[hidden] { display: none; }
+.sg-target { outline: 3px solid var(--gd-gold, #f0c060) !important; outline-offset: 2px; border-radius: 6px; }
+#btnHelp, #btnLiteToggle { white-space: nowrap; }
+@media (max-width: 760px) {
+  .start-guide { left: 8px; right: 8px; bottom: 8px; width: auto; max-height: 55vh; }
+  /* Every main button stays on screen and labelled on a phone: the toolbar wraps instead of overflowing. */
+  .tools-essential { flex-wrap: wrap; justify-content: flex-start; margin-left: 0; gap: 6px; max-width: 100%; }
+}
+
+/* ---------- Lite view: the globe and the main buttons only (Full view brings every tool back) ---------- */
+body.lite #newsdesk, body.lite .dock-left, body.lite .dock-right, body.lite .dock-bottom, body.lite .readable,
+body.lite .ep-title, body.lite .brand-sub, body.lite .tools-overflow, body.lite .tools-essential .seg,
+body.lite #btnRecord, body.lite #btnExport, body.lite #btnViewToggle, body.lite #layersHint { display: none !important; }
+body.lite .desk { grid-template-columns: 0 0 minmax(0, 1fr) 0 !important; }
+body.lite .stage-wrap { padding: 0; }
+body.lite .stage { width: 100% !important; height: 100% !important; }
+@media (max-width: 760px) {
+  body.lite .stage-wrap { height: calc(100vh - 120px); min-height: 320px; }
+  body.lite .tools-essential { flex-wrap: wrap; gap: 6px; }
+}
