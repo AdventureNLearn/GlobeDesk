@@ -774,7 +774,7 @@
     const dlg = $("helpDialog");
     const body = $("helpDialogBody");
     if (!dlg || !body) return;
-    const ver = (GD.version && (GD.version.label || (GD.version.number + (GD.version.suffix ? " · " + GD.version.suffix : "")))) || ($("appVersion") && $("appVersion").textContent) || "v1.3.1 · Share & Export";
+    const ver = (GD.version && (GD.version.label || (GD.version.number + (GD.version.suffix ? " · " + GD.version.suffix : "")))) || ($("appVersion") && $("appVersion").textContent) || "v1.4.0 · Atlas";
     const link = (key, label) => "<a href='" + escapeHtml(REPO_PAGES[key]) + "' target='_blank' rel='noopener noreferrer'>" + escapeHtml(label) + "</a>";
     if (kind === "about") {
       body.innerHTML = "<p><strong>GlobeDesk</strong> · " + escapeHtml(ver) + " · by @AdventureNLearn</p>" +

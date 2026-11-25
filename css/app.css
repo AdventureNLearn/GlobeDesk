@@ -654,7 +654,7 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 #exMp4Progress { width: 100%; accent-color: var(--gd-cyan); }
 @media (max-width: 760px) { dialog.export-dialog { width: 100vw; max-width: 100vw; max-height: 100vh; height: 100vh; margin: 0; border-radius: 0; } }
 
-/* ---- v1.4.0-draft: Atlas view, work desks, user-content layers (no inline styles; CSP style-src 'self') ---- */
+/* ---- v1.4.0: Atlas view, work desks, user-content layers (no inline styles; CSP style-src 'self') ---- */
 #btnAtlas { margin-left: 4px; border-color: var(--gd-border-data); color: var(--gd-gold); }
 #btnAtlas[aria-pressed="true"] { background: rgba(231, 199, 102, 0.16); }
 .atlas-view { position: fixed; left: 0; top: 52px; bottom: 0; width: min(560px, 100vw); z-index: 35; display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; overflow: hidden;

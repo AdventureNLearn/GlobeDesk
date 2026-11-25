@@ -12,9 +12,9 @@ Update this GlobeDesk copy from the public repository.
 
 Then run the test checklist in GROK-ME-BUILD.md.
 
-This documentation describes GlobeDesk v1.4.0-draft (not released). After rebuilding, check that:
+This documentation describes GlobeDesk v1.4.0 Atlas. After rebuilding, check that:
 
-- The version string reads v1.4.0-draft · not released.
+- The version string reads v1.4.0 · Atlas.
 - A first open shows a skippable step-by-step tutorial (Welcome, then one step per feature, each marked Live or Coming soon). Skip is remembered; the Help button reopens it. The Washington, DC sample is not loaded by default (open it from the guide, Menu → File → Sample, or ?sample=1).
 - Lite view (?lite=1, or the Lite view button) keeps the globe and the main buttons (Home, Layers, Atlas, Help). Full view brings every tool back.
 - On a touch screen, one finger pans the globe and a two-finger pinch only zooms (it does not rotate or tilt).

@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "1.4.0-draft",
+  "version": "1.4.0",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",

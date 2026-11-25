@@ -3,8 +3,8 @@
 (function () {
   "use strict";
   const GD = (window.GD = window.GD || {});
-  const APP = "1.4.0-draft";
-  const EDITION = "not released"; // release name is an open owner question (atlas/OPEN-ITEMS.md #12)
+  const APP = "1.4.0";
+  const EDITION = "Atlas";
   // Intended post-release check URL is not confirmed. Do not invent a host.
   const URL = null; // [UNKNOWN]
 

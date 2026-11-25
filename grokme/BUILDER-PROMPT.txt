@@ -32,14 +32,14 @@ Host shell (do not change the kit to match the wrapper)
 
 When you are done, follow the test checklist in GROK-ME-BUILD.md.
 
-Live data (still off by default in v1.4.0-draft)
+Live data (still off by default in v1.4.0)
 - Keep live official GIS, dated NASA GIBS imagery, and online address search off by default.
 - Do not add Content-Security-Policy hosts beyond those already in index.html.
 - Do not add Nominatim, geocoding.geo.census.gov, or ArcGIS Online hosts. Census geocoding, if present, stays on the local serve.py proxy only.
 - Do not enable the EOX 2017 mosaic. Keep 2018-2025 behind the non-commercial acknowledgement.
 - A click on the map selects; a pin is dropped only on right-click or a long press of about 500 ms.
 
-First open, Lite view and touch (v1.4.0-draft)
+First open, Lite view and touch (v1.4.0 Atlas)
 - A first visit shows a skippable tutorial (one step per feature, marked Live or Coming soon). Help reopens it. Do not preload the Washington, DC sample.
 - Honour ?lite=1 (and the Lite view button): the globe and the main buttons only; Full view brings every tool back.
 - On a touch screen, one finger pans the globe; a two-finger pinch only zooms (no pinch-rotate, no two-finger tilt).

@@ -1,8 +1,8 @@
 # Changelog
 
-## v1.4.0-draft — not released (local branch next/atlas-v1.4)
+## v1.4.0 — Atlas — 2026-11-25
 
-- Version shown as "v1.4.0-draft · not released". The release name is an open owner question (atlas/OPEN-ITEMS.md, item 12). Not pushed, merged or published.
+- Version shown as "v1.4.0 · Atlas".
 - **Atlas.** New **Atlas** view beside News desk and Workspace: A–Z, Categories, By place and By year browsing (years, then months and ISO weeks in the current year, plus **This week**), a reading-level switch, a **Globe | 3D** switch, and Object, Parts, Chemistry and Sources tabs. Data: 12-category tree, entry schema (`schema/atlas-entry.schema.json`), pack manifest schema (`schema/atlas-pack-manifest.schema.json`), a core pack and four starter packs (Energy, 3D objects, Chemistry, Economics and prices; 10 draft or placeholder entries), the bag solar kit record, LFP vs NMC chemistry record and US, GB, IT and IN price checks. `tools/atlas/` builds the packs and the generated `js/atlas/atlas-data.js` and validates everything (no entries about living people, Now timing, sources, sizes under 50 MB, hashes). Online price and solar lookups stay off.
 - **3D.** three.js r158 (MIT, unmodified) is vendored and lazy-loaded only when 3D is chosen; it draws the kit's parametric layout. If WebGL or the file is missing, the view is a labelled stub.
 - **Work desks.** A **Desk** menu above the news desk adds nine work desks next to the unchanged News desk: Permits and Codes; Jobsite and Constructability; Trades and Skills; Engineering and 3D Objects; Energy and Materials; Infrastructure, Trade and Routes; Regulatory and Public Records; Surveillance and Civil Liberties; Security and Counterterrorism (`desks/work-desks.json`).

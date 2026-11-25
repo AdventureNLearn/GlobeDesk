@@ -4,8 +4,8 @@
 
 | Version | Supported |
 |---|---|
-| 1.4.0-draft (this tree, not released) | Yes — report against the tree you are running |
-| 1.3.x (last public release) | Yes |
+| 1.4.0 (this tree, Atlas) | Yes — report against the tree you are running |
+| 1.3.x | Yes |
 | < 1.3 | No. Please update. |
 
 ## Reporting a vulnerability
