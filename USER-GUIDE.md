@@ -4,7 +4,7 @@ GlobeDesk is a local studio. There is no account and no server. Everything you c
 
 ## Getting started
 
-1. Put the app folder somewhere convenient, for example `C:\GlobeDesk`, so that `index.html` is in that folder.
+1. Put the app folder somewhere convenient, for example a folder named GlobeDesk, so that `index.html` is in that folder.
 2. Windows: double-click `START-GLOBEDESK.bat`. Any OS: run `python3 tools/serve.py` (or `python3 -m http.server 8080 --bind 127.0.0.1`) and open <http://127.0.0.1:8080>.
 3. The first visit opens the **news desk**, with no episode preloaded. Use the section tabs to browse example topics, or click **Workspace** for the full editor. **Sample** loads the short Washington, DC walk (approximate pins). **New blank** starts your own show. Later visits restore the project this browser autosaved. Click **Archive** to see a card for every show and story that has ever been in the desk and bring any of them back.
 
@@ -62,7 +62,7 @@ The default spoken voice is the browser's free speech synthesis.
 
 ## Layers
 
-Click **Layers** in the top bar (or press **L**) to see every map layer in one place. Each row has an on/off switch, a one-line description and a small legend. **Show all** turns on every overlay that can sit on the current base map; **Hide all** turns them all off. Pick the base map at the top of the panel. Dated imagery and official GIS layers are further down and stay off until you opt in. **Reset** (H) flies back to the starting globe without changing your layers.
+Click **Layers** in the top bar (or press **L**) to see every map layer in one place. Each row has an on/off switch, a one-line description and a small legend. **Show all** turns on every overlay that can sit on the current base map; **Hide all** turns them all off. Pick the base map at the top of the panel. Dated imagery and official GIS layers are further down and stay off until you opt in. **⌂ Home** (or H) flies back to the starting globe without changing your layers.
 
 ## Atlas, desks and your layer (v1.4.0-draft, not released)
 

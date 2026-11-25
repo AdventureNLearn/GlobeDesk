@@ -1,6 +1,6 @@
 # Build your own object
 
-The v1.4.0-draft release ships the Atlas **3D workshop** and one **demo sample**: the bag solar kit. You can add your own buildable object or kit layer by copying that sample. You do not need to do a real kit build, fill in prices, or invent numbers. Mark any gap `[UNKNOWN]`.
+The v1.4.0-draft tree ships the Atlas **3D workshop** and one **demo sample**: the bag solar kit. You can add your own buildable object or kit layer by copying that sample. You do not need to do a real kit build, fill in prices, or invent numbers. Mark any gap `[UNKNOWN]`.
 
 This is a local draft in your copy of the app. Publishing a pack still needs the owner's YES ([docs/PROMOTE.md](PROMOTE.md)).
 

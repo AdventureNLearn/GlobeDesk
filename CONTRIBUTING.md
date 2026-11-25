@@ -18,7 +18,7 @@ Not a fit: tracking or locating private people, scraped data that breaks a site'
 
 ## Build your own object
 
-The release ships the 3D workshop and the bag solar kit as a demo sample. To add a buildable object or kit layer of your own, copy that sample, rebuild, validate and load it in Atlas. The steps and every schema field are in [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md). You do not need to do a real kit build or fill in prices.
+The v1.4.0-draft tree ships the 3D workshop and the bag solar kit as a demo sample. To add a buildable object or kit layer of your own, copy that sample, rebuild, validate and load it in Atlas. The steps and every schema field are in [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md). You do not need to do a real kit build or fill in prices.
 
 ## Atlas entries, bells and history
 
@@ -71,7 +71,7 @@ python3 tools/make_grokme_manifest.py --check       # ...then this must print ok
 python3 tools/scrub_scan.py                         # must report 0 hits
 ```
 
-Run only what applies, and list what you ran in the PR. If you change a bundled show (for example `js/model.js`), regenerate its files with `node tests/build-templates.mjs`. The maintainer also runs a private name scan before merging; you can run `tools/name_scan.py --patterns your-list.json` with your own list.
+Run only what applies, and list what you ran in the PR. If you change a bundled show (for example `episodes/washington-dc-demo.globedesk.json`), regenerate its files with `node tests/build-templates.mjs`. The maintainer also runs a private name scan before merging; you can run `tools/name_scan.py --patterns your-list.json` with your own list.
 
 ## Pull request format
 

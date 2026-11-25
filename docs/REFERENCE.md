@@ -60,12 +60,14 @@ Other looks: **the older look** (red header, optional) and **Newsdesk** (lower t
 
 The **Archive** button opens a page with a card for every story that has ever been in the desk:
 
-- the bundled shows: **GlobeDesk** (48 stories) and the archived **the older look** geopolitics show from 20 Nov 2026 (3 stories, credited and linked to its creator);
+- the bundled Washington, DC sample (`episodes/washington-dc-demo.globedesk.json`): two stories, the United States Capitol and the Lincoln Memorial;
 - every story you add or load, saved on this device (IndexedDB key `archive`).
+
+The 50-topic news desk feed (`newsdesk/topics/newsdesk-50.globedesk.json`) is the first-open example feed; it is not a second bundled show in the Archive list.
 
 The archive only grows. Deleting a story from the rundown, starting a new blank episode, or opening another file never removes a card. **Open** loads a bundled show at that story. **Bring back into this episode** puts the story back into the current rundown exactly as it was saved.
 
-### Episode model (`globedesk.episode/1`)
+### Episode model (`globedesk.episode/2`)
 
 ```text
 episode: schema, id, show, title, date, handle, lede, cta, links[], demo,
@@ -84,9 +86,9 @@ citation: {type, date, credit, license}
 
 `location` is the story pin. `location.look` is an optional camera / street-level target (a land point can be used even when the pin is in open water). If `look` is omitted, the camera uses the pin. Street zoom (about z16–17, pitched) is applied only when that target is on land.
 
-Templates: `episodes/blank.globedesk.json` and `episodes/washington-dc-demo.globedesk.json` (the default show). `episodes/washington-dc-demo.globedesk.json` is a previously bundled third-party show, now removed; it is kept and never regenerated. The app also builds these in memory (**New blank**, **Sample**, **Archive**). Older `.gobedesk.json` files and the legacy `gobedesk.episode/1` schema still open.
+Templates: `episodes/blank.globedesk.json` and `episodes/washington-dc-demo.globedesk.json`. The sample is not preloaded on first open (open it from the guide, Menu → File → Sample, or `?sample=1`). The app also builds blank and sample episodes in memory (**New blank**, **Sample**, **Archive**). Older `.gobedesk.json` files and the legacy `globedesk.episode/1` and typo-era `gobedesk.episode/1` schemas still open; the app saves as `/2`.
 
-**About the Washington, DC sample:** the 48 rows in `js/model.js` come from @AdventureNLearn's posts and the sources linked on each card. Card text is used as written. Each story is unverified and "as reported". Pins are approximate stand-ins (a city, a port, a strait); six stories have no single place and no pin. Where a detail is not in the source, the card says `[UNKNOWN]`. Where a source link is missing, the card says so.
+**About the Washington, DC sample:** two official-landmark stories on the National Mall, used as a short playback demo. Card text follows the cited official pages (Architect of the Capitol; National Park Service). Pins are approximate stand-ins, rounded, and marked as such; surveyed coordinates are `[UNKNOWN]`. Where a detail is not in the source used for the card, the card says `[UNKNOWN]`.
 
 ## Event Layers (v0.2)
 
@@ -100,7 +102,7 @@ These are data layers you build to show **where events took place**, right on th
 - **Auto-frame:** **Frame** on a layer or a feature flies the camera to fit it. **+ Camera keyframe framing this layer** adds that view as a cut at the playhead.
 - **On-globe visuals** (all in the map canvas, so recordings capture them): pulsing markers, routes with a glow and a moving head, glowing zone fills (dashed edge when *disputed*), and radius rings with ripples. Labels show title, time, verification and an EXAMPLE tag where it applies. The shared overlay painter draws them, so the preview and the WebM match. The **Readable view** lists every visible event as text.
 - **Import / export:** GeoJSON (with the layer's style kept under `globedesk_layer`), CSV (`title,lat,lon,event_time,event_end,time_approx,category,verification,source_label,source_url,radius_km,notes`) and KML. Layers are saved inside the episode JSON, and each one can also be saved as a standalone `.geojson`. The sample layers are in `episodes/layers/`.
-- **Sample data:** "Sample story places (approximate, not verified)" puts one point at each pinned GlobeDesk story's approximate location, linked to that story's own source. The six stories with no single place are left off the layer. The removed third-party show keeps its own layer plus "EXAMPLE PLACEHOLDERS (not real data)", one 25 km ring marked as an example with its source `[UNKNOWN]`. No events, coordinates or sources were invented.
+- **Sample data:** "Sample story places (approximate, not verified)" puts one point at each pinned story's approximate location, linked to that story's own source. Stories with no lat/lon are left off the layer (never guessed). A standalone example file, `episodes/layers/example-placeholders-not-real-data.geojson`, holds "EXAMPLE PLACEHOLDERS (not real data)": one 25 km example ring marked as not an event extent, with source `[UNKNOWN]`. No events, coordinates or sources were invented.
 
 ## Free vs optional paid
 
