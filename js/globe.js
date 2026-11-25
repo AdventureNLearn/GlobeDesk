@@ -533,7 +533,6 @@
       const err = e && e.error;
       const msg = (err && err.message) || "";
       if (/abort|cancel/i.test(msg)) return;
-      if (err && err.name === "TypeError" && /signal|bind/i.test(msg)) return;
       if (GD.gis && GD.gis.noteTileError) {
         try { if (GD.gis.noteTileError(e)) return; } catch (x) { /* ignore */ }
       }
