@@ -4,7 +4,7 @@
 
 Pick your stories and the globe flies from orbit down to street level for each one. Cards pin to the place, every source carries a verified or unverified label, captions are always on, and you can record the result as a 16:9 or 9:16 video. It runs in your browser. You don't need an account, a server or an API key.
 
-> **v1.3.1 · Share & Export** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · The public live copy at [globedesk.grok.me](https://globedesk.grok.me) showed **v1.3.1 · Share & Export** in the top bar on Nov 22, 2026 (checked that afternoon, ET).
+> **v1.4.0 · Atlas** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · Live: [globedesk.grok.me](https://globedesk.grok.me).
 
 ## Civic Intelligence Project, open source
 
@@ -115,7 +115,7 @@ Useful URL options:
 
 ## Make your own show (starter kit)
 
-The [`starter/`](starter/) folder is a clean baseline to take away. It also ships as **`globedesk-starter-v1.0.1.zip`** on the GitHub release.
+The [`starter/`](starter/) folder is a clean baseline to take away. It also ships as **`globedesk-starter-v1.4.0.zip`** from the [GitHub Releases](https://github.com/AdventureNLearn/GlobeDesk/releases) page: [globedesk-starter-v1.4.0.zip](https://github.com/AdventureNLearn/GlobeDesk/releases/download/v1.4.0/globedesk-starter-v1.4.0.zip).
 
 | File | Use it for |
 |---|---|
