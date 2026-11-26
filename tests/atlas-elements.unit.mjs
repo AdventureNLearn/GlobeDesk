@@ -51,7 +51,8 @@ t("every element cites the NIST, IUPAC and Wikidata sources, which are official 
   for (const id of required) assert.ok(sourceIds.has(id), "missing source " + id);
   const bySrc = Object.fromEntries(sources.map((s) => [s.id, s]));
   assert.equal(bySrc["nist-atomic-weights"].class, "official");
-  assert.match(bySrc["nist-atomic-weights"].license, /17 U\.S\.C\. 105/);
+  assert.match(bySrc["nist-atomic-weights"].license, /public information and may be distributed or copied/);
+  assert.equal(bySrc["nist-atomic-weights"].terms_url, "https://www.nist.gov/copyrights-disclaimers");
   assert.equal(bySrc["iupac-periodic-table-2022"].class, "official");
   assert.match(bySrc["iupac-periodic-table-2022"].license, /yours to use/i);
   assert.equal(bySrc["wikidata-chemical-elements"].class, "official");

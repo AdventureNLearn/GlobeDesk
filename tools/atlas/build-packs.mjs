@@ -28,7 +28,7 @@ function manifest(id, kind, title, files, entryCount, extra) {
   const size = listed.reduce((s, f) => s + f.bytes, 0);
   write(`packs/${id}/manifest.json`, {
     schema: "globedesk.atlas-pack/1", id, title, kind, ...extra, version: VERSION, license: "CC BY 4.0",
-    checked: CHECKED, sha256: packSha(listed), entry_count: entryCount, size_bytes: size, max_bytes: MAX_BYTES,
+    checked: extra.checked || CHECKED, sha256: packSha(listed), entry_count: entryCount, size_bytes: size, max_bytes: MAX_BYTES,
     refresh: extra.refresh, promote: "owner-yes-required", status: "draft", files: listed,
   });
 }
@@ -36,6 +36,6 @@ manifest("core", "core", "Atlas core: index, category tree, places, years, sourc
 for (const p of CATEGORY_PACKS) {
   const c = packCategory(cats.categories, p);
   const title = c.pack === p ? c.title : `${c.title}: ${p.charAt(0).toUpperCase() + p.slice(1)}`;
-  manifest(p, "category", `Atlas pack: ${title}`, ["entries.json"], J(`packs/${p}/entries.json`).entries.length, { category: c.id, refresh: c.refresh });
+  manifest(p, "category", `Atlas pack: ${title}`, ["entries.json"], J(`packs/${p}/entries.json`).entries.length, { category: c.id, refresh: c.refresh, ...(p === "chemistry" ? { checked: "2026-11-25" } : {}) });
 }
 console.log(`built core (${entries.length} entries) + ${CATEGORY_PACKS.length} category manifests`);
