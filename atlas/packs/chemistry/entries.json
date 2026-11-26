@@ -270,7 +270,12 @@
         "wikidata-chemical-elements"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "commodity-plastics-resins"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -367,6 +372,10 @@
       "subject_person_living": false,
       "aliases": [
         "Li (atomic number 3)"
+      ],
+      "see_also_ids": [
+        "lithium-batteries-air-travel",
+        "bag-solar-kit"
       ],
       "notes": "IUPAC group 1, period 2 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1817. Discovery credit (Wikidata): Johan August Arfwedson. Ground-state electron configuration 1s2 2s (shells K=2, L=1; NIST SP 966, cross-checked against Wikidata P8000)."
     },
@@ -478,7 +487,16 @@
         "wikidata-chemical-elements"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "iron-and-steel-alloys"
+        },
+        {
+          "type": "see-also",
+          "to": "commodity-plastics-resins"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -560,7 +578,16 @@
         "wikidata-chemical-elements"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "silica-and-quartz-glass"
+        },
+        {
+          "type": "see-also",
+          "to": "lifepo4-vs-nmc"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -788,7 +815,12 @@
         "wikidata-chemical-elements"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "silica-and-quartz-glass"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -798,6 +830,10 @@
       "subject_person_living": false,
       "aliases": [
         "Si (atomic number 14)"
+      ],
+      "see_also_ids": [
+        "transistor-effect-nobel-1956",
+        "portable-solar-power"
       ]
     },
     {
@@ -826,7 +862,16 @@
         "wikidata-chemical-elements"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "phosphate-cathode-discovery"
+        },
+        {
+          "type": "see-also",
+          "to": "lifepo4-vs-nmc"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -1206,7 +1251,12 @@
         "wikidata-chemical-elements"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "lifepo4-vs-nmc"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -1237,7 +1287,20 @@
         "wikidata-chemical-elements"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "iron-and-steel-alloys"
+        },
+        {
+          "type": "see-also",
+          "to": "lifepo4-vs-nmc"
+        },
+        {
+          "type": "see-also",
+          "to": "phosphate-cathode-discovery"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -1275,7 +1338,12 @@
         "wikidata-chemical-elements"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "lifepo4-vs-nmc"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -1313,7 +1381,12 @@
         "wikidata-chemical-elements"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "lifepo4-vs-nmc"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -1346,7 +1419,12 @@
         "nist-periodic-table-2024"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "bell-bronze"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -1356,6 +1434,10 @@
       "subject_person_living": false,
       "aliases": [
         "Cu (atomic number 29)"
+      ],
+      "see_also_ids": [
+        "bag-solar-kit",
+        "bells-overview"
       ],
       "notes": "IUPAC group 11, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata). Ground-state electron configuration [Ar] 3d10 4s (shells K=2, L=8, M=18, N=1; NIST SP 966, cross-checked against Wikidata P8000)."
     },
@@ -1464,6 +1546,9 @@
       "subject_person_living": false,
       "aliases": [
         "Ge (atomic number 32)"
+      ],
+      "see_also_ids": [
+        "transistor-effect-nobel-1956"
       ]
     },
     {
@@ -2117,7 +2202,12 @@
         "wikidata-chemical-elements"
       ],
       "record": "data/atlas/chemistry/elements-electron-config.json",
-      "related": [],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "bell-bronze"
+        }
+      ],
       "pack": "chemistry",
       "status": "draft",
       "confidence": "high",
@@ -2127,6 +2217,9 @@
       "subject_person_living": false,
       "aliases": [
         "Sn (atomic number 50)"
+      ],
+      "see_also_ids": [
+        "bells-overview"
       ]
     },
     {
@@ -2310,6 +2403,9 @@
       "subject_person_living": false,
       "aliases": [
         "Cs (atomic number 55)"
+      ],
+      "see_also_ids": [
+        "international-system-of-units-si"
       ]
     },
     {
@@ -3242,6 +3338,9 @@
       "subject_person_living": false,
       "aliases": [
         "Au (atomic number 79)"
+      ],
+      "see_also_ids": [
+        "gold-discovery-1848"
       ]
     },
     {
@@ -3719,6 +3818,9 @@
       "aliases": [
         "U (atomic number 92)"
       ],
+      "see_also_ids": [
+        "hiroshima-nagasaki-1945"
+      ],
       "notes": "IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table."
     },
     {
@@ -3796,6 +3898,9 @@
       "subject_person_living": false,
       "aliases": [
         "Pu (atomic number 94)"
+      ],
+      "see_also_ids": [
+        "hiroshima-nagasaki-1945"
       ],
       "notes": "IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table."
     },

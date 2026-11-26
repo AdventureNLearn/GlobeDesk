@@ -69,6 +69,7 @@ t("rendered desk: experimental label on every owner link, separate group, offici
   assert.match(W.deskHtml(noOff), /Official source \[UNKNOWN\]/);
   const energy = W.deskHtml(doc.desks[5]);
   assert.match(energy, /wd-official[\s\S]*faa\.gov/); assert.doesNotMatch(energy, /Official source \[UNKNOWN\]/);
+  assert.match(energy, /data-wd-atlas-view="elements"[^>]*>Elements periodic table</);
   html.push(permits);
 });
 t("OPSEC: desk text has no private paths, emails or secrets", () => {

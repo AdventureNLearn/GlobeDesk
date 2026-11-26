@@ -245,4 +245,33 @@ t("view source and css respect CSP, reduced-motion, and select(id)", () => {
   assert.doesNotMatch(s, /elements\.html/);
 });
 
+t("deep links ?atlas={id} and ?atlas-view=elements open the right view, card, or not-in-this-copy notice", () => {
+  const nodes = Object.create(null);
+  function mk(tag, id) {
+    const o = { tagName: String(tag).toUpperCase(), id: id || "", hidden: true, innerHTML: "", className: "",
+      classList: { _s: new Set(), add(...a) { a.forEach((x) => this._s.add(x)); }, remove(...a) { a.forEach((x) => this._s.delete(x)); }, contains(x) { return this._s.has(x); } },
+      attributes: Object.create(null), setAttribute(k, v) { this.attributes[k] = String(v); }, getAttribute(k) { return this.attributes[k] || null; },
+      addEventListener() {}, querySelector() { return null; }, querySelectorAll() { return []; }, focus() {} };
+    if (id) nodes[id] = o;
+    return o;
+  }
+  const body = mk("body");
+  const atlasView = mk("aside", "atlasView");
+  mk("button", "btnAtlas");
+  const document = { body, readyState: "complete", activeElement: body, getElementById: (id) => nodes[id] || null, addEventListener() {} };
+  const ctx = { window: { GD: { atlasData: D, atlasModel: M } }, document, matchMedia: () => ({ matches: false }), URLSearchParams, location: { search: "?atlas-view=elements&atlas=gold-element" }, console };
+  ctx.window.window = ctx.window; ctx.globalThis = ctx; ctx.window.document = document; ctx.window.matchMedia = ctx.matchMedia; ctx.window.URLSearchParams = URLSearchParams; ctx.window.location = ctx.location;
+  vm.createContext(ctx);
+  vm.runInContext(readFileSync(new URL("../js/atlas/atlas-view.js", import.meta.url), "utf8"), ctx);
+  const atlas = ctx.window.GD.atlas;
+  assert.equal(atlas.st.open, true);
+  assert.equal(atlas.st.view, "elements");
+  assert.equal(atlas.st.selected, "gold-element");
+  assert.match(atlasView.innerHTML, /Gold \(Au, element 79\)/);
+  assert.match(atlasView.innerHTML, /Gold at Sutter&#39;s Mill|Gold at Sutter's Mill/);
+  // Missing target shows 'not in this copy'
+  atlas.applyParams(new URLSearchParams("?atlas=missing-element-xyz"));
+  assert.match(atlasView.innerHTML, /missing-element-xyz.*not in this copy/);
+});
+
 console.log(n + " atlas elements view tests ok");

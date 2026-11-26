@@ -3,7 +3,7 @@
 // the repo: ../globedesk-plans/source-cache relative to the repo root, or
 // GLOBEDESK_ELEMENTS_CACHE. This script writes derived Atlas files only, and
 // merges lithium-element and copper-element instead of replacing them.
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -17,6 +17,50 @@ const SOURCE_IDS = {
   iupac: "iupac-periodic-table-2022",
   wikidata: "wikidata-chemical-elements",
 };
+
+const ELEMENT_CROSS_LINKS = {
+  "hydrogen-element": { related: [{ type: "see-also", to: "commodity-plastics-resins" }] },
+  "lithium-element": {
+    related: [{ type: "see-also", to: "lifepo4-vs-nmc" }, { type: "see-also", to: "phosphate-cathode-discovery" }],
+    see_also_ids: ["lithium-batteries-air-travel", "bag-solar-kit"],
+  },
+  "carbon-element": { related: [{ type: "see-also", to: "iron-and-steel-alloys" }, { type: "see-also", to: "commodity-plastics-resins" }] },
+  "oxygen-element": { related: [{ type: "see-also", to: "silica-and-quartz-glass" }, { type: "see-also", to: "lifepo4-vs-nmc" }] },
+  "silicon-element": {
+    related: [{ type: "see-also", to: "silica-and-quartz-glass" }],
+    see_also_ids: ["transistor-effect-nobel-1956", "portable-solar-power"],
+  },
+  "phosphorus-element": { related: [{ type: "see-also", to: "phosphate-cathode-discovery" }, { type: "see-also", to: "lifepo4-vs-nmc" }] },
+  "manganese-element": { related: [{ type: "see-also", to: "lifepo4-vs-nmc" }] },
+  "iron-element": { related: [{ type: "see-also", to: "iron-and-steel-alloys" }, { type: "see-also", to: "lifepo4-vs-nmc" }, { type: "see-also", to: "phosphate-cathode-discovery" }] },
+  "cobalt-element": { related: [{ type: "see-also", to: "lifepo4-vs-nmc" }] },
+  "nickel-element": { related: [{ type: "see-also", to: "lifepo4-vs-nmc" }] },
+  "copper-element": {
+    related: [{ type: "see-also", to: "bell-bronze" }],
+    see_also_ids: ["bag-solar-kit", "bells-overview"],
+  },
+  "germanium-element": { see_also_ids: ["transistor-effect-nobel-1956"] },
+  "tin-element": {
+    related: [{ type: "see-also", to: "bell-bronze" }],
+    see_also_ids: ["bells-overview"],
+  },
+  "caesium-element": { see_also_ids: ["international-system-of-units-si"] },
+  "gold-element": { see_also_ids: ["gold-discovery-1848"] },
+  "uranium-element": { see_also_ids: ["hiroshima-nagasaki-1945"] },
+  "plutonium-element": { see_also_ids: ["hiroshima-nagasaki-1945"] },
+};
+
+function allExistingIds() {
+  const ids = new Set();
+  const packsDir = path.join(ATLAS, "packs");
+  for (const name of readdirSync(packsDir)) {
+    const ep = path.join(packsDir, name, "entries.json");
+    if (existsSync(ep)) {
+      for (const e of readJson(ep).entries || []) ids.add(e.id);
+    }
+  }
+  return ids;
+}
 
 function cacheDir() {
   if (process.env.GLOBEDESK_ELEMENTS_CACHE) return path.resolve(process.env.GLOBEDESK_ELEMENTS_CACHE);
@@ -237,7 +281,7 @@ function buildSummary(iupac, nist, wd, groupNote, cfg) {
   return summary;
 }
 
-function elementEntry(iupac, nist, wd, cfg) {
+function elementEntry(iupac, nist, wd, cfg, knownIds) {
   const name = titleCase(iupac.name);
   const id = iupac.name + "-element";
   const { dates } = discoverySentences(wd);
@@ -253,7 +297,7 @@ function elementEntry(iupac, nist, wd, cfg) {
     dates,
     sources: [SOURCE_IDS.nist, SOURCE_IDS.nistPt, SOURCE_IDS.iupac, SOURCE_IDS.wikidata],
     record: RECORD_REL,
-    related: [],
+    related: ((ELEMENT_CROSS_LINKS[id] && ELEMENT_CROSS_LINKS[id].related) || []).filter((r) => !knownIds || knownIds.has(r.to)),
     pack: "chemistry",
     status: "draft",
     confidence: "high",
@@ -263,6 +307,8 @@ function elementEntry(iupac, nist, wd, cfg) {
     subject_person_living: false,
     aliases: [iupac.symbol + " (atomic number " + iupac.z + ")"],
   };
+  const seeAlso = ((ELEMENT_CROSS_LINKS[id] && ELEMENT_CROSS_LINKS[id].see_also_ids) || []).filter((s) => !knownIds || knownIds.has(s));
+  if (seeAlso.length) entry.see_also_ids = seeAlso;
   if (notes) entry.notes = notes;
   return entry;
 }
@@ -279,7 +325,13 @@ function mergePreserved(existing, generated) {
     title: existing.title || generated.title,
     summary: existing.summary || generated.summary,
     aliases: existing.aliases && existing.aliases.length ? existing.aliases : generated.aliases,
-    related: existing.related || [],
+    related: (() => {
+      const out = (existing.related || []).slice();
+      for (const r of (generated.related || [])) {
+        if (!out.some((x) => x.type === r.type && x.to === r.to)) out.push(r);
+      }
+      return out;
+    })(),
     sources,
     confidence: existing.confidence || generated.confidence,
     status: existing.status || generated.status,
@@ -289,7 +341,8 @@ function mergePreserved(existing, generated) {
   };
   if (existing.record) merged.record = existing.record;
   if (existing.records) merged.records = existing.records;
-  if (existing.see_also_ids) merged.see_also_ids = existing.see_also_ids;
+  const seeAlso = [...(existing.see_also_ids || []), ...(generated.see_also_ids || [])].filter((v, i, a) => a.indexOf(v) === i);
+  if (seeAlso.length) merged.see_also_ids = seeAlso;
   if (existing.see_also_paths) merged.see_also_paths = existing.see_also_paths;
   if (existing.outbound) merged.outbound = existing.outbound;
   if (existing.tiers) merged.tiers = existing.tiers;
@@ -393,6 +446,7 @@ const nistByZ = new Map(cache.nist.elements.map((e) => [e.z, e]));
 const cfgByZ = new Map(cache.nistCfg.elements.map((e) => [e.z, e]));
 const iupacByZ = new Map(cache.iupac.elements.map((e) => [e.z, e]));
 const wdByZ = wikidataByZ(cache.wikidata);
+const knownIds = allExistingIds();
 
 const generated = [];
 for (let z = 1; z <= 118; z++) {

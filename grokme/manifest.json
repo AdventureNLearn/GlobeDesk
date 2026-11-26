@@ -116,13 +116,13 @@
     },
     {
       "path": "atlas/packs/chemistry/entries.json",
-      "size": 178313,
-      "sha256": "febc458652e095128fe2ea34fc6695314ad5d4719d4d6d368b08d351d939b267"
+      "size": 180484,
+      "sha256": "311a4eb45a22da2348903acce149059c5e48d1fa8c487e0c677d0acc28e207b2"
     },
     {
       "path": "atlas/packs/chemistry/manifest.json",
       "size": 641,
-      "sha256": "46483684b9b24a9d51426b8d1513f578b58cf3c7d3945a7f3bda7194b297496a"
+      "sha256": "0fec9637eaffb35b7588d6447513ea835c051b098221da5f836ae92bd3dc02df"
     },
     {
       "path": "atlas/packs/civic/entries.json",
@@ -636,8 +636,8 @@
     },
     {
       "path": "docs/FEATURES.md",
-      "size": 7141,
-      "sha256": "f27a41d0a9df96cf7c0ec912fff2b087cb97ed0869f75b1f86a6d1e904de2e37"
+      "size": 7320,
+      "sha256": "d28793ae779b4a1e31c7ba5131bb581fe80e8742683ec3542d4093d6aeb4fe68"
     },
     {
       "path": "docs/PROMOTE.md",
@@ -751,8 +751,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 848103,
-      "sha256": "0479ab05213b10c8c440302ed8e2ffe6d5491bfce214d1010959400907cb3bbf"
+      "size": 849282,
+      "sha256": "1cf3d5183dfac0d4ebf5855b5a82a0aec2a405affac6476fa317c5272af8fa2c"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -761,8 +761,8 @@
     },
     {
       "path": "js/atlas/atlas-view.js",
-      "size": 57137,
-      "sha256": "0c442397149de5530544548cdd42682e3574a059adb37e288f1f7bda2b638e9d"
+      "size": 58278,
+      "sha256": "33921870093cf2d720f68db984775d220661aa644f3bdbd9920d2a4d131eaea9"
     },
     {
       "path": "js/atlas/bells-layer.js",
@@ -966,8 +966,8 @@
     },
     {
       "path": "js/start-guide.js",
-      "size": 6818,
-      "sha256": "c83ae4c99c3ae99bff76b6aeaa875622b962309b1461a1e30fe1e1e78a0df777"
+      "size": 6841,
+      "sha256": "7b6ea056d8a2e31d75a536bfc1ca2cff0611d516f219b823735c7633a7522377"
     },
     {
       "path": "js/store.js",
@@ -981,8 +981,8 @@
     },
     {
       "path": "js/tutorial-features.js",
-      "size": 10690,
-      "sha256": "20d9076614c92ddeb6af711db45e15a7091a8cb127cc77056dc380854482d115"
+      "size": 11013,
+      "sha256": "9ccdf16eac6c2898c5c79e39bd98fcac8b83665ce992a9ead4ae0fd91e16d5e6"
     },
     {
       "path": "js/ui.js",
@@ -1001,8 +1001,8 @@
     },
     {
       "path": "js/work-desks.js",
-      "size": 6719,
-      "sha256": "382476d8b4384132d6b1d080c18211bd35a364aee50c819fe3647328aff378b1"
+      "size": 7094,
+      "sha256": "6ccf684cb529ed084fbbe9114e631b6cbc1f95bd57c0fcfc2d25810f56c7c8f7"
     },
     {
       "path": "js/year-clock.js",
@@ -1222,6 +1222,6 @@
   ],
   "totals": {
     "files": 242,
-    "bytes": 7464363
+    "bytes": 7469754
   }
 }

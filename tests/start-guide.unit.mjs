@@ -73,8 +73,10 @@ t("?lite=1 turns Lite view on and remembers it; ?lite=0 turns it off", () => {
   const kept = harness("", { "globedesk.lite": "1" }); assert.ok(kept.body.classList.contains("lite"));
   const off = harness("?lite=0", { "globedesk.lite": "1" }); assert.ok(!off.body.classList.contains("lite"));
 });
-t("a direct link (?sample=1) does not pop the guide", () => {
+t("a direct link (?sample=1, ?atlas=, ?atlas-view=) does not pop the guide", () => {
   assert.equal(harness("?sample=1").els.startGuide.hidden, true);
+  assert.equal(harness("?atlas=carbon-element").els.startGuide.hidden, true);
+  assert.equal(harness("?atlas-view=elements").els.startGuide.hidden, true);
 });
 t("tutorial: one step per feature after the welcome step, each labelled Live or Coming soon", () => {
   const h = harness("");

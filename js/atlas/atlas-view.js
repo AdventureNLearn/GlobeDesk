@@ -460,7 +460,7 @@
 
   function detailHtml() {
     const e = st.selected ? M().entryById(D(), st.selected) : null;
-    if (!e) return '<p class="muted small">Pick an entry to read it.</p>';
+    if (!e) return st.missingAtlasId ? '<p class="muted small">Entry "' + esc(st.missingAtlasId) + '" is not in this copy ' + UNKNOWN + ".</p>" : '<p class="muted small">Pick an entry to read it.</p>';
     const tabs = [["object", "Object"], ["parts", "Parts"], ["chemistry", "Chemistry"], ["sources", "Sources"]];
     const body = st.tab === "parts" ? partsTab(e) : st.tab === "chemistry" ? chemistryTab(e) : st.tab === "sources" ? sourcesTab(e) : objectTab(e);
     const three = st.mode === "3d" ? '<div id="at3d" class="at-3d" aria-label="3D model"></div><p id="at3dNote" class="muted small"></p>' : "";
@@ -527,6 +527,7 @@
   }
 
   function select(id) {
+    st.missingAtlasId = null;
     st.selected = id;
     const e = M().entryById(D(), id);
     if (e && st.tab === "chemistry" && e.kind !== "chemistry" && !kitRecord(e) && !artRecord(e) && !bellRecord(e)) st.tab = "object";
@@ -665,13 +666,42 @@
   }
   function toggle() { if (st.open) closeView(); else openView(); }
 
+  function applyParams(params) {
+    if (!params) return false;
+    const rawView = params.get("atlas-view");
+    const rawId = params.get("atlas");
+    if (!rawView && !rawId) return false;
+    const validViews = new Set(["az", "elements", "cats", "place", "year"]);
+    if (rawView && validViews.has(rawView)) {
+      st.view = rawView;
+      st.elementZoom = null;
+    }
+    if (rawId) {
+      const e = D() && M() ? M().entryById(D(), rawId) : null;
+      if (e) {
+        if (!rawView && e.category_path && e.category_path[0] === "chemistry" && e.category_path[1] === "elements") st.view = "elements";
+        st.missingAtlasId = null;
+        openView();
+        select(e.id);
+        return true;
+      }
+      st.selected = null;
+      st.missingAtlasId = rawId;
+    }
+    openView();
+    return true;
+  }
+
   function wire() {
     const b = $("btnAtlas"); if (b) b.addEventListener("click", toggle);
     const root = $("atlasView");
     if (root) root.addEventListener("keydown", (e) => { if (e.key === "Escape") { e.preventDefault(); if (st.view === "elements" && st.elementZoom) { const prev = st.elementZoom; st.elementZoom = null; st.selected = prev; render(); } else closeView(); } });
     if (GD.globe && GD.globe.st && GD.globe.st.onReady) GD.globe.st.onReady.push(() => syncMarkers());
+    if (global.location && global.location.search && global.URLSearchParams) {
+      applyParams(new global.URLSearchParams(global.location.search));
+    }
   }
 
-  GD.atlas = { st, open: openView, close: closeView, toggle, render, select, thisWeek, centroid };
+  GD.atlas = { st, open: openView, close: closeView, toggle, render, select, thisWeek, centroid, applyParams };
   if (global.document) { if (global.document.readyState === "loading") global.document.addEventListener("DOMContentLoaded", wire); else wire(); }
 })(typeof window !== "undefined" ? window : globalThis);

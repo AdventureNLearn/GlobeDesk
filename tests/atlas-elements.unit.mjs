@@ -40,6 +40,9 @@ t("lithium-element and copper-element were merged, not duplicated, and keep thei
   assert.equal(li.summary.includes("USGS tracks global lithium"), true);
   assert.equal(cu.summary.includes("third most consumed industrial metal"), true);
   assert.deepEqual(li.related.map((r) => r.to), ["lifepo4-vs-nmc", "phosphate-cathode-discovery"]);
+  assert.deepEqual(li.see_also_ids, ["lithium-batteries-air-travel", "bag-solar-kit"]);
+  assert.deepEqual(cu.related.map((r) => r.to), ["bell-bronze"]);
+  assert.deepEqual(cu.see_also_ids, ["bag-solar-kit", "bells-overview"]);
   assert.ok(li.sources.includes("usgs-lithium"));
   assert.ok(li.sources.includes("nist-atomic-li"));
   assert.ok(cu.sources.includes("usgs-copper"));
@@ -149,6 +152,23 @@ t("every element cites NIST SP 966 and links to the electron-configuration recor
   assert.deepEqual(rec.byId["lawrencium-element"].shells, [2, 8, 18, 32, 32, 8, 3]);
   assert.equal(rec.byId["rutherfordium-element"].status, "not-proven");
   assert.equal(rec.byId["oganesson-element"].status, "[UNKNOWN]");
+});
+
+t("cross-links point only to existing Atlas records across chemistry, objects, energy, bells, history and science-history", () => {
+  const allIds = new Set();
+  for (const dir of fs.readdirSync(path.join(root, "atlas/packs"))) {
+    const p = path.join(root, "atlas/packs", dir, "entries.json");
+    if (fs.existsSync(p)) for (const e of JSON.parse(fs.readFileSync(p, "utf8")).entries) allIds.add(e.id);
+  }
+  assert.deepEqual(byId["tin-element"].related.map((r) => r.to), ["bell-bronze"]);
+  assert.deepEqual(byId["tin-element"].see_also_ids, ["bells-overview"]);
+  assert.deepEqual(byId["silicon-element"].see_also_ids, ["transistor-effect-nobel-1956", "portable-solar-power"]);
+  assert.deepEqual(byId["gold-element"].see_also_ids, ["gold-discovery-1848"]);
+  assert.deepEqual(byId["caesium-element"].see_also_ids, ["international-system-of-units-si"]);
+  for (const e of elements) {
+    for (const r of (e.related || [])) assert.ok(allIds.has(r.to), e.id + " missing related target " + r.to);
+    for (const s of (e.see_also_ids || [])) assert.ok(allIds.has(s), e.id + " missing see_also target " + s);
+  }
 });
 
 console.log(n + " tests passed");
