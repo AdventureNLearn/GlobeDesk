@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",
@@ -12,7 +12,7 @@
     {
       "path": ".github/ISSUE_TEMPLATE/bug_report.md",
       "size": 593,
-      "sha256": "1df0d34ad8a1c457cd14acdd2b2ecc63be3256febbea506ae7a4d924b9c4261c"
+      "sha256": "9fbe494424be84cc4d1f019a2ef795f861e9f711d016cd27747239d33816c1e2"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/feature_request.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 32782,
-      "sha256": "1894ca7956ef98f4063afea98b4098f87d5d18c1d56b5bea58f78cc7373700de"
+      "size": 36135,
+      "sha256": "62d8d6a49b9132e5287d372f9a1657b4787938fca9cb499475598e52aa0754e5"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -42,7 +42,7 @@
     {
       "path": "CONTRIBUTING.md",
       "size": 12335,
-      "sha256": "be6f7b9fe86b668e1764bcefa39bbb1249612ca3657fbaf6896ebb1025947982"
+      "sha256": "c72c4b6c9b5e7bc88f80ecf62ff9b3260a8d1b6e1575b3dc58cb09543fcca5e5"
     },
     {
       "path": "CREDITS.md",
@@ -56,8 +56,8 @@
     },
     {
       "path": "GROK-ME-BUILD.md",
-      "size": 7241,
-      "sha256": "6a685826826430dcd3e59acfc48817fa7efe4943714a3cf14bde04ff5605fbd4"
+      "size": 7484,
+      "sha256": "df337501d38ae016e08f2955b251c182ab6e62da47f14cf7985e8cf547382d85"
     },
     {
       "path": "LICENSE",
@@ -71,28 +71,28 @@
     },
     {
       "path": "README.md",
-      "size": 17931,
-      "sha256": "a44a8329c6eebc4cf8a5e6536929937beb396b2a6ede99a70f56ec4b6b272d42"
+      "size": 18579,
+      "sha256": "d042e7bd0e67a3adfd3ba2acf0e7e0760631a1ee09b4ec2d4d80440ac50c2e63"
     },
     {
       "path": "SECURITY.md",
-      "size": 1244,
-      "sha256": "f6b45b2713255c76d8393c78a45e44f17dd36b1c540c847ca69757235a5c161d"
+      "size": 1260,
+      "sha256": "aa97ef53e1669b41175ab625a9623683d15ac9e703d0085075e797aae7745961"
     },
     {
       "path": "USER-GUIDE.md",
-      "size": 10202,
-      "sha256": "0459d0d0ebb934c1a2674dc0d628a9f1354236b6bacee7cf72a51026fdc48cef"
+      "size": 10495,
+      "sha256": "d953eb847db51227337721222f5d86f97c5ff4aa2b4647a2d0e9dfdae8c6398c"
     },
     {
       "path": "WINDOWS-RUN.md",
       "size": 4435,
-      "sha256": "4c467a6cfb1c11ca01fe1efbe7ceacca7e828b1ebbfff9f0b305626b2e623025"
+      "sha256": "b1e56d5ceba933cd865a48c43fa0c2a1bc41b153d060abc99838ed8ef6b8ebe1"
     },
     {
       "path": "atlas/README.md",
       "size": 5078,
-      "sha256": "897796ee1471fcc0ab703dee38ec4fee20b04c8206ed6cc4afc5c7f90ba20c80"
+      "sha256": "ad1baa83e1a56a47cf520616f92c732d4dd45d41213643e50c2a32d5968d3f3a"
     },
     {
       "path": "atlas/categories.json",
@@ -632,7 +632,7 @@
     {
       "path": "docs/BUILD-YOUR-OWN-OBJECT.md",
       "size": 8599,
-      "sha256": "40173635e84b8a4a023db68f39da9ba874fe6dff50d16cbfcc3b1af79affbd92"
+      "sha256": "5c3dc7424384901fb0c6b6ba5fb5fb339cd861685c76fcca1c013a9c7ed6a782"
     },
     {
       "path": "docs/FEATURES.md",
@@ -658,6 +658,11 @@
       "path": "docs/RELEASE-NOTES-v1.4.1.md",
       "size": 3298,
       "sha256": "26d765cdc56fbc491e206db5017d03acc9a77512a3458da88990e035d307aff8"
+    },
+    {
+      "path": "docs/RELEASE-NOTES-v1.5.0.md",
+      "size": 4600,
+      "sha256": "274d1042fa437c83712aa95c35f6482a4f2294aeed05038041186a75de9da6cf"
     },
     {
       "path": "docs/SHARE-PACK.md",
@@ -711,28 +716,28 @@
     },
     {
       "path": "grokme/APP-BRIEF.txt",
-      "size": 1296,
-      "sha256": "506ccb439dd3f7c01a68854658e47daf0d3575b7de08266fcefe0efb7eb9de94"
+      "size": 1425,
+      "sha256": "35d0523453a1b369340e2cb53ae2a07fcc8096c982760ef13b430624447852ef"
     },
     {
       "path": "grokme/BUILDER-PROMPT.txt",
-      "size": 3634,
-      "sha256": "46497d5bad50fbd97948241e62a560334fed72099c6b7318ad6c467d74f99338"
+      "size": 4057,
+      "sha256": "681afd15f495dbb648e4d4c90676e11a661cea6b618d55f6691bd8cc998ad919"
     },
     {
       "path": "grokme/FEATURES.txt",
-      "size": 2156,
-      "sha256": "6393da4e4a1644a42384ea6a2d1b81bc3ebf89502e91e58eeec186cfcfd3ee60"
+      "size": 2393,
+      "sha256": "277f2db9298d0fb65ba499f389e0c48da702ac89965783997067e5be890e5c2f"
     },
     {
       "path": "grokme/UPDATE-PROMPT.txt",
-      "size": 2385,
-      "sha256": "f950d02625c55b3714916aa3fb17aa2a0ed2c22dc1de9fa55bb6efca7f0a5db6"
+      "size": 2741,
+      "sha256": "35e8e3c4d3fa5ea04eeb1b7dcfa9700263963d58455cff1f689377cd74e77eb6"
     },
     {
       "path": "index.html",
       "size": 19830,
-      "sha256": "f4dd1919fff854344be0735bdf95924d8aa764a2c3a9bb0db7b068aa1bd823dc"
+      "sha256": "a40ee338a161aa0c772413c8379b5203d10823aa251c2675b9c1433a2da62916"
     },
     {
       "path": "js/archive.js",
@@ -752,7 +757,7 @@
     {
       "path": "js/atlas/atlas-data.js",
       "size": 849108,
-      "sha256": "cb24c126ad582832a39cc26ea8716669ac2c4b12cac4fede6f3b411717524278"
+      "sha256": "7b62efca5315addb1a2a0f4ab3f28eab6bff83eb7abc7cfd9049a6ba8b00472a"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -872,7 +877,7 @@
     {
       "path": "js/layout.js",
       "size": 39458,
-      "sha256": "bfabda70c5fb61cee41cfda12afa563dfd049e315ecd5fbd02b8ae204fbcfc78"
+      "sha256": "74ee016b3af58458d3c50c137598e01a0527a3e2db9330bbae79b5a402feb06f"
     },
     {
       "path": "js/map-pointer.js",
@@ -997,7 +1002,7 @@
     {
       "path": "js/version.js",
       "size": 877,
-      "sha256": "26b57944075bbee068208840429669fbc185e1a83a0698525d5e83465ae53036"
+      "sha256": "137937d563d5c0606cc9cab13b20f653096d6c9af9350283c071e651d01be7b1"
     },
     {
       "path": "js/work-desks.js",
@@ -1077,7 +1082,7 @@
     {
       "path": "package.json",
       "size": 1713,
-      "sha256": "cfb045d89d50130bc2491e7d665e02eeef9025c45ca3e84f5057ca9f1c92a03f"
+      "sha256": "8c967a8cd097a201e05bf9256cc689afa374acfb68aaa1a8e9366a55b79d4e5d"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -1221,7 +1226,7 @@
     }
   ],
   "totals": {
-    "files": 242,
-    "bytes": 7471114
+    "files": 243,
+    "bytes": 7481412
   }
 }

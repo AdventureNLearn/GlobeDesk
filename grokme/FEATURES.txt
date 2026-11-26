@@ -17,10 +17,11 @@
 - Opt-in dated NASA GIBS imagery (off by default); Blue Marble stays undated
 - EOX 2018-2025 mosaics behind a CC BY-NC-SA acknowledgement; 2016 remains the default; 2017 is not offered
 - Official USGS, Census TIGERweb, and nowCOAST overlays, off until live GIS is opted in
-- Version v1.4.1 · Atlas
+- Version v1.5.0 · Atlas
 - Layers panel (L) with Show all / Hide all, Home (H), frame-accurate MP4 export, and an offline share pack (share pack needs the local server)
 - First open: a skippable step-by-step tutorial (Welcome, then one step per feature, Live or Coming soon); Help reopens it; the sample is not the default
 - Lite view (?lite=1, or the Lite view button): globe plus Home, Layers, Atlas and Help; Full view restores every tool
 - Touch: one-finger drag pans the globe; two-finger pinch only zooms
 - Atlas (draft): cited encyclopedia, work desks, bells and 3D objects
+- Elements periodic table (Atlas → Elements): 118 elements as a holographic table with a fly-in to each atom and a Table view; ?atlas-view=elements opens it. The view is Live; the chemistry data pack stays a draft with [UNKNOWN] marks
 - Build from https://github.com/AdventureNLearn/GlobeDesk (main branch)

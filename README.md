@@ -4,7 +4,7 @@
 
 Pick your stories and the globe flies from orbit down to street level for each one. Cards pin to the place, every source carries a verified or unverified label, captions are always on, and you can record the result as a 16:9 or 9:16 video. It runs in your browser. You don't need an account, a server or an API key.
 
-> **v1.4.1 · Atlas** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · Live: [globedesk.grok.me](https://globedesk.grok.me).
+> **v1.5.0 · Atlas** · by [@AdventureNLearn](https://x.com/AdventureNLearn) · Live: [globedesk.grok.me](https://globedesk.grok.me).
 
 ## Civic Intelligence Project, open source
 
@@ -54,6 +54,7 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 - **Sound.** Add voiceover and sound overlays with volume, offset and loop. Both are mixed into playback and into the recording.
 - **Event Layers.** Draw points, routes and areas, with GeoJSON, CSV and KML import and export.
 - **Multi-card callouts.** Open several story cards on the globe at once (◎ in the rundown, or Shift-click a pin). Rings, cards and leader lines rescale and re-route as you zoom, never overlap, and nearby stories merge into one count badge until you zoom in.
+- **Atlas and Elements (draft data).** A cited, draft encyclopedia with work desks, bells and 3D objects. **Atlas → Elements** is a holographic periodic table of all 118 elements with a fly-in to each atom and a Table view. The view is Live; the chemistry data pack under it is still a draft, and values that could not be confirmed stay `[UNKNOWN]`.
 - **Archive.** Every show and story you add keeps a card, and you can **bring it back** at any time.
 - **Assist panel.** Copy a prompt into any assistant, paste back the JSON it returns, and GlobeDesk validates it before loading. GlobeDesk itself never calls a model.
 - **Phone layout.** On a phone the globe comes first, the top-bar buttons move into a ☰ menu, and the panels fold.
@@ -115,7 +116,7 @@ Useful URL options:
 
 ## Make your own show (starter kit)
 
-The [`starter/`](starter/) folder is a clean baseline to take away. It also ships as **`globedesk-starter-v1.4.1.zip`** from the [GitHub Releases](https://github.com/AdventureNLearn/GlobeDesk/releases) page: [globedesk-starter-v1.4.1.zip](https://github.com/AdventureNLearn/GlobeDesk/releases/download/v1.4.1/globedesk-starter-v1.4.1.zip).
+The [`starter/`](starter/) folder is a clean baseline to take away. The full app and the starter kit also ship from the [GitHub Releases](https://github.com/AdventureNLearn/GlobeDesk/releases) page as [globedesk-v1.5.0.zip](https://github.com/AdventureNLearn/GlobeDesk/releases/download/v1.5.0/globedesk-v1.5.0.zip) and [globedesk-starter-v1.5.0.zip](https://github.com/AdventureNLearn/GlobeDesk/releases/download/v1.5.0/globedesk-starter-v1.5.0.zip). Those links work once the v1.5.0 release is published.
 
 | File | Use it for |
 |---|---|
@@ -172,6 +173,7 @@ Found a security issue? See [SECURITY.md](SECURITY.md).
 | [GROK-ME-BUILD.md](GROK-ME-BUILD.md) | Rebuilding a hosted copy on Grok.me, including host-shell notes |
 | [docs/RELEASE-NOTES-v1.4.0.md](docs/RELEASE-NOTES-v1.4.0.md) | v1.4.0 Atlas: what is new, Coming soon and `[UNKNOWN]` items, credits |
 | [docs/RELEASE-NOTES-v1.4.1.md](docs/RELEASE-NOTES-v1.4.1.md) | v1.4.1: History video Live, Grok.me kit list repaired |
+| [docs/RELEASE-NOTES-v1.5.0.md](docs/RELEASE-NOTES-v1.5.0.md) | v1.5.0: Elements periodic table (Atlas view), draft data pack |
 | [CHANGELOG.md](CHANGELOG.md) | Full changelog |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
 
