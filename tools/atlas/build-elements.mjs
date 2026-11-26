@@ -246,7 +246,8 @@ function upsertSources(sources) {
       checked: CHECKED,
       class: "official",
       publisher: "National Institute of Standards and Technology (NIST)",
-      license: "US federal government work (public domain, 17 U.S.C. 105)",
+      license: "NIST Copyrights & Disclaimers states: \"With the exception of material marked as copyrighted, information presented on NIST sites are considered public information and may be distributed or copied. Use of appropriate byline/photo/image credits is requested.\"",
+      terms_url: "https://www.nist.gov/copyrights-disclaimers",
       description: "Data compilation (formerly SRD 144) covering atomic numbers 1 to 118. Used here for atomic number, symbol and standard atomic weight.",
     },
     {
@@ -276,6 +277,8 @@ function upsertSources(sources) {
     if (!byId.has(src.id)) {
       sources.push(src);
       added++;
+    } else {
+      Object.assign(byId.get(src.id), src);
     }
   }
   return added;

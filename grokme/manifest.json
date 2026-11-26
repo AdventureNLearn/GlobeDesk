@@ -122,7 +122,7 @@
     {
       "path": "atlas/packs/chemistry/manifest.json",
       "size": 641,
-      "sha256": "3cca2af92b858d6d6699193c1e93ce704d9517cf4621d1d333859f7742a12e4a"
+      "sha256": "beb844037e0d2b087987d6f795dd3e3a75b7722ce4e8cac13ed5891a2781b1ae"
     },
     {
       "path": "atlas/packs/civic/entries.json",
@@ -147,7 +147,7 @@
     {
       "path": "atlas/packs/core/manifest.json",
       "size": 1218,
-      "sha256": "29429a61ee33c01386169a7d8615cfd967b2df4d6e2c79bbbec7151e684a25d3"
+      "sha256": "3e065204e58b7585d5c567db37777570b0da1c6af4fc60751e34eec2e45b8b8b"
     },
     {
       "path": "atlas/packs/core/places.json",
@@ -156,8 +156,8 @@
     },
     {
       "path": "atlas/packs/core/sources.json",
-      "size": 148836,
-      "sha256": "026665754a5cf05eca54b6060e23dac0f115784c4bb4edc825bda4d20ee90a9e"
+      "size": 149104,
+      "sha256": "cc14382ebdfa73d0cfb81ad3f625d268a43c2744f21c11bcf74927df3fd3b17a"
     },
     {
       "path": "atlas/packs/core/years.json",
@@ -746,8 +746,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 773954,
-      "sha256": "ed21d519882435a22006e65defb3b8dcfa98ec8a142cefbdee23c4dbef3277de"
+      "size": 774214,
+      "sha256": "a9494d4045a633875cdbca49fa4e9926cf1efabf3c26f2cc3082c20b84d2dbac"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -1071,8 +1071,8 @@
     },
     {
       "path": "package.json",
-      "size": 1632,
-      "sha256": "f5e260a4c2bd7a55c620a0c0bff56d8d14e57d794d841bd6e260028d57ca1c97"
+      "size": 1670,
+      "sha256": "9203ef8e52a7e729093e1ff6ce9154c9a01f38b83bb950db46cdfe93b71c200b"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -1217,6 +1217,6 @@
   ],
   "totals": {
     "files": 241,
-    "bytes": 7257207
+    "bytes": 7257773
   }
 }
