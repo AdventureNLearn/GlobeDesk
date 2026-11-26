@@ -2,6 +2,20 @@
 
 ## Unreleased
 
+## v1.5.0 — Atlas — 2026-11-26
+
+User-facing notes: [docs/RELEASE-NOTES-v1.5.0.md](docs/RELEASE-NOTES-v1.5.0.md).
+
+- Version shown as "v1.5.0 · Atlas".
+- **Elements periodic table (Atlas → Elements).** A new Atlas view of all 118 chemical elements: a holographic table in the IUPAC 18-column layout, with family lines and a dashed, unresolved Group 3 fork (La, Lu, Ac, Lr are not placed; IUPAC has not settled them). Click or press Enter on an element to open its normal Atlas card; **fly in** to an atom to see its animated shell orbits; **Table view** lists the same 118 elements in atomic-number order. Search and the category filter dim or filter the tiles, arrow keys move between elements, and reduced-motion defaults to the plain table. Escape leaves the fly-in first, then the view. It is part of the Atlas panel, not a new page.
+- **Element data.** 118 cited element entries were added to the chemistry pack (from cached NIST atomic weights, the IUPAC periodic table of 4 May 2022, and Wikidata CC0 discovery statements; `lithium-element` and `copper-element` were merged, not replaced). `data/atlas/chemistry/elements-electron-config.json` adds NIST SP 966 ground-state electron shells for Z=1–103 (cross-checked against NIST ASD and Wikidata P8000). Z=104–108 are marked not-proven (calculated in NIST references, not measured spectra). Z=109–118 have no NIST value and stay `[UNKNOWN]`; the aufbau rule is not used to fill them. The NIST terms link is `https://www.nist.gov/open/license`.
+- **Deep links and cross-links.** `?atlas-view=elements` opens the Elements view (valid views: `az`, `elements`, `cats`, `place`, `year`); `?atlas=<element-id>` opens that element card in the Elements view; the first-open guide is not forced when either parameter is present. The Energy and Materials work desk gets an **Elements periodic table** button. The tutorial has a new **Elements periodic table** step (Live), and `docs/FEATURES.md` lists it (40 Live, 5 Coming soon, 45 features; Atlas now opens with 294 entries).
+- **Layout fixes.** On a desktop the holographic sky no longer overlaps the empty detail pane. On a 390×844 phone the Elements sheet fills the viewport under the topbar, with the grid and the element card both visible on the first screen and 44 px targets kept.
+- **Chemistry pack stays draft.** The pack manifest is still `0.1.0-draft` with `promote: owner-yes-required`; the Elements view is Live, the data under it is not promoted. 58 of the 118 element entries carry `[UNKNOWN]` (overlapping fields: IUPAC group 30, standard atomic weight 24, electron configuration 15, discovery year 11, discovery credit 10). Nothing was filled in. Elements groups by chemical family; a valence grouping is not part of this release.
+- **Docs (PR #7).** The README, `GROK-ME-BUILD.md` and `WINDOWS-RUN.md` now name the current starter and full zips; older release notes and changelog entries are unchanged. For 1.5.0 those names are `globedesk-starter-v1.5.0.zip` and `globedesk-v1.5.0.zip`.
+- `grokme/manifest.json` is regenerated for 1.5.0. Version labels (package.json, `js/version.js`, `index.html`, README, `grokme/*`, docs) read 1.5.0 · Atlas. The edition name stays "Atlas".
+- Not in this release: the claim-chip relabel ("We have a record", branch `feat/elements-claim-label`) was reviewed but left out by the owner.
+
 ## v1.4.1 — Atlas — 2026-11-25
 
 User-facing notes: [docs/RELEASE-NOTES-v1.4.1.md](docs/RELEASE-NOTES-v1.4.1.md).
