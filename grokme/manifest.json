@@ -71,8 +71,8 @@
     },
     {
       "path": "README.md",
-      "size": 18412,
-      "sha256": "990b8de36ef6969c12eed1faf2fc0db6f5191bc056643a966ec46e64d44a3d88"
+      "size": 18579,
+      "sha256": "d042e7bd0e67a3adfd3ba2acf0e7e0760631a1ee09b4ec2d4d80440ac50c2e63"
     },
     {
       "path": "SECURITY.md",
@@ -81,8 +81,8 @@
     },
     {
       "path": "USER-GUIDE.md",
-      "size": 10202,
-      "sha256": "3076e3c9dd685628c5f2f38c1604cf740170e14b6b9c7128907d0a4574b46d64"
+      "size": 10495,
+      "sha256": "d953eb847db51227337721222f5d86f97c5ff4aa2b4647a2d0e9dfdae8c6398c"
     },
     {
       "path": "WINDOWS-RUN.md",
@@ -1227,6 +1227,6 @@
   ],
   "totals": {
     "files": 243,
-    "bytes": 7480952
+    "bytes": 7481412
   }
 }
