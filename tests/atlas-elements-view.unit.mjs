@@ -1,4 +1,4 @@
-// Elements browse view: 18-column layout, family lines, Group 3 fork, search dimming, table fallback.
+// Elements holographic browse view: 18-column layout, electron shell tiles, atom fly-in, Group 3 fork, table fallback.
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { createRequire } from "node:module";
@@ -60,7 +60,7 @@ t("family ids follow IUPAC-named groups and leave La/Lu/Ac/Lr in the f-block ser
   assert.equal(M.elementFamily(103), "actinoid");
 });
 
-t("elementsView places all 118 records and draws a Group 3 unresolved fork", () => {
+t("elementsView places all 118 records, enriches electron shells, and draws Group 3 fork", () => {
   const ev = M.elementsView(D, {});
   assert.equal(ev.stars.length, 118);
   assert.deepEqual(ev.missing, []);
@@ -71,6 +71,12 @@ t("elementsView places all 118 records and draws a Group 3 unresolved fork", () 
   assert.equal(byId["caesium-element"].name, "Caesium");
   assert.equal(byId["lanthanum-element"].row, 9);
   assert.equal(byId["lutetium-element"].col, 17);
+  assert.deepEqual(byId["carbon-element"].shells, [2, 4]);
+  assert.deepEqual(byId["gold-element"].shells, [2, 8, 18, 32, 18, 1]);
+  assert.equal(byId["rutherfordium-element"].shells, null);
+  assert.equal(byId["rutherfordium-element"].configStatus, "not-proven");
+  assert.equal(byId["oganesson-element"].shells, null);
+  assert.equal(byId["oganesson-element"].configStatus, "[UNKNOWN]");
   assert.ok(!ev.stars.some((s) => s.col === 3 && (s.row === 6 || s.row === 7)));
   const g3 = ev.lines.find((l) => l.family === "group-3");
   assert.deepEqual(g3.points.map((p) => p.z), [21, 39]);
@@ -80,7 +86,7 @@ t("elementsView places all 118 records and draws a Group 3 unresolved fork", () 
   assert.ok(pts.includes("3,9") && pts.includes("17,9") && pts.includes("3,10") && pts.includes("17,10"));
 });
 
-t("search marks matching stars and leaves the others in the layout", () => {
+t("search marks matching tiles and leaves the others in the layout", () => {
   const ev = M.elementsView(D, { q: "oganesson" });
   assert.equal(ev.stars.length, 118);
   const hits = ev.stars.filter((s) => s.match);
@@ -89,7 +95,7 @@ t("search marks matching stars and leaves the others in the layout", () => {
   assert.equal(M.elementsView(D, { q: "zzqx nothing" }).stars.filter((s) => s.match).length, 0);
 });
 
-t("arrow keys step to the nearest star on the same row or column", () => {
+t("arrow keys step to the nearest tile on the same row or column", () => {
   const ev = M.elementsView(D, {});
   const h = ev.stars.find((s) => s.id === "hydrogen-element");
   const he = M.stepElement(ev.stars, h, "ArrowRight");
@@ -143,34 +149,68 @@ function renderAtlas(opts) {
   atlas.st.open = true;
   atlas.st.view = "elements";
   if (opts && "elementsMode" in opts) atlas.st.elementsMode = opts.elementsMode;
+  if (opts && "elementZoom" in opts) atlas.st.elementZoom = opts.elementZoom;
   if (opts && "q" in opts) atlas.st.q = opts.q;
   if (opts && "selected" in opts) atlas.st.selected = opts.selected;
   atlas.render();
   return atlasView.innerHTML;
 }
 
-t("constellation markup has 118 stars, family lines, the fork, and no inline styles", () => {
-  const html = renderAtlas({ elementsMode: "constellation" });
+t("hologram markup has 118 atomic tiles, static shells, dashed unknowns, fork, and no inline styles", () => {
+  const html = renderAtlas({ elementsMode: "hologram" });
   assert.match(html, /data-at-view="elements"/);
-  assert.equal((html.match(/class="at-el-star /g) || []).length, 118);
-  assert.match(html, /data-at-entry="hydrogen-element"[^>]*data-at-el-c="1"[^>]*data-at-el-r="1"/);
-  assert.match(html, /data-at-entry="lanthanum-element"[^>]*data-at-el-c="3"[^>]*data-at-el-r="9"/);
+  assert.equal((html.match(/class="at-el-star at-el-tile /g) || []).length, 118);
+  assert.equal((html.match(/class="at-el-thumb\b/g) || []).length, 118);
+  assert.equal((html.match(/class="at-el-thumb at-el-thumb-unknown"/g) || []).length, 15);
+  assert.match(html, /data-at-el-zoom="hydrogen-element"[^>]*data-at-el-c="1"[^>]*data-at-el-r="1"/);
+  assert.match(html, /data-at-el-zoom="lanthanum-element"[^>]*data-at-el-c="3"[^>]*data-at-el-r="9"/);
   assert.doesNotMatch(html, /data-at-el-c="3"[^>]*data-at-el-r="6"/);
   assert.doesNotMatch(html, /data-at-el-c="3"[^>]*data-at-el-r="7"/);
   assert.match(html, /class="at-el-fork"/);
   assert.match(html, /Group 3 membership is unresolved/);
   assert.match(html, /at-el-line at-fam-alkali-metal/);
   assert.match(html, /data-at-el-mode="table"/);
+  // Tiles use static thumbnails (no orbit animation on thumbnails)
+  assert.doesNotMatch(html, /at-el-orbit/);
+  // Oganesson tile stays dashed with ? and [UNKNOWN] and no guessed electron dots
+  const ogTile = /<button[^>]*data-at-el-zoom="oganesson-element"[\s\S]*?<\/button>/.exec(html)[0];
+  assert.match(ogTile, /at-el-unk/);
+  assert.match(ogTile, /at-el-ring-unknown/);
+  assert.doesNotMatch(ogTile, /at-el-edot/);
   assert.doesNotMatch(html, /style="/);
   assert.doesNotMatch(html, /\bfetch\(|XMLHttpRequest|WebSocket/);
   assert.doesNotMatch(html, /elements\.html|#elements/);
 });
 
-t("table mode lists matching rows and reduced motion defaults to the table", () => {
+t("atom fly-in animates only the focused atom, shows shell labels, and marks unknowns honestly", () => {
+  const carbon = renderAtlas({ elementsMode: "hologram", elementZoom: "carbon-element" });
+  assert.match(carbon, /class="at-el-zoom at-fam-groups-13-16"/);
+  assert.match(carbon, /id="atElBack"/);
+  assert.match(carbon, /id="atElOpenCard" data-at-el-open="carbon-element"/);
+  assert.match(carbon, /class="at-el-atom"/);
+  assert.equal((carbon.match(/class="at-el-orbit /g) || []).length, 2);
+  assert.match(carbon, />K:2</);
+  assert.match(carbon, />L:4</);
+  assert.match(carbon, /Schematic Bohr-style picture/);
+  assert.doesNotMatch(carbon, /style="/);
+
+  const gold = renderAtlas({ elementsMode: "hologram", elementZoom: "gold-element" });
+  assert.equal((gold.match(/class="at-el-orbit /g) || []).length, 6);
+  assert.match(gold, />P:1</);
+
+  const og = renderAtlas({ elementsMode: "hologram", elementZoom: "oganesson-element" });
+  assert.match(og, /at-el-ring-unknown/);
+  assert.doesNotMatch(og, /at-el-orbit/);
+  assert.doesNotMatch(og, /at-el-edot-lg/);
+  assert.match(og, /\[UNKNOWN\]/);
+});
+
+t("table mode lists matching rows with shells and reduced motion defaults to the table", () => {
   const table = renderAtlas({ elementsMode: "table" });
   assert.match(table, /class="at-table at-el-table"/);
   assert.equal((table.match(/data-at-entry="[^"]+-element"/g) || []).length, 118);
   assert.doesNotMatch(table, /class="at-el-grid"/);
+  assert.match(table, /K:2 L:4/);
   const filtered = renderAtlas({ elementsMode: "table", q: "oganesson" });
   assert.equal((filtered.match(/data-at-entry="[^"]+-element"/g) || []).length, 1);
   assert.match(filtered, /oganesson-element/);
@@ -179,26 +219,29 @@ t("table mode lists matching rows and reduced motion defaults to the table", () 
   assert.doesNotMatch(reduced, /class="at-el-grid"/);
 });
 
-t("search dims non-matching stars in the constellation and select can target a star", () => {
-  const html = renderAtlas({ elementsMode: "constellation", q: "oganesson", selected: "oganesson-element" });
+t("search dims non-matching tiles and select can target a tile", () => {
+  const html = renderAtlas({ elementsMode: "hologram", q: "oganesson", selected: "oganesson-element" });
   const miss = (html.match(/at-el-miss/g) || []).length;
   assert.equal(miss, 117);
-  const btn = /<button[^>]*data-at-entry="oganesson-element"[^>]*>/.exec(html)[0];
+  const btn = /<button[^>]*data-at-el-zoom="oganesson-element"[^>]*>/.exec(html)[0];
   assert.match(btn, /\bon\b/);
   assert.doesNotMatch(btn, /at-el-miss/);
-  const dim = /<button[^>]*data-at-entry="hydrogen-element"[^>]*>/.exec(html)[0];
+  const dim = /<button[^>]*data-at-el-zoom="hydrogen-element"[^>]*>/.exec(html)[0];
   assert.match(dim, /at-el-miss/);
 });
 
-t("view source still has no network calls and no inline styles", () => {
+t("view source and css respect CSP, reduced-motion, and select(id)", () => {
   const s = readFileSync(new URL("../js/atlas/atlas-view.js", import.meta.url), "utf8");
   const m = readFileSync(new URL("../js/atlas/atlas-model.js", import.meta.url), "utf8");
+  const css = readFileSync(new URL("../css/app.css", import.meta.url), "utf8");
   for (const [name, src] of [["atlas-view.js", s], ["atlas-model.js", m]]) {
     assert.doesNotMatch(src, /\bfetch\(|XMLHttpRequest|WebSocket|sendBeacon/, name);
     assert.doesNotMatch(src, /style="/, name);
   }
-  assert.match(s, /GD\.atlas\.select|select\(id\)/);
+  assert.match(s, /GD\.atlas\.select/);
   assert.match(s, /prefers-reduced-motion/);
+  assert.match(css, /@media\s*\(prefers-reduced-motion:\s*reduce\)/);
+  assert.match(css, /\.at-el-orbit\s*\{\s*animation:\s*none;/);
   assert.doesNotMatch(s, /elements\.html/);
 });
 

@@ -243,6 +243,11 @@
     });
     return best;
   }
+  const SHELL_LETTERS = ["K", "L", "M", "N", "O", "P", "Q"];
+  function elementConfig(data, id) {
+    const rec = data && data.records && data.records["data/atlas/chemistry/elements-electron-config.json"];
+    return (rec && rec.byId && rec.byId[id]) || null;
+  }
   function elementsView(data, f) {
     const byZ = {};
     const stars = [];
@@ -251,7 +256,17 @@
       const pos = elementPos(z);
       if (!pos) return;
       const family = elementFamily(z);
-      const star = { id: e.id, z, symbol: elementSymbol(e), name: elementName(e), title: e.title, col: pos.col, row: pos.row, family, familyLabel: familyLabel(family), match: matches(e, f) };
+      const cfg = elementConfig(data, e.id);
+      const shells = cfg && Array.isArray(cfg.shells) ? cfg.shells : null;
+      const star = {
+        id: e.id, z, symbol: elementSymbol(e), name: elementName(e), title: e.title,
+        col: pos.col, row: pos.row, family, familyLabel: familyLabel(family), match: matches(e, f),
+        config: (cfg && cfg.config) || UNKNOWN,
+        shells,
+        shellsByLetter: (cfg && cfg.shells_by_letter) || null,
+        configStatus: (cfg && cfg.status) || UNKNOWN,
+        configNote: (cfg && cfg.note) || ""
+      };
       stars.push(star);
       byZ[z] = star;
     });
@@ -280,7 +295,7 @@
     return { cols: 18, rows: 10, families: ELEMENT_FAMILIES, stars, lines, forks, missing };
   }
 
-  const api = { TIERS, TIER_LABEL, UNKNOWN, matches, azRows, letters, byPlace, byYear, isoWeek, nowStatus, tree, tierNote, tierText, tiersWritten, sourcesFor, entryById, category, yearLabel, parseDay, ELEMENT_FAMILIES, isElementEntry, elementZ, elementSymbol, elementName, elementPos, elementFamily, familyLabel, stepElement, elementsView };
+  const api = { TIERS, TIER_LABEL, UNKNOWN, matches, azRows, letters, byPlace, byYear, isoWeek, nowStatus, tree, tierNote, tierText, tiersWritten, sourcesFor, entryById, category, yearLabel, parseDay, ELEMENT_FAMILIES, isElementEntry, elementZ, elementSymbol, elementName, elementPos, elementFamily, familyLabel, stepElement, SHELL_LETTERS, elementConfig, elementsView };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else { root.GD = root.GD || {}; root.GD.atlasModel = api; }
 })(typeof window !== "undefined" ? window : globalThis);

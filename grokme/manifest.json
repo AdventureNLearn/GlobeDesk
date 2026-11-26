@@ -271,8 +271,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 58645,
-      "sha256": "c38852a47af442ddc9c8144077b3103354eac03f57987702d236b62e96e1c2da"
+      "size": 62621,
+      "sha256": "a0e4d7bcd1682cd124931ab7c81eca8f2ce93a4960af0e4d9f324d805772ae82"
     },
     {
       "path": "data/atlas/artifacts/constitution-1787.json",
@@ -756,13 +756,13 @@
     },
     {
       "path": "js/atlas/atlas-model.js",
-      "size": 15641,
-      "sha256": "2c145002a660d633636f2124eb26d3dd4d9cc6b6e74aac27cba1749d17ce3779"
+      "size": 16303,
+      "sha256": "7681ddf30e350058b9adf2791667f1494eb621c36530c19f1765bc9d4179ab38"
     },
     {
       "path": "js/atlas/atlas-view.js",
-      "size": 48029,
-      "sha256": "9f4a95c225a79e54f2e355214260f03806552156b746077d9e9c732bcc8d32b0"
+      "size": 57137,
+      "sha256": "0c442397149de5530544548cdd42682e3574a059adb37e288f1f7bda2b638e9d"
     },
     {
       "path": "js/atlas/bells-layer.js",
@@ -1222,6 +1222,6 @@
   ],
   "totals": {
     "files": 242,
-    "bytes": 7450617
+    "bytes": 7464363
   }
 }

@@ -11,7 +11,7 @@
   const st = {
     open: false, view: "az", mode: "globe", q: "", category: "", tier: "all", selected: null, tab: "object",
     zoom: "years", year: null, month: null, week: null, region: "US", option: "S", place: null, markers: [],
-    elementsMode: null
+    elementsMode: null, elementZoom: null
   };
 
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
@@ -106,29 +106,130 @@
     try { return !!(global.matchMedia && global.matchMedia("(prefers-reduced-motion: reduce)").matches); } catch (e) { return false; }
   }
   function elementsMode() {
-    if (st.elementsMode === "table" || st.elementsMode === "constellation") return st.elementsMode;
-    return prefersReducedMotion() ? "table" : "constellation";
+    if (st.elementsMode === "table") return "table";
+    if (st.elementsMode === "hologram" || st.elementsMode === "constellation") return "hologram";
+    return prefersReducedMotion() ? "table" : "hologram";
   }
   function pt(c, r) { return (c - 0.5) + "," + (r - 0.5); }
+  function configStatusLabel(s) {
+    if (s === "supported") return "We have a record";
+    return s || UNKNOWN;
+  }
+  function tileAtomSvg(s) {
+    if (!s.shells || !s.shells.length) {
+      return '<svg class="at-el-thumb at-el-thumb-unknown" viewBox="-24 -24 48 48" aria-hidden="true" focusable="false">' +
+        '<circle class="at-el-ring at-el-ring-unknown" cx="0" cy="0" r="8"></circle>' +
+        '<circle class="at-el-ring at-el-ring-unknown" cx="0" cy="0" r="14"></circle>' +
+        '<circle class="at-el-ring at-el-ring-unknown" cx="0" cy="0" r="20"></circle>' +
+        '<circle class="at-el-nuc" cx="0" cy="0" r="2.6"></circle>' +
+        '<text class="at-el-qmark" x="0" y="3.2" text-anchor="middle">?</text></svg>';
+    }
+    const n = s.shells.length;
+    const minR = 6, maxR = 20;
+    let rings = "";
+    let dots = "";
+    for (let i = 0; i < n; i++) {
+      const r = n === 1 ? 13 : minR + ((maxR - minR) * i) / (n - 1);
+      rings += '<circle class="at-el-ring" cx="0" cy="0" r="' + r.toFixed(1) + '"></circle>';
+      const count = s.shells[i];
+      for (let j = 0; j < count; j++) {
+        const a = (2 * Math.PI * j) / count - Math.PI / 2;
+        const x = (Math.cos(a) * r).toFixed(1);
+        const y = (Math.sin(a) * r).toFixed(1);
+        dots += '<circle class="at-el-edot" cx="' + x + '" cy="' + y + '" r="1.15"></circle>';
+      }
+    }
+    return '<svg class="at-el-thumb" viewBox="-24 -24 48 48" aria-hidden="true" focusable="false">' +
+      rings + dots + '<circle class="at-el-nuc" cx="0" cy="0" r="2.6"></circle></svg>';
+  }
+  function zoomAtomSvg(s) {
+    const letters = M().SHELL_LETTERS || ["K", "L", "M", "N", "O", "P", "Q"];
+    if (!s.shells || !s.shells.length) {
+      let rings = "";
+      [38, 66, 94, 122].forEach((r) => {
+        rings += '<circle class="at-el-ring at-el-ring-unknown" cx="0" cy="0" r="' + r + '"></circle>';
+      });
+      return '<svg class="at-el-atom at-el-atom-unknown" viewBox="-160 -160 320 320" role="img" aria-label="' + esc(s.title) + ' unknown electron shells">' +
+        rings +
+        '<circle class="at-el-nuc-lg" cx="0" cy="0" r="18"></circle>' +
+        '<text class="at-el-nuc-txt" x="0" y="5" text-anchor="middle">' + esc(s.symbol) + "</text>" +
+        '<text class="at-el-unk-lbl" x="0" y="142" text-anchor="middle">' + esc(s.configStatus + " — shells " + UNKNOWN) + "</text></svg>";
+    }
+    const n = s.shells.length;
+    const minR = 34, maxR = 132;
+    let rings = "";
+    let orbits = "";
+    let labels = "";
+    for (let i = 0; i < n; i++) {
+      const r = n === 1 ? 74 : minR + ((maxR - minR) * i) / (n - 1);
+      const count = s.shells[i];
+      const letter = letters[i] || String(i + 1);
+      rings += '<circle class="at-el-ring" cx="0" cy="0" r="' + r.toFixed(1) + '"></circle>';
+      let edots = "";
+      for (let j = 0; j < count; j++) {
+        const a = (2 * Math.PI * j) / count - Math.PI / 2;
+        const x = (Math.cos(a) * r).toFixed(1);
+        const y = (Math.sin(a) * r).toFixed(1);
+        edots += '<circle class="at-el-edot-lg" cx="' + x + '" cy="' + y + '" r="3.4"></circle>';
+      }
+      const cls = "at-el-orbit at-el-orbit-" + (i + 1) + (i % 2 === 1 ? " at-el-orbit-rev" : "");
+      orbits += '<g class="' + cls + '">' + edots + "</g>";
+      // Place shell count labels staggered slightly off the vertical axis so they stay legible
+      const lx = (i % 2 === 0 ? 1 : -1) * Math.min(28, 12 + i * 3);
+      const ly = -r + 3.5;
+      labels += '<g class="at-el-shell-tag">' +
+        '<rect x="' + (lx - 18).toFixed(1) + '" y="' + (ly - 9).toFixed(1) + '" width="36" height="14" rx="7"></rect>' +
+        '<text x="' + lx.toFixed(1) + '" y="' + (ly + 1.5).toFixed(1) + '" text-anchor="middle">' + esc(letter + ":" + count) + "</text></g>";
+    }
+    return '<svg class="at-el-atom" viewBox="-160 -160 320 320" role="img" aria-label="' + esc(s.title) + ' schematic Bohr-style electron shells">' +
+      rings + orbits +
+      '<circle class="at-el-nuc-lg" cx="0" cy="0" r="18"></circle>' +
+      '<text class="at-el-nuc-txt" x="0" y="5" text-anchor="middle">' + esc(s.symbol) + "</text>" +
+      labels + "</svg>";
+  }
+  function elementZoomHtml(ev) {
+    const s = ev.stars.find((x) => x.id === st.elementZoom);
+    if (!s) return "";
+    const letters = M().SHELL_LETTERS || ["K", "L", "M", "N", "O", "P", "Q"];
+    const shellsBar = s.shells && s.shells.length
+      ? '<ul class="at-el-shells" aria-label="Electrons per shell">' + s.shells.map((n, i) => '<li><b>' + esc(letters[i] || String(i + 1)) + "</b> " + n + "</li>").join("") + "</ul>"
+      : '<p class="small at-el-unk-note"><b>Shell occupancy:</b> ' + esc(s.configStatus === "not-proven" ? "not-proven " + UNKNOWN : UNKNOWN) + (s.configNote ? " — " + esc(s.configNote) : "") + "</p>";
+    return '<div class="at-el-zoom at-fam-' + esc(s.family) + '">' +
+      '<div class="at-el-zoom-bar">' +
+      '<button type="button" class="mini" id="atElBack">← Back to table</button>' +
+      '<span class="at-el-zoom-title"><b>' + esc(s.name) + "</b> (" + esc(s.symbol) + ", Z=" + s.z + ') <span class="pill">' + esc(s.familyLabel) + '</span> <span class="pill">' + esc(configStatusLabel(s.configStatus)) + "</span></span>" +
+      '<button type="button" class="mini on" id="atElOpenCard" data-at-el-open="' + esc(s.id) + '">Open Atlas card</button>' +
+      "</div>" +
+      '<div class="at-el-stage">' + zoomAtomSvg(s) + "</div>" +
+      '<p class="small at-el-cfg-line"><b>Ground-state configuration:</b> <code>' + esc(s.config) + "</code></p>" +
+      shellsBar +
+      '<p class="muted small at-el-caption">Schematic Bohr-style picture showing NIST ground-state shell counts, not a physical orbital map or electron trajectory.</p>' +
+      "</div>";
+  }
   function elementsHtml() {
     const ev = M().elementsView(D(), filters());
     const mode = elementsMode();
-    const famBy = {};
-    ev.families.forEach((f) => { famBy[f.id] = f.label; });
-    const note = '<p class="muted small at-el-note">IUPAC 18-column grouping, not a new classification. Dashed fork: Group 3 is unresolved (the table does not pick lanthanum or lutetium, or actinium or lawrencium).</p>';
+    if (st.elementZoom && mode === "hologram") {
+      const zoomed = elementZoomHtml(ev);
+      if (zoomed) return '<div class="at-elements">' + zoomed + "</div>";
+      st.elementZoom = null;
+    }
+    const note = '<p class="muted small at-el-note">IUPAC 18-column layout, NIST SP 966 ground-state shells (schematic Bohr-style tiles, not a physical orbital map). Dashed fork: Group 3 is unresolved. Z=104–118 stay dashed (' + UNKNOWN + " / not-proven).</p>";
     const toggle = '<div class="seg small" role="group" aria-label="Elements presentation">' +
-      '<button type="button" data-at-el-mode="constellation" aria-pressed="' + (mode === "constellation") + '">Constellation</button>' +
+      '<button type="button" data-at-el-mode="hologram" aria-pressed="' + (mode === "hologram") + '">Hologram</button>' +
       '<button type="button" data-at-el-mode="table" aria-pressed="' + (mode === "table") + '">Table</button></div>';
     const legend = '<ul class="at-el-legend" aria-label="Family colours">' + ev.families.map((f) => '<li class="at-fam-' + esc(f.id) + '">' + esc(f.label) + "</li>").join("") + "</ul>";
     let body;
     if (mode === "table") {
       const rows = ev.stars.filter((s) => s.match);
-      body = '<div class="at-el-table-wrap"><table class="at-table at-el-table"><caption class="muted small">Chemical elements in atomic-number order. The list follows the search box and category filter.</caption>' +
-        "<thead><tr><th>Z</th><th>Symbol</th><th>Name</th><th>Family</th></tr></thead><tbody>" +
+      const letters = M().SHELL_LETTERS || ["K", "L", "M", "N", "O", "P", "Q"];
+      body = '<div class="at-el-table-wrap"><table class="at-table at-el-table"><caption class="muted small">Chemical elements in atomic-number order. Follows the search box and category filter.</caption>' +
+        "<thead><tr><th>Z</th><th>Sym</th><th>Name</th><th>Shells</th><th>Family</th></tr></thead><tbody>" +
         (rows.map((s) => {
           const on = st.selected === s.id;
-          return '<tr class="' + (on ? "on" : "") + '"><td class="at-el-z">' + s.z + '</td><td>' + esc(s.symbol) + '</td><td><button type="button" class="at-el-name" data-at-entry="' + esc(s.id) + '" aria-current="' + on + '">' + esc(s.name) + "</button></td><td>" + esc(s.familyLabel) + "</td></tr>";
-        }).join("") || '<tr><td colspan="4" class="muted">No element records match this search or filter.</td></tr>') +
+          const sh = s.shells ? s.shells.map((n, i) => (letters[i] || "") + ":" + n).join(" ") : s.configStatus;
+          return '<tr class="' + (on ? "on" : "") + '"><td class="at-el-z">' + s.z + "</td><td>" + esc(s.symbol) + '</td><td><button type="button" class="at-el-name" data-at-entry="' + esc(s.id) + '" aria-current="' + on + '">' + esc(s.name) + '</button></td><td class="small">' + esc(sh) + "</td><td>" + esc(s.familyLabel) + "</td></tr>";
+        }).join("") || '<tr><td colspan="5" class="muted">No element records match this search or filter.</td></tr>') +
         "</tbody></table></div>";
     } else {
       const lines = ev.lines.map((l) => '<polyline class="at-el-line at-fam-' + esc(l.family) + '" fill="none" points="' + l.points.map((p) => pt(p.col, p.row)).join(" ") + '"></polyline>').join("");
@@ -137,29 +238,39 @@
       const stars = ev.stars.map((s) => {
         const on = st.selected === s.id;
         const miss = !s.match;
-        return '<button type="button" role="option" class="at-el-star at-fam-' + esc(s.family) + (on ? " on" : "") + (miss ? " at-el-miss" : "") + '" data-at-entry="' + esc(s.id) + '" data-at-el-c="' + s.col + '" data-at-el-r="' + s.row + '" tabindex="' + (s.id === focusId ? "0" : "-1") + '" aria-selected="' + on + '" aria-label="' + esc(s.title) + '"><span class="at-el-dot" aria-hidden="true"></span><span class="at-el-sym" aria-hidden="true">' + esc(s.symbol) + "</span></button>";
+        const unk = !s.shells;
+        const aria = s.title + (s.shells ? ", shells " + s.shells.join("-") : ", shells " + s.configStatus);
+        return '<button type="button" role="option" class="at-el-star at-el-tile at-fam-' + esc(s.family) + (on ? " on" : "") + (miss ? " at-el-miss" : "") + (unk ? " at-el-unk" : "") + '" data-at-el-zoom="' + esc(s.id) + '" data-at-el-c="' + s.col + '" data-at-el-r="' + s.row + '" tabindex="' + (s.id === focusId ? "0" : "-1") + '" aria-selected="' + on + '" aria-label="' + esc(aria) + '">' +
+          '<span class="at-el-num" aria-hidden="true">' + s.z + '</span><span class="at-el-sym" aria-hidden="true">' + esc(s.symbol) + "</span>" +
+          tileAtomSvg(s) +
+          (unk ? '<span class="at-el-unk-tag" aria-hidden="true">' + esc(s.configStatus === "not-proven" ? "not-proven" : UNKNOWN) + "</span>" : "") +
+          "</button>";
       }).join("");
       const missing = ev.missing.length ? '<p class="muted small">No record for Z=' + ev.missing.join(", ") + " " + UNKNOWN + ".</p>" : "";
-      body = '<div class="at-el-sky" id="atElSky"><svg class="at-el-lines" viewBox="0 0 18 10" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false">' + lines + forks + "</svg>" +
-        '<div class="at-el-grid" role="listbox" aria-label="Chemical elements in the 18-column periodic layout">' + stars + "</div></div>" + missing;
+      body = '<div class="at-el-sky" id="atElSky"><svg class="at-el-lines" viewBox="0 0 18 10" preserveAspectRatio="none" aria-hidden="true" focusable="false">' + lines + forks + "</svg>" +
+        '<div class="at-el-grid" role="listbox" aria-label="Chemical elements holographic periodic table">' + stars + "</div></div>" + missing;
     }
     return '<div class="at-elements">' + toggle + note + legend + body + "</div>";
   }
   function onElementsNav(ev) {
     const k = ev.key;
     if (k !== "ArrowLeft" && k !== "ArrowRight" && k !== "ArrowUp" && k !== "ArrowDown" && k !== "Home" && k !== "End" && k !== "Enter" && k !== " ") return;
-    const id = ev.target && ev.target.getAttribute && ev.target.getAttribute("data-at-entry");
-    if ((k === "Enter" || k === " ") && id) { ev.preventDefault(); select(id); return; }
+    const zoomId = ev.target && ev.target.getAttribute && ev.target.getAttribute("data-at-el-zoom");
+    const entryId = ev.target && ev.target.getAttribute && ev.target.getAttribute("data-at-entry");
+    if ((k === "Enter" || k === " ") && zoomId) { ev.preventDefault(); st.elementZoom = zoomId; render(); return; }
+    if ((k === "Enter" || k === " ") && entryId) { ev.preventDefault(); select(entryId); return; }
     if (k === "Enter" || k === " ") return;
     ev.preventDefault();
     const evw = M().elementsView(D(), filters());
+    const id = zoomId || entryId;
     const from = evw.stars.find((s) => s.id === id);
     const table = ev.currentTarget.classList && ev.currentTarget.classList.contains("at-el-table");
     const next = M().stepElement(evw.stars, from, k, { matchesOnly: !!table });
     if (!next) return;
-    const btn = ev.currentTarget.querySelector('[data-at-entry="' + next.id + '"]');
+    const sel = table ? '[data-at-entry="' + next.id + '"]' : '[data-at-el-zoom="' + next.id + '"]';
+    const btn = ev.currentTarget.querySelector(sel);
     if (!btn) return;
-    ev.currentTarget.querySelectorAll("[data-at-entry]").forEach((b) => { b.tabIndex = -1; });
+    ev.currentTarget.querySelectorAll("[data-at-el-zoom], [data-at-entry]").forEach((b) => { b.tabIndex = -1; });
     btn.tabIndex = 0;
     if (btn.focus) btn.focus();
   }
@@ -281,11 +392,25 @@
     const ce = chemId ? M().entryById(D(), chemId) : null;
     const rec = ce ? recordOf(ce) : null;
     if (!rec) return '<p class="muted">No chemistry record for this entry ' + UNKNOWN + ".</p>" + (ce ? "<p>" + esc(ce.summary) + "</p>" : "");
-    let h = (chemId !== e.id ? '<p class="small">From <button type="button" class="linklike" data-at-entry="' + esc(chemId) + '">' + esc(ce.title) + "</button></p>" : "") +
-      (rec.properties ? '<p class="small">' + esc(M().tierText ? M().tierText(ce, st.tier) : ce.summary) + '</p><table class="at-table small"><thead><tr><th>Property</th><th>Value</th><th>Source</th></tr></thead><tbody>' +
-        rec.properties.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.value) + "</td><td>" + (r.source ? srcLink(r.source) : UNKNOWN) + "</td></tr>").join("") + "</tbody></table>" :
-      '<table class="at-table small"><thead><tr><th>Property</th><th>LFP</th><th>NMC</th><th>Source</th></tr></thead><tbody>' +
-      rec.compare.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.lfp) + "</td><td>" + esc(r.nmc) + "</td><td>" + esc(r.source) + "</td></tr>").join("") + "</tbody></table>");
+    const elCfg = rec.byId && rec.byId[ce.id];
+    const letters = M().SHELL_LETTERS || ["K", "L", "M", "N", "O", "P", "Q"];
+    let h = (chemId !== e.id ? '<p class="small">From <button type="button" class="linklike" data-at-entry="' + esc(chemId) + '">' + esc(ce.title) + "</button></p>" : "");
+    if (elCfg) {
+      const shellRows = elCfg.shells ? elCfg.shells.map((n, i) => (letters[i] || String(i + 1)) + ": " + n).join(", ") : UNKNOWN;
+      h += '<table class="at-table small"><tbody>' +
+        '<tr><th>Ground-state configuration</th><td><code>' + esc(elCfg.config) + "</code></td></tr>" +
+        '<tr><th>Shell occupancy</th><td>' + esc(shellRows) + "</td></tr>" +
+        '<tr><th>Record status</th><td>' + esc(configStatusLabel(elCfg.status)) + "</td></tr>" +
+        '<tr><th>Source</th><td>' + (elCfg.source ? srcLink(elCfg.source) : UNKNOWN) + "</td></tr>" +
+        "</tbody></table>" +
+        (elCfg.note ? '<p class="muted small">' + esc(elCfg.note) + "</p>" : "");
+    } else if (rec.properties) {
+      h += '<p class="small">' + esc(M().tierText ? M().tierText(ce, st.tier) : ce.summary) + '</p><table class="at-table small"><thead><tr><th>Property</th><th>Value</th><th>Source</th></tr></thead><tbody>' +
+        rec.properties.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.value) + "</td><td>" + (r.source ? srcLink(r.source) : UNKNOWN) + "</td></tr>").join("") + "</tbody></table>";
+    } else if (rec.compare) {
+      h += '<table class="at-table small"><thead><tr><th>Property</th><th>LFP</th><th>NMC</th><th>Source</th></tr></thead><tbody>' +
+        rec.compare.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.lfp) + "</td><td>" + esc(r.nmc) + "</td><td>" + esc(r.source) + "</td></tr>").join("") + "</tbody></table>";
+    }
     if (!rec.properties) h += '<p class="small">' + esc(rec.why_this_kit_uses_lfp || "") + "</p>" + '<p class="muted small">Reactions: ' + esc(rec.reactions) + "<br>3D molecule or crystal models: " + esc(rec.molecule_models) + "</p>";
     if (rec.note) h += '<p class="muted small">' + esc(rec.note) + "</p>";
     return h;
@@ -372,22 +497,30 @@
     if (st.view === "elements") {
       const active = global.document && global.document.activeElement;
       const typing = active && (active.id === "atSearch" || active.id === "atCategory" || active.id === "atTier");
-      const btn = (st.selected && root.querySelector('[data-at-entry="' + String(st.selected).replace(/"/g, "") + '"]'))
-        || root.querySelector(".at-el-star:not(.at-el-miss)")
-        || root.querySelector(".at-el-star")
-        || root.querySelector(".at-el-name");
-      if (btn) {
-        if (!typing && btn.focus) {
-          try { btn.focus({ preventScroll: true }); } catch (e) { try { btn.focus(); } catch (e2) { /* ignore */ } }
+      if (st.elementZoom) {
+        const openBtn = root.querySelector("#atElOpenCard");
+        if (!typing && openBtn && openBtn.focus) {
+          try { openBtn.focus({ preventScroll: true }); } catch (e) { try { openBtn.focus(); } catch (e2) { /* ignore */ } }
         }
-        const sky = root.querySelector(".at-el-sky");
-        if (sky && sky.contains && sky.contains(btn)) {
-          const br = sky.getBoundingClientRect();
-          const sr = btn.getBoundingClientRect();
-          if (sr.left < br.left) sky.scrollLeft += sr.left - br.left - 12;
-          else if (sr.right > br.right) sky.scrollLeft += sr.right - br.right + 12;
-          if (sr.top < br.top) sky.scrollTop += sr.top - br.top - 12;
-          else if (sr.bottom > br.bottom) sky.scrollTop += sr.bottom - br.bottom + 12;
+      } else {
+        const targetId = st.selected ? String(st.selected).replace(/"/g, "") : "";
+        const btn = (targetId && (root.querySelector('[data-at-el-zoom="' + targetId + '"]') || root.querySelector('[data-at-entry="' + targetId + '"]')))
+          || root.querySelector(".at-el-tile:not(.at-el-miss)")
+          || root.querySelector(".at-el-tile")
+          || root.querySelector(".at-el-name");
+        if (btn) {
+          if (!typing && btn.focus) {
+            try { btn.focus({ preventScroll: true }); } catch (e) { try { btn.focus(); } catch (e2) { /* ignore */ } }
+          }
+          const sky = root.querySelector(".at-el-sky");
+          if (sky && sky.contains && sky.contains(btn)) {
+            const br = sky.getBoundingClientRect();
+            const sr = btn.getBoundingClientRect();
+            if (sr.left < br.left) sky.scrollLeft += sr.left - br.left - 12;
+            else if (sr.right > br.right) sky.scrollLeft += sr.right - br.right + 12;
+            if (sr.top < br.top) sky.scrollTop += sr.top - br.top - 12;
+            else if (sr.bottom > br.bottom) sky.scrollTop += sr.bottom - br.bottom + 12;
+          }
         }
       }
     }
@@ -404,8 +537,12 @@
   function bind(root) {
     const on = (sel, ev, fn) => root.querySelectorAll(sel).forEach((el) => el.addEventListener(ev, fn));
     on("[data-at-entry]", "click", (ev) => { ev.stopPropagation(); select(ev.currentTarget.getAttribute("data-at-entry")); });
-    on("[data-at-view]", "click", (ev) => { st.view = ev.currentTarget.getAttribute("data-at-view"); render(); });
-    on("[data-at-el-mode]", "click", (ev) => { st.elementsMode = ev.currentTarget.getAttribute("data-at-el-mode"); render(); });
+    on("[data-at-view]", "click", (ev) => { st.view = ev.currentTarget.getAttribute("data-at-view"); if (st.view !== "elements") st.elementZoom = null; render(); });
+    on("[data-at-el-mode]", "click", (ev) => { st.elementsMode = ev.currentTarget.getAttribute("data-at-el-mode"); st.elementZoom = null; render(); });
+    on("[data-at-el-zoom]", "click", (ev) => { ev.stopPropagation(); st.elementZoom = ev.currentTarget.getAttribute("data-at-el-zoom"); render(); });
+    on("[data-at-el-open]", "click", (ev) => { ev.stopPropagation(); const id = ev.currentTarget.getAttribute("data-at-el-open"); GD.atlas.select(id); const det = $("atDetail"); if (det && det.scrollIntoView && global.innerWidth <= 820) det.scrollIntoView({ block: "start" }); });
+    const elBack = root.querySelector("#atElBack");
+    if (elBack) elBack.addEventListener("click", () => { const prev = st.elementZoom; st.elementZoom = null; if (prev) st.selected = prev; render(); });
     const elGrid = root.querySelector(".at-el-grid");
     if (elGrid) elGrid.addEventListener("keydown", onElementsNav);
     const elTable = root.querySelector(".at-el-table");
@@ -531,7 +668,7 @@
   function wire() {
     const b = $("btnAtlas"); if (b) b.addEventListener("click", toggle);
     const root = $("atlasView");
-    if (root) root.addEventListener("keydown", (e) => { if (e.key === "Escape") { e.preventDefault(); closeView(); } });
+    if (root) root.addEventListener("keydown", (e) => { if (e.key === "Escape") { e.preventDefault(); if (st.view === "elements" && st.elementZoom) { const prev = st.elementZoom; st.elementZoom = null; st.selected = prev; render(); } else closeView(); } });
     if (GD.globe && GD.globe.st && GD.globe.st.onReady) GD.globe.st.onReady.push(() => syncMarkers());
   }
 
