@@ -15,7 +15,7 @@ labels: bug
 3. 
 
 **Version and setup**
-- GlobeDesk version (Menu → Help → Version; current release is v1.5.0 · Atlas):
+- GlobeDesk version (Menu → Help → Version; current release is v1.5.1 · Atlas):
 - Browser and version:
 - OS:
 - How you run it (`START-GLOBEDESK`, `python3 tools/serve.py`, other):

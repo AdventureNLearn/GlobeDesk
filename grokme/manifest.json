@@ -1,6 +1,6 @@
 {
   "name": "GlobeDesk",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "entry": "index.html",
   "limits": {
     "note": "Official Grok.me size limits are [UNKNOWN]. These are self-imposed.",
@@ -12,7 +12,7 @@
     {
       "path": ".github/ISSUE_TEMPLATE/bug_report.md",
       "size": 593,
-      "sha256": "9fbe494424be84cc4d1f019a2ef795f861e9f711d016cd27747239d33816c1e2"
+      "sha256": "a9b1709849bb6216c4a8f321188ad962e002c08027b0b3945fa02c315bee57ca"
     },
     {
       "path": ".github/ISSUE_TEMPLATE/feature_request.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "size": 36135,
-      "sha256": "62d8d6a49b9132e5287d372f9a1657b4787938fca9cb499475598e52aa0754e5"
+      "size": 37233,
+      "sha256": "d795eab1d87cc8154cfba594aa8e53c270f088bb36e8795a3ea1998de3a2af66"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -57,7 +57,7 @@
     {
       "path": "GROK-ME-BUILD.md",
       "size": 7484,
-      "sha256": "df337501d38ae016e08f2955b251c182ab6e62da47f14cf7985e8cf547382d85"
+      "sha256": "9dfbe09bac2fc5c52791d8a9efce528606317c0420f778c30c9cbad3eaefd25b"
     },
     {
       "path": "LICENSE",
@@ -71,13 +71,13 @@
     },
     {
       "path": "README.md",
-      "size": 18579,
-      "sha256": "d042e7bd0e67a3adfd3ba2acf0e7e0760631a1ee09b4ec2d4d80440ac50c2e63"
+      "size": 18677,
+      "sha256": "b4fe6e3d2db40e2eb6996a177b0da193e866f821fa40aa42b3cae8a73c1442fa"
     },
     {
       "path": "SECURITY.md",
-      "size": 1260,
-      "sha256": "aa97ef53e1669b41175ab625a9623683d15ac9e703d0085075e797aae7745961"
+      "size": 1276,
+      "sha256": "dba5a9d8a1e40266f6978f8633a3d6cffe7d2b0f2b603f5098169c9cfbd0ffec"
     },
     {
       "path": "USER-GUIDE.md",
@@ -87,7 +87,7 @@
     {
       "path": "WINDOWS-RUN.md",
       "size": 4435,
-      "sha256": "b1e56d5ceba933cd865a48c43fa0c2a1bc41b153d060abc99838ed8ef6b8ebe1"
+      "sha256": "fd9e319df3110d1ee0a35d6f90c15103463982449669b9b6c71f48ab8ecddba2"
     },
     {
       "path": "atlas/README.md",
@@ -271,8 +271,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 63455,
-      "sha256": "e1b04a80be076c8e9f7694bf215494a90178d84bee53c18b0b63f7b47189a97c"
+      "size": 64491,
+      "sha256": "5102721fade0df55c56bc7152512521b7f2a5f49b11fbf94b55cb45872a21fee"
     },
     {
       "path": "data/atlas/artifacts/constitution-1787.json",
@@ -665,6 +665,11 @@
       "sha256": "274d1042fa437c83712aa95c35f6482a4f2294aeed05038041186a75de9da6cf"
     },
     {
+      "path": "docs/RELEASE-NOTES-v1.5.1.md",
+      "size": 1028,
+      "sha256": "efd44ef8cedbfe9bd57a40f1bdaa2ec8792a8c393fa6d0ba05bb8b4f94c6d1b3"
+    },
+    {
       "path": "docs/SHARE-PACK.md",
       "size": 2850,
       "sha256": "8b20d03f6af7116fe444a596ac5f1c3e082f68713c1a045c0e92bd93352228e7"
@@ -717,7 +722,7 @@
     {
       "path": "grokme/APP-BRIEF.txt",
       "size": 1425,
-      "sha256": "35d0523453a1b369340e2cb53ae2a07fcc8096c982760ef13b430624447852ef"
+      "sha256": "8ac544a54becb402f873c302256fd439c9109f10335583ae541fedfdf6612bed"
     },
     {
       "path": "grokme/BUILDER-PROMPT.txt",
@@ -727,17 +732,17 @@
     {
       "path": "grokme/FEATURES.txt",
       "size": 2393,
-      "sha256": "277f2db9298d0fb65ba499f389e0c48da702ac89965783997067e5be890e5c2f"
+      "sha256": "b9365749d37373d30b7067eca31ca666f2459359ff40e9cf801cd8b4da5bfbd7"
     },
     {
       "path": "grokme/UPDATE-PROMPT.txt",
       "size": 2741,
-      "sha256": "35e8e3c4d3fa5ea04eeb1b7dcfa9700263963d58455cff1f689377cd74e77eb6"
+      "sha256": "cc03d4a3aac309da94acd95c0a789fd748550b7cce550fc54a767b2da6a2ce62"
     },
     {
       "path": "index.html",
       "size": 19830,
-      "sha256": "a40ee338a161aa0c772413c8379b5203d10823aa251c2675b9c1433a2da62916"
+      "sha256": "0ee33eadafafaf0df87fe32622859196c1caaec6fd136fddbe433db7427bab04"
     },
     {
       "path": "js/archive.js",
@@ -766,8 +771,8 @@
     },
     {
       "path": "js/atlas/atlas-view.js",
-      "size": 59152,
-      "sha256": "53b5a29d1af5fa725844c5cc272e4f20c4cdf1a2e61d5b538b97dd97f6e8e095"
+      "size": 59192,
+      "sha256": "f6c4fc27047d870579de7ebe070ae454fcbb490fd0f9cacf1e5e8f5835252008"
     },
     {
       "path": "js/atlas/bells-layer.js",
@@ -1002,7 +1007,7 @@
     {
       "path": "js/version.js",
       "size": 877,
-      "sha256": "137937d563d5c0606cc9cab13b20f653096d6c9af9350283c071e651d01be7b1"
+      "sha256": "539c9d74c557e030593d6f8fc57ccd5c1ccc4cc1170de5f9996861a1082c84f7"
     },
     {
       "path": "js/work-desks.js",
@@ -1081,8 +1086,8 @@
     },
     {
       "path": "package.json",
-      "size": 1713,
-      "sha256": "8c967a8cd097a201e05bf9256cc689afa374acfb68aaa1a8e9366a55b79d4e5d"
+      "size": 1755,
+      "sha256": "0c7fecf86fc7e729ec5c1c4104fa58313bf7248e911fcc6041b795a5c313effd"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -1226,7 +1231,7 @@
     }
   ],
   "totals": {
-    "files": 243,
-    "bytes": 7481412
+    "files": 244,
+    "bytes": 7484770
   }
 }

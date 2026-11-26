@@ -2,7 +2,7 @@
 
 Target folder: `C:\GlobeDesk`
 
-1. Extract `globedesk-v1.5.0.zip` into `C:\` (the zip contains a `GlobeDesk` folder), so that `C:\GlobeDesk\index.html` exists. You can also extract into any other folder you choose; the app folder should contain `index.html`.
+1. Extract `globedesk-v1.5.1.zip` into `C:\` (the zip contains a `GlobeDesk` folder), so that `C:\GlobeDesk\index.html` exists. You can also extract into any other folder you choose; the app folder should contain `index.html`.
 2. Double-click **`START-GLOBEDESK.bat`**. It picks the first server it finds:
    - **Python** (`py -3` or `python`) runs `tools\serve.py`.
    - If there's no Python, it uses **Windows PowerShell's built-in server** (`tools\serve.ps1`). Nothing gets installed.

@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## v1.5.1 — Atlas — 2026-11-26
+
+User-facing notes: [docs/RELEASE-NOTES-v1.5.1.md](docs/RELEASE-NOTES-v1.5.1.md).
+
+- Version shown as "v1.5.1 · Atlas".
+- **Atlas phone layout fix.** On a phone (screens 820 px wide or less) the A–Z list, the open entry (Object, Parts, Chemistry, Sources), the Official sources and Community notice, and the footer were drawn on top of each other. The list and the open entry are now two stacked scroll panes, so nothing overlaps and each one scrolls on its own. The same fix applies to Categories, By place and By year.
+- The Atlas sheet on a phone is opaque (the globe controls no longer show through) and starts just under the top bar on every screen height, as the Elements sheet already did. The search box and the two filters share one row.
+- Source links in the open entry (and the Source link in tables) are 44 px tall on a phone.
+- The phone Menu and Layers sheets are opaque.
+- Desktop (821 px and wider) is unchanged: the same boxes at 1920, 1280 and 821 px, before and after.
+- New test `tests/atlas-phone-layout.unit.mjs` guards the phone rules.
+
 ## v1.5.0 — Atlas — 2026-11-26
 
 User-facing notes: [docs/RELEASE-NOTES-v1.5.0.md](docs/RELEASE-NOTES-v1.5.0.md).
