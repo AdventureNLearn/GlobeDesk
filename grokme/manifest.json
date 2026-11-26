@@ -57,7 +57,7 @@
     {
       "path": "GROK-ME-BUILD.md",
       "size": 7241,
-      "sha256": "9890e286b34424041036260e879dd2f25cc896098156b9322aa95da25e7a2874"
+      "sha256": "6a685826826430dcd3e59acfc48817fa7efe4943714a3cf14bde04ff5605fbd4"
     },
     {
       "path": "LICENSE",
@@ -72,7 +72,7 @@
     {
       "path": "README.md",
       "size": 17931,
-      "sha256": "54d3d0c7aa7aa8f6adbd76f9843328ab3e45fed908fc21fd8ffea8773439c34e"
+      "sha256": "a44a8329c6eebc4cf8a5e6536929937beb396b2a6ede99a70f56ec4b6b272d42"
     },
     {
       "path": "SECURITY.md",
@@ -87,12 +87,12 @@
     {
       "path": "WINDOWS-RUN.md",
       "size": 4435,
-      "sha256": "e995d6c1b8acfb63205c9399850de0f85002ba0468e95c1e2a2d09ed2331b5d2"
+      "sha256": "4c467a6cfb1c11ca01fe1efbe7ceacca7e828b1ebbfff9f0b305626b2e623025"
     },
     {
       "path": "atlas/README.md",
-      "size": 4470,
-      "sha256": "9e698eabec4530b8e1aad7157fc61fdd80521525fbb41f1b454ddeb6d88df0b9"
+      "size": 5078,
+      "sha256": "897796ee1471fcc0ab703dee38ec4fee20b04c8206ed6cc4afc5c7f90ba20c80"
     },
     {
       "path": "atlas/categories.json",
@@ -116,13 +116,13 @@
     },
     {
       "path": "atlas/packs/chemistry/entries.json",
-      "size": 9608,
-      "sha256": "43c297d62fccf694bc12e0dcdf2bec88301acd6ab860721b09b233dfdcd6c765"
+      "size": 180484,
+      "sha256": "311a4eb45a22da2348903acce149059c5e48d1fa8c487e0c677d0acc28e207b2"
     },
     {
       "path": "atlas/packs/chemistry/manifest.json",
-      "size": 635,
-      "sha256": "06c174932b77cca32ce9aa666cd7e604d16e2e1aa3c37158738e10b57c608e34"
+      "size": 641,
+      "sha256": "0fec9637eaffb35b7588d6447513ea835c051b098221da5f836ae92bd3dc02df"
     },
     {
       "path": "atlas/packs/civic/entries.json",
@@ -141,28 +141,28 @@
     },
     {
       "path": "atlas/packs/core/index.json",
-      "size": 58911,
-      "sha256": "fc99a90322cec618f2115d7c8edce8c6fcd9b9c7f897171abcfaa37e7e55df8d"
+      "size": 99469,
+      "sha256": "36cab531d3bac9dc1ff399260811cd5111bd1619f2756053606e7191d9f78c6c"
     },
     {
       "path": "atlas/packs/core/manifest.json",
       "size": 1218,
-      "sha256": "a0cb2928579d36fa5da48f776e3a3aa71b2bbd52e96f423e6ada0576a453b1ad"
+      "sha256": "5b6c92f5bed8e4f5fac22328c4ccfc13527c764045e3bd7e7dde4546fcf44e7c"
     },
     {
       "path": "atlas/packs/core/places.json",
-      "size": 10578,
-      "sha256": "026ed2320e0c0420664e7fed408df88dca1d70c972366a78faa4883c988055ec"
+      "size": 13344,
+      "sha256": "70a9f2293d766599fbdc50dc5b0a9ab5c0f09d2f55bf2677518e5733256c59e1"
     },
     {
       "path": "atlas/packs/core/sources.json",
-      "size": 146845,
-      "sha256": "210425e88c9b64d1c85d8f628d6c8fe3483346fe1bfeed24709b2b09fdd7f5eb"
+      "size": 150141,
+      "sha256": "7ada484e34c9cec242cc5959ebb758736324caed053baf2c50ecc10e266a46b8"
     },
     {
       "path": "atlas/packs/core/years.json",
-      "size": 38116,
-      "sha256": "c177cfc29fac2ffe279d2d63650af152b7ab828f172ccd48cda7af3227646279"
+      "size": 52263,
+      "sha256": "4f02a8119f121a0cbe9cf053b8abc7835e122ea10d3be2ed93a47fd9bc638f64"
     },
     {
       "path": "atlas/packs/earth/entries.json",
@@ -271,8 +271,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 52823,
-      "sha256": "7c290ec9487d3f8ede397f481ff80875f75e07a604e44af2309eda1244ebf5de"
+      "size": 63455,
+      "sha256": "e1b04a80be076c8e9f7694bf215494a90178d84bee53c18b0b63f7b47189a97c"
     },
     {
       "path": "data/atlas/artifacts/constitution-1787.json",
@@ -570,6 +570,11 @@
       "sha256": "9cd34e5c5e05c332e7b3ae0a66a19314d875ee04a381ee5dfa38179ad11629c4"
     },
     {
+      "path": "data/atlas/chemistry/elements-electron-config.json",
+      "size": 70667,
+      "sha256": "f713bc7b93726c606f5379e87f488105c135feaf1bea51bb5efd099a44d36064"
+    },
+    {
       "path": "data/atlas/chemistry/lifepo4-vs-nmc.json",
       "size": 1356,
       "sha256": "68fd946126e828fc2360bbf5caf3d94b4a844bf4376e1dd6d70981cdc9672800"
@@ -631,8 +636,8 @@
     },
     {
       "path": "docs/FEATURES.md",
-      "size": 7141,
-      "sha256": "e6aeea234f7ea00ec1e4d8190ca4c1dc3d7f0ee4094d258e4ec5827228dd5bbd"
+      "size": 7320,
+      "sha256": "d28793ae779b4a1e31c7ba5131bb581fe80e8742683ec3542d4093d6aeb4fe68"
     },
     {
       "path": "docs/PROMOTE.md",
@@ -746,18 +751,18 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 628926,
-      "sha256": "366372d9d3c4b52dd50981b4c0f76feab936b5b0321d1058debdd18e2c063220"
+      "size": 849108,
+      "sha256": "cb24c126ad582832a39cc26ea8716669ac2c4b12cac4fede6f3b411717524278"
     },
     {
       "path": "js/atlas/atlas-model.js",
-      "size": 9893,
-      "sha256": "80746803176a68be2ddf14f6b1d55f49140dea9a3bf00f79edc092a625167a7c"
+      "size": 16303,
+      "sha256": "7681ddf30e350058b9adf2791667f1494eb621c36530c19f1765bc9d4179ab38"
     },
     {
       "path": "js/atlas/atlas-view.js",
-      "size": 41005,
-      "sha256": "b15d0258775b7f49e6f9f36a58c7f3ee9912da25fc55cd2b6a764e323cd587df"
+      "size": 59152,
+      "sha256": "53b5a29d1af5fa725844c5cc272e4f20c4cdf1a2e61d5b538b97dd97f6e8e095"
     },
     {
       "path": "js/atlas/bells-layer.js",
@@ -961,8 +966,8 @@
     },
     {
       "path": "js/start-guide.js",
-      "size": 6818,
-      "sha256": "c83ae4c99c3ae99bff76b6aeaa875622b962309b1461a1e30fe1e1e78a0df777"
+      "size": 6841,
+      "sha256": "7b6ea056d8a2e31d75a536bfc1ca2cff0611d516f219b823735c7633a7522377"
     },
     {
       "path": "js/store.js",
@@ -976,8 +981,8 @@
     },
     {
       "path": "js/tutorial-features.js",
-      "size": 10690,
-      "sha256": "20d9076614c92ddeb6af711db45e15a7091a8cb127cc77056dc380854482d115"
+      "size": 11013,
+      "sha256": "9ccdf16eac6c2898c5c79e39bd98fcac8b83665ce992a9ead4ae0fd91e16d5e6"
     },
     {
       "path": "js/ui.js",
@@ -996,8 +1001,8 @@
     },
     {
       "path": "js/work-desks.js",
-      "size": 6719,
-      "sha256": "382476d8b4384132d6b1d080c18211bd35a364aee50c819fe3647328aff378b1"
+      "size": 7094,
+      "sha256": "6ccf684cb529ed084fbbe9114e631b6cbc1f95bd57c0fcfc2d25810f56c7c8f7"
     },
     {
       "path": "js/year-clock.js",
@@ -1071,8 +1076,8 @@
     },
     {
       "path": "package.json",
-      "size": 1632,
-      "sha256": "f5e260a4c2bd7a55c620a0c0bff56d8d14e57d794d841bd6e260028d57ca1c97"
+      "size": 1713,
+      "sha256": "cfb045d89d50130bc2491e7d665e02eeef9025c45ca3e84f5057ca9f1c92a03f"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -1216,7 +1221,7 @@
     }
   ],
   "totals": {
-    "files": 241,
-    "bytes": 6911838
+    "files": 242,
+    "bytes": 7471114
   }
 }

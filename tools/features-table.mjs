@@ -21,6 +21,7 @@ const SAY = {
   home: (d) => `moved to 120°E 40°S, Home returned to ${Math.round(d.lng)}°, ${Math.round(d.lat)}°`,
   layers: (d) => `panel opened with ${d.rows} switches`,
   atlas: (d) => `Atlas opened, ${d.entries} entries`,
+  elements: (d) => `Elements holographic table (${d.tiles} tiles), Carbon fly-in (${d.orbits} orbits) and Table view (${d.rows} rows)`,
   newsdesk: (d) => `${d.topics} topics; clicking a card moved the globe`,
   desks: (d) => `${d.options} desks; switched to "${d.picked}" and its desk text showed`,
   sample: (d) => `loaded "${d.title}", ${d.stories} stories`,

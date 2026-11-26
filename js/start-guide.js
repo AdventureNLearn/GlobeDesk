@@ -123,7 +123,7 @@
     setLite(lite, { quiet: true });
     wire();
     // A link that opens a specific episode or view is not a first open for the guide.
-    const directLink = ["sample", "import", "archive", "workspace", "callouts", "t"].some((k) => p.get(k));
+    const directLink = ["sample", "import", "archive", "workspace", "callouts", "t", "atlas", "atlas-view"].some((k) => p.get(k));
     if (!guideDone() && !directLink && p.get("guide") !== "0") open(0);
   }
 

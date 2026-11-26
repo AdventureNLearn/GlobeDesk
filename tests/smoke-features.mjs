@@ -56,6 +56,26 @@ const OFFLINE_CHECKS = {
   home: async (b) => { const d = await b.ev(`(() => { const m = GD.globe.st.map; m.jumpTo({ center: [120, -40], zoom: 5 }); document.getElementById("btnReset").click(); return new Promise((r) => setTimeout(() => { const c = m.getCenter(); r({ lng: c.lng, lat: c.lat, zoom: m.getZoom(), home: GD.globe.HOME_VIEW }); }, 3000)); })()`); return { ok: Math.abs(d.lng - d.home.center[0]) < 5 && Math.abs(d.lat - d.home.center[1]) < 5, detail: d }; },
   layers: async (b) => { const d = await b.ev(`(() => { GD.layersPanel.open(); const rows = document.querySelectorAll("#layersPanelBody input[type=checkbox], #layersPanelBody input[type=radio]").length; const open = document.getElementById("layersPanel").open; GD.layersPanel.close(); return { open, rows }; })()`); return { ok: d.open && d.rows >= 8, detail: d }; },
   atlas: async (b) => { const d = await b.ev(`(() => { document.getElementById("btnAtlas").click(); const v = document.getElementById("atlasView"); const r = { visible: !!v && !v.hidden, entries: GD.atlasData.entries.length, text: (v.innerText || "").length }; document.getElementById("btnAtlas").click(); return r; })()`); return { ok: d.visible && d.entries >= 100 && d.text > 200, detail: d }; },
+  elements: async (b) => { const d = await b.ev(`(() => {
+    GD.atlas.st.view = "elements";
+    GD.atlas.st.elementZoom = null;
+    GD.atlas.open();
+    const tiles = document.querySelectorAll(".at-el-tile").length;
+    const c = document.querySelector('[data-at-el-zoom="carbon-element"]');
+    if (c) c.click();
+    const zoom = !!document.querySelector(".at-el-zoom");
+    const orbits = document.querySelectorAll(".at-el-orbit").length;
+    const openBtn = document.getElementById("atElOpenCard");
+    if (openBtn) openBtn.click();
+    const sel = GD.atlas.st.selected;
+    const back = document.getElementById("atElBack");
+    if (back) back.click();
+    const tblBtn = document.querySelector('[data-at-el-mode="table"]');
+    if (tblBtn) tblBtn.click();
+    const rows = document.querySelectorAll(".at-el-table tbody tr").length;
+    GD.atlas.close();
+    return { tiles, zoom, orbits, sel, rows };
+  })()`); return { ok: d.tiles === 118 && d.zoom && d.orbits === 2 && d.sel === "carbon-element" && d.rows === 118, detail: d }; },
   newsdesk: async (b) => { await until(() => b.ev("GD.newsdesk.state.loaded === true"), 15000, "feed"); const d = await b.ev(`(() => { const cards = document.querySelectorAll(".nd-card"); const m = GD.globe.st.map; const before = m.getCenter(); cards[3].click(); return new Promise((r) => setTimeout(() => { const a = m.getCenter(); r({ topics: GD.newsdesk.state.feed.topics.length, cards: cards.length, moved: Math.abs(a.lng - before.lng) + Math.abs(a.lat - before.lat) }); }, 3500)); })()`); return { ok: d.topics === 50 && d.cards > 0 && d.moved > 0.5, detail: d }; },
   desks: async (b) => { const d = await b.ev(`(() => { const s = document.getElementById("deskSelect"); const n = s.options.length; s.value = s.options[2].value; s.dispatchEvent(new Event("change")); const wd = document.getElementById("workDesk"); const r = { options: n, picked: s.value, workDeskShown: !wd.hidden, text: (wd.innerText || "").slice(0, 80) }; s.value = s.options[0].value; s.dispatchEvent(new Event("change")); return r; })()`); return { ok: d.options >= 2 && d.workDeskShown && d.text.length > 10, detail: d }; },
   sample: async (b) => { await b.ev(`document.getElementById("btnDemo").click()`); await sleep(1500); const d = await b.ev(`({ show: GD.state.episode.show, title: GD.state.episode.title, stories: GD.state.episode.stories.length })`); return { ok: d.stories >= 2 && /washington|dc/i.test(d.title + " " + d.show), detail: d }; },

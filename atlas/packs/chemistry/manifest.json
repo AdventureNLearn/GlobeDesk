@@ -5,20 +5,20 @@
   "kind": "category",
   "category": "chemistry",
   "refresh": "quarterly",
+  "checked": "2026-11-25",
   "version": "0.1.0-draft",
   "license": "CC BY 4.0",
-  "checked": "2026-11-24",
-  "sha256": "af354b77d7cf205b6806584d260f56b828a503022eb5e83777c63d87bbbacf65",
-  "entry_count": 9,
-  "size_bytes": 9608,
+  "sha256": "1ab49b69d62457f67d6d4abc0dcbb5e10aca0abe550865ea10472f5b0cc78ba7",
+  "entry_count": 125,
+  "size_bytes": 180484,
   "max_bytes": 52428800,
   "promote": "owner-yes-required",
   "status": "draft",
   "files": [
     {
       "path": "entries.json",
-      "bytes": 9608,
-      "sha256": "43c297d62fccf694bc12e0dcdf2bec88301acd6ab860721b09b233dfdcd6c765"
+      "bytes": 180484,
+      "sha256": "311a4eb45a22da2348903acce149059c5e48d1fa8c487e0c677d0acc28e207b2"
     }
   ]
 }

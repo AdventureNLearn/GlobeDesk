@@ -47,7 +47,7 @@
       '<h4 class="small">Official sources</h4>' + officialHtml(d) +
       (internal.length ? '<h4 class="small">In GlobeDesk</h4><ul class="small wd-internal">' + internal.map(backingHtml).join("") + "</ul>" : "") +
       (exp.length ? '<h4 class="small">Experimental references <span class="muted">(owner projects; not official sources, never a record backing a claim)</span></h4><ul class="small wd-backing">' + exp.map(backingHtml).join("") + "</ul>" : "") +
-      (d.atlas_categories.length ? '<p class="small">Atlas: ' + d.atlas_categories.map((id) => { const c = cats.find((x) => x.id === id); return '<button type="button" class="linklike" data-wd-cat="' + esc(id) + '">' + esc(c ? c.title : id) + "</button>"; }).join(" · ") + "</p>" : "") +
+      (d.atlas_categories.length ? '<p class="small">Atlas: ' + d.atlas_categories.map((id) => { const c = cats.find((x) => x.id === id); return '<button type="button" class="linklike" data-wd-cat="' + esc(id) + '">' + esc(c ? c.title : id) + "</button>"; }).join(" · ") + (d.id === "energy-materials" ? ' · <button type="button" class="mini" data-wd-atlas-view="elements">Elements periodic table</button>' : "") + "</p>" : "") +
       "</section>";
   }
 
@@ -67,6 +67,7 @@
     box.innerHTML = work ? deskHtml(list.find((d) => d.id === st.desk)) : "";
     box.querySelectorAll("[data-wd-atlas]").forEach((el) => el.addEventListener("click", () => { if (GD.atlas) { GD.atlas.open(); GD.atlas.select(el.getAttribute("data-wd-atlas")); } }));
     box.querySelectorAll("[data-wd-cat]").forEach((el) => el.addEventListener("click", () => { if (GD.atlas) { GD.atlas.st.category = el.getAttribute("data-wd-cat"); GD.atlas.st.view = "az"; GD.atlas.open(); } }));
+    box.querySelectorAll("[data-wd-atlas-view]").forEach((el) => el.addEventListener("click", () => { if (GD.atlas) { GD.atlas.st.view = el.getAttribute("data-wd-atlas-view"); GD.atlas.st.elementZoom = null; GD.atlas.open(); } }));
     box.querySelectorAll("[data-wd-section]").forEach((el) => el.addEventListener("click", () => { setDesk("news"); const tab = doc.querySelector('.nd-tab[data-section="' + el.getAttribute("data-wd-section") + '"]'); if (tab) tab.click(); }));
   }
 
