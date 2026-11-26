@@ -3,7 +3,7 @@
 GlobeDesk's own encyclopedia: 12 categories, an index entry schema, packs with manifests, and the views in the Atlas panel. All entries are our own cited text (CC BY 4.0). Draft only.
 
     categories.json                       12 categories with subcategories, scope, pack and refresh
-    views.json                            A-Z, by place, by year (years, then months and weeks in the current year, This week)
+    views.json                            A-Z, Elements (periodic constellation and table fallback), by place, by year (years, then months and weeks in the current year, This week)
     packs/core/                           index, categories, places, years, sources (each with a class) + manifest
     packs/history-places/                 History and places: US history 1775-2026 (76 sourced event entries in date order, draft)
     packs/energy|objects|chemistry|economics/  entries.json + manifest.json

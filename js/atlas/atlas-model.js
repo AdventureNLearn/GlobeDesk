@@ -154,7 +154,133 @@
 
   function sourcesFor(data, e) { return (e.sources || []).map((id) => (data.sources || []).find((s) => s.id === id) || { id, title: id + " " + UNKNOWN, url: "" }); }
 
-  const api = { TIERS, TIER_LABEL, UNKNOWN, matches, azRows, letters, byPlace, byYear, isoWeek, nowStatus, tree, tierNote, tierText, tiersWritten, sourcesFor, entryById, category, yearLabel, parseDay };
+
+  // Periodic layout from the IUPAC 18-column table (4 May 2022). Period 6 and 7
+  // group-3 cells are left empty: La/Lu and Ac/Lr stay in the f-block rows.
+  // Family ids are a display grouping, not a new classification.
+  const ELEMENT_FAMILIES = [
+    { id: "hydrogen", label: "Hydrogen" },
+    { id: "alkali-metal", label: "Alkali metals (Group 1)" },
+    { id: "alkaline-earth", label: "Alkaline earth metals (Group 2)" },
+    { id: "group-3", label: "Group 3" },
+    { id: "groups-4-12", label: "Groups 4–12" },
+    { id: "groups-13-16", label: "Groups 13–16" },
+    { id: "halogen", label: "Halogens (Group 17)" },
+    { id: "noble-gas", label: "Noble gases (Group 18)" },
+    { id: "lanthanoid", label: "Lanthanoids" },
+    { id: "actinoid", label: "Actinoids" }
+  ];
+  function isElementEntry(e) {
+    return !!(e && e.category_path && e.category_path[0] === "chemistry" && e.category_path[1] === "elements" && /-element$/.test(e.id));
+  }
+  function elementZ(e) {
+    const m = /\(element (\d+)\)\s*$/.exec((e && e.title) || "") || /atomic number (\d+)/i.exec(((e && e.aliases) || []).join(" "));
+    return m ? parseInt(m[1], 10) : 0;
+  }
+  function elementSymbol(e) {
+    const m = /\(([A-Z][a-z]?), element \d+\)\s*$/.exec((e && e.title) || "");
+    return m ? m[1] : "";
+  }
+  function elementName(e) {
+    return String((e && e.title) || "").replace(/\s*\([^)]*\)\s*$/, "") || (e && e.title) || "";
+  }
+  function elementPos(z) {
+    if (z === 1) return { col: 1, row: 1 };
+    if (z === 2) return { col: 18, row: 1 };
+    if (z >= 3 && z <= 4) return { col: z - 2, row: 2 };
+    if (z >= 5 && z <= 10) return { col: z + 8, row: 2 };
+    if (z >= 11 && z <= 12) return { col: z - 10, row: 3 };
+    if (z >= 13 && z <= 18) return { col: z, row: 3 };
+    if (z >= 19 && z <= 36) return { col: z - 18, row: 4 };
+    if (z >= 37 && z <= 54) return { col: z - 36, row: 5 };
+    if (z >= 55 && z <= 56) return { col: z - 54, row: 6 };
+    if (z >= 57 && z <= 71) return { col: z - 54, row: 9 };
+    if (z >= 72 && z <= 86) return { col: z - 68, row: 6 };
+    if (z >= 87 && z <= 88) return { col: z - 86, row: 7 };
+    if (z >= 89 && z <= 103) return { col: z - 86, row: 10 };
+    if (z >= 104 && z <= 118) return { col: z - 100, row: 7 };
+    return null;
+  }
+  function elementFamily(z) {
+    if (z === 1) return "hydrogen";
+    if (z >= 57 && z <= 71) return "lanthanoid";
+    if (z >= 89 && z <= 103) return "actinoid";
+    const p = elementPos(z);
+    if (!p) return null;
+    if (p.col === 1) return "alkali-metal";
+    if (p.col === 2) return "alkaline-earth";
+    if (z === 21 || z === 39) return "group-3";
+    if (p.col >= 3 && p.col <= 12) return "groups-4-12";
+    if (p.col >= 13 && p.col <= 16) return "groups-13-16";
+    if (p.col === 17) return "halogen";
+    if (p.col === 18) return "noble-gas";
+    return null;
+  }
+  function familyLabel(id) {
+    const f = ELEMENT_FAMILIES.find((x) => x.id === id);
+    return f ? f.label : id;
+  }
+  // Arrow keys: prefer the nearest star on the same row or column in that direction.
+  function stepElement(stars, from, key, opts) {
+    const pool = ((opts && opts.matchesOnly) ? (stars || []).filter((s) => s.match) : (stars || [])).slice();
+    if (!pool.length) return null;
+    if (key === "Home") return pool[0];
+    if (key === "End") return pool[pool.length - 1];
+    if (!from) return pool[0];
+    const dir = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }[key];
+    if (!dir) return null;
+    const dc = dir[0], dr = dir[1];
+    let best = null, score = Infinity;
+    pool.forEach((s) => {
+      if (s.id === from.id) return;
+      const dcol = s.col - from.col, drow = s.row - from.row;
+      if (dc && dcol * dc <= 0) return;
+      if (dr && drow * dr <= 0) return;
+      const along = dc ? dcol * dc : drow * dr;
+      const off = dc ? Math.abs(drow) : Math.abs(dcol);
+      const sc = off * 1000 + along;
+      if (sc < score) { score = sc; best = s; }
+    });
+    return best;
+  }
+  function elementsView(data, f) {
+    const byZ = {};
+    const stars = [];
+    (data.entries || []).filter(isElementEntry).forEach((e) => {
+      const z = elementZ(e);
+      const pos = elementPos(z);
+      if (!pos) return;
+      const family = elementFamily(z);
+      const star = { id: e.id, z, symbol: elementSymbol(e), name: elementName(e), title: e.title, col: pos.col, row: pos.row, family, familyLabel: familyLabel(family), match: matches(e, f) };
+      stars.push(star);
+      byZ[z] = star;
+    });
+    stars.sort((a, b) => a.z - b.z);
+    const lines = ELEMENT_FAMILIES.map((fam) => {
+      const points = stars.filter((s) => s.family === fam.id).sort((a, b) => a.row - b.row || a.col - b.col);
+      return { family: fam.id, points: points.map((s) => ({ col: s.col, row: s.row, z: s.z, id: s.id })) };
+    }).filter((l) => l.points.length >= 2);
+    const forks = [];
+    if (byZ[21] && byZ[39] && byZ[57] && byZ[71] && byZ[89] && byZ[103]) {
+      forks.push({
+        kind: "group-3-unresolved",
+        label: "Group 3 membership is unresolved",
+        paths: [
+          [{ col: 3, row: 5 }, { col: 3, row: 6 }],
+          [{ col: 3, row: 6 }, { col: 3, row: 7 }],
+          [{ col: 3, row: 6 }, { col: 3, row: 9 }],
+          [{ col: 3, row: 6 }, { col: 17, row: 9 }],
+          [{ col: 3, row: 7 }, { col: 3, row: 10 }],
+          [{ col: 3, row: 7 }, { col: 17, row: 10 }]
+        ]
+      });
+    }
+    const missing = [];
+    for (let z = 1; z <= 118; z++) if (!byZ[z]) missing.push(z);
+    return { cols: 18, rows: 10, families: ELEMENT_FAMILIES, stars, lines, forks, missing };
+  }
+
+  const api = { TIERS, TIER_LABEL, UNKNOWN, matches, azRows, letters, byPlace, byYear, isoWeek, nowStatus, tree, tierNote, tierText, tiersWritten, sourcesFor, entryById, category, yearLabel, parseDay, ELEMENT_FAMILIES, isElementEntry, elementZ, elementSymbol, elementName, elementPos, elementFamily, familyLabel, stepElement, elementsView };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else { root.GD = root.GD || {}; root.GD.atlasModel = api; }
 })(typeof window !== "undefined" ? window : globalThis);

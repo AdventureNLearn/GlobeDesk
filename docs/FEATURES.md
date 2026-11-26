@@ -17,7 +17,7 @@ its result disagree. The labels live in `js/tutorial-features.js`; this file is 
 | 4 | Layers | **Live** | tests/smoke-features.mjs → `layers` | panel opened with 29 switches |
 | 5 | Dated satellite imagery | **Live** | tests/smoke-features.mjs → `datedImagery` | after opting in, year 2020 drew 35 tiles from NASA GIBS (badge "RECORDED · GIBS 2020-07-01") |
 | 6 | Official GIS layers | **Live** | tests/smoke-features.mjs → `officialGis` | "usgs-topo" drew 18 tiles from basemap.nationalmap.gov |
-| 7 | Atlas | **Live** | tests/smoke-features.mjs → `atlas` | Atlas opened, 294 entries |
+| 7 | Atlas | **Live** | tests/smoke-features.mjs → `atlas` | Atlas opened, 294 entries; Elements constellation browse |
 | 8 | 3D objects and bells | **Live** | `tests/smoke-atlas.mjs` | Atlas, desks, Layers user sections, 3D and bell 3D, 0 console errors |
 | 9 | Your layers | **Live** | `tests/smoke-atlas.mjs` | Atlas, desks, Layers user sections, 3D and bell 3D, 0 console errors |
 | 10 | News desk | **Live** | tests/smoke-features.mjs → `newsdesk` | 50 topics; clicking a card moved the globe |

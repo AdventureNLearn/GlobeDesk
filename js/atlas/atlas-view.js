@@ -1,4 +1,4 @@
-/* Atlas view: catalogue (A-Z, Categories, By place, By year), a Globe | 3D switch, entry tabs
+/* Atlas view: catalogue (A-Z, Elements, Categories, By place, By year), a Globe | 3D switch, entry tabs
    (Object, Parts, Chemistry, Sources), reading-tier switch, and the Community lane when it is on.
    Reads GD.atlasData (generated, local). No network: online price and solar lookups are off.
    Globe markers are DOM markers on top of the map; the base-map style is never changed. window.GD.atlas */
@@ -10,7 +10,8 @@
   const UNKNOWN = "[UNKNOWN]";
   const st = {
     open: false, view: "az", mode: "globe", q: "", category: "", tier: "all", selected: null, tab: "object",
-    zoom: "years", year: null, month: null, week: null, region: "US", option: "S", place: null, markers: []
+    zoom: "years", year: null, month: null, week: null, region: "US", option: "S", place: null, markers: [],
+    elementsMode: null
   };
 
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
@@ -98,6 +99,69 @@
     html += '<ul class="at-years">' + (base.rows.map(row).join("") || '<li class="muted small">No dated entries here.</li>') + "</ul>";
     if (base.undated && base.undated.length) html += '<details class="at-noplace"><summary>Undated (' + base.undated.length + ")</summary><ul class=\"at-list\">" + base.undated.map((id) => { const e = m.entryById(D(), id); return e ? entryRow(e, e.title) : ""; }).join("") + "</ul></details>";
     return html;
+  }
+
+
+  function prefersReducedMotion() {
+    try { return !!(global.matchMedia && global.matchMedia("(prefers-reduced-motion: reduce)").matches); } catch (e) { return false; }
+  }
+  function elementsMode() {
+    if (st.elementsMode === "table" || st.elementsMode === "constellation") return st.elementsMode;
+    return prefersReducedMotion() ? "table" : "constellation";
+  }
+  function pt(c, r) { return (c - 0.5) + "," + (r - 0.5); }
+  function elementsHtml() {
+    const ev = M().elementsView(D(), filters());
+    const mode = elementsMode();
+    const famBy = {};
+    ev.families.forEach((f) => { famBy[f.id] = f.label; });
+    const note = '<p class="muted small at-el-note">IUPAC 18-column grouping, not a new classification. Dashed fork: Group 3 is unresolved (the table does not pick lanthanum or lutetium, or actinium or lawrencium).</p>';
+    const toggle = '<div class="seg small" role="group" aria-label="Elements presentation">' +
+      '<button type="button" data-at-el-mode="constellation" aria-pressed="' + (mode === "constellation") + '">Constellation</button>' +
+      '<button type="button" data-at-el-mode="table" aria-pressed="' + (mode === "table") + '">Table</button></div>';
+    const legend = '<ul class="at-el-legend" aria-label="Family colours">' + ev.families.map((f) => '<li class="at-fam-' + esc(f.id) + '">' + esc(f.label) + "</li>").join("") + "</ul>";
+    let body;
+    if (mode === "table") {
+      const rows = ev.stars.filter((s) => s.match);
+      body = '<div class="at-el-table-wrap"><table class="at-table at-el-table"><caption class="muted small">Chemical elements in atomic-number order. The list follows the search box and category filter.</caption>' +
+        "<thead><tr><th>Z</th><th>Symbol</th><th>Name</th><th>Family</th></tr></thead><tbody>" +
+        (rows.map((s) => {
+          const on = st.selected === s.id;
+          return '<tr class="' + (on ? "on" : "") + '"><td class="at-el-z">' + s.z + '</td><td>' + esc(s.symbol) + '</td><td><button type="button" class="at-el-name" data-at-entry="' + esc(s.id) + '" aria-current="' + on + '">' + esc(s.name) + "</button></td><td>" + esc(s.familyLabel) + "</td></tr>";
+        }).join("") || '<tr><td colspan="4" class="muted">No element records match this search or filter.</td></tr>') +
+        "</tbody></table></div>";
+    } else {
+      const lines = ev.lines.map((l) => '<polyline class="at-el-line at-fam-' + esc(l.family) + '" fill="none" points="' + l.points.map((p) => pt(p.col, p.row)).join(" ") + '"></polyline>').join("");
+      const forks = ev.forks.map((fk) => '<g class="at-el-fork"><title>' + esc(fk.label) + "</title>" + fk.paths.map((path) => '<polyline fill="none" points="' + path.map((p) => pt(p.col, p.row)).join(" ") + '"></polyline>').join("") + "</g>").join("");
+      const focusId = st.selected && ev.stars.some((s) => s.id === st.selected) ? st.selected : ((ev.stars.find((s) => s.match) || ev.stars[0] || {}).id);
+      const stars = ev.stars.map((s) => {
+        const on = st.selected === s.id;
+        const miss = !s.match;
+        return '<button type="button" role="option" class="at-el-star at-fam-' + esc(s.family) + (on ? " on" : "") + (miss ? " at-el-miss" : "") + '" data-at-entry="' + esc(s.id) + '" data-at-el-c="' + s.col + '" data-at-el-r="' + s.row + '" tabindex="' + (s.id === focusId ? "0" : "-1") + '" aria-selected="' + on + '" aria-label="' + esc(s.title) + '"><span class="at-el-dot" aria-hidden="true"></span><span class="at-el-sym" aria-hidden="true">' + esc(s.symbol) + "</span></button>";
+      }).join("");
+      const missing = ev.missing.length ? '<p class="muted small">No record for Z=' + ev.missing.join(", ") + " " + UNKNOWN + ".</p>" : "";
+      body = '<div class="at-el-sky" id="atElSky"><svg class="at-el-lines" viewBox="0 0 18 10" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false">' + lines + forks + "</svg>" +
+        '<div class="at-el-grid" role="listbox" aria-label="Chemical elements in the 18-column periodic layout">' + stars + "</div></div>" + missing;
+    }
+    return '<div class="at-elements">' + toggle + note + legend + body + "</div>";
+  }
+  function onElementsNav(ev) {
+    const k = ev.key;
+    if (k !== "ArrowLeft" && k !== "ArrowRight" && k !== "ArrowUp" && k !== "ArrowDown" && k !== "Home" && k !== "End" && k !== "Enter" && k !== " ") return;
+    const id = ev.target && ev.target.getAttribute && ev.target.getAttribute("data-at-entry");
+    if ((k === "Enter" || k === " ") && id) { ev.preventDefault(); select(id); return; }
+    if (k === "Enter" || k === " ") return;
+    ev.preventDefault();
+    const evw = M().elementsView(D(), filters());
+    const from = evw.stars.find((s) => s.id === id);
+    const table = ev.currentTarget.classList && ev.currentTarget.classList.contains("at-el-table");
+    const next = M().stepElement(evw.stars, from, k, { matchesOnly: !!table });
+    if (!next) return;
+    const btn = ev.currentTarget.querySelector('[data-at-entry="' + next.id + '"]');
+    if (!btn) return;
+    ev.currentTarget.querySelectorAll("[data-at-entry]").forEach((b) => { b.tabIndex = -1; });
+    btn.tabIndex = 0;
+    if (btn.focus) btn.focus();
   }
 
   // ---------- entry detail ----------
@@ -285,7 +349,11 @@
     const root = $("atlasView");
     if (!root || !D() || !M()) return;
     const v = st.view;
-    const views = [["az", "A–Z"], ["cats", "Categories"], ["place", "By place"], ["year", "By year"]];
+    if (root.classList) {
+      if (v === "elements") root.classList.add("at-showing-elements");
+      else root.classList.remove("at-showing-elements");
+    }
+    const views = [["az", "A–Z"], ["elements", "Elements"], ["cats", "Categories"], ["place", "By place"], ["year", "By year"]];
     const cats = D().categories;
     root.innerHTML =
       '<div class="at-head"><h2>Atlas <span class="pill warn">draft</span></h2>' +
@@ -295,12 +363,34 @@
       '<select id="atCategory" aria-label="Category"><option value="">All categories</option>' + cats.map((c) => '<option value="' + esc(c.id) + '"' + (st.category === c.id ? " selected" : "") + ">" + esc(c.title) + "</option>").join("") + "</select>" +
       '<select id="atTier" aria-label="Reading level"><option value="all">All reading levels</option>' + M().TIERS.map((t) => '<option value="' + t + '"' + (st.tier === t ? " selected" : "") + ">" + M().TIER_LABEL[t] + "</option>").join("") + "</select></div>" +
       '<div class="at-views" role="tablist" aria-label="Browse">' + views.map((x) => '<button type="button" role="tab" data-at-view="' + x[0] + '" aria-selected="' + (v === x[0]) + '">' + x[1] + "</button>").join("") + "</div>" +
-      '<div class="at-body"><div class="at-browse" id="atBrowse">' + (v === "cats" ? categoriesHtml() : v === "place" ? placeHtml() : v === "year" ? yearHtml() : azHtml()) + "</div>" +
+      '<div class="at-body"><div class="at-browse" id="atBrowse">' + (v === "cats" ? categoriesHtml() : v === "place" ? placeHtml() : v === "year" ? yearHtml() : v === "elements" ? elementsHtml() : azHtml()) + "</div>" +
       '<div class="at-detail" id="atDetail">' + detailHtml() + "</div></div>" +
       '<p class="muted small at-foot">GlobeDesk Atlas · our own cited text, CC BY 4.0 · ' + D().index.length + " entries in " + (Object.keys(D().manifests).length - 1) + " packs · no entries about living people · online lookups off</p>";
     bind(root);
     syncMarkers();
     if (st.mode === "3d") draw3d();
+    if (st.view === "elements") {
+      const active = global.document && global.document.activeElement;
+      const typing = active && (active.id === "atSearch" || active.id === "atCategory" || active.id === "atTier");
+      const btn = (st.selected && root.querySelector('[data-at-entry="' + String(st.selected).replace(/"/g, "") + '"]'))
+        || root.querySelector(".at-el-star:not(.at-el-miss)")
+        || root.querySelector(".at-el-star")
+        || root.querySelector(".at-el-name");
+      if (btn) {
+        if (!typing && btn.focus) {
+          try { btn.focus({ preventScroll: true }); } catch (e) { try { btn.focus(); } catch (e2) { /* ignore */ } }
+        }
+        const sky = root.querySelector(".at-el-sky");
+        if (sky && sky.contains && sky.contains(btn)) {
+          const br = sky.getBoundingClientRect();
+          const sr = btn.getBoundingClientRect();
+          if (sr.left < br.left) sky.scrollLeft += sr.left - br.left - 12;
+          else if (sr.right > br.right) sky.scrollLeft += sr.right - br.right + 12;
+          if (sr.top < br.top) sky.scrollTop += sr.top - br.top - 12;
+          else if (sr.bottom > br.bottom) sky.scrollTop += sr.bottom - br.bottom + 12;
+        }
+      }
+    }
   }
 
   function select(id) {
@@ -315,6 +405,11 @@
     const on = (sel, ev, fn) => root.querySelectorAll(sel).forEach((el) => el.addEventListener(ev, fn));
     on("[data-at-entry]", "click", (ev) => { ev.stopPropagation(); select(ev.currentTarget.getAttribute("data-at-entry")); });
     on("[data-at-view]", "click", (ev) => { st.view = ev.currentTarget.getAttribute("data-at-view"); render(); });
+    on("[data-at-el-mode]", "click", (ev) => { st.elementsMode = ev.currentTarget.getAttribute("data-at-el-mode"); render(); });
+    const elGrid = root.querySelector(".at-el-grid");
+    if (elGrid) elGrid.addEventListener("keydown", onElementsNav);
+    const elTable = root.querySelector(".at-el-table");
+    if (elTable) elTable.addEventListener("keydown", onElementsNav);
     on("[data-at-tab]", "click", (ev) => { st.tab = ev.currentTarget.getAttribute("data-at-tab"); render(); });
     on("[data-at-mode]", "click", (ev) => { st.mode = ev.currentTarget.getAttribute("data-at-mode"); render(); });
     on("[data-at-option]", "click", (ev) => { st.option = ev.currentTarget.getAttribute("data-at-option"); render(); });
