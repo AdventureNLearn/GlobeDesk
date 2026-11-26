@@ -2,7 +2,7 @@
   "schema": "globedesk.chem/0-draft",
   "id": "elements-electron-config",
   "name": "Ground-state electron configurations and shell occupancy (Z=1-118)",
-  "license": "CC BY 4.0 (record text); NIST non-SRD data statement (nist.gov/srd/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications); Wikidata P8000 (CC0)",
+  "license": "CC BY 4.0 (record text); NIST non-SRD data statement (nist.gov/open/license); Wikidata P8000 (CC0)",
   "checked": "2026-11-25",
   "note": "Shell occupancies (K, L, M, ...) follow NIST SP 966 ground-state configurations for Z=1-103 (cross-checked against NIST ASD and Wikidata P8000). Z=104-108 are marked not-proven (calculated in NIST references, not measured spectra); Z=109-118 have no NIST value and stay [UNKNOWN].",
   "byId": {

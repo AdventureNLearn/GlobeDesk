@@ -2590,7 +2590,7 @@
       "publisher": "National Institute of Standards and Technology (NIST)",
       "license": "Reclassified from SRD 145 to non-SRD information compilation. NIST states: \"Pursuant to title 17 United States Code Section 105, works of NIST employees are not subject to copyright protection in the United States.\" and grants \"the non-exclusive irrevocable and unconditional right to print, publish, prepare derivative works and distribute the NIST data, in any medium... on a royalty-free basis throughout the world.\"",
       "description": "Ground-state electron configurations for Z=1-108 (Z=104-108 theoretical/calculated in NIST ASD references; Z=109-118 blank). Cross-checked against Wikidata P8000 (CC0).",
-      "terms_url": "https://www.nist.gov/srd/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications"
+      "terms_url": "https://www.nist.gov/open/license"
     }
   ]
 }

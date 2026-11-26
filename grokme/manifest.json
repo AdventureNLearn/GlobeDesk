@@ -147,7 +147,7 @@
     {
       "path": "atlas/packs/core/manifest.json",
       "size": 1218,
-      "sha256": "d1e86b60e5decd80950b194255231bbb46a556631874210bc7c67b28b10440ef"
+      "sha256": "5b6c92f5bed8e4f5fac22328c4ccfc13527c764045e3bd7e7dde4546fcf44e7c"
     },
     {
       "path": "atlas/packs/core/places.json",
@@ -156,8 +156,8 @@
     },
     {
       "path": "atlas/packs/core/sources.json",
-      "size": 150228,
-      "sha256": "9e58a2dedf3a65035b20fca96274a482d750ff58defe518666dbd8972aae025e"
+      "size": 150141,
+      "sha256": "7ada484e34c9cec242cc5959ebb758736324caed053baf2c50ecc10e266a46b8"
     },
     {
       "path": "atlas/packs/core/years.json",
@@ -271,8 +271,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 62621,
-      "sha256": "a0e4d7bcd1682cd124931ab7c81eca8f2ce93a4960af0e4d9f324d805772ae82"
+      "size": 63455,
+      "sha256": "e1b04a80be076c8e9f7694bf215494a90178d84bee53c18b0b63f7b47189a97c"
     },
     {
       "path": "data/atlas/artifacts/constitution-1787.json",
@@ -571,8 +571,8 @@
     },
     {
       "path": "data/atlas/chemistry/elements-electron-config.json",
-      "size": 70754,
-      "sha256": "99bb5292ddecf259f4118caac4e38553fc49470ac40ad07c18aa2340ce938e76"
+      "size": 70667,
+      "sha256": "f713bc7b93726c606f5379e87f488105c135feaf1bea51bb5efd099a44d36064"
     },
     {
       "path": "data/atlas/chemistry/lifepo4-vs-nmc.json",
@@ -751,8 +751,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 849282,
-      "sha256": "1cf3d5183dfac0d4ebf5855b5a82a0aec2a405affac6476fa317c5272af8fa2c"
+      "size": 849108,
+      "sha256": "cb24c126ad582832a39cc26ea8716669ac2c4b12cac4fede6f3b411717524278"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -761,8 +761,8 @@
     },
     {
       "path": "js/atlas/atlas-view.js",
-      "size": 58278,
-      "sha256": "33921870093cf2d720f68db984775d220661aa644f3bdbd9920d2a4d131eaea9"
+      "size": 59152,
+      "sha256": "53b5a29d1af5fa725844c5cc272e4f20c4cdf1a2e61d5b538b97dd97f6e8e095"
     },
     {
       "path": "js/atlas/bells-layer.js",
@@ -1222,6 +1222,6 @@
   ],
   "totals": {
     "files": 242,
-    "bytes": 7469754
+    "bytes": 7471114
   }
 }

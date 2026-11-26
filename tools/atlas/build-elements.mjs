@@ -234,7 +234,7 @@ function buildConfigRecord(iupacByZ, cfgByZ) {
     schema: "globedesk.chem/0-draft",
     id: "elements-electron-config",
     name: "Ground-state electron configurations and shell occupancy (Z=1-118)",
-    license: "CC BY 4.0 (record text); NIST non-SRD data statement (nist.gov/srd/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications); Wikidata P8000 (CC0)",
+    license: "CC BY 4.0 (record text); NIST non-SRD data statement (nist.gov/open/license); Wikidata P8000 (CC0)",
     checked: CHECKED,
     note: "Shell occupancies (K, L, M, ...) follow NIST SP 966 ground-state configurations for Z=1-103 (cross-checked against NIST ASD and Wikidata P8000). Z=104-108 are marked not-proven (calculated in NIST references, not measured spectra); Z=109-118 have no NIST value and stay [UNKNOWN].",
     byId,
@@ -393,7 +393,7 @@ function upsertSources(sources) {
       class: "official",
       publisher: "National Institute of Standards and Technology (NIST)",
       license: "Reclassified from SRD 145 to non-SRD information compilation. NIST states: \"Pursuant to title 17 United States Code Section 105, works of NIST employees are not subject to copyright protection in the United States.\" and grants \"the non-exclusive irrevocable and unconditional right to print, publish, prepare derivative works and distribute the NIST data, in any medium... on a royalty-free basis throughout the world.\"",
-      terms_url: "https://www.nist.gov/srd/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+      terms_url: "https://www.nist.gov/open/license",
       description: "Ground-state electron configurations for Z=1-108 (Z=104-108 theoretical/calculated in NIST ASD references; Z=109-118 blank). Cross-checked against Wikidata P8000 (CC0).",
     },
     {

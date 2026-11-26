@@ -748,12 +748,12 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .atlas-view.at-showing-elements { background: var(--gd-surface); }
 .atlas-view.at-showing-elements .at-body {
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr minmax(120px, 30%);
+  grid-template-rows: minmax(0, 1fr) minmax(120px, 30%);
 }
 .atlas-view.at-showing-elements .at-browse,
 .atlas-view.at-showing-elements .at-detail { overflow: auto; min-height: 0; }
-.atlas-view.at-showing-elements .at-browse { display: flex; flex-direction: column; height: 100%; }
-.at-elements { display: flex; flex-direction: column; gap: 4px; min-width: 0; min-height: 0; flex: 1 1 auto; height: 100%; }
+.atlas-view.at-showing-elements .at-browse { display: flex; flex-direction: column; height: auto; min-height: 0; }
+.at-elements { display: flex; flex-direction: column; gap: 4px; min-width: 0; min-height: 0; flex: 1 1 auto; height: 100%; overflow: hidden; }
 .at-elements {
   --el-hydrogen: var(--gd-text);
   --el-alkali-metal: var(--gd-amber);
@@ -780,7 +780,7 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .at-fam-noble-gas { color: var(--el-noble-gas); }
 .at-fam-lanthanoid { color: var(--el-lanthanoid); }
 .at-fam-actinoid { color: var(--el-actinoid); }
-.at-el-sky { position: relative; overflow: auto; max-width: 100%; min-height: 210px; flex: 1 1 0%; -webkit-overflow-scrolling: touch; padding: 4px; }
+.at-el-sky { position: relative; overflow: auto; max-width: 100%; min-height: 0; flex: 1 1 0%; -webkit-overflow-scrolling: touch; padding: 4px; }
 .at-el-table-wrap { flex: 1 1 0%; min-height: 0; overflow: auto; }
 .at-el-lines { position: absolute; left: 4px; top: 4px; width: calc(18 * 54px); height: calc(10 * 58px); pointer-events: none; z-index: 0; overflow: visible; }
 .at-el-line, .at-el-fork polyline { stroke-width: 1.25px; vector-effect: non-scaling-stroke; }
@@ -895,11 +895,18 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .at-el-table .at-el-z { font-variant-numeric: tabular-nums; }
 .at-el-table tr.on { background: rgba(94, 231, 255, 0.08); }
 @media (max-width: 820px) {
-  .atlas-view.at-showing-elements .at-body { display: flex; flex-direction: column; overflow: auto; }
-  .atlas-view.at-showing-elements .at-browse { overflow: visible; height: auto; flex: 0 0 auto; }
-  .atlas-view.at-showing-elements .at-detail { overflow: visible; height: auto; flex: 0 0 auto; }
-  .atlas-view.at-showing-elements .at-elements { height: auto; flex: 0 0 auto; }
-  .at-el-sky { flex: 0 0 220px; height: 220px; min-height: 220px; }
+  /* Fill the viewport under the (possibly wrapping) topbar so the grid and card share the first screen. */
+  .atlas-view.at-showing-elements { top: var(--at-under-topbar, 52px); bottom: 0; height: auto; border-radius: 0; }
+  .atlas-view.at-showing-elements .at-body { display: flex; flex-direction: column; overflow: hidden; min-height: 0; flex: 1 1 auto; }
+  .atlas-view.at-showing-elements .at-browse { overflow: hidden; height: auto; flex: 1 1 0%; min-height: 0; }
+  .atlas-view.at-showing-elements .at-detail { overflow: auto; height: auto; flex: 0 1 38%; min-height: 120px; max-height: 40%; }
+  .atlas-view.at-showing-elements .at-elements { height: auto; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+  .atlas-view.at-showing-elements .at-controls input[type="search"] { flex: 1 1 100%; }
+  .atlas-view.at-showing-elements .at-controls select { flex: 1 1 calc(50% - 6px); min-width: 0; }
+  .atlas-view.at-showing-elements .at-el-note { font-size: 11px; line-height: 1.3; }
+  .atlas-view.at-showing-elements .at-el-legend { gap: 2px 8px; font-size: 10px; }
+  .atlas-view.at-showing-elements .at-foot { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .at-el-sky { flex: 1 1 auto; height: auto; min-height: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .at-el-sky { scroll-behavior: auto; }

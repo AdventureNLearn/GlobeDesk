@@ -469,6 +469,20 @@
       '<div class="at-tabbody" role="tabpanel">' + body + "</div>";
   }
 
+  function placeElementsSheet(root) {
+    if (!root || !root.style || !root.style.setProperty) return;
+    const doc = global.document;
+    const win = global.window || global;
+    const bar = doc && typeof doc.querySelector === "function" ? doc.querySelector(".topbar") : null;
+    const narrow = !!(win.matchMedia && win.matchMedia("(max-width: 820px)").matches);
+    if (st.view === "elements" && narrow && bar && bar.getBoundingClientRect) {
+      const bottom = Math.ceil(bar.getBoundingClientRect().bottom);
+      root.style.setProperty("--at-under-topbar", (bottom > 0 ? bottom : 52) + "px");
+    } else if (root.style.removeProperty) {
+      root.style.removeProperty("--at-under-topbar");
+    }
+  }
+
   // ---------- render ----------
   function render() {
     const root = $("atlasView");
@@ -492,6 +506,7 @@
       '<div class="at-detail" id="atDetail">' + detailHtml() + "</div></div>" +
       '<p class="muted small at-foot">GlobeDesk Atlas · our own cited text, CC BY 4.0 · ' + D().index.length + " entries in " + (Object.keys(D().manifests).length - 1) + " packs · no entries about living people · online lookups off</p>";
     bind(root);
+    placeElementsSheet(root);
     syncMarkers();
     if (st.mode === "3d") draw3d();
     if (st.view === "elements") {
@@ -696,6 +711,7 @@
     const b = $("btnAtlas"); if (b) b.addEventListener("click", toggle);
     const root = $("atlasView");
     if (root) root.addEventListener("keydown", (e) => { if (e.key === "Escape") { e.preventDefault(); if (st.view === "elements" && st.elementZoom) { const prev = st.elementZoom; st.elementZoom = null; st.selected = prev; render(); } else closeView(); } });
+    if (global.addEventListener) global.addEventListener("resize", () => { const r = $("atlasView"); if (r) placeElementsSheet(r); });
     if (GD.globe && GD.globe.st && GD.globe.st.onReady) GD.globe.st.onReady.push(() => syncMarkers());
     if (global.location && global.location.search && global.URLSearchParams) {
       applyParams(new global.URLSearchParams(global.location.search));

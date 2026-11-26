@@ -112,7 +112,7 @@ t("every element cites NIST SP 966 and links to the electron-configuration recor
   assert.ok(pt);
   assert.equal(pt.class, "official");
   assert.match(pt.license, /title 17 United States Code Section 105/);
-  assert.equal(pt.terms_url, "https://www.nist.gov/srd/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications");
+  assert.equal(pt.terms_url, "https://www.nist.gov/open/license");
   const rec = J("data/atlas/chemistry/elements-electron-config.json");
   assert.equal(Object.keys(rec.byId).length, 118);
 
