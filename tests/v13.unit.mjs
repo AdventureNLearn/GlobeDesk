@@ -123,12 +123,12 @@ await t("Default title replaces [UNKNOWN] on first load", () => {
   assert.equal(dt(null, null), "Welcome to GlobeDesk");
 });
 
-await t("Version is v1.5.0 Atlas in the app, package.json and the CHANGELOG", () => {
-  assert.match(read("js", "version.js"), /APP\s*[:=]\s*"1\.5\.0"/);
+await t("Version is v1.5.1 Atlas in the app, package.json and the CHANGELOG", () => {
+  assert.match(read("js", "version.js"), /APP\s*[:=]\s*"1\.5\.1"/);
   assert.doesNotMatch(read("js", "version.js"), /1\.4\.0-draft|not released/);
-  assert.equal(JSON.parse(read("package.json")).version, "1.5.0");
-  assert.match(read("index.html"), /v1\.5\.0 · Atlas/);
-  assert.match(read("CHANGELOG.md"), /v1\.5\.0[^\n]*Atlas/);
+  assert.equal(JSON.parse(read("package.json")).version, "1.5.1");
+  assert.match(read("index.html"), /v1\.5\.1 · Atlas/);
+  assert.match(read("CHANGELOG.md"), /v1\.5\.1[^\n]*Atlas/);
   assert.match(read("CHANGELOG.md"), /v1\.4\.0[^\n]*Atlas/);
   assert.match(read("CHANGELOG.md"), /1\.3\.1/);
 });

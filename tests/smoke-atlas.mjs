@@ -108,7 +108,7 @@ try {
   const out = {};
   out.boot = await q(`({ view: document.body.className, cards: document.querySelectorAll(".nd-card").length, ver: document.getElementById("appVersion").textContent, desk: document.getElementById("deskSelect").value, desks: document.getElementById("deskSelect").options.length, atlasHidden: document.getElementById("atlasView").hidden })`);
   if (out.boot.cards !== 50 || out.boot.desk !== "news" || out.boot.desks !== 10 || !out.boot.atlasHidden) throw new Error("boot: " + JSON.stringify(out.boot));
-  if (!/v1\.4\.0-draft/.test(out.boot.ver)) throw new Error("version: " + out.boot.ver);
+  if (!/v1\.5\.1 · Atlas/.test(out.boot.ver)) throw new Error("version: " + out.boot.ver);
 
   // Bells layer: pins (or clusters) on the globe at start, from the bundled Bells pack.
   out.bellsBoot = await q(`({ marks: document.querySelectorAll(".bl-pin, .bl-cluster").length, total: GD.bellsLayer.pins(GD.atlasData).length })`);

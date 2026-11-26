@@ -475,7 +475,7 @@
     const win = global.window || global;
     const bar = doc && typeof doc.querySelector === "function" ? doc.querySelector(".topbar") : null;
     const narrow = !!(win.matchMedia && win.matchMedia("(max-width: 820px)").matches);
-    if (st.view === "elements" && narrow && bar && bar.getBoundingClientRect) {
+    if (narrow && bar && bar.getBoundingClientRect) { // every view: the phone sheet starts under the (wrapping) topbar
       const bottom = Math.ceil(bar.getBoundingClientRect().bottom);
       root.style.setProperty("--at-under-topbar", (bottom > 0 ? bottom : 52) + "px");
     } else if (root.style.removeProperty) {

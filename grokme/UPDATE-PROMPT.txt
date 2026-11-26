@@ -12,9 +12,9 @@ Update this GlobeDesk copy from the public repository.
 
 Then run the test checklist in GROK-ME-BUILD.md.
 
-This documentation describes GlobeDesk v1.5.0 Atlas. After rebuilding, check that:
+This documentation describes GlobeDesk v1.5.1 Atlas. After rebuilding, check that:
 
-- The version string reads v1.5.0 · Atlas.
+- The version string reads v1.5.1 · Atlas.
 - Atlas → Elements opens a holographic periodic table of 118 element tiles. Clicking an element opens its card; Fly in shows its electron orbits; Table view lists 118 rows. ?atlas-view=elements opens the Elements view directly. The data pack is still a draft, and Group 3 (La, Lu, Ac, Lr) is shown as an unresolved fork. [UNKNOWN] values stay [UNKNOWN].
 - A first open shows a skippable step-by-step tutorial (Welcome, then one step per feature, each marked Live or Coming soon). Skip is remembered; the Help button reopens it. The Washington, DC sample is not loaded by default (open it from the guide, Menu → File → Sample, or ?sample=1).
 - The tutorial History video step is Live and links to videos.html. Opening videos.html plays the hosted 720p US history film (1775–2026) with captions and chapters. The film file itself is not in the kit; it loads from the public asset host listed on that page.
