@@ -102,4 +102,53 @@ t("discoverer credits are names only; Wikidata years that are not year-or-finer 
   assert.equal(/born|birth|died|death|lived|nationality/i.test(JSON.stringify(elements)), false);
 });
 
+
+t("every element cites NIST SP 966 and links to the electron-configuration record", () => {
+  const bySrc = Object.fromEntries(sources.map((s) => [s.id, s]));
+  const pt = bySrc["nist-periodic-table-2024"];
+  assert.ok(pt);
+  assert.equal(pt.class, "official");
+  assert.match(pt.license, /title 17 United States Code Section 105/);
+  assert.equal(pt.terms_url, "https://www.nist.gov/srd/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications");
+  const rec = J("data/atlas/chemistry/elements-electron-config.json");
+  assert.equal(Object.keys(rec.byId).length, 118);
+
+  let measured = 0, notProven = 0, unknown = 0, disagree = 0;
+  for (const e of elements) {
+    assert.ok(e.sources.includes("nist-periodic-table-2024"), e.id);
+    assert.equal(e.record, "data/atlas/chemistry/elements-electron-config.json", e.id);
+    const row = rec.byId[e.id];
+    assert.ok(row, e.id);
+    if (row.status === "supported") {
+      measured++;
+      assert.ok(Array.isArray(row.shells) && row.shells.length >= 1, e.id);
+      assert.equal(row.shells.reduce((a, b) => a + b, 0), row.z, e.id);
+      assert.deepEqual(Object.values(row.shells_by_letter), row.shells, e.id);
+    } else if (row.status === "not-proven") {
+      notProven++;
+      assert.equal(row.shells, null);
+      assert.equal(row.config, "[UNKNOWN]");
+      assert.match(row.note, /calculated|theoretical/i);
+    } else if (row.status === "[UNKNOWN]") {
+      unknown++;
+      assert.equal(row.shells, null);
+      assert.equal(row.config, "[UNKNOWN]");
+      assert.match(row.note, /aufbau/i);
+    } else if (row.status === "people-disagree") {
+      disagree++;
+    }
+  }
+  assert.equal(measured, 103);
+  assert.equal(notProven, 5);
+  assert.equal(unknown, 10);
+  assert.equal(disagree, 0);
+  assert.deepEqual(rec.byId["carbon-element"].shells, [2, 4]);
+  assert.deepEqual(rec.byId["chromium-element"].shells, [2, 8, 13, 1]);
+  assert.deepEqual(rec.byId["copper-element"].shells, [2, 8, 18, 1]);
+  assert.deepEqual(rec.byId["gold-element"].shells, [2, 8, 18, 32, 18, 1]);
+  assert.deepEqual(rec.byId["lawrencium-element"].shells, [2, 8, 18, 32, 32, 8, 3]);
+  assert.equal(rec.byId["rutherfordium-element"].status, "not-proven");
+  assert.equal(rec.byId["oganesson-element"].status, "[UNKNOWN]");
+});
+
 console.log(n + " tests passed");

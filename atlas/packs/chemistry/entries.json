@@ -253,7 +253,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Hydrogen (H, element 1). Standard atomic weight [1.00784,1.00811] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 1 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1766. Discovery credit (Wikidata): Henry Cavendish.",
+      "summary": "DRAFT. Hydrogen (H, element 1). Standard atomic weight [1.00784,1.00811] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 1 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration 1s (shells K=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1766. Discovery credit (Wikidata): Henry Cavendish.",
       "places": [],
       "dates": [
         {
@@ -265,9 +265,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -289,7 +291,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Helium (He, element 2). Standard atomic weight 4.002602(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 1 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1868-08-18. Discovery credit (Wikidata): Norman Lockyer, Pierre Janssen, William Ramsay.",
+      "summary": "DRAFT. Helium (He, element 2). Standard atomic weight 4.002602(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 1 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration 1s2 (shells K=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1868-08-18. Discovery credit (Wikidata): Norman Lockyer, Pierre Janssen, William Ramsay.",
       "places": [],
       "dates": [
         {
@@ -301,9 +303,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -340,8 +344,10 @@
         "usgs-lithium",
         "nist-atomic-weights",
         "iupac-periodic-table-2022",
-        "wikidata-chemical-elements"
+        "wikidata-chemical-elements",
+        "nist-periodic-table-2024"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [
         {
           "type": "see-also",
@@ -362,7 +368,7 @@
       "aliases": [
         "Li (atomic number 3)"
       ],
-      "notes": "IUPAC group 1, period 2 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1817. Discovery credit (Wikidata): Johan August Arfwedson."
+      "notes": "IUPAC group 1, period 2 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1817. Discovery credit (Wikidata): Johan August Arfwedson. Ground-state electron configuration 1s2 2s (shells K=2, L=1; NIST SP 966, cross-checked against Wikidata P8000)."
     },
     {
       "id": "beryllium-element",
@@ -373,7 +379,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Beryllium (Be, element 4). Standard atomic weight 9.0121831(5) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 2 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1798. Discovery credit (Wikidata): Antoine Bussy, Friedrich Wöhler, Louis Nicolas Vauquelin.",
+      "summary": "DRAFT. Beryllium (Be, element 4). Standard atomic weight 9.0121831(5) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 2 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration 1s2 2s2 (shells K=2, L=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1798. Discovery credit (Wikidata): Antoine Bussy, Friedrich Wöhler, Louis Nicolas Vauquelin.",
       "places": [],
       "dates": [
         {
@@ -385,9 +391,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -409,7 +417,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Boron (B, element 5). Standard atomic weight [10.806,10.821] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 13, period 2 (IUPAC Periodic Table, 4 May 2022). Wikidata lists more than one discovery time (1892, 1808-06-30); a single year is not chosen. Discovery credit (Wikidata): Humphry Davy.",
+      "summary": "DRAFT. Boron (B, element 5). Standard atomic weight [10.806,10.821] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 13, period 2 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration 1s2 2s2 2p (shells K=2, L=3; NIST SP 966, cross-checked against Wikidata P8000). Wikidata lists more than one discovery time (1892, 1808-06-30); a single year is not chosen. Discovery credit (Wikidata): Humphry Davy.",
       "places": [],
       "dates": [
         {
@@ -427,9 +435,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -451,7 +461,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Carbon (C, element 6). Standard atomic weight [12.0096,12.0116] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 14, period 2 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1789. Discovery credit (Wikidata): Antoine Lavoisier.",
+      "summary": "DRAFT. Carbon (C, element 6). Standard atomic weight [12.0096,12.0116] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 14, period 2 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration 1s2 2s2 2p2 (shells K=2, L=4; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1789. Discovery credit (Wikidata): Antoine Lavoisier.",
       "places": [],
       "dates": [
         {
@@ -463,9 +473,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -487,7 +499,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Nitrogen (N, element 7). Standard atomic weight [14.00643,14.00728] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 15, period 2 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1772. Discovery credit (Wikidata): Daniel Rutherford.",
+      "summary": "DRAFT. Nitrogen (N, element 7). Standard atomic weight [14.00643,14.00728] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 15, period 2 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration 1s2 2s2 2p3 (shells K=2, L=5; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1772. Discovery credit (Wikidata): Daniel Rutherford.",
       "places": [],
       "dates": [
         {
@@ -499,9 +511,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -523,7 +537,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Oxygen (O, element 8). Standard atomic weight [15.99903,15.99977] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 16, period 2 (IUPAC Periodic Table, 4 May 2022). Wikidata lists more than one discovery time (1774, 1771); a single year is not chosen. Discovery credit (Wikidata): Carl Wilhelm Scheele.",
+      "summary": "DRAFT. Oxygen (O, element 8). Standard atomic weight [15.99903,15.99977] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 16, period 2 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration 1s2 2s2 2p4 (shells K=2, L=6; NIST SP 966, cross-checked against Wikidata P8000). Wikidata lists more than one discovery time (1774, 1771); a single year is not chosen. Discovery credit (Wikidata): Carl Wilhelm Scheele.",
       "places": [],
       "dates": [
         {
@@ -541,9 +555,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -565,7 +581,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Fluorine (F, element 9). Standard atomic weight 18.998403163(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 17, period 2 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1810. Discovery credit (Wikidata): André-Marie Ampère, Henri Moissan.",
+      "summary": "DRAFT. Fluorine (F, element 9). Standard atomic weight 18.998403163(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 17, period 2 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration 1s2 2s2 2p5 (shells K=2, L=7; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1810. Discovery credit (Wikidata): André-Marie Ampère, Henri Moissan.",
       "places": [],
       "dates": [
         {
@@ -577,9 +593,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -601,7 +619,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Neon (Ne, element 10). Standard atomic weight 20.1797(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 2 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1898. Discovery credit (Wikidata): Morris Travers, William Ramsay.",
+      "summary": "DRAFT. Neon (Ne, element 10). Standard atomic weight 20.1797(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 2 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration 1s2 2s2 2p6 (shells K=2, L=8; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1898. Discovery credit (Wikidata): Morris Travers, William Ramsay.",
       "places": [],
       "dates": [
         {
@@ -613,9 +631,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -637,7 +657,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Sodium (Na, element 11). Standard atomic weight 22.98976928(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 3 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1807. Discovery credit (Wikidata): Humphry Davy.",
+      "summary": "DRAFT. Sodium (Na, element 11). Standard atomic weight 22.98976928(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 3 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ne] 3s (shells K=2, L=8, M=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1807. Discovery credit (Wikidata): Humphry Davy.",
       "places": [],
       "dates": [
         {
@@ -649,9 +669,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -673,7 +695,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Magnesium (Mg, element 12). Standard atomic weight [24.304,24.307] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 3 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1755. Discovery credit (Wikidata): Joseph Black.",
+      "summary": "DRAFT. Magnesium (Mg, element 12). Standard atomic weight [24.304,24.307] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 3 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ne] 3s2 (shells K=2, L=8, M=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1755. Discovery credit (Wikidata): Joseph Black.",
       "places": [],
       "dates": [
         {
@@ -685,9 +707,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -709,7 +733,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Aluminium (Al, element 13). Standard atomic weight 26.9815385(7) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 13, period 3 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1825. Discovery credit (Wikidata): Hans Christian Ørsted, Humphry Davy.",
+      "summary": "DRAFT. Aluminium (Al, element 13). Standard atomic weight 26.9815385(7) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 13, period 3 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ne] 3s2 3p (shells K=2, L=8, M=3; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1825. Discovery credit (Wikidata): Hans Christian Ørsted, Humphry Davy.",
       "places": [],
       "dates": [
         {
@@ -721,9 +745,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -745,7 +771,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Silicon (Si, element 14). Standard atomic weight [28.084,28.086] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 14, period 3 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1823. Discovery credit (Wikidata): Jöns Jacob Berzelius.",
+      "summary": "DRAFT. Silicon (Si, element 14). Standard atomic weight [28.084,28.086] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 14, period 3 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ne] 3s2 3p2 (shells K=2, L=8, M=4; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1823. Discovery credit (Wikidata): Jöns Jacob Berzelius.",
       "places": [],
       "dates": [
         {
@@ -757,9 +783,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -781,7 +809,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Phosphorus (P, element 15). Standard atomic weight 30.973761998(5) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 15, period 3 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1669. Discovery credit (Wikidata): Hennig Brand.",
+      "summary": "DRAFT. Phosphorus (P, element 15). Standard atomic weight 30.973761998(5) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 15, period 3 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ne] 3s2 3p3 (shells K=2, L=8, M=5; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1669. Discovery credit (Wikidata): Hennig Brand.",
       "places": [],
       "dates": [
         {
@@ -793,9 +821,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -817,7 +847,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Sulfur (S, element 16). Standard atomic weight [32.059,32.076] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 16, period 3 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1777. Discovery credit (Wikidata): Antoine Lavoisier.",
+      "summary": "DRAFT. Sulfur (S, element 16). Standard atomic weight [32.059,32.076] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 16, period 3 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ne] 3s2 3p4 (shells K=2, L=8, M=6; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1777. Discovery credit (Wikidata): Antoine Lavoisier.",
       "places": [],
       "dates": [
         {
@@ -829,9 +859,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -853,7 +885,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Chlorine (Cl, element 17). Standard atomic weight [35.446,35.457] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 17, period 3 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1774. Discovery credit (Wikidata): Carl Wilhelm Scheele.",
+      "summary": "DRAFT. Chlorine (Cl, element 17). Standard atomic weight [35.446,35.457] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 17, period 3 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ne] 3s2 3p5 (shells K=2, L=8, M=7; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1774. Discovery credit (Wikidata): Carl Wilhelm Scheele.",
       "places": [],
       "dates": [
         {
@@ -865,9 +897,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -889,7 +923,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Argon (Ar, element 18). Standard atomic weight 39.948(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 3 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1894. Discovery credit (Wikidata): John William Strutt, William Ramsay.",
+      "summary": "DRAFT. Argon (Ar, element 18). Standard atomic weight 39.948(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 3 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ne] 3s2 3p6 (shells K=2, L=8, M=8; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1894. Discovery credit (Wikidata): John William Strutt, William Ramsay.",
       "places": [],
       "dates": [
         {
@@ -901,9 +935,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -925,7 +961,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Potassium (K, element 19). Standard atomic weight 39.0983(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1807. Discovery credit (Wikidata): Humphry Davy.",
+      "summary": "DRAFT. Potassium (K, element 19). Standard atomic weight 39.0983(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 4s (shells K=2, L=8, M=8, N=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1807. Discovery credit (Wikidata): Humphry Davy.",
       "places": [],
       "dates": [
         {
@@ -937,9 +973,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -961,7 +999,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Calcium (Ca, element 20). Standard atomic weight 40.078(4) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1808. Discovery credit (Wikidata): Humphry Davy.",
+      "summary": "DRAFT. Calcium (Ca, element 20). Standard atomic weight 40.078(4) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 4s2 (shells K=2, L=8, M=8, N=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1808. Discovery credit (Wikidata): Humphry Davy.",
       "places": [],
       "dates": [
         {
@@ -973,9 +1011,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -997,7 +1037,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Scandium (Sc, element 21). Standard atomic weight 44.955908(5) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 3, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1879. Discovery credit (Wikidata): Lars Fredrik Nilson.",
+      "summary": "DRAFT. Scandium (Sc, element 21). Standard atomic weight 44.955908(5) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 3, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d 4s2 (shells K=2, L=8, M=9, N=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1879. Discovery credit (Wikidata): Lars Fredrik Nilson.",
       "places": [],
       "dates": [
         {
@@ -1009,9 +1049,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1033,7 +1075,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Titanium (Ti, element 22). Standard atomic weight 47.867(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 4, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1791. Discovery credit (Wikidata): Friedrich Wöhler.",
+      "summary": "DRAFT. Titanium (Ti, element 22). Standard atomic weight 47.867(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 4, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d2 4s2 (shells K=2, L=8, M=10, N=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1791. Discovery credit (Wikidata): Friedrich Wöhler.",
       "places": [],
       "dates": [
         {
@@ -1045,9 +1087,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1069,7 +1113,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Vanadium (V, element 23). Standard atomic weight 50.9415(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 5, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1801. Discovery credit (Wikidata): Andrés Manuel del Río.",
+      "summary": "DRAFT. Vanadium (V, element 23). Standard atomic weight 50.9415(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 5, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d3 4s2 (shells K=2, L=8, M=11, N=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1801. Discovery credit (Wikidata): Andrés Manuel del Río.",
       "places": [],
       "dates": [
         {
@@ -1081,9 +1125,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1105,7 +1151,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Chromium (Cr, element 24). Standard atomic weight 51.9961(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 6, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1797. Discovery credit (Wikidata): Louis Nicolas Vauquelin.",
+      "summary": "DRAFT. Chromium (Cr, element 24). Standard atomic weight 51.9961(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 6, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d5 4s (shells K=2, L=8, M=13, N=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1797. Discovery credit (Wikidata): Louis Nicolas Vauquelin.",
       "places": [],
       "dates": [
         {
@@ -1117,9 +1163,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1141,7 +1189,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Manganese (Mn, element 25). Standard atomic weight 54.938044(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 7, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1774. Discovery credit (Wikidata): Johan Gottlieb Gahn.",
+      "summary": "DRAFT. Manganese (Mn, element 25). Standard atomic weight 54.938044(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 7, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d5 4s2 (shells K=2, L=8, M=13, N=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1774. Discovery credit (Wikidata): Johan Gottlieb Gahn.",
       "places": [],
       "dates": [
         {
@@ -1153,9 +1201,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1177,14 +1227,16 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Iron (Fe, element 26). Standard atomic weight 55.845(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 8, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit (Wikidata): http://www.wikidata.org/.well-known/genid/c150a46aad8c85725250e72a762569ed.",
+      "summary": "DRAFT. Iron (Fe, element 26). Standard atomic weight 55.845(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 8, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d6 4s2 (shells K=2, L=8, M=14, N=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery year [UNKNOWN] (Wikidata). Discovery credit (Wikidata): http://www.wikidata.org/.well-known/genid/c150a46aad8c85725250e72a762569ed.",
       "places": [],
       "dates": [],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1206,7 +1258,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Cobalt (Co, element 27). Standard atomic weight 58.933194(4) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 9, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1735. Discovery credit (Wikidata): Georg Brandt.",
+      "summary": "DRAFT. Cobalt (Co, element 27). Standard atomic weight 58.933194(4) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 9, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d7 4s2 (shells K=2, L=8, M=15, N=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1735. Discovery credit (Wikidata): Georg Brandt.",
       "places": [],
       "dates": [
         {
@@ -1218,9 +1270,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1242,7 +1296,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Nickel (Ni, element 28). Standard atomic weight 58.6934(4) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 10, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1751. Discovery credit (Wikidata): Axel Fredrik Cronstedt.",
+      "summary": "DRAFT. Nickel (Ni, element 28). Standard atomic weight 58.6934(4) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 10, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d8 4s2 (shells K=2, L=8, M=16, N=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1751. Discovery credit (Wikidata): Axel Fredrik Cronstedt.",
       "places": [],
       "dates": [
         {
@@ -1254,9 +1308,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1286,8 +1342,10 @@
         "usgs-copper",
         "nist-atomic-weights",
         "iupac-periodic-table-2022",
-        "wikidata-chemical-elements"
+        "wikidata-chemical-elements",
+        "nist-periodic-table-2024"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1299,7 +1357,7 @@
       "aliases": [
         "Cu (atomic number 29)"
       ],
-      "notes": "IUPAC group 11, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata)."
+      "notes": "IUPAC group 11, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata). Ground-state electron configuration [Ar] 3d10 4s (shells K=2, L=8, M=18, N=1; NIST SP 966, cross-checked against Wikidata P8000)."
     },
     {
       "id": "zinc-element",
@@ -1310,14 +1368,16 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Zinc (Zn, element 30). Standard atomic weight 65.38(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 12, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit (Wikidata): http://www.wikidata.org/.well-known/genid/6df6ed05aa1b1d09337de229b582ca1d.",
+      "summary": "DRAFT. Zinc (Zn, element 30). Standard atomic weight 65.38(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 12, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d10 4s2 (shells K=2, L=8, M=18, N=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery year [UNKNOWN] (Wikidata). Discovery credit (Wikidata): http://www.wikidata.org/.well-known/genid/6df6ed05aa1b1d09337de229b582ca1d.",
       "places": [],
       "dates": [],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1339,7 +1399,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Gallium (Ga, element 31). Standard atomic weight 69.723(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 13, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1875. Discovery credit (Wikidata): Paul-Émile Lecoq de Boisbaudran.",
+      "summary": "DRAFT. Gallium (Ga, element 31). Standard atomic weight 69.723(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 13, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d10 4s2 4p (shells K=2, L=8, M=18, N=3; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1875. Discovery credit (Wikidata): Paul-Émile Lecoq de Boisbaudran.",
       "places": [],
       "dates": [
         {
@@ -1351,9 +1411,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1375,7 +1437,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Germanium (Ge, element 32). Standard atomic weight 72.630(8) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 14, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1886. Discovery credit (Wikidata): Clemens Winkler.",
+      "summary": "DRAFT. Germanium (Ge, element 32). Standard atomic weight 72.630(8) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 14, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d10 4s2 4p2 (shells K=2, L=8, M=18, N=4; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1886. Discovery credit (Wikidata): Clemens Winkler.",
       "places": [],
       "dates": [
         {
@@ -1387,9 +1449,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1411,14 +1475,16 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Arsenic (As, element 33). Standard atomic weight 74.921595(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 15, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit (Wikidata): Albertus Magnus.",
+      "summary": "DRAFT. Arsenic (As, element 33). Standard atomic weight 74.921595(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 15, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d10 4s2 4p3 (shells K=2, L=8, M=18, N=5; NIST SP 966, cross-checked against Wikidata P8000). Discovery year [UNKNOWN] (Wikidata). Discovery credit (Wikidata): Albertus Magnus.",
       "places": [],
       "dates": [],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1440,7 +1506,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Selenium (Se, element 34). Standard atomic weight 78.971(8) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 16, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1817. Discovery credit (Wikidata): Johan Gottlieb Gahn, Jöns Jacob Berzelius.",
+      "summary": "DRAFT. Selenium (Se, element 34). Standard atomic weight 78.971(8) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 16, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d10 4s2 4p4 (shells K=2, L=8, M=18, N=6; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1817. Discovery credit (Wikidata): Johan Gottlieb Gahn, Jöns Jacob Berzelius.",
       "places": [],
       "dates": [
         {
@@ -1452,9 +1518,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1476,7 +1544,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Bromine (Br, element 35). Standard atomic weight [79.901,79.907] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 17, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1825. Discovery credit (Wikidata): Antoine-Jérôme Balard, Carl Jacob Löwig.",
+      "summary": "DRAFT. Bromine (Br, element 35). Standard atomic weight [79.901,79.907] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 17, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d10 4s2 4p5 (shells K=2, L=8, M=18, N=7; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1825. Discovery credit (Wikidata): Antoine-Jérôme Balard, Carl Jacob Löwig.",
       "places": [],
       "dates": [
         {
@@ -1488,9 +1556,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1512,7 +1582,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Krypton (Kr, element 36). Standard atomic weight 83.798(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 4 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1898. Discovery credit (Wikidata): Morris Travers, William Ramsay.",
+      "summary": "DRAFT. Krypton (Kr, element 36). Standard atomic weight 83.798(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 4 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Ar] 3d10 4s2 4p6 (shells K=2, L=8, M=18, N=8; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1898. Discovery credit (Wikidata): Morris Travers, William Ramsay.",
       "places": [],
       "dates": [
         {
@@ -1524,9 +1594,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1548,7 +1620,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Rubidium (Rb, element 37). Standard atomic weight 85.4678(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1861. Discovery credit (Wikidata): Gustav Kirchhoff, Robert Bunsen.",
+      "summary": "DRAFT. Rubidium (Rb, element 37). Standard atomic weight 85.4678(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 5s (shells K=2, L=8, M=18, N=8, O=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1861. Discovery credit (Wikidata): Gustav Kirchhoff, Robert Bunsen.",
       "places": [],
       "dates": [
         {
@@ -1560,9 +1632,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1584,7 +1658,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Strontium (Sr, element 38). Standard atomic weight 87.62(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1787. Discovery credit (Wikidata): William Cruickshank.",
+      "summary": "DRAFT. Strontium (Sr, element 38). Standard atomic weight 87.62(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 5s2 (shells K=2, L=8, M=18, N=8, O=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1787. Discovery credit (Wikidata): William Cruickshank.",
       "places": [],
       "dates": [
         {
@@ -1596,9 +1670,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1620,7 +1696,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Yttrium (Y, element 39). Standard atomic weight 88.90584(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 3, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1787. Discovery credit (Wikidata): Friedrich Wöhler, Johan Gadolin.",
+      "summary": "DRAFT. Yttrium (Y, element 39). Standard atomic weight 88.90584(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 3, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d 5s2 (shells K=2, L=8, M=18, N=9, O=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1787. Discovery credit (Wikidata): Friedrich Wöhler, Johan Gadolin.",
       "places": [],
       "dates": [
         {
@@ -1632,9 +1708,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1656,7 +1734,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Zirconium (Zr, element 40). Standard atomic weight 91.224(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 4, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1789. Discovery credit (Wikidata): Anton Eduard van Arkel, Jan Hendrik de Boer, Jöns Jacob Berzelius, Martin Heinrich Klaproth.",
+      "summary": "DRAFT. Zirconium (Zr, element 40). Standard atomic weight 91.224(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 4, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d2 5s2 (shells K=2, L=8, M=18, N=10, O=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1789. Discovery credit (Wikidata): Anton Eduard van Arkel, Jan Hendrik de Boer, Jöns Jacob Berzelius, Martin Heinrich Klaproth.",
       "places": [],
       "dates": [
         {
@@ -1668,9 +1746,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1692,7 +1772,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Niobium (Nb, element 41). Standard atomic weight 92.90637(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 5, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1801. Discovery credit (Wikidata): Charles Hatchett.",
+      "summary": "DRAFT. Niobium (Nb, element 41). Standard atomic weight 92.90637(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 5, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d4 5s (shells K=2, L=8, M=18, N=12, O=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1801. Discovery credit (Wikidata): Charles Hatchett.",
       "places": [],
       "dates": [
         {
@@ -1704,9 +1784,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1728,7 +1810,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Molybdenum (Mo, element 42). Standard atomic weight 95.95(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 6, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1778. Discovery credit (Wikidata): Carl Wilhelm Scheele.",
+      "summary": "DRAFT. Molybdenum (Mo, element 42). Standard atomic weight 95.95(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 6, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d5 5s (shells K=2, L=8, M=18, N=13, O=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1778. Discovery credit (Wikidata): Carl Wilhelm Scheele.",
       "places": [],
       "dates": [
         {
@@ -1740,9 +1822,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1764,7 +1848,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Technetium (Tc, element 43). Standard atomic weight [98] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 7, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1937. Discovery credit (Wikidata): Carlo Perrier, Emilio G. Segrè.",
+      "summary": "DRAFT. Technetium (Tc, element 43). Standard atomic weight [98] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 7, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d5 5s2 (shells K=2, L=8, M=18, N=13, O=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1937. Discovery credit (Wikidata): Carlo Perrier, Emilio G. Segrè.",
       "places": [],
       "dates": [
         {
@@ -1776,9 +1860,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1800,7 +1886,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Ruthenium (Ru, element 44). Standard atomic weight 101.07(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 8, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1844. Discovery credit (Wikidata): Karl Ernst Claus.",
+      "summary": "DRAFT. Ruthenium (Ru, element 44). Standard atomic weight 101.07(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 8, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d7 5s (shells K=2, L=8, M=18, N=15, O=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1844. Discovery credit (Wikidata): Karl Ernst Claus.",
       "places": [],
       "dates": [
         {
@@ -1812,9 +1898,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1836,7 +1924,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Rhodium (Rh, element 45). Standard atomic weight 102.90550(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 9, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1803. Discovery credit (Wikidata): William Hyde Wollaston.",
+      "summary": "DRAFT. Rhodium (Rh, element 45). Standard atomic weight 102.90550(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 9, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d8 5s (shells K=2, L=8, M=18, N=16, O=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1803. Discovery credit (Wikidata): William Hyde Wollaston.",
       "places": [],
       "dates": [
         {
@@ -1848,9 +1936,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1872,7 +1962,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Palladium (Pd, element 46). Standard atomic weight 106.42(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 10, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1803. Discovery credit (Wikidata): William Hyde Wollaston.",
+      "summary": "DRAFT. Palladium (Pd, element 46). Standard atomic weight 106.42(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 10, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d10 (shells K=2, L=8, M=18, N=18; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1803. Discovery credit (Wikidata): William Hyde Wollaston.",
       "places": [],
       "dates": [
         {
@@ -1884,9 +1974,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1908,14 +2000,16 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Silver (Ag, element 47). Standard atomic weight 107.8682(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 11, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
+      "summary": "DRAFT. Silver (Ag, element 47). Standard atomic weight 107.8682(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 11, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d10 5s (shells K=2, L=8, M=18, N=18, O=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
       "places": [],
       "dates": [],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1937,7 +2031,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Cadmium (Cd, element 48). Standard atomic weight 112.414(4) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 12, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1817. Discovery credit (Wikidata): Friedrich Stromeyer, Karl Samuel Leberecht Hermann.",
+      "summary": "DRAFT. Cadmium (Cd, element 48). Standard atomic weight 112.414(4) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 12, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d10 5s2 (shells K=2, L=8, M=18, N=18, O=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1817. Discovery credit (Wikidata): Friedrich Stromeyer, Karl Samuel Leberecht Hermann.",
       "places": [],
       "dates": [
         {
@@ -1949,9 +2043,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -1973,7 +2069,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Indium (In, element 49). Standard atomic weight 114.818(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 13, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1863. Discovery credit (Wikidata): Ferdinand Reich, Hieronymous Theodor Richter.",
+      "summary": "DRAFT. Indium (In, element 49). Standard atomic weight 114.818(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 13, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d10 5s2 5p (shells K=2, L=8, M=18, N=18, O=3; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1863. Discovery credit (Wikidata): Ferdinand Reich, Hieronymous Theodor Richter.",
       "places": [],
       "dates": [
         {
@@ -1985,9 +2081,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2009,14 +2107,16 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Tin (Sn, element 50). Standard atomic weight 118.710(7) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 14, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
+      "summary": "DRAFT. Tin (Sn, element 50). Standard atomic weight 118.710(7) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 14, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d10 5s2 5p2 (shells K=2, L=8, M=18, N=18, O=4; NIST SP 966, cross-checked against Wikidata P8000). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
       "places": [],
       "dates": [],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2038,14 +2138,16 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Antimony (Sb, element 51). Standard atomic weight 121.760(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 15, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
+      "summary": "DRAFT. Antimony (Sb, element 51). Standard atomic weight 121.760(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 15, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d10 5s2 5p3 (shells K=2, L=8, M=18, N=18, O=5; NIST SP 966, cross-checked against Wikidata P8000). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
       "places": [],
       "dates": [],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2067,7 +2169,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Tellurium (Te, element 52). Standard atomic weight 127.60(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 16, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1783. Discovery credit (Wikidata): Franz-Joseph Müller von Reichenstein.",
+      "summary": "DRAFT. Tellurium (Te, element 52). Standard atomic weight 127.60(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 16, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d10 5s2 5p4 (shells K=2, L=8, M=18, N=18, O=6; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1783. Discovery credit (Wikidata): Franz-Joseph Müller von Reichenstein.",
       "places": [],
       "dates": [
         {
@@ -2079,9 +2181,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2103,7 +2207,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Iodine (I, element 53). Standard atomic weight 126.90447(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 17, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1811. Discovery credit (Wikidata): Bernard Courtois.",
+      "summary": "DRAFT. Iodine (I, element 53). Standard atomic weight 126.90447(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 17, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d10 5s2 5p5 (shells K=2, L=8, M=18, N=18, O=7; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1811. Discovery credit (Wikidata): Bernard Courtois.",
       "places": [],
       "dates": [
         {
@@ -2115,9 +2219,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2139,7 +2245,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Xenon (Xe, element 54). Standard atomic weight 131.293(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 5 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1898-07-12. Discovery credit (Wikidata): Morris Travers, William Ramsay.",
+      "summary": "DRAFT. Xenon (Xe, element 54). Standard atomic weight 131.293(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 5 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Kr] 4d10 5s2 5p6 (shells K=2, L=8, M=18, N=18, O=8; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1898-07-12. Discovery credit (Wikidata): Morris Travers, William Ramsay.",
       "places": [],
       "dates": [
         {
@@ -2151,9 +2257,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2175,7 +2283,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Caesium (Cs, element 55). Standard atomic weight 132.90545196(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1860. Discovery credit (Wikidata): Gustav Kirchhoff, Robert Bunsen.",
+      "summary": "DRAFT. Caesium (Cs, element 55). Standard atomic weight 132.90545196(6) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 6s (shells K=2, L=8, M=18, N=18, O=8, P=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1860. Discovery credit (Wikidata): Gustav Kirchhoff, Robert Bunsen.",
       "places": [],
       "dates": [
         {
@@ -2187,9 +2295,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2211,7 +2321,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Barium (Ba, element 56). Standard atomic weight 137.327(7) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 6 (IUPAC Periodic Table, 4 May 2022). Wikidata lists more than one discovery time (1808, 1772); a single year is not chosen. Discovery credit (Wikidata): Humphry Davy.",
+      "summary": "DRAFT. Barium (Ba, element 56). Standard atomic weight 137.327(7) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 6s2 (shells K=2, L=8, M=18, N=18, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Wikidata lists more than one discovery time (1808, 1772); a single year is not chosen. Discovery credit (Wikidata): Humphry Davy.",
       "places": [],
       "dates": [
         {
@@ -2229,9 +2339,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2253,7 +2365,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Lanthanum (La, element 57). Standard atomic weight 138.90547(7) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1839-01. Discovery credit (Wikidata): Carl Gustaf Mosander. IUPAC has not resolved whether group 3 is Sc, Y, Lu and Lr or Sc, Y, La and Ac. The 4 May 2022 table places the lanthanoids (57-71) and actinoids (89-103) in that column and does not assign this element an individual group number. GlobeDesk does not pick a side.",
+      "summary": "DRAFT. Lanthanum (La, element 57). Standard atomic weight 138.90547(7) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 5d 6s2 (shells K=2, L=8, M=18, N=18, O=9, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1839-01. Discovery credit (Wikidata): Carl Gustaf Mosander. IUPAC has not resolved whether group 3 is Sc, Y, Lu and Lr or Sc, Y, La and Ac. The 4 May 2022 table places the lanthanoids (57-71) and actinoids (89-103) in that column and does not assign this element an individual group number. GlobeDesk does not pick a side.",
       "places": [],
       "dates": [
         {
@@ -2265,9 +2377,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2290,7 +2404,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Cerium (Ce, element 58). Standard atomic weight 140.116(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1804. Discovery credit (Wikidata): Jöns Jacob Berzelius, Martin Heinrich Klaproth. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Cerium (Ce, element 58). Standard atomic weight 140.116(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f 5d 6s2 (shells K=2, L=8, M=18, N=19, O=9, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1804. Discovery credit (Wikidata): Jöns Jacob Berzelius, Martin Heinrich Klaproth. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2302,9 +2416,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2327,7 +2443,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Praseodymium (Pr, element 59). Standard atomic weight 140.90766(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1841. Discovery credit (Wikidata): Carl Gustaf Mosander. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Praseodymium (Pr, element 59). Standard atomic weight 140.90766(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f3 6s2 (shells K=2, L=8, M=18, N=21, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1841. Discovery credit (Wikidata): Carl Gustaf Mosander. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2339,9 +2455,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2364,7 +2482,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Neodymium (Nd, element 60). Standard atomic weight 144.242(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1885. Discovery credit (Wikidata): Carl Auer von Welsbach. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Neodymium (Nd, element 60). Standard atomic weight 144.242(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f4 6s2 (shells K=2, L=8, M=18, N=22, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1885. Discovery credit (Wikidata): Carl Auer von Welsbach. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2376,9 +2494,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2401,7 +2521,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Promethium (Pm, element 61). Standard atomic weight [145] (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1945. Discovery credit (Wikidata): Charles D. Coryell, Jacob Akiba Marinsky, Lawrence E. Glendenin. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Promethium (Pm, element 61). Standard atomic weight [145] (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f5 6s2 (shells K=2, L=8, M=18, N=23, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1945. Discovery credit (Wikidata): Charles D. Coryell, Jacob Akiba Marinsky, Lawrence E. Glendenin. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2413,9 +2533,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2438,7 +2560,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Samarium (Sm, element 62). Standard atomic weight 150.36(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1879. Discovery credit (Wikidata): Paul-Émile Lecoq de Boisbaudran. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Samarium (Sm, element 62). Standard atomic weight 150.36(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f6 6s2 (shells K=2, L=8, M=18, N=24, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1879. Discovery credit (Wikidata): Paul-Émile Lecoq de Boisbaudran. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2450,9 +2572,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2475,7 +2599,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Europium (Eu, element 63). Standard atomic weight 151.964(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1901. Discovery credit (Wikidata): Eugène-Anatole Demarçay. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Europium (Eu, element 63). Standard atomic weight 151.964(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f7 6s2 (shells K=2, L=8, M=18, N=25, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1901. Discovery credit (Wikidata): Eugène-Anatole Demarçay. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2487,9 +2611,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2512,7 +2638,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Gadolinium (Gd, element 64). Standard atomic weight 157.25(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1880. Discovery credit (Wikidata): Jean Charles Galissard de Marignac. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Gadolinium (Gd, element 64). Standard atomic weight 157.25(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f7 5d 6s2 (shells K=2, L=8, M=18, N=25, O=9, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1880. Discovery credit (Wikidata): Jean Charles Galissard de Marignac. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2524,9 +2650,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2549,7 +2677,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Terbium (Tb, element 65). Standard atomic weight 158.92535(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1843. Discovery credit (Wikidata): Carl Gustaf Mosander. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Terbium (Tb, element 65). Standard atomic weight 158.92535(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f9 6s2 (shells K=2, L=8, M=18, N=27, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1843. Discovery credit (Wikidata): Carl Gustaf Mosander. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2561,9 +2689,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2586,7 +2716,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Dysprosium (Dy, element 66). Standard atomic weight 162.500(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1886. Discovery credit (Wikidata): Paul-Émile Lecoq de Boisbaudran. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Dysprosium (Dy, element 66). Standard atomic weight 162.500(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f10 6s2 (shells K=2, L=8, M=18, N=28, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1886. Discovery credit (Wikidata): Paul-Émile Lecoq de Boisbaudran. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2598,9 +2728,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2623,7 +2755,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Holmium (Ho, element 67). Standard atomic weight 164.93033(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1878. Discovery credit (Wikidata): Jacques-Louis Soret, Marc Delafontaine, Per Teodor Cleve. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Holmium (Ho, element 67). Standard atomic weight 164.93033(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f11 6s2 (shells K=2, L=8, M=18, N=29, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1878. Discovery credit (Wikidata): Jacques-Louis Soret, Marc Delafontaine, Per Teodor Cleve. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2635,9 +2767,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2660,7 +2794,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Erbium (Er, element 68). Standard atomic weight 167.259(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Wikidata lists more than one discovery time (1879, 1843); a single year is not chosen. Discovery credit (Wikidata): Carl Gustaf Mosander. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Erbium (Er, element 68). Standard atomic weight 167.259(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f12 6s2 (shells K=2, L=8, M=18, N=30, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Wikidata lists more than one discovery time (1879, 1843); a single year is not chosen. Discovery credit (Wikidata): Carl Gustaf Mosander. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2678,9 +2812,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2703,7 +2839,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Thulium (Tm, element 69). Standard atomic weight 168.93422(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1879. Discovery credit (Wikidata): Per Teodor Cleve. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Thulium (Tm, element 69). Standard atomic weight 168.93422(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f13 6s2 (shells K=2, L=8, M=18, N=31, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1879. Discovery credit (Wikidata): Per Teodor Cleve. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2715,9 +2851,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2740,7 +2878,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Ytterbium (Yb, element 70). Standard atomic weight 173.054(5) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1878. Discovery credit (Wikidata): Jean Charles Galissard de Marignac. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Ytterbium (Yb, element 70). Standard atomic weight 173.054(5) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 6s2 (shells K=2, L=8, M=18, N=32, O=8, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1878. Discovery credit (Wikidata): Jean Charles Galissard de Marignac. IUPAC lists this element among the lanthanoids (La to Lu) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -2752,9 +2890,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2777,7 +2917,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Lutetium (Lu, element 71). Standard atomic weight 174.9668(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1906. Discovery credit (Wikidata): Carl Auer von Welsbach, Georges Urbain. IUPAC has not resolved whether group 3 is Sc, Y, Lu and Lr or Sc, Y, La and Ac. The 4 May 2022 table places the lanthanoids (57-71) and actinoids (89-103) in that column and does not assign this element an individual group number. GlobeDesk does not pick a side.",
+      "summary": "DRAFT. Lutetium (Lu, element 71). Standard atomic weight 174.9668(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 5d 6s2 (shells K=2, L=8, M=18, N=32, O=9, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1906. Discovery credit (Wikidata): Carl Auer von Welsbach, Georges Urbain. IUPAC has not resolved whether group 3 is Sc, Y, Lu and Lr or Sc, Y, La and Ac. The 4 May 2022 table places the lanthanoids (57-71) and actinoids (89-103) in that column and does not assign this element an individual group number. GlobeDesk does not pick a side.",
       "places": [],
       "dates": [
         {
@@ -2789,9 +2929,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2814,7 +2956,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Hafnium (Hf, element 72). Standard atomic weight 178.49(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 4, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1922. Discovery credit (Wikidata): Dirk Coster, George de Hevesy.",
+      "summary": "DRAFT. Hafnium (Hf, element 72). Standard atomic weight 178.49(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 4, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 5d2 6s2 (shells K=2, L=8, M=18, N=32, O=10, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1922. Discovery credit (Wikidata): Dirk Coster, George de Hevesy.",
       "places": [],
       "dates": [
         {
@@ -2826,9 +2968,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2850,7 +2994,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Tantalum (Ta, element 73). Standard atomic weight 180.94788(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 5, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1802. Discovery credit (Wikidata): Anders Gustaf Ekeberg.",
+      "summary": "DRAFT. Tantalum (Ta, element 73). Standard atomic weight 180.94788(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 5, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 5d3 6s2 (shells K=2, L=8, M=18, N=32, O=11, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1802. Discovery credit (Wikidata): Anders Gustaf Ekeberg.",
       "places": [],
       "dates": [
         {
@@ -2862,9 +3006,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2886,7 +3032,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Tungsten (W, element 74). Standard atomic weight 183.84(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 6, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1783. Discovery credit (Wikidata): Fausto Elhuyar, Juan José Elhuyar.",
+      "summary": "DRAFT. Tungsten (W, element 74). Standard atomic weight 183.84(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 6, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 5d4 6s2 (shells K=2, L=8, M=18, N=32, O=12, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1783. Discovery credit (Wikidata): Fausto Elhuyar, Juan José Elhuyar.",
       "places": [],
       "dates": [
         {
@@ -2898,9 +3044,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2922,7 +3070,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Rhenium (Re, element 75). Standard atomic weight 186.207(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 7, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1925. Discovery credit (Wikidata): Ida Noddack, Otto Berg, Walter Noddack.",
+      "summary": "DRAFT. Rhenium (Re, element 75). Standard atomic weight 186.207(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 7, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 5d5 6s2 (shells K=2, L=8, M=18, N=32, O=13, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1925. Discovery credit (Wikidata): Ida Noddack, Otto Berg, Walter Noddack.",
       "places": [],
       "dates": [
         {
@@ -2934,9 +3082,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2958,7 +3108,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Osmium (Os, element 76). Standard atomic weight 190.23(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 8, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1804. Discovery credit (Wikidata): Smithson Tennant, William Hyde Wollaston.",
+      "summary": "DRAFT. Osmium (Os, element 76). Standard atomic weight 190.23(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 8, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 5d6 6s2 (shells K=2, L=8, M=18, N=32, O=14, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1804. Discovery credit (Wikidata): Smithson Tennant, William Hyde Wollaston.",
       "places": [],
       "dates": [
         {
@@ -2970,9 +3120,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -2994,7 +3146,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Iridium (Ir, element 77). Standard atomic weight 192.217(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 9, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1803. Discovery credit (Wikidata): Smithson Tennant.",
+      "summary": "DRAFT. Iridium (Ir, element 77). Standard atomic weight 192.217(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 9, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 5d7 6s2 (shells K=2, L=8, M=18, N=32, O=15, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1803. Discovery credit (Wikidata): Smithson Tennant.",
       "places": [],
       "dates": [
         {
@@ -3006,9 +3158,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3030,7 +3184,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Platinum (Pt, element 78). Standard atomic weight 195.084(9) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 10, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1557. Discovery credit (Wikidata): Antonio de Ulloa, Julius Caesar Scaliger.",
+      "summary": "DRAFT. Platinum (Pt, element 78). Standard atomic weight 195.084(9) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 10, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 5d9 6s (shells K=2, L=8, M=18, N=32, O=17, P=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1557. Discovery credit (Wikidata): Antonio de Ulloa, Julius Caesar Scaliger.",
       "places": [],
       "dates": [
         {
@@ -3042,9 +3196,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3066,14 +3222,16 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Gold (Au, element 79). Standard atomic weight 196.966569(5) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 11, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit (Wikidata): http://www.wikidata.org/.well-known/genid/9d95c053c6a96042af9f9df8e05f2f17.",
+      "summary": "DRAFT. Gold (Au, element 79). Standard atomic weight 196.966569(5) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 11, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 5d10 6s (shells K=2, L=8, M=18, N=32, O=18, P=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery year [UNKNOWN] (Wikidata). Discovery credit (Wikidata): http://www.wikidata.org/.well-known/genid/9d95c053c6a96042af9f9df8e05f2f17.",
       "places": [],
       "dates": [],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3095,14 +3253,16 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Mercury (Hg, element 80). Standard atomic weight 200.592(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 12, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
+      "summary": "DRAFT. Mercury (Hg, element 80). Standard atomic weight 200.592(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 12, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Xe] 4f14 5d10 6s2 (shells K=2, L=8, M=18, N=32, O=18, P=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
       "places": [],
       "dates": [],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3124,7 +3284,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Thallium (Tl, element 81). Standard atomic weight [204.382,204.385] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 13, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1861. Discovery credit (Wikidata): William Crookes.",
+      "summary": "DRAFT. Thallium (Tl, element 81). Standard atomic weight [204.382,204.385] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 13, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Hg] 6p (shells K=2, L=8, M=18, N=32, O=18, P=3; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1861. Discovery credit (Wikidata): William Crookes.",
       "places": [],
       "dates": [
         {
@@ -3136,9 +3296,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3160,14 +3322,16 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Lead (Pb, element 82). Standard atomic weight 207.2(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 14, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
+      "summary": "DRAFT. Lead (Pb, element 82). Standard atomic weight 207.2(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 14, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Hg] 6p2 (shells K=2, L=8, M=18, N=32, O=18, P=4; NIST SP 966, cross-checked against Wikidata P8000). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
       "places": [],
       "dates": [],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3189,14 +3353,16 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Bismuth (Bi, element 83). Standard atomic weight 208.98040(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 15, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
+      "summary": "DRAFT. Bismuth (Bi, element 83). Standard atomic weight 208.98040(1) (NIST Atomic Weights and Isotopic Compositions). IUPAC group 15, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Hg] 6p3 (shells K=2, L=8, M=18, N=32, O=18, P=5; NIST SP 966, cross-checked against Wikidata P8000). Discovery year [UNKNOWN] (Wikidata). Discovery credit [UNKNOWN] (Wikidata).",
       "places": [],
       "dates": [],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3218,7 +3384,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Polonium (Po, element 84). Standard atomic weight [209] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 16, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1898. Discovery credit [UNKNOWN] (Wikidata).",
+      "summary": "DRAFT. Polonium (Po, element 84). Standard atomic weight [209] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 16, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Hg] 6p4 (shells K=2, L=8, M=18, N=32, O=18, P=6; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1898. Discovery credit [UNKNOWN] (Wikidata).",
       "places": [],
       "dates": [
         {
@@ -3230,9 +3396,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3254,7 +3422,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Astatine (At, element 85). Standard atomic weight [210] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 17, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1940. Discovery credit (Wikidata): Emilio G. Segrè.",
+      "summary": "DRAFT. Astatine (At, element 85). Standard atomic weight [210] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 17, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Hg] 6p5 (shells K=2, L=8, M=18, N=32, O=18, P=7; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1940. Discovery credit (Wikidata): Emilio G. Segrè.",
       "places": [],
       "dates": [
         {
@@ -3266,9 +3434,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3290,7 +3460,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Radon (Rn, element 86). Standard atomic weight [222] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 6 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1899. Discovery credit (Wikidata): Ernest Rutherford, Friedrich Ernst Dorn, Robert Bowie Owens.",
+      "summary": "DRAFT. Radon (Rn, element 86). Standard atomic weight [222] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 18, period 6 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Hg] 6p6 (shells K=2, L=8, M=18, N=32, O=18, P=8; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1899. Discovery credit (Wikidata): Ernest Rutherford, Friedrich Ernst Dorn, Robert Bowie Owens.",
       "places": [],
       "dates": [
         {
@@ -3302,9 +3472,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3326,7 +3498,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Francium (Fr, element 87). Standard atomic weight [223] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1939. Discovery credit (Wikidata): Marguerite Perey.",
+      "summary": "DRAFT. Francium (Fr, element 87). Standard atomic weight [223] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 1, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 7s (shells K=2, L=8, M=18, N=32, O=18, P=8, Q=1; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1939. Discovery credit (Wikidata): Marguerite Perey.",
       "places": [],
       "dates": [
         {
@@ -3338,9 +3510,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3362,7 +3536,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Radium (Ra, element 88). Standard atomic weight [226] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1898. Discovery credit [UNKNOWN] (Wikidata).",
+      "summary": "DRAFT. Radium (Ra, element 88). Standard atomic weight [226] (NIST Atomic Weights and Isotopic Compositions). IUPAC group 2, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 7s2 (shells K=2, L=8, M=18, N=32, O=18, P=8, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1898. Discovery credit [UNKNOWN] (Wikidata).",
       "places": [],
       "dates": [
         {
@@ -3374,9 +3548,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3398,7 +3574,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Actinium (Ac, element 89). Standard atomic weight [227] (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1899. Discovery credit (Wikidata): André-Louis Debierne. IUPAC has not resolved whether group 3 is Sc, Y, Lu and Lr or Sc, Y, La and Ac. The 4 May 2022 table places the lanthanoids (57-71) and actinoids (89-103) in that column and does not assign this element an individual group number. GlobeDesk does not pick a side.",
+      "summary": "DRAFT. Actinium (Ac, element 89). Standard atomic weight [227] (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 6d 7s2 (shells K=2, L=8, M=18, N=32, O=18, P=9, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1899. Discovery credit (Wikidata): André-Louis Debierne. IUPAC has not resolved whether group 3 is Sc, Y, Lu and Lr or Sc, Y, La and Ac. The 4 May 2022 table places the lanthanoids (57-71) and actinoids (89-103) in that column and does not assign this element an individual group number. GlobeDesk does not pick a side.",
       "places": [],
       "dates": [
         {
@@ -3410,9 +3586,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3435,7 +3613,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Thorium (Th, element 90). Standard atomic weight 232.0377(4) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1828. Discovery credit (Wikidata): Jöns Jacob Berzelius. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Thorium (Th, element 90). Standard atomic weight 232.0377(4) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 6d2 7s2 (shells K=2, L=8, M=18, N=32, O=18, P=10, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1828. Discovery credit (Wikidata): Jöns Jacob Berzelius. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3447,9 +3625,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3472,7 +3652,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Protactinium (Pa, element 91). Standard atomic weight 231.03588(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1917. Discovery credit (Wikidata): Kazimierz Fajans, Lise Meitner, Otto Hahn. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Protactinium (Pa, element 91). Standard atomic weight 231.03588(2) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f2 6d 7s2 (shells K=2, L=8, M=18, N=32, O=20, P=9, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1917. Discovery credit (Wikidata): Kazimierz Fajans, Lise Meitner, Otto Hahn. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3484,9 +3664,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3509,7 +3691,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Uranium (U, element 92). Standard atomic weight 238.02891(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1789. Discovery credit [UNKNOWN] (Wikidata). IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Uranium (U, element 92). Standard atomic weight 238.02891(3) (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f3 6d 7s2 (shells K=2, L=8, M=18, N=32, O=21, P=9, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1789. Discovery credit [UNKNOWN] (Wikidata). IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3521,9 +3703,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3546,7 +3730,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Neptunium (Np, element 93). Standard atomic weight [237] (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1940. Discovery credit (Wikidata): Edwin McMillan, Philip Abelson. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Neptunium (Np, element 93). Standard atomic weight [237] (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f4 6d 7s2 (shells K=2, L=8, M=18, N=32, O=22, P=9, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1940. Discovery credit (Wikidata): Edwin McMillan, Philip Abelson. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3558,9 +3742,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3583,7 +3769,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Plutonium (Pu, element 94). Standard atomic weight [244] (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1941. Discovery credit (Wikidata): Arthur Wahl, Edwin McMillan, Glenn Theodore Seaborg, Joseph W. Kennedy. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Plutonium (Pu, element 94). Standard atomic weight [244] (NIST Atomic Weights and Isotopic Compositions). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f6 7s2 (shells K=2, L=8, M=18, N=32, O=24, P=8, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1941. Discovery credit (Wikidata): Arthur Wahl, Edwin McMillan, Glenn Theodore Seaborg, Joseph W. Kennedy. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3595,9 +3781,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3620,7 +3808,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Americium (Am, element 95). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1944. Discovery credit (Wikidata): Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Americium (Am, element 95). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f7 7s2 (shells K=2, L=8, M=18, N=32, O=25, P=8, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1944. Discovery credit (Wikidata): Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3632,9 +3820,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3657,7 +3847,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Curium (Cm, element 96). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1944. Discovery credit (Wikidata): Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Curium (Cm, element 96). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f7 6d 7s2 (shells K=2, L=8, M=18, N=32, O=25, P=9, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1944. Discovery credit (Wikidata): Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3669,9 +3859,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3694,7 +3886,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Berkelium (Bk, element 97). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1949. Discovery credit (Wikidata): Albert Ghiorso, Glenn Theodore Seaborg, Stanley Gerald Thompson. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Berkelium (Bk, element 97). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f9 7s2 (shells K=2, L=8, M=18, N=32, O=27, P=8, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1949. Discovery credit (Wikidata): Albert Ghiorso, Glenn Theodore Seaborg, Stanley Gerald Thompson. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3706,9 +3898,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3731,7 +3925,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Californium (Cf, element 98). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1950. Discovery credit (Wikidata): Albert Ghiorso, Glenn Theodore Seaborg, Kenneth Street Jr., Stanley Gerald Thompson. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Californium (Cf, element 98). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f10 7s2 (shells K=2, L=8, M=18, N=32, O=28, P=8, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1950. Discovery credit (Wikidata): Albert Ghiorso, Glenn Theodore Seaborg, Kenneth Street Jr., Stanley Gerald Thompson. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3743,9 +3937,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3768,7 +3964,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Einsteinium (Es, element 99). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1952. Discovery credit (Wikidata): Albert Ghiorso, Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Einsteinium (Es, element 99). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f11 7s2 (shells K=2, L=8, M=18, N=32, O=29, P=8, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1952. Discovery credit (Wikidata): Albert Ghiorso, Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3780,9 +3976,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3805,7 +4003,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Fermium (Fm, element 100). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1952-12. Discovery credit (Wikidata): Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Fermium (Fm, element 100). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f12 7s2 (shells K=2, L=8, M=18, N=32, O=30, P=8, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1952-12. Discovery credit (Wikidata): Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3817,9 +4015,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3842,7 +4042,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Mendelevium (Md, element 101). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1955. Discovery credit (Wikidata): Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Mendelevium (Md, element 101). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f13 7s2 (shells K=2, L=8, M=18, N=32, O=31, P=8, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1955. Discovery credit (Wikidata): Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3854,9 +4054,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3879,7 +4081,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Nobelium (No, element 102). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1958. Discovery credit (Wikidata): Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
+      "summary": "DRAFT. Nobelium (No, element 102). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f14 7s2 (shells K=2, L=8, M=18, N=32, O=32, P=8, Q=2; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1958. Discovery credit (Wikidata): Glenn Theodore Seaborg. IUPAC lists this element among the actinoids (Ac to Lr) and does not assign it an individual Group 1-18 number on the 4 May 2022 table.",
       "places": [],
       "dates": [
         {
@@ -3891,9 +4093,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3916,7 +4120,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Lawrencium (Lr, element 103). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1961-02-14. Discovery credit (Wikidata): Albert Ghiorso. IUPAC has not resolved whether group 3 is Sc, Y, Lu and Lr or Sc, Y, La and Ac. The 4 May 2022 table places the lanthanoids (57-71) and actinoids (89-103) in that column and does not assign this element an individual group number. GlobeDesk does not pick a side.",
+      "summary": "DRAFT. Lawrencium (Lr, element 103). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group [UNKNOWN], period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [Rn] 5f14 7s2 7p (shells K=2, L=8, M=18, N=32, O=32, P=8, Q=3; NIST SP 966, cross-checked against Wikidata P8000). Discovery time (Wikidata): 1961-02-14. Discovery credit (Wikidata): Albert Ghiorso. IUPAC has not resolved whether group 3 is Sc, Y, Lu and Lr or Sc, Y, La and Ac. The 4 May 2022 table places the lanthanoids (57-71) and actinoids (89-103) in that column and does not assign this element an individual group number. GlobeDesk does not pick a side.",
       "places": [],
       "dates": [
         {
@@ -3928,9 +4132,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3953,7 +4159,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Rutherfordium (Rf, element 104). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 4, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1964. Discovery credit (Wikidata): Albert Ghiorso.",
+      "summary": "DRAFT. Rutherfordium (Rf, element 104). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 4, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration not-proven [UNKNOWN] (NIST SP 966 lists calculated [Rn] 5f14 6d2 7s2, not measured spectra). Discovery time (Wikidata): 1964. Discovery credit (Wikidata): Albert Ghiorso.",
       "places": [],
       "dates": [
         {
@@ -3965,9 +4171,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -3989,7 +4197,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Dubnium (Db, element 105). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 5, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1970-02-18. Discovery credit (Wikidata): Joint Institute for Nuclear Research, Lawrence Berkeley National Laboratory.",
+      "summary": "DRAFT. Dubnium (Db, element 105). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 5, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration not-proven [UNKNOWN] (NIST SP 966 lists calculated [Rn] 5f14 6d3 7s2, not measured spectra). Discovery time (Wikidata): 1970-02-18. Discovery credit (Wikidata): Joint Institute for Nuclear Research, Lawrence Berkeley National Laboratory.",
       "places": [],
       "dates": [
         {
@@ -4001,9 +4209,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4025,7 +4235,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Seaborgium (Sg, element 106). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 6, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1974-07. Discovery credit (Wikidata): Yuri Oganessian.",
+      "summary": "DRAFT. Seaborgium (Sg, element 106). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 6, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration not-proven [UNKNOWN] (NIST SP 966 lists calculated [Rn] 5f14 6d4 7s2, not measured spectra). Discovery time (Wikidata): 1974-07. Discovery credit (Wikidata): Yuri Oganessian.",
       "places": [],
       "dates": [
         {
@@ -4037,9 +4247,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4061,7 +4273,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Bohrium (Bh, element 107). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 7, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1976. Discovery credit (Wikidata): Yuri Oganessian.",
+      "summary": "DRAFT. Bohrium (Bh, element 107). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 7, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration not-proven [UNKNOWN] (NIST SP 966 lists calculated [Rn] 5f14 6d5 7s2, not measured spectra). Discovery time (Wikidata): 1976. Discovery credit (Wikidata): Yuri Oganessian.",
       "places": [],
       "dates": [
         {
@@ -4073,9 +4285,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4097,7 +4311,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Hassium (Hs, element 108). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 8, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1984. Discovery credit (Wikidata): GSI Helmholtz Centre for Heavy Ion Research.",
+      "summary": "DRAFT. Hassium (Hs, element 108). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 8, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration not-proven [UNKNOWN] (NIST SP 966 lists calculated [Rn] 5f14 6d6 7s2, not measured spectra). Discovery time (Wikidata): 1984. Discovery credit (Wikidata): GSI Helmholtz Centre for Heavy Ion Research.",
       "places": [],
       "dates": [
         {
@@ -4109,9 +4323,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4133,7 +4349,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Meitnerium (Mt, element 109). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 9, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1982-08-29. Discovery credit (Wikidata): GSI Helmholtz Centre for Heavy Ion Research.",
+      "summary": "DRAFT. Meitnerium (Mt, element 109). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 9, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule). Discovery time (Wikidata): 1982-08-29. Discovery credit (Wikidata): GSI Helmholtz Centre for Heavy Ion Research.",
       "places": [],
       "dates": [
         {
@@ -4145,9 +4361,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4169,7 +4387,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Darmstadtium (Ds, element 110). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 10, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1994-11-09. Discovery credit (Wikidata): GSI Helmholtz Centre for Heavy Ion Research.",
+      "summary": "DRAFT. Darmstadtium (Ds, element 110). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 10, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule). Discovery time (Wikidata): 1994-11-09. Discovery credit (Wikidata): GSI Helmholtz Centre for Heavy Ion Research.",
       "places": [],
       "dates": [
         {
@@ -4181,9 +4399,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4205,7 +4425,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Roentgenium (Rg, element 111). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 11, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1994-12-08. Discovery credit (Wikidata): GSI Helmholtz Centre for Heavy Ion Research.",
+      "summary": "DRAFT. Roentgenium (Rg, element 111). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 11, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule). Discovery time (Wikidata): 1994-12-08. Discovery credit (Wikidata): GSI Helmholtz Centre for Heavy Ion Research.",
       "places": [],
       "dates": [
         {
@@ -4217,9 +4437,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4241,7 +4463,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Copernicium (Cn, element 112). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 12, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1996. Discovery credit (Wikidata): GSI Helmholtz Centre for Heavy Ion Research.",
+      "summary": "DRAFT. Copernicium (Cn, element 112). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 12, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule). Discovery time (Wikidata): 1996. Discovery credit (Wikidata): GSI Helmholtz Centre for Heavy Ion Research.",
       "places": [],
       "dates": [
         {
@@ -4253,9 +4475,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4277,7 +4501,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Nihonium (Nh, element 113). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 13, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 2006. Discovery credit (Wikidata): Joint Institute for Nuclear Research.",
+      "summary": "DRAFT. Nihonium (Nh, element 113). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 13, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule). Discovery time (Wikidata): 2006. Discovery credit (Wikidata): Joint Institute for Nuclear Research.",
       "places": [],
       "dates": [
         {
@@ -4289,9 +4513,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4313,7 +4539,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Flerovium (Fl, element 114). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 14, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 1999-01. Discovery credit (Wikidata): Joint Institute for Nuclear Research.",
+      "summary": "DRAFT. Flerovium (Fl, element 114). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 14, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule). Discovery time (Wikidata): 1999-01. Discovery credit (Wikidata): Joint Institute for Nuclear Research.",
       "places": [],
       "dates": [
         {
@@ -4325,9 +4551,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4349,7 +4577,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Moscovium (Mc, element 115). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 15, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 2003-08. Discovery credit (Wikidata): Joint Institute for Nuclear Research.",
+      "summary": "DRAFT. Moscovium (Mc, element 115). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 15, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule). Discovery time (Wikidata): 2003-08. Discovery credit (Wikidata): Joint Institute for Nuclear Research.",
       "places": [],
       "dates": [
         {
@@ -4361,9 +4589,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4385,7 +4615,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Livermorium (Lv, element 116). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 16, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 2000-07. Discovery credit (Wikidata): Joint Institute for Nuclear Research.",
+      "summary": "DRAFT. Livermorium (Lv, element 116). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 16, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule). Discovery time (Wikidata): 2000-07. Discovery credit (Wikidata): Joint Institute for Nuclear Research.",
       "places": [],
       "dates": [
         {
@@ -4397,9 +4627,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4421,7 +4653,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Tennessine (Ts, element 117). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 17, period 7 (IUPAC Periodic Table, 4 May 2022). Wikidata lists more than one discovery time (2009, 2010); a single year is not chosen. Discovery credit (Wikidata): Yuri Oganessian.",
+      "summary": "DRAFT. Tennessine (Ts, element 117). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 17, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule). Wikidata lists more than one discovery time (2009, 2010); a single year is not chosen. Discovery credit (Wikidata): Yuri Oganessian.",
       "places": [],
       "dates": [
         {
@@ -4439,9 +4671,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",
@@ -4463,7 +4697,7 @@
         "elements"
       ],
       "tier": "student",
-      "summary": "DRAFT. Oganesson (Og, element 118). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 18, period 7 (IUPAC Periodic Table, 4 May 2022). Discovery time (Wikidata): 2002-06. Discovery credit (Wikidata): Joint Institute for Nuclear Research.",
+      "summary": "DRAFT. Oganesson (Og, element 118). Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight). IUPAC group 18, period 7 (IUPAC Periodic Table, 4 May 2022). Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule). Discovery time (Wikidata): 2002-06. Discovery credit (Wikidata): Joint Institute for Nuclear Research.",
       "places": [],
       "dates": [
         {
@@ -4475,9 +4709,11 @@
       ],
       "sources": [
         "nist-atomic-weights",
+        "nist-periodic-table-2024",
         "iupac-periodic-table-2022",
         "wikidata-chemical-elements"
       ],
+      "record": "data/atlas/chemistry/elements-electron-config.json",
       "related": [],
       "pack": "chemistry",
       "status": "draft",

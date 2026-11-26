@@ -10,8 +10,10 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const ATLAS = path.join(ROOT, "atlas");
 const CHECKED = "2026-11-25";
+const RECORD_REL = "data/atlas/chemistry/elements-electron-config.json";
 const SOURCE_IDS = {
   nist: "nist-atomic-weights",
+  nistPt: "nist-periodic-table-2024",
   iupac: "iupac-periodic-table-2022",
   wikidata: "wikidata-chemical-elements",
 };
@@ -36,9 +38,10 @@ function titleCase(name) {
 function loadCache() {
   const dir = cacheDir();
   const nistPath = path.join(dir, "nist/nist-atomic-weights.json");
+  const nistCfgPath = path.join(dir, "nist-asd/nist-electron-configs.json");
   const iupacPath = path.join(dir, "iupac/iupac-names-groups-2022.json");
   const wdPath = path.join(dir, "wikidata/elements-discovery.json");
-  for (const p of [nistPath, iupacPath, wdPath]) {
+  for (const p of [nistPath, nistCfgPath, iupacPath, wdPath]) {
     if (!existsSync(p)) {
       throw new Error("Missing source cache file " + p + ". Set GLOBEDESK_ELEMENTS_CACHE to the folder that holds the NIST, IUPAC and Wikidata snapshots.");
     }
@@ -46,6 +49,7 @@ function loadCache() {
   return {
     dir,
     nist: readJson(nistPath),
+    nistCfg: readJson(nistCfgPath),
     iupac: readJson(iupacPath),
     wikidata: readJson(wdPath),
   };
@@ -126,7 +130,88 @@ function discoverySentences(wd) {
   return { credit, yearLine, dates, names };
 }
 
-function buildSummary(iupac, nist, wd, groupNote) {
+
+function formatShells(shells, byLetter) {
+  if (!shells || !shells.length) return "[UNKNOWN]";
+  return shells.map((n, i) => {
+    const letter = Object.keys(byLetter || {})[i];
+    return letter ? letter + "=" + n : String(n);
+  }).join(", ");
+}
+
+function configSentence(cfg) {
+  if (!cfg) return "Ground-state electron configuration [UNKNOWN].";
+  if (cfg.disagrees_with_wikidata) {
+    return "Ground-state electron configuration people-disagree: NIST SP 966 lists " + (cfg.sp966_config || "[UNKNOWN]") +
+      "; Wikidata P8000 lists " + ((cfg.wikidata_p8000 || []).join(" / ") || "[UNKNOWN]") + ".";
+  }
+  if (cfg.status === "measured") {
+    return "Ground-state electron configuration " + cfg.sp966_config +
+      " (shells " + formatShells(cfg.shells, cfg.shells_by_letter) + "; NIST SP 966, cross-checked against Wikidata P8000).";
+  }
+  if (cfg.status === "not-proven") {
+    return "Ground-state electron configuration not-proven [UNKNOWN] (NIST SP 966 lists calculated " + cfg.sp966_config + ", not measured spectra).";
+  }
+  return "Ground-state electron configuration [UNKNOWN] (NIST SP 966 and ASD list no value; not filled from the aufbau rule).";
+}
+
+function buildConfigRecord(iupacByZ, cfgByZ) {
+  const byId = {};
+  for (let z = 1; z <= 118; z++) {
+    const iu = iupacByZ.get(z);
+    const c = cfgByZ.get(z);
+    const id = iu.name + "-element";
+    let status = c.status === "measured" ? "supported" : c.status;
+    let note = "";
+    if (c.disagrees_with_wikidata) {
+      status = "people-disagree";
+      note = "NIST SP 966 lists " + (c.sp966_config || "[UNKNOWN]") + "; Wikidata P8000 lists " + (c.wikidata_p8000 || []).join(" / ") + ".";
+    } else if (c.status === "measured") {
+      note = "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements).";
+    } else if (c.status === "not-proven") {
+      note = "NIST SP 966 and NIST ASD list a calculated configuration (" + c.sp966_config + "), from theoretical studies rather than measured atomic spectra; shell occupancy stays [UNKNOWN].";
+    } else {
+      note = "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule.";
+    }
+    byId[id] = {
+      z,
+      symbol: iu.symbol,
+      name: titleCase(iu.name),
+      config: c.status === "measured" && !c.disagrees_with_wikidata ? c.sp966_config : "[UNKNOWN]",
+      shells: c.status === "measured" && !c.disagrees_with_wikidata ? c.shells : null,
+      shells_by_letter: c.status === "measured" && !c.disagrees_with_wikidata ? c.shells_by_letter : null,
+      status,
+      source: SOURCE_IDS.nistPt,
+      wikidata_p8000: c.wikidata_p8000 || [],
+      note,
+    };
+  }
+  return {
+    schema: "globedesk.chem/0-draft",
+    id: "elements-electron-config",
+    name: "Ground-state electron configurations and shell occupancy (Z=1-118)",
+    license: "CC BY 4.0 (record text); NIST non-SRD data statement (nist.gov/srd/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications); Wikidata P8000 (CC0)",
+    checked: CHECKED,
+    note: "Shell occupancies (K, L, M, ...) follow NIST SP 966 ground-state configurations for Z=1-103 (cross-checked against NIST ASD and Wikidata P8000). Z=104-108 are marked not-proven (calculated in NIST references, not measured spectra); Z=109-118 have no NIST value and stay [UNKNOWN].",
+    byId,
+    citations: [
+      {
+        id: SOURCE_IDS.nistPt,
+        title: "NIST Periodic Table: Atomic Properties of the Elements (SP 966, June 2024)",
+        url: "https://www.nist.gov/pml/periodic-table-elements",
+        checked: CHECKED,
+      },
+      {
+        id: SOURCE_IDS.wikidata,
+        title: "Wikidata structured data for chemical elements (P8000 cross-check)",
+        url: "https://www.wikidata.org/wiki/Wikidata:Copyright",
+        checked: CHECKED,
+      },
+    ],
+  };
+}
+
+function buildSummary(iupac, nist, wd, groupNote, cfg) {
   const name = titleCase(iupac.name);
   const weightLine = nist.standard_atomic_weight === "[UNKNOWN]"
     ? "Standard atomic weight [UNKNOWN] (NIST lists no standard atomic weight)."
@@ -142,6 +227,7 @@ function buildSummary(iupac, nist, wd, groupNote) {
     "DRAFT. " + name + " (" + iupac.symbol + ", element " + iupac.z + ").",
     weightLine,
     groupBit + ", period " + iupac.period + " (IUPAC Periodic Table, 4 May 2022).",
+    configSentence(cfg),
     yearLine,
     credit,
   ];
@@ -151,7 +237,7 @@ function buildSummary(iupac, nist, wd, groupNote) {
   return summary;
 }
 
-function elementEntry(iupac, nist, wd) {
+function elementEntry(iupac, nist, wd, cfg) {
   const name = titleCase(iupac.name);
   const id = iupac.name + "-element";
   const { dates } = discoverySentences(wd);
@@ -162,10 +248,11 @@ function elementEntry(iupac, nist, wd) {
     kind: "chemistry",
     category_path: ["chemistry", "elements"],
     tier: "student",
-    summary: buildSummary(iupac, nist, wd, iupac.group_note),
+    summary: buildSummary(iupac, nist, wd, iupac.group_note, cfg),
     places: [],
     dates,
-    sources: [SOURCE_IDS.nist, SOURCE_IDS.iupac, SOURCE_IDS.wikidata],
+    sources: [SOURCE_IDS.nist, SOURCE_IDS.nistPt, SOURCE_IDS.iupac, SOURCE_IDS.wikidata],
+    record: RECORD_REL,
     related: [],
     pack: "chemistry",
     status: "draft",
@@ -213,11 +300,17 @@ function mergePreserved(existing, generated) {
   } else if (existing.notes) {
     merged.notes = existing.notes;
   }
+  merged.record = generated.record;
   if (existing.summary && existing.summary !== generated.summary) {
     const extra = sourcedGapNotes(generated);
     const already = (merged.summary + " " + (merged.notes || "")).toLowerCase();
     if (extra && !already.includes("iupac group")) {
       merged.notes = (merged.notes ? merged.notes + " " : "") + extra;
+    } else {
+      const cfg = generated.summary.match(/Ground-state electron configuration[^.]+\./);
+      if (cfg && !already.includes("electron configuration")) {
+        merged.notes = (merged.notes ? merged.notes + " " : "") + cfg[0];
+      }
     }
   }
   return merged;
@@ -239,6 +332,17 @@ function sourcedGapNotes(generated) {
 
 function upsertSources(sources) {
   const catalog = [
+    {
+      id: SOURCE_IDS.nistPt,
+      title: "NIST Periodic Table: Atomic Properties of the Elements (SP 966, June 2024)",
+      url: "https://www.nist.gov/pml/periodic-table-elements",
+      checked: CHECKED,
+      class: "official",
+      publisher: "National Institute of Standards and Technology (NIST)",
+      license: "Reclassified from SRD 145 to non-SRD information compilation. NIST states: \"Pursuant to title 17 United States Code Section 105, works of NIST employees are not subject to copyright protection in the United States.\" and grants \"the non-exclusive irrevocable and unconditional right to print, publish, prepare derivative works and distribute the NIST data, in any medium... on a royalty-free basis throughout the world.\"",
+      terms_url: "https://www.nist.gov/srd/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+      description: "Ground-state electron configurations for Z=1-108 (Z=104-108 theoretical/calculated in NIST ASD references; Z=109-118 blank). Cross-checked against Wikidata P8000 (CC0).",
+    },
     {
       id: SOURCE_IDS.nist,
       title: "NIST Atomic Weights and Isotopic Compositions with Relative Atomic Masses",
@@ -286,6 +390,7 @@ function upsertSources(sources) {
 
 const cache = loadCache();
 const nistByZ = new Map(cache.nist.elements.map((e) => [e.z, e]));
+const cfgByZ = new Map(cache.nistCfg.elements.map((e) => [e.z, e]));
 const iupacByZ = new Map(cache.iupac.elements.map((e) => [e.z, e]));
 const wdByZ = wikidataByZ(cache.wikidata);
 
@@ -293,10 +398,14 @@ const generated = [];
 for (let z = 1; z <= 118; z++) {
   const iupac = iupacByZ.get(z);
   const nist = nistByZ.get(z);
-  if (!iupac || !nist) throw new Error("Missing cached NIST or IUPAC row for Z=" + z);
+  const cfg = cfgByZ.get(z);
+  if (!iupac || !nist || !cfg) throw new Error("Missing cached NIST or IUPAC row for Z=" + z);
   if (iupac.symbol !== nist.symbol) throw new Error("Symbol mismatch at Z=" + z + ": IUPAC " + iupac.symbol + " vs NIST " + nist.symbol);
-  generated.push(elementEntry(iupac, nist, wdByZ.get(z)));
+  generated.push(elementEntry(iupac, nist, wdByZ.get(z), cfg));
 }
+
+const cfgRecord = buildConfigRecord(iupacByZ, cfgByZ);
+save(path.join(ROOT, RECORD_REL), cfgRecord);
 
 const chemPath = path.join(ATLAS, "packs/chemistry/entries.json");
 const chem = readJson(chemPath);

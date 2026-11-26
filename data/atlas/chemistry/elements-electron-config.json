@@ -1,0 +1,2944 @@
+{
+  "schema": "globedesk.chem/0-draft",
+  "id": "elements-electron-config",
+  "name": "Ground-state electron configurations and shell occupancy (Z=1-118)",
+  "license": "CC BY 4.0 (record text); NIST non-SRD data statement (nist.gov/srd/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications); Wikidata P8000 (CC0)",
+  "checked": "2026-11-25",
+  "note": "Shell occupancies (K, L, M, ...) follow NIST SP 966 ground-state configurations for Z=1-103 (cross-checked against NIST ASD and Wikidata P8000). Z=104-108 are marked not-proven (calculated in NIST references, not measured spectra); Z=109-118 have no NIST value and stay [UNKNOWN].",
+  "byId": {
+    "hydrogen-element": {
+      "z": 1,
+      "symbol": "H",
+      "name": "Hydrogen",
+      "config": "1s",
+      "shells": [
+        1
+      ],
+      "shells_by_letter": {
+        "K": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "helium-element": {
+      "z": 2,
+      "symbol": "He",
+      "name": "Helium",
+      "config": "1s2",
+      "shells": [
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "lithium-element": {
+      "z": 3,
+      "symbol": "Li",
+      "name": "Lithium",
+      "config": "1s2 2s",
+      "shells": [
+        2,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[He] 2s¹",
+        "1s² 2s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "beryllium-element": {
+      "z": 4,
+      "symbol": "Be",
+      "name": "Beryllium",
+      "config": "1s2 2s2",
+      "shells": [
+        2,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[He] 2s²",
+        "1s² 2s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "boron-element": {
+      "z": 5,
+      "symbol": "B",
+      "name": "Boron",
+      "config": "1s2 2s2 2p",
+      "shells": [
+        2,
+        3
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 3
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[He] 2s² 2p¹",
+        "1s² 2s² 2p¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "carbon-element": {
+      "z": 6,
+      "symbol": "C",
+      "name": "Carbon",
+      "config": "1s2 2s2 2p2",
+      "shells": [
+        2,
+        4
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 4
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[He] 2s² 2p²",
+        "1s² 2s² 2p²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "nitrogen-element": {
+      "z": 7,
+      "symbol": "N",
+      "name": "Nitrogen",
+      "config": "1s2 2s2 2p3",
+      "shells": [
+        2,
+        5
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 5
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p³",
+        "[He] 2s² 2p³"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "oxygen-element": {
+      "z": 8,
+      "symbol": "O",
+      "name": "Oxygen",
+      "config": "1s2 2s2 2p4",
+      "shells": [
+        2,
+        6
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 6
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[He] 2s² 2p⁴",
+        "1s² 2s² 2p⁴"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "fluorine-element": {
+      "z": 9,
+      "symbol": "F",
+      "name": "Fluorine",
+      "config": "1s2 2s2 2p5",
+      "shells": [
+        2,
+        7
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 7
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[He] 2s² 2p⁵",
+        "1s² 2s² 2p⁵"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "neon-element": {
+      "z": 10,
+      "symbol": "Ne",
+      "name": "Neon",
+      "config": "1s2 2s2 2p6",
+      "shells": [
+        2,
+        8
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[He] 2s² 2p⁶",
+        "1s² 2s² 2p⁶"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "sodium-element": {
+      "z": 11,
+      "symbol": "Na",
+      "name": "Sodium",
+      "config": "[Ne] 3s",
+      "shells": [
+        2,
+        8,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ne] 3s¹",
+        "1s² 2s² 2p⁶ 3s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "magnesium-element": {
+      "z": 12,
+      "symbol": "Mg",
+      "name": "Magnesium",
+      "config": "[Ne] 3s2",
+      "shells": [
+        2,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ne] 3s²",
+        "1s² 2s² 2p⁶ 3s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "aluminium-element": {
+      "z": 13,
+      "symbol": "Al",
+      "name": "Aluminium",
+      "config": "[Ne] 3s2 3p",
+      "shells": [
+        2,
+        8,
+        3
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 3
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ne] 3s² 3p¹",
+        "1s² 2s² 2p⁶ 3s² 3p¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "silicon-element": {
+      "z": 14,
+      "symbol": "Si",
+      "name": "Silicon",
+      "config": "[Ne] 3s2 3p2",
+      "shells": [
+        2,
+        8,
+        4
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 4
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ne] 3s² 3p²",
+        "1s² 2s² 2p⁶ 3s² 3p²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "phosphorus-element": {
+      "z": 15,
+      "symbol": "P",
+      "name": "Phosphorus",
+      "config": "[Ne] 3s2 3p3",
+      "shells": [
+        2,
+        8,
+        5
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 5
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ne] 3s² 3p³",
+        "1s² 2s² 2p⁶ 3s² 3p³"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "sulfur-element": {
+      "z": 16,
+      "symbol": "S",
+      "name": "Sulfur",
+      "config": "[Ne] 3s2 3p4",
+      "shells": [
+        2,
+        8,
+        6
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 6
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ne] 3s² 3p⁴",
+        "1s² 2s² 2p⁶ 3s² 3p⁴"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "chlorine-element": {
+      "z": 17,
+      "symbol": "Cl",
+      "name": "Chlorine",
+      "config": "[Ne] 3s2 3p5",
+      "shells": [
+        2,
+        8,
+        7
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 7
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ne] 3s² 3p⁵",
+        "1s² 2s² 2p⁶ 3s² 3p⁵"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "argon-element": {
+      "z": 18,
+      "symbol": "Ar",
+      "name": "Argon",
+      "config": "[Ne] 3s2 3p6",
+      "shells": [
+        2,
+        8,
+        8
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 8
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p⁶ 3s² 3p⁶",
+        "[Ne] 3s² 3p⁶"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "potassium-element": {
+      "z": 19,
+      "symbol": "K",
+      "name": "Potassium",
+      "config": "[Ar] 4s",
+      "shells": [
+        2,
+        8,
+        8,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 8,
+        "N": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 4s¹",
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "calcium-element": {
+      "z": 20,
+      "symbol": "Ca",
+      "name": "Calcium",
+      "config": "[Ar] 4s2",
+      "shells": [
+        2,
+        8,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 8,
+        "N": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 4s²",
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "scandium-element": {
+      "z": 21,
+      "symbol": "Sc",
+      "name": "Scandium",
+      "config": "[Ar] 3d 4s2",
+      "shells": [
+        2,
+        8,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 9,
+        "N": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 3d¹ 4s²",
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹ 4s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "titanium-element": {
+      "z": 22,
+      "symbol": "Ti",
+      "name": "Titanium",
+      "config": "[Ar] 3d2 4s2",
+      "shells": [
+        2,
+        8,
+        10,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 10,
+        "N": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 3d² 4s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "vanadium-element": {
+      "z": 23,
+      "symbol": "V",
+      "name": "Vanadium",
+      "config": "[Ar] 3d3 4s2",
+      "shells": [
+        2,
+        8,
+        11,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 11,
+        "N": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 3d³ 4s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "chromium-element": {
+      "z": 24,
+      "symbol": "Cr",
+      "name": "Chromium",
+      "config": "[Ar] 3d5 4s",
+      "shells": [
+        2,
+        8,
+        13,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 13,
+        "N": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 3d⁵ 4s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "manganese-element": {
+      "z": 25,
+      "symbol": "Mn",
+      "name": "Manganese",
+      "config": "[Ar] 3d5 4s2",
+      "shells": [
+        2,
+        8,
+        13,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 13,
+        "N": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 3d⁵ 4s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "iron-element": {
+      "z": 26,
+      "symbol": "Fe",
+      "name": "Iron",
+      "config": "[Ar] 3d6 4s2",
+      "shells": [
+        2,
+        8,
+        14,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 14,
+        "N": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 3d⁶ 4s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "cobalt-element": {
+      "z": 27,
+      "symbol": "Co",
+      "name": "Cobalt",
+      "config": "[Ar] 3d7 4s2",
+      "shells": [
+        2,
+        8,
+        15,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 15,
+        "N": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 3d⁷ 4s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "nickel-element": {
+      "z": 28,
+      "symbol": "Ni",
+      "name": "Nickel",
+      "config": "[Ar] 3d8 4s2",
+      "shells": [
+        2,
+        8,
+        16,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 16,
+        "N": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 4s² 3d⁸"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "copper-element": {
+      "z": 29,
+      "symbol": "Cu",
+      "name": "Copper",
+      "config": "[Ar] 3d10 4s",
+      "shells": [
+        2,
+        8,
+        18,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 4s¹ 3d¹⁰"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "zinc-element": {
+      "z": 30,
+      "symbol": "Zn",
+      "name": "Zinc",
+      "config": "[Ar] 3d10 4s2",
+      "shells": [
+        2,
+        8,
+        18,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 4s² 3d¹⁰"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "gallium-element": {
+      "z": 31,
+      "symbol": "Ga",
+      "name": "Gallium",
+      "config": "[Ar] 3d10 4s2 4p",
+      "shells": [
+        2,
+        8,
+        18,
+        3
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 3
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 4s² 3d¹⁰ 4p¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "germanium-element": {
+      "z": 32,
+      "symbol": "Ge",
+      "name": "Germanium",
+      "config": "[Ar] 3d10 4s2 4p2",
+      "shells": [
+        2,
+        8,
+        18,
+        4
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 4
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 4s² 3d¹⁰ 4p²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "arsenic-element": {
+      "z": 33,
+      "symbol": "As",
+      "name": "Arsenic",
+      "config": "[Ar] 3d10 4s2 4p3",
+      "shells": [
+        2,
+        8,
+        18,
+        5
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 5
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 4s² 3d¹⁰ 4p³"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "selenium-element": {
+      "z": 34,
+      "symbol": "Se",
+      "name": "Selenium",
+      "config": "[Ar] 3d10 4s2 4p4",
+      "shells": [
+        2,
+        8,
+        18,
+        6
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 6
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 4s² 3d¹⁰ 4p⁴"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "bromine-element": {
+      "z": 35,
+      "symbol": "Br",
+      "name": "Bromine",
+      "config": "[Ar] 3d10 4s2 4p5",
+      "shells": [
+        2,
+        8,
+        18,
+        7
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 7
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 4s² 3d¹⁰ 4p⁵"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "krypton-element": {
+      "z": 36,
+      "symbol": "Kr",
+      "name": "Krypton",
+      "config": "[Ar] 3d10 4s2 4p6",
+      "shells": [
+        2,
+        8,
+        18,
+        8
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 8
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Ar] 3d¹⁰ 4s² 4p⁶",
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "rubidium-element": {
+      "z": 37,
+      "symbol": "Rb",
+      "name": "Rubidium",
+      "config": "[Kr] 5s",
+      "shells": [
+        2,
+        8,
+        18,
+        8,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 8,
+        "O": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 5s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "strontium-element": {
+      "z": 38,
+      "symbol": "Sr",
+      "name": "Strontium",
+      "config": "[Kr] 5s2",
+      "shells": [
+        2,
+        8,
+        18,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 8,
+        "O": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 5s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "yttrium-element": {
+      "z": 39,
+      "symbol": "Y",
+      "name": "Yttrium",
+      "config": "[Kr] 4d 5s2",
+      "shells": [
+        2,
+        8,
+        18,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 9,
+        "O": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 4d¹ 5s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "zirconium-element": {
+      "z": 40,
+      "symbol": "Zr",
+      "name": "Zirconium",
+      "config": "[Kr] 4d2 5s2",
+      "shells": [
+        2,
+        8,
+        18,
+        10,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 10,
+        "O": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 4d² 5s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "niobium-element": {
+      "z": 41,
+      "symbol": "Nb",
+      "name": "Niobium",
+      "config": "[Kr] 4d4 5s",
+      "shells": [
+        2,
+        8,
+        18,
+        12,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 12,
+        "O": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 4d⁴ 5s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "molybdenum-element": {
+      "z": 42,
+      "symbol": "Mo",
+      "name": "Molybdenum",
+      "config": "[Kr] 4d5 5s",
+      "shells": [
+        2,
+        8,
+        18,
+        13,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 13,
+        "O": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 4d⁵ 5s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "technetium-element": {
+      "z": 43,
+      "symbol": "Tc",
+      "name": "Technetium",
+      "config": "[Kr] 4d5 5s2",
+      "shells": [
+        2,
+        8,
+        18,
+        13,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 13,
+        "O": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 4d⁵ 5s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "ruthenium-element": {
+      "z": 44,
+      "symbol": "Ru",
+      "name": "Ruthenium",
+      "config": "[Kr] 4d7 5s",
+      "shells": [
+        2,
+        8,
+        18,
+        15,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 15,
+        "O": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 4d⁷ 5s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "rhodium-element": {
+      "z": 45,
+      "symbol": "Rh",
+      "name": "Rhodium",
+      "config": "[Kr] 4d8 5s",
+      "shells": [
+        2,
+        8,
+        18,
+        16,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 16,
+        "O": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 5s¹ 4d⁸"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "palladium-element": {
+      "z": 46,
+      "symbol": "Pd",
+      "name": "Palladium",
+      "config": "[Kr] 4d10",
+      "shells": [
+        2,
+        8,
+        18,
+        18
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 4d¹⁰",
+        "[Kr] 4d¹⁰"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "silver-element": {
+      "z": 47,
+      "symbol": "Ag",
+      "name": "Silver",
+      "config": "[Kr] 4d10 5s",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 5s¹ 4d¹⁰"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "cadmium-element": {
+      "z": 48,
+      "symbol": "Cd",
+      "name": "Cadmium",
+      "config": "[Kr] 4d10 5s2",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰",
+        "[Kr] 5s² 4d¹⁰"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "indium-element": {
+      "z": 49,
+      "symbol": "In",
+      "name": "Indium",
+      "config": "[Kr] 4d10 5s2 5p",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        3
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 3
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p¹",
+        "[Kr] 5s² 4d¹⁰ 5p¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "tin-element": {
+      "z": 50,
+      "symbol": "Sn",
+      "name": "Tin",
+      "config": "[Kr] 4d10 5s2 5p2",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        4
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 4
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p²",
+        "[Kr] 5s² 4d¹⁰ 5p²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "antimony-element": {
+      "z": 51,
+      "symbol": "Sb",
+      "name": "Antimony",
+      "config": "[Kr] 4d10 5s2 5p3",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        5
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 5
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p³",
+        "[Kr] 5s² 4d¹⁰ 5p³"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "tellurium-element": {
+      "z": 52,
+      "symbol": "Te",
+      "name": "Tellurium",
+      "config": "[Kr] 4d10 5s2 5p4",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        6
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 6
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁴",
+        "[Kr] 5s² 4d¹⁰ 5p⁴"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "iodine-element": {
+      "z": 53,
+      "symbol": "I",
+      "name": "Iodine",
+      "config": "[Kr] 4d10 5s2 5p5",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        7
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 7
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁵",
+        "[Kr] 5s² 4d¹⁰ 5p⁵"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "xenon-element": {
+      "z": 54,
+      "symbol": "Xe",
+      "name": "Xenon",
+      "config": "[Kr] 4d10 5s2 5p6",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        8
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 8
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Kr] 5s² 4d¹⁰  5p⁶",
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "caesium-element": {
+      "z": 55,
+      "symbol": "Cs",
+      "name": "Caesium",
+      "config": "[Xe] 6s",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        8,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 8,
+        "P": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s¹",
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶ 6s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "barium-element": {
+      "z": 56,
+      "symbol": "Ba",
+      "name": "Barium",
+      "config": "[Xe] 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s²",
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶ 6s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "lanthanum-element": {
+      "z": 57,
+      "symbol": "La",
+      "name": "Lanthanum",
+      "config": "[Xe] 5d 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        18,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 18,
+        "O": 9,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶ 6s² 5d¹",
+        "[Xe] 6s² 5d¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "cerium-element": {
+      "z": 58,
+      "symbol": "Ce",
+      "name": "Cerium",
+      "config": "[Xe] 4f 5d 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        19,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 19,
+        "O": 9,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹ 5d¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "praseodymium-element": {
+      "z": 59,
+      "symbol": "Pr",
+      "name": "Praseodymium",
+      "config": "[Xe] 4f3 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        21,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 21,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f³"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "neodymium-element": {
+      "z": 60,
+      "symbol": "Nd",
+      "name": "Neodymium",
+      "config": "[Xe] 4f4 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        22,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 22,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f⁴"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "promethium-element": {
+      "z": 61,
+      "symbol": "Pm",
+      "name": "Promethium",
+      "config": "[Xe] 4f5 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        23,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 23,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f⁵"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "samarium-element": {
+      "z": 62,
+      "symbol": "Sm",
+      "name": "Samarium",
+      "config": "[Xe] 4f6 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        24,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 24,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f⁶"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "europium-element": {
+      "z": 63,
+      "symbol": "Eu",
+      "name": "Europium",
+      "config": "[Xe] 4f7 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        25,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 25,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f⁷"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "gadolinium-element": {
+      "z": 64,
+      "symbol": "Gd",
+      "name": "Gadolinium",
+      "config": "[Xe] 4f7 5d 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        25,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 25,
+        "O": 9,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f⁷ 5d¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "terbium-element": {
+      "z": 65,
+      "symbol": "Tb",
+      "name": "Terbium",
+      "config": "[Xe] 4f9 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        27,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 27,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f⁹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "dysprosium-element": {
+      "z": 66,
+      "symbol": "Dy",
+      "name": "Dysprosium",
+      "config": "[Xe] 4f10 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        28,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 28,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹⁰"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "holmium-element": {
+      "z": 67,
+      "symbol": "Ho",
+      "name": "Holmium",
+      "config": "[Xe] 4f11 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        29,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 29,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "erbium-element": {
+      "z": 68,
+      "symbol": "Er",
+      "name": "Erbium",
+      "config": "[Xe] 4f12 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        30,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 30,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "thulium-element": {
+      "z": 69,
+      "symbol": "Tm",
+      "name": "Thulium",
+      "config": "[Xe] 4f13 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        31,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 31,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹³"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "ytterbium-element": {
+      "z": 70,
+      "symbol": "Yb",
+      "name": "Ytterbium",
+      "config": "[Xe] 4f14 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 8,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹⁴"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "lutetium-element": {
+      "z": 71,
+      "symbol": "Lu",
+      "name": "Lutetium",
+      "config": "[Xe] 4f14 5d 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 9,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹⁴ 5d¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "hafnium-element": {
+      "z": 72,
+      "symbol": "Hf",
+      "name": "Hafnium",
+      "config": "[Xe] 4f14 5d2 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        10,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 10,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 4f¹⁴ 5d² 6s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "tantalum-element": {
+      "z": 73,
+      "symbol": "Ta",
+      "name": "Tantalum",
+      "config": "[Xe] 4f14 5d3 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        11,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 11,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 4f¹⁴ 5d³ 6s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "tungsten-element": {
+      "z": 74,
+      "symbol": "W",
+      "name": "Tungsten",
+      "config": "[Xe] 4f14 5d4 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        12,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 12,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 4f¹⁴ 5d⁴ 6s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "rhenium-element": {
+      "z": 75,
+      "symbol": "Re",
+      "name": "Rhenium",
+      "config": "[Xe] 4f14 5d5 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        13,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 13,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 4f¹⁴ 5d⁵ 6s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "osmium-element": {
+      "z": 76,
+      "symbol": "Os",
+      "name": "Osmium",
+      "config": "[Xe] 4f14 5d6 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        14,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 14,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 4f¹⁴ 5d⁶ 6s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "iridium-element": {
+      "z": 77,
+      "symbol": "Ir",
+      "name": "Iridium",
+      "config": "[Xe] 4f14 5d7 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        15,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 15,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹⁴ 5d⁷"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "platinum-element": {
+      "z": 78,
+      "symbol": "Pt",
+      "name": "Platinum",
+      "config": "[Xe] 4f14 5d9 6s",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        17,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 17,
+        "P": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s¹ 4f¹⁴ 5d⁹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "gold-element": {
+      "z": 79,
+      "symbol": "Au",
+      "name": "Gold",
+      "config": "[Xe] 4f14 5d10 6s",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s¹ 4f¹⁴ 5d¹⁰"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "mercury-element": {
+      "z": 80,
+      "symbol": "Hg",
+      "name": "Mercury",
+      "config": "[Xe] 4f14 5d10 6s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 4f¹⁴ 5d¹⁰ 6s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "thallium-element": {
+      "z": 81,
+      "symbol": "Tl",
+      "name": "Thallium",
+      "config": "[Hg] 6p",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        3
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 3
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹⁴ 5d¹⁰ 6p¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "lead-element": {
+      "z": 82,
+      "symbol": "Pb",
+      "name": "Lead",
+      "config": "[Hg] 6p2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        4
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 4
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹⁴ 5d¹⁰ 6p²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "bismuth-element": {
+      "z": 83,
+      "symbol": "Bi",
+      "name": "Bismuth",
+      "config": "[Hg] 6p3",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        5
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 5
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹⁴ 5d¹⁰ 6p³"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "polonium-element": {
+      "z": 84,
+      "symbol": "Po",
+      "name": "Polonium",
+      "config": "[Hg] 6p4",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        6
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 6
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹⁴ 5d¹⁰ 6p⁴"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "astatine-element": {
+      "z": 85,
+      "symbol": "At",
+      "name": "Astatine",
+      "config": "[Hg] 6p5",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        7
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 7
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Xe] 6s² 4f¹⁴ 5d¹⁰ 6p⁵"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "radon-element": {
+      "z": 86,
+      "symbol": "Rn",
+      "name": "Radon",
+      "config": "[Hg] 6p6",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        8
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 8
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶ 6s² 4f¹⁴ 5d¹⁰ 6p⁶",
+        "[Xe] 6s² 4f¹⁴ 5d¹⁰ 6p⁶"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "francium-element": {
+      "z": 87,
+      "symbol": "Fr",
+      "name": "Francium",
+      "config": "[Rn] 7s",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        8,
+        1
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 8,
+        "Q": 1
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "radium-element": {
+      "z": 88,
+      "symbol": "Ra",
+      "name": "Radium",
+      "config": "[Rn] 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 8,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "actinium-element": {
+      "z": 89,
+      "symbol": "Ac",
+      "name": "Actinium",
+      "config": "[Rn] 6d 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 9,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 6d¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "thorium-element": {
+      "z": 90,
+      "symbol": "Th",
+      "name": "Thorium",
+      "config": "[Rn] 6d2 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        18,
+        10,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 18,
+        "P": 10,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 6d²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "protactinium-element": {
+      "z": 91,
+      "symbol": "Pa",
+      "name": "Protactinium",
+      "config": "[Rn] 5f2 6d 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        20,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 20,
+        "P": 9,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f² 6d¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "uranium-element": {
+      "z": 92,
+      "symbol": "U",
+      "name": "Uranium",
+      "config": "[Rn] 5f3 6d 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        21,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 21,
+        "P": 9,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f³ 6d¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "neptunium-element": {
+      "z": 93,
+      "symbol": "Np",
+      "name": "Neptunium",
+      "config": "[Rn] 5f4 6d 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        22,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 22,
+        "P": 9,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f⁴ 6d¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "plutonium-element": {
+      "z": 94,
+      "symbol": "Pu",
+      "name": "Plutonium",
+      "config": "[Rn] 5f6 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        24,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 24,
+        "P": 8,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f⁶"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "americium-element": {
+      "z": 95,
+      "symbol": "Am",
+      "name": "Americium",
+      "config": "[Rn] 5f7 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        25,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 25,
+        "P": 8,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f⁷"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "curium-element": {
+      "z": 96,
+      "symbol": "Cm",
+      "name": "Curium",
+      "config": "[Rn] 5f7 6d 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        25,
+        9,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 25,
+        "P": 9,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f⁷ 6d¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "berkelium-element": {
+      "z": 97,
+      "symbol": "Bk",
+      "name": "Berkelium",
+      "config": "[Rn] 5f9 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        27,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 27,
+        "P": 8,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f⁹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "californium-element": {
+      "z": 98,
+      "symbol": "Cf",
+      "name": "Californium",
+      "config": "[Rn] 5f10 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        28,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 28,
+        "P": 8,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 5f¹⁰ 7s²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "einsteinium-element": {
+      "z": 99,
+      "symbol": "Es",
+      "name": "Einsteinium",
+      "config": "[Rn] 5f11 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        29,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 29,
+        "P": 8,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "fermium-element": {
+      "z": 100,
+      "symbol": "Fm",
+      "name": "Fermium",
+      "config": "[Rn] 5f12 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        30,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 30,
+        "P": 8,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹²"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "mendelevium-element": {
+      "z": 101,
+      "symbol": "Md",
+      "name": "Mendelevium",
+      "config": "[Rn] 5f13 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        31,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 31,
+        "P": 8,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹³"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "nobelium-element": {
+      "z": 102,
+      "symbol": "No",
+      "name": "Nobelium",
+      "config": "[Rn] 5f14 7s2",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        32,
+        8,
+        2
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 32,
+        "P": 8,
+        "Q": 2
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "lawrencium-element": {
+      "z": 103,
+      "symbol": "Lr",
+      "name": "Lawrencium",
+      "config": "[Rn] 5f14 7s2 7p",
+      "shells": [
+        2,
+        8,
+        18,
+        32,
+        32,
+        8,
+        3
+      ],
+      "shells_by_letter": {
+        "K": 2,
+        "L": 8,
+        "M": 18,
+        "N": 32,
+        "O": 32,
+        "P": 8,
+        "Q": 3
+      },
+      "status": "supported",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴ 7p¹"
+      ],
+      "note": "Measured/evaluated in NIST SP 966 (cross-checked against NIST ASD and Wikidata P8000, 0 disagreements)."
+    },
+    "rutherfordium-element": {
+      "z": 104,
+      "symbol": "Rf",
+      "name": "Rutherfordium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "not-proven",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 5f¹⁴ 6d² 7s²"
+      ],
+      "note": "NIST SP 966 and NIST ASD list a calculated configuration ([Rn] 5f14 6d2 7s2), from theoretical studies rather than measured atomic spectra; shell occupancy stays [UNKNOWN]."
+    },
+    "dubnium-element": {
+      "z": 105,
+      "symbol": "Db",
+      "name": "Dubnium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "not-proven",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 5f¹⁴ 6d³ 7s²"
+      ],
+      "note": "NIST SP 966 and NIST ASD list a calculated configuration ([Rn] 5f14 6d3 7s2), from theoretical studies rather than measured atomic spectra; shell occupancy stays [UNKNOWN]."
+    },
+    "seaborgium-element": {
+      "z": 106,
+      "symbol": "Sg",
+      "name": "Seaborgium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "not-proven",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 5f¹⁴ 6d⁴ 7s²"
+      ],
+      "note": "NIST SP 966 and NIST ASD list a calculated configuration ([Rn] 5f14 6d4 7s2), from theoretical studies rather than measured atomic spectra; shell occupancy stays [UNKNOWN]."
+    },
+    "bohrium-element": {
+      "z": 107,
+      "symbol": "Bh",
+      "name": "Bohrium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "not-proven",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 5f¹⁴ 6d⁵ 7s²"
+      ],
+      "note": "NIST SP 966 and NIST ASD list a calculated configuration ([Rn] 5f14 6d5 7s2), from theoretical studies rather than measured atomic spectra; shell occupancy stays [UNKNOWN]."
+    },
+    "hassium-element": {
+      "z": 108,
+      "symbol": "Hs",
+      "name": "Hassium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "not-proven",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 5f¹⁴ 6d⁶ 7s²"
+      ],
+      "note": "NIST SP 966 and NIST ASD list a calculated configuration ([Rn] 5f14 6d6 7s2), from theoretical studies rather than measured atomic spectra; shell occupancy stays [UNKNOWN]."
+    },
+    "meitnerium-element": {
+      "z": 109,
+      "symbol": "Mt",
+      "name": "Meitnerium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "[UNKNOWN]",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴ 6d⁷"
+      ],
+      "note": "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule."
+    },
+    "darmstadtium-element": {
+      "z": 110,
+      "symbol": "Ds",
+      "name": "Darmstadtium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "[UNKNOWN]",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴ 6d⁸"
+      ],
+      "note": "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule."
+    },
+    "roentgenium-element": {
+      "z": 111,
+      "symbol": "Rg",
+      "name": "Roentgenium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "[UNKNOWN]",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴ 6d⁹"
+      ],
+      "note": "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule."
+    },
+    "copernicium-element": {
+      "z": 112,
+      "symbol": "Cn",
+      "name": "Copernicium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "[UNKNOWN]",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴ 6d¹⁰"
+      ],
+      "note": "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule."
+    },
+    "nihonium-element": {
+      "z": 113,
+      "symbol": "Nh",
+      "name": "Nihonium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "[UNKNOWN]",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴ 6d¹⁰ 7p¹"
+      ],
+      "note": "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule."
+    },
+    "flerovium-element": {
+      "z": 114,
+      "symbol": "Fl",
+      "name": "Flerovium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "[UNKNOWN]",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴ 6d¹⁰ 7p²"
+      ],
+      "note": "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule."
+    },
+    "moscovium-element": {
+      "z": 115,
+      "symbol": "Mc",
+      "name": "Moscovium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "[UNKNOWN]",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴ 6d¹⁰ 7p³"
+      ],
+      "note": "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule."
+    },
+    "livermorium-element": {
+      "z": 116,
+      "symbol": "Lv",
+      "name": "Livermorium",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "[UNKNOWN]",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴ 6d¹⁰ 7p⁴"
+      ],
+      "note": "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule."
+    },
+    "tennessine-element": {
+      "z": 117,
+      "symbol": "Ts",
+      "name": "Tennessine",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "[UNKNOWN]",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 7s² 5f¹⁴ 6d¹⁰ 7p⁵"
+      ],
+      "note": "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule."
+    },
+    "oganesson-element": {
+      "z": 118,
+      "symbol": "Og",
+      "name": "Oganesson",
+      "config": "[UNKNOWN]",
+      "shells": null,
+      "shells_by_letter": null,
+      "status": "[UNKNOWN]",
+      "source": "nist-periodic-table-2024",
+      "wikidata_p8000": [
+        "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁶",
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p⁶ 4f¹⁴ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d¹⁰ 7s² 7p⁶",
+        "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶ 6s² 4f¹⁴ 5d¹⁰ 6p⁶ 7s² 5f¹⁴ 6d¹⁰ 7p⁶"
+      ],
+      "note": "No ground-state electron configuration in NIST SP 966 or NIST ASD (blank). Wikidata P8000 lists a predicted configuration; not filled from the aufbau rule."
+    }
+  },
+  "citations": [
+    {
+      "id": "nist-periodic-table-2024",
+      "title": "NIST Periodic Table: Atomic Properties of the Elements (SP 966, June 2024)",
+      "url": "https://www.nist.gov/pml/periodic-table-elements",
+      "checked": "2026-11-25"
+    },
+    {
+      "id": "wikidata-chemical-elements",
+      "title": "Wikidata structured data for chemical elements (P8000 cross-check)",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Copyright",
+      "checked": "2026-11-25"
+    }
+  ]
+}

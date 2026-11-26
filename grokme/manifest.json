@@ -116,13 +116,13 @@
     },
     {
       "path": "atlas/packs/chemistry/entries.json",
-      "size": 150004,
-      "sha256": "60c888328b7004f4b7c7c6f9dec3ae35a8751b7111a8cba33adcd0398f035a9d"
+      "size": 178313,
+      "sha256": "febc458652e095128fe2ea34fc6695314ad5d4719d4d6d368b08d351d939b267"
     },
     {
       "path": "atlas/packs/chemistry/manifest.json",
       "size": 641,
-      "sha256": "beb844037e0d2b087987d6f795dd3e3a75b7722ce4e8cac13ed5891a2781b1ae"
+      "sha256": "46483684b9b24a9d51426b8d1513f578b58cf3c7d3945a7f3bda7194b297496a"
     },
     {
       "path": "atlas/packs/civic/entries.json",
@@ -147,7 +147,7 @@
     {
       "path": "atlas/packs/core/manifest.json",
       "size": 1218,
-      "sha256": "3e065204e58b7585d5c567db37777570b0da1c6af4fc60751e34eec2e45b8b8b"
+      "sha256": "d1e86b60e5decd80950b194255231bbb46a556631874210bc7c67b28b10440ef"
     },
     {
       "path": "atlas/packs/core/places.json",
@@ -156,8 +156,8 @@
     },
     {
       "path": "atlas/packs/core/sources.json",
-      "size": 149104,
-      "sha256": "cc14382ebdfa73d0cfb81ad3f625d268a43c2744f21c11bcf74927df3fd3b17a"
+      "size": 150228,
+      "sha256": "9e58a2dedf3a65035b20fca96274a482d750ff58defe518666dbd8972aae025e"
     },
     {
       "path": "atlas/packs/core/years.json",
@@ -570,6 +570,11 @@
       "sha256": "9cd34e5c5e05c332e7b3ae0a66a19314d875ee04a381ee5dfa38179ad11629c4"
     },
     {
+      "path": "data/atlas/chemistry/elements-electron-config.json",
+      "size": 70754,
+      "sha256": "99bb5292ddecf259f4118caac4e38553fc49470ac40ad07c18aa2340ce938e76"
+    },
+    {
       "path": "data/atlas/chemistry/lifepo4-vs-nmc.json",
       "size": 1356,
       "sha256": "68fd946126e828fc2360bbf5caf3d94b4a844bf4376e1dd6d70981cdc9672800"
@@ -746,8 +751,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 774214,
-      "sha256": "a9494d4045a633875cdbca49fa4e9926cf1efabf3c26f2cc3082c20b84d2dbac"
+      "size": 848103,
+      "sha256": "0479ab05213b10c8c440302ed8e2ffe6d5491bfce214d1010959400907cb3bbf"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -1216,7 +1221,7 @@
     }
   ],
   "totals": {
-    "files": 241,
-    "bytes": 7276541
+    "files": 242,
+    "bytes": 7450617
   }
 }
