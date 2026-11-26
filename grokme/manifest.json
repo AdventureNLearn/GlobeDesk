@@ -42,7 +42,7 @@
     {
       "path": "CONTRIBUTING.md",
       "size": 12335,
-      "sha256": "c72c4b6c9b5e7bc88f80ecf62ff9b3260a8d1b6e1575b3dc58cb09543fcca5e5"
+      "sha256": "39be4c530da41f883b27dc9d0ccd149f55bd29754509229f2f930f93cfdb966d"
     },
     {
       "path": "CREDITS.md",
@@ -82,7 +82,7 @@
     {
       "path": "USER-GUIDE.md",
       "size": 10495,
-      "sha256": "d953eb847db51227337721222f5d86f97c5ff4aa2b4647a2d0e9dfdae8c6398c"
+      "sha256": "1bcd7d3c845ab0d500a67810a3364868323a864bc79361ebbdcef59e5fe66094"
     },
     {
       "path": "WINDOWS-RUN.md",
@@ -92,7 +92,7 @@
     {
       "path": "atlas/README.md",
       "size": 5078,
-      "sha256": "ad1baa83e1a56a47cf520616f92c732d4dd45d41213643e50c2a32d5968d3f3a"
+      "sha256": "fa6f72704b0778a73d930439f4a959355dfb97d57f93bff5d9da4d11d7d37463"
     },
     {
       "path": "atlas/categories.json",
@@ -632,7 +632,7 @@
     {
       "path": "docs/BUILD-YOUR-OWN-OBJECT.md",
       "size": 8599,
-      "sha256": "5c3dc7424384901fb0c6b6ba5fb5fb339cd861685c76fcca1c013a9c7ed6a782"
+      "sha256": "2852d1344012ab541fa02ebe8ac39a180c3600c8ab58a65ddeefdcaf5e08055c"
     },
     {
       "path": "docs/FEATURES.md",
@@ -727,7 +727,7 @@
     {
       "path": "grokme/BUILDER-PROMPT.txt",
       "size": 4057,
-      "sha256": "681afd15f495dbb648e4d4c90676e11a661cea6b618d55f6691bd8cc998ad919"
+      "sha256": "f4d6944935305db2307718ff15150c0a1055a4216fc2df115c96ce0c7baf91fb"
     },
     {
       "path": "grokme/FEATURES.txt",
@@ -882,7 +882,7 @@
     {
       "path": "js/layout.js",
       "size": 39458,
-      "sha256": "74ee016b3af58458d3c50c137598e01a0527a3e2db9330bbae79b5a402feb06f"
+      "sha256": "dfbfa5cfd6cf4749f4d7550b9657371e5416b7a7329ef9f57d6c3d41467538ec"
     },
     {
       "path": "js/map-pointer.js",

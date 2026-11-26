@@ -1,6 +1,6 @@
 # GlobeDesk Atlas: open items
 
-Status as of Nov 26, 2026 (v1.5.0 Atlas). This file is the single list of open items for the integrated Atlas (history, bells and catalog). Items 1-12 are the owner's questions from the approved Atlas proposal; items 13-21 were found while building the 1.4 draft; items 22-35 came with the History section (next/atlas-history, then next/atlas-history-full); items 36-43 came with the Bells layer; items 44-50 came with the Elements view (v1.5.0). Owner decisions on this date are marked in the table.
+Status as of Nov 26, 2026 (v1.5.1 Atlas). This file is the single list of open items for the integrated Atlas (history, bells and catalog). Items 1-12 are the owner's questions from the approved Atlas proposal; items 13-21 were found while building the 1.4 draft; items 22-35 came with the History section (next/atlas-history, then next/atlas-history-full); items 36-43 came with the Bells layer; items 44-50 came with the Elements view (v1.5.0). Owner decisions on this date are marked in the table.
 
 | # | Item | Status | Notes |
 | --- | --- | --- | --- |

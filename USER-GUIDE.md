@@ -64,7 +64,7 @@ The default spoken voice is the browser's free speech synthesis.
 
 Click **Layers** in the top bar (or press **L**) to see every map layer in one place. Each row has an on/off switch, a one-line description and a small legend. **Show all** turns on every overlay that can sit on the current base map; **Hide all** turns them all off. Pick the base map at the top of the panel. Dated imagery and official GIS layers are further down and stay off until you opt in. **⌂ Home** (or H) flies back to the starting globe without changing your layers.
 
-## Atlas, desks and your layer (v1.5.0 Atlas)
+## Atlas, desks and your layer (v1.5.1 Atlas)
 
 - **Atlas.** Press **Atlas** in the top bar. Browse **A–Z** (letter jump and search), **Elements** (the periodic table: holographic tiles, a fly-in to each atom, and a Table view), **Categories** (12, with pack status; categories without a pack yet are greyed), **By place** (counts on the globe by country; places are coarse) or **By year**. On the year slider, the current year zooms to **Months** and **Weeks**, and **This week** jumps to the current ISO week. Pick a reading level (Kids, Everyday, Student, Professional); entries not written at that level say so with `[UNKNOWN]`.
 - **Elements.** **Atlas → Elements** shows all 118 chemical elements. The view is Live; the chemistry data pack under it is still a draft, and values that could not be confirmed stay `[UNKNOWN]`.

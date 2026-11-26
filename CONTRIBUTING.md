@@ -18,11 +18,11 @@ Not a fit: tracking or locating private people, scraped data that breaks a site'
 
 ## Build your own object
 
-The v1.5.0 Atlas release ships the 3D workshop and the bag solar kit as a demo sample. To add a buildable object or kit layer of your own, copy that sample, rebuild, validate and load it in Atlas. The steps and every schema field are in [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md). You do not need to do a real kit build or fill in prices.
+The v1.5.1 Atlas release ships the 3D workshop and the bag solar kit as a demo sample. To add a buildable object or kit layer of your own, copy that sample, rebuild, validate and load it in Atlas. The steps and every schema field are in [docs/BUILD-YOUR-OWN-OBJECT.md](docs/BUILD-YOUR-OWN-OBJECT.md). You do not need to do a real kit build or fill in prices.
 
 ## Atlas entries, bells and history
 
-GlobeDesk's Atlas (v1.5.0 Atlas) is a cited encyclopedia in this repo. The layout, rebuild commands and pack rules are in [atlas/README.md](atlas/README.md). The source-record format is in [docs/SOURCES.md](docs/SOURCES.md).
+GlobeDesk's Atlas (v1.5.1 Atlas) is a cited encyclopedia in this repo. The layout, rebuild commands and pack rules are in [atlas/README.md](atlas/README.md). The source-record format is in [docs/SOURCES.md](docs/SOURCES.md).
 
 - **Entries.** Each entry lives in a pack (`atlas/packs/<pack>/entries.json`), cites sources by id, and carries a licence on the entry itself (AdventureNLearn's Atlas text is CC BY 4.0). After you edit, run `node tools/atlas/build-packs.mjs && node tools/atlas/build-js.mjs && node tools/atlas/validate.mjs`. No entry is about a living person (`subject_person_living` must be false). Officials appear only by public role inside an event. Unknowns stay `[UNKNOWN]`.
 - **Bells.** All bell entries belong in the Bells pack. Every bell cites at least one source with a publisher and a licence (official or primary where one exists). Wikipedia is only a secondary pointer and never the only source. Approximate pins say so. Other packs link to bells by id (`see_also_ids` or `related`), and never copy the bell entry.
@@ -86,7 +86,7 @@ Use the template that opens with every PR ([.github/PULL_REQUEST_TEMPLATE.md](.g
 
 One focused change per PR is easiest to review. Draft PRs are fine for early feedback.
 
-## Contributor cards (Community lane, v1.5.0 Atlas)
+## Contributor cards (Community lane, v1.5.1 Atlas)
 
 You can add yourself as a contributor for Atlas topics you care about. A card is a **credit**, not an Atlas entry about you.
 
