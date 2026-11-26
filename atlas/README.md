@@ -14,7 +14,7 @@ GlobeDesk's own encyclopedia: 12 categories, an index entry schema, packs with m
       globedesk-contributor-card, globedesk-community, globedesk-personal-layer, globedesk-work-desks, globedesk-artifact, globedesk-bell
     ../data/atlas/                        object, chemistry, price and bell (data/atlas/bells/) records referenced by entries
     ../data/atlas/artifacts/              historic object records (globedesk.artifact/1): facts, parts, materials, dated timeline
-    ../tools/atlas/                       build-object, build-bells (bells-*.mjs content and sources), build-packs, build-js (generated js/atlas/atlas-data.js), validate
+    ../tools/atlas/                       build-object, build-bells (bells-*.mjs content and sources), build-elements (118 chemistry/elements entries from an external source cache), build-packs, build-js (generated js/atlas/atlas-data.js), validate
     ../js/atlas/bells-layer.js, models/bell.js  the Bells layer (pins, clusters, era and region filters) and the parametric 3D bell
     ../desks/work-desks.json              the ten desks
 
@@ -22,6 +22,8 @@ Rebuild and check from the repo root:
 
     node tools/atlas/build-object.mjs && node tools/atlas/build-bells.mjs && node tools/atlas/build-packs.mjs && node tools/atlas/build-js.mjs
     node tools/atlas/validate.mjs
+
+`build-elements.mjs` rebuilds the 118 element entries in the chemistry pack from NIST, IUPAC and Wikidata snapshots kept outside the repo (sibling `globedesk-plans/source-cache`, or `GLOBEDESK_ELEMENTS_CACHE`). It merges `lithium-element` and `copper-element` and does not fetch the network. Run it only when refreshing those derived records; the usual pack rebuild below does not need the cache.
 
 `build-object.mjs` only regenerates the bag solar kit sample; skip it when you are adding a different object. To check one object record on its own: `node tools/atlas/validate.mjs data/atlas/objects/<id>.json`. To add your own buildable 3D object or kit layer, copy the bag solar kit sample and follow [docs/BUILD-YOUR-OWN-OBJECT.md](../docs/BUILD-YOUR-OWN-OBJECT.md).
 

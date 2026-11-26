@@ -2549,6 +2549,36 @@
       "description": "Embassy news item: Ambassador MaryKay Carlson visited the Balangiga Bells on October 18, 2022; the three bells, taken in 1901, were returned in 2018 (flown to Manila, airlifted to Guiuan, driven to Balangiga) and are installed in a reflection area outside San Lorenzo de Martir Parish Church.",
       "terms_url": "https://www.state.gov/copyright-information/",
       "verified": "opened directly (HTTP 200)"
+    },
+    {
+      "id": "nist-atomic-weights",
+      "title": "NIST Atomic Weights and Isotopic Compositions with Relative Atomic Masses",
+      "url": "https://www.nist.gov/pml/atomic-weights-and-isotopic-compositions-relative-atomic-masses",
+      "checked": "2026-11-25",
+      "class": "official",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "license": "US federal government work (public domain, 17 U.S.C. 105)",
+      "description": "Data compilation (formerly SRD 144) covering atomic numbers 1 to 118. Used here for atomic number, symbol and standard atomic weight."
+    },
+    {
+      "id": "iupac-periodic-table-2022",
+      "title": "IUPAC Periodic Table of the Elements (4 May 2022)",
+      "url": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+      "checked": "2026-11-25",
+      "class": "official",
+      "publisher": "International Union of Pure and Applied Chemistry (IUPAC)",
+      "license": "IUPAC states \"The table is yours to use.\" Official PDF marked Copyright © 2022 IUPAC. This pack uses official names and Group 1-18 numbering with IUPAC credit; the official table artwork is not bundled.",
+      "description": "Official names, symbols, period and Group 1-18 column numbers. Group 3 membership for La, Lu, Ac and Lr is unresolved on this table."
+    },
+    {
+      "id": "wikidata-chemical-elements",
+      "title": "Wikidata structured data for chemical elements (discovery time and discoverer)",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Copyright",
+      "checked": "2026-11-25",
+      "class": "official",
+      "publisher": "Wikidata",
+      "license": "Structured data in the main, Property, Lexeme and EntitySchema namespaces is CC0 (Wikidata:Copyright). Text in other namespaces is CC BY-SA and is not used here.",
+      "description": "Used only for structured discovery-time values (with Wikibase precision) and discoverer or laboratory name labels. No biographical details are copied."
     }
   ]
 }

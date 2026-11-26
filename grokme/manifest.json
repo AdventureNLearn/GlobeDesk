@@ -57,7 +57,7 @@
     {
       "path": "GROK-ME-BUILD.md",
       "size": 7241,
-      "sha256": "9890e286b34424041036260e879dd2f25cc896098156b9322aa95da25e7a2874"
+      "sha256": "6a685826826430dcd3e59acfc48817fa7efe4943714a3cf14bde04ff5605fbd4"
     },
     {
       "path": "LICENSE",
@@ -72,7 +72,7 @@
     {
       "path": "README.md",
       "size": 17931,
-      "sha256": "54d3d0c7aa7aa8f6adbd76f9843328ab3e45fed908fc21fd8ffea8773439c34e"
+      "sha256": "a44a8329c6eebc4cf8a5e6536929937beb396b2a6ede99a70f56ec4b6b272d42"
     },
     {
       "path": "SECURITY.md",
@@ -87,12 +87,12 @@
     {
       "path": "WINDOWS-RUN.md",
       "size": 4435,
-      "sha256": "e995d6c1b8acfb63205c9399850de0f85002ba0468e95c1e2a2d09ed2331b5d2"
+      "sha256": "4c467a6cfb1c11ca01fe1efbe7ceacca7e828b1ebbfff9f0b305626b2e623025"
     },
     {
       "path": "atlas/README.md",
-      "size": 4470,
-      "sha256": "9e698eabec4530b8e1aad7157fc61fdd80521525fbb41f1b454ddeb6d88df0b9"
+      "size": 4947,
+      "sha256": "d208dee6b9349d59df2ad87494a9e58fef8bc6228c9aa0a3e8d3a99d68e7f15a"
     },
     {
       "path": "atlas/categories.json",
@@ -116,13 +116,13 @@
     },
     {
       "path": "atlas/packs/chemistry/entries.json",
-      "size": 9608,
-      "sha256": "43c297d62fccf694bc12e0dcdf2bec88301acd6ab860721b09b233dfdcd6c765"
+      "size": 150004,
+      "sha256": "60c888328b7004f4b7c7c6f9dec3ae35a8751b7111a8cba33adcd0398f035a9d"
     },
     {
       "path": "atlas/packs/chemistry/manifest.json",
-      "size": 635,
-      "sha256": "06c174932b77cca32ce9aa666cd7e604d16e2e1aa3c37158738e10b57c608e34"
+      "size": 641,
+      "sha256": "3cca2af92b858d6d6699193c1e93ce704d9517cf4621d1d333859f7742a12e4a"
     },
     {
       "path": "atlas/packs/civic/entries.json",
@@ -141,28 +141,28 @@
     },
     {
       "path": "atlas/packs/core/index.json",
-      "size": 58911,
-      "sha256": "fc99a90322cec618f2115d7c8edce8c6fcd9b9c7f897171abcfaa37e7e55df8d"
+      "size": 99469,
+      "sha256": "36cab531d3bac9dc1ff399260811cd5111bd1619f2756053606e7191d9f78c6c"
     },
     {
       "path": "atlas/packs/core/manifest.json",
       "size": 1218,
-      "sha256": "a0cb2928579d36fa5da48f776e3a3aa71b2bbd52e96f423e6ada0576a453b1ad"
+      "sha256": "29429a61ee33c01386169a7d8615cfd967b2df4d6e2c79bbbec7151e684a25d3"
     },
     {
       "path": "atlas/packs/core/places.json",
-      "size": 10578,
-      "sha256": "026ed2320e0c0420664e7fed408df88dca1d70c972366a78faa4883c988055ec"
+      "size": 13344,
+      "sha256": "70a9f2293d766599fbdc50dc5b0a9ab5c0f09d2f55bf2677518e5733256c59e1"
     },
     {
       "path": "atlas/packs/core/sources.json",
-      "size": 146845,
-      "sha256": "210425e88c9b64d1c85d8f628d6c8fe3483346fe1bfeed24709b2b09fdd7f5eb"
+      "size": 148836,
+      "sha256": "026665754a5cf05eca54b6060e23dac0f115784c4bb4edc825bda4d20ee90a9e"
     },
     {
       "path": "atlas/packs/core/years.json",
-      "size": 38116,
-      "sha256": "c177cfc29fac2ffe279d2d63650af152b7ab828f172ccd48cda7af3227646279"
+      "size": 52263,
+      "sha256": "4f02a8119f121a0cbe9cf053b8abc7835e122ea10d3be2ed93a47fd9bc638f64"
     },
     {
       "path": "atlas/packs/earth/entries.json",
@@ -632,7 +632,7 @@
     {
       "path": "docs/FEATURES.md",
       "size": 7141,
-      "sha256": "e6aeea234f7ea00ec1e4d8190ca4c1dc3d7f0ee4094d258e4ec5827228dd5bbd"
+      "sha256": "f27a41d0a9df96cf7c0ec912fff2b087cb97ed0869f75b1f86a6d1e904de2e37"
     },
     {
       "path": "docs/PROMOTE.md",
@@ -746,8 +746,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 628926,
-      "sha256": "366372d9d3c4b52dd50981b4c0f76feab936b5b0321d1058debdd18e2c063220"
+      "size": 773954,
+      "sha256": "ed21d519882435a22006e65defb3b8dcfa98ec8a142cefbdee23c4dbef3277de"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -1217,6 +1217,6 @@
   ],
   "totals": {
     "files": 241,
-    "bytes": 6911838
+    "bytes": 7257207
   }
 }

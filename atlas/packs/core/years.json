@@ -90,6 +90,12 @@
       "entry": "zygmunt-bell"
     },
     {
+      "date": "1557",
+      "precision": "year",
+      "approximate": false,
+      "entry": "platinum-element"
+    },
+    {
       "date": "1591",
       "precision": "year",
       "approximate": false,
@@ -124,6 +130,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "bow-bells"
+    },
+    {
+      "date": "1669",
+      "precision": "year",
+      "approximate": false,
+      "entry": "phosphorus-element"
     },
     {
       "date": "1677",
@@ -192,6 +204,12 @@
       "entry": "tsar-bell"
     },
     {
+      "date": "1735",
+      "precision": "year",
+      "approximate": false,
+      "entry": "cobalt-element"
+    },
+    {
       "date": "1735-11",
       "precision": "month",
       "approximate": false,
@@ -234,6 +252,12 @@
       "entry": "liberty-bell"
     },
     {
+      "date": "1751",
+      "precision": "year",
+      "approximate": false,
+      "entry": "nickel-element"
+    },
+    {
       "date": "1752",
       "precision": "year",
       "approximate": false,
@@ -258,10 +282,58 @@
       "entry": "liberty-bell"
     },
     {
+      "date": "1755",
+      "precision": "year",
+      "approximate": false,
+      "entry": "magnesium-element"
+    },
+    {
       "date": "1762",
       "precision": "year",
       "approximate": false,
       "entry": "bow-bells"
+    },
+    {
+      "date": "1766",
+      "precision": "year",
+      "approximate": false,
+      "entry": "hydrogen-element"
+    },
+    {
+      "date": "1771",
+      "precision": "year",
+      "approximate": false,
+      "entry": "oxygen-element"
+    },
+    {
+      "date": "1772",
+      "precision": "year",
+      "approximate": false,
+      "entry": "barium-element"
+    },
+    {
+      "date": "1772",
+      "precision": "year",
+      "approximate": false,
+      "entry": "nitrogen-element"
+    },
+    {
+      "date": "1774",
+      "precision": "year",
+      "approximate": false,
+      "entry": "chlorine-element"
+    },
+    {
+      "date": "1774",
+      "precision": "year",
+      "approximate": false,
+      "entry": "manganese-element"
+    },
+    {
+      "date": "1774",
+      "precision": "year",
+      "approximate": false,
+      "entry": "oxygen-element"
     },
     {
       "date": "1775-04-18",
@@ -288,16 +360,52 @@
       "entry": "liberty-bell"
     },
     {
+      "date": "1777",
+      "precision": "year",
+      "approximate": false,
+      "entry": "sulfur-element"
+    },
+    {
+      "date": "1778",
+      "precision": "year",
+      "approximate": false,
+      "entry": "molybdenum-element"
+    },
+    {
       "date": "1781-10-19",
       "precision": "day",
       "approximate": false,
       "entry": "yorktown-surrender-1781"
     },
     {
+      "date": "1783",
+      "precision": "year",
+      "approximate": false,
+      "entry": "tellurium-element"
+    },
+    {
+      "date": "1783",
+      "precision": "year",
+      "approximate": false,
+      "entry": "tungsten-element"
+    },
+    {
       "date": "1785",
       "precision": "year",
       "approximate": false,
       "entry": "campanone-st-peters"
+    },
+    {
+      "date": "1787",
+      "precision": "year",
+      "approximate": false,
+      "entry": "strontium-element"
+    },
+    {
+      "date": "1787",
+      "precision": "year",
+      "approximate": false,
+      "entry": "yttrium-element"
     },
     {
       "date": "1787-05-25",
@@ -312,6 +420,24 @@
       "entry": "constitution-signed-1787"
     },
     {
+      "date": "1789",
+      "precision": "year",
+      "approximate": false,
+      "entry": "carbon-element"
+    },
+    {
+      "date": "1789",
+      "precision": "year",
+      "approximate": false,
+      "entry": "uranium-element"
+    },
+    {
+      "date": "1789",
+      "precision": "year",
+      "approximate": false,
+      "entry": "zirconium-element"
+    },
+    {
       "date": "1789-04-30",
       "precision": "day",
       "approximate": false,
@@ -324,16 +450,70 @@
       "entry": "bill-of-rights-1791"
     },
     {
+      "date": "1791",
+      "precision": "year",
+      "approximate": false,
+      "entry": "titanium-element"
+    },
+    {
       "date": "1791-12-15",
       "precision": "day",
       "approximate": false,
       "entry": "bill-of-rights-1791"
     },
     {
+      "date": "1797",
+      "precision": "year",
+      "approximate": false,
+      "entry": "chromium-element"
+    },
+    {
+      "date": "1798",
+      "precision": "year",
+      "approximate": false,
+      "entry": "beryllium-element"
+    },
+    {
       "date": "1799-10-09",
       "precision": "day",
       "approximate": false,
       "entry": "lutine-bell"
+    },
+    {
+      "date": "1801",
+      "precision": "year",
+      "approximate": false,
+      "entry": "niobium-element"
+    },
+    {
+      "date": "1801",
+      "precision": "year",
+      "approximate": false,
+      "entry": "vanadium-element"
+    },
+    {
+      "date": "1802",
+      "precision": "year",
+      "approximate": false,
+      "entry": "tantalum-element"
+    },
+    {
+      "date": "1803",
+      "precision": "year",
+      "approximate": false,
+      "entry": "iridium-element"
+    },
+    {
+      "date": "1803",
+      "precision": "year",
+      "approximate": false,
+      "entry": "palladium-element"
+    },
+    {
+      "date": "1803",
+      "precision": "year",
+      "approximate": false,
+      "entry": "rhodium-element"
     },
     {
       "date": "1803",
@@ -348,16 +528,64 @@
       "entry": "louisiana-transfer-1803"
     },
     {
+      "date": "1804",
+      "precision": "year",
+      "approximate": false,
+      "entry": "cerium-element"
+    },
+    {
+      "date": "1804",
+      "precision": "year",
+      "approximate": false,
+      "entry": "osmium-element"
+    },
+    {
       "date": "1805-12-25",
       "precision": "day",
       "approximate": false,
       "entry": "fort-clatsop-1805"
     },
     {
+      "date": "1807",
+      "precision": "year",
+      "approximate": false,
+      "entry": "potassium-element"
+    },
+    {
+      "date": "1807",
+      "precision": "year",
+      "approximate": false,
+      "entry": "sodium-element"
+    },
+    {
+      "date": "1808",
+      "precision": "year",
+      "approximate": false,
+      "entry": "barium-element"
+    },
+    {
+      "date": "1808",
+      "precision": "year",
+      "approximate": false,
+      "entry": "calcium-element"
+    },
+    {
       "date": "1808-04-29",
       "precision": "day",
       "approximate": false,
       "entry": "mingun-bell"
+    },
+    {
+      "date": "1808-06-30",
+      "precision": "day",
+      "approximate": false,
+      "entry": "boron-element"
+    },
+    {
+      "date": "1810",
+      "precision": "year",
+      "approximate": false,
+      "entry": "fluorine-element"
     },
     {
       "date": "1810",
@@ -370,6 +598,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "dolores-bell"
+    },
+    {
+      "date": "1811",
+      "precision": "year",
+      "approximate": false,
+      "entry": "iodine-element"
     },
     {
       "date": "1814-09-13",
@@ -391,10 +625,52 @@
       "entry": "bolshoy-uspensky-bell"
     },
     {
+      "date": "1817",
+      "precision": "year",
+      "approximate": false,
+      "entry": "cadmium-element"
+    },
+    {
+      "date": "1817",
+      "precision": "year",
+      "approximate": false,
+      "entry": "lithium-element"
+    },
+    {
+      "date": "1817",
+      "precision": "year",
+      "approximate": false,
+      "entry": "selenium-element"
+    },
+    {
+      "date": "1823",
+      "precision": "year",
+      "approximate": false,
+      "entry": "silicon-element"
+    },
+    {
+      "date": "1825",
+      "precision": "year",
+      "approximate": false,
+      "entry": "aluminium-element"
+    },
+    {
+      "date": "1825",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bromine-element"
+    },
+    {
       "date": "1825-10-26",
       "precision": "day",
       "approximate": false,
       "entry": "erie-canal-1825"
+    },
+    {
+      "date": "1828",
+      "precision": "year",
+      "approximate": false,
+      "entry": "thorium-element"
     },
     {
       "date": "1828",
@@ -425,6 +701,36 @@
       "precision": "month",
       "approximate": false,
       "entry": "trail-of-tears-1838"
+    },
+    {
+      "date": "1839-01",
+      "precision": "month",
+      "approximate": false,
+      "entry": "lanthanum-element"
+    },
+    {
+      "date": "1841",
+      "precision": "year",
+      "approximate": false,
+      "entry": "praseodymium-element"
+    },
+    {
+      "date": "1843",
+      "precision": "year",
+      "approximate": false,
+      "entry": "erbium-element"
+    },
+    {
+      "date": "1843",
+      "precision": "year",
+      "approximate": false,
+      "entry": "terbium-element"
+    },
+    {
+      "date": "1844",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ruthenium-element"
     },
     {
       "date": "1844-05-24",
@@ -507,6 +813,24 @@
       "entry": "big-ben-great-bell"
     },
     {
+      "date": "1860",
+      "precision": "year",
+      "approximate": false,
+      "entry": "caesium-element"
+    },
+    {
+      "date": "1861",
+      "precision": "year",
+      "approximate": false,
+      "entry": "rubidium-element"
+    },
+    {
+      "date": "1861",
+      "precision": "year",
+      "approximate": false,
+      "entry": "thallium-element"
+    },
+    {
       "date": "1861-04-12",
       "precision": "day",
       "approximate": false,
@@ -523,6 +847,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "big-ben-great-bell"
+    },
+    {
+      "date": "1863",
+      "precision": "year",
+      "approximate": false,
+      "entry": "indium-element"
     },
     {
       "date": "1863-01-01",
@@ -574,6 +904,12 @@
       "entry": "fourteenth-amendment-1868"
     },
     {
+      "date": "1868-08-18",
+      "precision": "day",
+      "approximate": false,
+      "entry": "helium-element"
+    },
+    {
       "date": "1869-02-26",
       "precision": "day",
       "approximate": false,
@@ -602,6 +938,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "petersglocke-cologne"
+    },
+    {
+      "date": "1875",
+      "precision": "year",
+      "approximate": false,
+      "entry": "gallium-element"
     },
     {
       "date": "1875-05-20",
@@ -658,10 +1000,52 @@
       "entry": "great-paul"
     },
     {
+      "date": "1878",
+      "precision": "year",
+      "approximate": false,
+      "entry": "holmium-element"
+    },
+    {
+      "date": "1878",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ytterbium-element"
+    },
+    {
       "date": "1879",
       "precision": "year",
       "approximate": false,
       "entry": "edison-light-1879"
+    },
+    {
+      "date": "1879",
+      "precision": "year",
+      "approximate": false,
+      "entry": "erbium-element"
+    },
+    {
+      "date": "1879",
+      "precision": "year",
+      "approximate": false,
+      "entry": "samarium-element"
+    },
+    {
+      "date": "1879",
+      "precision": "year",
+      "approximate": false,
+      "entry": "scandium-element"
+    },
+    {
+      "date": "1879",
+      "precision": "year",
+      "approximate": false,
+      "entry": "thulium-element"
+    },
+    {
+      "date": "1880",
+      "precision": "year",
+      "approximate": false,
+      "entry": "gadolinium-element"
     },
     {
       "date": "1881",
@@ -694,6 +1078,24 @@
       "entry": "standard-time-1883"
     },
     {
+      "date": "1885",
+      "precision": "year",
+      "approximate": false,
+      "entry": "neodymium-element"
+    },
+    {
+      "date": "1886",
+      "precision": "year",
+      "approximate": false,
+      "entry": "dysprosium-element"
+    },
+    {
+      "date": "1886",
+      "precision": "year",
+      "approximate": false,
+      "entry": "germanium-element"
+    },
+    {
       "date": "1886-10-28",
       "precision": "day",
       "approximate": false,
@@ -716,6 +1118,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "savoyarde"
+    },
+    {
+      "date": "1892",
+      "precision": "year",
+      "approximate": false,
+      "entry": "boron-element"
     },
     {
       "date": "1892",
@@ -752,6 +1160,12 @@
       "date": "1894",
       "precision": "year",
       "approximate": false,
+      "entry": "argon-element"
+    },
+    {
+      "date": "1894",
+      "precision": "year",
+      "approximate": false,
       "entry": "old-north-bells"
     },
     {
@@ -773,6 +1187,30 @@
       "entry": "plessy-v-ferguson-1896"
     },
     {
+      "date": "1898",
+      "precision": "year",
+      "approximate": false,
+      "entry": "krypton-element"
+    },
+    {
+      "date": "1898",
+      "precision": "year",
+      "approximate": false,
+      "entry": "neon-element"
+    },
+    {
+      "date": "1898",
+      "precision": "year",
+      "approximate": false,
+      "entry": "polonium-element"
+    },
+    {
+      "date": "1898",
+      "precision": "year",
+      "approximate": false,
+      "entry": "radium-element"
+    },
+    {
       "date": "1898-02-15",
       "precision": "day",
       "approximate": false,
@@ -785,16 +1223,40 @@
       "entry": "spanish-american-war-1898"
     },
     {
+      "date": "1898-07-12",
+      "precision": "day",
+      "approximate": false,
+      "entry": "xenon-element"
+    },
+    {
       "date": "1898-12-10",
       "precision": "day",
       "approximate": false,
       "entry": "spanish-american-war-1898"
     },
     {
+      "date": "1899",
+      "precision": "year",
+      "approximate": false,
+      "entry": "actinium-element"
+    },
+    {
+      "date": "1899",
+      "precision": "year",
+      "approximate": false,
+      "entry": "radon-element"
+    },
+    {
       "date": "1901",
       "precision": "year",
       "approximate": false,
       "entry": "balangiga-bells"
+    },
+    {
+      "date": "1901",
+      "precision": "year",
+      "approximate": false,
+      "entry": "europium-element"
     },
     {
       "date": "1903-11-03",
@@ -813,6 +1275,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "balangiga-bells"
+    },
+    {
+      "date": "1906",
+      "precision": "year",
+      "approximate": false,
+      "entry": "lutetium-element"
     },
     {
       "date": "1906-04-18",
@@ -900,6 +1368,12 @@
       "entry": "liberty-bell"
     },
     {
+      "date": "1917",
+      "precision": "year",
+      "approximate": false,
+      "entry": "protactinium-element"
+    },
+    {
       "date": "1917-04-02",
       "precision": "day",
       "approximate": false,
@@ -951,6 +1425,12 @@
       "date": "1922",
       "precision": "year",
       "approximate": false,
+      "entry": "hafnium-element"
+    },
+    {
+      "date": "1922",
+      "precision": "year",
+      "approximate": false,
       "entry": "mechelen-carillons"
     },
     {
@@ -983,6 +1463,12 @@
       "approximate": false,
       "end": "1927",
       "entry": "peace-tower-carillon"
+    },
+    {
+      "date": "1925",
+      "precision": "year",
+      "approximate": false,
+      "entry": "rhenium-element"
     },
     {
       "date": "1926",
@@ -1051,6 +1537,12 @@
       "entry": "pummerin"
     },
     {
+      "date": "1937",
+      "precision": "year",
+      "approximate": false,
+      "entry": "technetium-element"
+    },
+    {
       "date": "1939",
       "precision": "year",
       "approximate": false,
@@ -1058,10 +1550,34 @@
       "entry": "early-electronic-computing-timeline"
     },
     {
+      "date": "1939",
+      "precision": "year",
+      "approximate": false,
+      "entry": "francium-element"
+    },
+    {
+      "date": "1940",
+      "precision": "year",
+      "approximate": false,
+      "entry": "astatine-element"
+    },
+    {
       "date": "1940",
       "precision": "year",
       "approximate": false,
       "entry": "liverpool-great-george"
+    },
+    {
+      "date": "1940",
+      "precision": "year",
+      "approximate": false,
+      "entry": "neptunium-element"
+    },
+    {
+      "date": "1941",
+      "precision": "year",
+      "approximate": false,
+      "entry": "plutonium-element"
     },
     {
       "date": "1941-05-11",
@@ -1088,6 +1604,18 @@
       "entry": "executive-order-9066-1942"
     },
     {
+      "date": "1944",
+      "precision": "year",
+      "approximate": false,
+      "entry": "americium-element"
+    },
+    {
+      "date": "1944",
+      "precision": "year",
+      "approximate": false,
+      "entry": "curium-element"
+    },
+    {
       "date": "1944-06",
       "precision": "month",
       "approximate": false,
@@ -1098,6 +1626,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "d-day-1944"
+    },
+    {
+      "date": "1945",
+      "precision": "year",
+      "approximate": false,
+      "entry": "promethium-element"
     },
     {
       "date": "1945-04",
@@ -1161,6 +1695,18 @@
       "entry": "berlin-airlift-1948"
     },
     {
+      "date": "1949",
+      "precision": "year",
+      "approximate": false,
+      "entry": "berkelium-element"
+    },
+    {
+      "date": "1950",
+      "precision": "year",
+      "approximate": false,
+      "entry": "californium-element"
+    },
+    {
       "date": "1950",
       "precision": "year",
       "approximate": false,
@@ -1212,6 +1758,12 @@
       "date": "1952",
       "precision": "year",
       "approximate": false,
+      "entry": "einsteinium-element"
+    },
+    {
+      "date": "1952",
+      "precision": "year",
+      "approximate": false,
       "entry": "un-japanese-peace-bell"
     },
     {
@@ -1225,6 +1777,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "netherlands-carillon"
+    },
+    {
+      "date": "1952-12",
+      "precision": "month",
+      "approximate": false,
+      "entry": "fermium-element"
     },
     {
       "date": "1954",
@@ -1243,6 +1801,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "un-japanese-peace-bell"
+    },
+    {
+      "date": "1955",
+      "precision": "year",
+      "approximate": false,
+      "entry": "mendelevium-element"
     },
     {
       "date": "1956",
@@ -1269,6 +1833,12 @@
       "entry": "little-rock-1957"
     },
     {
+      "date": "1958",
+      "precision": "year",
+      "approximate": false,
+      "entry": "nobelium-element"
+    },
+    {
       "date": "1958-06-08",
       "precision": "day",
       "approximate": false,
@@ -1279,6 +1849,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "netherlands-carillon"
+    },
+    {
+      "date": "1961-02-14",
+      "precision": "day",
+      "approximate": false,
+      "entry": "lawrencium-element"
     },
     {
       "date": "1961-12-21",
@@ -1321,6 +1897,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "march-on-washington-1963"
+    },
+    {
+      "date": "1964",
+      "precision": "year",
+      "approximate": false,
+      "entry": "rutherfordium-element"
     },
     {
       "date": "1964-07-02",
@@ -1377,6 +1959,12 @@
       "entry": "arpanet-1969"
     },
     {
+      "date": "1970-02-18",
+      "precision": "day",
+      "approximate": false,
+      "entry": "dubnium-element"
+    },
+    {
       "date": "1970-04-26",
       "precision": "day",
       "approximate": false,
@@ -1387,6 +1975,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "fall-of-saigon-1975"
+    },
+    {
+      "date": "1974-07",
+      "precision": "month",
+      "approximate": false,
+      "entry": "seaborgium-element"
     },
     {
       "date": "1975",
@@ -1405,6 +1999,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "edmund-fitzgerald-bell"
+    },
+    {
+      "date": "1976",
+      "precision": "year",
+      "approximate": false,
+      "entry": "bohrium-element"
     },
     {
       "date": "1976-07-06",
@@ -1437,10 +2037,22 @@
       "entry": "mechelen-carillons"
     },
     {
+      "date": "1982-08-29",
+      "precision": "day",
+      "approximate": false,
+      "entry": "meitnerium-element"
+    },
+    {
       "date": "1982-11-11",
       "precision": "day",
       "approximate": false,
       "entry": "vietnam-veterans-memorial-1982"
+    },
+    {
+      "date": "1984",
+      "precision": "year",
+      "approximate": false,
+      "entry": "hassium-element"
     },
     {
       "date": "1986",
@@ -1485,6 +2097,18 @@
       "entry": "balangiga-bells"
     },
     {
+      "date": "1994-11-09",
+      "precision": "day",
+      "approximate": false,
+      "entry": "darmstadtium-element"
+    },
+    {
+      "date": "1994-12-08",
+      "precision": "day",
+      "approximate": false,
+      "entry": "roentgenium-element"
+    },
+    {
       "date": "1995",
       "precision": "year",
       "approximate": false,
@@ -1495,6 +2119,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "edmund-fitzgerald-bell"
+    },
+    {
+      "date": "1996",
+      "precision": "year",
+      "approximate": false,
+      "entry": "copernicium-element"
     },
     {
       "date": "1996",
@@ -1521,6 +2151,18 @@
       "entry": "world-peace-bell"
     },
     {
+      "date": "1999-01",
+      "precision": "month",
+      "approximate": false,
+      "entry": "flerovium-element"
+    },
+    {
+      "date": "2000-07",
+      "precision": "month",
+      "approximate": false,
+      "entry": "livermorium-element"
+    },
+    {
       "date": "2000-12-10",
       "precision": "day",
       "approximate": false,
@@ -1540,10 +2182,40 @@
       "entry": "september-11-2001"
     },
     {
+      "date": "2002-06",
+      "precision": "month",
+      "approximate": false,
+      "entry": "oganesson-element"
+    },
+    {
+      "date": "2003-08",
+      "precision": "month",
+      "approximate": false,
+      "entry": "moscovium-element"
+    },
+    {
+      "date": "2006",
+      "precision": "year",
+      "approximate": false,
+      "entry": "nihonium-element"
+    },
+    {
       "date": "2006-09-26",
       "precision": "day",
       "approximate": false,
       "entry": "usaspending-federal-budget"
+    },
+    {
+      "date": "2009",
+      "precision": "year",
+      "approximate": false,
+      "entry": "tennessine-element"
+    },
+    {
+      "date": "2010",
+      "precision": "year",
+      "approximate": false,
+      "entry": "tennessine-element"
     },
     {
       "date": "2011",
@@ -1727,9 +2399,12 @@
     }
   ],
   "undated": [
+    "antimony-element",
+    "arsenic-element",
     "bag-solar-kit",
     "bell-bronze",
     "bells-overview",
+    "bismuth-element",
     "bok-tower-carillon",
     "us-constitutional-branches",
     "ghs-hazard-communication",
@@ -1742,17 +2417,23 @@
     "faostat-global-food-supply",
     "us-federal-register-and-foia",
     "first-aid-and-emergency-911",
+    "gold-element",
     "hand-and-power-tools-safety",
     "human-anatomy-organ-systems",
+    "iron-element",
     "iron-and-steel-alloys",
+    "lead-element",
     "lifepo4-vs-nmc",
-    "lithium-element",
     "lithium-batteries-air-travel",
+    "mercury-element",
     "severe-weather-hazard-safety",
     "portable-solar-power",
     "public-health-records-gho-nchs",
     "silica-and-quartz-glass",
+    "silver-element",
     "solar-resource-by-region",
-    "us-census-and-building-permits"
+    "tin-element",
+    "us-census-and-building-permits",
+    "zinc-element"
   ]
 }

@@ -101,6 +101,22 @@
       "current": false
     },
     {
+      "id": "actinium-element",
+      "title": "Actinium (Ac, element 89)",
+      "aliases": [
+        "Ac (atomic number 89)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "alaska-transfer-1867",
       "title": "Alaska transfer at Sitka",
       "aliases": [],
@@ -111,6 +127,22 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "aluminium-element",
+      "title": "Aluminium (Al, element 13)",
+      "aliases": [
+        "Al (atomic number 13)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -157,6 +189,38 @@
       "current": false
     },
     {
+      "id": "americium-element",
+      "title": "Americium (Am, element 95)",
+      "aliases": [
+        "Am (atomic number 95)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "antimony-element",
+      "title": "Antimony (Sb, element 51)",
+      "aliases": [
+        "Sb (atomic number 51)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "anzac-bell-perth",
       "title": "ANZAC Bell (Perth)",
       "aliases": [],
@@ -185,6 +249,22 @@
       "current": false
     },
     {
+      "id": "argon-element",
+      "title": "Argon (Ar, element 18)",
+      "aliases": [
+        "Ar (atomic number 18)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "armistice-1918",
       "title": "Armistice ends the fighting of World War I",
       "aliases": [],
@@ -195,6 +275,38 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "arsenic-element",
+      "title": "Arsenic (As, element 33)",
+      "aliases": [
+        "As (atomic number 33)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "astatine-element",
+      "title": "Astatine (At, element 85)",
+      "aliases": [
+        "At (atomic number 85)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -253,6 +365,22 @@
       ],
       "tier": "everyday",
       "pack": "economics",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "barium-element",
+      "title": "Barium (Ba, element 56)",
+      "aliases": [
+        "Ba (atomic number 56)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -365,6 +493,22 @@
       "current": false
     },
     {
+      "id": "berkelium-element",
+      "title": "Berkelium (Bk, element 97)",
+      "aliases": [
+        "Bk (atomic number 97)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "berlin-airlift-1948",
       "title": "Berlin Airlift",
       "aliases": [],
@@ -375,6 +519,22 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "beryllium-element",
+      "title": "Beryllium (Be, element 4)",
+      "aliases": [
+        "Be (atomic number 4)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -455,6 +615,38 @@
       "current": false
     },
     {
+      "id": "bismuth-element",
+      "title": "Bismuth (Bi, element 83)",
+      "aliases": [
+        "Bi (atomic number 83)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bohrium-element",
+      "title": "Bohrium (Bh, element 107)",
+      "aliases": [
+        "Bh (atomic number 107)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "bok-tower-carillon",
       "title": "Bok Tower carillon (Singing Tower)",
       "aliases": [
@@ -487,6 +679,22 @@
       "current": false
     },
     {
+      "id": "boron-element",
+      "title": "Boron (B, element 5)",
+      "aliases": [
+        "B (atomic number 5)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "bow-bells",
       "title": "Bow Bells (St Mary-le-Bow)",
       "aliases": [
@@ -513,6 +721,22 @@
       ],
       "tier": "student",
       "pack": "civic",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "bromine-element",
+      "title": "Bromine (Br, element 35)",
+      "aliases": [
+        "Br (atomic number 35)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -603,6 +827,70 @@
       "current": false
     },
     {
+      "id": "cadmium-element",
+      "title": "Cadmium (Cd, element 48)",
+      "aliases": [
+        "Cd (atomic number 48)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "caesium-element",
+      "title": "Caesium (Cs, element 55)",
+      "aliases": [
+        "Cs (atomic number 55)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "calcium-element",
+      "title": "Calcium (Ca, element 20)",
+      "aliases": [
+        "Ca (atomic number 20)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "californium-element",
+      "title": "Californium (Cf, element 98)",
+      "aliases": [
+        "Cf (atomic number 98)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "campanone-st-peters",
       "title": "Campanone (St Peter's Basilica)",
       "aliases": [
@@ -615,6 +903,22 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "carbon-element",
+      "title": "Carbon (C, element 6)",
+      "aliases": [
+        "C (atomic number 6)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -647,6 +951,22 @@
       "current": false
     },
     {
+      "id": "cerium-element",
+      "title": "Cerium (Ce, element 58)",
+      "aliases": [
+        "Ce (atomic number 58)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "ghs-hazard-communication",
       "title": "Chemical safety labels and GHS Safety Data Sheets",
       "aliases": [],
@@ -675,6 +995,38 @@
       "current": false
     },
     {
+      "id": "chlorine-element",
+      "title": "Chlorine (Cl, element 17)",
+      "aliases": [
+        "Cl (atomic number 17)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "chromium-element",
+      "title": "Chromium (Cr, element 24)",
+      "aliases": [
+        "Cr (atomic number 24)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "civil-rights-act-1964",
       "title": "Civil Rights Act of 1964",
       "aliases": [],
@@ -685,6 +1037,22 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "cobalt-element",
+      "title": "Cobalt (Co, element 27)",
+      "aliases": [
+        "Co (atomic number 27)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -727,6 +1095,22 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "copernicium-element",
+      "title": "Copernicium (Cn, element 112)",
+      "aliases": [
+        "Cn (atomic number 112)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -775,6 +1159,22 @@
       "current": false
     },
     {
+      "id": "curium-element",
+      "title": "Curium (Cm, element 96)",
+      "aliases": [
+        "Cm (atomic number 96)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "d-day-1944",
       "title": "D-Day: the Normandy landings",
       "aliases": [],
@@ -785,6 +1185,22 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "darmstadtium-element",
+      "title": "Darmstadtium (Ds, element 110)",
+      "aliases": [
+        "Ds (atomic number 110)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -827,6 +1243,38 @@
       ],
       "tier": "student",
       "pack": "health",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "dubnium-element",
+      "title": "Dubnium (Db, element 105)",
+      "aliases": [
+        "Db (atomic number 105)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "dysprosium-element",
+      "title": "Dysprosium (Dy, element 66)",
+      "aliases": [
+        "Dy (atomic number 66)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -897,6 +1345,22 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "einsteinium-element",
+      "title": "Einsteinium (Es, element 99)",
+      "aliases": [
+        "Es (atomic number 99)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -973,6 +1437,22 @@
       "current": false
     },
     {
+      "id": "erbium-element",
+      "title": "Erbium (Er, element 68)",
+      "aliases": [
+        "Er (atomic number 68)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "erie-canal-1825",
       "title": "Erie Canal in operation",
       "aliases": [],
@@ -983,6 +1463,22 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "europium-element",
+      "title": "Europium (Eu, element 63)",
+      "aliases": [
+        "Eu (atomic number 63)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1057,6 +1553,22 @@
       "current": false
     },
     {
+      "id": "fermium-element",
+      "title": "Fermium (Fm, element 100)",
+      "aliases": [
+        "Fm (atomic number 100)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "first-aid-and-emergency-911",
       "title": "First aid overview and emergency 911 guidance",
       "aliases": [],
@@ -1127,6 +1639,38 @@
       "current": false
     },
     {
+      "id": "flerovium-element",
+      "title": "Flerovium (Fl, element 114)",
+      "aliases": [
+        "Fl (atomic number 114)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "fluorine-element",
+      "title": "Fluorine (F, element 9)",
+      "aliases": [
+        "F (atomic number 9)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "model-t-1908",
       "title": "Ford Model T and the moving assembly line",
       "aliases": [],
@@ -1169,6 +1713,22 @@
       "current": false
     },
     {
+      "id": "francium-element",
+      "title": "Francium (Fr, element 87)",
+      "aliases": [
+        "Fr (atomic number 87)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "freedom-bell-berlin",
       "title": "Freedom Bell (Rathaus Schöneberg, Berlin)",
       "aliases": [
@@ -1181,6 +1741,22 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "gadolinium-element",
+      "title": "Gadolinium (Gd, element 64)",
+      "aliases": [
+        "Gd (atomic number 64)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1199,6 +1775,38 @@
       "current": false
     },
     {
+      "id": "gallium-element",
+      "title": "Gallium (Ga, element 31)",
+      "aliases": [
+        "Ga (atomic number 31)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "germanium-element",
+      "title": "Germanium (Ge, element 32)",
+      "aliases": [
+        "Ge (atomic number 32)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "gloriosa-erfurt",
       "title": "Gloriosa (Erfurt Cathedral)",
       "aliases": [
@@ -1211,6 +1819,22 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "gold-element",
+      "title": "Gold (Au, element 79)",
+      "aliases": [
+        "Au (atomic number 79)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1319,6 +1943,22 @@
       "current": false
     },
     {
+      "id": "hafnium-element",
+      "title": "Hafnium (Hf, element 72)",
+      "aliases": [
+        "Hf (atomic number 72)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "hand-and-power-tools-safety",
       "title": "Hand and power tool safety fundamentals",
       "aliases": [],
@@ -1333,6 +1973,38 @@
       "current": false
     },
     {
+      "id": "hassium-element",
+      "title": "Hassium (Hs, element 108)",
+      "aliases": [
+        "Hs (atomic number 108)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "helium-element",
+      "title": "Helium (He, element 2)",
+      "aliases": [
+        "He (atomic number 2)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "hms-hood-bell",
       "title": "HMS Hood's bell",
       "aliases": [],
@@ -1343,6 +2015,22 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "holmium-element",
+      "title": "Holmium (Ho, element 67)",
+      "aliases": [
+        "Ho (atomic number 67)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1375,6 +2063,22 @@
       "current": false
     },
     {
+      "id": "hydrogen-element",
+      "title": "Hydrogen (H, element 1)",
+      "aliases": [
+        "H (atomic number 1)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "indian-citizenship-act-1924",
       "title": "Indian Citizenship Act",
       "aliases": [],
@@ -1389,6 +2093,22 @@
       "current": false
     },
     {
+      "id": "indium-element",
+      "title": "Indium (In, element 49)",
+      "aliases": [
+        "In (atomic number 49)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "international-system-of-units-si",
       "title": "International System of Units (SI)",
       "aliases": [],
@@ -1399,6 +2119,54 @@
       ],
       "tier": "student",
       "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "iodine-element",
+      "title": "Iodine (I, element 53)",
+      "aliases": [
+        "I (atomic number 53)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "iridium-element",
+      "title": "Iridium (Ir, element 77)",
+      "aliases": [
+        "Ir (atomic number 77)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "iron-element",
+      "title": "Iron (Fe, element 26)",
+      "aliases": [
+        "Fe (atomic number 26)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1464,6 +2232,22 @@
       "current": false
     },
     {
+      "id": "krypton-element",
+      "title": "Krypton (Kr, element 36)",
+      "aliases": [
+        "Kr (atomic number 36)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "savoyarde",
       "title": "La Savoyarde (Sacré-Cœur, Paris)",
       "aliases": [
@@ -1476,6 +2260,54 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "lanthanum-element",
+      "title": "Lanthanum (La, element 57)",
+      "aliases": [
+        "La (atomic number 57)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "lawrencium-element",
+      "title": "Lawrencium (Lr, element 103)",
+      "aliases": [
+        "Lr (atomic number 103)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "lead-element",
+      "title": "Lead (Pb, element 82)",
+      "aliases": [
+        "Pb (atomic number 82)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1554,6 +2386,22 @@
       "current": false
     },
     {
+      "id": "livermorium-element",
+      "title": "Livermorium (Lv, element 116)",
+      "aliases": [
+        "Lv (atomic number 116)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "louisiana-transfer-1803",
       "title": "Louisiana transfer at the Cabildo",
       "aliases": [],
@@ -1564,6 +2412,22 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "lutetium-element",
+      "title": "Lutetium (Lu, element 71)",
+      "aliases": [
+        "Lu (atomic number 71)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1595,6 +2459,38 @@
       "status": "draft",
       "current": true,
       "now_until": "2027-02-22"
+    },
+    {
+      "id": "magnesium-element",
+      "title": "Magnesium (Mg, element 12)",
+      "aliases": [
+        "Mg (atomic number 12)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "manganese-element",
+      "title": "Manganese (Mn, element 25)",
+      "aliases": [
+        "Mn (atomic number 25)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
     },
     {
       "id": "march-on-washington-1963",
@@ -1643,6 +2539,54 @@
       "current": false
     },
     {
+      "id": "meitnerium-element",
+      "title": "Meitnerium (Mt, element 109)",
+      "aliases": [
+        "Mt (atomic number 109)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "mendelevium-element",
+      "title": "Mendelevium (Md, element 101)",
+      "aliases": [
+        "Md (atomic number 101)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "mercury-element",
+      "title": "Mercury (Hg, element 80)",
+      "aliases": [
+        "Hg (atomic number 80)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "mingun-bell",
       "title": "Mingun Bell",
       "aliases": [],
@@ -1653,6 +2597,38 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "molybdenum-element",
+      "title": "Molybdenum (Mo, element 42)",
+      "aliases": [
+        "Mo (atomic number 42)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "moscovium-element",
+      "title": "Moscovium (Mc, element 115)",
+      "aliases": [
+        "Mc (atomic number 115)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1743,6 +2719,54 @@
       "current": false
     },
     {
+      "id": "neodymium-element",
+      "title": "Neodymium (Nd, element 60)",
+      "aliases": [
+        "Nd (atomic number 60)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "neon-element",
+      "title": "Neon (Ne, element 10)",
+      "aliases": [
+        "Ne (atomic number 10)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "neptunium-element",
+      "title": "Neptunium (Np, element 93)",
+      "aliases": [
+        "Np (atomic number 93)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "netherlands-carillon",
       "title": "Netherlands Carillon (Arlington, Virginia)",
       "aliases": [],
@@ -1757,6 +2781,70 @@
       "current": false
     },
     {
+      "id": "nickel-element",
+      "title": "Nickel (Ni, element 28)",
+      "aliases": [
+        "Ni (atomic number 28)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "nihonium-element",
+      "title": "Nihonium (Nh, element 113)",
+      "aliases": [
+        "Nh (atomic number 113)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "niobium-element",
+      "title": "Niobium (Nb, element 41)",
+      "aliases": [
+        "Nb (atomic number 41)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "nitrogen-element",
+      "title": "Nitrogen (N, element 7)",
+      "aliases": [
+        "N (atomic number 7)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "noaa-global-climate-monitoring",
       "title": "NOAA NCEI global climate monitoring",
       "aliases": [],
@@ -1767,6 +2855,22 @@
       ],
       "tier": "student",
       "pack": "earth",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "nobelium-element",
+      "title": "Nobelium (No, element 102)",
+      "aliases": [
+        "No (atomic number 102)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1814,6 +2918,22 @@
       "current": false
     },
     {
+      "id": "oganesson-element",
+      "title": "Oganesson (Og, element 118)",
+      "aliases": [
+        "Og (atomic number 118)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "old-north-bells",
       "title": "Old North Church bells",
       "aliases": [
@@ -1826,6 +2946,54 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "osmium-element",
+      "title": "Osmium (Os, element 76)",
+      "aliases": [
+        "Os (atomic number 76)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "oxygen-element",
+      "title": "Oxygen (O, element 8)",
+      "aliases": [
+        "O (atomic number 8)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "palladium-element",
+      "title": "Palladium (Pd, element 46)",
+      "aliases": [
+        "Pd (atomic number 46)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1889,6 +3057,38 @@
       "current": false
     },
     {
+      "id": "phosphorus-element",
+      "title": "Phosphorus (P, element 15)",
+      "aliases": [
+        "P (atomic number 15)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "platinum-element",
+      "title": "Platinum (Pt, element 78)",
+      "aliases": [
+        "Pt (atomic number 78)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "plessy-v-ferguson-1896",
       "title": "Plessy v. Ferguson",
       "aliases": [],
@@ -1899,6 +3099,38 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "plutonium-element",
+      "title": "Plutonium (Pu, element 94)",
+      "aliases": [
+        "Pu (atomic number 94)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "polonium-element",
+      "title": "Polonium (Po, element 84)",
+      "aliases": [
+        "Po (atomic number 84)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1917,6 +3149,22 @@
       "current": false
     },
     {
+      "id": "potassium-element",
+      "title": "Potassium (K, element 19)",
+      "aliases": [
+        "K (atomic number 19)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "power-outage-generator-safety",
       "title": "Power outage and portable generator safety",
       "aliases": [],
@@ -1927,6 +3175,54 @@
       ],
       "tier": "everyday",
       "pack": "preparedness",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "praseodymium-element",
+      "title": "Praseodymium (Pr, element 59)",
+      "aliases": [
+        "Pr (atomic number 59)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "promethium-element",
+      "title": "Promethium (Pm, element 61)",
+      "aliases": [
+        "Pm (atomic number 61)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "protactinium-element",
+      "title": "Protactinium (Pa, element 91)",
+      "aliases": [
+        "Pa (atomic number 91)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -1959,6 +3255,38 @@
       "current": false
     },
     {
+      "id": "radium-element",
+      "title": "Radium (Ra, element 88)",
+      "aliases": [
+        "Ra (atomic number 88)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "radon-element",
+      "title": "Radon (Rn, element 86)",
+      "aliases": [
+        "Rn (atomic number 86)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "standard-time-1883",
       "title": "Railroads adopt standard time",
       "aliases": [],
@@ -1969,6 +3297,102 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "rhenium-element",
+      "title": "Rhenium (Re, element 75)",
+      "aliases": [
+        "Re (atomic number 75)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "rhodium-element",
+      "title": "Rhodium (Rh, element 45)",
+      "aliases": [
+        "Rh (atomic number 45)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "roentgenium-element",
+      "title": "Roentgenium (Rg, element 111)",
+      "aliases": [
+        "Rg (atomic number 111)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "rubidium-element",
+      "title": "Rubidium (Rb, element 37)",
+      "aliases": [
+        "Rb (atomic number 37)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ruthenium-element",
+      "title": "Ruthenium (Ru, element 44)",
+      "aliases": [
+        "Ru (atomic number 44)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "rutherfordium-element",
+      "title": "Rutherfordium (Rf, element 104)",
+      "aliases": [
+        "Rf (atomic number 104)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -2004,6 +3428,22 @@
       "current": false
     },
     {
+      "id": "samarium-element",
+      "title": "Samarium (Sm, element 62)",
+      "aliases": [
+        "Sm (atomic number 62)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "san-francisco-earthquake-1906",
       "title": "San Francisco earthquake and fire",
       "aliases": [],
@@ -2014,6 +3454,54 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "scandium-element",
+      "title": "Scandium (Sc, element 21)",
+      "aliases": [
+        "Sc (atomic number 21)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "seaborgium-element",
+      "title": "Seaborgium (Sg, element 106)",
+      "aliases": [
+        "Sg (atomic number 106)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "selenium-element",
+      "title": "Selenium (Se, element 34)",
+      "aliases": [
+        "Se (atomic number 34)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -2063,6 +3551,38 @@
       "current": false
     },
     {
+      "id": "silicon-element",
+      "title": "Silicon (Si, element 14)",
+      "aliases": [
+        "Si (atomic number 14)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "silver-element",
+      "title": "Silver (Ag, element 47)",
+      "aliases": [
+        "Ag (atomic number 47)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "social-security-act-1935",
       "title": "Social Security Act",
       "aliases": [],
@@ -2073,6 +3593,22 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "sodium-element",
+      "title": "Sodium (Na, element 11)",
+      "aliases": [
+        "Na (atomic number 11)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -2161,6 +3697,38 @@
       "current": false
     },
     {
+      "id": "strontium-element",
+      "title": "Strontium (Sr, element 38)",
+      "aliases": [
+        "Sr (atomic number 38)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "sulfur-element",
+      "title": "Sulfur (S, element 16)",
+      "aliases": [
+        "S (atomic number 16)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "appomattox-1865",
       "title": "Surrender at Appomattox Court House",
       "aliases": [],
@@ -2221,6 +3789,38 @@
       "current": false
     },
     {
+      "id": "tantalum-element",
+      "title": "Tantalum (Ta, element 73)",
+      "aliases": [
+        "Ta (atomic number 73)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "technetium-element",
+      "title": "Technetium (Tc, element 43)",
+      "aliases": [
+        "Tc (atomic number 43)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "telegraph-message-1844",
       "title": "Telegraph: What hath God wrought?",
       "aliases": [],
@@ -2231,6 +3831,70 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "tellurium-element",
+      "title": "Tellurium (Te, element 52)",
+      "aliases": [
+        "Te (atomic number 52)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "tennessine-element",
+      "title": "Tennessine (Ts, element 117)",
+      "aliases": [
+        "Ts (atomic number 117)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "terbium-element",
+      "title": "Terbium (Tb, element 65)",
+      "aliases": [
+        "Tb (atomic number 65)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "thallium-element",
+      "title": "Thallium (Tl, element 81)",
+      "aliases": [
+        "Tl (atomic number 81)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -2273,6 +3937,70 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "thorium-element",
+      "title": "Thorium (Th, element 90)",
+      "aliases": [
+        "Th (atomic number 90)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "thulium-element",
+      "title": "Thulium (Tm, element 69)",
+      "aliases": [
+        "Tm (atomic number 69)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "tin-element",
+      "title": "Tin (Sn, element 50)",
+      "aliases": [
+        "Sn (atomic number 50)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "titanium-element",
+      "title": "Titanium (Ti, element 22)",
+      "aliases": [
+        "Ti (atomic number 22)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -2331,6 +4059,22 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "tungsten-element",
+      "title": "Tungsten (W, element 74)",
+      "aliases": [
+        "W (atomic number 74)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -2421,6 +4165,22 @@
       "current": false
     },
     {
+      "id": "uranium-element",
+      "title": "Uranium (U, element 92)",
+      "aliases": [
+        "U (atomic number 92)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "usaspending-federal-budget",
       "title": "USAspending.gov federal budget and award data",
       "aliases": [],
@@ -2473,6 +4233,22 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "vanadium-element",
+      "title": "Vanadium (V, element 23)",
+      "aliases": [
+        "V (atomic number 23)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     },
@@ -2561,6 +4337,22 @@
       "current": false
     },
     {
+      "id": "xenon-element",
+      "title": "Xenon (Xe, element 54)",
+      "aliases": [
+        "Xe (atomic number 54)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "yongle-bell",
       "title": "Yongle Bell (Dazhong Temple, Beijing)",
       "aliases": [
@@ -2573,6 +4365,70 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ytterbium-element",
+      "title": "Ytterbium (Yb, element 70)",
+      "aliases": [
+        "Yb (atomic number 70)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "yttrium-element",
+      "title": "Yttrium (Y, element 39)",
+      "aliases": [
+        "Y (atomic number 39)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "zinc-element",
+      "title": "Zinc (Zn, element 30)",
+      "aliases": [
+        "Zn (atomic number 30)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "zirconium-element",
+      "title": "Zirconium (Zr, element 40)",
+      "aliases": [
+        "Zr (atomic number 40)"
+      ],
+      "kind": "chemistry",
+      "category_path": [
+        "chemistry",
+        "elements"
+      ],
+      "tier": "student",
+      "pack": "chemistry",
       "status": "draft",
       "current": false
     }
