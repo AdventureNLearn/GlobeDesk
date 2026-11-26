@@ -91,8 +91,8 @@
     },
     {
       "path": "atlas/README.md",
-      "size": 4947,
-      "sha256": "d208dee6b9349d59df2ad87494a9e58fef8bc6228c9aa0a3e8d3a99d68e7f15a"
+      "size": 5078,
+      "sha256": "897796ee1471fcc0ab703dee38ec4fee20b04c8206ed6cc4afc5c7f90ba20c80"
     },
     {
       "path": "atlas/categories.json",
@@ -271,8 +271,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 52823,
-      "sha256": "7c290ec9487d3f8ede397f481ff80875f75e07a604e44af2309eda1244ebf5de"
+      "size": 58645,
+      "sha256": "c38852a47af442ddc9c8144077b3103354eac03f57987702d236b62e96e1c2da"
     },
     {
       "path": "data/atlas/artifacts/constitution-1787.json",
@@ -751,13 +751,13 @@
     },
     {
       "path": "js/atlas/atlas-model.js",
-      "size": 9893,
-      "sha256": "80746803176a68be2ddf14f6b1d55f49140dea9a3bf00f79edc092a625167a7c"
+      "size": 15641,
+      "sha256": "2c145002a660d633636f2124eb26d3dd4d9cc6b6e74aac27cba1749d17ce3779"
     },
     {
       "path": "js/atlas/atlas-view.js",
-      "size": 41005,
-      "sha256": "b15d0258775b7f49e6f9f36a58c7f3ee9912da25fc55cd2b6a764e323cd587df"
+      "size": 48029,
+      "sha256": "9f4a95c225a79e54f2e355214260f03806552156b746077d9e9c732bcc8d32b0"
     },
     {
       "path": "js/atlas/bells-layer.js",
@@ -1071,8 +1071,8 @@
     },
     {
       "path": "package.json",
-      "size": 1670,
-      "sha256": "9203ef8e52a7e729093e1ff6ce9154c9a01f38b83bb950db46cdfe93b71c200b"
+      "size": 1713,
+      "sha256": "cfb045d89d50130bc2491e7d665e02eeef9025c45ca3e84f5057ca9f1c92a03f"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -1217,6 +1217,6 @@
   ],
   "totals": {
     "files": 241,
-    "bytes": 7257773
+    "bytes": 7276541
   }
 }

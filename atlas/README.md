@@ -3,7 +3,7 @@
 GlobeDesk's own encyclopedia: 12 categories, an index entry schema, packs with manifests, and the views in the Atlas panel. All entries are our own cited text (CC BY 4.0). Draft only.
 
     categories.json                       12 categories with subcategories, scope, pack and refresh
-    views.json                            A-Z, Elements (periodic constellation and table fallback), by place, by year (years, then months and weeks in the current year, This week)
+    views.json                            A-Z, by place, by year (years, then months and weeks in the current year, This week)
     packs/core/                           index, categories, places, years, sources (each with a class) + manifest
     packs/history-places/                 History and places: US history 1775-2026 (76 sourced event entries in date order, draft)
     packs/energy|objects|chemistry|economics/  entries.json + manifest.json
@@ -15,6 +15,7 @@ GlobeDesk's own encyclopedia: 12 categories, an index entry schema, packs with m
     ../data/atlas/                        object, chemistry, price and bell (data/atlas/bells/) records referenced by entries
     ../data/atlas/artifacts/              historic object records (globedesk.artifact/1): facts, parts, materials, dated timeline
     ../tools/atlas/                       build-object, build-bells (bells-*.mjs content and sources), build-elements (118 chemistry/elements entries from an external source cache), build-packs, build-js (generated js/atlas/atlas-data.js), validate
+    ../js/atlas/atlas-model.js, atlas-view.js   Atlas browse views (including Elements 18-column constellation and table fallback)
     ../js/atlas/bells-layer.js, models/bell.js  the Bells layer (pins, clusters, era and region filters) and the parametric 3D bell
     ../desks/work-desks.json              the ten desks
 
