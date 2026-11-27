@@ -1,0 +1,78 @@
+{
+  "schema": "globedesk.wonder/1",
+  "id": "wonder-colosseum",
+  "title": "Colosseum (New Seven Wonders, unofficial vote)",
+  "vote_label": "Unofficial: one of seven sites named in a private popular vote announced on 7 July 2007. This is not a UNESCO list and UNESCO says it has no link to it.",
+  "region": "Europe",
+  "country": "IT",
+  "place": {
+    "label": "Colosseum, Rome, Italy",
+    "pinned": true,
+    "lat": 41.8903,
+    "lng": 12.4922,
+    "approximate": true,
+    "basis": "One Wikidata (CC0) coordinate for the whole site; a monument or city site covers more than one point",
+    "coords_source_id": "wd-q10285",
+    "coords_text": "41.8903, 12.4922"
+  },
+  "dates": [
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+    },
+    {
+      "date": "1980",
+      "precision": "year",
+      "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "World Heritage inscription (Historic Centre of Rome, the whole property)",
+      "value": "1980",
+      "source": "unesco-whc-91"
+    },
+    {
+      "label": "Area of the whole World Heritage property (not the Colosseum alone)",
+      "value": "1,469.7 hectares",
+      "source": "unesco-whc-91"
+    }
+  ],
+  "facts": [
+    {
+      "text": "UNESCO names the Colosseum, with the Pantheon and the Roman and Imperial Forums, among the monuments of antiquity in the Historic Centre of Rome.",
+      "source": "unesco-whc-91"
+    },
+    {
+      "text": "UNESCO cites the restoration of the Colosseum and the Arch of Titus as early examples of restoration principles first tested in Rome.",
+      "source": "unesco-whc-91"
+    },
+    {
+      "text": "The organisation behind the 2007 vote lists the Colosseum (Italy) among its seven winners.",
+      "source": "new7wonders-faq"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "The Colosseum in Rome, Italy, was one of seven sites named in an unofficial 2007 popular vote. UNESCO lists it among the monuments of antiquity in the Historic Centre of Rome, inscribed in 1980.",
+    "student": "UNESCO names the Colosseum among the monuments of antiquity in the Historic Centre of Rome, which it inscribed in 1980; the whole property covers 1,469.7 hectares, not the Colosseum alone. UNESCO also cites the Colosseum's restoration as an early case of the scholarly restoration principles first tested in Rome. This entry is about the site; the 2007 vote is an unofficial popular vote."
+  },
+  "sources": [
+    "wd-q10285",
+    "unesco-whc-91",
+    "new7wonders-faq"
+  ],
+  "official_sources": [
+    "unesco-whc-91"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Construction dates and capacity: not on the UNESCO page; the site's own heritage authority was not opened [UNKNOWN]"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-27",
+  "license": "CC BY 4.0 (our record text); UNESCO and the organisation's pages keep their own terms and are linked only; NASA content is generally not subject to copyright",
+  "subject_person_living": false
+}

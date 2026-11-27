@@ -1,0 +1,219 @@
+{
+  "schema": "globedesk.wonders-overview/1",
+  "id": "wonders-overview",
+  "title": "New Seven Wonders (2007 popular vote, unofficial)",
+  "vote_label": "Unofficial: one of seven sites named in a private popular vote announced on 7 July 2007. This is not a UNESCO list and UNESCO says it has no link to it.",
+  "checked": "2026-11-27",
+  "license": "CC BY 4.0 (our record text); UNESCO and the organisation's pages keep their own terms and are linked only; NASA content is generally not subject to copyright",
+  "tiers": {
+    "everyday": "Seven sites named in an unofficial, private popular vote announced in Lisbon on 7 July 2007. It is not an official list: UNESCO says it has no link to it. Six of the seven are here; Petra belongs to the Ancient layer.",
+    "student": "A first batch for the unofficial 2007 New7Wonders popular vote. Six winners have a card with facts from UNESCO World Heritage pages and a NASA page; five have one approximate map pin (a Wikidata CC0 point) and the Great Wall, a line, has none. Petra is a deferred cross-link to the Ancient layer. The organisation's own FAQ page is the only source for the date and the list. No logos, no campaign text, no endorsement."
+  },
+  "vote_date": "2007-07-07",
+  "vote": [
+    {
+      "name": "Great Wall of China",
+      "country": "CN",
+      "entry": "wonder-great-wall",
+      "deferred_link": null,
+      "source": "new7wonders-faq"
+    },
+    {
+      "name": "Petra",
+      "country": "JO",
+      "entry": null,
+      "deferred_link": "ancient-petra",
+      "source": "new7wonders-faq"
+    },
+    {
+      "name": "Colosseum",
+      "country": "IT",
+      "entry": "wonder-colosseum",
+      "deferred_link": null,
+      "source": "new7wonders-faq"
+    },
+    {
+      "name": "Chichén Itzá",
+      "country": "MX",
+      "entry": "wonder-chichen-itza",
+      "deferred_link": null,
+      "source": "new7wonders-faq"
+    },
+    {
+      "name": "Machu Picchu",
+      "country": "PE",
+      "entry": "wonder-machu-picchu",
+      "deferred_link": null,
+      "source": "new7wonders-faq"
+    },
+    {
+      "name": "Taj Mahal",
+      "country": "IN",
+      "entry": "wonder-taj-mahal",
+      "deferred_link": null,
+      "source": "new7wonders-faq"
+    },
+    {
+      "name": "Christ the Redeemer",
+      "country": "BR",
+      "entry": "wonder-christ-the-redeemer",
+      "deferred_link": null,
+      "source": "new7wonders-faq"
+    }
+  ],
+  "members": [
+    {
+      "id": "wonder-taj-mahal",
+      "linked": false,
+      "pinned": true
+    },
+    {
+      "id": "wonder-colosseum",
+      "linked": false,
+      "pinned": true
+    },
+    {
+      "id": "wonder-christ-the-redeemer",
+      "linked": false,
+      "pinned": true
+    },
+    {
+      "id": "wonder-machu-picchu",
+      "linked": false,
+      "pinned": true
+    },
+    {
+      "id": "wonder-chichen-itza",
+      "linked": false,
+      "pinned": true
+    },
+    {
+      "id": "wonder-great-wall",
+      "linked": false,
+      "pinned": false
+    }
+  ],
+  "counts": {
+    "winners": 7,
+    "cards": 6,
+    "pinned": 5,
+    "deferred": 1
+  },
+  "facts": [
+    {
+      "text": "The organisation behind the vote lists its declaration event as held in Lisbon on 7 July 2007.",
+      "source": "new7wonders-faq"
+    },
+    {
+      "text": "UNESCO says the campaign began in 2000 as a private initiative, that UNESCO was invited to support it and decided not to, and that there is no link between it and the World Heritage programme.",
+      "source": "unesco-news-new7wonders"
+    },
+    {
+      "text": "UNESCO says the list will reflect only the opinions of people with internet access, and that the campaign cannot contribute in any significant and lasting way to preserving the sites it picks.",
+      "source": "unesco-news-new7wonders"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Myth: the New Seven Wonders is an official or UNESCO list. UNESCO says there is no link between its World Heritage programme and the campaign.",
+      "status": "myth",
+      "sources": [
+        "unesco-news-new7wonders"
+      ]
+    },
+    {
+      "text": "Hundreds of millions of people voted. This is the organisation's own figure and no independent count was found.",
+      "status": "not-proven",
+      "sources": [
+        "new7wonders-faq"
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "id": "a-vote-not-a-list",
+      "title": "A popular vote, not an official list",
+      "steps": [
+        {
+          "entry": "wonders-overview",
+          "text": "The organisation behind the vote says its declaration event was held in Lisbon on 7 July 2007.",
+          "sources": [
+            "new7wonders-faq"
+          ]
+        },
+        {
+          "entry": "wonders-overview",
+          "text": "UNESCO's statement, dated 9 July 2007, says it has no link to the campaign, which it called a private initiative begun in 2000.",
+          "sources": [
+            "unesco-news-new7wonders"
+          ]
+        },
+        {
+          "entry": "wonder-great-wall",
+          "text": "Seven sites were named; the Great Wall of China is the only one that is a line rather than a place.",
+          "sources": [
+            "new7wonders-faq",
+            "unesco-whc-438"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "built-over-many-centuries",
+      "title": "Built over many centuries",
+      "steps": [
+        {
+          "entry": "wonder-great-wall",
+          "text": "The Great Wall: UNESCO says work began in the 3rd century BC and ran into the 17th century AD.",
+          "sources": [
+            "unesco-whc-438"
+          ]
+        },
+        {
+          "entry": "wonder-chichen-itza",
+          "text": "Chichén Itzá: UNESCO says older monuments there date from the 6th to the 10th centuries, and sources disagree about the founding.",
+          "sources": [
+            "unesco-whc-483"
+          ]
+        },
+        {
+          "entry": "wonder-machu-picchu",
+          "text": "Machu Picchu: built in the fifteenth century and made known to the outside world in 1911, says UNESCO.",
+          "sources": [
+            "unesco-whc-274"
+          ]
+        },
+        {
+          "entry": "wonder-taj-mahal",
+          "text": "The Taj Mahal: built from 1632 to 1648, with outer parts finished by 1653, says UNESCO.",
+          "sources": [
+            "unesco-whc-252"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "new7wonders-faq",
+    "unesco-news-new7wonders",
+    "unesco-whc-438",
+    "unesco-whc-483",
+    "unesco-whc-274",
+    "unesco-whc-252"
+  ],
+  "unknowns": [
+    "Great Pyramid of Giza (the vote's honorary candidate): not checked [UNKNOWN]",
+    "Vote totals: only the organisation's own figure exists (not-proven)",
+    "Petra: its card lives in the Ancient layer (ancient-petra); this copy shows '(not in this copy)' until that layer is added"
+  ],
+  "excluded": [
+    {
+      "name": "Logos, campaign text and branding of the organisation",
+      "reason": "Not used: all rights reserved and a commercial licensing arm; only the date and the list of seven are restated as facts"
+    },
+    {
+      "name": "Natural-wonders and city lists from the same organisation",
+      "reason": "Not in this batch"
+    }
+  ]
+}

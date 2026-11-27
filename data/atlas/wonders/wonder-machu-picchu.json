@@ -1,0 +1,93 @@
+{
+  "schema": "globedesk.wonder/1",
+  "id": "wonder-machu-picchu",
+  "title": "Machu Picchu (New Seven Wonders, unofficial vote)",
+  "vote_label": "Unofficial: one of seven sites named in a private popular vote announced on 7 July 2007. This is not a UNESCO list and UNESCO says it has no link to it.",
+  "region": "South America",
+  "country": "PE",
+  "place": {
+    "label": "Machu Picchu, Peru",
+    "pinned": true,
+    "lat": -13.1633,
+    "lng": -72.5456,
+    "approximate": true,
+    "basis": "One Wikidata (CC0) coordinate for the whole site; a monument or city site covers more than one point",
+    "coords_source_id": "wd-q676203",
+    "coords_text": "-13.1633, -72.5456"
+  },
+  "dates": [
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+    },
+    {
+      "date": "1983",
+      "precision": "year",
+      "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "Elevation of the citadel (UNESCO)",
+      "value": "more than 2,400 m above sea level",
+      "source": "unesco-whc-274"
+    },
+    {
+      "label": "Structures in the citadel (UNESCO)",
+      "value": "about 200",
+      "source": "unesco-whc-274"
+    },
+    {
+      "label": "Built (UNESCO)",
+      "value": "fifteenth century",
+      "source": "unesco-whc-274"
+    },
+    {
+      "label": "Made known to the outside world (UNESCO)",
+      "value": "1911",
+      "source": "unesco-whc-274"
+    },
+    {
+      "label": "World Heritage inscription",
+      "value": "1983 (mixed cultural and natural)",
+      "source": "unesco-whc-274"
+    }
+  ],
+  "facts": [
+    {
+      "text": "UNESCO says Machu Picchu was built in the fifteenth century and abandoned when Spain conquered the Inca Empire in the sixteenth.",
+      "source": "unesco-whc-274"
+    },
+    {
+      "text": "UNESCO says the archaeological complex was not made known to the outside world until 1911.",
+      "source": "unesco-whc-274"
+    },
+    {
+      "text": "The organisation behind the 2007 vote lists Machu Picchu (Peru) among its seven winners.",
+      "source": "new7wonders-faq"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "Machu Picchu in Peru was one of seven sites named in an unofficial 2007 popular vote. UNESCO says the Inca citadel was built in the fifteenth century, abandoned after the Spanish conquest, and made known to the outside world in 1911.",
+    "student": "UNESCO describes the Historic Sanctuary of Machu Picchu as a mixed cultural and natural property where the Andes meet the Amazon Basin. The citadel sits more than 2,400 metres above sea level and holds about 200 structures. Built in the fifteenth century, it was abandoned when Spain conquered the Inca Empire in the sixteenth, and became known to the outside world in 1911. Inscribed 1983. This entry is about the site; the 2007 vote is an unofficial popular vote."
+  },
+  "sources": [
+    "wd-q676203",
+    "unesco-whc-274",
+    "new7wonders-faq"
+  ],
+  "official_sources": [
+    "unesco-whc-274"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Which Inca ruler it served: not stated on the page used [UNKNOWN]"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-27",
+  "license": "CC BY 4.0 (our record text); UNESCO and the organisation's pages keep their own terms and are linked only; NASA content is generally not subject to copyright",
+  "subject_person_living": false
+}

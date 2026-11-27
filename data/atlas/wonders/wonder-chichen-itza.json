@@ -1,0 +1,101 @@
+{
+  "schema": "globedesk.wonder/1",
+  "id": "wonder-chichen-itza",
+  "title": "Chichén Itzá (New Seven Wonders, unofficial vote)",
+  "vote_label": "Unofficial: one of seven sites named in a private popular vote announced on 7 July 2007. This is not a UNESCO list and UNESCO says it has no link to it.",
+  "region": "North America",
+  "country": "MX",
+  "place": {
+    "label": "Chichén Itzá, Yucatán, Mexico",
+    "pinned": true,
+    "lat": 20.6831,
+    "lng": -88.5686,
+    "approximate": true,
+    "basis": "One Wikidata (CC0) coordinate for the whole site; a monument or city site covers more than one point",
+    "coords_source_id": "wd-q5859",
+    "coords_text": "20.6831, -88.5686"
+  },
+  "dates": [
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+    },
+    {
+      "date": "1988",
+      "precision": "year",
+      "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "Buildings named by UNESCO",
+      "value": "El Castillo, Warriors' Temple, El Caracol",
+      "source": "unesco-whc-483"
+    },
+    {
+      "label": "Older monuments built (UNESCO)",
+      "value": "between the 6th and 10th centuries",
+      "source": "unesco-whc-483"
+    },
+    {
+      "label": "World Heritage inscription",
+      "value": "1988",
+      "source": "unesco-whc-483"
+    }
+  ],
+  "facts": [
+    {
+      "text": "UNESCO says the town was set up in the Classic period beside two cenotes, natural cavities that gave access to underground water.",
+      "source": "unesco-whc-483"
+    },
+    {
+      "text": "UNESCO names El Castillo, the Warriors' Temple and the circular observatory El Caracol among the surviving buildings.",
+      "source": "unesco-whc-483"
+    },
+    {
+      "text": "The organisation behind the 2007 vote lists Chichen Itza (Mexico) among its seven winners.",
+      "source": "new7wonders-faq"
+    }
+  ],
+  "claims": [
+    {
+      "text": "When Chichén Itzá was founded.",
+      "status": "people-disagree",
+      "sources": [
+        "unesco-whc-483"
+      ],
+      "positions": [
+        {
+          "text": "One local manuscript gives 415-35 AD.",
+          "source": "unesco-whc-483"
+        },
+        {
+          "text": "Other local accounts give 455 AD.",
+          "source": "unesco-whc-483"
+        }
+      ]
+    }
+  ],
+  "tiers": {
+    "everyday": "Chichén Itzá in Yucatán, Mexico, was one of seven sites named in an unofficial 2007 popular vote. UNESCO says the Maya town grew up beside two natural wells, and that sources disagree about when it was founded.",
+    "student": "UNESCO says the town was founded in the Classic period beside two cenotes (natural wells), and that the name refers to a well and the Itzá people. Local accounts disagree on the founding date: one manuscript gives 415-35 AD and others 455 AD. Standing buildings named by UNESCO include El Castillo, the Warriors' Temple and the circular observatory El Caracol. Inscribed 1988. This entry is about the site; the 2007 vote is an unofficial popular vote."
+  },
+  "sources": [
+    "wd-q5859",
+    "unesco-whc-483",
+    "new7wonders-faq"
+  ],
+  "official_sources": [
+    "unesco-whc-483"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "A single agreed founding date: [UNKNOWN] (UNESCO itself reports the two accounts)"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-27",
+  "license": "CC BY 4.0 (our record text); UNESCO and the organisation's pages keep their own terms and are linked only; NASA content is generally not subject to copyright",
+  "subject_person_living": false
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "wonders",
+  "title": "Atlas pack: History and places: Wonders",
+  "kind": "category",
+  "category": "history-places",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "ef153ca0a552aa3092826ef61a4794809879c5c95e7be37b8f60a2245c6e4b76",
+  "entry_count": 7,
+  "size_bytes": 19819,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 19819,
+      "sha256": "aba3f7154709ce574b52f5bbf70fc18b2cb297b0d88ef9f40d2f79c34174c161"
+    }
+  ]
+}

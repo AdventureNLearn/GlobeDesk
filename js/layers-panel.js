@@ -145,6 +145,7 @@
       (GD.chemOresLayer && GD.chemOresLayer.panelHtml ? GD.chemOresLayer.panelHtml() : "") +
       (GD.disastersLayer && GD.disastersLayer.panelHtml ? GD.disastersLayer.panelHtml() : "") +
       (GD.spaceLayer && GD.spaceLayer.panelHtml ? GD.spaceLayer.panelHtml() : "") +
+      (GD.wondersLayer && GD.wondersLayer.panelHtml ? GD.wondersLayer.panelHtml() : "") +
       (GD.userLayers && GD.userLayers.panelHtml ? GD.userLayers.panelHtml() : "") +
       '<p class="muted small lp-foot">More settings (display quality, tile cache, licence notes) are in Workspace, Inspector, Layers.</p>';
     paintLegends(body);
@@ -154,6 +155,7 @@
     if (GD.chemOresLayer && GD.chemOresLayer.bind) GD.chemOresLayer.bind(body, () => { render(); refreshOthers(); });
     if (GD.disastersLayer && GD.disastersLayer.bind) GD.disastersLayer.bind(body, () => { render(); refreshOthers(); });
     if (GD.spaceLayer && GD.spaceLayer.bind) GD.spaceLayer.bind(body, () => { render(); refreshOthers(); });
+    if (GD.wondersLayer && GD.wondersLayer.bind) GD.wondersLayer.bind(body, () => { render(); refreshOthers(); });
     if (GD.userLayers && GD.userLayers.bind) GD.userLayers.bind(body, () => { render(); refreshOthers(); });
   }
 

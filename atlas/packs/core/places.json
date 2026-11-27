@@ -27,6 +27,13 @@
       ]
     },
     {
+      "key": "BR",
+      "precision": "site",
+      "entries": [
+        "wonder-christ-the-redeemer"
+      ]
+    },
+    {
       "key": "CA",
       "precision": "site",
       "entries": [
@@ -38,6 +45,7 @@
       "precision": "site",
       "entries": [
         "bianzhong-marquis-yi",
+        "wonder-great-wall",
         "jiuquan-launch-center",
         "yongle-bell"
       ]
@@ -115,7 +123,8 @@
       "precision": "country",
       "entries": [
         "bag-solar-kit-prices",
-        "panaji-church-bell"
+        "panaji-church-bell",
+        "wonder-taj-mahal"
       ]
     },
     {
@@ -130,6 +139,7 @@
       "precision": "country",
       "entries": [
         "bag-solar-kit-prices",
+        "wonder-colosseum",
         "galileo-telescopic-observations-1609",
         "vesuvius-79"
       ]
@@ -182,6 +192,7 @@
       "precision": "site",
       "entries": [
         "dolores-bell",
+        "wonder-chichen-itza",
         "guadalupe-hidalgo-1848"
       ]
     },
@@ -203,6 +214,7 @@
       "key": "PE",
       "precision": "site",
       "entries": [
+        "wonder-machu-picchu",
         "maria-angola-cusco"
       ]
     },
@@ -600,6 +612,7 @@
     "neodymium-element",
     "neon-element",
     "neptunium-element",
+    "wonders-overview",
     "nickel-element",
     "nihonium-element",
     "niobium-element",

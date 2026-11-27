@@ -5,13 +5,14 @@
   "checked": "2026-11-24",
   "note": "GlobeDesk's own category tree. Every entry is our own cited text. Outside projects may appear only as outbound links, never as imported content.",
   "categories": [
-    { "n": 1, "id": "history-places", "title": "History and places", "scope": "Places, events and routes on the globe, with dated sources.", "pack": "history-places", "refresh": "quarterly",
+    { "n": 1, "id": "history-places", "title": "History and places", "scope": "Places, events and routes on the globe, with dated sources.", "pack": "history-places", "extra_packs": ["wonders"], "refresh": "quarterly",
       "subcategories": [
         { "id": "places-regions", "title": "Places and regions" },
         { "id": "events-eras", "title": "Events and eras" },
         { "id": "routes", "title": "Trade and travel routes" },
         { "id": "maps-boundaries", "title": "Maps and boundaries over time" },
-        { "id": "archaeology-sites", "title": "Archaeology and sites" } ] },
+        { "id": "archaeology-sites", "title": "Archaeology and sites" },
+        { "id": "wonders", "title": "Wonders of the world" } ] },
     { "n": 2, "id": "civic", "title": "Civic and public records", "scope": "How public institutions work, from official records.", "pack": "civic", "refresh": "quarterly",
       "subcategories": [
         { "id": "government-elections", "title": "Government and elections" },

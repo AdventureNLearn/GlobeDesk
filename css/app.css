@@ -763,6 +763,14 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .sp-swatch { --c: #e0a21a; }
 .sp-positions { margin: 2px 0 4px 1.1rem; }
 .sp-steps li { margin-bottom: 3px; }
+/* Wonders layer (js/atlas/wonders-layer.js): a five-point star; every pin is approximate; the vote is unofficial. */
+.wd-pin, .wd-cluster { min-width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; padding: 0; cursor: pointer; }
+.wd-glyph { display: block; width: 22px; height: 21px; clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); background: linear-gradient(180deg, #ffe6f2, #d9438f); filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8)); }
+.wd-pin:focus-visible, .wd-cluster:focus-visible { outline: 2px solid var(--gd-gold); outline-offset: 2px; border-radius: 8px; }
+.wd-cluster { min-width: 34px; width: auto; height: 34px; border-radius: 17px; margin: 5px; padding: 0 8px; background: rgba(60, 12, 40, 0.9); border: 2px solid #d9438f; color: #ffe0f0; font-weight: 700; font-size: 12px; }
+.wd-swatch { --c: #d9438f; }
+.wd-positions { margin: 2px 0 4px 1.1rem; }
+.wd-steps li, .wd-vote li { margin-bottom: 3px; }
 .at-ov h4 { margin: 10px 0 2px; }
 .at-timeline-list { padding-left: 18px; }
 .at-timeline-list li { margin: 2px 0; }

@@ -96,8 +96,8 @@
     },
     {
       "path": "atlas/categories.json",
-      "size": 6815,
-      "sha256": "0a544b5ed41da797ec903e1b1cec7c56a3cd1db298e72496c8674eef5f2cc52c"
+      "size": 6905,
+      "sha256": "21315e3d509f4bd742ca80621388771b887d1fbdabc766a4543a888d2f112b1e"
     },
     {
       "path": "atlas/community/community.json",
@@ -136,33 +136,33 @@
     },
     {
       "path": "atlas/packs/core/categories.json",
-      "size": 9097,
-      "sha256": "c65526cdd6aaa10e5f5d5b44f16f36826699ab0c6432b39714424afaef921d97"
+      "size": 9237,
+      "sha256": "2e6734737fb3f1d22fc34953955248d4d7d2d7490dce51bb7b3637514680cf61"
     },
     {
       "path": "atlas/packs/core/index.json",
-      "size": 106135,
-      "sha256": "45c27ed61359f93812c7ab38f2eeba843c2d214fd46acb51c64d72af4a9f8235"
+      "size": 108945,
+      "sha256": "bafe4be28746522132b3c73416adf71fc11ea6d04d3df7267df1074f272db0d3"
     },
     {
       "path": "atlas/packs/core/manifest.json",
       "size": 1219,
-      "sha256": "04a834f09203068fbdfc747a6c47507bf5c8e009ca1d2e3eee9c5649eb0d2dfe"
+      "sha256": "9772acba4f984cf090e985021e554225a91a1bd761e493fb0b76022fd32cdc0b"
     },
     {
       "path": "atlas/packs/core/places.json",
-      "size": 14206,
-      "sha256": "16968d82f88d18e5dce9dbe9fb6164a1fce9afc586f1ff6551c4d0815f5f8bf2"
+      "size": 14500,
+      "sha256": "f61c9591bae6693888811b080511f7c938fa351a3757666509a8998896b30821"
     },
     {
       "path": "atlas/packs/core/sources.json",
-      "size": 170509,
-      "sha256": "471fc1bd63523ac04c78b2ccfde6731df9c625bcd274cd537c7c16d542bf7cec"
+      "size": 181886,
+      "sha256": "950316dcdb9ade65d754f085c2b548cfb76eb12db03cfb699bff20866487d31b"
     },
     {
       "path": "atlas/packs/core/years.json",
-      "size": 54312,
-      "sha256": "adfc48eb8c14a3cf3f7e1072066d3a9b7d0537e1d0ee8c852a78e2bb333feb53"
+      "size": 55993,
+      "sha256": "a2e078ec527a3a6bc8c2208b2ac4a632d18fbd1baa5f914923097a70d9854476"
     },
     {
       "path": "atlas/packs/earth/entries.json",
@@ -265,14 +265,24 @@
       "sha256": "630070f91bda6051d4b9755185bf2617ff6270d616da1d25488885d9a4120220"
     },
     {
+      "path": "atlas/packs/wonders/entries.json",
+      "size": 19819,
+      "sha256": "aba3f7154709ce574b52f5bbf70fc18b2cb297b0d88ef9f40d2f79c34174c161"
+    },
+    {
+      "path": "atlas/packs/wonders/manifest.json",
+      "size": 644,
+      "sha256": "fa790ccad8958edf1403a93b05fca57622672d5207d139151d7f7d67512d87c5"
+    },
+    {
       "path": "atlas/views.json",
       "size": 1348,
       "sha256": "374d404557c92b4f6844b62c2cbcfed5d15f0d70c1e2aec01d1ad2e2788a09d5"
     },
     {
       "path": "css/app.css",
-      "size": 71511,
-      "sha256": "bc9f5def876b532477659fe8711a9ad88ec9caabb94788ed700e9d0744053c9a"
+      "size": 72531,
+      "sha256": "82e1d7fcbc63ea4b0ab615d1fbf3a66cdec6bcbcce37faeecef7b5a2a89d3d6d"
     },
     {
       "path": "data/atlas/artifacts/constitution-1787.json",
@@ -710,6 +720,41 @@
       "sha256": "9d585871adf801a0d26d0b0975e8d7c15d6db818488acbfb41731226d32fcdcc"
     },
     {
+      "path": "data/atlas/wonders/wonder-chichen-itza.json",
+      "size": 3701,
+      "sha256": "2ba5717d28ed5dc4a64a7d001ea6e0c849e877d8f25e0947959bde78a11a0f62"
+    },
+    {
+      "path": "data/atlas/wonders/wonder-christ-the-redeemer.json",
+      "size": 2850,
+      "sha256": "7cea7f0e43ffcc1dadf887c4314af401d2e7153ee6cf306b7b7bf788fc1957a1"
+    },
+    {
+      "path": "data/atlas/wonders/wonder-colosseum.json",
+      "size": 3157,
+      "sha256": "5f259ead887f7b84a20f068c2097e5e0888ba20e2e952b2702f1856e68c72996"
+    },
+    {
+      "path": "data/atlas/wonders/wonder-great-wall.json",
+      "size": 3939,
+      "sha256": "bd563c1c4f1f185213f0124434d262e1692d2779fe17fbcfd08c74a51aca6f65"
+    },
+    {
+      "path": "data/atlas/wonders/wonder-machu-picchu.json",
+      "size": 3518,
+      "sha256": "b477dd4cd5de89834ca236a56147e7b7e937af32ffb21a7417a0da4dc23ff66f"
+    },
+    {
+      "path": "data/atlas/wonders/wonder-taj-mahal.json",
+      "size": 3377,
+      "sha256": "178b8488d98c8e38bc857ebf56986c68b2326f8da7ccf21bf38156481f1fea7c"
+    },
+    {
+      "path": "data/atlas/wonders/wonders-overview.json",
+      "size": 7186,
+      "sha256": "fe3e26e99b99aaa1f6a2df7389bfc5f57841549d3a628d219cea5d180111b4c0"
+    },
+    {
       "path": "data/gis-registry.json",
       "size": 6045,
       "sha256": "26a9dc0c82cc4106ead3a7ef9aa07aef49b117b83aeb3a8569812c1f3b2a1cc9"
@@ -846,8 +891,8 @@
     },
     {
       "path": "index.html",
-      "size": 20193,
-      "sha256": "3ec01c0331638a3ee0687d5b9070d9d80bf938cc6b9d64dd777bb61daeddcbda"
+      "size": 20296,
+      "sha256": "4ec71540fb7ba3fedd064cc913dfe88a57e96b52e95967ee3be3d169972b2f83"
     },
     {
       "path": "js/archive.js",
@@ -866,8 +911,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 1097294,
-      "sha256": "1372628cc4977292bcbba8afd431366303a3b5efc4270caeb898299c39ae63ba"
+      "size": 1149881,
+      "sha256": "8562534acdf58d7aa82deb218ff8a440189bab2bae60edddfbcb7174cea5524f"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -876,8 +921,8 @@
     },
     {
       "path": "js/atlas/atlas-view.js",
-      "size": 72335,
-      "sha256": "2b43fd83bcf46c67b6ce2717da640d58f0740caa51e2eb4e662eeba6027d50b1"
+      "size": 72427,
+      "sha256": "cdee5226aba632dbea92fb885cf438ca9854b75ca5cf46f5572fdfe14132fe6a"
     },
     {
       "path": "js/atlas/bells-layer.js",
@@ -928,6 +973,16 @@
       "path": "js/atlas/space-layer.js",
       "size": 6012,
       "sha256": "8037da52b89158565782052c6002c6b865ca9b87ff196c0cd6daf6d20186ac50"
+    },
+    {
+      "path": "js/atlas/wonders-card.js",
+      "size": 4459,
+      "sha256": "269285731e5dcfc5ad3c0c077b885764fa62fa0ea958b92df08dba3b8f83b260"
+    },
+    {
+      "path": "js/atlas/wonders-layer.js",
+      "size": 6081,
+      "sha256": "a22d87b257e0e477eb46fad6f64c6f3b4e193d4cc10b265f389e74a4cbc304df"
     },
     {
       "path": "js/audio-mix.js",
@@ -1006,8 +1061,8 @@
     },
     {
       "path": "js/layers-panel.js",
-      "size": 17927,
-      "sha256": "78ed717589e6aca02d9c92b225b378f57368f677c4214f270b4d431e68f0ab38"
+      "size": 18132,
+      "sha256": "70b97e702a0a8136f1f52e5d90a63ce76c8399fc6b4c2cae1dcfbab3e2e7da5e"
     },
     {
       "path": "js/layers.js",
@@ -1221,8 +1276,8 @@
     },
     {
       "path": "package.json",
-      "size": 1918,
-      "sha256": "423a74159c5332e47cff594c2638f0ea1f59ccf7732781005b3c4f3e7b330d3e"
+      "size": 1949,
+      "sha256": "8b62a42bdf9013fa1c5c40dc31916c041cae2b3d6e903b1707c722a2a7c867fb"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -1320,6 +1375,16 @@
       "sha256": "34e90fa30ec11540628e8bc1fe2e2f968c1a3f2ea09e5bb478068d89b2370807"
     },
     {
+      "path": "schema/globedesk-wonder.schema.json",
+      "size": 6272,
+      "sha256": "b7edde05606d638a6947e8b69b623310a43545a8dc15f77076405e9020533aa4"
+    },
+    {
+      "path": "schema/globedesk-wonders-overview.schema.json",
+      "size": 6349,
+      "sha256": "8a631ce6cf3faab5a1213a6b409c7feb4eab775672d34fa5220dc2f26151b06d"
+    },
+    {
       "path": "schema/globedesk-work-desks.schema.json",
       "size": 6491,
       "sha256": "1eaea3c2bb8902346596737c545e4b78156e7b9ffc1b4b10e26b3cb8c176015e"
@@ -1386,7 +1451,7 @@
     }
   ],
   "totals": {
-    "files": 275,
-    "bytes": 8194010
+    "files": 288,
+    "bytes": 8335792
   }
 }

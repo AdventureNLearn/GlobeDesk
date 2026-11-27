@@ -1,0 +1,96 @@
+{
+  "schema": "globedesk.wonder/1",
+  "id": "wonder-great-wall",
+  "title": "Great Wall of China (New Seven Wonders, unofficial vote)",
+  "vote_label": "Unofficial: one of seven sites named in a private popular vote announced on 7 July 2007. This is not a UNESCO list and UNESCO says it has no link to it.",
+  "region": "Asia",
+  "country": "CN",
+  "place": {
+    "label": "The Great Wall, northern China (a line across several provinces; no single point)",
+    "pinned": false,
+    "approximate": true,
+    "basis": "No pin: a line across several provinces cannot be shown honestly as one point",
+    "coords_source_id": null,
+    "coords_text": "[UNKNOWN]"
+  },
+  "dates": [
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+    },
+    {
+      "date": "1987",
+      "precision": "year",
+      "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "Built (UNESCO)",
+      "value": "from the 3rd century BC into the 17th century AD",
+      "source": "unesco-whc-438"
+    },
+    {
+      "label": "Total length (UNESCO)",
+      "value": "more than 20,000 km",
+      "source": "unesco-whc-438"
+    },
+    {
+      "label": "East end and west end (UNESCO)",
+      "value": "Shanhaiguan (Hebei) to Jiayuguan (Gansu)",
+      "source": "unesco-whc-438"
+    },
+    {
+      "label": "World Heritage inscription",
+      "value": "1987",
+      "source": "unesco-whc-438"
+    }
+  ],
+  "facts": [
+    {
+      "text": "UNESCO says the wall was worked on without a break by one Chinese empire after another, as defensive military works, from the 3rd century BC into the 17th century AD.",
+      "source": "unesco-whc-438"
+    },
+    {
+      "text": "UNESCO gives Shanhaiguan, in Hebei, as the east end and Jiayuguan, in Gansu, as the west end.",
+      "source": "unesco-whc-438"
+    },
+    {
+      "text": "The organisation behind the 2007 vote lists the Great Wall of China among its seven winners.",
+      "source": "new7wonders-faq"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Myth: the Great Wall can be seen from the Moon. NASA says it is not visible from the Moon and is difficult or impossible to see from Earth orbit without high-powered lenses.",
+      "status": "myth",
+      "sources": [
+        "nasa-great-wall"
+      ]
+    }
+  ],
+  "tiers": {
+    "everyday": "The Great Wall of China was one of seven sites named in an unofficial 2007 popular vote. UNESCO says work started in the 3rd century BC and went on into the 17th century AD. The belief that it can be seen from the Moon is a myth.",
+    "student": "UNESCO says the Great Wall was built over many centuries by one Chinese empire after another along their northern frontier, starting in the 3rd century BC and ending in the 17th century AD. It gives the whole length as over 20,000 km, with Shanhaiguan (Hebei) at the east end and Jiayuguan (Gansu) at the west end. It was inscribed in 1987. NASA says the wall is not visible from the Moon and is difficult or impossible to see from Earth orbit without high-powered lenses. It is a line, so this entry has no map pin. The 2007 vote is an unofficial popular vote."
+  },
+  "sources": [
+    "unesco-whc-438",
+    "new7wonders-faq",
+    "nasa-great-wall"
+  ],
+  "official_sources": [
+    "unesco-whc-438",
+    "nasa-great-wall"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Other published lengths differ from UNESCO's figure; no second official length was checked [UNKNOWN]",
+    "A single map point: none, because the wall is a line across several provinces"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-27",
+  "license": "CC BY 4.0 (our record text); UNESCO and the organisation's pages keep their own terms and are linked only; NASA content is generally not subject to copyright",
+  "subject_person_living": false
+}
