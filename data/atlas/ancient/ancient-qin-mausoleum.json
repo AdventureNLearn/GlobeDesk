@@ -1,0 +1,83 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-qin-mausoleum",
+  "title": "Mausoleum of the First Qin Emperor",
+  "kind": "site",
+  "country": "CN",
+  "place": {
+    "label": "Lintong District, near Xi'an, Shaanxi, China",
+    "pin": "shown",
+    "lat": 34.381417,
+    "lng": 109.253667,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for component 441-001 (Mausoleum of the First Qin Emperor) of Mausoleum of the First Qin Emperor, published as N34 22 53.1 E109 15 13.2 at https://whc.unesco.org/en/list/441/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": "https://pleiades.stoa.org/places/117715281",
+    "wikidata": "https://www.wikidata.org/wiki/Q910180"
+  },
+  "era": "1000-1-bce",
+  "earliest_cited_year": -245,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "Near Xi'an in China, the tomb of the first Qin emperor is guarded by thousands of life-size clay soldiers. Work began in 246 BCE and the army was found in 1974.",
+    "student": "UNESCO says the mausoleum of Qin Shihuang, who first unified China into one empire, was begun in 246 BCE; the mound still stands 51.3 m high, and nearly 200 pits hold thousands of life-size terracotta soldiers and horses and bronze chariots. Pleiades gives construction as 246-208 BCE and the discovery of the terracotta army as 1974. Inscribed 1987. The pin is UNESCO's official point for the mausoleum component; the property also includes the pits of the terracotta army at a separate official point."
+  },
+  "timeline": [
+    {
+      "date": "-245",
+      "end": "-207",
+      "precision": "year",
+      "approximate": true,
+      "event": "Construction begins (246 BCE)",
+      "source": "unesco-whc-441"
+    },
+    {
+      "date": "1974",
+      "precision": "year",
+      "approximate": false,
+      "event": "Terracotta army discovered",
+      "source": "pleiades-117715281"
+    },
+    {
+      "date": "1987",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-441"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Mound height",
+      "value": "51.3 m",
+      "source": "unesco-whc-441"
+    },
+    {
+      "label": "Pits",
+      "value": "Nearly 200 accompanying pits",
+      "source": "unesco-whc-441"
+    },
+    {
+      "label": "Area",
+      "value": "56.25 square kilometres",
+      "source": "unesco-whc-441"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "unesco-whc-441",
+    "pleiades-117715281",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-441"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "the inside of the main burial mound (not described in our cited sources)"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

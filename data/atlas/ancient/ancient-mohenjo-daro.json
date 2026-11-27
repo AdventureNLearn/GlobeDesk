@@ -1,0 +1,91 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-mohenjo-daro",
+  "title": "Mohenjo-daro",
+  "kind": "site",
+  "country": "PK",
+  "place": {
+    "label": "Mohenjo-daro, Larkana District, Sindh, Pakistan",
+    "pin": "shown",
+    "lat": 27.329167,
+    "lng": 68.138889,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for Archaeological Ruins at Moenjodaro (World Heritage List 138), published as N27 19 45 E68 8 20 at https://whc.unesco.org/en/list/138/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": "https://pleiades.stoa.org/places/902113570",
+    "wikidata": "https://www.wikidata.org/wiki/Q5725"
+  },
+  "era": "3000-1001-bce",
+  "earliest_cited_year": -2999,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "Mohenjo-daro in Pakistan was a large planned city of the Indus civilization, with straight streets, baked-brick houses and covered drains, more than 4,000 years ago.",
+    "student": "UNESCO describes Mohenjo-daro as South Asia's most intact city site, from the early third millennium BC, and as the Indus civilisation's main metropolis, which flourished about 2500-1500 BC. Streets cross at right angles and it has a drainage system, wells and public baths. The ruins were found in 1922 and inscribed in 1980."
+  },
+  "timeline": [
+    {
+      "date": "-2999",
+      "precision": "year",
+      "approximate": true,
+      "event": "The city dates from the early third millennium BC",
+      "source": "unesco-whc-138"
+    },
+    {
+      "date": "-2499",
+      "end": "-1499",
+      "precision": "year",
+      "approximate": true,
+      "event": "Indus civilization flourishes (about 2500-1500 BC)",
+      "source": "unesco-whc-138"
+    },
+    {
+      "date": "1922",
+      "precision": "year",
+      "approximate": false,
+      "event": "Discovery of the ruins",
+      "source": "unesco-whc-138"
+    },
+    {
+      "date": "1980",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-138"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Plan",
+      "value": "Streets laid out at right angles, with an elaborate drainage system",
+      "source": "unesco-whc-138"
+    },
+    {
+      "label": "Location",
+      "value": "Right bank of the Indus, 28 km from Larkana",
+      "source": "unesco-whc-138"
+    },
+    {
+      "label": "Gazetteer",
+      "value": "A third-millennium-BC Harappan city",
+      "source": "pleiades-902113570"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "unesco-whc-138",
+    "pleiades-902113570",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-138"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "the Indus script: its reading is not covered by our cited sources",
+    "when and why the city was abandoned"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -45,8 +45,8 @@
     },
     "desks": {
       "type": "array",
-      "minItems": 10,
-      "maxItems": 10,
+      "minItems": 11,
+      "maxItems": 11,
       "items": {
         "$ref": "#/$defs/desk"
       }
@@ -182,7 +182,12 @@
             "[UNKNOWN]"
           ]
         },
-        "official_note": {
+        "clock": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{0,40}$",
+            "description": "Optional timeline clock id from js/atlas/clocks.js (e.g. deep-time). The desk and its packs use that year window."
+          },
+          "official_note": {
           "type": "string"
         }
       }

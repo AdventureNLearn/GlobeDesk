@@ -1,0 +1,88 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-great-zimbabwe",
+  "title": "Great Zimbabwe",
+  "kind": "site",
+  "country": "ZW",
+  "place": {
+    "label": "Great Zimbabwe, Masvingo Province, Zimbabwe",
+    "pin": "shown",
+    "lat": -20.27117,
+    "lng": 30.933269,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for Great Zimbabwe National Monument (World Heritage List 364), published as S20 16 16.212 E30 55 59.768 at https://whc.unesco.org/en/list/364/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": "https://pleiades.stoa.org/places/322739224",
+    "wikidata": "https://www.wikidata.org/wiki/Q209217"
+  },
+  "era": "after-1000-ce",
+  "earliest_cited_year": 1100,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "Great Zimbabwe is a stone-walled city in southern Africa built by Shona people between about AD 1100 and 1450. Its traders were linked to goods from China and Persia.",
+    "student": "UNESCO says Great Zimbabwe was built between AD 1100 and 1450 and founded in the 11th century by Bantu-speaking Shona people of the Iron Age; it held over 10,000 people in the 14th century and was abandoned around 1450. Beads of glass, and porcelain traced to China and to Persia, were found there. UNESCO states the site is unquestionably of Bantu origin; older stories giving it a foreign origin are legends. Inscribed 1986."
+  },
+  "timeline": [
+    {
+      "date": "1100",
+      "end": "1450",
+      "precision": "year",
+      "approximate": true,
+      "event": "Built between AD 1100 and 1450",
+      "source": "unesco-whc-364"
+    },
+    {
+      "date": "1450",
+      "precision": "year",
+      "approximate": true,
+      "event": "Abandoned (around 1450)",
+      "source": "unesco-whc-364"
+    },
+    {
+      "date": "1986",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-364"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Builders",
+      "value": "Shona people (Bantu, Iron Age); UNESCO: unquestionably of Bantu origin",
+      "source": "unesco-whc-364"
+    },
+    {
+      "label": "Population",
+      "value": "Over 10,000 in the 14th century",
+      "source": "unesco-whc-364"
+    },
+    {
+      "label": "Trade",
+      "value": "Beads of glass, and porcelain traced to China and to Persia, were found at the site",
+      "source": "unesco-whc-364"
+    },
+    {
+      "label": "Size",
+      "value": "About 80 ha",
+      "source": "pleiades-322739224"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "unesco-whc-364",
+    "pleiades-322739224",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-364"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "why the city was abandoned (not settled in our cited sources)"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

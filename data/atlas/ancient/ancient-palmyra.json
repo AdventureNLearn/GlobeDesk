@@ -1,0 +1,133 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-palmyra",
+  "title": "Palmyra",
+  "kind": "site",
+  "country": "SY",
+  "place": {
+    "label": "Palmyra, Homs Governorate, Syria",
+    "pin": "shown",
+    "lat": 34.554167,
+    "lng": 38.266667,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for Site of Palmyra (World Heritage List 23), published as N34 33 15 E38 16 0 at https://whc.unesco.org/en/list/23/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": "https://pleiades.stoa.org/places/668331",
+    "wikidata": "https://www.wikidata.org/wiki/Q5747"
+  },
+  "era": "3000-1001-bce",
+  "earliest_cited_year": -1999,
+  "status": "World Heritage in Danger",
+  "status_note": "Damage and Danger-list status are from UNESCO and UN satellite sources, linked. We show no damage images and no conflict detail beyond the dated losses.",
+  "sensitive": true,
+  "tiers": {
+    "everyday": "Palmyra was a desert oasis city in Syria on caravan routes. UNESCO has listed it as World Heritage in Danger since 2013. Several of its best-known monuments were destroyed in 2015.",
+    "student": "UNESCO notes Palmyra is first mentioned in the Mari archives in the 2nd millennium BC, passed into Roman hands around the middle of the first century AD, and is known for 1st-2nd century art and architecture, including a 1,100 m colonnaded street. Pleiades notes it was the capital of the Palmyrene Empire under Zenobia. UN satellite analysis (UNITAR-UNOSAT) dates the destruction of the Baalshamin Temple to 25-27 August 2015, the Temple of Bel to 30 August 2015 and the Arch of Triumph to 5 October 2015. Its present condition and any restoration are [UNKNOWN] in our sources; see the UNESCO page."
+  },
+  "timeline": [
+    {
+      "date": "-1999",
+      "precision": "year",
+      "approximate": true,
+      "event": "First mentioned in the Mari archives (2nd millennium BC)",
+      "source": "unesco-whc-23"
+    },
+    {
+      "date": "50",
+      "precision": "year",
+      "approximate": true,
+      "event": "Comes under Roman control (mid-1st century AD)",
+      "source": "unesco-whc-23"
+    },
+    {
+      "date": "1980",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-23"
+    },
+    {
+      "date": "2013",
+      "precision": "year",
+      "approximate": false,
+      "event": "Added to UNESCO's In Danger listing",
+      "source": "unesco-whc-23"
+    },
+    {
+      "date": "2015-08",
+      "precision": "month",
+      "approximate": false,
+      "event": "Baalshamin Temple destroyed (between 25 and 27 August 2015)",
+      "source": "unitar-chs-2016"
+    },
+    {
+      "date": "2015-08-30",
+      "precision": "day",
+      "approximate": false,
+      "event": "Temple of Bel destroyed with explosives",
+      "source": "unesco-news-1341"
+    },
+    {
+      "date": "2015-10-05",
+      "precision": "day",
+      "approximate": false,
+      "event": "Arch of Triumph destroyed",
+      "source": "unitar-chs-2016"
+    },
+    {
+      "date": "2016-03-25",
+      "precision": "day",
+      "approximate": false,
+      "event": "UNESCO statement listing the destroyed monuments and offering an assessment mission",
+      "source": "unesco-news-1471"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Danger listing",
+      "value": "UNESCO has classed the site as In Danger from 2013 to the present (UNESCO property page and In Danger listing, read 2026-11-27)",
+      "source": "unesco-whc-23"
+    },
+    {
+      "label": "Satellite check",
+      "value": "UNOSAT images of 27 and 31 August 2015 show the Temple of Bel destroyed",
+      "source": "unosat-1015"
+    },
+    {
+      "label": "Colonnaded street",
+      "value": "1,100 m long",
+      "source": "unesco-whc-23"
+    },
+    {
+      "label": "Later history",
+      "value": "Capital of the Palmyrene Empire under Zenobia; razed by Aurelian",
+      "source": "pleiades-668331"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "unesco-whc-23",
+    "unesco-news-1341",
+    "unesco-news-1471",
+    "unosat-1015",
+    "unitar-chs-2016",
+    "pleiades-668331",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-23",
+    "unesco-news-1341",
+    "unesco-news-1471",
+    "unosat-1015",
+    "unitar-chs-2016"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "current condition of the site after 2016",
+    "status of any restoration work"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

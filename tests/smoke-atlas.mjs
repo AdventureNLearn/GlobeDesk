@@ -10,6 +10,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PORT = Number(process.env.SMOKE_PORT || 8231);
 const DBG = Number(process.env.SMOKE_DBG || 9451);
 const W = 1280, H = 800;
+// The desk menu lists every desk in desks/work-desks.json (News is one of them); derive the count so adding a desk cannot silently break it.
+const DESK_COUNT = JSON.parse(fs.readFileSync(path.join(root, "desks/work-desks.json"), "utf8")).desks.length;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const WARN_RE = /performance warning|READ-usage buffer|shadow copy that was created to accelerate readback/i;
 // Isolated smoke blocks off-box hosts. Hybrid base still tries OpenFreeMap; that is not a product regression.
@@ -107,7 +109,7 @@ try {
   const q = (expr) => ev(expr);
   const out = {};
   out.boot = await q(`({ view: document.body.className, cards: document.querySelectorAll(".nd-card").length, ver: document.getElementById("appVersion").textContent, desk: document.getElementById("deskSelect").value, desks: document.getElementById("deskSelect").options.length, atlasHidden: document.getElementById("atlasView").hidden })`);
-  if (out.boot.cards !== 50 || out.boot.desk !== "news" || out.boot.desks !== 10 || !out.boot.atlasHidden) throw new Error("boot: " + JSON.stringify(out.boot));
+  if (out.boot.cards !== 50 || out.boot.desk !== "news" || out.boot.desks !== DESK_COUNT || !out.boot.atlasHidden) throw new Error("boot: " + JSON.stringify(out.boot));
   if (!/v1\.5\.1 · Atlas/.test(out.boot.ver)) throw new Error("version: " + out.boot.ver);
 
   // Bells layer: pins (or clusters) on the globe at start, from the bundled Bells pack.

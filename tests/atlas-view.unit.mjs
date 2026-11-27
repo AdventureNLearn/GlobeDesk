@@ -13,8 +13,8 @@ const ctx = { window: {} }; vm.createContext(ctx); vm.runInContext(js, ctx);
 const D = JSON.parse(JSON.stringify(ctx.window.GD.atlasData)); // same-realm copy for deepStrictEqual
 
 t("generated js/atlas/atlas-data.js matches the JSON sources (rebuild with tools/atlas/build-js.mjs)", () => assert.equal(js, render(buildData())));
-t("bundle carries 12 categories, 10 desks and the community lane", () => {
-  assert.equal(D.categories.length, 12); assert.equal(D.desks.desks.length, 10); assert.equal(D.community.schema, "globedesk.community/1");
+t("bundle carries 12 categories, 11 desks and the community lane", () => {
+  assert.equal(D.categories.length, 12); assert.equal(D.desks.desks.length, 11); assert.equal(D.community.schema, "globedesk.community/1");
   assert.ok(D.openItems >= 12);
 });
 t("A-Z lists every title and alias, sorted, with jump letters; placeholders sort by name", () => {

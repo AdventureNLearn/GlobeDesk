@@ -1,0 +1,68 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-teotihuacan",
+  "title": "Teotihuacan",
+  "kind": "site",
+  "country": "MX",
+  "place": {
+    "label": "Teotihuacan, State of Mexico, Mexico",
+    "pin": "shown",
+    "lat": 19.69167,
+    "lng": -98.84167,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for Pre-Hispanic City of Teotihuacan (World Heritage List 414), published as N19 41 30.012 W98 50 30.012 at https://whc.unesco.org/en/list/414/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": null,
+    "wikidata": "https://www.wikidata.org/wiki/Q172613"
+  },
+  "era": "1-1000-ce",
+  "earliest_cited_year": 1,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "Teotihuacan near Mexico City was a huge planned city with the Sun and Moon pyramids. It rose during the 1st through 7th centuries AD.",
+    "student": "UNESCO says Teotihuacan, about 50 km from Mexico City to the north-east, rose during the 1st through 7th centuries AD and is known for the Sun and Moon pyramids and the Temple of Quetzalcoatl. Inscribed 1987."
+  },
+  "timeline": [
+    {
+      "date": "1",
+      "end": "699",
+      "precision": "year",
+      "approximate": true,
+      "event": "The city rose during the 1st through 7th centuries AD",
+      "source": "unesco-whc-414"
+    },
+    {
+      "date": "1987",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-414"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Monuments",
+      "value": "Pyramids of the Sun and Moon, Temple of Quetzalcoatl",
+      "source": "unesco-whc-414"
+    },
+    {
+      "label": "Location",
+      "value": "About 50 km from Mexico City, to the north-east",
+      "source": "unesco-whc-414"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "unesco-whc-414",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-414"
+  ],
+  "official_status": "listed",
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

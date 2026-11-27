@@ -1,0 +1,73 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-caral",
+  "title": "Caral",
+  "kind": "site",
+  "country": "PE",
+  "place": {
+    "label": "Caral, Supe valley, Lima Region, Peru",
+    "pin": "shown",
+    "lat": -10.891667,
+    "lng": -77.521389,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for Sacred City of Caral-Supe (World Heritage List 1269), published as S10 53 30 W77 31 17 at https://whc.unesco.org/en/list/1269/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": null,
+    "wikidata": "https://www.wikidata.org/wiki/Q219279"
+  },
+  "era": "3000-1001-bce",
+  "earliest_cited_year": -2999,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "Caral in Peru's Supe valley is a 5,000-year-old city with large stone pyramid platforms. UNESCO regards it as the Americas' oldest civilisation centre.",
+    "student": "UNESCO dates Caral by radiocarbon to between 3000 and 1800 BC, in the Late Archaic period. The 626 ha site has six pyramidal structures, and a quipu (knotted-cord record) was found there. UNESCO regards it as the Americas' oldest civilisation centre. It was inscribed in 2009."
+  },
+  "timeline": [
+    {
+      "date": "-2999",
+      "end": "-1799",
+      "precision": "year",
+      "approximate": true,
+      "event": "Occupied in the Late Archaic period (radiocarbon dates 3000-1800 BC)",
+      "source": "unesco-whc-1269"
+    },
+    {
+      "date": "2009",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-1269"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Area",
+      "value": "626 ha",
+      "source": "unesco-whc-1269"
+    },
+    {
+      "label": "Monuments",
+      "value": "Six pyramidal structures",
+      "source": "unesco-whc-1269"
+    },
+    {
+      "label": "Find",
+      "value": "A quipu (knotted-cord record)",
+      "source": "unesco-whc-1269"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "unesco-whc-1269",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-1269"
+  ],
+  "official_status": "listed",
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -3,11 +3,77 @@
   "generated": "2026-11-24",
   "dates": [
     {
+      "date": "-9599",
+      "precision": "year",
+      "approximate": true,
+      "end": "-8199",
+      "entry": "ancient-goebekli-tepe"
+    },
+    {
+      "date": "-3799",
+      "precision": "year",
+      "approximate": true,
+      "entry": "ancient-ur"
+    },
+    {
+      "date": "-2999",
+      "precision": "year",
+      "approximate": true,
+      "end": "-1799",
+      "entry": "ancient-caral"
+    },
+    {
+      "date": "-2999",
+      "precision": "year",
+      "approximate": true,
+      "entry": "ancient-mohenjo-daro"
+    },
+    {
+      "date": "-2999",
+      "precision": "year",
+      "approximate": true,
+      "entry": "ancient-troy"
+    },
+    {
+      "date": "-2669",
+      "precision": "year",
+      "approximate": true,
+      "end": "-2167",
+      "entry": "ancient-giza"
+    },
+    {
+      "date": "-2499",
+      "precision": "year",
+      "approximate": true,
+      "end": "-1199",
+      "entry": "ancient-merv"
+    },
+    {
+      "date": "-2499",
+      "precision": "year",
+      "approximate": true,
+      "end": "-1499",
+      "entry": "ancient-mohenjo-daro"
+    },
+    {
+      "date": "-1999",
+      "precision": "year",
+      "approximate": true,
+      "entry": "ancient-palmyra"
+    },
+    {
       "date": "-799",
       "precision": "year",
       "approximate": true,
       "end": "-699",
       "entry": "nimrud-bronze-bell"
+    },
+    {
+      "date": "-599",
+      "precision": "year",
+      "approximate": true,
+      "end": "1799",
+      "entry": "ancient-merv"
     },
     {
       "date": "-432",
@@ -16,10 +82,37 @@
       "entry": "bianzhong-marquis-yi"
     },
     {
+      "date": "-399",
+      "precision": "year",
+      "approximate": true,
+      "end": "100",
+      "entry": "ancient-petra"
+    },
+    {
+      "date": "-245",
+      "precision": "year",
+      "approximate": true,
+      "end": "-207",
+      "entry": "ancient-qin-mausoleum"
+    },
+    {
+      "date": "1",
+      "precision": "year",
+      "approximate": true,
+      "end": "699",
+      "entry": "ancient-teotihuacan"
+    },
+    {
+      "date": "50",
+      "precision": "year",
+      "approximate": true,
+      "entry": "ancient-palmyra"
+    },
+    {
       "date": "79",
       "precision": "year",
       "approximate": false,
-      "entry": "vesuvius-79"
+      "entry": "ancient-pompeii"
     },
     {
       "date": "725",
@@ -44,6 +137,13 @@
       "precision": "year",
       "approximate": true,
       "entry": "byodoin-bell"
+    },
+    {
+      "date": "1100",
+      "precision": "year",
+      "approximate": true,
+      "end": "1450",
+      "entry": "ancient-great-zimbabwe"
     },
     {
       "date": "1210",
@@ -78,6 +178,12 @@
       "entry": "yongle-bell"
     },
     {
+      "date": "1450",
+      "precision": "year",
+      "approximate": true,
+      "entry": "ancient-great-zimbabwe"
+    },
+    {
       "date": "1484",
       "precision": "year",
       "approximate": true,
@@ -88,6 +194,13 @@
       "precision": "year",
       "approximate": false,
       "entry": "gloriosa-erfurt"
+    },
+    {
+      "date": "1500",
+      "precision": "year",
+      "approximate": true,
+      "end": "1599",
+      "entry": "myth-el-dorado"
     },
     {
       "date": "1520",
@@ -250,6 +363,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "old-north-bells"
+    },
+    {
+      "date": "1750",
+      "precision": "year",
+      "approximate": true,
+      "entry": "ancient-pompeii"
     },
     {
       "date": "1751",
@@ -940,6 +1059,12 @@
       "entry": "golden-spike-1869"
     },
     {
+      "date": "1870",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-troy"
+    },
+    {
       "date": "1870-02-03",
       "precision": "day",
       "approximate": false,
@@ -1458,6 +1583,12 @@
       "entry": "mechelen-carillons"
     },
     {
+      "date": "1922",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-mohenjo-daro"
+    },
+    {
       "date": "1922-03-13",
       "precision": "day",
       "approximate": false,
@@ -1541,6 +1672,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "bow-bells"
+    },
+    {
+      "date": "1933",
+      "precision": "year",
+      "approximate": false,
+      "entry": "myth-shangri-la"
     },
     {
       "date": "1935-08-14",
@@ -1989,6 +2126,12 @@
       "entry": "luna-9-landing-site"
     },
     {
+      "date": "1969",
+      "precision": "year",
+      "approximate": false,
+      "entry": "myth-el-dorado"
+    },
+    {
       "date": "1969-07-16",
       "precision": "day",
       "approximate": false,
@@ -2067,6 +2210,12 @@
       "entry": "fall-of-saigon-1975"
     },
     {
+      "date": "1974",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-qin-mausoleum"
+    },
+    {
       "date": "1974-07",
       "precision": "month",
       "approximate": false,
@@ -2112,6 +2261,12 @@
       "date": "1979",
       "precision": "year",
       "approximate": false,
+      "entry": "ancient-giza"
+    },
+    {
+      "date": "1979",
+      "precision": "year",
+      "approximate": false,
       "entry": "cape-town-st-georges-bells"
     },
     {
@@ -2119,6 +2274,18 @@
       "precision": "year",
       "approximate": false,
       "entry": "wonder-colosseum"
+    },
+    {
+      "date": "1980",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-mohenjo-daro"
+    },
+    {
+      "date": "1980",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-palmyra"
     },
     {
       "date": "1980-05-18",
@@ -2163,6 +2330,18 @@
       "entry": "hassium-element"
     },
     {
+      "date": "1985",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-petra"
+    },
+    {
+      "date": "1986",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-great-zimbabwe"
+    },
+    {
       "date": "1986",
       "precision": "year",
       "approximate": false,
@@ -2179,6 +2358,18 @@
       "precision": "year",
       "approximate": false,
       "entry": "wonder-great-wall"
+    },
+    {
+      "date": "1987",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-qin-mausoleum"
+    },
+    {
+      "date": "1987",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-teotihuacan"
     },
     {
       "date": "1988",
@@ -2259,10 +2450,28 @@
       "entry": "wellington-carillon"
     },
     {
+      "date": "1997",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-pompeii"
+    },
+    {
+      "date": "1998",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-troy"
+    },
+    {
       "date": "1999",
       "precision": "year",
       "approximate": false,
       "entry": "bruges-belfry-carillon"
+    },
+    {
+      "date": "1999",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-merv"
     },
     {
       "date": "1999",
@@ -2371,6 +2580,12 @@
       "date": "2009",
       "precision": "year",
       "approximate": false,
+      "entry": "ancient-caral"
+    },
+    {
+      "date": "2009",
+      "precision": "year",
+      "approximate": false,
       "entry": "tennessine-element"
     },
     {
@@ -2390,6 +2605,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "wonder-christ-the-redeemer"
+    },
+    {
+      "date": "2013",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-palmyra"
     },
     {
       "date": "2013-01-31",
@@ -2416,10 +2637,46 @@
       "entry": "hms-hood-bell"
     },
     {
+      "date": "2015-08",
+      "precision": "month",
+      "approximate": false,
+      "entry": "ancient-palmyra"
+    },
+    {
+      "date": "2015-08-30",
+      "precision": "day",
+      "approximate": false,
+      "entry": "ancient-palmyra"
+    },
+    {
+      "date": "2015-10-05",
+      "precision": "day",
+      "approximate": false,
+      "entry": "ancient-palmyra"
+    },
+    {
+      "date": "2016",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-ur"
+    },
+    {
+      "date": "2016-03-25",
+      "precision": "day",
+      "approximate": false,
+      "entry": "ancient-palmyra"
+    },
+    {
       "date": "2016-05-24",
       "precision": "day",
       "approximate": false,
       "entry": "hms-hood-bell"
+    },
+    {
+      "date": "2018",
+      "precision": "year",
+      "approximate": false,
+      "entry": "ancient-goebekli-tepe"
     },
     {
       "date": "2018-10",
@@ -2567,6 +2824,7 @@
     }
   ],
   "undated": [
+    "ancient-world-overview",
     "antimony-element",
     "arsenic-element",
     "bag-solar-kit",
@@ -2595,6 +2853,7 @@
     "lifepo4-vs-nmc",
     "lithium-batteries-air-travel",
     "mercury-element",
+    "myth-atlantis",
     "severe-weather-hazard-safety",
     "portable-solar-power",
     "public-health-records-gho-nchs",

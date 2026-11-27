@@ -771,6 +771,18 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .wd-swatch { --c: #d9438f; }
 .wd-positions { margin: 2px 0 4px 1.1rem; }
 .wd-steps li, .wd-vote li { margin-bottom: 3px; }
+/* Ancient World layer: sandstone pins, always dashed (every pin is an approximate site centre); a red ring marks a site on the Danger list */
+.aw-pin, .aw-cluster { min-width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; padding: 0; cursor: pointer; }
+.aw-glyph { display: block; width: 18px; height: 18px; transform: rotate(45deg); border-radius: 3px; background: linear-gradient(160deg, #f2d49b, #b9773a); border: 2px dashed #fff6e4; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); }
+.aw-danger .aw-glyph { outline: 2px solid #ff6b6b; outline-offset: 2px; }
+.aw-pin:focus-visible, .aw-cluster:focus-visible { outline: 2px solid var(--gd-gold); outline-offset: 2px; border-radius: 8px; }
+.aw-cluster { min-width: 34px; width: auto; height: 34px; border-radius: 17px; margin: 5px; padding: 0 8px; background: rgba(54, 34, 14, 0.9); border: 2px dashed #f2d49b; color: #ffe9c2; font-weight: 700; font-size: 12px; }
+.aw-swatch { --c: #d9a45e; }
+.aw-filters select { max-width: 12rem; }
+.aw-myths { padding: 0 0 4px 30px; }
+.aw-outline-swatch { width: 18px; height: 12px; border: 1.5px dashed #f2d49b; background: rgba(217, 164, 94, 0.15); border-radius: 2px; }
+.aw-credit { display: block; overflow-wrap: anywhere; }
+.at-claim { margin: 2px 0; }
 .at-ov h4 { margin: 10px 0 2px; }
 .at-timeline-list { padding-left: 18px; }
 .at-timeline-list li { margin: 2px 0; }

@@ -1,0 +1,72 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-giza",
+  "title": "Giza pyramids",
+  "kind": "site",
+  "country": "EG",
+  "place": {
+    "label": "Giza plateau, Giza Governorate, Egypt",
+    "pin": "shown",
+    "lat": 29.97604,
+    "lng": 31.13041,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for component 86-002 (Pyramid fields from Giza to Dahshur) of Memphis and its Necropolis – the Pyramid Fields from Giza to Dahshur, published as N29 58 33.744 E31 7 49.476 at https://whc.unesco.org/en/list/86/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": "https://pleiades.stoa.org/places/442962448",
+    "wikidata": "https://www.wikidata.org/wiki/Q12508"
+  },
+  "era": "3000-1001-bce",
+  "earliest_cited_year": -2669,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "The pyramids of Giza in Egypt are royal tombs from the Old Kingdom. Of the ancient Seven Wonders, only Khufu's Great Pyramid still stands.",
+    "student": "Pleiades records the Giza Necropolis, with its pyramid complexes, in the Old Kingdom period, which it dates to 2670-2168 BC. UNESCO lists the Giza pyramid fields within Memphis and its Necropolis, the Old Kingdom capital, inscribed in 1979, and notes that, of the ancient world's wonders, only Khufu's Great Pyramid still stands. The pin is UNESCO's official point for the Giza-to-Dahshur pyramid-fields component of that property, which also includes the Site of Memphis."
+  },
+  "timeline": [
+    {
+      "date": "-2669",
+      "end": "-2167",
+      "precision": "year",
+      "approximate": true,
+      "event": "Old Kingdom period (2670-2168 BC in the Pleiades chronology), when the pyramid complexes were built",
+      "source": "pleiades-period-old-kingdom-egypt"
+    },
+    {
+      "date": "1979",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed as part of Memphis and its Necropolis",
+      "source": "unesco-whc-86"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Wonder",
+      "value": "Of the ancient world's wonders, only Khufu's Great Pyramid still stands",
+      "source": "unesco-whc-86"
+    },
+    {
+      "label": "Setting",
+      "value": "Necropolis of Memphis, the Old Kingdom capital",
+      "source": "unesco-whc-86"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "pleiades-442962448",
+    "pleiades-period-old-kingdom-egypt",
+    "unesco-whc-86",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-86"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "exact build years of each pyramid are not in our cited sources"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

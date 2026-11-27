@@ -3,7 +3,7 @@
   "status": "draft",
   "checked": "2026-11-24",
   "license": "CC BY 4.0",
-  "note": "Ten desks: the existing news desk plus nine work desks. Official sources are primary or public records only (government, standards bodies, datasets with a named licence). Public AdventureNLearn repositories and Learning Lab cards are listed under Experimental references, labelled 'Experimental (not an official source)', and never count as a record backing a claim. Atlas entries, news sections and episodes are GlobeDesk's own content (class internal), not sources. Generic sample desks with no public link yet appear as 'Sample desk: \u2026 (link pending)' with no link. A desk with no official source shows official source [UNKNOWN] and is listed in atlas/OPEN-ITEMS.md. Depth labels come from the source inventory; anything a source does not label is [UNKNOWN].",
+  "note": "Eleven desks: the existing news desk plus ten work desks. Official sources are primary or public records only (government, standards bodies, datasets with a named licence). Public AdventureNLearn repositories and Learning Lab cards are listed under Experimental references, labelled 'Experimental (not an official source)', and never count as a record backing a claim. Atlas entries, news sections and episodes are GlobeDesk's own content (class internal), not sources. Generic sample desks with no public link yet appear as 'Sample desk: … (link pending)' with no link. A desk with no official source shows official source [UNKNOWN] and is listed in atlas/OPEN-ITEMS.md. Depth labels come from the source inventory; anything a source does not label is [UNKNOWN].",
   "tiers": [
     "kids",
     "everyday",
@@ -740,6 +740,71 @@
           "url": "https://www.pclob.gov/",
           "class": "official",
           "checked": "2026-11-24"
+        }
+      ],
+      "official_status": "listed"
+    },
+    {
+      "n": 11,
+      "id": "ancient-world",
+      "title": "Ancient World",
+      "scope": "Ancient sites, lost cities and myths, from Göbekli Tepe (about 9600 BC) on, each fact cited to UNESCO or Pleiades. Runs on its own deep-time clock. All 13 site pins are shown: official UNESCO World Heritage points, except Pompeii (Pleiades). Myths have no pins.",
+      "tier_note": "Everyday and student texts are written. Kids and professional versions are not written yet.",
+      "tiers": {
+        "kids": "not written",
+        "everyday": "written (Atlas Ancient World pack)",
+        "student": "written (Atlas Ancient World pack)",
+        "professional": "[UNKNOWN]"
+      },
+      "news_sections": [],
+      "atlas_categories": [
+        "history-places"
+      ],
+      "clock": "deep-time",
+      "backing": [
+        {
+          "kind": "atlas",
+          "label": "Atlas: Ancient World overview",
+          "entry": "ancient-world-overview",
+          "depth": "everyday",
+          "class": "internal"
+        },
+        {
+          "kind": "atlas",
+          "label": "Atlas: Pompeii",
+          "entry": "ancient-pompeii",
+          "depth": "student",
+          "class": "internal"
+        },
+        {
+          "kind": "atlas",
+          "label": "Atlas: Palmyra (World Heritage in Danger)",
+          "entry": "ancient-palmyra",
+          "depth": "student",
+          "class": "internal"
+        },
+        {
+          "kind": "atlas",
+          "label": "Atlas: Myth: Atlantis",
+          "entry": "myth-atlantis",
+          "depth": "everyday",
+          "class": "internal"
+        }
+      ],
+      "official_sources": [
+        {
+          "label": "World Heritage List",
+          "publisher": "UNESCO World Heritage Centre",
+          "url": "https://whc.unesco.org/en/list/",
+          "class": "official",
+          "checked": "2026-11-26"
+        },
+        {
+          "label": "List of World Heritage in Danger",
+          "publisher": "UNESCO World Heritage Centre",
+          "url": "https://whc.unesco.org/en/danger/",
+          "class": "official",
+          "checked": "2026-11-26"
         }
       ],
       "official_status": "listed"

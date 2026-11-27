@@ -1,0 +1,24 @@
+{
+  "schema": "globedesk.atlas-pack/1",
+  "id": "ancient-world",
+  "title": "Atlas pack: History and places: Ancient World",
+  "kind": "category",
+  "category": "history-places",
+  "refresh": "quarterly",
+  "version": "0.1.0-draft",
+  "license": "CC BY 4.0",
+  "checked": "2026-11-24",
+  "sha256": "82f8e95769bdc82b9125d16cd164090cb185edd67dfb667c9d1663df17e32ac6",
+  "entry_count": 17,
+  "size_bytes": 45797,
+  "max_bytes": 52428800,
+  "promote": "owner-yes-required",
+  "status": "draft",
+  "files": [
+    {
+      "path": "entries.json",
+      "bytes": 45797,
+      "sha256": "7e10a039277a620cf2c221c2484201ce10f2b0934402d17cdbf1c941a43a5420"
+    }
+  ]
+}

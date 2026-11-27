@@ -1,0 +1,54 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "myth-shangri-la",
+  "title": "Myth: Shangri-La",
+  "kind": "myth",
+  "place": null,
+  "era": "[UNKNOWN]",
+  "status": "Myth or legend: no pin",
+  "tiers": {
+    "everyday": "Shangri-La is a made-up valley in the Himalayas from James Hilton's 1933 novel Lost Horizon. It is fiction, not a lost city.",
+    "student": "A library catalog record of Lost horizon (New York: William Morrow & Co., 1933) by James Hilton (1900-1954, per the Library of Congress) summarises the novel as set in Shangri-La, a Himalayan place where time has almost stopped. The story's source is the novel; a real Shangri-La at a known place is not proven."
+  },
+  "timeline": [
+    {
+      "date": "1933",
+      "precision": "year",
+      "approximate": false,
+      "event": "Lost Horizon published (William Morrow & Co.)",
+      "source": "lion-lost-horizon"
+    }
+  ],
+  "facts": [],
+  "claims": [
+    {
+      "text": "Shangri-La comes from James Hilton's novel Lost Horizon (1933)",
+      "claimStatus": "supported",
+      "sourceIds": [
+        "lion-lost-horizon",
+        "loc-hilton-authority"
+      ]
+    },
+    {
+      "text": "Shangri-La is a real place at a known location",
+      "claimStatus": "not-proven",
+      "sourceIds": [],
+      "note": "No cited source places it; we draw no pin."
+    }
+  ],
+  "sources": [
+    "lion-lost-horizon",
+    "loc-hilton-authority"
+  ],
+  "official_sources": [
+    "loc-hilton-authority"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "the copyright status of the novel; we quote nothing from it"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

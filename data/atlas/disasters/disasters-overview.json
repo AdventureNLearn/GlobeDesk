@@ -30,11 +30,6 @@
       "linked": false
     },
     {
-      "id": "vesuvius-79",
-      "hazard": "eruption",
-      "linked": false
-    },
-    {
       "id": "lisbon-1755",
       "hazard": "earthquake",
       "linked": false
@@ -47,6 +42,11 @@
     {
       "id": "san-francisco-earthquake-1906",
       "hazard": "earthquake",
+      "linked": true
+    },
+    {
+      "id": "ancient-pompeii",
+      "hazard": "eruption",
       "linked": true
     }
   ],
@@ -76,6 +76,40 @@
         {
           "text": "NCEI lists magnitude 7.9 (Mw) and 700 deaths; other published tolls were not reviewed [UNKNOWN].",
           "source": "ncei-sig-earthquakes"
+        }
+      ]
+    },
+    {
+      "id": "ancient-pompeii",
+      "hazard": "eruption",
+      "facts": [
+        {
+          "text": "NCEI rates the 79 CE eruption of Vesuvius VEI 5 and counts 2,100 deaths, dated 25 August 79.",
+          "source": "ncei-sig-volcanoes"
+        },
+        {
+          "text": "The USGS deadliest-eruptions table gives 3,360, mainly from pyroclastic flow.",
+          "source": "usgs-deadliest-eruptions"
+        },
+        {
+          "text": "The 79 CE eruption buried Herculaneum and Pompeii and was described in letters by Pliny the Younger.",
+          "source": "usgs-yvo-naples"
+        },
+        {
+          "text": "USGS counts eight major explosive eruptions since a caldera formed about 17,000 years ago.",
+          "source": "usgs-yvo-naples"
+        },
+        {
+          "text": "Eruptions were frequent from 1631 to 1944; the most recent eruption was in 1944.",
+          "source": "usgs-yvo-naples"
+        },
+        {
+          "text": "The INGV Vesuvius Observatory, founded in 1841, is the first volcano observatory in the world.",
+          "source": "usgs-yvo-naples"
+        },
+        {
+          "text": "NCEI links this eruption to an earthquake record and a tsunami record.",
+          "source": "ncei-sig-volcanoes"
         }
       ]
     }

@@ -1,0 +1,70 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "myth-el-dorado",
+  "title": "Myth: El Dorado",
+  "kind": "myth",
+  "place": null,
+  "era": "[UNKNOWN]",
+  "status": "Myth or legend: no pin",
+  "tiers": {
+    "everyday": "El Dorado began as Spanish retellings of a Muisca ceremony in what is now Colombia, where a leader offered gold on a lake. It grew into a legend of a city of gold that was never found.",
+    "student": "Banco de la República (Museo del Oro) explains that a Muisca offering ceremony was told to Europeans in the 16th century and grew into the El Dorado legend. A gold Muisca raft found in 1969 in a cave near Pasca is linked to the ceremony Spanish chroniclers described. The ceremony is documented; a city of gold is not proven."
+  },
+  "timeline": [
+    {
+      "date": "1500",
+      "end": "1599",
+      "precision": "year",
+      "approximate": true,
+      "event": "Ceremony story told to Europeans (16th century)",
+      "source": "banrep-creacion-mito"
+    },
+    {
+      "date": "1969",
+      "precision": "year",
+      "approximate": false,
+      "event": "Muisca gold raft found in a cave near Pasca",
+      "source": "banrep-balsa-muisca"
+    }
+  ],
+  "facts": [],
+  "claims": [
+    {
+      "text": "Spanish chroniclers described a Muisca offering ceremony that became the El Dorado story",
+      "claimStatus": "supported",
+      "sourceIds": [
+        "banrep-creacion-mito",
+        "banrep-balsa-muisca"
+      ]
+    },
+    {
+      "text": "A gold Muisca raft linked to the ceremony was found in 1969 near Pasca",
+      "claimStatus": "supported",
+      "sourceIds": [
+        "banrep-balsa-muisca"
+      ]
+    },
+    {
+      "text": "A city of gold existed at a known location",
+      "claimStatus": "not-proven",
+      "sourceIds": [],
+      "note": "No cited source places one; we draw no pin."
+    }
+  ],
+  "sources": [
+    "banrep-creacion-mito",
+    "banrep-balsa-muisca"
+  ],
+  "official_sources": [
+    "banrep-creacion-mito",
+    "banrep-balsa-muisca"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "the exact year of the first written account is not in our cited sources"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

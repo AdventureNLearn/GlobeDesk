@@ -1,0 +1,74 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-petra",
+  "title": "Petra",
+  "kind": "site",
+  "country": "JO",
+  "place": {
+    "label": "Petra, Ma'an Governorate, Jordan",
+    "pin": "shown",
+    "lat": 30.33056,
+    "lng": 35.44333,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for Petra (World Heritage List 326), published as N30 19 50.016 E35 26 35.988 at https://whc.unesco.org/en/list/326/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": "https://pleiades.stoa.org/places/697725",
+    "wikidata": "https://www.wikidata.org/wiki/Q5788"
+  },
+  "era": "1000-1-bce",
+  "earliest_cited_year": -399,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "Petra in Jordan was the rock-cut capital of the Nabataeans, a trading people known for tombs and temples cut into sandstone.",
+    "student": "UNESCO links Petra to the Nabataean civilization of the 4th century BC to the 1st century AD, notes the area was inhabited since prehistoric times, and describes it as a caravan centre in Hellenistic and Roman times. Pleiades calls it the Nabataean capital. Inscribed 1985."
+  },
+  "timeline": [
+    {
+      "date": "-399",
+      "end": "100",
+      "precision": "year",
+      "approximate": true,
+      "event": "Nabataean civilization (4th century BC to 1st century AD)",
+      "source": "unesco-whc-326"
+    },
+    {
+      "date": "1985",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-326"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Role",
+      "value": "Capital of the Nabataeans",
+      "source": "pleiades-697725"
+    },
+    {
+      "label": "Architecture",
+      "value": "Elaborate tomb and temple architecture and religious high places",
+      "source": "unesco-whc-326"
+    },
+    {
+      "label": "Trade",
+      "value": "Caravan centre in Hellenistic and Roman times",
+      "source": "unesco-whc-326"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "unesco-whc-326",
+    "pleiades-697725",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-326"
+  ],
+  "official_status": "listed",
+  "unknowns": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

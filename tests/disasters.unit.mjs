@@ -27,29 +27,39 @@ const rec = (id) => clone(D.records[byId.get(id).record]);
 const ov = () => clone(D.records["data/atlas/disasters/disasters-overview.json"]);
 
 t("the whole atlas validates (disasters included)", () => assert.deepEqual(validateAtlas(), []));
-t("first batch: Krakatau, Tambora, Vesuvius, Lisbon as new records; each cites NCEI as official", () => {
-  assert.deepEqual(events.map((e) => e.id).sort(), ["krakatau-1883", "lisbon-1755", "tambora-1815", "vesuvius-79"]);
+t("first batch: Krakatau, Tambora, Lisbon as new records; each cites NCEI as official", () => {
+  assert.deepEqual(events.map((e) => e.id).sort(), ["krakatau-1883", "lisbon-1755", "tambora-1815"]);
   events.forEach((e) => { const r = rec(e.id); assert.ok(r.official_sources.includes(r.ncei.dataset)); assert.equal(r.place.approximate, true); assert.match(e.places[0].note, /approximate/); });
 });
-t("Mount St. Helens 1980 and San Francisco 1906 are cross-linked, not duplicated", () => {
+t("Mount St. Helens 1980, San Francisco 1906 and Pompeii are cross-linked, not duplicated", () => {
   const o = ov();
-  ["mount-st-helens-1980", "san-francisco-earthquake-1906"].forEach((id) => {
+  [["mount-st-helens-1980", "history-places", undefined], ["san-francisco-earthquake-1906", "history-places", undefined], ["ancient-pompeii", "ancient-world", "ancient"]].forEach(([id, pack, layer]) => {
     assert.ok(o.members.some((m) => m.id === id && m.linked));
-    assert.equal(byId.get(id).pack, "history-places"); assert.equal(byId.get(id).layer, undefined);
+    assert.equal(byId.get(id).pack, pack); assert.equal(byId.get(id).layer, layer);
     assert.equal(D.entries.filter((e) => e.id === id).length, 1);
   });
+  assert.ok(!byId.has("vesuvius-79"));
 });
-t("back-links: the two existing events link to the overview, and the overview links back to them", () => {
+t("back-links: the linked events link to the overview, and the overview links back to them", () => {
   ["mount-st-helens-1980", "san-francisco-earthquake-1906"].forEach((id) => {
     assert.deepEqual(byId.get(id).related, [{ type: "see-also", to: "disasters-overview" }]);
     assert.ok(byId.get("disasters-overview").related.some((r) => r.to === id));
   });
+  assert.ok(byId.get("ancient-pompeii").related.some((r) => r.type === "see-also" && r.to === "disasters-overview"));
+  assert.ok(byId.get("ancient-pompeii").related.some((r) => r.type === "part-of" && r.to === "ancient-world-overview"));
+  assert.ok(byId.get("disasters-overview").related.some((r) => r.to === "ancient-pompeii"));
 });
 t("NCEI and USGS death tolls that differ are kept as people-disagree claims", () => {
-  ["tambora-1815", "vesuvius-79"].forEach((id) => assert.ok(rec(id).claims.some((c) => c.status === "people-disagree" && c.positions.length === 2)));
+  ["tambora-1815"].forEach((id) => assert.ok(rec(id).claims.some((c) => c.status === "people-disagree" && c.positions.length === 2)));
   assert.ok(rec("lisbon-1755").claims.some((c) => /fault/.test(c.text) && c.status === "people-disagree"));
 });
-t("Vesuvius points to the Ancient-world Pompeii entry by id only", () => assert.deepEqual(byId.get("vesuvius-79").see_also_ids, ["ancient-pompeii"]));
+t("the Pompeii entry is the Vesuvius 79 cross-link, not a separate disasters pin", () => {
+  const o = ov();
+  const linked = o.linked.find((l) => l.id === "ancient-pompeii");
+  assert.ok(linked && linked.hazard === "eruption");
+  assert.ok(linked.facts.some((f) => /2,100/.test(f.text) && f.source === "ncei-sig-volcanoes"));
+  assert.ok(linked.facts.some((f) => /3,360/.test(f.text) && f.source === "usgs-deadliest-eruptions"));
+});
 t("two stories, every step opens an Atlas entry and cites a source", () => {
   const o = ov(); assert.equal(o.stories.length, 2);
   o.stories.forEach((s) => s.steps.forEach((x) => { assert.ok(byId.has(x.entry)); assert.ok(x.sources.length && x.sources.every((id) => sourceById.has(id))); }));
@@ -102,7 +112,7 @@ t("rule: overview counts and story links are checked", () => {
   assert.ok(p.some((x) => /counts do not match/.test(x))); assert.ok(p.some((x) => /no-such-entry/.test(x)));
 });
 
-t("layer: six pins (4 new + 2 cross-linked from their own entries), all approximate, hazard filter works", () => {
+t("layer: six pins (3 new + 3 cross-linked from their own entries), all approximate, hazard filter works", () => {
   const ps = Layer.pins(D);
   assert.equal(ps.length, 6); assert.ok(ps.every((p) => p.approximate));
   const msh = ps.find((p) => p.id === "mount-st-helens-1980"); assert.ok(msh.linked); assert.equal(msh.lat, byId.get("mount-st-helens-1980").places[0].lat);

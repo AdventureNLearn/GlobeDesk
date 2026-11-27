@@ -1,0 +1,84 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-merv",
+  "title": "Merv",
+  "kind": "site",
+  "country": "TM",
+  "place": {
+    "label": "Ancient Merv, Mary Province, Turkmenistan",
+    "pin": "shown",
+    "lat": 37.664831,
+    "lng": 62.174892,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for component 886-001 (Historic urban centre of the Merv oasis, Erk and Gyaur Kala and Sultan Kala) of State Historical and Cultural Park “Ancient Merv”, published as N37 39 53.39 E62 10 29.61 at https://whc.unesco.org/en/list/886/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": "https://pleiades.stoa.org/places/961873",
+    "wikidata": "https://www.wikidata.org/wiki/Q193325"
+  },
+  "era": "3000-1001-bce",
+  "earliest_cited_year": -2499,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "Merv in Turkmenistan was a great oasis city on the Silk Roads. Its ruins hold several walled cities built side by side over more than 2,000 years.",
+    "student": "UNESCO describes Ancient Merv as Central Asia's most intact Silk Road oasis city, and the earliest of those that survive so fully, with towns from the third millennium BC, Bronze Age settlements (2500-1200 BC), and a high point when it served as the Great Seljuks' capital in the 11th and 12th centuries. Pleiades notes walled cities from the 6th century BC to the 18th century. Inscribed 1999. The pin is UNESCO's official point for the historic urban centre of the Merv oasis (Erk and Gyaur Kala and Sultan Kala), one component of this serial property; the property page itself publishes no single coordinate."
+  },
+  "timeline": [
+    {
+      "date": "-2499",
+      "end": "-1199",
+      "precision": "year",
+      "approximate": true,
+      "event": "Bronze Age centres in the oasis (2500-1200 BC)",
+      "source": "unesco-whc-886"
+    },
+    {
+      "date": "-599",
+      "end": "1799",
+      "precision": "year",
+      "approximate": true,
+      "event": "Walled cities built from the 6th century BC to the 18th century",
+      "source": "pleiades-961873"
+    },
+    {
+      "date": "1999",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-886"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Role",
+      "value": "Oasis city on the Silk Roads",
+      "source": "unesco-whc-886"
+    },
+    {
+      "label": "Peak",
+      "value": "Capital of the Great Seljuks, 11th-12th centuries",
+      "source": "unesco-whc-886"
+    },
+    {
+      "label": "Area",
+      "value": "353 ha inscribed, 883 ha buffer zone",
+      "source": "unesco-whc-886"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "unesco-whc-886",
+    "pleiades-961873",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-886"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "population at its peak"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

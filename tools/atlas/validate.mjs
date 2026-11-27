@@ -11,6 +11,7 @@ import { ATLAS, J, JR, MAX_BYTES, CATEGORY_PACKS, allEntries, fileInfo, packSha,
 
 const NOW_MAX_DAYS = 92; // "about 90 days"
 const SC = createRequire(import.meta.url)("../../js/source-class.js");
+const CK = createRequire(import.meta.url)("../../js/atlas/clocks.js");
 const asList = (r) => (Array.isArray(r) ? r : (r && r.errors) || []);
 
 // Rules a schema cannot express. Used on real entries and on test fixtures.
@@ -73,6 +74,8 @@ export function deskRules(doc) {
       if (o.class !== "official") p.push(`${at} official ${i + 1}: class must be official`);
       if (SC.isOwnerUrl(o.url)) p.push(`${at} official ${i + 1}: an owner repo or card cannot be an official source`);
     });
+    if (d.clock && !CK.byId(d.clock)) p.push(`${at}: unknown clock ${d.clock} (see js/atlas/clocks.js)`);
+    if (d.clock && CK.forDesk(d.id) !== CK.byId(d.clock)) p.push(`${at}: clock ${d.clock} does not list this desk`);
     const want = (d.official_sources || []).length ? "listed" : "[UNKNOWN]";
     if (d.official_status !== want) p.push(`${at}: official_status must be ${want}`);
   });
@@ -94,13 +97,15 @@ export function artifactRules(rel, rec, ctx, schema) {
 // and a globe layer object needs a lat/lng pin (a layer overview topic, such as bells-overview, has no single place).
 // History timeline range (owner decision 2026-11-24, OPEN-ITEMS #30): it starts at 1775 so the Old North
 // lanterns of April 1775 sit inside the timeline, and ends at the current release year.
-export const HISTORY_RANGE = { min: 1775, max: 2026 };
+// The range lives in js/atlas/clocks.js (the America 250 clock); other packs run on their own clock there.
+export const HISTORY_RANGE = (({ min, max }) => ({ min, max }))(CK.byId("america-250"));
 
 export function historyRules(e, ctx) {
   const p = [];
   const at = `entry ${e.id}`;
   if (e.pack === "history-places" && e.status !== "placeholder" && !e.sources.some((s) => { const src = ctx.sourceById.get(s); return src && SC.classOf(src) === "official"; })) p.push(`${at}: a history entry needs at least one official source`);
-  if (e.pack === "history-places") (e.dates || []).forEach((d) => { const y = parseInt(String(d.date), 10); if (!(y >= HISTORY_RANGE.min && y <= HISTORY_RANGE.max)) p.push(`${at}: history date ${d.date} is outside ${HISTORY_RANGE.min}-${HISTORY_RANGE.max}`); });
+  const clock = CK.forPack(e.pack); // America 250 for history-places, deep time for ancient-world (js/atlas/clocks.js)
+  if (clock) (e.dates || []).forEach((d) => { [d.date, d.end].filter(Boolean).forEach((v) => { const y = parseInt(String(v), 10); if (!CK.inRange(clock, y)) p.push(`${at}: ${clock.noun} date ${v} is outside ${clock.min}-${clock.max}`); }); });
   if (e.tiers && e.tiers[e.tier] && e.tiers[e.tier] !== e.summary) p.push(`${at}: tiers.${e.tier} must equal the summary`);
   if (e.layer && e.kind === "object" && !e.places.some((pl) => pl.lat != null && pl.lng != null)) p.push(`${at}: an object-layer entry needs a lat/lng pin`);
   if (e.layer && e.status !== "placeholder" && !e.record) p.push(`${at}: an object-layer entry needs a record`);
@@ -155,6 +160,93 @@ export function bellOverviewRules(entry, rec, ctx) {
       if ((want[k] || 0) !== (got[k] || 0)) p.push(`${at}: count for ${k} is ${got[k] || 0}, bell records give ${want[k] || 0}`);
     });
   }
+  return p;
+}
+
+// Ancient World layer (globedesk.ancient/1): schema, id matches its entry, every row, fact and claim cites a
+// registered source listed in the record; official_sources lists exactly the official-class sources. A site has
+// at least one official source and either one approximate lat/lng pin that matches its entry, or a held pin
+// (sacred, Indigenous, burial or ritual site awaiting the owner's YES) with no coordinates anywhere. A myth has no pin, a
+// "Myth: " title, at least one supported claim with sources (where the story comes from) and at least one
+// not-proven claim (that it is a real place); a not-proven or disputed claim never draws a pin.
+export function ancientRules(entry, rec, ctx) {
+  const p = [];
+  const at = `ancient ${entry.id}`;
+  asList(validateSchema(ctx.ancientSchema, rec)).forEach((x) => p.push(`${at}: ${x}`));
+  if (rec.id !== entry.id) p.push(`${at}: record id ${rec.id} does not match the entry`);
+  if (entry.pack !== "ancient-world" || entry.layer !== "ancient") p.push(`${at}: must be in pack ancient-world on layer ancient`);
+  const cited = [...rec.timeline.map((t) => t.source), ...rec.facts.map((f) => f.source), ...rec.claims.flatMap((c) => [...c.sourceIds, ...(c.disagree || []).flatMap((g) => g.sourceIds)])];
+  [...rec.sources, ...cited].forEach((id) => { if (!ctx.sourceById.has(id)) p.push(`${at}: source ${id} not in core/sources.json`); });
+  cited.forEach((id) => { if (!rec.sources.includes(id)) p.push(`${at}: ${id} is cited but not listed in the record's sources`); });
+  if (JSON.stringify(rec.sources) !== JSON.stringify(entry.sources)) p.push(`${at}: entry sources must match the record`);
+  const official = rec.sources.filter((id) => (ctx.sourceById.get(id) || {}).class === "official");
+  if (JSON.stringify(official) !== JSON.stringify(rec.official_sources)) p.push(`${at}: official_sources must list exactly the official-class sources`);
+  if (rec.official_status !== (official.length ? "listed" : "[UNKNOWN]")) p.push(`${at}: official_status must be ${official.length ? "listed" : "[UNKNOWN]"}`);
+  if (rec.sources.every((id) => /wikipedia\.org/.test((ctx.sourceById.get(id) || {}).url || ""))) p.push(`${at}: Wikipedia cannot be the only source`);
+  if (!entry.tiers || entry.tiers.everyday !== rec.tiers.everyday || entry.tiers.student !== rec.tiers.student) p.push(`${at}: entry tiers must match the record`);
+  const ed = (entry.dates || []).map((d) => `${d.date}|${d.end || ""}|${d.precision}`).join(",");
+  if (ed !== rec.timeline.map((t) => `${t.date}|${t.end || ""}|${t.precision}`).join(",")) p.push(`${at}: entry dates must match the record timeline`);
+  if (rec.kind === "site") {
+    if (entry.kind !== "place") p.push(`${at}: a site entry must be kind place`);
+    if (!official.length) p.push(`${at}: a site needs at least one official source`);
+    if (rec.claims.length) p.push(`${at}: site claims are not used in v1`);
+    const pl = entry.places[0];
+    if (entry.places.length !== 1 || !pl || pl.region !== rec.country) p.push(`${at}: entry needs exactly one place in the record's country`);
+    if (rec.place.pin === "held") {
+      // Owner rule: a sacred, Indigenous, burial or ritual site ships no coordinates until the owner's YES for that site.
+      if ((entry.places || []).some((x) => x.lat != null || x.lng != null) || rec.place.lat != null || rec.place.lng != null) p.push(`${at}: a held pin must ship no coordinates`);
+      if (!/held/i.test((pl && pl.note) || "")) p.push(`${at}: the entry place note must say the pin is held`);
+      const hs = ctx.sourceById.get(rec.place.hold_source);
+      if (!hs || hs.class !== "official" || !rec.sources.includes(rec.place.hold_source)) p.push(`${at}: a held pin needs an official hold_source listed in the record's sources`);
+    } else {
+      if (!pl || pl.lat !== rec.place.lat || pl.lng !== rec.place.lng) p.push(`${at}: entry place does not match the record pin`);
+      if (!/approximate/i.test((pl && pl.note) || "")) p.push(`${at}: the pin must say it is approximate in the entry place note`);
+      if (Math.abs(rec.place.lat) > 90 || Math.abs(rec.place.lng) > 180) p.push(`${at}: pin out of range`);
+    }
+    if (rec.sensitive && !rec.status_note) p.push(`${at}: a sensitive site needs a status_note`);
+  } else {
+    if (entry.kind !== "topic") p.push(`${at}: a myth entry must be kind topic`);
+    if (!/^Myth: /.test(entry.title)) p.push(`${at}: a myth title must start with "Myth: "`);
+    if (rec.place !== null || entry.places.length) p.push(`${at}: a myth carries no pin and no place`);
+    if (!rec.claims.some((c) => c.claimStatus === "supported" && c.sourceIds.length)) p.push(`${at}: a myth needs a supported claim with a source for where the story comes from`);
+    if (!rec.claims.some((c) => c.claimStatus === "not-proven")) p.push(`${at}: a myth needs a not-proven claim that it is a real place`);
+    rec.claims.filter((c) => c.claimStatus === "supported" && !c.sourceIds.length).forEach((c) => p.push(`${at}: supported claim "${c.text}" has no source`));
+  }
+  return p;
+}
+
+// Ancient World overview (globedesk.ancient-overview/1): site and myth lists and the era counts match the records.
+export function ancientOverviewRules(entry, rec, ctx) {
+  const p = [];
+  const at = `ancient overview ${entry.id}`;
+  if (rec.id !== entry.id) p.push(`${at}: record id ${rec.id} does not match its entry`);
+  const sites = ctx.ancient.filter((r) => r.kind === "site"), myths = ctx.ancient.filter((r) => r.kind === "myth");
+  if (JSON.stringify([...rec.sites].sort()) !== JSON.stringify(sites.map((r) => r.id).sort())) p.push(`${at}: site list does not match the site records`);
+  if (JSON.stringify([...rec.myths].sort()) !== JSON.stringify(myths.map((r) => r.id).sort())) p.push(`${at}: myth list does not match the myth records`);
+  const want = {}; sites.forEach((r) => { want[r.era] = (want[r.era] || 0) + 1; });
+  new Set([...Object.keys(want), ...Object.keys(rec.counts || {})]).forEach((k) => { if ((want[k] || 0) !== ((rec.counts || {})[k] || 0)) p.push(`${at}: era count for ${k} is ${(rec.counts || {})[k] || 0}, records give ${want[k] || 0}`); });
+  return p;
+}
+
+// Ancient World polity outlines (globedesk.ancient-extents/1, extents branch): the generated JS file matches the
+// index (bytes, sha256), the approved attribution is carried word for word by the index, the data file and the
+// registered source, borders are flagged approximate, and the file stays under its 2 MiB layer budget.
+export const EXTENTS_ATTRIBUTION = "Polity borders: Cliopatria, Seshat Global History Databank (https://github.com/Seshat-Global-History-Databank/cliopatria), CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Subset; borders simplified and approximate; changes by GlobeDesk.";
+export const EXTENTS_MAX_BYTES = 2 * 1024 * 1024;
+export function extentsRules(rel, idx, ctx) {
+  const p = [];
+  const at = `extents ${rel}`;
+  if (idx.attribution !== EXTENTS_ATTRIBUTION) p.push(`${at}: attribution must be the approved line, word for word`);
+  if (idx.approximate !== true) p.push(`${at}: borders must be flagged approximate`);
+  const src = ctx.sourceById.get(idx.source && idx.source.id);
+  if (!src || !/CC BY 4\.0/.test(src.license || "") || src.attribution !== EXTENTS_ATTRIBUTION || src.license_url !== "https://creativecommons.org/licenses/by/4.0/") p.push(`${at}: source must be registered as CC BY 4.0 with the licence link and the approved attribution`);
+  if (!idx.changes) p.push(`${at}: needs a note of changes (CC BY 4.0)`);
+  if (!exists(idx.file)) { p.push(`${at}: data file ${idx.file} missing`); return p; }
+  const info = fileInfo(path.join(ATLAS, "..", idx.file));
+  if (info.bytes !== idx.bytes || info.sha256 !== idx.sha256) p.push(`${at}: ${idx.file} changed since the index was built`);
+  if (info.bytes > EXTENTS_MAX_BYTES) p.push(`${at}: ${info.bytes} bytes is over the ${EXTENTS_MAX_BYTES} byte layer budget`);
+  const body = readFileSync(path.join(ATLAS, "..", idx.file), "utf8");
+  if (body.indexOf(JSON.stringify(EXTENTS_ATTRIBUTION).slice(1, -1)) < 0) p.push(`${at}: the data file must carry the approved attribution`);
   return p;
 }
 
@@ -251,6 +343,13 @@ export function validateAtlas() {
   const index = J("packs/core/index.json").entries.map((e) => e.id).sort();
   if (JSON.stringify(index) !== JSON.stringify([...ids].sort())) problems.push("core index does not list exactly the pack entries");
   problems.push(...deskRules(JR("desks/work-desks.json")));
+  const ancientSchema = JR("schema/globedesk-ancient.schema.json");
+  const ancientEntries = entries.filter((e) => e.layer === "ancient" && e.record && exists(e.record));
+  entries.filter((e) => e.pack === "ancient-world" && (!e.record || !exists(e.record))).forEach((e) => problems.push(`ancient ${e.id}: record missing`));
+  const ancientRecs = [];
+  ancientEntries.forEach((e) => { const rec = JR(e.record); if (rec.schema === "globedesk.ancient/1") { ancientRecs.push(rec); problems.push(...ancientRules(e, rec, { ...ctx, ancientSchema })); } });
+  ancientEntries.filter((e) => JR(e.record).schema === "globedesk.ancient-overview/1").forEach((e) => problems.push(...ancientOverviewRules(e, JR(e.record), { ...ctx, ancient: ancientRecs })));
+  ancientEntries.forEach((e) => { const hits = hygieneHits(readFileSync(path.join(ATLAS, "..", e.record), "utf8")); if (hits.length) problems.push(`hygiene: ${e.record} has a path, email or key-like string (${hits.join(", ")})`); });
   const recordPaths = new Set();
   for (const e of entries) {
     [e.record, ...(e.records || [])].filter(Boolean).forEach((r) => recordPaths.add(r));
@@ -260,6 +359,7 @@ export function validateAtlas() {
     const rec = JR(r);
     if (rec.schema === "globedesk.object/1") problems.push(...objectRules(r, rec));
     if (rec.schema === "globedesk.prices/1") problems.push(...priceRules(r, rec));
+    if (rec.schema === "globedesk.ancient-extents/1") problems.push(...extentsRules(r, rec, ctx));
   }
   // Hygiene: shareable files carry no home paths, emails or key-like strings.
   for (const rel of ["categories.json", "views.json", "packs/core/sources.json", ...CATEGORY_PACKS.map((p) => `packs/${p}/entries.json`)]) {

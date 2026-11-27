@@ -10,7 +10,7 @@
   const UNKNOWN = "[UNKNOWN]";
   const st = {
     open: false, view: "az", mode: "globe", q: "", category: "", tier: "all", selected: null, tab: "object",
-    zoom: "years", year: null, month: null, week: null, region: "US", option: "S", place: null, markers: [],
+    zoom: "years", year: null, month: null, week: null, clockPack: null, region: "US", option: "S", place: null, markers: [],
     elementsMode: null, elementZoom: null,
     chemSort: "z", chemDir: "asc", chemFilter: { family: "all", period: "all", group: "all", status: "all" }, chemCompare: [], chemMsg: "", chemFiltersOpen: false
   };
@@ -75,16 +75,21 @@
 
   function yearHtml() {
     const m = M();
-    const base = m.byYear(D(), filters(), { today: today(), zoom: st.zoom, year: st.year, month: st.month, week: st.week });
+    // A pack with its own timeline clock (js/atlas/clocks.js), e.g. Ancient World on the deep-time clock: the year
+    // view shows only that pack and the slider spans the clock's window. Other views and packs are unchanged.
+    const clock = st.clockPack && GD.clocks ? GD.clocks.forPack(st.clockPack) : null;
+    const f = clock ? Object.assign({}, filters(), { pack: st.clockPack }) : filters();
+    const base = m.byYear(D(), f, { today: today(), zoom: st.zoom, year: st.year, month: st.month, week: st.week });
     const cy = parseInt(today().slice(0, 4), 10);
-    const min = Math.min(base.range.min, cy);
+    const min = clock ? clock.min : Math.min(base.range.min, cy);
     const sliderYear = st.zoom === "years" ? (st.year == null ? cy : st.year) : cy;
     const zoomBtns = st.zoom !== "years" || sliderYear === cy;
     let html = '<div class="at-timeline"><label class="small">Year <input id="atYear" type="range" min="' + min + '" max="' + cy + '" step="1" value="' + sliderYear + '" aria-label="Year"></label> <b id="atYearLabel">' + esc(m.yearLabel(sliderYear)) + "</b>" +
       ' <button type="button" class="mini" id="atAllYears">All years</button> <button type="button" class="mini" id="atThisWeek">This week</button></div>' +
       (zoomBtns ? '<div class="seg small" role="group" aria-label="Zoom in the current year"><button type="button" data-at-zoom="years" aria-pressed="' + (st.zoom === "years") + '">Year</button><button type="button" data-at-zoom="months" aria-pressed="' + (st.zoom === "months") + '">Months</button><button type="button" data-at-zoom="weeks" aria-pressed="' + (st.zoom === "weeks") + '">Weeks</button></div>' : "") +
-      '<p class="muted small">Slider earliest year: ' + esc(m.yearLabel(min)) + " (from the earliest dated entry; the planned minimum is " + UNKNOWN + ").</p>";
-    const row = (d) => { const e = m.entryById(D(), d.entry); if (!e) return ""; return '<li class="at-yrow"><span class="at-date">' + esc(d.date) + (d.end ? "–" + esc(d.end) : "") + (d.approximate ? " ~" : "") + ' <span class="pill">' + esc(d.precision) + "</span></span>" + '<ul class="at-list">' + entryRow(e, e.title) + "</ul></li>"; };
+      (clock ? '<p class="small at-clock"><span class="pill">' + esc(clock.label) + "</span> " + esc(GD.clocks.rangeLabel(clock)) + " · showing the " + esc(st.clockPack) + ' pack only. <button type="button" class="mini" id="atLeaveClock">Leave this clock</button></p>'
+        : '<p class="muted small">Slider earliest year: ' + esc(m.yearLabel(min)) + " (from the earliest dated entry; the planned minimum is " + UNKNOWN + ").</p>");
+    const row = (d) => { const e = m.entryById(D(), d.entry); if (!e) return ""; const yl = (x) => (/^-\d{1,4}$/.test(x) ? m.yearLabel(parseInt(x, 10)) : x); return '<li class="at-yrow"><span class="at-date">' + esc(yl(d.date)) + (d.end ? "–" + esc(yl(d.end)) : "") + (d.approximate ? " ~" : "") + ' <span class="pill">' + esc(d.precision) + "</span></span>" + '<ul class="at-list">' + entryRow(e, e.title) + "</ul></li>"; };
     if (base.zoom === "months" || base.zoom === "weeks") {
       html += '<div class="at-buckets">' + (base.buckets || []).map((b) => {
         const label = base.zoom === "months" ? new Date(Date.UTC(cy, b.month - 1, 1)).toLocaleString("en", { month: "short", timeZone: "UTC" }) : "W" + b.week;
@@ -406,6 +411,32 @@
   // Bells layer records (globedesk.bell/1) and the bells overview (globedesk.bell-overview/1).
   function bellRecord(e) { const r = recordOf(e); return r && r.schema === "globedesk.bell/1" ? r : null; }
   function overviewRecord(e) { const r = recordOf(e); return r && r.schema === "globedesk.bell-overview/1" ? r : null; }
+  // Ancient World records (globedesk.ancient/1: a site with an approximate pin, or a myth with claims and no pin).
+  function ancientRecord(e) { const r = recordOf(e); return r && r.schema === "globedesk.ancient/1" ? r : null; }
+  const CLAIM_LABEL = { supported: "Supported", "not-proven": "Not proven", disputed: "Disputed", "people-disagree": "Sources disagree" };
+  function ancientDate(t) {
+    const one = (d) => (/^-?\d{1,4}$/.test(d) ? M().yearLabel(parseInt(d, 10)) : d);
+    return esc(one(t.date) + (t.end ? "–" + one(t.end) : "")) + (t.approximate ? " ~" : "");
+  }
+  function ancientHtml(rec) {
+    const row = (k, v) => "<tr><th>" + esc(k) + "</th><td>" + v + "</td></tr>";
+    let h = "";
+    if (rec.kind === "site") {
+      h += '<h4>Site</h4><table class="at-table small at-ancient">' +
+        row("Status", '<span class="pill ' + (rec.sensitive ? "warn" : "ok") + '">' + esc(rec.status) + "</span>" + (rec.status_note ? ' <span class="muted">' + esc(rec.status_note) + "</span>" : "")) +
+        row("Place", esc(rec.place.label) + (rec.place.pin === "held"
+          ? ' <span class="pill warn">pin held for owner review</span> <span class="muted">' + esc(rec.place.hold_reason) + " · " + srcLink(rec.place.hold_source) + "</span>"
+          : ' <span class="pill warn">approximate pin</span> <span class="muted">(' + esc(rec.place.lat.toFixed(4) + ", " + rec.place.lng.toFixed(4)) + "; " + esc(rec.place.coords_source) + ")</span>")) +
+        rec.facts.map((f) => row(f.label, esc(f.value) + ' <span class="muted">· ' + srcLink(f.source) + "</span>")).join("") + "</table>";
+    } else {
+      h += '<h4>Myth or legend: what the sources support</h4><p class="muted small">No pin: no cited source places it on the map.</p><ul class="small">' +
+        rec.claims.map((c) => '<li class="at-claim"><span class="claim-chip claim-chip-' + esc(c.claimStatus) + '">' + esc(CLAIM_LABEL[c.claimStatus] || c.claimStatus) + "</span> " + esc(c.text) +
+          (c.sourceIds.length ? ' <span class="muted">· ' + c.sourceIds.map(srcLink).join(", ") + "</span>" : "") + (c.note ? ' <span class="muted">' + esc(c.note) + "</span>" : "") + "</li>").join("") + "</ul>";
+    }
+    h += "<h4>Timeline</h4>" + (rec.timeline.length ? '<ol class="small at-timeline-list">' + rec.timeline.map((t) => "<li><b>" + ancientDate(t) + "</b> " + esc(t.event) + ' <span class="muted">· ' + srcLink(t.source) + "</span></li>").join("") + "</ol>" : '<p class="muted small">Dated timeline ' + UNKNOWN + ".</p>");
+    h += '<p class="small">Official source: <b>' + esc(rec.official_status) + "</b>" + (rec.unknowns.length ? " · " + UNKNOWN + " " + rec.unknowns.map(esc).join("; ") : "") + "</p>";
+    return h;
+  }
   function srcLink(id) { const s = (D().sources || []).find((x) => x.id === id); return s ? link(s.url, s.publisher || s.title) : esc(id + " " + UNKNOWN); }
   function entryLink(id) { const t = M().entryById(D(), id); return t ? '<button type="button" class="linklike" data-at-entry="' + esc(id) + '">' + esc(t.title) + "</button>" : esc(id) + ' <span class="muted">(not in this copy)</span>'; }
   function fmtNum(v, unit, digits) { return v == null ? UNKNOWN : Number(v).toLocaleString("en", { maximumFractionDigits: digits == null ? 2 : digits }) + " " + unit; }
@@ -443,7 +474,7 @@
       (M().tiersWritten ? '<p class="muted small at-levels">Reading levels written: ' + M().tiersWritten(e).map((t) => esc(M().TIER_LABEL[t])).join(", ") + "</p>" : "") +
       '<p class="small"><span class="pill">' + esc(e.kind) + '</span> <span class="pill">' + esc(M().TIER_LABEL[e.tier]) + '</span> <span class="pill ' + (e.status === "draft" || e.status === "placeholder" ? "warn" : "ok") + '">' + esc(e.status) + '</span> <span class="pill">confidence ' + esc(e.confidence) + '</span> <span class="pill">' + esc(e.license) + "</span> <span class=\"muted\">checked " + esc(e.checked) + "</span></p>";
     if (e.places.length) h += '<p class="small">Places: ' + e.places.map((p) => esc((p.region || UNKNOWN) + " (" + p.precision + ")" + (p.note ? " · " + p.note : ""))).join(", ") + "</p>";
-    if (e.dates.length) h += '<p class="small">Dates: ' + e.dates.map((d) => esc(d.date + " (" + d.precision + (d.approximate ? ", approximate" : "") + ")")).join(", ") + "</p>";
+    if (e.dates.length) h += '<p class="small">Dates: ' + e.dates.map((d) => esc((d.precision === "year" && d.date[0] === "-" ? M().yearLabel(parseInt(d.date, 10)) : d.date) + " (" + d.precision + (d.approximate ? ", approximate" : "") + ")")).join(", ") + "</p>";
     if (e.related.length) h += '<p class="small">Related: ' + e.related.map((r) => { const t = M().entryById(D(), r.to); return '<button type="button" class="linklike" data-at-entry="' + esc(r.to) + '">' + esc(t ? t.title : r.to) + "</button> <span class=\"muted\">(" + esc(r.type) + ")</span>"; }).join(", ") + "</p>";
     if (kit && e.kind === "object") {
       h += '<h4>Sizes</h4><div class="seg small" role="group" aria-label="Kit size">' + kit.options.map((o) => '<button type="button" data-at-option="' + esc(o.id) + '" aria-pressed="' + (st.option === o.id) + '">' + esc(o.id + " · " + o.name) + "</button>").join("") + "</div>";
@@ -468,6 +499,8 @@
     if (GD.disastersCard) h += GD.disastersCard.html(recordOf(e), { esc, srcLink, entryLink });
     if (GD.spaceCard) h += GD.spaceCard.html(recordOf(e), { esc, srcLink, entryLink });
     if (GD.wondersCard) h += GD.wondersCard.html(recordOf(e), { esc, srcLink, entryLink });
+    const anc = ancientRecord(e);
+    if (anc) h += ancientHtml(anc);
     return h + personalHtml(e);
   }
 
@@ -721,6 +754,7 @@
     }
     const aw = root.querySelector("#atThisWeek"); if (aw) aw.addEventListener("click", thisWeek);
     const ay = root.querySelector("#atAllYears"); if (ay) ay.addEventListener("click", () => { st.year = null; st.zoom = "years"; render(); });
+    const lc = root.querySelector("#atLeaveClock"); if (lc) lc.addEventListener("click", () => { st.clockPack = null; st.year = null; st.zoom = "years"; render(); });
     const f = root.querySelector("#atFollow"); if (f) f.addEventListener("click", () => { GD.personal.toggleFollow(st.selected); render(); });
     const n = root.querySelector("#atAddNote"); if (n) n.addEventListener("click", () => {
       const text = global.prompt ? global.prompt("Note for this entry (stays on this device):", "") : "";

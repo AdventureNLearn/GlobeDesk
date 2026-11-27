@@ -1,0 +1,77 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-troy",
+  "title": "Troy (Hisarlık)",
+  "kind": "site",
+  "country": "TR",
+  "place": {
+    "label": "Hisarlık mound, Çanakkale Province, Türkiye",
+    "pin": "shown",
+    "lat": 39.95644,
+    "lng": 26.239,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for Archaeological Site of Troy (World Heritage List 849), published as N39 57 23.184 E26 14 20.4 at https://whc.unesco.org/en/list/849/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": "https://pleiades.stoa.org/places/550595",
+    "wikidata": "https://www.wikidata.org/wiki/Q22647"
+  },
+  "era": "3000-1001-bce",
+  "earliest_cited_year": -2999,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "Troy is a mound of many cities built on top of each other in northwest Türkiye. It is generally believed to be the Troy of Homer's Iliad.",
+    "student": "Pleiades records occupation at Ilion/Troia from an Early Bronze Age citadel in the 3rd millennium BC to the Roman period, and says the Hisarlık mound is generally believed to be Homer's Troy. UNESCO counts about 4,000 years of history, notes first excavations in 1870 and 24 excavation campaigns, and inscribed the site in 1998."
+  },
+  "timeline": [
+    {
+      "date": "-2999",
+      "precision": "year",
+      "approximate": true,
+      "event": "Early Bronze Age citadel (3rd millennium BC) begins the settlement",
+      "source": "pleiades-550595"
+    },
+    {
+      "date": "1870",
+      "precision": "year",
+      "approximate": false,
+      "event": "First excavations at the site",
+      "source": "unesco-whc-849"
+    },
+    {
+      "date": "1998",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-849"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Identification",
+      "value": "Generally believed to be Homer's Troy (Pleiades wording)",
+      "source": "pleiades-550595"
+    },
+    {
+      "label": "Location",
+      "value": "Some 4.8 km off the Dardanelles' south mouth",
+      "source": "unesco-whc-849"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "pleiades-550595",
+    "unesco-whc-849",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-849"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "whether a Trojan War happened as told in the Iliad is not settled by our cited sources"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

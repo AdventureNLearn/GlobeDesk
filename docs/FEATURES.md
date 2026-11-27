@@ -22,7 +22,7 @@ its result disagree. The labels live in `js/tutorial-features.js`; this file is 
 | 9 | 3D objects and bells | **Live** | `tests/smoke-atlas.mjs` | Atlas, desks, Layers user sections, 3D and bell 3D, 0 console errors |
 | 10 | Your layers | **Live** | `tests/smoke-atlas.mjs` | Atlas, desks, Layers user sections, 3D and bell 3D, 0 console errors |
 | 11 | News desk | **Live** | tests/smoke-features.mjs → `newsdesk` | 50 topics; clicking a card moved the globe |
-| 12 | Work desks | **Live** | tests/smoke-features.mjs → `desks` | 10 desks; switched to "jobsite" and its desk text showed |
+| 12 | Work desks | **Live** | tests/smoke-features.mjs → `desks` | 11 desks; switched to "jobsite" and its desk text showed |
 | 13 | Claims, research and records | **Live** | `tests/smoke-claims.mjs` | claims, research and records sidecars on a topic |
 | 14 | Sample episode | **Live** | tests/smoke-features.mjs → `sample` | loaded "Washington, DC demo — the National Mall", 2 stories |
 | 15 | Workspace editor | **Live** | tests/smoke-features.mjs → `workspace` | Workspace view opened with the rundown |
