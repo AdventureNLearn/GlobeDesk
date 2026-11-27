@@ -291,8 +291,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 74969,
-      "sha256": "bd1e20fd909bd7da67711a35046b74e100b64ec72c1bbb2552d947d9a3e726f2"
+      "size": 76592,
+      "sha256": "fc1fef1546ef6e5f5d1060e168440c9bc5d8e6d0e7a15cf1759ca771ad6bdd23"
     },
     {
       "path": "data/atlas/ancient/ancient-caral.json",
@@ -991,8 +991,8 @@
     },
     {
       "path": "index.html",
-      "size": 21065,
-      "sha256": "af87e90f084aee6353d6ac9d21e26237d92759db1706a2891ed9878221a85c96"
+      "size": 21199,
+      "sha256": "03504bafaae7cfe62e9f1824fa8e35335e9b809af0048a93a1fc92b31f7a05e9"
     },
     {
       "path": "js/archive.js",
@@ -1036,8 +1036,8 @@
     },
     {
       "path": "js/atlas/bells-layer.js",
-      "size": 9064,
-      "sha256": "53b649645bf5d66321f9d46c3f9f38cbbb24994415cb3d60a3b6ec8519a1b225"
+      "size": 9169,
+      "sha256": "bde4a5bb50177cd522343f59e2b9fa2a638e2c0a642a58f4298730f48b97484f"
     },
     {
       "path": "js/atlas/chem-ores-layer.js",
@@ -1191,8 +1191,8 @@
     },
     {
       "path": "js/layout.js",
-      "size": 39458,
-      "sha256": "dfbfa5cfd6cf4749f4d7550b9657371e5416b7a7329ef9f57d6c3d41467538ec"
+      "size": 39805,
+      "sha256": "df41977830843843300a00edc40d695e4da2a42491b087b496c6140e5c65e6cf"
     },
     {
       "path": "js/map-pointer.js",
@@ -1286,8 +1286,8 @@
     },
     {
       "path": "js/start-guide.js",
-      "size": 6841,
-      "sha256": "7b6ea056d8a2e31d75a536bfc1ca2cff0611d516f219b823735c7633a7522377"
+      "size": 7908,
+      "sha256": "7f02efe2ee9a9261fe9571bdd32df3b7fab048a5fa835b3800e782a18c52da36"
     },
     {
       "path": "js/store.js",
@@ -1306,8 +1306,8 @@
     },
     {
       "path": "js/ui.js",
-      "size": 88766,
-      "sha256": "a36d4b86970987de0ff23271da1a182b8cace07fedfa184e21dc3fd0b7aad5ec"
+      "size": 89183,
+      "sha256": "158501f08896f8590cc353f6f70a207ca1bad3e5912c1a4f5401f04637472b6f"
     },
     {
       "path": "js/user-layers.js",
@@ -1396,8 +1396,8 @@
     },
     {
       "path": "package.json",
-      "size": 2166,
-      "sha256": "ecb6f8d4b387abf634b556b06da1e544dab3a702ce89b494b5f0ddca952fc082"
+      "size": 2207,
+      "sha256": "37c1ba7c143c708a5470089f5a5179e2d337768d72a1c1fe4cd951b76c8cbb57"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -1577,6 +1577,6 @@
   ],
   "totals": {
     "files": 313,
-    "bytes": 9567534
+    "bytes": 9571268
   }
 }

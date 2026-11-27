@@ -303,6 +303,30 @@ dialog.archive { max-width:min(1180px, 96vw); width:min(1180px, 96vw); max-heigh
 }
 
 
+/* Calm first screen on phones (news desk view): a big globe, a short top bar, the news list
+   folded behind "Explore stories". Record, Export, aspect, Workspace, Atlas and Lite stay in
+   the Menu. The full editor (Workspace) and Lite view keep their own layouts. */
+.nd-explore { display: none; }
+@media (max-width: 760px) {
+  body.view-newsdesk:not(.lite) .brand-sub,
+  body.view-newsdesk:not(.lite) .tools-essential .seg,
+  body.view-newsdesk:not(.lite) #btnRecord,
+  body.view-newsdesk:not(.lite) #btnExport,
+  body.view-newsdesk:not(.lite) #btnViewToggle,
+  body.view-newsdesk:not(.lite) #btnAtlas,
+  body.view-newsdesk:not(.lite) #btnLiteToggle { display: none !important; }
+  body.view-newsdesk:not(.lite) .topbar { flex-wrap: nowrap; gap: 6px; }
+  body.view-newsdesk:not(.lite) .brand-name { font-size: 17px; }
+  body.view-newsdesk:not(.lite) .tools-essential { gap: 4px; flex-wrap: nowrap; }
+  body.view-newsdesk:not(.lite) .tools-essential button { padding: 5px 7px; font-size: 12px; white-space: nowrap; }
+  body.view-newsdesk:not(.lite) #layersHint { display: none !important; }
+  body.view-newsdesk:not(.lite):not(.aspect-916) .stage-wrap { height: 56vh; min-height: 300px; padding: 0; }
+  body.view-newsdesk:not(.lite):not(.aspect-916) .stage { width: 100% !important; height: 100% !important; }
+  body.view-newsdesk:not(.lite) .safe { display: none; }
+  body.view-newsdesk:not(.lite) .nd-explore { display: block; width: calc(100% - 24px); margin: 10px 12px; min-height: 44px; font-weight: 700; }
+  body.view-newsdesk:not(.lite):not(.nd-open) #newsdesk > :not(.nd-explore) { display: none !important; }
+}
+
 /* Frosted glass panels. Solid fallback always. */
 .panel, .topbar, .rundown li, .toast, dialog, .nd-card, .nd-research, .drop {
   background: var(--gd-panel-solid);

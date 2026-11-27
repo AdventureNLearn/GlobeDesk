@@ -112,9 +112,11 @@ try {
   if (out.boot.cards !== 50 || out.boot.desk !== "news" || out.boot.desks !== DESK_COUNT || !out.boot.atlasHidden) throw new Error("boot: " + JSON.stringify(out.boot));
   if (!/v1\.5\.1 · Atlas/.test(out.boot.ver)) throw new Error("version: " + out.boot.ver);
 
-  // Bells layer: pins (or clusters) on the globe at start, from the bundled Bells pack.
-  out.bellsBoot = await q(`({ marks: document.querySelectorAll(".bl-pin, .bl-cluster").length, total: GD.bellsLayer.pins(GD.atlasData).length })`);
-  if (out.bellsBoot.marks < 3 || out.bellsBoot.total < 40) throw new Error("bells at start: " + JSON.stringify(out.bellsBoot));
+  // Bells layer: off on a first visit (a calm first globe); turning it on draws pins (or clusters) from the bundled Bells pack.
+  out.bellsFirst = await q(`({ on: GD.bellsLayer.st.on, marks: document.querySelectorAll(".bl-pin, .bl-cluster").length })`);
+  if (out.bellsFirst.on !== false || out.bellsFirst.marks !== 0) throw new Error("bells on a first visit: " + JSON.stringify(out.bellsFirst));
+  out.bellsBoot = await q(`(() => { GD.bellsLayer.setOn(true); return new Promise((r) => setTimeout(() => r({ on: GD.bellsLayer.st.on, marks: document.querySelectorAll(".bl-pin, .bl-cluster").length, total: GD.bellsLayer.pins(GD.atlasData).length }), 600)); })()`);
+  if (!out.bellsBoot.on || out.bellsBoot.marks < 3 || out.bellsBoot.total < 40) throw new Error("bells after turning on: " + JSON.stringify(out.bellsBoot));
   // Expected counts come from the bundled data (the Bells pack adds dozens of entries and places).
   const exp = await q(`(() => { const M = GD.atlasModel, D = GD.atlasData; const pl = M.byPlace(D, {}).rows; return { az: M.azRows(D, {}).length, kids: M.azRows(D, { tier: "kids" }).length, places: pl.length, markers: pl.filter((r) => GD.atlas.centroid(r.a3)).length }; })()`);
   out.expected = exp;

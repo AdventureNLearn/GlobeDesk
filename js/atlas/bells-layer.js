@@ -14,14 +14,15 @@
   const REGIONS = ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"];
   const CELL_PX = 56;      // cluster grid size in screen pixels
   const CLUSTER_BELOW = 9; // no clustering at this zoom and above
-  const st = { on: true, era: "all", region: "all", markers: [], wired: false };
+  // Off until someone turns it on in Layers (then remembered), so a first globe is not covered in pins.
+  const st = { on: false, era: "all", region: "all", markers: [], wired: false };
 
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
   function load() {
     try {
       const v = JSON.parse(global.localStorage.getItem(KEY) || "null");
       if (v && typeof v === "object") {
-        st.on = v.on !== false;
+        st.on = v.on === true;
         st.era = ERAS.some((e) => e.id === v.era) ? v.era : "all";
         st.region = REGIONS.indexOf(v.region) >= 0 ? v.region : "all";
       }

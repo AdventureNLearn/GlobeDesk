@@ -110,14 +110,19 @@
     renderRundown(); renderBin(); renderInspector(); renderTransport(); applyAspect(S.episode.output.aspect || "16:9"); renderOverlays();
   }
 
+  // A blank story's title and place are the [UNKNOWN] marker. In the rundown say plainly
+  // that nothing is set yet instead of showing the marker as if it were a title.
+  function shownTitle(s) { return s.title && s.title !== GD.model.U ? s.title : "Untitled story"; }
+  function shownPlace(s) { return s.location && s.location.name && s.location.name !== GD.model.U ? s.location.name : "No place set"; }
+
   function renderRundown() {
     const ol = $("rundown"); ol.innerHTML = "";
     S.episode.stories.forEach((s, i) => {
       const li = document.createElement("li");
       li.className = i === S.storyIdx ? "on" : "";
       li.innerHTML = `<span class="ops"><button data-op="up" title="Move up">↑</button><button data-op="down" title="Move down">↓</button><button data-op="pin" title="Open this card on the globe (several can be open)" aria-pressed="${GD.callouts && GD.callouts.isOpen(s.id) ? "true" : "false"}"${s.location && s.location.lat != null ? "" : " disabled"}>◎</button><button data-op="dup" title="Duplicate">⧉</button><button data-op="del" title="Delete">✕</button></span>
-        <span class="n">${escNum(i + 1)}</span><strong title="${esc(s.title)}">${esc(s.title)}</strong>
-        <div class="meta" title="${esc(s.location.name)}">${esc(s.location.name)} • ${escNum(s.durationSec)}s • ${escNum((s.cards || []).length)} card(s) • ${escNum((s.camera || []).filter((k) => k.cut !== false).length)} shot(s)
+        <span class="n">${escNum(i + 1)}</span><strong title="${esc(shownTitle(s))}">${esc(shownTitle(s))}</strong>
+        <div class="meta" title="${esc(shownPlace(s))}">${esc(shownPlace(s))} • ${escNum(s.durationSec)}s • ${escNum((s.cards || []).length)} card(s) • ${escNum((s.camera || []).filter((k) => k.cut !== false).length)} shot(s)
         ${s.location.verified ? '<span class="pill ok">location verified</span>' : '<span class="pill warn">not verified</span>'}
         ${s.asReported !== false ? '<span class="pill warn">as reported</span>' : ""}</div>`;
       li.addEventListener("click", (e) => {

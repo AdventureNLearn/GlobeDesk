@@ -10,6 +10,7 @@
   const GD = (window.GD = window.GD || {});
   const GUIDE_KEY = "globedesk.guide.v1";
   const LITE_KEY = "globedesk.lite";
+  const PHONE_QUERY = "(max-width: 760px)";
   const $ = (id) => document.getElementById(id);
   const store = {
     get(k) { try { return window.localStorage ? window.localStorage.getItem(k) : null; } catch (e) { return null; } },
@@ -107,6 +108,11 @@
     on("sgSample", () => { close("sample"); const b = $("btnDemo"); if (b) b.click(); });
     on("sgAtlas", () => { close("atlas"); const b = $("btnAtlas"); if (b) b.click(); });
     on("sgLite", () => setLite(!isLite()));
+    on("ndExplore", () => setStoriesOpen(!document.body.classList.contains("nd-open")));
+    // Pressing Play (or the flyover) means the visitor has found the next step: close the guide
+    // so it does not sit over the playback bar.
+    on("btnFlyover", () => { if (st.open) close("play"); });
+    on("btnPlay", () => { if (st.open) close("play"); });
     const jump = $("sgJump");
     if (jump) {
       jump.innerHTML = st.steps.map((s, i) => "<option value=\"" + i + "\">" + (i === 0 ? "Welcome" : i + ". " + s.title + " (" + s.label + ")") + "</option>").join("");
@@ -124,8 +130,22 @@
     wire();
     // A link that opens a specific episode or view is not a first open for the guide.
     const directLink = ["sample", "import", "archive", "workspace", "callouts", "t", "atlas", "atlas-view"].some((k) => p.get(k));
-    if (!guideDone() && !directLink && p.get("guide") !== "0") open(0);
+    // On a phone the 46-step guide would cover the globe and the playback bar, so it is not
+    // opened on its own there; ? Help still opens it. The news pane starts folded.
+    const phone = isPhone();
+    if (!guideDone() && !directLink && p.get("guide") !== "0" && !phone) open(0);
+    setStoriesOpen(false);
   }
 
-  GD.startGuide = { boot, open, close, next, back, setLite, isLite, guideDone, st, STEPS, GUIDE_KEY, LITE_KEY, VIDEO_PLACEHOLDER };
+  function isPhone() {
+    try { return !!(window.matchMedia && window.matchMedia(PHONE_QUERY).matches); } catch (e) { return false; }
+  }
+
+  function setStoriesOpen(on) {
+    document.body.classList.toggle("nd-open", !!on);
+    const b = $("ndExplore");
+    if (b) { b.setAttribute("aria-expanded", on ? "true" : "false"); b.textContent = on ? "Hide stories" : "Explore stories"; }
+  }
+
+  GD.startGuide = { boot, open, close, next, back, setLite, isLite, guideDone, isPhone, setStoriesOpen, st, STEPS, GUIDE_KEY, LITE_KEY, PHONE_QUERY, VIDEO_PLACEHOLDER };
 })();
