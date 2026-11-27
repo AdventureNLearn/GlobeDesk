@@ -91,20 +91,29 @@ export const LINKED = [
     { text: "The USGS deadliest-eruptions table also gives 57 deaths, from ash asphyxiation.", source: FAQ }] },
   { id: "san-francisco-earthquake-1906", hazard: "earthquake", facts: [
     { text: "NCEI lists magnitude 7.9 (Mw) and 700 deaths; other published tolls were not reviewed [UNKNOWN].", source: Q }] },
-  { id: "ancient-pompeii", hazard: "eruption", facts: [
+  { id: "ancient-pompeii", hazard: "eruption",
+    ncei: { dataset: V, event_id: 1348 },
+    unknowns: [
+      "Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown",
+      "Deep-time clock: 79 CE sits before the America 250 clock; it joins the Ancient-world deep-time clock when that lands",
+    ],
+    facts: [
     { text: "NCEI rates the 79 CE eruption of Vesuvius VEI 5 and counts 2,100 deaths, dated 25 August 79.", source: V },
     { text: "The USGS deadliest-eruptions table gives 3,360, mainly from pyroclastic flow.", source: FAQ },
     { text: "The 79 CE eruption buried Herculaneum and Pompeii and was described in letters by Pliny the Younger.", source: YVO },
     { text: "USGS counts eight major explosive eruptions since a caldera formed about 17,000 years ago.", source: YVO },
     { text: "Eruptions were frequent from 1631 to 1944; the most recent eruption was in 1944.", source: YVO },
     { text: "The INGV Vesuvius Observatory, founded in 1841, is the first volcano observatory in the world.", source: YVO },
-    { text: "NCEI links this eruption to an earthquake record and a tsunami record.", source: V }] },
+    { text: "NCEI links this eruption to an earthquake record and a tsunami record.", source: V },
+    { text: "NOAA NCEI Significant Volcanic Eruptions Database, event 1348", source: V },
+    { text: "Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown", source: V },
+    ] },
 ];
 
 export const OVERVIEW = {
   id: "disasters-overview", title: "Volcanoes, earthquakes and disasters", aliases: ["Natural hazards", "Disasters layer"],
-  everyday: "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Each pin is the official published point from NOAA, and every number names its source.",
-  student: "A curated first batch from the NOAA NCEI Significant Volcanic Eruptions and Significant Earthquake databases (doi:10.7289/V5JW8BSH, doi:10.7289/V5TD9V7K), with USGS pages for context. Where NCEI and USGS give different death tolls, both are shown. Pins are NCEI's published points, so they are approximate.",
+  everyday: "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Most pins are official published points from NOAA; the Vesuvius 79 link uses Pompeii's Pleiades point. Every number names its source.",
+  student: "A curated first batch from the NOAA NCEI Significant Volcanic Eruptions and Significant Earthquake databases (doi:10.7289/V5JW8BSH, doi:10.7289/V5TD9V7K), with USGS pages for context. Where NCEI and USGS give different death tolls, both are shown. Pins are NCEI's published points, so they are approximate, except the Vesuvius 79 link, which uses Pompeii's Pleiades point.",
   stories: [
     { id: "lisbon-three-coasts", title: "Lisbon 1755: one earthquake, three coasts", steps: [
       { entry: "lisbon-1755", text: "On 1 November 1755 a great earthquake struck under the Atlantic off Portugal. NCEI lists magnitude 8.5 and 50,000 deaths.", sources: [Q] },

@@ -161,11 +161,11 @@
       ],
       "tier": "everyday",
       "tiers": {
-        "everyday": "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Each pin is the official published point from NOAA, and every number names its source.",
-        "student": "A curated first batch from the NOAA NCEI Significant Volcanic Eruptions and Significant Earthquake databases (doi:10.7289/V5JW8BSH, doi:10.7289/V5TD9V7K), with USGS pages for context. Where NCEI and USGS give different death tolls, both are shown. Pins are NCEI's published points, so they are approximate."
+        "everyday": "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Most pins are official published points from NOAA; the Vesuvius 79 link uses Pompeii's Pleiades point. Every number names its source.",
+        "student": "A curated first batch from the NOAA NCEI Significant Volcanic Eruptions and Significant Earthquake databases (doi:10.7289/V5JW8BSH, doi:10.7289/V5TD9V7K), with USGS pages for context. Where NCEI and USGS give different death tolls, both are shown. Pins are NCEI's published points, so they are approximate, except the Vesuvius 79 link, which uses Pompeii's Pleiades point."
       },
       "layer": "disasters",
-      "summary": "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Each pin is the official published point from NOAA, and every number names its source.",
+      "summary": "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Most pins are official published points from NOAA; the Vesuvius 79 link uses Pompeii's Pleiades point. Every number names its source.",
       "places": [],
       "dates": [],
       "sources": [

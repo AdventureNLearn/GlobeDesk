@@ -18,7 +18,7 @@ GlobeDesk's own encyclopedia: 12 categories, an index entry schema, packs with m
     ../tools/atlas/                       build-object, build-bells (bells-*.mjs content and sources), build-disasters (disasters-*.mjs: NOAA NCEI + USGS subset, earth/natural-hazards), build-space (space-*.mjs: NASA NSSDCA, IAU Gazetteer and agency pages, science-history/space-race), build-elements (118 chemistry/elements entries from an external source cache), build-ancient (ancient-*.mjs content and sources), build-packs, build-js (generated js/atlas/atlas-data.js), validate
     ../js/atlas/atlas-model.js, atlas-view.js   Atlas browse views (including Elements 18-column constellation and table fallback)
     ../js/atlas/bells-layer.js, models/bell.js  the Bells layer (pins, clusters, era and region filters) and the parametric 3D bell
-    ../js/atlas/disasters-layer.js, disasters-card.js  the disasters layer (NCEI eruption and earthquake pins, hazard filter; reuses the Bells clusters; off by default) and its Atlas card with cited stories
+    ../js/atlas/disasters-layer.js, disasters-card.js  the disasters layer (NCEI eruption and earthquake pins, except the Vesuvius 79 link which uses Pompeii's Pleiades point; hazard filter; reuses the Bells clusters; off by default) and its Atlas card with cited stories
     ../desks/work-desks.json              the eleven desks (11: Ancient World, on the deep-time clock)
     ../js/atlas/ancient-layer.js          the Ancient World layer (approximate pins of the 13 sites; myths listed, never pinned); off by default
     ../js/atlas/ancient-extents-data.js   optional polity outlines (Cliopatria subset, CC BY 4.0), loaded only when switched on; index in ../data/atlas/ancient/extents-index.json

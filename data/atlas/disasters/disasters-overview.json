@@ -5,8 +5,8 @@
   "checked": "2026-11-26",
   "license": "CC BY 4.0 (our record text); NOAA NCEI and USGS values are US government works; linked sources keep their own terms",
   "tiers": {
-    "everyday": "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Each pin is the official published point from NOAA, and every number names its source.",
-    "student": "A curated first batch from the NOAA NCEI Significant Volcanic Eruptions and Significant Earthquake databases (doi:10.7289/V5JW8BSH, doi:10.7289/V5TD9V7K), with USGS pages for context. Where NCEI and USGS give different death tolls, both are shown. Pins are NCEI's published points, so they are approximate."
+    "everyday": "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Most pins are official published points from NOAA; the Vesuvius 79 link uses Pompeii's Pleiades point. Every number names its source.",
+    "student": "A curated first batch from the NOAA NCEI Significant Volcanic Eruptions and Significant Earthquake databases (doi:10.7289/V5JW8BSH, doi:10.7289/V5TD9V7K), with USGS pages for context. Where NCEI and USGS give different death tolls, both are shown. Pins are NCEI's published points, so they are approximate, except the Vesuvius 79 link, which uses Pompeii's Pleiades point."
   },
   "hazards": [
     {
@@ -82,6 +82,14 @@
     {
       "id": "ancient-pompeii",
       "hazard": "eruption",
+      "ncei": {
+        "dataset": "ncei-sig-volcanoes",
+        "event_id": 1348
+      },
+      "unknowns": [
+        "Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown",
+        "Deep-time clock: 79 CE sits before the America 250 clock; it joins the Ancient-world deep-time clock when that lands"
+      ],
       "facts": [
         {
           "text": "NCEI rates the 79 CE eruption of Vesuvius VEI 5 and counts 2,100 deaths, dated 25 August 79.",
@@ -109,6 +117,14 @@
         },
         {
           "text": "NCEI links this eruption to an earthquake record and a tsunami record.",
+          "source": "ncei-sig-volcanoes"
+        },
+        {
+          "text": "NOAA NCEI Significant Volcanic Eruptions Database, event 1348",
+          "source": "ncei-sig-volcanoes"
+        },
+        {
+          "text": "Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown",
           "source": "ncei-sig-volcanoes"
         }
       ]

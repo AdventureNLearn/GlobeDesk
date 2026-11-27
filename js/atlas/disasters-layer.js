@@ -4,7 +4,7 @@
    is reused), a pin click drills to the place and opens the event in the Atlas. Members come from the
    disasters overview record, so existing Atlas events (Mount St. Helens 1980, San Francisco 1906) are
    pinned from their own entries, never copied. Every pin is NOAA NCEI's published point or the existing
-   entry's pin and is labelled approximate. Off by default. window.GD.disastersLayer */
+   entry's pin (the Vesuvius 79 link uses Pompeii's Pleiades point) and is labelled approximate. Off by default. window.GD.disastersLayer */
 (function (global) {
   "use strict";
   const GD = (global.GD = global.GD || {});
@@ -92,7 +92,7 @@
     if (!all.length) return "";
     return '<section class="lp-group" aria-labelledby="lpDisastersH"><h3 id="lpDisastersH">Volcanoes, earthquakes and disasters <span class="muted">(Atlas: Earth)</span></h3>' +
       '<label class="lp-row' + (st.on ? " on" : "") + '"><input type="checkbox" role="switch" id="lpDisasters"' + (st.on ? " checked" : "") + ' aria-checked="' + st.on + '"><span class="lp-legend lp-legend-pin dl-swatch" aria-hidden="true"></span>' +
-      '<span class="lp-text"><span class="lp-name">Historic eruptions and earthquakes</span><span class="lp-desc">' + shown.length + " of " + all.length + " events shown. Pins are NOAA NCEI published points, so they are approximate. Pick one to fly there and open it in the Atlas.</span>" +
+      '<span class="lp-text"><span class="lp-name">Historic eruptions and earthquakes</span><span class="lp-desc">' + shown.length + " of " + all.length + " events shown. Pins are NOAA NCEI published points, so they are approximate, except the Vesuvius 79 link, which uses Pompeii's Pleiades point. Pick one to fly there and open it in the Atlas.</span>" +
       '<span class="lp-credit">NOAA NCEI significant volcano and earthquake databases; USGS.</span></span></label>' +
       '<div class="lp-actions dl-filters"><label class="small">Type <select id="lpDisastersHazard"><option value="all">All types</option>' +
       HAZARDS.map((h) => '<option value="' + esc(h.id) + '"' + (st.hazard === h.id ? " selected" : "") + ">" + esc(h.label) + "</option>").join("") + "</select></label></div></section>";
