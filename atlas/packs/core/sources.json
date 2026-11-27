@@ -1599,7 +1599,7 @@
       "class": "official",
       "publisher": "Deutsches Archäologisches Institut",
       "license": "Dataset licence: Creative Commons Attribution 4.0 (CC BY 4.0), stated on the dataset page. GlobeDesk uses its own wording and links.",
-      "verified": "opened directly (HTTP 200)",
+      "verified": "opened directly on 2026-11-24 (HTTP 200). Recheck 2026-11-27: the DOI is still registered at DataCite (state findable), but its landing host repo.dainst.org answered HTTP 404 for every page, including its home page, and no archived copy of the PDF was found. Kept as cited on 2026-11-24; current availability [UNKNOWN] (OPEN-ITEMS #43).",
       "description": "German Archaeological Institute (DAI) TransArea Network Africa dataset (DOI 10.34780/7j79w9en): booklet resources including PDF 13, 'Bells as a shared German-Ghanaian cultural heritage: a survey in the Volta Region'.",
       "terms_url": "https://creativecommons.org/licenses/by/4.0/"
     },

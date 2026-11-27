@@ -157,7 +157,7 @@
     {
       "path": "atlas/packs/core/manifest.json",
       "size": 1219,
-      "sha256": "8ca6f2f85c144d6087667948884f7c007ae6e164b693e114e241d52e7d1ca2c5"
+      "sha256": "f05a0374d0e03021c36243025bd75f36a970e5b24f7be3c247e14bf956754266"
     },
     {
       "path": "atlas/packs/core/places.json",
@@ -166,8 +166,8 @@
     },
     {
       "path": "atlas/packs/core/sources.json",
-      "size": 207537,
-      "sha256": "51a346a75ab22c4cb97157c9bd3a35f17b071d004b2793fe8fac667d3e7978f7"
+      "size": 207847,
+      "sha256": "1c371fe621b8d5cfdea199f49840b56165d6aa8b8d42af263d385e82c0b42d07"
     },
     {
       "path": "atlas/packs/core/years.json",
@@ -1021,8 +1021,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 1258908,
-      "sha256": "f0fc5c8d0002e3b739f7b64eeac1e83e5c83ff750b9981f9594d8bea4e460bb8"
+      "size": 1259218,
+      "sha256": "8e9835bce3be1eacf581d0000b8b14f9c6f6fb3055a77ebbdce5466320eabbd6"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -1577,6 +1577,6 @@
   ],
   "totals": {
     "files": 313,
-    "bytes": 9572546
+    "bytes": 9573166
   }
 }
