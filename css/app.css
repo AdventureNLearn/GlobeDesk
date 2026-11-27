@@ -327,6 +327,20 @@ dialog.archive { max-width:min(1180px, 96vw); width:min(1180px, 96vw); max-heigh
   body.view-newsdesk:not(.lite):not(.nd-open) #newsdesk > :not(.nd-explore) { display: none !important; }
 }
 
+/* The live site adds its own "Ask this site" launcher (#sc-root, fixed bottom-left) to this page.
+   GlobeDesk keeps a clear strip for it so it never sits on the section chips, cards or controls:
+   on phones a full-width bar at the bottom of the screen, on desktop a footer at the bottom of the
+   news column. Only applies when that launcher is on the page; its open panel keeps its own rules. */
+@media (max-width: 760px) {
+  body:has(> #sc-root) { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
+  body:has(> #sc-root)::after { content: ""; position: fixed; left: 0; right: 0; bottom: 0; height: calc(64px + env(safe-area-inset-bottom, 0px)); background: var(--gd-bg-deep); border-top: 1px solid var(--line); z-index: 54; }
+  body:has(> #sc-root) #sc-root:not(.sc-open) { bottom: calc(10px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (min-width: 761px) {
+  body.view-newsdesk:not(.lite):has(> #sc-root) #newsdesk::after { content: ""; position: sticky; bottom: 0; flex: 0 0 64px; margin-top: auto; background: var(--gd-panel-solid); border-top: 1px solid var(--line); z-index: 1; }
+  body.view-newsdesk:not(.lite):has(> #sc-root) #sc-root:not(.sc-open) { bottom: 10px; }
+}
+
 /* Frosted glass panels. Solid fallback always. */
 .panel, .topbar, .rundown li, .toast, dialog, .nd-card, .nd-research, .drop {
   background: var(--gd-panel-solid);

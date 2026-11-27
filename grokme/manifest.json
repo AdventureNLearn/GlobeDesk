@@ -291,8 +291,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 76592,
-      "sha256": "fc1fef1546ef6e5f5d1060e168440c9bc5d8e6d0e7a15cf1759ca771ad6bdd23"
+      "size": 77792,
+      "sha256": "48adb63ef76d23cc544b6a4e47414aae6b10b8a8ed1531288e03be873a0c543c"
     },
     {
       "path": "data/atlas/ancient/ancient-caral.json",
@@ -1577,6 +1577,6 @@
   ],
   "totals": {
     "files": 313,
-    "bytes": 9571346
+    "bytes": 9572546
   }
 }

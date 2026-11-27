@@ -45,4 +45,12 @@ t("no frog character anywhere on the Desk or its first run", () => {
   walk("js"); walk("newsdesk"); walk("desks");
   for (const f of files) assert.doesNotMatch(read(f), /frog/i, f);
 });
+t("the live site's Ask this site launcher gets its own strip: phone bottom bar, desktop news-column footer; open panel untouched", () => {
+  const ask = css.slice(css.indexOf('/* The live site adds its own "Ask this site"'), css.indexOf("/* Frosted glass panels."));
+  assert.match(ask, /body:has\(> #sc-root\) \{ padding-bottom: calc\(64px/);
+  assert.match(ask, /body:has\(> #sc-root\)::after \{ content: ""; position: fixed;[^}]*height: calc\(64px[^}]*z-index: 54;/);
+  assert.match(ask, /#newsdesk::after \{ content: ""; position: sticky; bottom: 0; flex: 0 0 64px;/);
+  assert.equal((ask.match(/#sc-root:not\(\.sc-open\) \{ bottom:/g) || []).length, 2);
+  assert.doesNotMatch(ask, /start-guide|startGuide|\.sc-panel/);
+});
 console.log(`calm-first-screen: ${n} passed`);
