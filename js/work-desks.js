@@ -1,7 +1,7 @@
 /* Work desks: a desk switcher at the top of the news desk column. "News" is the existing news desk,
    unchanged. The nine work desks show a scope, reading-tier notes, official sources (or [UNKNOWN]) and
-   experimental references (owner repos and Learning Lab cards, labelled, never backing a claim).
-   Withheld or private projects show as "owner project (link pending)" with no link. window.GD.workDesks */
+   experimental references (maintainer repos and Learning Lab cards, labelled, never backing a claim).
+   Generic sample desks with no public link yet show as "Sample desk: … (link pending)" with no link. window.GD.workDesks */
 (function (global) {
   "use strict";
   const GD = (global.GD = global.GD || {});
@@ -16,11 +16,11 @@
   const EXP = "Experimental (not an official source)";
   function isOwner(url) { return GD.sourceClass ? GD.sourceClass.isOwnerUrl(url) : PUBLIC_URL.test(String(url || "")); }
 
-  // Pure: one backing row as HTML. Owner repos and Learning Lab cards are experimental references, always labelled.
+  // Pure: one backing row as HTML. Maintainer repos and Learning Lab cards are experimental references, always labelled.
   function backingHtml(b) {
     const depth = '<span class="pill">' + esc(b.depth || UNKNOWN) + "</span>";
     const exp = ' <span class="pill warn exp-label">' + EXP + "</span>";
-    if (b.kind === "owner-project-pending") return '<li class="wd-pending">' + esc(b.label) + " " + depth + ' <span class="pill warn">link pending</span>' + exp + "</li>";
+    if (b.kind === "sample-pending") return '<li class="wd-pending">' + esc(b.label) + " " + depth + ' <span class="pill warn">link pending</span>' + exp + "</li>";
     if ((b.kind === "repo" || b.kind === "lab-card") && PUBLIC_URL.test(String(b.url || ""))) {
       return "<li>" + '<a href="' + esc(b.url) + '" target="_blank" rel="noopener noreferrer">' + esc(b.label) + "</a> " + depth + exp + (b.note ? ' <span class="muted small">' + esc(b.note) + "</span>" : "") + "</li>";
     }
@@ -46,7 +46,7 @@
       '<table class="at-table small wd-tiers">' + tiers.map((t) => "<tr><th>" + esc(t) + "</th><td>" + esc(d.tiers[t]) + "</td></tr>").join("") + "</table>" +
       '<h4 class="small">Official sources</h4>' + officialHtml(d) +
       (internal.length ? '<h4 class="small">In GlobeDesk</h4><ul class="small wd-internal">' + internal.map(backingHtml).join("") + "</ul>" : "") +
-      (exp.length ? '<h4 class="small">Experimental references <span class="muted">(owner projects; not official sources, never a record backing a claim)</span></h4><ul class="small wd-backing">' + exp.map(backingHtml).join("") + "</ul>" : "") +
+      (exp.length ? '<h4 class="small">Experimental references <span class="muted">(not official sources, never a record backing a claim)</span></h4><ul class="small wd-backing">' + exp.map(backingHtml).join("") + "</ul>" : "") +
       (d.atlas_categories.length ? '<p class="small">Atlas: ' + d.atlas_categories.map((id) => { const c = cats.find((x) => x.id === id); return '<button type="button" class="linklike" data-wd-cat="' + esc(id) + '">' + esc(c ? c.title : id) + "</button>"; }).join(" · ") + (d.id === "energy-materials" ? ' · <button type="button" class="mini" data-wd-atlas-view="elements">Elements periodic table</button>' : "") + "</p>" : "") +
       "</section>";
   }

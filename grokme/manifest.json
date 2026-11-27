@@ -626,8 +626,8 @@
     },
     {
       "path": "desks/work-desks.json",
-      "size": 26616,
-      "sha256": "c6c53d2db18fb0b4cdab49a6e435142ef41ebe27ec4819a6181e372c7e580a70"
+      "size": 26553,
+      "sha256": "0a279fbd2f7b6c6f00722272c5fb63cd02bc17c59e52486b13ce5243d908b373"
     },
     {
       "path": "docs/BUILD-YOUR-OWN-OBJECT.md",
@@ -761,8 +761,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 849108,
-      "sha256": "7b62efca5315addb1a2a0f4ab3f28eab6bff83eb7abc7cfd9049a6ba8b00472a"
+      "size": 849042,
+      "sha256": "ec6ff28abf2b03629cd38171a8d0fda5cc294cbeb1c88b7916bc07cca5e775f8"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -1011,8 +1011,8 @@
     },
     {
       "path": "js/work-desks.js",
-      "size": 7094,
-      "sha256": "6ccf684cb529ed084fbbe9114e631b6cbc1f95bd57c0fcfc2d25810f56c7c8f7"
+      "size": 7100,
+      "sha256": "139d8d751c80bb6ce94ff35868dcd29aaaa21177747b5cf9b7979d9f2b352cb4"
     },
     {
       "path": "js/year-clock.js",
@@ -1166,8 +1166,8 @@
     },
     {
       "path": "schema/globedesk-work-desks.schema.json",
-      "size": 6454,
-      "sha256": "b5b742ef55efe5025081ddf5654a225b60eaab7e2969a46315f9900868aa7a09"
+      "size": 6491,
+      "sha256": "1eaea3c2bb8902346596737c545e4b78156e7b9ffc1b4b10e26b3cb8c176015e"
     },
     {
       "path": "share/player.css",
@@ -1232,6 +1232,6 @@
   ],
   "totals": {
     "files": 244,
-    "bytes": 7484770
+    "bytes": 7484684
   }
 }

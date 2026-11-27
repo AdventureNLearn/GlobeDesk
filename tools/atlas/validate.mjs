@@ -63,8 +63,8 @@ export function deskRules(doc) {
     const at = `desk ${d.id}`;
     (d.backing || []).forEach((b, i) => {
       if (b.url && SC.isOwnerUrl(b.url) && b.class !== "experimental") p.push(`${at} backing ${i + 1}: owner repo or card must be experimental`);
-      if ((b.kind === "repo" || b.kind === "lab-card" || b.kind === "owner-project-pending") && b.class !== "experimental") p.push(`${at} backing ${i + 1}: ${b.kind} must be experimental`);
-      if (b.kind === "owner-project-pending" && b.url) p.push(`${at} backing ${i + 1}: a withheld project carries no link`);
+      if ((b.kind === "repo" || b.kind === "lab-card" || b.kind === "sample-pending") && b.class !== "experimental") p.push(`${at} backing ${i + 1}: ${b.kind} must be experimental`);
+      if (b.kind === "sample-pending" && b.url) p.push(`${at} backing ${i + 1}: a sample desk with no link yet carries no link`);
     });
     (d.official_sources || []).forEach((o, i) => {
       if (o.class !== "official") p.push(`${at} official ${i + 1}: class must be official`);
