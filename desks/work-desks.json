@@ -3,7 +3,7 @@
   "status": "draft",
   "checked": "2026-11-24",
   "license": "CC BY 4.0",
-  "note": "Ten desks: the existing news desk plus nine work desks. Official sources are primary or public records only (government, standards bodies, datasets with a named licence). The owner's own repositories and Learning Lab cards are listed under Experimental references, labelled 'Experimental (not an official source)', and never count as a record backing a claim. Atlas entries, news sections and episodes are GlobeDesk's own content (class internal), not sources. Withheld or private projects appear as 'owner project (link pending)' with no link. A desk with no official source shows official source [UNKNOWN] and is listed in atlas/OPEN-ITEMS.md. Depth labels come from the source inventory; anything a source does not label is [UNKNOWN].",
+  "note": "Ten desks: the existing news desk plus nine work desks. Official sources are primary or public records only (government, standards bodies, datasets with a named licence). Public AdventureNLearn repositories and Learning Lab cards are listed under Experimental references, labelled 'Experimental (not an official source)', and never count as a record backing a claim. Atlas entries, news sections and episodes are GlobeDesk's own content (class internal), not sources. Generic sample desks with no public link yet appear as 'Sample desk: \u2026 (link pending)' with no link. A desk with no official source shows official source [UNKNOWN] and is listed in atlas/OPEN-ITEMS.md. Depth labels come from the source inventory; anything a source does not label is [UNKNOWN].",
   "tiers": [
     "kids",
     "everyday",
@@ -116,8 +116,8 @@
           "class": "experimental"
         },
         {
-          "kind": "owner-project-pending",
-          "label": "Owner project: state-level permitting prototype (link pending)",
+          "kind": "sample-pending",
+          "label": "Sample desk: civic records browser (link pending)",
           "depth": "[UNKNOWN]",
           "class": "experimental"
         }
@@ -444,14 +444,14 @@
           "class": "internal"
         },
         {
-          "kind": "owner-project-pending",
-          "label": "Owner project: highway right-of-way public-record kernel (link pending; repository is private)",
+          "kind": "sample-pending",
+          "label": "Sample desk: open map-layers kit (link pending)",
           "depth": "[UNKNOWN]",
           "class": "experimental"
         },
         {
-          "kind": "owner-project-pending",
-          "label": "Owner project: historic routes atlas (link pending)",
+          "kind": "sample-pending",
+          "label": "Sample desk: historic routes atlas (link pending)",
           "depth": "[UNKNOWN]",
           "class": "experimental"
         }
@@ -533,8 +533,8 @@
           "class": "experimental"
         },
         {
-          "kind": "owner-project-pending",
-          "label": "Owner project: primary-law quotation collection (link pending)",
+          "kind": "sample-pending",
+          "label": "Sample desk: primary-law quotation collection (link pending)",
           "depth": "[UNKNOWN]",
           "class": "experimental"
         }

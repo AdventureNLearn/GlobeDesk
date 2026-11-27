@@ -1,4 +1,4 @@
-// Ten desks: lineup, schema, public-only links, withheld projects unlinked, owner repos experimental (never official).
+// Ten desks: lineup, schema, public-only links, sample desks with no link yet, public repos experimental (never official).
 import assert from "node:assert/strict";
 import { hygieneHits } from "../tools/atlas/hygiene.mjs";
 import { readFileSync } from "node:fs";
@@ -31,10 +31,10 @@ t("links are public AdventureNLearn repos or the public Learning Lab only, all l
     if (b.url) { assert.match(b.url, /^https:\/\/(github\.com\/AdventureNLearn\/[A-Za-z0-9._-]+|learninglab\.grok\.me\/)$/); assert.equal(b.class, "experimental"); assert.ok(SC.isOwnerUrl(b.url)); }
   }));
 });
-t("withheld or private owner projects say 'link pending' and carry no link", () => {
-  const pending = doc.desks.flatMap((d) => d.backing.filter((b) => b.kind === "owner-project-pending"));
+t("sample desks with no public link yet say 'link pending' and carry no link", () => {
+  const pending = doc.desks.flatMap((d) => d.backing.filter((b) => b.kind === "sample-pending"));
   assert.equal(pending.length, 4);
-  pending.forEach((b) => { assert.equal(b.url, undefined); assert.match(b.label, /^Owner project: .*\(link pending/); assert.equal(b.class, "experimental"); });
+  pending.forEach((b) => { assert.equal(b.url, undefined); assert.match(b.label, /^Sample desk: .*\(link pending/); assert.equal(b.class, "experimental"); });
 });
 t("owner rule: an owner repo or card can never be tagged official", () => {
   const d = clone(); d.desks[1].official_sources = [{ label: "x", publisher: "x", url: "https://github.com/AdventureNLearn/permit-harbor", class: "official", checked: "2026-11-24" }]; d.desks[1].official_status = "listed";
