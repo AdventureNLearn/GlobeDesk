@@ -95,7 +95,7 @@ export const LINKED = [
     ncei: { dataset: V, event_id: 1348 },
     unknowns: [
       "Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown",
-      "Deep-time clock: 79 CE sits before the America 250 clock; it joins the Ancient-world deep-time clock when that lands",
+      "Deep-time clock: 79 CE sits before the America 250 clock; it is on the Ancient World deep-time clock through the Pompeii entry, at Pompeii's Pleiades point",
     ],
     facts: [
     { text: "NCEI rates the 79 CE eruption of Vesuvius VEI 5 and counts 2,100 deaths, dated 25 August 79.", source: V },

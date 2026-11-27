@@ -327,10 +327,18 @@
   function storiesDuration(ep) {
     return ep.stories.reduce((a, s) => a + (Number(s.durationSec) || 0), 0);
   }
+  // True when playing the episode would change what is on screen: a camera move,
+  // a caption, a placed shot or a voiceover, or a card someone has written.
+  // A blank episode has none of these, so its clock would run over a still globe.
+  function hasTimeline(ep) {
+    return !!(ep && (ep.stories || []).some((s) => (s.camera || []).length || (s.captions || []).length ||
+      (s.media || []).length || (s.audioOverlays || []).length || s.voiceover ||
+      (s.cards || []).some((c) => c && c.title && c.title !== U)));
+  }
   function totalDuration(ep) {
     const o = ep.outro && ep.outro.enabled ? Number(ep.outro.durationSec) || 0 : 0;
     return storiesDuration(ep) + o;
   }
 
-  GD.model = { SCHEMA, SCHEMA_LEGACY, U, PRESETS, uid, keyframe, autoCameraPath, autoCameraPathForLocation, pointInLand, lookTarget, blankEpisode, blankStory, blankCard, blankSource, sampleEpisode, setSampleEpisode, SAMPLE_ID, SAMPLE_FILE, validate, normalizeStory, normalizeEpisode, duplicateStory, storyStarts, totalDuration, storiesDuration, blankCitation, mapCitation, citationLine };
+  GD.model = { SCHEMA, SCHEMA_LEGACY, U, PRESETS, uid, keyframe, autoCameraPath, autoCameraPathForLocation, pointInLand, lookTarget, blankEpisode, blankStory, blankCard, blankSource, sampleEpisode, setSampleEpisode, SAMPLE_ID, SAMPLE_FILE, validate, normalizeStory, normalizeEpisode, duplicateStory, storyStarts, totalDuration, storiesDuration, hasTimeline, blankCitation, mapCitation, citationLine };
 })();

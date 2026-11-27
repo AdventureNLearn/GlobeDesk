@@ -110,14 +110,19 @@
     renderRundown(); renderBin(); renderInspector(); renderTransport(); applyAspect(S.episode.output.aspect || "16:9"); renderOverlays();
   }
 
+  // A blank story's title and place are the [UNKNOWN] marker. In the rundown say plainly
+  // that nothing is set yet instead of showing the marker as if it were a title.
+  function shownTitle(s) { return s.title && s.title !== GD.model.U ? s.title : "Untitled story"; }
+  function shownPlace(s) { return s.location && s.location.name && s.location.name !== GD.model.U ? s.location.name : "No place set"; }
+
   function renderRundown() {
     const ol = $("rundown"); ol.innerHTML = "";
     S.episode.stories.forEach((s, i) => {
       const li = document.createElement("li");
       li.className = i === S.storyIdx ? "on" : "";
       li.innerHTML = `<span class="ops"><button data-op="up" title="Move up">↑</button><button data-op="down" title="Move down">↓</button><button data-op="pin" title="Open this card on the globe (several can be open)" aria-pressed="${GD.callouts && GD.callouts.isOpen(s.id) ? "true" : "false"}"${s.location && s.location.lat != null ? "" : " disabled"}>◎</button><button data-op="dup" title="Duplicate">⧉</button><button data-op="del" title="Delete">✕</button></span>
-        <span class="n">${escNum(i + 1)}</span><strong title="${esc(s.title)}">${esc(s.title)}</strong>
-        <div class="meta" title="${esc(s.location.name)}">${esc(s.location.name)} • ${escNum(s.durationSec)}s • ${escNum((s.cards || []).length)} card(s) • ${escNum((s.camera || []).filter((k) => k.cut !== false).length)} shot(s)
+        <span class="n">${escNum(i + 1)}</span><strong title="${esc(shownTitle(s))}">${esc(shownTitle(s))}</strong>
+        <div class="meta" title="${esc(shownPlace(s))}">${esc(shownPlace(s))} • ${escNum(s.durationSec)}s • ${escNum((s.cards || []).length)} card(s) • ${escNum((s.camera || []).filter((k) => k.cut !== false).length)} shot(s)
         ${s.location.verified ? '<span class="pill ok">location verified</span>' : '<span class="pill warn">not verified</span>'}
         ${s.asReported !== false ? '<span class="pill warn">as reported</span>' : ""}</div>`;
       li.addEventListener("click", (e) => {
@@ -181,6 +186,15 @@
 
   function renderTransport() {
     const total = GD.model.totalDuration(S.episode);
+    // No camera moves, captions or written cards: do not show a clock that drives nothing.
+    const live = !GD.model.hasTimeline || GD.model.hasTimeline(S.episode) || S.playing;
+    $("transportBar").classList.toggle("no-timeline", !live);
+    $("btnPlay").hidden = !live; $("time").hidden = !live;
+    document.querySelector("#transportBar .scrub-wrap").hidden = !live;
+    const fly = !live && !!(GD.flyover && GD.flyover.offerable(S.episode));
+    if ($("btnFlyover")) $("btnFlyover").hidden = !fly;
+    if ($("tlEmpty")) $("tlEmpty").hidden = live || fly;
+    renderNowPlaying(live);
     $("time").textContent = `${fmtT(S.t)} / ${fmtT(total)}`;
     const sc = $("scrub"); sc.max = String(total); sc.value = String(S.t);
     $("btnPlay").textContent = S.playing ? "❚❚" : "▶";
@@ -191,13 +205,55 @@
       d.style.flex = String(s.durationSec || 1);
       d.className = i === S.storyIdx && !S.ov.outro ? "on" : "";
       d.title = `${i + 1}. ${s.title}`;
+
       (s.camera || []).filter((k) => k.cut !== false && k.at > 0).forEach((k) => {
         const tick = document.createElement("i"); tick.style.left = `${(k.at / s.durationSec) * 100}%`; tick.title = "cut"; d.appendChild(tick);
       });
       seg.appendChild(d);
     });
+    // Year under each story on the bar, so the timeline reads as dates, not only seconds.
+    const yrs = $("segYears");
+    if (yrs) {
+      yrs.innerHTML = "";
+      const any = S.episode.stories.some((s) => /^\d{4}/.test(s.date || ""));
+      yrs.hidden = !any;
+      if (any) {
+        S.episode.stories.forEach((s, i) => {
+          const y = document.createElement("span"); y.style.flex = String(s.durationSec || 1);
+          y.textContent = /^\d{4}/.test(s.date || "") ? String(Number(s.date.slice(0, 4))) : "";
+          if (i === S.storyIdx && !S.ov.outro) y.className = "on";
+          yrs.appendChild(y);
+        });
+        if (S.episode.outro.enabled) { const y = document.createElement("span"); y.style.flex = String(S.episode.outro.durationSec); yrs.appendChild(y); }
+      }
+    }
     if (S.episode.outro.enabled) { const d = document.createElement("div"); d.className = "outro"; d.style.flex = String(S.episode.outro.durationSec); d.title = "Outro card"; seg.appendChild(d); }
     syncDataYearUi();
+  }
+
+  // Story position, its first source, and the event clock, shown with the transport
+  // so a phone does not need the Events tab to see why pins appear and disappear.
+  function renderNowPlaying(live) {
+    const np = $("nowPlaying"), ck = $("evClockNow");
+    const s = S.episode.stories[S.storyIdx];
+    const n = S.episode.stories.length;
+    const titled = live && s && s.title && s.title !== GD.model.U;
+    if (np) {
+      np.hidden = !titled;
+      if (titled) {
+        const src = (s.sources || []).find((x) => x && x.url && x.label && x.label !== GD.model.U);
+        np.innerHTML = `<span class="np-k">Now playing ${S.storyIdx + 1} of ${n}</span> ${esc(s.title)}` +
+          (src ? ` <span class="np-src">· Source: <a href="${esc(src.url)}" target="_blank" rel="noopener noreferrer">${esc(src.label)}</a></span>` : ` <span class="np-src">· Source: ${esc(GD.model.U)}</span>`);
+      } else np.textContent = "";
+    }
+    if (ck) {
+      const c = live && GD.eventsMap && GD.eventsMap.clock ? GD.eventsMap.clock() : null;
+      ck.hidden = c == null;
+      if (c != null) {
+        const vis = GD.eventsMap.visibleFeatures ? GD.eventsMap.visibleFeatures().length : 0;
+        ck.textContent = `Event clock ${new Date(c).toISOString().slice(0, 10)} · ${vis} on the map`;
+      }
+    }
   }
 
   function dataYearStatus() {
@@ -212,6 +268,12 @@
     });
   }
 
+  function gisFollowsYear() {
+    const g = GD.gis && GD.gis.state;
+    if (!g || !g.liveEnabled || !g.overlaysOn) return false;
+    return (g.layers || []).some((l) => l && g.overlaysOn[l.id] && /^(tiger|current-snapshot|current-weather)$/.test(l.yearKind || ""));
+  }
+
   function syncDataYearUi() {
     const yc = GD.yearClock;
     if (!yc) return;
@@ -220,14 +282,20 @@
     const chip = $("dataYearChip");
     const follow = $("followStoryDate");
     const badge = $("stageYearBadge");
+    const st = dataYearStatus();
+    // Dated imagery off and no year-driven GIS overlay on: the year changes nothing, so say so.
+    const idle = !!(st && st.datedOff) && !gisFollowsYear();
     if (sl) {
       sl.min = String(yc.YEAR_MIN);
       sl.max = String(yc.yearMax());
       sl.value = String(yc.getYear());
+      sl.disabled = idle;
+      sl.title = idle ? "Dated imagery is off. Turn on dated satellite in Layers to change the picture by year." : "";
     }
-    if (val) val.textContent = String(yc.getYear());
+    if (val) val.textContent = idle ? "Off" : String(yc.getYear());
+    const wrap = $("dataYearWrap");
+    if (wrap) wrap.classList.toggle("is-off", idle);
     if (follow) follow.checked = !!yc.isFollowStory();
-    const st = dataYearStatus();
     const kind = st && st.kind;
     const chipLabel = yc.chipText ? yc.chipText(st) : "";
     const badgeSpec = yc.yearBadgeSpec ? yc.yearBadgeSpec() : null;
@@ -235,7 +303,7 @@
       if (chipLabel) {
         chip.hidden = false;
         chip.textContent = chipLabel;
-        chip.setAttribute("data-kind", kind || "");
+        chip.setAttribute("data-kind", (st && st.datedOff) ? "off" : (kind || ""));
         chip.title = (st && (st.label || st.spoken)) || "";
       } else {
         chip.hidden = true;
@@ -1011,6 +1079,7 @@
     $("asp169").addEventListener("click", () => applyAspect("16:9"));
     $("asp916").addEventListener("click", () => applyAspect("9:16"));
     $("btnPlay").addEventListener("click", () => (S.playing ? GD.playback.pause() : (S.paused ? GD.playback.resume() : GD.playback.play())));
+    if ($("btnFlyover")) $("btnFlyover").addEventListener("click", () => { if (GD.flyover) GD.flyover.play(); });
     $("scrub").addEventListener("input", (e) => { GD.playback.seek(Number(e.target.value)); renderTransport(); renderRundown(); });
     const yearEl = $("dataYear");
     if (yearEl && GD.yearClock) {

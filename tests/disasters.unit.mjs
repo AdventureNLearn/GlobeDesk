@@ -60,7 +60,7 @@ t("the Pompeii entry is the Vesuvius 79 cross-link, not a separate disasters pin
   assert.deepEqual(linked.ncei, { dataset: "ncei-sig-volcanoes", event_id: 1348 });
   assert.deepEqual(linked.unknowns, [
     "Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown",
-    "Deep-time clock: 79 CE sits before the America 250 clock; it joins the Ancient-world deep-time clock when that lands",
+    "Deep-time clock: 79 CE sits before the America 250 clock; it is on the Ancient World deep-time clock through the Pompeii entry, at Pompeii's Pleiades point",
   ]);
   assert.ok(linked.facts.some((f) => /2,100/.test(f.text) && f.source === "ncei-sig-volcanoes"));
   assert.ok(linked.facts.some((f) => /3,360/.test(f.text) && f.source === "usgs-deadliest-eruptions"));
