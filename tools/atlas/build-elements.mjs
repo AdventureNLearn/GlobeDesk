@@ -1,7 +1,7 @@
 // Build 118 chemistry/elements Atlas entries from cached NIST, IUPAC and Wikidata
-// snapshots. Local only. Does not fetch the network. The raw cache lives outside
-// the repo: ../globedesk-plans/source-cache relative to the repo root, or
-// GLOBEDESK_ELEMENTS_CACHE. This script writes derived Atlas files only, and
+// snapshots. Local only. Does not fetch the network. The raw cache lives in
+// .cache/sources at the repo root (gitignored), or GLOBEDESK_ELEMENTS_CACHE.
+// This script writes derived Atlas files only, and
 // merges lithium-element and copper-element instead of replacing them.
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import path from "node:path";
@@ -11,6 +11,13 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..")
 const ATLAS = path.join(ROOT, "atlas");
 const CHECKED = "2026-11-25";
 const RECORD_REL = "data/atlas/chemistry/elements-electron-config.json";
+// Chemistry index records (built by build-chem-*.mjs). Each one that exists is listed
+// on every element entry, with its sources, so a rerun here never drops them.
+const CHEM_EXTRA_RECORDS = [
+  { rel: "data/atlas/chemistry/elements-index.json", sources: ["nist-sp966-ionization", "ciaaw-atomic-weights", "pubchem-elements-outbound"] },
+  { rel: "data/atlas/chemistry/element-sites.json", sources: ["wikidata-element-sites"] },
+  { rel: "data/atlas/chemistry/element-ores-by-country.json", sources: ["usgs-mcs-2026-data"] },
+];
 const SOURCE_IDS = {
   nist: "nist-atomic-weights",
   nistPt: "nist-periodic-table-2024",
@@ -64,7 +71,7 @@ function allExistingIds() {
 
 function cacheDir() {
   if (process.env.GLOBEDESK_ELEMENTS_CACHE) return path.resolve(process.env.GLOBEDESK_ELEMENTS_CACHE);
-  return path.resolve(ROOT, "../globedesk-plans/source-cache");
+  return path.resolve(ROOT, ".cache/sources");
 }
 
 function readJson(p) {
@@ -310,6 +317,11 @@ function elementEntry(iupac, nist, wd, cfg, knownIds) {
   const seeAlso = ((ELEMENT_CROSS_LINKS[id] && ELEMENT_CROSS_LINKS[id].see_also_ids) || []).filter((s) => !knownIds || knownIds.has(s));
   if (seeAlso.length) entry.see_also_ids = seeAlso;
   if (notes) entry.notes = notes;
+  const extra = CHEM_EXTRA_RECORDS.filter((r) => existsSync(path.join(ROOT, r.rel)));
+  if (extra.length) {
+    entry.records = extra.map((r) => r.rel);
+    for (const r of extra) for (const sid of r.sources) if (!entry.sources.includes(sid)) entry.sources.push(sid);
+  }
   return entry;
 }
 
@@ -340,7 +352,8 @@ function mergePreserved(existing, generated) {
     checked: CHECKED,
   };
   if (existing.record) merged.record = existing.record;
-  if (existing.records) merged.records = existing.records;
+  const records = [...(existing.records || []), ...(generated.records || [])].filter((v, i, a) => a.indexOf(v) === i);
+  if (records.length) merged.records = records;
   const seeAlso = [...(existing.see_also_ids || []), ...(generated.see_also_ids || [])].filter((v, i, a) => a.indexOf(v) === i);
   if (seeAlso.length) merged.see_also_ids = seeAlso;
   if (existing.see_also_paths) merged.see_also_paths = existing.see_also_paths;

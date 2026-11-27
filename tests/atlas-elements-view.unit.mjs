@@ -152,6 +152,7 @@ function renderAtlas(opts) {
   if (opts && "elementZoom" in opts) atlas.st.elementZoom = opts.elementZoom;
   if (opts && "q" in opts) atlas.st.q = opts.q;
   if (opts && "selected" in opts) atlas.st.selected = opts.selected;
+  if (opts && opts.st) Object.assign(atlas.st, opts.st);
   atlas.render();
   return atlasView.innerHTML;
 }
@@ -272,6 +273,87 @@ t("deep links ?atlas={id} and ?atlas-view=elements open the right view, card, or
   // Missing target shows 'not in this copy'
   atlas.applyParams(new URLSearchParams("?atlas=missing-element-xyz"));
   assert.match(atlasView.innerHTML, /missing-element-xyz.*not in this copy/);
+});
+
+t("chem index model: sorts with unknowns last both ways, filters by family/period/group/status, compare caps at 4", () => {
+  const asc = M.chemIndex(D, {}, { sort: "ie", dir: "asc" });
+  const desc = M.chemIndex(D, {}, { sort: "ie", dir: "desc" });
+  assert.equal(asc.rows.length, 118);
+  assert.equal(desc.rows[0].symbol, "He");
+  assert.equal(asc.rows[0].symbol, "Cs");
+  for (const list of [asc.rows, desc.rows]) {
+    const firstUnknown = list.findIndex((r) => r.ieSort == null);
+    assert.equal(firstUnknown, 108);
+    assert.ok(list.slice(firstUnknown).every((r) => r.ie === "[UNKNOWN]"));
+  }
+  const w = M.chemIndex(D, {}, { sort: "weight", dir: "desc" });
+  assert.equal(w.rows.slice(-24).every((r) => r.weight === "[UNKNOWN]"), true);
+  assert.equal(M.chemIndex(D, {}, { filter: { family: "halogen" } }).rows.length, 6);
+  assert.equal(M.chemIndex(D, {}, { filter: { period: "1" } }).rows.length, 2);
+  assert.equal(M.chemIndex(D, {}, { filter: { group: "none" } }).rows.length, 30);
+  assert.equal(M.chemIndex(D, {}, { filter: { group: "18" } }).rows.length, 7);
+  assert.equal(M.chemIndex(D, {}, { filter: { status: "not-proven" } }).rows.length, 5);
+  assert.equal(M.chemIndex(D, {}, { filter: { status: "[UNKNOWN]" } }).rows.length, 10);
+  assert.equal(M.chemIndex(D, { q: "oganesson" }, {}).rows.length, 1);
+  assert.equal(M.elementGroup(57), null);
+  assert.equal(M.elementPeriod(57), 6);
+  assert.equal(M.elementPeriod(103), 7);
+  let ids = [];
+  for (const id of ["hydrogen-element", "carbon-element", "iron-element", "gold-element"]) ids = M.chemCompareToggle(ids, id).ids;
+  const fifth = M.chemCompareToggle(ids, "oganesson-element");
+  assert.equal(fifth.refused, true);
+  assert.equal(fifth.ids.length, 4);
+  assert.deepEqual(M.chemCompareToggle(ids, "carbon-element").ids, ["hydrogen-element", "iron-element", "gold-element"]);
+  const c = M.chemCompare(D, ["hydrogen-element", "oganesson-element"]);
+  assert.equal(c.cols.length, 2);
+  const ie = c.rows.find((r) => /ionization/.test(r.property));
+  assert.deepEqual(ie.values, ["13.5984", "[UNKNOWN]"]);
+  const dens = c.rows.find((r) => r.property === "Density");
+  assert.equal(dens.withheld, true);
+  assert.deepEqual(dens.values, ["[UNKNOWN]", "[UNKNOWN]"]);
+  assert.deepEqual(dens.links, ["https://pubchem.ncbi.nlm.nih.gov/element/1", "https://pubchem.ncbi.nlm.nih.gov/element/118"]);
+});
+
+t("chem index view: sortable headers with aria-sort, filters, compare panel, withheld links, card rows", () => {
+  const html = renderAtlas({ elementsMode: "table" });
+  assert.match(html, /<th scope="col" aria-sort="ascending"><button type="button" class="at-chem-sort on" data-at-chem-sort="z">/);
+  assert.match(html, /data-at-chem-sort="ie"/);
+  assert.match(html, /data-at-chem-filter="family"/);
+  assert.match(html, /data-at-chem-filter="status"/);
+  assert.match(html, /Showing 118 of 118/);
+  assert.equal((html.match(/data-at-chem-cmp="[^"]+-element"/g) || []).length, 118);
+  assert.match(html, /13\.5984/);
+  assert.match(html, /Not bundled, licence not cleared: Density/);
+  const sorted = renderAtlas({ elementsMode: "table", st: { chemSort: "ie", chemDir: "desc" } });
+  assert.match(sorted, /aria-sort="descending"><button type="button" class="at-chem-sort on" data-at-chem-sort="ie"/);
+  assert.ok(sorted.indexOf('data-at-entry="helium-element"') < sorted.indexOf('data-at-entry="hydrogen-element"'));
+  assert.ok(sorted.indexOf('data-at-entry="oganesson-element"') > sorted.indexOf('data-at-entry="caesium-element"'));
+  const filtered = renderAtlas({ elementsMode: "table", st: { chemFilter: { family: "halogen", period: "all", group: "all", status: "all" } } });
+  assert.equal((filtered.match(/data-at-entry="[^"]+-element"/g) || []).length, 6);
+  assert.match(filtered, /Showing 6 of 118/);
+  const cmp = renderAtlas({ elementsMode: "table", st: { chemCompare: ["hydrogen-element", "carbon-element", "iron-element", "gold-element"] } });
+  assert.match(cmp, /Compare \(4 of 4\)/);
+  assert.match(cmp, /href="https:\/\/pubchem\.ncbi\.nlm\.nih\.gov\/element\/79" target="_blank" rel="noopener noreferrer"/);
+  assert.match(cmp, /data-at-chem-cmp="oganesson-element"[^>]* disabled/);
+  assert.doesNotMatch(cmp, /\sstyle="/);
+  const card = renderAtlas({ elementsMode: "table", selected: "oganesson-element", st: { tab: "chemistry" } });
+  assert.match(card, /First ionization energy<\/th><td>\[UNKNOWN\]/);
+  const hcard = renderAtlas({ elementsMode: "table", selected: "hydrogen-element", st: { tab: "chemistry" } });
+  assert.match(hcard, /13\.5984 eV/);
+  assert.match(hcard, /look it up on PubChem/);
+});
+
+t("element card lists Wikidata places and USGS producing countries with show-on-globe buttons", () => {
+  const cu = renderAtlas({ elementsMode: "table", selected: "copper-element", st: { tab: "chemistry" } });
+  assert.match(cu, /Producing countries \(USGS MCS 2026\)/);
+  assert.match(cu, /<td>Chile<\/td><td>5,300<\/td>/);
+  assert.match(cu, /data-at-chem-ores="copper-element"/);
+  assert.match(cu, /Country totals, not mine locations/);
+  const y = renderAtlas({ elementsMode: "table", selected: "yttrium-element", st: { tab: "chemistry" } });
+  assert.match(y, /Ytterby mine/);
+  assert.match(y, /data-at-chem-sites="1"/);
+  const og = renderAtlas({ elementsMode: "table", selected: "neodymium-element", st: { tab: "chemistry" } });
+  assert.match(og, /Producing countries \(USGS MCS 2026\): \[UNKNOWN\] for this element/);
 });
 
 console.log(n + " atlas elements view tests ok");

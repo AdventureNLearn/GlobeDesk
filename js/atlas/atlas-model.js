@@ -295,7 +295,115 @@
     return { cols: 18, rows: 10, families: ELEMENT_FAMILIES, stars, lines, forks, missing };
   }
 
-  const api = { TIERS, TIER_LABEL, UNKNOWN, matches, azRows, letters, byPlace, byYear, isoWeek, nowStatus, tree, tierNote, tierText, tiersWritten, sourcesFor, entryById, category, yearLabel, parseDay, ELEMENT_FAMILIES, isElementEntry, elementZ, elementSymbol, elementName, elementPos, elementFamily, familyLabel, stepElement, SHELL_LETTERS, elementConfig, elementsView };
+  // ---------- chemistry index (sortable, filterable, compare up to 4) ----------
+  const CHEM_INDEX_REL = "data/atlas/chemistry/elements-index.json";
+  const CHEM_COMPARE_MAX = 4;
+  const CHEM_SORT_KEYS = ["z", "symbol", "name", "weight", "ie", "period", "group", "family"];
+  const CHEM_IE_STATUSES = ["supported", "not-proven", UNKNOWN];
+  function chemIndexRecord(data) { return (data && data.records && data.records[CHEM_INDEX_REL]) || null; }
+  function elementPeriod(z) {
+    const p = elementPos(z);
+    if (!p) return null;
+    if (p.row === 9) return 6;
+    if (p.row === 10) return 7;
+    return p.row;
+  }
+  // IUPAC 2022 gives La-Lu and Ac-Lr no individual Group 1-18 number: null here, never guessed.
+  function elementGroup(z) {
+    const p = elementPos(z);
+    if (!p || p.row > 7) return null;
+    return p.col;
+  }
+  function chemRow(star, rec) {
+    const r = (rec && rec.byZ && rec.byZ[String(star.z)]) || null;
+    return {
+      id: star.id, z: star.z, symbol: star.symbol, name: star.name, family: star.family, familyLabel: star.familyLabel,
+      match: star.match, period: elementPeriod(star.z), group: elementGroup(star.z),
+      weight: r ? r.weight : UNKNOWN, weightKind: r ? r.weight_kind : UNKNOWN, weightSort: r && typeof r.weight_sort === "number" ? r.weight_sort : null,
+      ie: r ? r.ie_ev : UNKNOWN, ieSort: r && typeof r.ie_sort === "number" ? r.ie_sort : null,
+      ieStatus: r ? r.ie_status : UNKNOWN, ieBasis: (r && r.ie_basis) || ""
+    };
+  }
+  function chemSortValue(row, key) {
+    if (key === "weight") return row.weightSort;
+    if (key === "ie") return row.ieSort;
+    if (key === "symbol" || key === "name" || key === "familyLabel") return String(row[key] || "").toLowerCase();
+    if (key === "family") return String(row.familyLabel || "").toLowerCase();
+    const v = row[key];
+    return v == null ? null : v;
+  }
+  // Unknown or missing values always sort last, whatever the direction; ties break on Z.
+  function chemSort(rows, key, dir) {
+    const k = CHEM_SORT_KEYS.indexOf(key) >= 0 ? key : "z";
+    const d = dir === "desc" ? -1 : 1;
+    return rows.slice().sort((a, b) => {
+      const va = chemSortValue(a, k), vb = chemSortValue(b, k);
+      const na = va == null, nb = vb == null;
+      if (na !== nb) return na ? 1 : -1;
+      if (!na && va !== vb) return (va < vb ? -1 : 1) * d;
+      return a.z - b.z;
+    });
+  }
+  function chemFilterOk(row, f) {
+    if (!f) return true;
+    if (f.family && f.family !== "all" && row.family !== f.family) return false;
+    if (f.period && f.period !== "all" && String(row.period) !== String(f.period)) return false;
+    if (f.group && f.group !== "all") {
+      if (f.group === "none") { if (row.group != null) return false; }
+      else if (String(row.group) !== String(f.group)) return false;
+    }
+    if (f.status && f.status !== "all" && row.ieStatus !== f.status) return false;
+    return true;
+  }
+  function chemIndex(data, f, opts) {
+    const ev = elementsView(data, f);
+    const rec = chemIndexRecord(data);
+    const o = opts || {};
+    const key = CHEM_SORT_KEYS.indexOf(o.sort) >= 0 ? o.sort : "z";
+    const dir = o.dir === "desc" ? "desc" : "asc";
+    const all = ev.stars.map((s) => chemRow(s, rec));
+    const shown = chemSort(all.filter((r) => r.match && chemFilterOk(r, o.filter)), key, dir);
+    return {
+      available: !!rec, sort: key, dir, rows: shown, total: all.length, all,
+      columns: (rec && rec.columns) || [], withheld: (rec && rec.withheld) || [], outbound: (rec && rec.outbound) || {},
+      families: ELEMENT_FAMILIES, statuses: CHEM_IE_STATUSES
+    };
+  }
+  function chemOutboundUrl(rec, key, z) {
+    const o = rec && rec.outbound && rec.outbound[key];
+    if (!o || !o.url_template || !Number.isInteger(z) || z < 1 || z > 118) return "";
+    return o.url_template.replace("{z}", String(z));
+  }
+  // Toggle an id in the compare set: keeps order, caps at CHEM_COMPARE_MAX (a full set refuses a 5th).
+  function chemCompareToggle(ids, id) {
+    const cur = (ids || []).slice();
+    const i = cur.indexOf(id);
+    if (i >= 0) { cur.splice(i, 1); return { ids: cur, refused: false }; }
+    if (cur.length >= CHEM_COMPARE_MAX) return { ids: cur, refused: true };
+    cur.push(id);
+    return { ids: cur, refused: false };
+  }
+  // Property x element table for the compare panel. Withheld properties stay [UNKNOWN] with a link.
+  function chemCompare(data, ids) {
+    const idx = chemIndex(data, {}, {});
+    const rec = chemIndexRecord(data);
+    const cols = (ids || []).slice(0, CHEM_COMPARE_MAX).map((id) => idx.all.find((r) => r.id === id)).filter(Boolean);
+    const col = (id) => (rec && rec.columns || []).find((c) => c.id === id) || {};
+    const rows = [
+      { property: "Atomic number (Z)", values: cols.map((c) => String(c.z)), source: col("z").source || "" },
+      { property: "Standard atomic weight", values: cols.map((c) => c.weight), source: col("weight").source || "", note: "CIAAW recommends; values as NIST publishes them." },
+      { property: "First ionization energy (eV)", values: cols.map((c) => (c.ie === UNKNOWN ? UNKNOWN : c.ie + (c.ieStatus === "not-proven" ? " (not-proven)" : ""))), source: col("ie").source || "" },
+      { property: "Period", values: cols.map((c) => (c.period == null ? UNKNOWN : String(c.period))), source: "iupac-periodic-table-2022" },
+      { property: "Group", values: cols.map((c) => (c.group == null ? "no individual group (IUPAC 2022)" : String(c.group))), source: "iupac-periodic-table-2022" },
+      { property: "Family", values: cols.map((c) => c.familyLabel), source: "iupac-periodic-table-2022" }
+    ];
+    ((rec && rec.withheld) || []).forEach((w) => {
+      rows.push({ property: w.label, values: cols.map(() => UNKNOWN), withheld: true, links: cols.map((c) => chemOutboundUrl(rec, w.outbound, c.z)), source: (rec.outbound[w.outbound] || {}).source || "" });
+    });
+    return { cols, rows, max: CHEM_COMPARE_MAX };
+  }
+
+  const api = { TIERS, TIER_LABEL, UNKNOWN, matches, azRows, letters, byPlace, byYear, isoWeek, nowStatus, tree, tierNote, tierText, tiersWritten, sourcesFor, entryById, category, yearLabel, parseDay, ELEMENT_FAMILIES, isElementEntry, elementZ, elementSymbol, elementName, elementPos, elementFamily, familyLabel, stepElement, SHELL_LETTERS, elementConfig, elementsView, CHEM_INDEX_REL, CHEM_COMPARE_MAX, CHEM_SORT_KEYS, elementPeriod, elementGroup, chemIndexRecord, chemSort, chemIndex, chemOutboundUrl, chemCompareToggle, chemCompare };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else { root.GD = root.GD || {}; root.GD.atlasModel = api; }
 })(typeof window !== "undefined" ? window : globalThis);

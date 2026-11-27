@@ -52,7 +52,7 @@ Status as of Nov 26, 2026 (v1.5.1 Atlas). This file is the single list of open i
 | 46 | Elements: Group 3 | OPEN | La, Lu, Ac and Lr are not placed in a group; IUPAC has not settled Group 3. The table shows a dashed, unresolved fork. |
 | 47 | Elements: electron shells for Z=104-118 | OPEN | Z=104-108 are not-proven (calculated in NIST references, not measured); Z=109-118 have no NIST value. Shell occupancy stays `[UNKNOWN]`; the aufbau rule is not used to fill it. |
 | 48 | Elements: valence grouping | OPEN | The owner's constellation idea groups elements by valence. v1.5.0 groups by chemical family only. A valence view is not built. |
-| 49 | Elements: source cache | OPEN | `tools/atlas/build-elements.mjs` reads NIST, IUPAC and Wikidata snapshots kept outside the repo (`GLOBEDESK_ELEMENTS_CACHE`). The cache is not in the public tree, so refreshing element records needs a local copy. |
+| 49 | Elements: source cache | OPEN | `tools/atlas/build-elements.mjs` reads NIST, IUPAC and Wikidata snapshots from `.cache/sources` at the repo root (gitignored), or `GLOBEDESK_ELEMENTS_CACHE`. The cache is not in the public tree, so refreshing element records needs a local copy. |
 | 50 | Claim chip relabel ("We have a record") | OUT OF SCOPE (owner decision 2026-11-26) | Branch `feat/elements-claim-label` was reviewed CLEAR but is not part of v1.5.0. |
 
 Also [UNKNOWN] in the catalog draft, not yet owner questions: the by-year slider's earliest year; and non-US/global expansion for several civic/preparedness entries.

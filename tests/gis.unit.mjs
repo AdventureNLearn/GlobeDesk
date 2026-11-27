@@ -63,6 +63,7 @@ await t("the shipped GIS registry validates, keeps OpenHistoricalMap unknown, an
   assert.deepEqual(gis.hostnamesFrom(fixture), [
     "basemap.nationalmap.gov",
     "hydro.nationalmap.gov",
+    "mrdata.usgs.gov",
     "nowcoast.noaa.gov",
     "tigerweb.geo.census.gov"
   ]);
@@ -243,6 +244,7 @@ await t("CSP allow-list is derived only from working entries, and matches the ap
   assert.deepEqual(gis.hostnamesFrom(fixture), [
     "basemap.nationalmap.gov",
     "hydro.nationalmap.gov",
+    "mrdata.usgs.gov",
     "nowcoast.noaa.gov",
     "tigerweb.geo.census.gov"
   ]);
@@ -255,7 +257,8 @@ await t("CSP allow-list is derived only from working entries, and matches the ap
   const cspMeta = csp.match(/Content-Security-Policy" content="([^"]+)"/);
   assert.ok(cspMeta);
   // Frozen to the owner-approved host list (card t2987s11225). Opt-in cannot change a meta tag after load.
-  const FROZEN_CSP = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov; connect-src 'self' https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov https://photon.komoot.io; font-src 'self' data: https://tiles.openfreemap.org; media-src 'self' blob: data:; frame-src https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';";
+  // + https://mrdata.usgs.gov (img-src and connect-src only): owner pick 5 for the chem index, 2026-11-26 (live USGS MRDS deposits).
+  const FROZEN_CSP = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov https://mrdata.usgs.gov; connect-src 'self' https://tiles.maps.eox.at https://tiles.openfreemap.org https://s3.amazonaws.com/elevation-tiles-prod/ https://gibs.earthdata.nasa.gov https://api.maptiler.com https://basemap.nationalmap.gov https://hydro.nationalmap.gov https://tigerweb.geo.census.gov https://nowcoast.noaa.gov https://mrdata.usgs.gov https://photon.komoot.io; font-src 'self' data: https://tiles.openfreemap.org; media-src 'self' blob: data:; frame-src https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';";
   assert.equal(cspMeta[1], FROZEN_CSP);
   const hosts = [...new Set((cspMeta[1].match(/https:\/\/([^/\s;]+)/g) || []).map((u) => u.replace(/^https:\/\//, "").toLowerCase()))].sort();
   assert.deepEqual(hosts, [
@@ -263,6 +266,7 @@ await t("CSP allow-list is derived only from working entries, and matches the ap
     "basemap.nationalmap.gov",
     "gibs.earthdata.nasa.gov",
     "hydro.nationalmap.gov",
+    "mrdata.usgs.gov",
     "nowcoast.noaa.gov",
     "photon.komoot.io",
     "s3.amazonaws.com",
@@ -464,6 +468,52 @@ await t("repeated raster tile errors mark the overlay down, switch it off, and d
   assert.equal(gis.state.overlaysOn["usgs-topo"], false);
   assert.equal(gis.tokenFor(layer), "error");
   assert.equal(sources["gd-gis-usgs-topo"], undefined);
+  gis.setLiveEnabled(false);
+  delete ctx.window.GD.globe;
+});
+
+await t("when a live overlay goes down its switches uncheck at once, without a panel redraw", () => {
+  gis.load(J(fixture));
+  gis.setLiveEnabled(true);
+  gis.setOverlay({ id: "usgs-mrds", on: true });
+  const sources = {}, layers = {};
+  const map = {
+    getSource: (id) => sources[id] || null, getLayer: (id) => layers[id] || null,
+    addSource: (id, spec) => { sources[id] = Object.assign({ setTiles(tiles) { this.tiles = tiles; } }, spec); },
+    addLayer: (spec) => { layers[spec.id] = spec; }, removeLayer: (id) => { delete layers[id]; }, removeSource: (id) => { delete sources[id]; },
+    setLayoutProperty: () => {}
+  };
+  ctx.window.GD.globe = { st: { map: map } };
+  gis.syncMap(map);
+  const mk = (attr) => {
+    const status = { textContent: "on" };
+    const row = { cls: new Set(["lp-row", "on"]), classList: { remove(c) { row.cls.delete(c); } }, querySelector: (q) => (q === ".gis-status" ? status : null) };
+    const input = { attr, checked: true, aria: "true", setAttribute(k, v) { if (k === "aria-checked") this.aria = v; }, closest: (q) => (q === "label" ? row : null) };
+    return { input, row, status };
+  };
+  const panel = mk("data-lp-gis"), inspector = mk("data-gis"), other = mk("data-lp-gis");
+  const prevDoc = ctx.window.document;
+  ctx.window.document = {
+    querySelectorAll: (sel) => [panel, inspector, other]
+      .filter((x) => (x === other ? sel.includes('"usgs-topo"') : sel.includes("[" + x.input.attr + '="usgs-mrds"]')))
+      .map((x) => x.input)
+  };
+  ctx.window.GD.ui = { toast() {} };
+  let redraws = 0;
+  ctx.window.GD.layersPanel = { render() { redraws++; } };
+  for (let i = 0; i < gis.TILE_ERROR_LIMIT; i++) gis.noteTileError({ sourceId: "gd-gis-usgs-mrds", error: { message: "Failed to fetch" } });
+  assert.equal(gis.state.overlaysOn["usgs-mrds"], false);
+  for (const x of [panel, inspector]) {
+    assert.equal(x.input.checked, false);
+    assert.equal(x.input.aria, "false");
+    assert.equal(x.row.cls.has("on"), false);
+    assert.equal(x.status.textContent, "down / skipped");
+  }
+  assert.equal(other.input.checked, true, "other overlays' switches are untouched");
+  assert.equal(redraws, 0, "no panel redraw needed");
+  assert.equal(gis.reflectSwitchOff('x"], body, [a="'), 0, "odd ids never reach a selector");
+  ctx.window.document = prevDoc;
+  delete ctx.window.GD.layersPanel;
   gis.setLiveEnabled(false);
   delete ctx.window.GD.globe;
 });

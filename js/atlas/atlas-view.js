@@ -11,7 +11,8 @@
   const st = {
     open: false, view: "az", mode: "globe", q: "", category: "", tier: "all", selected: null, tab: "object",
     zoom: "years", year: null, month: null, week: null, region: "US", option: "S", place: null, markers: [],
-    elementsMode: null, elementZoom: null
+    elementsMode: null, elementZoom: null,
+    chemSort: "z", chemDir: "asc", chemFilter: { family: "all", period: "all", group: "all", status: "all" }, chemCompare: [], chemMsg: "", chemFiltersOpen: false
   };
 
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
@@ -206,6 +207,115 @@
       '<p class="muted small at-el-caption">Schematic Bohr-style picture showing NIST ground-state shell counts, not a physical orbital map or electron trajectory.</p>' +
       "</div>";
   }
+  // ---------- chemistry index (table mode): sort, filter, compare up to 4 ----------
+  const CHEM_COLS = [
+    { key: "z", label: "Z" }, { key: "symbol", label: "Sym" }, { key: "name", label: "Name" },
+    { key: "weight", label: "Std. atomic weight" }, { key: "ie", label: "1st ionization (eV)" },
+    { key: "period", label: "Period" }, { key: "group", label: "Group" }, { key: null, label: "Shells" }, { key: "family", label: "Family" }
+  ];
+  function chemClearFilters() { st.chemFilter = { family: "all", period: "all", group: "all", status: "all" }; st.chemMsg = ""; }
+  function chemToggleCompare(id) {
+    const r = M().chemCompareToggle(st.chemCompare, id);
+    st.chemCompare = r.ids;
+    st.chemMsg = r.refused ? "Compare holds up to " + M().CHEM_COMPARE_MAX + " elements; remove one first." : "";
+  }
+  function chemCardRows(ce, elCfg) {
+    const rec = M().chemIndexRecord(D());
+    const r = rec && rec.byZ && rec.byZ[String(elCfg.z)];
+    if (!r) return "";
+    const col = (id) => (rec.columns || []).find((c) => c.id === id) || {};
+    const ie = r.ie_ev === UNKNOWN ? UNKNOWN : r.ie_ev + " eV" + (r.ie_status === "not-proven" ? " (not-proven)" : "") + (r.ie_basis ? " — NIST ASD marks it " + r.ie_basis : "");
+    let h = '<tr><th>Standard atomic weight</th><td>' + esc(r.weight) + " " + (col("weight").source ? srcLink(col("weight").source) : "") + (col("weight").recommending_body ? ' <span class="muted">recommended by ' + srcLink(col("weight").recommending_body) + "</span>" : "") + "</td></tr>" +
+      '<tr><th>First ionization energy</th><td>' + esc(ie) + " " + (r.ie_ev !== UNKNOWN && col("ie").source ? srcLink(col("ie").source) : "") + "</td></tr>";
+    (rec.withheld || []).forEach((w) => {
+      h += "<tr><th>" + esc(w.label) + '</th><td><span class="at-chem-unk">' + UNKNOWN + "</span> " + link(M().chemOutboundUrl(rec, w.outbound, r.z), "look it up on PubChem ↗") + "</td></tr>";
+    });
+    return h;
+  }
+  // Card: discovery and namesake places (Wikidata CC0) and producing countries (USGS MCS 2026).
+  function chemPlacesHtml(ce) {
+    const rec = D().records && D().records["data/atlas/chemistry/element-sites.json"];
+    if (!rec || !Array.isArray(rec.places)) return "";
+    const rel = (rec.relations || {});
+    const hits = [];
+    rec.places.forEach((p) => (p.links || []).forEach((l) => { if (l.id === ce.id) hits.push({ p, l }); }));
+    if (!hits.length) return '<p class="muted small">Discovery or namesake place with a Wikidata coordinate: ' + UNKNOWN + ".</p>";
+    return "<h4>Places (Wikidata)</h4><ul class=\"small at-chem-places\">" + hits.map((h) => "<li>" + esc(rel[h.l.rel] || h.l.rel) + ": " + link(h.p.url, h.p.label) + ' <span class="muted">(' + esc(h.p.scale === "area" ? "country or region point" : h.p.scale === "city" ? "town or city point" : "site") + ")</span></li>").join("") + "</ul>" +
+      '<button type="button" class="mini" data-at-chem-sites="1">Show element places on the globe</button>';
+  }
+  function chemOresHtml(ce) {
+    const rec = D().records && D().records["data/atlas/chemistry/element-ores-by-country.json"];
+    const el = rec && rec.byElement && rec.byElement[ce.id];
+    if (!rec) return "";
+    if (!el) return '<p class="muted small">Producing countries (USGS MCS 2026): ' + UNKNOWN + " for this element.</p>";
+    const top = el.countries.slice(0, 5);
+    return "<h4>Producing countries (USGS MCS 2026)</h4><table class=\"at-table small\"><thead><tr><th>Country</th><th>" + esc(el.measure) + ", " + esc(el.year) + " (" + esc(el.unit) + ")</th></tr></thead><tbody>" +
+      top.map((c) => "<tr><td>" + esc(c.country) + "</td><td>" + esc(c.value) + "</td></tr>").join("") +
+      "<tr><td>World total</td><td>" + esc(el.world_total) + "</td></tr></tbody></table>" +
+      '<p class="muted small">Source: ' + srcLink(rec.source) + '. Country totals, not mine locations.</p>' +
+      '<button type="button" class="mini" data-at-chem-ores="' + esc(ce.id) + '">Show producing countries on the globe</button>';
+  }
+  function chemFiltersActive() { const f = st.chemFilter; return f.family !== "all" || f.period !== "all" || f.group !== "all" || f.status !== "all"; }
+  function chemSelect(name, label, value, opts) {
+    return '<label class="at-chem-f"><span>' + esc(label) + '</span><select data-at-chem-filter="' + esc(name) + '">' +
+      opts.map((o) => '<option value="' + esc(o[0]) + '"' + (String(value) === String(o[0]) ? " selected" : "") + ">" + esc(o[1]) + "</option>").join("") + "</select></label>";
+  }
+  function ieCell(r) {
+    if (r.ie === UNKNOWN) return '<span class="at-chem-unk">' + UNKNOWN + "</span>";
+    const tags = (r.ieStatus === "not-proven" ? ' <span class="pill">not-proven</span>' : "") + (r.ieBasis ? ' <span class="muted small" title="NIST ASD marks this value ' + esc(r.ieBasis) + '">' + esc(r.ieBasis) + "</span>" : "");
+    return esc(r.ie) + tags;
+  }
+  function chemCompareHtml() {
+    if (!st.chemCompare.length) return "";
+    const c = M().chemCompare(D(), st.chemCompare);
+    if (!c.cols.length) return "";
+    return '<section class="at-chem-compare" aria-label="Compare elements">' +
+      '<div class="at-chem-compare-bar"><h4>Compare (' + c.cols.length + " of " + c.max + ')</h4><button type="button" class="mini" data-at-chem-clear-compare="1">Clear compare</button></div>' +
+      '<div class="at-chem-compare-wrap"><table class="at-table small at-chem-compare-table"><thead><tr><th scope="col">Property</th>' +
+      c.cols.map((col) => '<th scope="col">' + esc(col.name) + " (" + esc(col.symbol) + ') <button type="button" class="linklike small" data-at-chem-cmp="' + esc(col.id) + '" aria-label="Remove ' + esc(col.name) + ' from compare">remove</button></th>').join("") +
+      "</tr></thead><tbody>" +
+      c.rows.map((r) => "<tr><th scope=\"row\">" + esc(r.property) + '<span class="at-chem-src">' + (r.source ? srcLink(r.source) : UNKNOWN) + "</span></th>" + r.values.map((v, i) => "<td>" + (r.withheld ? '<span class="at-chem-unk">' + UNKNOWN + "</span> " + link(r.links[i], "PubChem ↗") : esc(v)) + "</td>").join("") + "</tr>").join("") +
+      "</tbody></table></div>" +
+      '<p class="muted small">Withheld properties are not bundled: their licence is not cleared. Each link opens the element on PubChem (outbound).</p></section>';
+  }
+  function chemIndexHtml(ev) {
+    const idx = M().chemIndex(D(), filters(), { sort: st.chemSort, dir: st.chemDir, filter: st.chemFilter });
+    const letters = M().SHELL_LETTERS || ["K", "L", "M", "N", "O", "P", "Q"];
+    const f = st.chemFilter;
+    const per = [["all", "All periods"]].concat([1, 2, 3, 4, 5, 6, 7].map((n) => [String(n), "Period " + n]));
+    const grp = [["all", "All groups"]].concat([...Array(18)].map((_, i) => [String(i + 1), "Group " + (i + 1)])).concat([["none", "No individual group (La–Lu, Ac–Lr)"]]);
+    const fam = [["all", "All families"]].concat(idx.families.map((x) => [x.id, x.label]));
+    const sts = [["all", "Any status"], ["supported", "We have a record"], ["not-proven", "not-proven"], [UNKNOWN, UNKNOWN]];
+    const nActive = ["family", "period", "group", "status"].filter((k) => f[k] !== "all").length;
+    const controls = '<details class="at-chem-filters"' + (nActive || st.chemFiltersOpen ? " open" : "") + '><summary>Filters' + (nActive ? " (" + nActive + " on)" : "") + "</summary>" +
+      '<div class="at-chem-controls" role="group" aria-label="Filter the index">' +
+      chemSelect("family", "Family", f.family, fam) + chemSelect("period", "Period", f.period, per) + chemSelect("group", "Group", f.group, grp) + chemSelect("status", "IE status", f.status, sts) +
+      '<button type="button" class="mini" data-at-chem-reset="1"' + (chemFiltersActive() ? "" : " disabled") + ">Clear filters</button></div></details>" +
+      '<span class="muted small at-chem-count" aria-live="polite">Showing ' + idx.rows.length + " of " + idx.total + (st.chemMsg ? ". " + esc(st.chemMsg) : "") + "</span>";
+    const head = "<tr><th scope=\"col\" class=\"at-chem-cmp-col\">Compare</th>" + CHEM_COLS.map((c) => {
+      if (!c.key) return '<th scope="col">' + esc(c.label) + "</th>";
+      const on = idx.sort === c.key;
+      const ariaSort = on ? (idx.dir === "desc" ? "descending" : "ascending") : "none";
+      return '<th scope="col" aria-sort="' + ariaSort + '"><button type="button" class="at-chem-sort' + (on ? " on" : "") + '" data-at-chem-sort="' + c.key + '">' + esc(c.label) + (on ? (idx.dir === "desc" ? " ▼" : " ▲") : "") + "</button></th>";
+    }).join("") + "</tr>";
+    const full = st.chemCompare.length >= M().CHEM_COMPARE_MAX;
+    const rows = idx.rows.map((r) => {
+      const on = st.selected === r.id;
+      const inCmp = st.chemCompare.indexOf(r.id) >= 0;
+      const star = ev.stars.find((x) => x.id === r.id) || {};
+      const sh = star.shells ? star.shells.map((n, i) => (letters[i] || "") + ":" + n).join(" ") : (star.configStatus || UNKNOWN);
+      return '<tr class="' + (on ? "on" : "") + '"><td class="at-chem-cmp-col"><input type="checkbox" data-at-chem-cmp="' + esc(r.id) + '" aria-label="Compare ' + esc(r.name) + '"' + (inCmp ? " checked" : "") + (full && !inCmp ? " disabled" : "") + "></td>" +
+        '<td class="at-el-z">' + r.z + "</td><td>" + esc(r.symbol) + '</td><td><button type="button" class="at-el-name" data-at-entry="' + esc(r.id) + '" aria-current="' + on + '">' + esc(r.name) + "</button></td>" +
+        '<td class="small">' + (r.weight === UNKNOWN ? '<span class="at-chem-unk">' + UNKNOWN + "</span>" : esc(r.weight)) + '</td><td class="small">' + ieCell(r) + "</td>" +
+        "<td>" + (r.period == null ? UNKNOWN : r.period) + '</td><td class="small">' + (r.group == null ? "—" : r.group) + '</td><td class="small">' + esc(sh) + "</td><td>" + esc(r.familyLabel) + "</td></tr>";
+    }).join("") || '<tr><td colspan="10" class="muted">No element records match this search or filter.</td></tr>';
+    const withheld = idx.withheld.length ? '<p class="muted small at-chem-withheld">Not bundled, licence not cleared: ' + idx.withheld.map((w) => esc(w.label)).join(", ") + " " + UNKNOWN + ". Compare or open a card for PubChem links.</p>" : "";
+    const srcNote = '<p class="muted small">Weights: NIST (CIAAW recommends the standard values; intervals sort by their lower bound). First ionization energy: NIST SP 966, Z=1–108; Z=104–108 not-proven; Z=109–118 ' + UNKNOWN + ". Unknown values sort last. Keys: ↑/↓ move in sorted order, Enter opens, Esc clears filters and compare.</p>";
+    if (!idx.available) return '<p class="muted">Chemistry index record not in this copy ' + UNKNOWN + ".</p>";
+    return '<div class="at-chem-index">' + controls +
+      '<div class="at-el-table-wrap"><table class="at-table at-el-table"><caption class="muted small">Chemical elements index. Follows the search box and category filter; click a heading to sort.</caption>' +
+      "<thead>" + head + "</thead><tbody>" + rows + "</tbody></table></div>" + srcNote + withheld + chemCompareHtml() + "</div>";
+  }
   function elementsHtml() {
     const ev = M().elementsView(D(), filters());
     const mode = elementsMode();
@@ -221,16 +331,7 @@
     const legend = '<ul class="at-el-legend" aria-label="Family colours">' + ev.families.map((f) => '<li class="at-fam-' + esc(f.id) + '">' + esc(f.label) + "</li>").join("") + "</ul>";
     let body;
     if (mode === "table") {
-      const rows = ev.stars.filter((s) => s.match);
-      const letters = M().SHELL_LETTERS || ["K", "L", "M", "N", "O", "P", "Q"];
-      body = '<div class="at-el-table-wrap"><table class="at-table at-el-table"><caption class="muted small">Chemical elements in atomic-number order. Follows the search box and category filter.</caption>' +
-        "<thead><tr><th>Z</th><th>Sym</th><th>Name</th><th>Shells</th><th>Family</th></tr></thead><tbody>" +
-        (rows.map((s) => {
-          const on = st.selected === s.id;
-          const sh = s.shells ? s.shells.map((n, i) => (letters[i] || "") + ":" + n).join(" ") : s.configStatus;
-          return '<tr class="' + (on ? "on" : "") + '"><td class="at-el-z">' + s.z + "</td><td>" + esc(s.symbol) + '</td><td><button type="button" class="at-el-name" data-at-entry="' + esc(s.id) + '" aria-current="' + on + '">' + esc(s.name) + '</button></td><td class="small">' + esc(sh) + "</td><td>" + esc(s.familyLabel) + "</td></tr>";
-        }).join("") || '<tr><td colspan="5" class="muted">No element records match this search or filter.</td></tr>') +
-        "</tbody></table></div>";
+      body = chemIndexHtml(ev);
     } else {
       const lines = ev.lines.map((l) => '<polyline class="at-el-line at-fam-' + esc(l.family) + '" fill="none" points="' + l.points.map((p) => pt(p.col, p.row)).join(" ") + '"></polyline>').join("");
       const forks = ev.forks.map((fk) => '<g class="at-el-fork"><title>' + esc(fk.label) + "</title>" + fk.paths.map((path) => '<polyline fill="none" points="' + path.map((p) => pt(p.col, p.row)).join(" ") + '"></polyline>').join("") + "</g>").join("");
@@ -250,6 +351,8 @@
       body = '<div class="at-el-sky" id="atElSky"><svg class="at-el-lines" viewBox="0 0 18 10" preserveAspectRatio="none" aria-hidden="true" focusable="false">' + lines + forks + "</svg>" +
         '<div class="at-el-grid" role="listbox" aria-label="Chemical elements holographic periodic table">' + stars + "</div></div>" + missing;
     }
+    // Table mode is the chemistry index: family is a column, so the colour legend and tile note stay with the hologram.
+    if (mode === "table") return '<div class="at-elements at-elements-table">' + toggle + body + "</div>";
     return '<div class="at-elements">' + toggle + note + legend + body + "</div>";
   }
   function onElementsNav(ev) {
@@ -261,6 +364,23 @@
     if ((k === "Enter" || k === " ") && entryId) { ev.preventDefault(); select(entryId); return; }
     if (k === "Enter" || k === " ") return;
     ev.preventDefault();
+    const isTable = ev.currentTarget.classList && ev.currentTarget.classList.contains("at-el-table");
+    if (isTable) {
+      const list = Array.prototype.slice.call(ev.currentTarget.querySelectorAll("[data-at-entry]"));
+      if (!list.length) return;
+      const at = list.findIndex((b) => b.getAttribute("data-at-entry") === entryId);
+      let ni = at;
+      if (k === "Home") ni = 0;
+      else if (k === "End") ni = list.length - 1;
+      else if (k === "ArrowDown") ni = Math.min(list.length - 1, at + 1);
+      else if (k === "ArrowUp") ni = Math.max(0, at - 1);
+      else return;
+      if (ni < 0) ni = 0;
+      list.forEach((b) => { b.tabIndex = -1; });
+      list[ni].tabIndex = 0;
+      if (list[ni].focus) list[ni].focus();
+      return;
+    }
     const evw = M().elementsView(D(), filters());
     const id = zoomId || entryId;
     const from = evw.stars.find((s) => s.id === id);
@@ -401,9 +521,11 @@
         '<tr><th>Ground-state configuration</th><td><code>' + esc(elCfg.config) + "</code></td></tr>" +
         '<tr><th>Shell occupancy</th><td>' + esc(shellRows) + "</td></tr>" +
         '<tr><th>Record status</th><td>' + esc(configStatusLabel(elCfg.status)) + "</td></tr>" +
+        chemCardRows(ce, elCfg) +
         '<tr><th>Source</th><td>' + (elCfg.source ? srcLink(elCfg.source) : UNKNOWN) + "</td></tr>" +
         "</tbody></table>" +
-        (elCfg.note ? '<p class="muted small">' + esc(elCfg.note) + "</p>" : "");
+        (elCfg.note ? '<p class="muted small">' + esc(elCfg.note) + "</p>" : "") +
+        chemPlacesHtml(ce) + chemOresHtml(ce);
     } else if (rec.properties) {
       h += '<p class="small">' + esc(M().tierText ? M().tierText(ce, st.tier) : ce.summary) + '</p><table class="at-table small"><thead><tr><th>Property</th><th>Value</th><th>Source</th></tr></thead><tbody>' +
         rec.properties.map((r) => "<tr><td>" + esc(r.property) + "</td><td>" + esc(r.value) + "</td><td>" + (r.source ? srcLink(r.source) : UNKNOWN) + "</td></tr>").join("") + "</tbody></table>";
@@ -491,6 +613,9 @@
     if (root.classList) {
       if (v === "elements") root.classList.add("at-showing-elements");
       else root.classList.remove("at-showing-elements");
+      // Chemistry index with nothing picked: the empty detail pane shrinks so the index gets the room.
+      if (v === "elements" && elementsMode() === "table" && !st.selected) root.classList.add("at-chem-idle");
+      else root.classList.remove("at-chem-idle");
     }
     const views = [["az", "A–Z"], ["elements", "Elements"], ["cats", "Categories"], ["place", "By place"], ["year", "By year"]];
     const cats = D().categories;
@@ -563,6 +688,14 @@
     if (elGrid) elGrid.addEventListener("keydown", onElementsNav);
     const elTable = root.querySelector(".at-el-table");
     if (elTable) elTable.addEventListener("keydown", onElementsNav);
+    on("[data-at-chem-sort]", "click", (ev) => { const k = ev.currentTarget.getAttribute("data-at-chem-sort"); if (st.chemSort === k) st.chemDir = st.chemDir === "asc" ? "desc" : "asc"; else { st.chemSort = k; st.chemDir = "asc"; } st.chemMsg = ""; render(); });
+    on("[data-at-chem-filter]", "change", (ev) => { const k = ev.currentTarget.getAttribute("data-at-chem-filter"); st.chemFilter = Object.assign({}, st.chemFilter, { [k]: ev.currentTarget.value }); st.chemMsg = ""; render(); });
+    on("[data-at-chem-reset]", "click", () => { chemClearFilters(); render(); });
+    on(".at-chem-filters", "toggle", (ev) => { st.chemFiltersOpen = !!ev.currentTarget.open; });
+    on("[data-at-chem-cmp]", "click", (ev) => { ev.stopPropagation(); chemToggleCompare(ev.currentTarget.getAttribute("data-at-chem-cmp")); render(); });
+    on("[data-at-chem-clear-compare]", "click", () => { st.chemCompare = []; st.chemMsg = ""; render(); });
+    on("[data-at-chem-ores]", "click", (ev) => { ev.stopPropagation(); if (GD.chemOresLayer) GD.chemOresLayer.show(ev.currentTarget.getAttribute("data-at-chem-ores")); if (GD.layersPanel && GD.layersPanel.render) GD.layersPanel.render(); });
+    on("[data-at-chem-sites]", "click", (ev) => { ev.stopPropagation(); if (GD.chemSitesLayer) GD.chemSitesLayer.setOn(true); if (GD.layersPanel && GD.layersPanel.render) GD.layersPanel.render(); });
     on("[data-at-tab]", "click", (ev) => { st.tab = ev.currentTarget.getAttribute("data-at-tab"); render(); });
     on("[data-at-mode]", "click", (ev) => { st.mode = ev.currentTarget.getAttribute("data-at-mode"); render(); });
     on("[data-at-option]", "click", (ev) => { st.option = ev.currentTarget.getAttribute("data-at-option"); render(); });
@@ -710,7 +843,7 @@
   function wire() {
     const b = $("btnAtlas"); if (b) b.addEventListener("click", toggle);
     const root = $("atlasView");
-    if (root) root.addEventListener("keydown", (e) => { if (e.key === "Escape") { e.preventDefault(); if (st.view === "elements" && st.elementZoom) { const prev = st.elementZoom; st.elementZoom = null; st.selected = prev; render(); } else closeView(); } });
+    if (root) root.addEventListener("keydown", (e) => { if (e.key === "Escape") { e.preventDefault(); if (st.view === "elements" && elementsMode() === "table" && !st.elementZoom && (chemFiltersActive() || st.chemCompare.length)) { chemClearFilters(); st.chemCompare = []; render(); } else if (st.view === "elements" && st.elementZoom) { const prev = st.elementZoom; st.elementZoom = null; st.selected = prev; render(); } else closeView(); } });
     if (global.addEventListener) global.addEventListener("resize", () => { const r = $("atlasView"); if (r) placeElementsSheet(r); });
     if (GD.globe && GD.globe.st && GD.globe.st.onReady) GD.globe.st.onReady.push(() => syncMarkers());
     if (global.location && global.location.search && global.URLSearchParams) {

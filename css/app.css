@@ -720,6 +720,30 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .bl-pin:focus-visible, .bl-cluster:focus-visible { outline: 2px solid var(--gd-gold); outline-offset: 2px; border-radius: 8px; }
 .bl-cluster { min-width: 34px; width: auto; height: 34px; border-radius: 17px; margin: 5px; padding: 0 8px; background: rgba(60, 34, 8, 0.9); border: 2px solid #e6b56a; color: #ffe3b0; font-weight: 700; font-size: 12px; }
 .bl-swatch { --c: #c88a3e; }
+/* Element places layer (chem index C3): off by default; dashed = country or region point. */
+.cs-pin, .cs-cluster { min-width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; padding: 0; cursor: pointer; }
+.cs-glyph { display: grid; place-items: center; min-width: 26px; height: 26px; padding: 0 3px; border-radius: 6px; background: #12324a; border: 2px solid #7fe0ff; color: #dff7ff; font: 700 11px/1 system-ui, sans-serif; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); }
+.cs-area .cs-glyph { border-style: dashed; background: rgba(18, 50, 74, 0.7); }
+.cs-city .cs-glyph { border-radius: 13px; }
+.cs-pin:focus-visible, .cs-cluster:focus-visible, .cs-pop-el:focus-visible { outline: 2px solid var(--gd-gold); outline-offset: 2px; border-radius: 8px; }
+.cs-cluster { min-width: 34px; width: auto; height: 34px; border-radius: 17px; margin: 5px; padding: 0 8px; background: rgba(8, 40, 60, 0.9); border: 2px solid #7fe0ff; color: #dff7ff; font-weight: 700; font-size: 12px; }
+.cs-wrap { display: flex; align-items: flex-start; gap: 4px; }
+.cs-pop { max-width: 240px; background: var(--gd-panel-solid); border: 1px solid rgba(127, 224, 255, 0.5); border-radius: 8px; padding: 6px 8px; color: var(--gd-text, #e8f4ff); font-size: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6); }
+.cs-pop p { margin: 0 0 4px; }
+.cs-pop-title { font-weight: 700; }
+.cs-pop-meta { color: var(--gd-text-soft); }
+.cs-pop ul { list-style: none; margin: 0; padding: 0; max-height: 180px; overflow: auto; }
+.cs-pop-el { min-height: 32px; width: 100%; text-align: left; background: none; border: 0; color: inherit; cursor: pointer; padding: 4px 2px; }
+.cs-swatch { --c: #7fe0ff; }
+/* Ores by country layer (chem index C4): country points ranked by USGS figures, never mines. */
+.co-pin { min-width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; padding: 0; cursor: pointer; }
+.co-glyph { display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: rgba(214, 140, 60, 0.85); border: 2px solid #ffe2b8; color: #1d1206; font: 700 10px/1 system-ui, sans-serif; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); }
+.co-s2 .co-glyph { width: 24px; height: 24px; }
+.co-s3 .co-glyph { width: 30px; height: 30px; }
+.co-s4 .co-glyph { width: 36px; height: 36px; font-size: 12px; }
+.co-pin:focus-visible { outline: 2px solid var(--gd-gold); outline-offset: 2px; border-radius: 50%; }
+.co-swatch { --c: #d68c3c; }
+.co-mrds { margin: 4px 0 0; }
 .bl-filters select { max-width: 11rem; }
 .at-ov h4 { margin: 10px 0 2px; }
 .at-timeline-list { padding-left: 18px; }
@@ -766,6 +790,8 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .atlas-view.at-showing-elements .at-browse,
 .atlas-view.at-showing-elements .at-detail { overflow: auto; min-height: 0; }
 .atlas-view.at-showing-elements .at-browse { display: flex; flex-direction: column; height: auto; min-height: 0; }
+.atlas-view.at-showing-elements.at-chem-idle .at-body { grid-template-rows: minmax(0, 1fr) auto; }
+.atlas-view.at-showing-elements.at-chem-idle .at-detail { min-height: 0; max-height: 64px; }
 .at-elements { display: flex; flex-direction: column; gap: 4px; min-width: 0; min-height: 0; flex: 1 1 auto; height: 100%; overflow: hidden; }
 .at-elements {
   --el-hydrogen: var(--gd-text);
@@ -907,6 +933,33 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .at-el-table .at-el-name { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; padding: 4px 8px; text-align: left; }
 .at-el-table .at-el-z { font-variant-numeric: tabular-nums; }
 .at-el-table tr.on { background: rgba(94, 231, 255, 0.08); }
+/* Chemistry index (Elements table mode): filters, sortable headers, compare up to 4. One scroll area. */
+.at-chem-index { display: flex; flex-direction: column; gap: 4px; min-width: 0; min-height: 0; flex: 1 1 0%; overflow: auto; -webkit-overflow-scrolling: touch; }
+.at-chem-index .at-el-table-wrap { flex: none; min-height: auto; overflow: visible; }
+.at-chem-controls { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
+.at-chem-f { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--gd-text-soft); }
+.at-chem-f select { min-height: 32px; max-width: 11em; }
+.at-chem-count { display: block; }
+.at-chem-filters > summary { cursor: pointer; padding: 6px 0; font-size: 13px; color: var(--gd-text-soft); }
+.at-chem-filters[open] > summary { margin-bottom: 4px; }
+.at-chem-src { display: block; font-weight: 400; font-size: 11px; color: var(--gd-text-soft); }
+.at-chem-sort { background: none; border: 0; color: inherit; font: inherit; font-weight: 600; padding: 4px 2px; min-height: 32px; cursor: pointer; text-align: left; }
+.at-chem-sort.on { color: var(--gd-gold); }
+.at-chem-sort:focus-visible { outline: 2px solid var(--gd-gold); outline-offset: 1px; }
+.at-el-table thead th { position: sticky; top: 0; background: var(--gd-panel-solid); z-index: 1; }
+.at-chem-cmp-col { width: 44px; text-align: center; }
+.at-chem-cmp-col input { width: 20px; height: 20px; margin: 10px 0; }
+.at-chem-unk { color: var(--gd-text-soft); font-style: italic; }
+.at-chem-compare { border-top: 1px solid rgba(94, 231, 255, 0.2); padding-top: 4px; }
+.at-chem-compare-bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.at-chem-compare-bar h4 { margin: 0; }
+.at-chem-compare-wrap { overflow-x: auto; }
+.at-chem-compare-table th[scope="row"] { min-width: 9em; }
+@media (max-width: 820px) {
+  .at-chem-f select { max-width: 40vw; }
+  .at-chem-index .at-el-table { min-width: 640px; }
+  .at-chem-compare-table { min-width: 520px; }
+}
 @media (max-width: 820px) {
   /* Fill the viewport under the (possibly wrapping) topbar so the grid and card share the first screen. */
   .atlas-view.at-showing-elements { top: var(--at-under-topbar, 52px); bottom: 0; height: auto; border-radius: 0; }
@@ -914,6 +967,7 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
   .atlas-view.at-showing-elements .at-browse { overflow: hidden; height: auto; flex: 1 1 0%; min-height: 0; }
   .atlas-view.at-showing-elements .at-detail { overflow: auto; height: auto; flex: 0 1 38%; min-height: 120px; max-height: 40%; }
   .atlas-view.at-showing-elements .at-elements { height: auto; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+  .atlas-view.at-showing-elements.at-chem-idle .at-detail { flex: 0 0 auto; min-height: 0; max-height: 56px; }
   .atlas-view.at-showing-elements .at-controls input[type="search"] { flex: 1 1 100%; }
   .atlas-view.at-showing-elements .at-controls select { flex: 1 1 calc(50% - 6px); min-width: 0; }
   .atlas-view.at-showing-elements .at-el-note { font-size: 11px; line-height: 1.3; }
