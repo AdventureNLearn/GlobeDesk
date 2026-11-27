@@ -1,0 +1,90 @@
+{
+  "schema": "globedesk.ancient-overview/1",
+  "id": "ancient-world-overview",
+  "title": "Ancient World: sites, lost cities and myths",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "tiers": {
+    "everyday": "A layer of 13 ancient sites, from Göbekli Tepe (about 9600 BC) to Great Zimbabwe, plus three myths with no pins. Every site pin is approximate. Optional approximate polity outlines come from Cliopatria.",
+    "student": "Twelve site pins are official UNESCO World Heritage Centre points, cited from each property's maps table with the official DMS (a named component point where the property is serial or mixed). Pompeii keeps its Pleiades representative point (CC BY 3.0). Dates come from UNESCO World Heritage pages and Pleiades and keep the sources' own era wording. Myths carry claim labels (supported or not-proven) and no coordinates. Polity outlines come from Cliopatria (Seshat Global History Databank, CC BY 4.0), a subset of 14 snapshot years from 3000 BCE to 1400 CE, simplified; borders are approximate. Cliopatria starts in 3400 BCE, so outlines for earlier sites are [UNKNOWN], and it has no outline at Caral, Great Zimbabwe, or Teotihuacan before 1000 CE."
+  },
+  "eras": [
+    {
+      "id": "before-3000-bce",
+      "label": "Before 3000 BCE",
+      "to": -3000
+    },
+    {
+      "id": "3000-1001-bce",
+      "label": "3000–1001 BCE",
+      "to": -1000
+    },
+    {
+      "id": "1000-1-bce",
+      "label": "1000–1 BCE",
+      "to": 0
+    },
+    {
+      "id": "1-1000-ce",
+      "label": "1–1000 CE",
+      "to": 1000
+    },
+    {
+      "id": "after-1000-ce",
+      "label": "After 1000 CE",
+      "to": 9999
+    }
+  ],
+  "counts": {
+    "before-3000-bce": 2,
+    "3000-1001-bce": 6,
+    "1000-1-bce": 2,
+    "1-1000-ce": 2,
+    "after-1000-ce": 1
+  },
+  "pins": {
+    "shown": [
+      "ancient-goebekli-tepe",
+      "ancient-ur",
+      "ancient-caral",
+      "ancient-giza",
+      "ancient-mohenjo-daro",
+      "ancient-troy",
+      "ancient-merv",
+      "ancient-palmyra",
+      "ancient-petra",
+      "ancient-qin-mausoleum",
+      "ancient-pompeii",
+      "ancient-teotihuacan",
+      "ancient-great-zimbabwe"
+    ],
+    "held": []
+  },
+  "sites": [
+    "ancient-goebekli-tepe",
+    "ancient-ur",
+    "ancient-caral",
+    "ancient-giza",
+    "ancient-mohenjo-daro",
+    "ancient-troy",
+    "ancient-merv",
+    "ancient-palmyra",
+    "ancient-petra",
+    "ancient-qin-mausoleum",
+    "ancient-pompeii",
+    "ancient-teotihuacan",
+    "ancient-great-zimbabwe"
+  ],
+  "myths": [
+    "myth-atlantis",
+    "myth-el-dorado",
+    "myth-shangri-la"
+  ],
+  "extents": {
+    "index": "data/atlas/ancient/extents-index.json",
+    "file": "js/atlas/ancient-extents-data.js",
+    "source": "cliopatria",
+    "approximate": true,
+    "attribution": "Polity borders: Cliopatria, Seshat Global History Databank (https://github.com/Seshat-Global-History-Databank/cliopatria), CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Subset; borders simplified and approximate; changes by GlobeDesk."
+  }
+}

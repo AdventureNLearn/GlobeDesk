@@ -1,0 +1,99 @@
+{
+  "schema": "globedesk.ancient-extents/1",
+  "id": "ancient-extents",
+  "title": "Approximate polity outlines (Cliopatria)",
+  "file": "js/atlas/ancient-extents-data.js",
+  "bytes": 934469,
+  "sha256": "42237bd3f05f56e3239534f074bbbf947bd0892042e4848a5df5e0f78dad0f44",
+  "years": [
+    {
+      "year": -3000,
+      "label": "3000 BCE",
+      "polities": 4
+    },
+    {
+      "year": -2500,
+      "label": "2500 BCE",
+      "polities": 3
+    },
+    {
+      "year": -2000,
+      "label": "2000 BCE",
+      "polities": 5
+    },
+    {
+      "year": -1500,
+      "label": "1500 BCE",
+      "polities": 10
+    },
+    {
+      "year": -1000,
+      "label": "1000 BCE",
+      "polities": 12
+    },
+    {
+      "year": -500,
+      "label": "500 BCE",
+      "polities": 47
+    },
+    {
+      "year": -200,
+      "label": "200 BCE",
+      "polities": 39
+    },
+    {
+      "year": 1,
+      "label": "1 CE",
+      "polities": 44
+    },
+    {
+      "year": 200,
+      "label": "200 CE",
+      "polities": 40
+    },
+    {
+      "year": 500,
+      "label": "500 CE",
+      "polities": 56
+    },
+    {
+      "year": 800,
+      "label": "800 CE",
+      "polities": 80
+    },
+    {
+      "year": 1000,
+      "label": "1000 CE",
+      "polities": 131
+    },
+    {
+      "year": 1200,
+      "label": "1200 CE",
+      "polities": 137
+    },
+    {
+      "year": 1400,
+      "label": "1400 CE",
+      "polities": 155
+    }
+  ],
+  "feature_count": 763,
+  "approximate": true,
+  "source": {
+    "id": "cliopatria",
+    "commit": "04b4e06bb4cce4f4834a057efbd23d4453619256",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "url": "https://github.com/Seshat-Global-History-Databank/cliopatria",
+    "authors": "[UNKNOWN] (the repository files at this commit carry no author list)"
+  },
+  "attribution": "Polity borders: Cliopatria, Seshat Global History Databank (https://github.com/Seshat-Global-History-Databank/cliopatria), CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Subset; borders simplified and approximate; changes by GlobeDesk.",
+  "changes": "POLITY features only; one snapshot per listed year; simplified (0.05 degree tolerance) and rounded to 0.01 degrees; fields kept: name, from, to, wikidata.",
+  "limits": [
+    "Borders are approximate: Cliopatria says its maps reflect one version of past territory and that border uncertainties are common.",
+    "Coverage starts in 3400 BCE, so outlines for earlier sites such as Göbekli Tepe are [UNKNOWN].",
+    "No outline covers Caral, Great Zimbabwe, or Teotihuacan before 1000 CE: a gap in the dataset, not evidence that no state existed."
+  ],
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (derived from Cliopatria; credit required)"
+}

@@ -5,7 +5,7 @@
 //   the entries replaced or appended by id in atlas/packs/earth/entries.json (subcategory natural-hazards),
 //   and the sources merged by id into atlas/packs/core/sources.json.
 // Local only, no network, idempotent. Run after build-bells.mjs and before build-packs.mjs.
-import { writeFileSync, readFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, readFileSync, mkdirSync, existsSync, unlinkSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { ROOT, ATLAS } from "./lib.mjs";
 import { DISASTER_SOURCES } from "./disasters-sources.mjs";
@@ -83,7 +83,17 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   writeFileSync(srcPath, JSON.stringify(doc, null, 2) + "\n");
   const earthPath = path.join(ATLAS, "packs/earth/entries.json");
   const earth = JSON.parse(readFileSync(earthPath, "utf8"));
+  const live = new Set(out.entries.map((e) => e.id));
+  earth.entries = earth.entries.filter((e) => !(e.layer === "disasters" && e.kind === "event" && !live.has(e.id)));
   out.entries.forEach((e) => { const i = earth.entries.findIndex((x) => x.id === e.id); if (i >= 0) earth.entries[i] = e; else earth.entries.push(e); });
   writeFileSync(earthPath, JSON.stringify(earth, null, 2) + "\n");
+  // Drop retired disaster record files that are no longer in DISASTERS (moved to a cross-link).
+  const recDir = path.join(ROOT, "data/atlas/disasters");
+  const keep = new Set(["disasters-overview.json", ...out.records.map((r) => `${r.id}.json`)]);
+  if (existsSync(recDir)) {
+    for (const name of readdirSync(recDir)) {
+      if (name.endsWith(".json") && !keep.has(name)) unlinkSync(path.join(recDir, name));
+    }
+  }
   console.log(`built ${out.records.length} disaster records, ${out.entries.length} earth-pack entries (incl. overview), ${out.overviewRec.linked.length} cross-links, ${out.overviewRec.stories.length} stories, ${DISASTER_SOURCES.length} sources`);
 }

@@ -1,4 +1,4 @@
-// Ten desks: lineup, schema, public-only links, sample desks with no link yet, public repos experimental (never official).
+// Eleven desks: lineup, schema, public-only links, sample desks with no link yet, public repos experimental (never official).
 import assert from "node:assert/strict";
 import { hygieneHits } from "../tools/atlas/hygiene.mjs";
 import { readFileSync } from "node:fs";
@@ -16,8 +16,8 @@ const schema = J("schema/globedesk-work-desks.schema.json");
 const clone = () => JSON.parse(JSON.stringify(doc));
 
 t("desk file matches its schema and the desk rules", () => { assert.deepEqual(errs(validateSchema(schema, doc)), []); assert.deepEqual(deskRules(doc), []); });
-t("ten desks in the approved order; News is the existing desk with its 10 sections", () => {
-  assert.deepEqual(doc.desks.map((d) => d.title), ["News", "Permits and Codes", "Jobsite and Constructability", "Trades and Skills", "Engineering and 3D Objects", "Energy and Materials", "Infrastructure, Trade and Routes", "Regulatory and Public Records", "Surveillance and Civil Liberties", "Security and Counterterrorism"]);
+t("eleven desks in the approved order; News is the existing desk with its 10 sections", () => {
+  assert.deepEqual(doc.desks.map((d) => d.title), ["News", "Permits and Codes", "Jobsite and Constructability", "Trades and Skills", "Engineering and 3D Objects", "Energy and Materials", "Infrastructure, Trade and Routes", "Regulatory and Public Records", "Surveillance and Civil Liberties", "Security and Counterterrorism", "Ancient World"]);
   const sections = J("newsdesk/sections.json").sections.map((s) => s.id);
   assert.equal(doc.desks[0].existing, true); assert.deepEqual(doc.desks[0].news_sections, sections);
   doc.desks.forEach((d) => d.news_sections.forEach((s) => assert.ok(sections.includes(s), d.id + ":" + s)));
@@ -48,7 +48,7 @@ t("owner rule: an owner repo or card can never be tagged official", () => {
   assert.equal(SC.classOf({ url: "https://github.com/AdventureNLearn/GlobeDesk", class: "official" }), "experimental");
   assert.deepEqual(SC.checkTag({ url: "https://www.faa.gov/hazmat/packsafe/lithium-batteries", class: "official" }, "x"), []);
 });
-t("all 10 desks list official sources; a desk with none must show [UNKNOWN]", () => {
+t("all 11 desks list official sources; a desk with none must show [UNKNOWN]", () => {
   const unknown = doc.desks.filter((d) => !d.official_sources.length);
   assert.equal(unknown.length, 0);
   doc.desks.forEach((d) => assert.equal(d.official_status, "listed"));

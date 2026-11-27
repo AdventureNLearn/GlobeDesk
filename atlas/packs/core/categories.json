@@ -12,6 +12,7 @@
       "scope": "Places, events and routes on the globe, with dated sources.",
       "pack": "history-places",
       "extra_packs": [
+        "ancient-world",
         "wonders"
       ],
       "refresh": "quarterly",

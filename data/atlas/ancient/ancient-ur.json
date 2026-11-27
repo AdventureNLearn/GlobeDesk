@@ -1,0 +1,76 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-ur",
+  "title": "Ur",
+  "kind": "site",
+  "country": "IQ",
+  "place": {
+    "label": "Ur, Dhi Qar Governorate, Iraq",
+    "pin": "shown",
+    "lat": 30.963056,
+    "lng": 46.103056,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for component 1481-006 (Ur Archaeological City) of The Ahwar of Southern Iraq: Refuge of Biodiversity and the Relict Landscape of the Mesopotamian Cities, published as N30 57 47 E46 6 11 at https://whc.unesco.org/en/list/1481/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": "https://pleiades.stoa.org/places/912985",
+    "wikidata": "https://www.wikidata.org/wiki/Q5699"
+  },
+  "era": "before-3000-bce",
+  "earliest_cited_year": -3799,
+  "status": "World Heritage site (component of a mixed property)",
+  "tiers": {
+    "everyday": "Ur in southern Iraq was one of the first big cities. It was founded around 3800 BC and is known for its ziggurat temple tower and its Royal Cemetery.",
+    "student": "Pleiades describes Ur as a major Sumerian city-state founded in the Ubaid period (about 3800 BC), known for the Royal Cemetery and the ziggurat, and later the capital of the Ur III dynasty. UNESCO lists Ur, with Uruk and Eridu, as the Ahwar of Southern Iraq's three cultural parts (inscribed 2016): cities on the edge of freshwater marshes where writing and monumental mud-brick temples first appeared. The pin is UNESCO's official point for the Ur Archaeological City component of that property."
+  },
+  "timeline": [
+    {
+      "date": "-3799",
+      "precision": "year",
+      "approximate": true,
+      "event": "Founded in the Ubaid period (about 3800 BC)",
+      "source": "pleiades-912985"
+    },
+    {
+      "date": "2016",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed as part of the Ahwar of Southern Iraq",
+      "source": "unesco-whc-1481"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Known for",
+      "value": "Royal Cemetery and the ziggurat",
+      "source": "pleiades-912985"
+    },
+    {
+      "label": "Later role",
+      "value": "Capital of the Ur III dynasty (dates [UNKNOWN] in our sources)",
+      "source": "pleiades-912985"
+    },
+    {
+      "label": "Landscape",
+      "value": "Built at the margin of freshwater marshes",
+      "source": "unesco-whc-1481"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "pleiades-912985",
+    "unesco-whc-1481",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-1481"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "dates of the Ur III dynasty",
+    "when the city was abandoned"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

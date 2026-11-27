@@ -2,8 +2,9 @@
 // Volcanic Eruptions and Significant Earthquake databases (HazEL service, read 2026-11-26) and from
 // USGS-authored pages; each fact names its source id (tools/atlas/disasters-sources.mjs). Gaps are
 // [UNKNOWN]. Where two sources give different numbers, both are kept as a "people-disagree" claim.
-// Mount St. Helens 1980 and San Francisco 1906 already exist in the history-places pack: they are
-// cross-linked from the overview (LINKED) and never duplicated here.
+// Mount St. Helens 1980 and San Francisco 1906 already exist in the history-places pack, and the
+// 79 CE Vesuvius eruption is told from the Ancient World Pompeii entry: they are cross-linked from
+// the overview (LINKED) and never duplicated here.
 const V = "ncei-sig-volcanoes", Q = "ncei-sig-earthquakes", FAQ = "usgs-deadliest-eruptions", CLIM = "usgs-volcanoes-climate";
 const HVO = "usgs-hvo-krakatau", YVO = "usgs-yvo-naples", L09 = "usgs-pubs-lisbon-farfield", L21 = "usgs-pubs-lisbon-source";
 
@@ -56,31 +57,6 @@ export const DISASTERS = [
     related: [["see-also", "krakatau-1883"]], confidence: "medium",
   },
   {
-    id: "vesuvius-79", title: "Vesuvius eruption, 79 CE", aliases: ["Vesuvius 79", "Pompeii eruption"], hazard: "eruption",
-    country: "IT", region: "Europe", ncei: { dataset: V, event_id: 1348 },
-    place: { label: "Mount Vesuvius, near Naples, Italy", lat: 40.821, lng: 14.426, approximate: true, basis: "NCEI published volcano point for event 1348; one point stands for a whole volcano" },
-    date: { date: "79", precision: "year", label: "79 CE eruption (NCEI lists 25 August)", source: V },
-    everyday: "In 79 CE Mount Vesuvius in Italy erupted and buried the Roman towns of Pompeii and Herculaneum. The volcano is still active and is watched by the first volcano observatory in the world.",
-    student: "NOAA NCEI lists the eruption at VEI 5, dated 25 August 79, with 2,100 deaths; the USGS deadliest-eruptions table gives 3,360, mainly from pyroclastic flows. USGS notes that Pliny the Younger described the eruption in letters, that eruptions were frequent from 1631 to 1944, and that the last one was in 1944.",
-    measures: [
-      { label: "Volcanic Explosivity Index (VEI)", value: "5", source: V },
-      { label: "Deaths (NCEI)", value: "2,100", source: V },
-      { label: "Deaths (USGS deadliest-eruptions table)", value: "3,360; main cause: pyroclastic flow", source: FAQ },
-      { label: "Date in the NCEI catalogue", value: "25 August 79", source: V },
-    ],
-    facts: [
-      { text: "The 79 CE eruption buried Herculaneum and Pompeii and was described in letters by Pliny the Younger.", source: YVO },
-      { text: "USGS counts eight major explosive eruptions since a caldera formed about 17,000 years ago.", source: YVO },
-      { text: "Eruptions were frequent from 1631 to 1944; the most recent eruption was in 1944.", source: YVO },
-      { text: "The INGV Vesuvius Observatory, founded in 1841, is the first volcano observatory in the world.", source: YVO },
-      { text: "NCEI links this eruption to an earthquake record and a tsunami record.", source: V },
-    ],
-    claims: [{ text: "How many people died.", status: "people-disagree", sources: [V, FAQ],
-      positions: [{ text: "2,100 (NCEI).", source: V }, { text: "3,360, mainly from pyroclastic flow (USGS table).", source: FAQ }] }],
-    unknowns: ["Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown", "Deep-time clock: 79 CE sits before the America 250 clock; it joins the Ancient-world deep-time clock when that lands"],
-    see_also_ids: ["ancient-pompeii"], related: [], confidence: "medium",
-  },
-  {
     id: "lisbon-1755", title: "Lisbon earthquake and tsunami, 1755", aliases: ["Great Lisbon earthquake", "1755 Lisbon earthquake"], hazard: "earthquake",
     country: "PT", region: "Europe", ncei: { dataset: Q, event_id: 1339 },
     place: { label: "Epicentre at sea off Portugal", lat: 37, lng: -10, approximate: true, basis: "NCEI published epicentre for event 1339, given to whole degrees; the true source is debated" },
@@ -115,6 +91,14 @@ export const LINKED = [
     { text: "The USGS deadliest-eruptions table also gives 57 deaths, from ash asphyxiation.", source: FAQ }] },
   { id: "san-francisco-earthquake-1906", hazard: "earthquake", facts: [
     { text: "NCEI lists magnitude 7.9 (Mw) and 700 deaths; other published tolls were not reviewed [UNKNOWN].", source: Q }] },
+  { id: "ancient-pompeii", hazard: "eruption", facts: [
+    { text: "NCEI rates the 79 CE eruption of Vesuvius VEI 5 and counts 2,100 deaths, dated 25 August 79.", source: V },
+    { text: "The USGS deadliest-eruptions table gives 3,360, mainly from pyroclastic flow.", source: FAQ },
+    { text: "The 79 CE eruption buried Herculaneum and Pompeii and was described in letters by Pliny the Younger.", source: YVO },
+    { text: "USGS counts eight major explosive eruptions since a caldera formed about 17,000 years ago.", source: YVO },
+    { text: "Eruptions were frequent from 1631 to 1944; the most recent eruption was in 1944.", source: YVO },
+    { text: "The INGV Vesuvius Observatory, founded in 1841, is the first volcano observatory in the world.", source: YVO },
+    { text: "NCEI links this eruption to an earthquake record and a tsunami record.", source: V }] },
 ];
 
 export const OVERVIEW = {

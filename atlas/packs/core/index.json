@@ -205,6 +205,24 @@
       "current": false
     },
     {
+      "id": "ancient-world-overview",
+      "title": "Ancient World: sites, lost cities and myths",
+      "aliases": [
+        "Ancient World",
+        "Ancient civilizations",
+        "Lost cities"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "antimony-element",
       "title": "Antimony (Sb, element 51)",
       "aliases": [
@@ -1020,6 +1038,22 @@
       ],
       "tier": "everyday",
       "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ancient-caral",
+      "title": "Caral",
+      "aliases": [
+        "Sacred City of Caral-Supe"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
       "status": "draft",
       "current": false
     },
@@ -1976,6 +2010,23 @@
       "current": false
     },
     {
+      "id": "ancient-giza",
+      "title": "Giza pyramids",
+      "aliases": [
+        "Giza Necropolis",
+        "Giza pyramid complex"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "gloriosa-erfurt",
       "title": "Gloriosa (Erfurt Cathedral)",
       "aliases": [
@@ -1988,6 +2039,22 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ancient-goebekli-tepe",
+      "title": "Göbekli Tepe",
+      "aliases": [
+        "Gobekli Tepe"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
       "status": "draft",
       "current": false
     },
@@ -2111,6 +2178,22 @@
       ],
       "tier": "everyday",
       "pack": "wonders",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ancient-great-zimbabwe",
+      "title": "Great Zimbabwe",
+      "aliases": [
+        "Great Zimbabwe National Monument"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
       "status": "draft",
       "current": false
     },
@@ -2825,6 +2908,23 @@
       "current": false
     },
     {
+      "id": "ancient-qin-mausoleum",
+      "title": "Mausoleum of the First Qin Emperor",
+      "aliases": [
+        "Terracotta Army",
+        "Qin Shihuang Mausoleum"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "mechelen-carillons",
       "title": "Mechelen carillons (St Rumbold's Tower)",
       "aliases": [
@@ -2889,6 +2989,23 @@
       "current": false
     },
     {
+      "id": "ancient-merv",
+      "title": "Merv",
+      "aliases": [
+        "Ancient Merv",
+        "Marv"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "mingun-bell",
       "title": "Mingun Bell",
       "aliases": [],
@@ -2899,6 +3016,23 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ancient-mohenjo-daro",
+      "title": "Mohenjo-daro",
+      "aliases": [
+        "Moenjodaro",
+        "Mohenjodaro"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
       "status": "draft",
       "current": false
     },
@@ -2945,6 +3079,54 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "myth-atlantis",
+      "title": "Myth: Atlantis",
+      "aliases": [
+        "Atlantis"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "myth-el-dorado",
+      "title": "Myth: El Dorado",
+      "aliases": [
+        "El Dorado"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "myth-shangri-la",
+      "title": "Myth: Shangri-La",
+      "aliases": [
+        "Shangri-La"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
       "status": "draft",
       "current": false
     },
@@ -3318,6 +3500,22 @@
       "current": false
     },
     {
+      "id": "ancient-palmyra",
+      "title": "Palmyra",
+      "aliases": [
+        "Tadmor"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "hiroshima-peace-bell",
       "title": "Peace Bell (Hiroshima Peace Memorial Park)",
       "aliases": [],
@@ -3359,6 +3557,22 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ancient-petra",
+      "title": "Petra",
+      "aliases": [
+        "Raqmu"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
       "status": "draft",
       "current": false
     },
@@ -3451,6 +3665,22 @@
       ],
       "tier": "student",
       "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "ancient-pompeii",
+      "title": "Pompeii",
+      "aliases": [
+        "Pompei"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
       "status": "draft",
       "current": false
     },
@@ -4237,6 +4467,22 @@
       "current": false
     },
     {
+      "id": "ancient-teotihuacan",
+      "title": "Teotihuacan",
+      "aliases": [
+        "Pre-Hispanic City of Teotihuacan"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "terbium-element",
       "title": "Terbium (Tb, element 65)",
       "aliases": [
@@ -4417,6 +4663,24 @@
       "current": false
     },
     {
+      "id": "ancient-troy",
+      "title": "Troy (Hisarlık)",
+      "aliases": [
+        "Troia",
+        "Ilion",
+        "Hisarlik"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "tsar-bell",
       "title": "Tsar Bell",
       "aliases": [
@@ -4535,6 +4799,22 @@
       "current": false
     },
     {
+      "id": "ancient-ur",
+      "title": "Ur",
+      "aliases": [
+        "Tell el-Muqayyar"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "pack": "ancient-world",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "uranium-element",
       "title": "Uranium (U, element 92)",
       "aliases": [
@@ -4636,23 +4916,6 @@
       ],
       "tier": "everyday",
       "pack": "science-history",
-      "status": "draft",
-      "current": false
-    },
-    {
-      "id": "vesuvius-79",
-      "title": "Vesuvius eruption, 79 CE",
-      "aliases": [
-        "Vesuvius 79",
-        "Pompeii eruption"
-      ],
-      "kind": "event",
-      "category_path": [
-        "earth",
-        "natural-hazards"
-      ],
-      "tier": "everyday",
-      "pack": "earth",
       "status": "draft",
       "current": false
     },

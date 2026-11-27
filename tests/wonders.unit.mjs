@@ -32,7 +32,12 @@ t("the whole atlas validates (wonders included)", () => assert.deepEqual(validat
 t("six winners have a card; Petra is a deferred cross-link to the Ancient layer, never a second entry", () => {
   assert.deepEqual(layer.map((e) => e.id).sort(), ["wonder-chichen-itza", "wonder-christ-the-redeemer", "wonder-colosseum", "wonder-great-wall", "wonder-machu-picchu", "wonder-taj-mahal"]);
   const o = ov(); assert.equal(o.vote.length, 7); const p = o.vote.find((v) => v.name === "Petra");
-  assert.equal(p.entry, null); assert.equal(p.deferred_link, "ancient-petra"); assert.ok(!D.entries.some((e) => /petra|giza/i.test(e.id)));
+  assert.equal(p.entry, null); assert.equal(p.deferred_link, "ancient-petra");
+  // Petra and Giza belong to Ancient World; there must be no second wonders card for them.
+  assert.ok(!layer.some((e) => /petra|giza/i.test(e.id)));
+  assert.ok(!D.entries.some((e) => /^wonder-(petra|giza)/i.test(e.id)));
+  assert.equal(byId.get("ancient-petra").pack, "ancient-world");
+  assert.equal(byId.get("ancient-giza").pack, "ancient-world");
   assert.deepEqual(o.counts, { winners: 7, cards: 6, pinned: 5, deferred: 1 });
 });
 t("the vote is labelled unofficial in every title, tier, record and the UNESCO statement is cited", () => {

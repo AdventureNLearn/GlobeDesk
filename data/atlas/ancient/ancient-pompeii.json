@@ -1,0 +1,77 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-pompeii",
+  "title": "Pompeii",
+  "kind": "site",
+  "country": "IT",
+  "place": {
+    "label": "Pompei, Campania, Italy",
+    "pin": "shown",
+    "lat": 40.7494,
+    "lng": 14.4854,
+    "approximate": true,
+    "basis": "site centre from a gazetteer; not a boundary",
+    "coords_source": "Pleiades place 433032 representative point (CC BY 3.0); Wikidata Q43332 agrees within 0.38 km",
+    "pleiades": "https://pleiades.stoa.org/places/433032",
+    "wikidata": "https://www.wikidata.org/wiki/Q43332"
+  },
+  "era": "1-1000-ce",
+  "earliest_cited_year": 79,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "Pompeii was a Roman town in Italy buried by ash when Mount Vesuvius erupted in AD 79. It has been dug out bit by bit since the mid-1700s.",
+    "student": "UNESCO says the eruption of Vesuvius in AD 79 buried Pompeii mostly under volcanic ash and lapilli, while nearby Herculaneum vanished under pyroclastic flows; both have been progressively excavated since the mid-18th century. Inscribed 1997 with Herculaneum and Torre Annunziata."
+  },
+  "timeline": [
+    {
+      "date": "79",
+      "precision": "year",
+      "approximate": false,
+      "event": "Buried by the eruption of Vesuvius",
+      "source": "unesco-whc-829"
+    },
+    {
+      "date": "1750",
+      "precision": "year",
+      "approximate": true,
+      "event": "Progressive excavation begins (mid-18th century)",
+      "source": "unesco-whc-829"
+    },
+    {
+      "date": "1997",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-829"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Buried by",
+      "value": "Volcanic ash and lapilli",
+      "source": "unesco-whc-829"
+    },
+    {
+      "label": "Gazetteer",
+      "value": "Destroyed by the Vesuvius eruption of AD 79",
+      "source": "pleiades-433032"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "unesco-whc-829",
+    "pleiades-433032",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-829"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "founding date of the town (not in our cited sources)"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

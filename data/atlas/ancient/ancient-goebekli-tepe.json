@@ -1,0 +1,71 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "ancient-goebekli-tepe",
+  "title": "Göbekli Tepe",
+  "kind": "site",
+  "country": "TR",
+  "place": {
+    "label": "Göbekli Tepe, Şanlıurfa Province, Türkiye",
+    "pin": "shown",
+    "lat": 37.223242,
+    "lng": 38.922364,
+    "approximate": true,
+    "basis": "official UNESCO World Heritage point; not a boundary",
+    "coords_source": "UNESCO World Heritage Centre official point for Göbekli Tepe (World Heritage List 1572), published as N37 13 23.671 E38 55 20.51 at https://whc.unesco.org/en/list/1572/maps/ (table read 2026-11-27); approximate, not a boundary",
+    "pleiades": "https://pleiades.stoa.org/places/245438984",
+    "wikidata": "https://www.wikidata.org/wiki/Q214944"
+  },
+  "era": "before-3000-bce",
+  "earliest_cited_year": -9599,
+  "status": "World Heritage site",
+  "tiers": {
+    "everyday": "Göbekli Tepe in southeast Türkiye is a hilltop with huge carved stone pillars set up by hunter-gatherers around 9600 to 8200 BC, thousands of years before writing or cities.",
+    "student": "UNESCO describes monumental enclosures built by hunter-gatherer groups in the Pre-Pottery Neolithic (10th-9th millennia BC), with T-shaped limestone pillars up to 5.5 m tall, some carved as stylised human figures and with wild animals. Pleiades dates the sanctuary to about 9600-8200 BC. It was inscribed on the World Heritage List in 2018."
+  },
+  "timeline": [
+    {
+      "date": "-9599",
+      "end": "-8199",
+      "precision": "year",
+      "approximate": true,
+      "event": "Pre-Pottery Neolithic hilltop sanctuary in use (about 9600-8200 BC)",
+      "source": "pleiades-245438984"
+    },
+    {
+      "date": "2018",
+      "precision": "year",
+      "approximate": false,
+      "event": "Inscribed on the World Heritage List",
+      "source": "unesco-whc-1572"
+    }
+  ],
+  "facts": [
+    {
+      "label": "Builders",
+      "value": "Hunter-gatherer groups of the Pre-Pottery Neolithic",
+      "source": "unesco-whc-1572"
+    },
+    {
+      "label": "Pillars",
+      "value": "T-shaped limestone pillars, some up to 5.50 m tall",
+      "source": "unesco-whc-1572"
+    }
+  ],
+  "claims": [],
+  "sources": [
+    "unesco-whc-1572",
+    "pleiades-245438984",
+    "wikidata-p625"
+  ],
+  "official_sources": [
+    "unesco-whc-1572"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "what the enclosures were used for is an interpretation (UNESCO says 'probably' social events and rituals)"
+  ],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

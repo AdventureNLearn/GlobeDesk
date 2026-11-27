@@ -1,0 +1,1179 @@
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "ancient-world",
+  "entries": [
+    {
+      "id": "ancient-world-overview",
+      "title": "Ancient World: sites, lost cities and myths",
+      "aliases": [
+        "Ancient World",
+        "Ancient civilizations",
+        "Lost cities"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "A layer of 13 ancient sites, from Göbekli Tepe (about 9600 BC) to Great Zimbabwe, plus three myths with no pins. Every site pin is approximate. Optional approximate polity outlines come from Cliopatria.",
+        "student": "Twelve site pins are official UNESCO World Heritage Centre points, cited from each property's maps table with the official DMS (a named component point where the property is serial or mixed). Pompeii keeps its Pleiades representative point (CC BY 3.0). Dates come from UNESCO World Heritage pages and Pleiades and keep the sources' own era wording. Myths carry claim labels (supported or not-proven) and no coordinates. Polity outlines come from Cliopatria (Seshat Global History Databank, CC BY 4.0), a subset of 14 snapshot years from 3000 BCE to 1400 CE, simplified; borders are approximate. Cliopatria starts in 3400 BCE, so outlines for earlier sites are [UNKNOWN], and it has no outline at Caral, Great Zimbabwe, or Teotihuacan before 1000 CE."
+      },
+      "summary": "A layer of 13 ancient sites, from Göbekli Tepe (about 9600 BC) to Great Zimbabwe, plus three myths with no pins. Every site pin is approximate. Optional approximate polity outlines come from Cliopatria.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "unesco-whc-1572",
+        "pleiades-245438984",
+        "wikidata-p625",
+        "cliopatria"
+      ],
+      "related": [],
+      "record": "data/atlas/ancient/ancient-world-overview.json",
+      "records": [
+        "data/atlas/ancient/extents-index.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "ancient-goebekli-tepe",
+      "title": "Göbekli Tepe",
+      "aliases": [
+        "Gobekli Tepe"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Göbekli Tepe in southeast Türkiye is a hilltop with huge carved stone pillars set up by hunter-gatherers around 9600 to 8200 BC, thousands of years before writing or cities.",
+        "student": "UNESCO describes monumental enclosures built by hunter-gatherer groups in the Pre-Pottery Neolithic (10th-9th millennia BC), with T-shaped limestone pillars up to 5.5 m tall, some carved as stylised human figures and with wild animals. Pleiades dates the sanctuary to about 9600-8200 BC. It was inscribed on the World Heritage List in 2018."
+      },
+      "summary": "Göbekli Tepe in southeast Türkiye is a hilltop with huge carved stone pillars set up by hunter-gatherers around 9600 to 8200 BC, thousands of years before writing or cities.",
+      "places": [
+        {
+          "region": "TR",
+          "lat": 37.223242,
+          "lng": 38.922364,
+          "precision": "site",
+          "note": "Göbekli Tepe, Şanlıurfa Province, Türkiye (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-9599",
+          "end": "-8199",
+          "precision": "year",
+          "approximate": true,
+          "label": "Pre-Pottery Neolithic hilltop sanctuary in use (about 9600-8200 BC)"
+        },
+        {
+          "date": "2018",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        }
+      ],
+      "sources": [
+        "unesco-whc-1572",
+        "pleiades-245438984",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-goebekli-tepe.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: UNESCO World Heritage Centre official point for Göbekli Tepe (World Heritage List 1572), published as N37 13 23.671 E38 55 20.51 at https://whc.unesco.org/en/list/1572/maps/ (table read 2026-11-27); approximate, not a boundary. Gaps: what the enclosures were used for is an interpretation (UNESCO says 'probably' social events and rituals)."
+    },
+    {
+      "id": "ancient-ur",
+      "title": "Ur",
+      "aliases": [
+        "Tell el-Muqayyar"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Ur in southern Iraq was one of the first big cities. It was founded around 3800 BC and is known for its ziggurat temple tower and its Royal Cemetery.",
+        "student": "Pleiades describes Ur as a major Sumerian city-state founded in the Ubaid period (about 3800 BC), known for the Royal Cemetery and the ziggurat, and later the capital of the Ur III dynasty. UNESCO lists Ur, with Uruk and Eridu, as the Ahwar of Southern Iraq's three cultural parts (inscribed 2016): cities on the edge of freshwater marshes where writing and monumental mud-brick temples first appeared. The pin is UNESCO's official point for the Ur Archaeological City component of that property."
+      },
+      "summary": "Ur in southern Iraq was one of the first big cities. It was founded around 3800 BC and is known for its ziggurat temple tower and its Royal Cemetery.",
+      "places": [
+        {
+          "region": "IQ",
+          "lat": 30.963056,
+          "lng": 46.103056,
+          "precision": "site",
+          "note": "Ur, Dhi Qar Governorate, Iraq (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-3799",
+          "precision": "year",
+          "approximate": true,
+          "label": "Founded in the Ubaid period (about 3800 BC)"
+        },
+        {
+          "date": "2016",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed as part of the Ahwar of Southern Iraq"
+        }
+      ],
+      "sources": [
+        "pleiades-912985",
+        "unesco-whc-1481",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-ur.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site (component of a mixed property). Pin shown: UNESCO World Heritage Centre official point for component 1481-006 (Ur Archaeological City) of The Ahwar of Southern Iraq: Refuge of Biodiversity and the Relict Landscape of the Mesopotamian Cities, published as N30 57 47 E46 6 11 at https://whc.unesco.org/en/list/1481/maps/ (table read 2026-11-27); approximate, not a boundary. Gaps: dates of the Ur III dynasty; when the city was abandoned."
+    },
+    {
+      "id": "ancient-caral",
+      "title": "Caral",
+      "aliases": [
+        "Sacred City of Caral-Supe"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Caral in Peru's Supe valley is a 5,000-year-old city with large stone pyramid platforms. UNESCO regards it as the Americas' oldest civilisation centre.",
+        "student": "UNESCO dates Caral by radiocarbon to between 3000 and 1800 BC, in the Late Archaic period. The 626 ha site has six pyramidal structures, and a quipu (knotted-cord record) was found there. UNESCO regards it as the Americas' oldest civilisation centre. It was inscribed in 2009."
+      },
+      "summary": "Caral in Peru's Supe valley is a 5,000-year-old city with large stone pyramid platforms. UNESCO regards it as the Americas' oldest civilisation centre.",
+      "places": [
+        {
+          "region": "PE",
+          "lat": -10.891667,
+          "lng": -77.521389,
+          "precision": "site",
+          "note": "Caral, Supe valley, Lima Region, Peru (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-2999",
+          "end": "-1799",
+          "precision": "year",
+          "approximate": true,
+          "label": "Occupied in the Late Archaic period (radiocarbon dates 3000-1800 BC)"
+        },
+        {
+          "date": "2009",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        }
+      ],
+      "sources": [
+        "unesco-whc-1269",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-caral.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: UNESCO World Heritage Centre official point for Sacred City of Caral-Supe (World Heritage List 1269), published as S10 53 30 W77 31 17 at https://whc.unesco.org/en/list/1269/maps/ (table read 2026-11-27); approximate, not a boundary."
+    },
+    {
+      "id": "ancient-giza",
+      "title": "Giza pyramids",
+      "aliases": [
+        "Giza Necropolis",
+        "Giza pyramid complex"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "The pyramids of Giza in Egypt are royal tombs from the Old Kingdom. Of the ancient Seven Wonders, only Khufu's Great Pyramid still stands.",
+        "student": "Pleiades records the Giza Necropolis, with its pyramid complexes, in the Old Kingdom period, which it dates to 2670-2168 BC. UNESCO lists the Giza pyramid fields within Memphis and its Necropolis, the Old Kingdom capital, inscribed in 1979, and notes that, of the ancient world's wonders, only Khufu's Great Pyramid still stands. The pin is UNESCO's official point for the Giza-to-Dahshur pyramid-fields component of that property, which also includes the Site of Memphis."
+      },
+      "summary": "The pyramids of Giza in Egypt are royal tombs from the Old Kingdom. Of the ancient Seven Wonders, only Khufu's Great Pyramid still stands.",
+      "places": [
+        {
+          "region": "EG",
+          "lat": 29.97604,
+          "lng": 31.13041,
+          "precision": "site",
+          "note": "Giza plateau, Giza Governorate, Egypt (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-2669",
+          "end": "-2167",
+          "precision": "year",
+          "approximate": true,
+          "label": "Old Kingdom period (2670-2168 BC in the Pleiades chronology), when the pyramid complexes were built"
+        },
+        {
+          "date": "1979",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed as part of Memphis and its Necropolis"
+        }
+      ],
+      "sources": [
+        "pleiades-442962448",
+        "pleiades-period-old-kingdom-egypt",
+        "unesco-whc-86",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-giza.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: UNESCO World Heritage Centre official point for component 86-002 (Pyramid fields from Giza to Dahshur) of Memphis and its Necropolis – the Pyramid Fields from Giza to Dahshur, published as N29 58 33.744 E31 7 49.476 at https://whc.unesco.org/en/list/86/maps/ (table read 2026-11-27); approximate, not a boundary. Gaps: exact build years of each pyramid are not in our cited sources."
+    },
+    {
+      "id": "ancient-mohenjo-daro",
+      "title": "Mohenjo-daro",
+      "aliases": [
+        "Moenjodaro",
+        "Mohenjodaro"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Mohenjo-daro in Pakistan was a large planned city of the Indus civilization, with straight streets, baked-brick houses and covered drains, more than 4,000 years ago.",
+        "student": "UNESCO describes Mohenjo-daro as South Asia's most intact city site, from the early third millennium BC, and as the Indus civilisation's main metropolis, which flourished about 2500-1500 BC. Streets cross at right angles and it has a drainage system, wells and public baths. The ruins were found in 1922 and inscribed in 1980."
+      },
+      "summary": "Mohenjo-daro in Pakistan was a large planned city of the Indus civilization, with straight streets, baked-brick houses and covered drains, more than 4,000 years ago.",
+      "places": [
+        {
+          "region": "PK",
+          "lat": 27.329167,
+          "lng": 68.138889,
+          "precision": "site",
+          "note": "Mohenjo-daro, Larkana District, Sindh, Pakistan (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-2999",
+          "precision": "year",
+          "approximate": true,
+          "label": "The city dates from the early third millennium BC"
+        },
+        {
+          "date": "-2499",
+          "end": "-1499",
+          "precision": "year",
+          "approximate": true,
+          "label": "Indus civilization flourishes (about 2500-1500 BC)"
+        },
+        {
+          "date": "1922",
+          "precision": "year",
+          "approximate": false,
+          "label": "Discovery of the ruins"
+        },
+        {
+          "date": "1980",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        }
+      ],
+      "sources": [
+        "unesco-whc-138",
+        "pleiades-902113570",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-mohenjo-daro.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: UNESCO World Heritage Centre official point for Archaeological Ruins at Moenjodaro (World Heritage List 138), published as N27 19 45 E68 8 20 at https://whc.unesco.org/en/list/138/maps/ (table read 2026-11-27); approximate, not a boundary. Gaps: the Indus script: its reading is not covered by our cited sources; when and why the city was abandoned."
+    },
+    {
+      "id": "ancient-troy",
+      "title": "Troy (Hisarlık)",
+      "aliases": [
+        "Troia",
+        "Ilion",
+        "Hisarlik"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Troy is a mound of many cities built on top of each other in northwest Türkiye. It is generally believed to be the Troy of Homer's Iliad.",
+        "student": "Pleiades records occupation at Ilion/Troia from an Early Bronze Age citadel in the 3rd millennium BC to the Roman period, and says the Hisarlık mound is generally believed to be Homer's Troy. UNESCO counts about 4,000 years of history, notes first excavations in 1870 and 24 excavation campaigns, and inscribed the site in 1998."
+      },
+      "summary": "Troy is a mound of many cities built on top of each other in northwest Türkiye. It is generally believed to be the Troy of Homer's Iliad.",
+      "places": [
+        {
+          "region": "TR",
+          "lat": 39.95644,
+          "lng": 26.239,
+          "precision": "site",
+          "note": "Hisarlık mound, Çanakkale Province, Türkiye (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-2999",
+          "precision": "year",
+          "approximate": true,
+          "label": "Early Bronze Age citadel (3rd millennium BC) begins the settlement"
+        },
+        {
+          "date": "1870",
+          "precision": "year",
+          "approximate": false,
+          "label": "First excavations at the site"
+        },
+        {
+          "date": "1998",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        }
+      ],
+      "sources": [
+        "pleiades-550595",
+        "unesco-whc-849",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-troy.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: UNESCO World Heritage Centre official point for Archaeological Site of Troy (World Heritage List 849), published as N39 57 23.184 E26 14 20.4 at https://whc.unesco.org/en/list/849/maps/ (table read 2026-11-27); approximate, not a boundary. Gaps: whether a Trojan War happened as told in the Iliad is not settled by our cited sources."
+    },
+    {
+      "id": "ancient-merv",
+      "title": "Merv",
+      "aliases": [
+        "Ancient Merv",
+        "Marv"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Merv in Turkmenistan was a great oasis city on the Silk Roads. Its ruins hold several walled cities built side by side over more than 2,000 years.",
+        "student": "UNESCO describes Ancient Merv as Central Asia's most intact Silk Road oasis city, and the earliest of those that survive so fully, with towns from the third millennium BC, Bronze Age settlements (2500-1200 BC), and a high point when it served as the Great Seljuks' capital in the 11th and 12th centuries. Pleiades notes walled cities from the 6th century BC to the 18th century. Inscribed 1999. The pin is UNESCO's official point for the historic urban centre of the Merv oasis (Erk and Gyaur Kala and Sultan Kala), one component of this serial property; the property page itself publishes no single coordinate."
+      },
+      "summary": "Merv in Turkmenistan was a great oasis city on the Silk Roads. Its ruins hold several walled cities built side by side over more than 2,000 years.",
+      "places": [
+        {
+          "region": "TM",
+          "lat": 37.664831,
+          "lng": 62.174892,
+          "precision": "site",
+          "note": "Ancient Merv, Mary Province, Turkmenistan (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-2499",
+          "end": "-1199",
+          "precision": "year",
+          "approximate": true,
+          "label": "Bronze Age centres in the oasis (2500-1200 BC)"
+        },
+        {
+          "date": "-599",
+          "end": "1799",
+          "precision": "year",
+          "approximate": true,
+          "label": "Walled cities built from the 6th century BC to the 18th century"
+        },
+        {
+          "date": "1999",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        }
+      ],
+      "sources": [
+        "unesco-whc-886",
+        "pleiades-961873",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-merv.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: UNESCO World Heritage Centre official point for component 886-001 (Historic urban centre of the Merv oasis, Erk and Gyaur Kala and Sultan Kala) of State Historical and Cultural Park “Ancient Merv”, published as N37 39 53.39 E62 10 29.61 at https://whc.unesco.org/en/list/886/maps/ (table read 2026-11-27); approximate, not a boundary. Gaps: population at its peak."
+    },
+    {
+      "id": "ancient-palmyra",
+      "title": "Palmyra",
+      "aliases": [
+        "Tadmor"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Palmyra was a desert oasis city in Syria on caravan routes. UNESCO has listed it as World Heritage in Danger since 2013. Several of its best-known monuments were destroyed in 2015.",
+        "student": "UNESCO notes Palmyra is first mentioned in the Mari archives in the 2nd millennium BC, passed into Roman hands around the middle of the first century AD, and is known for 1st-2nd century art and architecture, including a 1,100 m colonnaded street. Pleiades notes it was the capital of the Palmyrene Empire under Zenobia. UN satellite analysis (UNITAR-UNOSAT) dates the destruction of the Baalshamin Temple to 25-27 August 2015, the Temple of Bel to 30 August 2015 and the Arch of Triumph to 5 October 2015. Its present condition and any restoration are [UNKNOWN] in our sources; see the UNESCO page."
+      },
+      "summary": "Palmyra was a desert oasis city in Syria on caravan routes. UNESCO has listed it as World Heritage in Danger since 2013. Several of its best-known monuments were destroyed in 2015.",
+      "places": [
+        {
+          "region": "SY",
+          "lat": 34.554167,
+          "lng": 38.266667,
+          "precision": "site",
+          "note": "Palmyra, Homs Governorate, Syria (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-1999",
+          "precision": "year",
+          "approximate": true,
+          "label": "First mentioned in the Mari archives (2nd millennium BC)"
+        },
+        {
+          "date": "50",
+          "precision": "year",
+          "approximate": true,
+          "label": "Comes under Roman control (mid-1st century AD)"
+        },
+        {
+          "date": "1980",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        },
+        {
+          "date": "2013",
+          "precision": "year",
+          "approximate": false,
+          "label": "Added to UNESCO's In Danger listing"
+        },
+        {
+          "date": "2015-08",
+          "precision": "month",
+          "approximate": false,
+          "label": "Baalshamin Temple destroyed (between 25 and 27 August 2015)"
+        },
+        {
+          "date": "2015-08-30",
+          "precision": "day",
+          "approximate": false,
+          "label": "Temple of Bel destroyed with explosives"
+        },
+        {
+          "date": "2015-10-05",
+          "precision": "day",
+          "approximate": false,
+          "label": "Arch of Triumph destroyed"
+        },
+        {
+          "date": "2016-03-25",
+          "precision": "day",
+          "approximate": false,
+          "label": "UNESCO statement listing the destroyed monuments and offering an assessment mission"
+        }
+      ],
+      "sources": [
+        "unesco-whc-23",
+        "unesco-news-1341",
+        "unesco-news-1471",
+        "unosat-1015",
+        "unitar-chs-2016",
+        "pleiades-668331",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-palmyra.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage in Danger. Pin shown: UNESCO World Heritage Centre official point for Site of Palmyra (World Heritage List 23), published as N34 33 15 E38 16 0 at https://whc.unesco.org/en/list/23/maps/ (table read 2026-11-27); approximate, not a boundary. Gaps: current condition of the site after 2016; status of any restoration work."
+    },
+    {
+      "id": "ancient-petra",
+      "title": "Petra",
+      "aliases": [
+        "Raqmu"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Petra in Jordan was the rock-cut capital of the Nabataeans, a trading people known for tombs and temples cut into sandstone.",
+        "student": "UNESCO links Petra to the Nabataean civilization of the 4th century BC to the 1st century AD, notes the area was inhabited since prehistoric times, and describes it as a caravan centre in Hellenistic and Roman times. Pleiades calls it the Nabataean capital. Inscribed 1985."
+      },
+      "summary": "Petra in Jordan was the rock-cut capital of the Nabataeans, a trading people known for tombs and temples cut into sandstone.",
+      "places": [
+        {
+          "region": "JO",
+          "lat": 30.33056,
+          "lng": 35.44333,
+          "precision": "site",
+          "note": "Petra, Ma'an Governorate, Jordan (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-399",
+          "end": "100",
+          "precision": "year",
+          "approximate": true,
+          "label": "Nabataean civilization (4th century BC to 1st century AD)"
+        },
+        {
+          "date": "1985",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        }
+      ],
+      "sources": [
+        "unesco-whc-326",
+        "pleiades-697725",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-petra.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: UNESCO World Heritage Centre official point for Petra (World Heritage List 326), published as N30 19 50.016 E35 26 35.988 at https://whc.unesco.org/en/list/326/maps/ (table read 2026-11-27); approximate, not a boundary."
+    },
+    {
+      "id": "ancient-qin-mausoleum",
+      "title": "Mausoleum of the First Qin Emperor",
+      "aliases": [
+        "Terracotta Army",
+        "Qin Shihuang Mausoleum"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Near Xi'an in China, the tomb of the first Qin emperor is guarded by thousands of life-size clay soldiers. Work began in 246 BCE and the army was found in 1974.",
+        "student": "UNESCO says the mausoleum of Qin Shihuang, who first unified China into one empire, was begun in 246 BCE; the mound still stands 51.3 m high, and nearly 200 pits hold thousands of life-size terracotta soldiers and horses and bronze chariots. Pleiades gives construction as 246-208 BCE and the discovery of the terracotta army as 1974. Inscribed 1987. The pin is UNESCO's official point for the mausoleum component; the property also includes the pits of the terracotta army at a separate official point."
+      },
+      "summary": "Near Xi'an in China, the tomb of the first Qin emperor is guarded by thousands of life-size clay soldiers. Work began in 246 BCE and the army was found in 1974.",
+      "places": [
+        {
+          "region": "CN",
+          "lat": 34.381417,
+          "lng": 109.253667,
+          "precision": "site",
+          "note": "Lintong District, near Xi'an, Shaanxi, China (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "-245",
+          "end": "-207",
+          "precision": "year",
+          "approximate": true,
+          "label": "Construction begins (246 BCE)"
+        },
+        {
+          "date": "1974",
+          "precision": "year",
+          "approximate": false,
+          "label": "Terracotta army discovered"
+        },
+        {
+          "date": "1987",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        }
+      ],
+      "sources": [
+        "unesco-whc-441",
+        "pleiades-117715281",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-qin-mausoleum.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: UNESCO World Heritage Centre official point for component 441-001 (Mausoleum of the First Qin Emperor) of Mausoleum of the First Qin Emperor, published as N34 22 53.1 E109 15 13.2 at https://whc.unesco.org/en/list/441/maps/ (table read 2026-11-27); approximate, not a boundary. Gaps: the inside of the main burial mound (not described in our cited sources)."
+    },
+    {
+      "id": "ancient-pompeii",
+      "title": "Pompeii",
+      "aliases": [
+        "Pompei"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Pompeii was a Roman town in Italy buried by ash when Mount Vesuvius erupted in AD 79. It has been dug out bit by bit since the mid-1700s.",
+        "student": "UNESCO says the eruption of Vesuvius in AD 79 buried Pompeii mostly under volcanic ash and lapilli, while nearby Herculaneum vanished under pyroclastic flows; both have been progressively excavated since the mid-18th century. Inscribed 1997 with Herculaneum and Torre Annunziata."
+      },
+      "summary": "Pompeii was a Roman town in Italy buried by ash when Mount Vesuvius erupted in AD 79. It has been dug out bit by bit since the mid-1700s.",
+      "places": [
+        {
+          "region": "IT",
+          "lat": 40.7494,
+          "lng": 14.4854,
+          "precision": "site",
+          "note": "Pompei, Campania, Italy (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "79",
+          "precision": "year",
+          "approximate": false,
+          "label": "Buried by the eruption of Vesuvius"
+        },
+        {
+          "date": "1750",
+          "precision": "year",
+          "approximate": true,
+          "label": "Progressive excavation begins (mid-18th century)"
+        },
+        {
+          "date": "1997",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        }
+      ],
+      "sources": [
+        "unesco-whc-829",
+        "pleiades-433032",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "disasters-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-pompeii.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: Pleiades place 433032 representative point (CC BY 3.0); Wikidata Q43332 agrees within 0.38 km. Gaps: founding date of the town (not in our cited sources)."
+    },
+    {
+      "id": "ancient-teotihuacan",
+      "title": "Teotihuacan",
+      "aliases": [
+        "Pre-Hispanic City of Teotihuacan"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Teotihuacan near Mexico City was a huge planned city with the Sun and Moon pyramids. It rose during the 1st through 7th centuries AD.",
+        "student": "UNESCO says Teotihuacan, about 50 km from Mexico City to the north-east, rose during the 1st through 7th centuries AD and is known for the Sun and Moon pyramids and the Temple of Quetzalcoatl. Inscribed 1987."
+      },
+      "summary": "Teotihuacan near Mexico City was a huge planned city with the Sun and Moon pyramids. It rose during the 1st through 7th centuries AD.",
+      "places": [
+        {
+          "region": "MX",
+          "lat": 19.69167,
+          "lng": -98.84167,
+          "precision": "site",
+          "note": "Teotihuacan, State of Mexico, Mexico (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1",
+          "end": "699",
+          "precision": "year",
+          "approximate": true,
+          "label": "The city rose during the 1st through 7th centuries AD"
+        },
+        {
+          "date": "1987",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        }
+      ],
+      "sources": [
+        "unesco-whc-414",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-teotihuacan.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: UNESCO World Heritage Centre official point for Pre-Hispanic City of Teotihuacan (World Heritage List 414), published as N19 41 30.012 W98 50 30.012 at https://whc.unesco.org/en/list/414/maps/ (table read 2026-11-27); approximate, not a boundary."
+    },
+    {
+      "id": "ancient-great-zimbabwe",
+      "title": "Great Zimbabwe",
+      "aliases": [
+        "Great Zimbabwe National Monument"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "see_also_paths": [
+        [
+          "history-places",
+          "maps-boundaries"
+        ]
+      ],
+      "tiers": {
+        "everyday": "Great Zimbabwe is a stone-walled city in southern Africa built by Shona people between about AD 1100 and 1450. Its traders were linked to goods from China and Persia.",
+        "student": "UNESCO says Great Zimbabwe was built between AD 1100 and 1450 and founded in the 11th century by Bantu-speaking Shona people of the Iron Age; it held over 10,000 people in the 14th century and was abandoned around 1450. Beads of glass, and porcelain traced to China and to Persia, were found there. UNESCO states the site is unquestionably of Bantu origin; older stories giving it a foreign origin are legends. Inscribed 1986."
+      },
+      "summary": "Great Zimbabwe is a stone-walled city in southern Africa built by Shona people between about AD 1100 and 1450. Its traders were linked to goods from China and Persia.",
+      "places": [
+        {
+          "region": "ZW",
+          "lat": -20.27117,
+          "lng": 30.933269,
+          "precision": "site",
+          "note": "Great Zimbabwe, Masvingo Province, Zimbabwe (approximate pin)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1100",
+          "end": "1450",
+          "precision": "year",
+          "approximate": true,
+          "label": "Built between AD 1100 and 1450"
+        },
+        {
+          "date": "1450",
+          "precision": "year",
+          "approximate": true,
+          "label": "Abandoned (around 1450)"
+        },
+        {
+          "date": "1986",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on the World Heritage List"
+        }
+      ],
+      "sources": [
+        "unesco-whc-364",
+        "pleiades-322739224",
+        "wikidata-p625"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/ancient-great-zimbabwe.json",
+      "confidence": "high",
+      "notes": "Ancient World layer. World Heritage site. Pin shown: UNESCO World Heritage Centre official point for Great Zimbabwe National Monument (World Heritage List 364), published as S20 16 16.212 E30 55 59.768 at https://whc.unesco.org/en/list/364/maps/ (table read 2026-11-27); approximate, not a boundary. Gaps: why the city was abandoned (not settled in our cited sources)."
+    },
+    {
+      "id": "myth-atlantis",
+      "title": "Myth: Atlantis",
+      "aliases": [
+        "Atlantis"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "tiers": {
+        "everyday": "Atlantis is an island in a story told by the Greek philosopher Plato. In the story it sank in earthquakes. No real site has been shown to be Atlantis.",
+        "student": "In Plato's dialogue Critias (108e), the speaker describes Atlantis as an island larger than Libya and Asia that later sank in earthquakes, and the notes point back to the Timaeus (23e-24e). The story's source is the text; a real island at a known place is not proven."
+      },
+      "summary": "Atlantis is an island in a story told by the Greek philosopher Plato. In the story it sank in earthquakes. No real site has been shown to be Atlantis.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "perseus-plato-critias-108e",
+        "gutenberg-1571"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/myth-atlantis.json",
+      "confidence": "medium",
+      "notes": "Myth or legend, no pin. Claims: The Atlantis story is told in Plato's dialogue Critias (supported); Atlantis was a real place at a known location (not-proven)."
+    },
+    {
+      "id": "myth-el-dorado",
+      "title": "Myth: El Dorado",
+      "aliases": [
+        "El Dorado"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "tiers": {
+        "everyday": "El Dorado began as Spanish retellings of a Muisca ceremony in what is now Colombia, where a leader offered gold on a lake. It grew into a legend of a city of gold that was never found.",
+        "student": "Banco de la República (Museo del Oro) explains that a Muisca offering ceremony was told to Europeans in the 16th century and grew into the El Dorado legend. A gold Muisca raft found in 1969 in a cave near Pasca is linked to the ceremony Spanish chroniclers described. The ceremony is documented; a city of gold is not proven."
+      },
+      "summary": "El Dorado began as Spanish retellings of a Muisca ceremony in what is now Colombia, where a leader offered gold on a lake. It grew into a legend of a city of gold that was never found.",
+      "places": [],
+      "dates": [
+        {
+          "date": "1500",
+          "end": "1599",
+          "precision": "year",
+          "approximate": true,
+          "label": "Ceremony story told to Europeans (16th century)"
+        },
+        {
+          "date": "1969",
+          "precision": "year",
+          "approximate": false,
+          "label": "Muisca gold raft found in a cave near Pasca"
+        }
+      ],
+      "sources": [
+        "banrep-creacion-mito",
+        "banrep-balsa-muisca"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/myth-el-dorado.json",
+      "confidence": "medium",
+      "notes": "Myth or legend, no pin. Claims: Spanish chroniclers described a Muisca offering ceremony that became the El Dorado story (supported); A gold Muisca raft linked to the ceremony was found in 1969 near Pasca (supported); A city of gold existed at a known location (not-proven)."
+    },
+    {
+      "id": "myth-shangri-la",
+      "title": "Myth: Shangri-La",
+      "aliases": [
+        "Shangri-La"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "history-places",
+        "archaeology-sites"
+      ],
+      "tier": "everyday",
+      "layer": "ancient",
+      "pack": "ancient-world",
+      "status": "draft",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "tiers": {
+        "everyday": "Shangri-La is a made-up valley in the Himalayas from James Hilton's 1933 novel Lost Horizon. It is fiction, not a lost city.",
+        "student": "A library catalog record of Lost horizon (New York: William Morrow & Co., 1933) by James Hilton (1900-1954, per the Library of Congress) summarises the novel as set in Shangri-La, a Himalayan place where time has almost stopped. The story's source is the novel; a real Shangri-La at a known place is not proven."
+      },
+      "summary": "Shangri-La is a made-up valley in the Himalayas from James Hilton's 1933 novel Lost Horizon. It is fiction, not a lost city.",
+      "places": [],
+      "dates": [
+        {
+          "date": "1933",
+          "precision": "year",
+          "approximate": false,
+          "label": "Lost Horizon published (William Morrow & Co.)"
+        }
+      ],
+      "sources": [
+        "lion-lost-horizon",
+        "loc-hilton-authority"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "ancient-world-overview"
+        }
+      ],
+      "record": "data/atlas/ancient/myth-shangri-la.json",
+      "confidence": "medium",
+      "notes": "Myth or legend, no pin. Claims: Shangri-La comes from James Hilton's novel Lost Horizon (1933) (supported); Shangri-La is a real place at a known location (not-proven)."
+    }
+  ]
+}

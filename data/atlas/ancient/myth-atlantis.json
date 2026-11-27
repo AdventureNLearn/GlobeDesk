@@ -1,0 +1,44 @@
+{
+  "schema": "globedesk.ancient/1",
+  "id": "myth-atlantis",
+  "title": "Myth: Atlantis",
+  "kind": "myth",
+  "place": null,
+  "era": "[UNKNOWN]",
+  "status": "Myth or legend: no pin",
+  "tiers": {
+    "everyday": "Atlantis is an island in a story told by the Greek philosopher Plato. In the story it sank in earthquakes. No real site has been shown to be Atlantis.",
+    "student": "In Plato's dialogue Critias (108e), the speaker describes Atlantis as an island larger than Libya and Asia that later sank in earthquakes, and the notes point back to the Timaeus (23e-24e). The story's source is the text; a real island at a known place is not proven."
+  },
+  "timeline": [],
+  "facts": [],
+  "claims": [
+    {
+      "text": "The Atlantis story is told in Plato's dialogue Critias",
+      "claimStatus": "supported",
+      "sourceIds": [
+        "perseus-plato-critias-108e",
+        "gutenberg-1571"
+      ]
+    },
+    {
+      "text": "Atlantis was a real place at a known location",
+      "claimStatus": "not-proven",
+      "sourceIds": [],
+      "note": "No cited source places it; we draw no pin."
+    }
+  ],
+  "sources": [
+    "perseus-plato-critias-108e",
+    "gutenberg-1571"
+  ],
+  "official_sources": [],
+  "official_status": "[UNKNOWN]",
+  "unknowns": [
+    "the date Plato wrote the Critias is not in our cited sources"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); pins are official UNESCO World Heritage points cited from the World Heritage Centre maps table (UNESCO terms), except Pompeii, which uses the Pleiades representative point (CC BY 3.0); linked sources keep their own terms",
+  "subject_person_living": false
+}

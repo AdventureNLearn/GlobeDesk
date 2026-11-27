@@ -1,0 +1,224 @@
+{
+  "schema": "globedesk.episode/2",
+  "id": "ep-ancient-world-pompeii",
+  "show": "GlobeDesk",
+  "title": "Ancient World: Pompeii, buried in AD 79",
+  "date": "2026-11-26",
+  "lede": "A one-story Ancient World episode. Pompeii is the one first-batch site whose pin is shown; the other sites' pins wait for the owner's site-by-site review. Facts from UNESCO and Pleiades; the pin is approximate (Pleiades, CC BY 3.0).",
+  "cta": "Open the Ancient World desk for the other sites as text.",
+  "links": [
+    {
+      "label": "UNESCO World Heritage Centre — Archaeological Areas of Pompei, Herculaneum and Torre Annunziata",
+      "url": "https://whc.unesco.org/en/list/829/"
+    },
+    {
+      "label": "Pleiades — Pompeii (place 433032)",
+      "url": "https://pleiades.stoa.org/places/433032"
+    }
+  ],
+  "demo": false,
+  "sample": false,
+  "look": {
+    "label": "GlobeDesk (default) — Lily pad palette (owner original), holographic cyan, gold chrome",
+    "theme": "globedesk",
+    "header": true,
+    "headerBadge": "GLOBEDESK",
+    "headerHeightPct": 15,
+    "citations": true,
+    "captionsOn": true,
+    "captionStyle": "shadow",
+    "captionSize": "large",
+    "captionLines": 2,
+    "captionZonePct": 15,
+    "lowerThird": false,
+    "ticker": false,
+    "music": false,
+    "coldOpen": false,
+    "shotSec": 8,
+    "palette": {
+      "bg": "#02040c",
+      "ink": "#eaf6ff",
+      "accent": "#e7c766",
+      "highlight": "#5ee7ff",
+      "panel": "rgba(12, 24, 56, 0.42)",
+      "outroBg": "#02040c"
+    },
+    "map": {
+      "base": "offline",
+      "softBorders": true,
+      "highlightGlow": true,
+      "countryLabels": "flat-white"
+    },
+    "safeArea": true
+  },
+  "handle": "@AdventureNLearn",
+  "outro": {
+    "enabled": false,
+    "durationSec": 0,
+    "line1": "",
+    "link": "",
+    "handle": "@AdventureNLearn",
+    "showXLogo": false
+  },
+  "output": {
+    "aspect": "16:9",
+    "fps": 30
+  },
+  "stories": [
+    {
+      "id": "story-ancient-pompeii",
+      "slug": "ancient-pompeii",
+      "title": "Pompeii, buried by Vesuvius in AD 79",
+      "summary": "UNESCO says the eruption of Vesuvius in AD 79 buried Pompeii, mostly under ash and lapilli; it has been excavated since the mid-18th century and was inscribed in 1997.",
+      "date": "0079",
+      "credit": "UNESCO World Heritage Centre",
+      "creditUrl": "https://whc.unesco.org/en/list/829/",
+      "asReported": false,
+      "durationSec": 9,
+      "location": {
+        "name": "Pompeii (approximate site centre)",
+        "lat": 40.7494,
+        "lon": 14.4854,
+        "precision": "approximate",
+        "verified": false,
+        "note": "Pleiades place 433032 representative point (CC BY 3.0); Wikidata Q43332 agrees within 0.38 km. A site centre, not a boundary.",
+        "a3": "ITA"
+      },
+      "script": "UNESCO says Mount Vesuvius erupted in AD 79 and buried the Roman town of Pompeii, mostly under volcanic ash and lapilli. The town has been excavated bit by bit since the mid-18th century, and it was inscribed on the World Heritage List in 1997, together with Herculaneum and Torre Annunziata. The pin is an approximate site centre.",
+      "captions": [
+        {
+          "start": 0,
+          "end": 3,
+          "text": "Pompeii, AD 79."
+        },
+        {
+          "start": 3,
+          "end": 6.2,
+          "text": "Buried by Vesuvius under ash and lapilli."
+        },
+        {
+          "start": 6.2,
+          "end": 9,
+          "text": "Excavated since the mid-1700s. Listed in 1997."
+        }
+      ],
+      "camera": [
+        {
+          "id": "kf-pompeii-orbit",
+          "preset": "orbit",
+          "at": 0,
+          "center": [
+            14.4854,
+            40.7494
+          ],
+          "zoom": 2.4,
+          "pitch": 0,
+          "bearing": 0,
+          "durationSec": 2.0,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        },
+        {
+          "id": "kf-pompeii-close",
+          "preset": "close",
+          "at": 2,
+          "center": [
+            14.4854,
+            40.7494
+          ],
+          "zoom": 13,
+          "pitch": 42,
+          "bearing": 15,
+          "durationSec": 2.4,
+          "ease": "cinematic",
+          "cut": true,
+          "citation": {
+            "type": "Map",
+            "date": "auto",
+            "credit": "auto",
+            "license": "auto"
+          }
+        }
+      ],
+      "cards": [
+        {
+          "id": "card-pompeii",
+          "kind": "topic",
+          "title": "Pompeii",
+          "body": "UNESCO's World Heritage page (list 829) says that when Vesuvius erupted in AD 79 it engulfed the Roman towns of Pompeii and Herculaneum; Pompeii was buried largely by volcanic ash and lapilli. Both have been progressively excavated and opened to the public since the mid-18th century. Pleiades records Pompeii as destroyed by the eruption of AD 79.",
+          "why": "The one first-batch Ancient World site whose pin is shown in this draft.",
+          "facts": [
+            {
+              "label": "Eruption",
+              "value": "AD 79 (UNESCO; Pleiades)."
+            },
+            {
+              "label": "Buried by",
+              "value": "Volcanic ash and lapilli (UNESCO)."
+            },
+            {
+              "label": "Excavation",
+              "value": "Progressive, since the mid-18th century (UNESCO)."
+            },
+            {
+              "label": "World Heritage",
+              "value": "Inscribed 1997 with Herculaneum and Torre Annunziata (UNESCO)."
+            },
+            {
+              "label": "Pin",
+              "value": "Approximate site centre from Pleiades (CC BY 3.0). Founding date of the town [UNKNOWN]."
+            }
+          ],
+          "sourceIds": [
+            "src-unesco-829",
+            "src-pleiades-433032"
+          ],
+          "pin": {
+            "lat": 40.7494,
+            "lon": 14.4854
+          },
+          "at": 1.5,
+          "dur": 7,
+          "position": "right",
+          "verified": true
+        }
+      ],
+      "sources": [
+        {
+          "id": "src-unesco-829",
+          "label": "UNESCO World Heritage Centre, Archaeological Areas of Pompei, Herculaneum and Torre Annunziata (list 829)",
+          "url": "https://whc.unesco.org/en/list/829/",
+          "status": "verified",
+          "note": "Official UNESCO page, read 26 Nov 2026. Our wording; nothing copied."
+        },
+        {
+          "id": "src-pleiades-433032",
+          "label": "Pleiades, Pompeii (place 433032)",
+          "url": "https://pleiades.stoa.org/places/433032",
+          "status": "verified",
+          "note": "Gazetteer record, CC BY 3.0, read 26 Nov 2026. Source of the approximate pin."
+        }
+      ],
+      "media": [],
+      "audioOverlays": [],
+      "content": [],
+      "highlight": {
+        "a3": "ITA",
+        "geojson": null
+      },
+      "voiceover": null,
+      "eventWindow": {
+        "start": "",
+        "end": ""
+      }
+    }
+  ],
+  "eventLayers": [],
+  "mediaBin": []
+}

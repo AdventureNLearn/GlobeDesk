@@ -190,10 +190,6 @@
         },
         {
           "type": "see-also",
-          "to": "vesuvius-79"
-        },
-        {
-          "type": "see-also",
           "to": "lisbon-1755"
         },
         {
@@ -203,6 +199,10 @@
         {
           "type": "see-also",
           "to": "san-francisco-earthquake-1906"
+        },
+        {
+          "type": "see-also",
+          "to": "ancient-pompeii"
         }
       ],
       "record": "data/atlas/disasters/disasters-overview.json",
@@ -355,76 +355,6 @@
       "current": false,
       "subject_person_living": false,
       "notes": "Disasters layer (eruption). NCEI event 367. Gaps: Why the death totals differ: [UNKNOWN]; Effects on harvests or weather in other countries in 1816: [UNKNOWN] in the sources checked."
-    },
-    {
-      "id": "vesuvius-79",
-      "title": "Vesuvius eruption, 79 CE",
-      "aliases": [
-        "Vesuvius 79",
-        "Pompeii eruption"
-      ],
-      "kind": "event",
-      "category_path": [
-        "earth",
-        "natural-hazards"
-      ],
-      "see_also_paths": [
-        [
-          "history-places",
-          "events-eras"
-        ],
-        [
-          "earth",
-          "geology-minerals"
-        ]
-      ],
-      "tier": "everyday",
-      "tiers": {
-        "everyday": "In 79 CE Mount Vesuvius in Italy erupted and buried the Roman towns of Pompeii and Herculaneum. The volcano is still active and is watched by the first volcano observatory in the world.",
-        "student": "NOAA NCEI lists the eruption at VEI 5, dated 25 August 79, with 2,100 deaths; the USGS deadliest-eruptions table gives 3,360, mainly from pyroclastic flows. USGS notes that Pliny the Younger described the eruption in letters, that eruptions were frequent from 1631 to 1944, and that the last one was in 1944."
-      },
-      "layer": "disasters",
-      "see_also_ids": [
-        "ancient-pompeii"
-      ],
-      "summary": "In 79 CE Mount Vesuvius in Italy erupted and buried the Roman towns of Pompeii and Herculaneum. The volcano is still active and is watched by the first volcano observatory in the world.",
-      "places": [
-        {
-          "region": "IT",
-          "lat": 40.821,
-          "lng": 14.426,
-          "precision": "site",
-          "note": "Mount Vesuvius, near Naples, Italy (approximate pin: NCEI published volcano point for event 1348; one point stands for a whole volcano)"
-        }
-      ],
-      "dates": [
-        {
-          "date": "79",
-          "precision": "year",
-          "approximate": false,
-          "label": "79 CE eruption (NCEI lists 25 August)"
-        }
-      ],
-      "sources": [
-        "ncei-sig-volcanoes",
-        "usgs-deadliest-eruptions",
-        "usgs-yvo-naples"
-      ],
-      "related": [
-        {
-          "type": "part-of",
-          "to": "disasters-overview"
-        }
-      ],
-      "record": "data/atlas/disasters/vesuvius-79.json",
-      "pack": "earth",
-      "status": "draft",
-      "confidence": "medium",
-      "license": "CC BY 4.0",
-      "checked": "2026-11-26",
-      "current": false,
-      "subject_person_living": false,
-      "notes": "Disasters layer (eruption). NCEI event 1348. Gaps: Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown; Deep-time clock: 79 CE sits before the America 250 clock; it joins the Ancient-world deep-time clock when that lands."
     },
     {
       "id": "lisbon-1755",

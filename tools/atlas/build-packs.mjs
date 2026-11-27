@@ -35,7 +35,8 @@ function manifest(id, kind, title, files, entryCount, extra) {
 manifest("core", "core", "Atlas core: index, category tree, places, years, sources", ["index.json", "categories.json", "places.json", "years.json", "sources.json"], entries.length, { refresh: "with-release" });
 for (const p of CATEGORY_PACKS) {
   const c = packCategory(cats.categories, p);
-  const title = c.pack === p ? c.title : `${c.title}: ${p.charAt(0).toUpperCase() + p.slice(1)}`;
+  const EXTRA_TITLES = { "ancient-world": "Ancient World" };
+  const title = c.pack === p ? c.title : `${c.title}: ${EXTRA_TITLES[p] || p.charAt(0).toUpperCase() + p.slice(1)}`;
   manifest(p, "category", `Atlas pack: ${title}`, ["entries.json"], J(`packs/${p}/entries.json`).entries.length, { category: c.id, refresh: c.refresh, ...(p === "chemistry" ? { checked: "2026-11-25" } : {}) });
 }
 console.log(`built core (${entries.length} entries) + ${CATEGORY_PACKS.length} category manifests`);

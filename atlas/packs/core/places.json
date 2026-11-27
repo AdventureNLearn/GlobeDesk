@@ -47,6 +47,7 @@
         "bianzhong-marquis-yi",
         "wonder-great-wall",
         "jiuquan-launch-center",
+        "ancient-qin-mausoleum",
         "yongle-bell"
       ]
     },
@@ -67,6 +68,13 @@
         "gloriosa-erfurt",
         "petersglocke-cologne",
         "berlin-wall-falls-1989"
+      ]
+    },
+    {
+      "key": "EG",
+      "precision": "site",
+      "entries": [
+        "ancient-giza"
       ]
     },
     {
@@ -131,7 +139,8 @@
       "key": "IQ",
       "precision": "site",
       "entries": [
-        "nimrud-bronze-bell"
+        "nimrud-bronze-bell",
+        "ancient-ur"
       ]
     },
     {
@@ -141,7 +150,14 @@
         "bag-solar-kit-prices",
         "wonder-colosseum",
         "galileo-telescopic-observations-1609",
-        "vesuvius-79"
+        "ancient-pompeii"
+      ]
+    },
+    {
+      "key": "JO",
+      "precision": "site",
+      "entries": [
+        "ancient-petra"
       ]
     },
     {
@@ -193,6 +209,7 @@
       "entries": [
         "dolores-bell",
         "wonder-chichen-itza",
+        "ancient-teotihuacan",
         "guadalupe-hidalgo-1848"
       ]
     },
@@ -214,6 +231,7 @@
       "key": "PE",
       "precision": "site",
       "entries": [
+        "ancient-caral",
         "wonder-machu-picchu",
         "maria-angola-cusco"
       ]
@@ -223,6 +241,13 @@
       "precision": "site",
       "entries": [
         "balangiga-bells"
+      ]
+    },
+    {
+      "key": "PK",
+      "precision": "site",
+      "entries": [
+        "ancient-mohenjo-daro"
       ]
     },
     {
@@ -248,6 +273,28 @@
         "soviet-union-dissolves-1991",
         "tsar-bell",
         "uglich-exile-bell"
+      ]
+    },
+    {
+      "key": "SY",
+      "precision": "site",
+      "entries": [
+        "ancient-palmyra"
+      ]
+    },
+    {
+      "key": "TM",
+      "precision": "site",
+      "entries": [
+        "ancient-merv"
+      ]
+    },
+    {
+      "key": "TR",
+      "precision": "site",
+      "entries": [
+        "ancient-goebekli-tepe",
+        "ancient-troy"
       ]
     },
     {
@@ -527,12 +574,20 @@
       "entries": [
         "cape-town-st-georges-bells"
       ]
+    },
+    {
+      "key": "ZW",
+      "precision": "site",
+      "entries": [
+        "ancient-great-zimbabwe"
+      ]
     }
   ],
   "no_place": [
     "actinium-element",
     "aluminium-element",
     "americium-element",
+    "ancient-world-overview",
     "antimony-element",
     "apollo-12-landing-site",
     "apollo-14-landing-site",
@@ -609,6 +664,9 @@
     "mercury-element",
     "molybdenum-element",
     "moscovium-element",
+    "myth-atlantis",
+    "myth-el-dorado",
+    "myth-shangri-la",
     "neodymium-element",
     "neon-element",
     "neptunium-element",

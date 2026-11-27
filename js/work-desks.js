@@ -1,5 +1,5 @@
 /* Work desks: a desk switcher at the top of the news desk column. "News" is the existing news desk,
-   unchanged. The nine work desks show a scope, reading-tier notes, official sources (or [UNKNOWN]) and
+   unchanged. The ten work desks show a scope, reading-tier notes, official sources (or [UNKNOWN]) and
    experimental references (maintainer repos and Learning Lab cards, labelled, never backing a claim).
    Generic sample desks with no public link yet show as "Sample desk: … (link pending)" with no link. window.GD.workDesks */
 (function (global) {
@@ -34,6 +34,8 @@
     return '<ul class="small wd-official">' + list.map((o) => '<li><a href="' + esc(o.url) + '" target="_blank" rel="noopener noreferrer">' + esc(o.label) + '</a> <span class="muted">· ' + esc(o.publisher) + " · checked " + esc(o.checked) + "</span></li>").join("") + "</ul>";
   }
 
+  // The desk's own timeline clock (js/atlas/clocks.js), if it names one.
+  function clockOf(d) { return d.clock && GD.clocks ? GD.clocks.byId(d.clock) : null; }
   function deskHtml(d) {
     const tiers = ["kids", "everyday", "student", "professional"];
     const cats = (GD.atlasData && GD.atlasData.categories) || [];
@@ -48,6 +50,9 @@
       (internal.length ? '<h4 class="small">In GlobeDesk</h4><ul class="small wd-internal">' + internal.map(backingHtml).join("") + "</ul>" : "") +
       (exp.length ? '<h4 class="small">Experimental references <span class="muted">(not official sources, never a record backing a claim)</span></h4><ul class="small wd-backing">' + exp.map(backingHtml).join("") + "</ul>" : "") +
       (d.atlas_categories.length ? '<p class="small">Atlas: ' + d.atlas_categories.map((id) => { const c = cats.find((x) => x.id === id); return '<button type="button" class="linklike" data-wd-cat="' + esc(id) + '">' + esc(c ? c.title : id) + "</button>"; }).join(" · ") + (d.id === "energy-materials" ? ' · <button type="button" class="mini" data-wd-atlas-view="elements">Elements periodic table</button>' : "") + "</p>" : "") +
+      (clockOf(d) ? '<p class="small wd-clock">Timeline: <b>' + esc(clockOf(d).label) + "</b> " + esc(GD.clocks.rangeLabel(clockOf(d))) +
+        ' · <button type="button" class="mini" data-wd-clock="' + esc(clockOf(d).packs[0]) + '">Open the timeline</button>' +
+        (d.id === "ancient-world" ? ' <button type="button" class="mini" data-wd-layer="ancient">Show ancient sites on the globe</button>' : "") + "</p>" : "") +
       "</section>";
   }
 
@@ -68,6 +73,8 @@
     box.querySelectorAll("[data-wd-atlas]").forEach((el) => el.addEventListener("click", () => { if (GD.atlas) { GD.atlas.open(); GD.atlas.select(el.getAttribute("data-wd-atlas")); } }));
     box.querySelectorAll("[data-wd-cat]").forEach((el) => el.addEventListener("click", () => { if (GD.atlas) { GD.atlas.st.category = el.getAttribute("data-wd-cat"); GD.atlas.st.view = "az"; GD.atlas.open(); } }));
     box.querySelectorAll("[data-wd-atlas-view]").forEach((el) => el.addEventListener("click", () => { if (GD.atlas) { GD.atlas.st.view = el.getAttribute("data-wd-atlas-view"); GD.atlas.st.elementZoom = null; GD.atlas.open(); } }));
+    box.querySelectorAll("[data-wd-clock]").forEach((el) => el.addEventListener("click", () => { if (GD.atlas) { GD.atlas.st.clockPack = el.getAttribute("data-wd-clock"); GD.atlas.st.view = "year"; GD.atlas.st.year = null; GD.atlas.st.zoom = "years"; GD.atlas.open(); } }));
+    box.querySelectorAll("[data-wd-layer]").forEach((el) => el.addEventListener("click", () => { if (el.getAttribute("data-wd-layer") === "ancient" && GD.ancientLayer) { GD.ancientLayer.setOn(true); if (GD.ui && GD.ui.toast) GD.ui.toast("Ancient World layer on: approximate pins; held sites are listed in Layers."); } }));
     box.querySelectorAll("[data-wd-section]").forEach((el) => el.addEventListener("click", () => { setDesk("news"); const tab = doc.querySelector('.nd-tab[data-section="' + el.getAttribute("data-wd-section") + '"]'); if (tab) tab.click(); }));
   }
 
