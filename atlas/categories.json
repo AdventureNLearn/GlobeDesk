@@ -83,7 +83,8 @@
         { "id": "discoveries", "title": "Discoveries by year" },
         { "id": "inventions", "title": "Inventions" },
         { "id": "measurement-units", "title": "Measurement and units" },
-        { "id": "computing", "title": "Computing" } ] },
+        { "id": "computing", "title": "Computing" },
+        { "id": "space-race", "title": "Space race and launch sites" } ] },
     { "n": 12, "id": "now", "title": "Now", "scope": "Current events this week and this month. An event leaves Now after about 90 days and stays in its home category.", "pack": "now", "refresh": "weekly",
       "subcategories": [
         { "id": "this-week", "title": "This week" },

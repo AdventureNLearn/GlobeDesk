@@ -1,0 +1,223 @@
+{
+  "schema": "globedesk.space-overview/1",
+  "id": "space-overview",
+  "title": "Space race and launch sites",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NASA and IAU values are public-domain US-hosted data; linked sources keep their own terms",
+  "tiers": {
+    "everyday": "Launch sites on Earth and landing sites on the Moon from the space race. Earth sites are pins; Moon sites are listed with their published lunar coordinates, because the globe shows Earth.",
+    "student": "A first batch from NASA NSSDCA, the IAU Gazetteer of Planetary Nomenclature and official agency pages. Earth launch sites are approximate pins (one Wikidata coordinate each, CC0). Moon landing sites carry lunar coordinates as published and have no Earth pin. Apollo 11 and Cape Canaveral stay deliberately minimal."
+  },
+  "bodies": [
+    {
+      "id": "earth",
+      "label": "Launch sites on Earth (pins)"
+    },
+    {
+      "id": "moon",
+      "label": "Landing sites on the Moon (lunar coordinates, no pin)"
+    }
+  ],
+  "members": [
+    {
+      "id": "baikonur-cosmodrome",
+      "body": "earth",
+      "linked": false,
+      "pinned": true
+    },
+    {
+      "id": "kourou-guiana-space-centre",
+      "body": "earth",
+      "linked": false,
+      "pinned": true
+    },
+    {
+      "id": "jiuquan-launch-center",
+      "body": "earth",
+      "linked": false,
+      "pinned": true
+    },
+    {
+      "id": "vandenberg-launch-base",
+      "body": "earth",
+      "linked": false,
+      "pinned": true
+    },
+    {
+      "id": "cape-canaveral-launch-site",
+      "body": "earth",
+      "linked": false,
+      "pinned": true
+    },
+    {
+      "id": "apollo-12-landing-site",
+      "body": "moon",
+      "linked": false,
+      "pinned": false
+    },
+    {
+      "id": "apollo-14-landing-site",
+      "body": "moon",
+      "linked": false,
+      "pinned": false
+    },
+    {
+      "id": "apollo-15-landing-site",
+      "body": "moon",
+      "linked": false,
+      "pinned": false
+    },
+    {
+      "id": "apollo-16-landing-site",
+      "body": "moon",
+      "linked": false,
+      "pinned": false
+    },
+    {
+      "id": "apollo-17-landing-site",
+      "body": "moon",
+      "linked": false,
+      "pinned": false
+    },
+    {
+      "id": "luna-9-landing-site",
+      "body": "moon",
+      "linked": false,
+      "pinned": false
+    },
+    {
+      "id": "luna-16-landing-site",
+      "body": "moon",
+      "linked": false,
+      "pinned": false
+    },
+    {
+      "id": "apollo-11-1969",
+      "body": "moon",
+      "linked": true,
+      "pinned": false
+    }
+  ],
+  "counts": {
+    "earth": 5,
+    "moon": 8
+  },
+  "linked": [
+    {
+      "id": "apollo-11-1969",
+      "body": "moon",
+      "facts": [
+        {
+          "text": "NSSDCA's Apollo table lists the launch on 16 July 1969, the landing on 20 July 1969 in Mare Tranquilitatis (spelling as printed) at 0.674 N, 23.473 E, 2.53 hours of moonwalk time and 21.55 kg of samples.",
+          "source": "nssdca-apollo-landings"
+        },
+        {
+          "text": "The IAU Gazetteer names the point Statio Tranquillitatis, 'Tranquility Base, Apollo 11 landing site', centre 0.67 N, 23.47 E, name approved in 1970.",
+          "source": "iau-statio-tranquillitatis"
+        },
+        {
+          "text": "NASA's catalogue lists Cape Canaveral, United States, as the launch site.",
+          "source": "nssdca-apollo-11-lm"
+        }
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "id": "apollo-11-cape-to-tranquility",
+      "title": "Apollo 11: from Cape Canaveral to Tranquility Base",
+      "steps": [
+        {
+          "entry": "cape-canaveral-launch-site",
+          "text": "Apollo 11 launched on 16 July 1969; NASA's catalogue lists Cape Canaveral, United States, as the launch site.",
+          "sources": [
+            "nssdca-apollo-11-lm",
+            "nssdca-apollo-landings"
+          ]
+        },
+        {
+          "entry": "apollo-11-1969",
+          "text": "The Lunar Module landed on 20 July 1969 in Mare Tranquilitatis, at 0.674 N, 23.473 E on the Moon.",
+          "sources": [
+            "nssdca-apollo-landings"
+          ]
+        },
+        {
+          "entry": "apollo-11-1969",
+          "text": "The IAU Gazetteer names that point Statio Tranquillitatis, 'Tranquility Base'; its name was approved in 1970.",
+          "sources": [
+            "iau-statio-tranquillitatis"
+          ]
+        },
+        {
+          "entry": "apollo-12-landing-site",
+          "text": "Five more landings followed, from Apollo 12 in November 1969 to Apollo 17 in December 1972; each site is in this layer with its NSSDCA coordinates.",
+          "sources": [
+            "nssdca-apollo-landings"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "four-launch-sites-four-firsts",
+      "title": "Four launch sites, four firsts",
+      "steps": [
+        {
+          "entry": "baikonur-cosmodrome",
+          "text": "4 October 1957: Sputnik, the first artificial satellite, launched from Baikonur.",
+          "sources": [
+            "nasa-sputnik-1957"
+          ]
+        },
+        {
+          "entry": "vandenberg-launch-base",
+          "text": "28 February 1959: Vandenberg launched Discoverer 1, which the base calls the world's first polar-orbiting satellite.",
+          "sources": [
+            "vsfb-history"
+          ]
+        },
+        {
+          "entry": "baikonur-cosmodrome",
+          "text": "12 April 1961: ESA says Yuri Gagarin lifted off from Baikonur's Launch Pad 1.",
+          "sources": [
+            "esa-baikonur-steppes"
+          ]
+        },
+        {
+          "entry": "jiuquan-launch-center",
+          "text": "24 April 1970: Jiuquan launched Dongfanghong-1, China's first satellite.",
+          "sources": [
+            "cnsa-dongfanghong-1"
+          ]
+        },
+        {
+          "entry": "kourou-guiana-space-centre",
+          "text": "Kourou, chosen by France in 1964, saw its first launch in 1968.",
+          "sources": [
+            "esa-europes-spaceport"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "nssdca-apollo-landings",
+    "iau-statio-tranquillitatis",
+    "nssdca-apollo-11-lm",
+    "nasa-sputnik-1957",
+    "vsfb-history",
+    "esa-baikonur-steppes",
+    "cnsa-dongfanghong-1",
+    "esa-europes-spaceport"
+  ],
+  "excluded": [
+    {
+      "name": "Roscosmos and CNES pages",
+      "reason": "Not opened on 2026-11-26 (HTTP 500 / not fetched), so not used [UNKNOWN]"
+    },
+    {
+      "name": "Named Apollo crews",
+      "reason": "Not used; only dates, places and coordinates from NASA pages"
+    }
+  ]
+}

@@ -249,6 +249,90 @@
       "current": false
     },
     {
+      "id": "apollo-12-landing-site",
+      "title": "Apollo 12 landing site (Moon)",
+      "aliases": [
+        "Apollo 12"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "apollo-14-landing-site",
+      "title": "Apollo 14 landing site (Moon)",
+      "aliases": [
+        "Apollo 14",
+        "Fra Mauro"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "apollo-15-landing-site",
+      "title": "Apollo 15 landing site (Moon)",
+      "aliases": [
+        "Apollo 15",
+        "Hadley Rille"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "apollo-16-landing-site",
+      "title": "Apollo 16 landing site (Moon)",
+      "aliases": [
+        "Apollo 16",
+        "Descartes"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "apollo-17-landing-site",
+      "title": "Apollo 17 landing site (Moon)",
+      "aliases": [
+        "Apollo 17",
+        "Taurus-Littrow"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "argon-element",
       "title": "Argon (Ar, element 18)",
       "aliases": [
@@ -365,6 +449,23 @@
       ],
       "tier": "everyday",
       "pack": "economics",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "baikonur-cosmodrome",
+      "title": "Baikonur Cosmodrome",
+      "aliases": [
+        "Baikonur",
+        "Tyuratam"
+      ],
+      "kind": "place",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
       "status": "draft",
       "current": false
     },
@@ -903,6 +1004,22 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "cape-canaveral-launch-site",
+      "title": "Cape Canaveral launch site",
+      "aliases": [
+        "Cape Canaveral"
+      ],
+      "kind": "place",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
       "status": "draft",
       "current": false
     },
@@ -2215,6 +2332,22 @@
       "current": false
     },
     {
+      "id": "jiuquan-launch-center",
+      "title": "Jiuquan Satellite Launch Center",
+      "aliases": [
+        "Jiuquan"
+      ],
+      "kind": "place",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "justice-bell",
       "title": "Justice Bell (Women's Liberty Bell)",
       "aliases": [
@@ -2228,6 +2361,23 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "kourou-guiana-space-centre",
+      "title": "Kourou, Guiana Space Centre",
+      "aliases": [
+        "Europe's Spaceport",
+        "Centre Spatial Guyanais"
+      ],
+      "kind": "place",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
       "status": "draft",
       "current": false
     },
@@ -2446,6 +2596,38 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "luna-16-landing-site",
+      "title": "Luna 16 landing site (Moon)",
+      "aliases": [
+        "Luna 16"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "luna-9-landing-site",
+      "title": "Luna 9 landing site (Moon)",
+      "aliases": [
+        "Luna 9"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
       "status": "draft",
       "current": false
     },
@@ -3661,6 +3843,23 @@
       "current": false
     },
     {
+      "id": "space-overview",
+      "title": "Space race and launch sites",
+      "aliases": [
+        "Space race",
+        "Launch sites layer"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "spanish-american-war-1898",
       "title": "Spanish-American War",
       "aliases": [],
@@ -4299,6 +4498,23 @@
       ],
       "tier": "student",
       "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "vandenberg-launch-base",
+      "title": "Vandenberg Space Force Base",
+      "aliases": [
+        "Vandenberg",
+        "Vandenberg AFB"
+      ],
+      "kind": "place",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "tier": "everyday",
+      "pack": "science-history",
       "status": "draft",
       "current": false
     },

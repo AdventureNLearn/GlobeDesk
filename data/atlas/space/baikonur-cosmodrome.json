@@ -1,0 +1,100 @@
+{
+  "schema": "globedesk.space-site/1",
+  "id": "baikonur-cosmodrome",
+  "title": "Baikonur Cosmodrome",
+  "body": "earth",
+  "kind": "launch-site",
+  "region": "Asia",
+  "country": "KZ",
+  "place": {
+    "label": "Baikonur Cosmodrome, Kazakhstan",
+    "lat": 45.9648,
+    "lng": 63.3051,
+    "body": "earth",
+    "approximate": true,
+    "basis": "One Wikidata (CC0) coordinate for the whole site; a spaceport covers many square kilometres",
+    "coords_source_id": "wd-q177477",
+    "coords_text": "45.9648, 63.3051"
+  },
+  "dates": [
+    {
+      "date": "1957-10-04",
+      "precision": "day",
+      "label": "Sputnik 1 launched from here (NASA)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "Sputnik 1 launch date",
+      "value": "4 October 1957",
+      "source": "nasa-sputnik-1957"
+    },
+    {
+      "label": "Construction began (ESA)",
+      "value": "1955",
+      "source": "esa-baikonur-steppes"
+    },
+    {
+      "label": "First human spaceflight launch (ESA)",
+      "value": "12 April 1961",
+      "source": "esa-baikonur-steppes"
+    }
+  ],
+  "facts": [
+    {
+      "text": "The Soviet Union launched Sputnik, the first artificial satellite, from the Baikonur Cosmodrome in Kazakhstan on 4 October 1957.",
+      "source": "nasa-sputnik-1957"
+    },
+    {
+      "text": "NASA describes Sputnik as about the size of a beach ball, roughly 23 inches across and under 190 pounds, circling Earth in about 98 minutes.",
+      "source": "nasa-sputnik-1957"
+    },
+    {
+      "text": "ESA says construction of the site began in 1955 and that Sputnik 1 reached orbit on a modified intercontinental ballistic rocket.",
+      "source": "esa-baikonur-steppes"
+    },
+    {
+      "text": "ESA says Yuri Gagarin's 12 April 1961 flight, the first crewed orbit of Earth, left from Launch Pad 1.",
+      "source": "esa-baikonur-steppes"
+    },
+    {
+      "text": "ESA says the Soviet name Baikonur came from a small mining town about 370 km from the real launch complex, which lies near Tyuratam; the nearby city was renamed Baikonur in 1998.",
+      "source": "esa-baikonur-cosmodrome"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Sputnik 1 was launched from Baikonur on 4 October 1957.",
+      "status": "supported",
+      "sources": [
+        "nasa-sputnik-1957",
+        "esa-baikonur-steppes"
+      ]
+    }
+  ],
+  "tiers": {
+    "everyday": "Baikonur Cosmodrome in Kazakhstan is where the Soviet Union launched Sputnik, the first artificial satellite, on 4 October 1957. ESA says Yuri Gagarin's first human spaceflight left from here too.",
+    "student": "NASA says Sputnik was launched from the Baikonur Cosmodrome on 4 October 1957. ESA says construction began in 1955 and that Yuri Gagarin's 12 April 1961 flight left from Launch Pad 1. The name came from a mining town about 370 km away, used to hide the real site."
+  },
+  "sources": [
+    "wd-q177477",
+    "nasa-sputnik-1957",
+    "esa-baikonur-steppes",
+    "esa-baikonur-cosmodrome"
+  ],
+  "official_sources": [
+    "nasa-sputnik-1957",
+    "esa-baikonur-steppes",
+    "esa-baikonur-cosmodrome"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Roscosmos page: not opened (HTTP 500 on 2026-11-26), so not used [UNKNOWN]",
+    "ESA's older page gives 45.6 N, 63.4 E for the site, about 40 km from the pin; which is closer to the launch pads: [UNKNOWN]"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NASA and IAU values are public-domain US-hosted data; linked sources keep their own terms",
+  "subject_person_living": false
+}

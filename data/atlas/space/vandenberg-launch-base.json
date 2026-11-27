@@ -1,0 +1,87 @@
+{
+  "schema": "globedesk.space-site/1",
+  "id": "vandenberg-launch-base",
+  "title": "Vandenberg Space Force Base",
+  "body": "earth",
+  "kind": "launch-site",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Vandenberg Space Force Base, California, United States",
+    "lat": 34.7379,
+    "lng": -120.5374,
+    "body": "earth",
+    "approximate": true,
+    "basis": "One Wikidata (CC0) coordinate for the whole site; a spaceport covers many square kilometres",
+    "coords_source_id": "wd-q461492",
+    "coords_text": "34.7379, -120.5374"
+  },
+  "dates": [
+    {
+      "date": "1959-02-28",
+      "precision": "day",
+      "label": "Discoverer 1 launched, the first polar-orbiting satellite (USSF)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "First missile launch (USSF)",
+      "value": "16 December 1958 (Thor)",
+      "source": "vsfb-history"
+    },
+    {
+      "label": "Discoverer 1 launch (USSF)",
+      "value": "28 February 1959",
+      "source": "vsfb-history"
+    },
+    {
+      "label": "Renamed Vandenberg Space Force Base (USSF)",
+      "value": "14 May 2021",
+      "source": "vsfb-history"
+    },
+    {
+      "label": "Land (USSF)",
+      "value": "99,604 acres",
+      "source": "vsfb-history"
+    }
+  ],
+  "facts": [
+    {
+      "text": "The base began as the Camp Cooke Army garrison in August 1941 and was transferred to the new US Air Force in 1957.",
+      "source": "vsfb-history"
+    },
+    {
+      "text": "It was renamed Vandenberg Air Force Base on 4 October 1958; the first missile launch from it, a Thor, was on 16 December 1958.",
+      "source": "vsfb-history"
+    },
+    {
+      "text": "The base says the Discoverer 1 launch on 28 February 1959 lifted the world's first polar-orbiting satellite.",
+      "source": "vsfb-history"
+    },
+    {
+      "text": "Vandenberg Air Force Base was renamed Vandenberg Space Force Base on 14 May 2021.",
+      "source": "vsfb-history"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "Vandenberg Space Force Base in California began as an Army camp in 1941. Its first missile launch was in December 1958, and in February 1959 it launched Discoverer 1, which the base calls the first polar-orbiting satellite.",
+    "student": "The Space Force says Camp Cooke was set up in 1941, passed to the Air Force in 1957 and was renamed Vandenberg Air Force Base on 4 October 1958. The first missile launch, a Thor, was on 16 December 1958 and Discoverer 1 followed on 28 February 1959. It became a Space Force Base on 14 May 2021."
+  },
+  "sources": [
+    "wd-q461492",
+    "vsfb-history"
+  ],
+  "official_sources": [
+    "vsfb-history"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "The site's reuse notice: not opened (403 / 404), so its terms are [UNKNOWN]"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NASA and IAU values are public-domain US-hosted data; linked sources keep their own terms",
+  "subject_person_living": false
+}
