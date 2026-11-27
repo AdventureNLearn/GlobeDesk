@@ -59,10 +59,19 @@ try {
   console.log("round trip:", JSON.stringify(rt));
   if (rt.errs.length) errors.push("episode validation: " + rt.errs[0]);
   if (rt.g !== rt.n || rt.kml !== rt.n || rt.csv !== rt.n) errors.push("export/import round trip lost features");
-  // Event clock: manual time before the demo date hides dated features.
-  const hid = await ev("(() => { GD.state.eventClockMode = 'manual'; GD.state.eventClockManual = Date.UTC(2026, 9, 1); const a = GD.eventsMap.visibleFeatures().length; GD.state.eventClockMode = 'follow'; GD.state.eventClockManual = null; const b = GD.eventsMap.visibleFeatures().length; GD.eventsMap.refresh(); return [a, b]; })()");
-  console.log("clock reveal (before, follow):", hid);
-  if (!(hid[1] > hid[0])) errors.push("event clock did not hide earlier-dated features");
+  // Event clock: plant dated fixtures on the four features drawn above (a first open has no dated
+  // features of its own). The point is dated before the manual clock, the route after it.
+  const fx = await ev(`(() => { const l = GD.eventsMap.currentLayer(), f = l.features.slice(-4);
+    f[0].properties.eventTime = "2026-09-15"; f[1].properties.eventTime = "2026-11-20T06:00"; f[1].properties.eventEnd = "2026-11-20T18:00";
+    return { early: f[0].id, late: f[1].id, kinds: f.map((x) => x.properties.kind) }; })()`);
+  if (fx.kinds.join() !== "point,line,polygon,ring") errors.push("fixtures: drawn features not in the expected order: " + fx.kinds.join());
+  // Manual time before the late date hides it and keeps the early one; follow with no story window shows all.
+  const hid = await ev(`(() => { const ids = () => GD.eventsMap.visibleFeatures().map((v) => v.f.id);
+    GD.state.eventClockMode = 'manual'; GD.state.eventClockManual = Date.UTC(2026, 9, 1); const a = ids();
+    GD.state.eventClockMode = 'follow'; GD.state.eventClockManual = null; const b = ids(); GD.eventsMap.refresh();
+    return { a: a.length, b: b.length, earlyShown: a.includes(${JSON.stringify(fx.early)}), lateHidden: !a.includes(${JSON.stringify(fx.late)}), lateBack: b.includes(${JSON.stringify(fx.late)}) }; })()`);
+  console.log("clock reveal (before, follow):", JSON.stringify(hid));
+  if (!(hid.b > hid.a) || !hid.earlyShown || !hid.lateHidden || !hid.lateBack) errors.push("event clock did not hide later-dated features: " + JSON.stringify(hid));
   // Auto-frame the demo layer, 9:16, then select a demo pin to show the editor.
   await ev("document.getElementById('asp916').click(); GD.eventsMap.frame(GD.state.episode.eventLayers[0].features); GD.eventsMap.select(GD.state.episode.eventLayers[0].features[1].id); GD.ui.renderInspector(); true");
   await sleep(2600); await idle(); await sleep(800);

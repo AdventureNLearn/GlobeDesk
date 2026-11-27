@@ -706,8 +706,8 @@
     },
     {
       "path": "data/atlas/disasters/disasters-overview.json",
-      "size": 8162,
-      "sha256": "1ea2b84895f85a7254c8394c75695ac85a58089e3ca982aa4a6136e4ed2842ad"
+      "size": 8201,
+      "sha256": "f44a1f7278fc12c47bd5b28c00d2a4d666665a8c2af4c32913838aeec8b06807"
     },
     {
       "path": "data/atlas/disasters/krakatau-1883.json",
@@ -1021,8 +1021,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 1258869,
-      "sha256": "1bd03650903268cb842721826532afe419aa29e1e77ead435724c885f23da91d"
+      "size": 1258908,
+      "sha256": "f0fc5c8d0002e3b739f7b64eeac1e83e5c83ff750b9981f9594d8bea4e460bb8"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -1577,6 +1577,6 @@
   ],
   "totals": {
     "files": 313,
-    "bytes": 9571268
+    "bytes": 9571346
   }
 }
