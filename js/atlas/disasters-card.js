@@ -29,7 +29,11 @@
   function overviewHtml(rec, h) {
     const byHazard = (hz) => rec.members.filter((m) => m.hazard === hz);
     let out = rec.hazards.map((hz) => '<p class="small"><b>' + h.esc(hz.label) + ":</b> " + byHazard(hz.id).map((m) => h.entryLink(m.id) + (m.linked ? ' <span class="muted">(existing Atlas event)</span>' : "")).join(", ") + "</p>").join("");
-    if (rec.linked.length) out += '<h4>More on the linked events</h4><ul class="small dl-list">' + rec.linked.map((l) => "<li>" + h.entryLink(l.id) + ": " + l.facts.map((f) => h.esc(f.text) + ' <span class="muted">· ' + h.srcLink(f.source) + "</span>").join(" ") + "</li>").join("") + "</ul>";
+    if (rec.linked.length) out += '<h4>More on the linked events</h4><ul class="small dl-list">' + rec.linked.map((l) => {
+      const shown = new Set((l.facts || []).map((f) => f.text));
+      const gaps = (l.unknowns || []).filter((u) => !shown.has(u)).map((u) => h.esc(u)).join(" ");
+      return "<li>" + h.entryLink(l.id) + ": " + l.facts.map((f) => h.esc(f.text) + ' <span class="muted">· ' + h.srcLink(f.source) + "</span>").join(" ") + (gaps ? " " + gaps : "") + "</li>";
+    }).join("") + "</ul>";
     out += rec.stories.map((s) => '<section class="at-ov small dl-story" data-dl-story="' + h.esc(s.id) + '"><h4>Story: ' + h.esc(s.title) + '</h4><ol class="dl-steps">' +
       s.steps.map((x) => "<li>" + h.esc(x.text) + ' <span class="muted">· ' + x.sources.map(h.srcLink).join(", ") + "</span> " + h.entryLink(x.entry) + "</li>").join("") + "</ol></section>").join("");
     out += '<p class="muted small">Not used: ' + rec.excluded.map((x) => h.esc(x.name + " (" + x.reason + ")")).join("; ") + "</p>";

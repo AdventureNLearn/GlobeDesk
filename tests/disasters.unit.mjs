@@ -57,8 +57,15 @@ t("the Pompeii entry is the Vesuvius 79 cross-link, not a separate disasters pin
   const o = ov();
   const linked = o.linked.find((l) => l.id === "ancient-pompeii");
   assert.ok(linked && linked.hazard === "eruption");
+  assert.deepEqual(linked.ncei, { dataset: "ncei-sig-volcanoes", event_id: 1348 });
+  assert.deepEqual(linked.unknowns, [
+    "Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown",
+    "Deep-time clock: 79 CE sits before the America 250 clock; it joins the Ancient-world deep-time clock when that lands",
+  ]);
   assert.ok(linked.facts.some((f) => /2,100/.test(f.text) && f.source === "ncei-sig-volcanoes"));
   assert.ok(linked.facts.some((f) => /3,360/.test(f.text) && f.source === "usgs-deadliest-eruptions"));
+  assert.ok(linked.facts.some((f) => f.text === "NOAA NCEI Significant Volcanic Eruptions Database, event 1348" && f.source === "ncei-sig-volcanoes"));
+  assert.ok(linked.facts.some((f) => f.text === "Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown" && f.source === "ncei-sig-volcanoes"));
 });
 t("two stories, every step opens an Atlas entry and cites a source", () => {
   const o = ov(); assert.equal(o.stories.length, 2);
@@ -126,7 +133,14 @@ t("layer: reuses the Bells clusters (the two Indonesian volcanoes group at zoom 
 });
 t("layer: panel section lists the counts and the NCEI credit", () => {
   globalThis.GD.atlasData = D;
-  const h = Layer.panelHtml(); assert.match(h, /id="lpDisasters"/); assert.match(h, /6 of 6 events shown/); assert.match(h, /NOAA NCEI/); assert.match(h, /lpDisastersHazard/);
+  const h = Layer.panelHtml(); assert.match(h, /id="lpDisasters"/); assert.match(h, /6 of 6 events shown/); assert.match(h, /NOAA NCEI/); assert.match(h, /Pleiades/); assert.match(h, /lpDisastersHazard/);
+});
+t("overview text notes that the Vesuvius 79 link uses Pompeii's Pleiades point", () => {
+  const o = ov();
+  assert.match(o.tiers.everyday, /Pompeii's Pleiades point/);
+  assert.match(o.tiers.student, /Pompeii's Pleiades point/);
+  assert.doesNotMatch(o.tiers.everyday, /Each pin is the official published point from NOAA/);
+  assert.doesNotMatch(o.tiers.student, /Pins are NCEI's published points, so they are approximate\.$/);
 });
 t("card: a record shows every measure with its source, the approximate pin and the disputed claim", () => {
   const helpers = { esc: (s) => String(s), srcLink: (id) => "<a>" + id + "</a>", entryLink: (id) => "<b>" + id + "</b>" };
@@ -135,6 +149,7 @@ t("card: a record shows every measure with its source, the approximate pin and t
   rec("tambora-1815").measures.forEach((m) => assert.ok(h.includes(m.value + ' <span class="muted">· <a>' + m.source + "</a>")));
   const o = Card.html(ov(), helpers);
   assert.match(o, /existing Atlas event/); assert.equal((o.match(/data-dl-story=/g) || []).length, 2); assert.match(o, /Smithsonian Global Volcanism Program/);
+  assert.match(o, /event 1348/); assert.match(o, /Deep-time clock: 79 CE sits before the America 250 clock/);
   assert.equal(Card.html({ schema: "globedesk.bell/1" }, helpers), "");
 });
 console.log(`disasters.unit: ${n} passed`);

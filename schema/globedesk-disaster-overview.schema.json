@@ -118,6 +118,32 @@
             "items": {
               "$ref": "#/$defs/sourced"
             }
+          },
+          "ncei": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "dataset",
+              "event_id"
+            ],
+            "properties": {
+              "dataset": {
+                "enum": [
+                  "ncei-sig-volcanoes",
+                  "ncei-sig-earthquakes"
+                ]
+              },
+              "event_id": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "unknowns": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/short"
+            }
           }
         }
       }

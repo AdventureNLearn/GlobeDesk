@@ -91,8 +91,8 @@
     },
     {
       "path": "atlas/README.md",
-      "size": 8029,
-      "sha256": "44cad4e640e2321ddfc2e1d91543f861eca95268c835e90348ec1ada29c6ee57"
+      "size": 8094,
+      "sha256": "03f550e2fb64d28f4cfd81304e033a9f1f7c266109245b81d87dc20a83918aaf"
     },
     {
       "path": "atlas/categories.json",
@@ -176,13 +176,13 @@
     },
     {
       "path": "atlas/packs/earth/entries.json",
-      "size": 14486,
-      "sha256": "3027085d56426a9a869562509deed1bc61cbd0bbd1bb68b03b5edee80f5d2ddf"
+      "size": 14646,
+      "sha256": "3933e1d80b07a342e245d86512013e47f81665a160c935a9b71814c3505871b5"
     },
     {
       "path": "atlas/packs/earth/manifest.json",
       "size": 627,
-      "sha256": "c9d97d10796a942253d77e3f5e030e57b0ad965787d115ed9f7f4b7491bddc08"
+      "sha256": "8c58be258930af0ff3d764c9f65286db556e408c4928b4f70cdf912bd02d4c01"
     },
     {
       "path": "atlas/packs/economics/entries.json",
@@ -706,8 +706,8 @@
     },
     {
       "path": "data/atlas/disasters/disasters-overview.json",
-      "size": 7379,
-      "sha256": "738ec39fa938248ff379ba50cd57ed50c8a22dc2b2c9b319ac32f2528cf30f87"
+      "size": 8162,
+      "sha256": "1ea2b84895f85a7254c8394c75695ac85a58089e3ca982aa4a6136e4ed2842ad"
     },
     {
       "path": "data/atlas/disasters/krakatau-1883.json",
@@ -1021,8 +1021,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 1258078,
-      "sha256": "50973834facef845e88223e886e80c384263ebcf8d23087497590d2a50911156"
+      "size": 1258869,
+      "sha256": "1bd03650903268cb842721826532afe419aa29e1e77ead435724c885f23da91d"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -1056,13 +1056,13 @@
     },
     {
       "path": "js/atlas/disasters-card.js",
-      "size": 4127,
-      "sha256": "b189bc4baccb86aa04cae1a8e25d3b955bc6fdf953a7236461c985c4299240ed"
+      "size": 4340,
+      "sha256": "be1146d81f49d9badc824d5255c83758acba4eba1ae0a1711670eed6f1a35f8d"
     },
     {
       "path": "js/atlas/disasters-layer.js",
-      "size": 7215,
-      "sha256": "837e6c230a89d2e8091f2f84c929ab02ae1f3e6bd98e491cff6a266aa1f16b9b"
+      "size": 7334,
+      "sha256": "7b087b218eae777e847687c9ec18cfa8973099f430a9bfda0e35c458a8a64fd6"
     },
     {
       "path": "js/atlas/models/bag-solar-kit.js",
@@ -1441,8 +1441,8 @@
     },
     {
       "path": "schema/globedesk-disaster-overview.schema.json",
-      "size": 6159,
-      "sha256": "87ad845766f670cf5b581558c364c91f4798db4dcdae770cf053c40d8504c85a"
+      "size": 6816,
+      "sha256": "d426e246f4964558fdcbc9a143d2a00987ed12668890911922262b2612d5e46a"
     },
     {
       "path": "schema/globedesk-disaster.schema.json",
@@ -1572,6 +1572,6 @@
   ],
   "totals": {
     "files": 312,
-    "bytes": 9554204
+    "bytes": 9556992
   }
 }
