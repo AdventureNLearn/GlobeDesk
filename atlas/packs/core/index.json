@@ -1112,6 +1112,23 @@
       "current": false
     },
     {
+      "id": "wonder-chichen-itza",
+      "title": "Chichén Itzá (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Chichén Itzá",
+        "Chichen Itza"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "tier": "everyday",
+      "pack": "wonders",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "chlorine-element",
       "title": "Chlorine (Cl, element 17)",
       "aliases": [
@@ -1124,6 +1141,24 @@
       ],
       "tier": "student",
       "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "wonder-christ-the-redeemer",
+      "title": "Christ the Redeemer (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Christ the Redeemer",
+        "Cristo Redentor",
+        "Corcovado"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "tier": "everyday",
+      "pack": "wonders",
       "status": "draft",
       "current": false
     },
@@ -1170,6 +1205,23 @@
       ],
       "tier": "student",
       "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "wonder-colosseum",
+      "title": "Colosseum (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Colosseum",
+        "Rome"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "tier": "everyday",
+      "pack": "wonders",
       "status": "draft",
       "current": false
     },
@@ -2046,6 +2098,23 @@
       "current": false
     },
     {
+      "id": "wonder-great-wall",
+      "title": "Great Wall of China (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Great Wall of China",
+        "The Great Wall"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "tier": "everyday",
+      "pack": "wonders",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "gulf-of-tonkin-1964",
       "title": "Gulf of Tonkin Resolution",
       "aliases": [],
@@ -2677,6 +2746,23 @@
       "now_until": "2027-02-22"
     },
     {
+      "id": "wonder-machu-picchu",
+      "title": "Machu Picchu (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Machu Picchu",
+        "Inca citadel"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "tier": "everyday",
+      "pack": "wonders",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "magnesium-element",
       "title": "Magnesium (Mg, element 12)",
       "aliases": [
@@ -2993,6 +3079,24 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "wonders-overview",
+      "title": "New Seven Wonders (2007 popular vote, unofficial)",
+      "aliases": [
+        "New 7 Wonders",
+        "Seven Wonders of the modern world",
+        "Wonders layer"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "tier": "everyday",
+      "pack": "wonders",
       "status": "draft",
       "current": false
     },
@@ -4018,6 +4122,23 @@
       ],
       "tier": "everyday",
       "pack": "bells",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "wonder-taj-mahal",
+      "title": "Taj Mahal (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Taj Mahal",
+        "Agra"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "tier": "everyday",
+      "pack": "wonders",
       "status": "draft",
       "current": false
     },

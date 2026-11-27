@@ -467,6 +467,7 @@
     if (ov) h += overviewHtml(ov);
     if (GD.disastersCard) h += GD.disastersCard.html(recordOf(e), { esc, srcLink, entryLink });
     if (GD.spaceCard) h += GD.spaceCard.html(recordOf(e), { esc, srcLink, entryLink });
+    if (GD.wondersCard) h += GD.wondersCard.html(recordOf(e), { esc, srcLink, entryLink });
     return h + personalHtml(e);
   }
 

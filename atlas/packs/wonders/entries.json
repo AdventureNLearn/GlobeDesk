@@ -1,0 +1,497 @@
+{
+  "schema": "globedesk.atlas-entries/1",
+  "pack": "wonders",
+  "entries": [
+    {
+      "id": "wonders-overview",
+      "title": "New Seven Wonders (2007 popular vote, unofficial)",
+      "aliases": [
+        "New 7 Wonders",
+        "Seven Wonders of the modern world",
+        "Wonders layer"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "archaeology-sites"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Seven sites named in an unofficial, private popular vote announced in Lisbon on 7 July 2007. It is not an official list: UNESCO says it has no link to it. Six of the seven are here; Petra belongs to the Ancient layer.",
+        "student": "A first batch for the unofficial 2007 New7Wonders popular vote. Six winners have a card with facts from UNESCO World Heritage pages and a NASA page; five have one approximate map pin (a Wikidata CC0 point) and the Great Wall, a line, has none. Petra is a deferred cross-link to the Ancient layer. The organisation's own FAQ page is the only source for the date and the list. No logos, no campaign text, no endorsement."
+      },
+      "layer": "wonders",
+      "summary": "Seven sites named in an unofficial, private popular vote announced in Lisbon on 7 July 2007. It is not an official list: UNESCO says it has no link to it. Six of the seven are here; Petra belongs to the Ancient layer.",
+      "places": [],
+      "dates": [
+        {
+          "date": "2007-07-07",
+          "precision": "day",
+          "approximate": false,
+          "label": "Declaration event of the unofficial 2007 popular vote"
+        }
+      ],
+      "sources": [
+        "new7wonders-faq",
+        "unesco-news-new7wonders",
+        "unesco-whc-438",
+        "unesco-whc-483",
+        "unesco-whc-274",
+        "unesco-whc-252"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "wonder-taj-mahal"
+        },
+        {
+          "type": "see-also",
+          "to": "wonder-colosseum"
+        },
+        {
+          "type": "see-also",
+          "to": "wonder-christ-the-redeemer"
+        },
+        {
+          "type": "see-also",
+          "to": "wonder-machu-picchu"
+        },
+        {
+          "type": "see-also",
+          "to": "wonder-chichen-itza"
+        },
+        {
+          "type": "see-also",
+          "to": "wonder-great-wall"
+        }
+      ],
+      "record": "data/atlas/wonders/wonders-overview.json",
+      "pack": "wonders",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-27",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "wonder-taj-mahal",
+      "title": "Taj Mahal (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Taj Mahal",
+        "Agra"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "archaeology-sites"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Taj Mahal in Agra, India, was one of seven sites named in an unofficial 2007 popular vote. UNESCO says Mughal Emperor Shah Jahan had it built to commemorate his wife Mumtaz Mahal, between 1632 and 1648.",
+        "student": "UNESCO says the Taj Mahal is in Agra District, Uttar Pradesh, on the Yamuna's right bank, inside a Mughal garden of nearly 17 hectares. Work began in 1632 and the main building was done in 1648; the mosque, guest house, gateway and outer courtyard were finished by 1653. It was inscribed on the World Heritage List in 1983. This entry is about the site; the 2007 vote is an unofficial popular vote."
+      },
+      "layer": "wonders",
+      "summary": "The Taj Mahal in Agra, India, was one of seven sites named in an unofficial 2007 popular vote. UNESCO says Mughal Emperor Shah Jahan had it built to commemorate his wife Mumtaz Mahal, between 1632 and 1648.",
+      "places": [
+        {
+          "region": "IN",
+          "lat": 27.175,
+          "lng": 78.0419,
+          "precision": "site",
+          "note": "Taj Mahal, Agra, India (approximate pin: One Wikidata (CC0) coordinate for the whole site; a monument or city site covers more than one point)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2007-07-07",
+          "precision": "day",
+          "approximate": false,
+          "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+        },
+        {
+          "date": "1983",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+        }
+      ],
+      "sources": [
+        "wd-q9141",
+        "unesco-whc-252",
+        "new7wonders-faq"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "wonders-overview"
+        }
+      ],
+      "record": "data/atlas/wonders/wonder-taj-mahal.json",
+      "pack": "wonders",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-27",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Wonders layer (unofficial 2007 popular vote). Gaps: Statue and marble figures and visitor numbers: not looked up [UNKNOWN]."
+    },
+    {
+      "id": "wonder-colosseum",
+      "title": "Colosseum (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Colosseum",
+        "Rome"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "archaeology-sites"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Colosseum in Rome, Italy, was one of seven sites named in an unofficial 2007 popular vote. UNESCO lists it among the monuments of antiquity in the Historic Centre of Rome, inscribed in 1980.",
+        "student": "UNESCO names the Colosseum among the monuments of antiquity in the Historic Centre of Rome, which it inscribed in 1980; the whole property covers 1,469.7 hectares, not the Colosseum alone. UNESCO also cites the Colosseum's restoration as an early case of the scholarly restoration principles first tested in Rome. This entry is about the site; the 2007 vote is an unofficial popular vote."
+      },
+      "layer": "wonders",
+      "summary": "The Colosseum in Rome, Italy, was one of seven sites named in an unofficial 2007 popular vote. UNESCO lists it among the monuments of antiquity in the Historic Centre of Rome, inscribed in 1980.",
+      "places": [
+        {
+          "region": "IT",
+          "lat": 41.8903,
+          "lng": 12.4922,
+          "precision": "site",
+          "note": "Colosseum, Rome, Italy (approximate pin: One Wikidata (CC0) coordinate for the whole site; a monument or city site covers more than one point)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2007-07-07",
+          "precision": "day",
+          "approximate": false,
+          "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+        },
+        {
+          "date": "1980",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+        }
+      ],
+      "sources": [
+        "wd-q10285",
+        "unesco-whc-91",
+        "new7wonders-faq"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "wonders-overview"
+        }
+      ],
+      "record": "data/atlas/wonders/wonder-colosseum.json",
+      "pack": "wonders",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-27",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Wonders layer (unofficial 2007 popular vote). Gaps: Construction dates and capacity: not on the UNESCO page; the site's own heritage authority was not opened [UNKNOWN]."
+    },
+    {
+      "id": "wonder-christ-the-redeemer",
+      "title": "Christ the Redeemer (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Christ the Redeemer",
+        "Cristo Redentor",
+        "Corcovado"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "archaeology-sites"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The statue of Christ on Corcovado Mountain in Rio de Janeiro, Brazil, was one of seven sites named in an unofficial 2007 popular vote. UNESCO calls the statue well known and counts the mountain in Rio's World Heritage landscape.",
+        "student": "UNESCO counts Corcovado Mountain, home of the well-known statue of Christ, as part of its Rio de Janeiro: Carioca Landscapes property, inscribed in 2012. That inscription covers the city landscape, not the statue alone. This entry is about the statue's site; the 2007 vote is an unofficial popular vote."
+      },
+      "layer": "wonders",
+      "summary": "The statue of Christ on Corcovado Mountain in Rio de Janeiro, Brazil, was one of seven sites named in an unofficial 2007 popular vote. UNESCO calls the statue well known and counts the mountain in Rio's World Heritage landscape.",
+      "places": [
+        {
+          "region": "BR",
+          "lat": -22.9519,
+          "lng": -43.2105,
+          "precision": "site",
+          "note": "Christ the Redeemer, Corcovado, Rio de Janeiro, Brazil (approximate pin: One Wikidata (CC0) coordinate for the whole site; a monument or city site covers more than one point)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2007-07-07",
+          "precision": "day",
+          "approximate": false,
+          "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+        },
+        {
+          "date": "2012",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+        }
+      ],
+      "sources": [
+        "wd-q79961",
+        "unesco-whc-1100",
+        "new7wonders-faq"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "wonders-overview"
+        }
+      ],
+      "record": "data/atlas/wonders/wonder-christ-the-redeemer.json",
+      "pack": "wonders",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-27",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Wonders layer (unofficial 2007 popular vote). Gaps: Statue height, builder and completion date: no official page opened [UNKNOWN]; The 2012 inscription covers the whole city landscape, so it is not a listing of the statue alone."
+    },
+    {
+      "id": "wonder-machu-picchu",
+      "title": "Machu Picchu (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Machu Picchu",
+        "Inca citadel"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "archaeology-sites"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Machu Picchu in Peru was one of seven sites named in an unofficial 2007 popular vote. UNESCO says the Inca citadel was built in the fifteenth century, abandoned after the Spanish conquest, and made known to the outside world in 1911.",
+        "student": "UNESCO describes the Historic Sanctuary of Machu Picchu as a mixed cultural and natural property where the Andes meet the Amazon Basin. The citadel sits more than 2,400 metres above sea level and holds about 200 structures. Built in the fifteenth century, it was abandoned when Spain conquered the Inca Empire in the sixteenth, and became known to the outside world in 1911. Inscribed 1983. This entry is about the site; the 2007 vote is an unofficial popular vote."
+      },
+      "layer": "wonders",
+      "summary": "Machu Picchu in Peru was one of seven sites named in an unofficial 2007 popular vote. UNESCO says the Inca citadel was built in the fifteenth century, abandoned after the Spanish conquest, and made known to the outside world in 1911.",
+      "places": [
+        {
+          "region": "PE",
+          "lat": -13.1633,
+          "lng": -72.5456,
+          "precision": "site",
+          "note": "Machu Picchu, Peru (approximate pin: One Wikidata (CC0) coordinate for the whole site; a monument or city site covers more than one point)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2007-07-07",
+          "precision": "day",
+          "approximate": false,
+          "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+        },
+        {
+          "date": "1983",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+        }
+      ],
+      "sources": [
+        "wd-q676203",
+        "unesco-whc-274",
+        "new7wonders-faq"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "wonders-overview"
+        }
+      ],
+      "record": "data/atlas/wonders/wonder-machu-picchu.json",
+      "pack": "wonders",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-27",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Wonders layer (unofficial 2007 popular vote). Gaps: Which Inca ruler it served: not stated on the page used [UNKNOWN]."
+    },
+    {
+      "id": "wonder-chichen-itza",
+      "title": "Chichén Itzá (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Chichén Itzá",
+        "Chichen Itza"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "archaeology-sites"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Chichén Itzá in Yucatán, Mexico, was one of seven sites named in an unofficial 2007 popular vote. UNESCO says the Maya town grew up beside two natural wells, and that sources disagree about when it was founded.",
+        "student": "UNESCO says the town was founded in the Classic period beside two cenotes (natural wells), and that the name refers to a well and the Itzá people. Local accounts disagree on the founding date: one manuscript gives 415-35 AD and others 455 AD. Standing buildings named by UNESCO include El Castillo, the Warriors' Temple and the circular observatory El Caracol. Inscribed 1988. This entry is about the site; the 2007 vote is an unofficial popular vote."
+      },
+      "layer": "wonders",
+      "summary": "Chichén Itzá in Yucatán, Mexico, was one of seven sites named in an unofficial 2007 popular vote. UNESCO says the Maya town grew up beside two natural wells, and that sources disagree about when it was founded.",
+      "places": [
+        {
+          "region": "MX",
+          "lat": 20.6831,
+          "lng": -88.5686,
+          "precision": "site",
+          "note": "Chichén Itzá, Yucatán, Mexico (approximate pin: One Wikidata (CC0) coordinate for the whole site; a monument or city site covers more than one point)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "2007-07-07",
+          "precision": "day",
+          "approximate": false,
+          "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+        },
+        {
+          "date": "1988",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+        }
+      ],
+      "sources": [
+        "wd-q5859",
+        "unesco-whc-483",
+        "new7wonders-faq"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "wonders-overview"
+        }
+      ],
+      "record": "data/atlas/wonders/wonder-chichen-itza.json",
+      "pack": "wonders",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-27",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Wonders layer (unofficial 2007 popular vote). Gaps: A single agreed founding date: [UNKNOWN] (UNESCO itself reports the two accounts)."
+    },
+    {
+      "id": "wonder-great-wall",
+      "title": "Great Wall of China (New Seven Wonders, unofficial vote)",
+      "aliases": [
+        "Great Wall of China",
+        "The Great Wall"
+      ],
+      "kind": "place",
+      "category_path": [
+        "history-places",
+        "wonders"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "archaeology-sites"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "The Great Wall of China was one of seven sites named in an unofficial 2007 popular vote. UNESCO says work started in the 3rd century BC and went on into the 17th century AD. The belief that it can be seen from the Moon is a myth.",
+        "student": "UNESCO says the Great Wall was built over many centuries by one Chinese empire after another along their northern frontier, starting in the 3rd century BC and ending in the 17th century AD. It gives the whole length as over 20,000 km, with Shanhaiguan (Hebei) at the east end and Jiayuguan (Gansu) at the west end. It was inscribed in 1987. NASA says the wall is not visible from the Moon and is difficult or impossible to see from Earth orbit without high-powered lenses. It is a line, so this entry has no map pin. The 2007 vote is an unofficial popular vote."
+      },
+      "layer": "wonders",
+      "summary": "The Great Wall of China was one of seven sites named in an unofficial 2007 popular vote. UNESCO says work started in the 3rd century BC and went on into the 17th century AD. The belief that it can be seen from the Moon is a myth.",
+      "places": [
+        {
+          "region": "CN",
+          "precision": "country",
+          "note": "The Great Wall, northern China (a line across several provinces; no single point). No map pin: No pin: a line across several provinces cannot be shown honestly as one point."
+        }
+      ],
+      "dates": [
+        {
+          "date": "2007-07-07",
+          "precision": "day",
+          "approximate": false,
+          "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+        },
+        {
+          "date": "1987",
+          "precision": "year",
+          "approximate": false,
+          "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+        }
+      ],
+      "sources": [
+        "unesco-whc-438",
+        "new7wonders-faq",
+        "nasa-great-wall"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "wonders-overview"
+        }
+      ],
+      "record": "data/atlas/wonders/wonder-great-wall.json",
+      "pack": "wonders",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-27",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Wonders layer (unofficial 2007 popular vote). Gaps: Other published lengths differ from UNESCO's figure; no second official length was checked [UNKNOWN]; A single map point: none, because the wall is a line across several provinces."
+    }
+  ]
+}

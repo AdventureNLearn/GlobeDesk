@@ -6,6 +6,7 @@ import { validateSchema } from "../../tests/jsonschema-lite.mjs";
 import { hygieneHits } from "./hygiene.mjs";
 import { validateDisasters } from "./disasters-rules.mjs";
 import { validateSpace } from "./space-rules.mjs";
+import { validateWonders } from "./wonders-rules.mjs";
 import { ATLAS, J, JR, MAX_BYTES, CATEGORY_PACKS, allEntries, fileInfo, packSha, exists, daysBetween, DATE_FORM, packCategory, categoryPacks } from "./lib.mjs";
 
 const NOW_MAX_DAYS = 92; // "about 90 days"
@@ -246,6 +247,7 @@ export function validateAtlas() {
     .forEach((e) => problems.push(...bellOverviewRules(e, JR(e.record), { ...ctx, overviewSchema, bellRegions })));
   problems.push(...validateDisasters(entries, ctx));
   problems.push(...validateSpace(entries, ctx));
+  problems.push(...validateWonders(entries, ctx));
   const index = J("packs/core/index.json").entries.map((e) => e.id).sort();
   if (JSON.stringify(index) !== JSON.stringify([...ids].sort())) problems.push("core index does not list exactly the pack entries");
   problems.push(...deskRules(JR("desks/work-desks.json")));

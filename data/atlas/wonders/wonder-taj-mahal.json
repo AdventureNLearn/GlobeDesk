@@ -1,0 +1,87 @@
+{
+  "schema": "globedesk.wonder/1",
+  "id": "wonder-taj-mahal",
+  "title": "Taj Mahal (New Seven Wonders, unofficial vote)",
+  "vote_label": "Unofficial: one of seven sites named in a private popular vote announced on 7 July 2007. This is not a UNESCO list and UNESCO says it has no link to it.",
+  "region": "Asia",
+  "country": "IN",
+  "place": {
+    "label": "Taj Mahal, Agra, India",
+    "pinned": true,
+    "lat": 27.175,
+    "lng": 78.0419,
+    "approximate": true,
+    "basis": "One Wikidata (CC0) coordinate for the whole site; a monument or city site covers more than one point",
+    "coords_source_id": "wd-q9141",
+    "coords_text": "27.175, 78.0419"
+  },
+  "dates": [
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+    },
+    {
+      "date": "1983",
+      "precision": "year",
+      "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "Main construction (UNESCO)",
+      "value": "1632 to 1648; outer parts finished by 1653",
+      "source": "unesco-whc-252"
+    },
+    {
+      "label": "Garden area (UNESCO)",
+      "value": "nearly 17 hectares",
+      "source": "unesco-whc-252"
+    },
+    {
+      "label": "World Heritage inscription",
+      "value": "1983",
+      "source": "unesco-whc-252"
+    }
+  ],
+  "facts": [
+    {
+      "text": "UNESCO places the Taj Mahal in Agra District, Uttar Pradesh, on the Yamuna's right bank, inside a Mughal garden.",
+      "source": "unesco-whc-252"
+    },
+    {
+      "text": "UNESCO says Mughal Emperor Shah Jahan had it built to commemorate his wife Mumtaz Mahal; work began in 1632 and the main building was finished in 1648.",
+      "source": "unesco-whc-252"
+    },
+    {
+      "text": "UNESCO says the mosque, guest house, south gateway and outer courtyard with its cloisters were added afterwards and finished by 1653.",
+      "source": "unesco-whc-252"
+    },
+    {
+      "text": "The organisation behind the 2007 vote lists the Taj Mahal (India) among its seven winners.",
+      "source": "new7wonders-faq"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "The Taj Mahal in Agra, India, was one of seven sites named in an unofficial 2007 popular vote. UNESCO says Mughal Emperor Shah Jahan had it built to commemorate his wife Mumtaz Mahal, between 1632 and 1648.",
+    "student": "UNESCO says the Taj Mahal is in Agra District, Uttar Pradesh, on the Yamuna's right bank, inside a Mughal garden of nearly 17 hectares. Work began in 1632 and the main building was done in 1648; the mosque, guest house, gateway and outer courtyard were finished by 1653. It was inscribed on the World Heritage List in 1983. This entry is about the site; the 2007 vote is an unofficial popular vote."
+  },
+  "sources": [
+    "wd-q9141",
+    "unesco-whc-252",
+    "new7wonders-faq"
+  ],
+  "official_sources": [
+    "unesco-whc-252"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Statue and marble figures and visitor numbers: not looked up [UNKNOWN]"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-27",
+  "license": "CC BY 4.0 (our record text); UNESCO and the organisation's pages keep their own terms and are linked only; NASA content is generally not subject to copyright",
+  "subject_person_living": false
+}

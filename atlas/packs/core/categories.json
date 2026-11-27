@@ -11,6 +11,9 @@
       "title": "History and places",
       "scope": "Places, events and routes on the globe, with dated sources.",
       "pack": "history-places",
+      "extra_packs": [
+        "wonders"
+      ],
       "refresh": "quarterly",
       "subcategories": [
         {
@@ -32,6 +35,10 @@
         {
           "id": "archaeology-sites",
           "title": "Archaeology and sites"
+        },
+        {
+          "id": "wonders",
+          "title": "Wonders of the world"
         }
       ]
     },

@@ -2115,6 +2115,12 @@
       "entry": "cape-town-st-georges-bells"
     },
     {
+      "date": "1980",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wonder-colosseum"
+    },
+    {
       "date": "1980-05-18",
       "precision": "day",
       "approximate": false,
@@ -2139,6 +2145,18 @@
       "entry": "vietnam-veterans-memorial-1982"
     },
     {
+      "date": "1983",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wonder-machu-picchu"
+    },
+    {
+      "date": "1983",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wonder-taj-mahal"
+    },
+    {
       "date": "1984",
       "precision": "year",
       "approximate": false,
@@ -2155,6 +2173,18 @@
       "precision": "year",
       "approximate": false,
       "entry": "nsfnet-public-internet-1986"
+    },
+    {
+      "date": "1987",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wonder-great-wall"
+    },
+    {
+      "date": "1988",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wonder-chichen-itza"
     },
     {
       "date": "1988",
@@ -2296,6 +2326,48 @@
       "entry": "usaspending-federal-budget"
     },
     {
+      "date": "2007-07-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "wonder-chichen-itza"
+    },
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "wonder-christ-the-redeemer"
+    },
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "wonder-colosseum"
+    },
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "wonder-great-wall"
+    },
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "wonder-machu-picchu"
+    },
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "wonders-overview"
+    },
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "approximate": false,
+      "entry": "wonder-taj-mahal"
+    },
+    {
       "date": "2009",
       "precision": "year",
       "approximate": false,
@@ -2312,6 +2384,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "pummerin"
+    },
+    {
+      "date": "2012",
+      "precision": "year",
+      "approximate": false,
+      "entry": "wonder-christ-the-redeemer"
     },
     {
       "date": "2013-01-31",

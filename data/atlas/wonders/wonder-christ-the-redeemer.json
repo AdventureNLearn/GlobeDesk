@@ -1,0 +1,70 @@
+{
+  "schema": "globedesk.wonder/1",
+  "id": "wonder-christ-the-redeemer",
+  "title": "Christ the Redeemer (New Seven Wonders, unofficial vote)",
+  "vote_label": "Unofficial: one of seven sites named in a private popular vote announced on 7 July 2007. This is not a UNESCO list and UNESCO says it has no link to it.",
+  "region": "South America",
+  "country": "BR",
+  "place": {
+    "label": "Christ the Redeemer, Corcovado, Rio de Janeiro, Brazil",
+    "pinned": true,
+    "lat": -22.9519,
+    "lng": -43.2105,
+    "approximate": true,
+    "basis": "One Wikidata (CC0) coordinate for the whole site; a monument or city site covers more than one point",
+    "coords_source_id": "wd-q79961",
+    "coords_text": "-22.9519, -43.2105"
+  },
+  "dates": [
+    {
+      "date": "2007-07-07",
+      "precision": "day",
+      "label": "Named in the unofficial 2007 popular vote (declaration event date)"
+    },
+    {
+      "date": "2012",
+      "precision": "year",
+      "label": "Inscribed on UNESCO's World Heritage List (the property named in the sources)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "World Heritage inscription (Rio landscapes, the whole property)",
+      "value": "2012",
+      "source": "unesco-whc-1100"
+    }
+  ],
+  "facts": [
+    {
+      "text": "UNESCO counts Corcovado Mountain, home of the well-known statue of Christ, inside the Rio de Janeiro landscape property.",
+      "source": "unesco-whc-1100"
+    },
+    {
+      "text": "The organisation behind the 2007 vote lists Cristo Redentor (Brazil) among its seven winners.",
+      "source": "new7wonders-faq"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "The statue of Christ on Corcovado Mountain in Rio de Janeiro, Brazil, was one of seven sites named in an unofficial 2007 popular vote. UNESCO calls the statue well known and counts the mountain in Rio's World Heritage landscape.",
+    "student": "UNESCO counts Corcovado Mountain, home of the well-known statue of Christ, as part of its Rio de Janeiro: Carioca Landscapes property, inscribed in 2012. That inscription covers the city landscape, not the statue alone. This entry is about the statue's site; the 2007 vote is an unofficial popular vote."
+  },
+  "sources": [
+    "wd-q79961",
+    "unesco-whc-1100",
+    "new7wonders-faq"
+  ],
+  "official_sources": [
+    "unesco-whc-1100"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Statue height, builder and completion date: no official page opened [UNKNOWN]",
+    "The 2012 inscription covers the whole city landscape, so it is not a listing of the statue alone"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-27",
+  "license": "CC BY 4.0 (our record text); UNESCO and the organisation's pages keep their own terms and are linked only; NASA content is generally not subject to copyright",
+  "subject_person_living": false
+}
