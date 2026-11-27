@@ -423,6 +423,7 @@
       });
     }
     syncMap();
+    if (GD.ui && GD.ui.syncDataYearUi) GD.ui.syncDataYearUi();
     return { ok: true, result: { liveEnabled: state.liveEnabled } };
   }
 
@@ -450,6 +451,7 @@
     state.overlaysOn[id] = on;
     if (!on) setHealth(id, "off", "");
     syncMap();
+    if (GD.ui && GD.ui.syncDataYearUi) GD.ui.syncDataYearUi();
     return { ok: true, result: { id: id, on: on, status: tokenFor(layer) } };
   }
 

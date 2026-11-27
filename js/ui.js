@@ -181,6 +181,12 @@
 
   function renderTransport() {
     const total = GD.model.totalDuration(S.episode);
+    // No camera moves, captions or written cards: do not show a clock that drives nothing.
+    const live = !GD.model.hasTimeline || GD.model.hasTimeline(S.episode) || S.playing;
+    $("transportBar").classList.toggle("no-timeline", !live);
+    $("btnPlay").hidden = !live; $("time").hidden = !live;
+    document.querySelector("#transportBar .scrub-wrap").hidden = !live;
+    if ($("tlEmpty")) $("tlEmpty").hidden = live;
     $("time").textContent = `${fmtT(S.t)} / ${fmtT(total)}`;
     const sc = $("scrub"); sc.max = String(total); sc.value = String(S.t);
     $("btnPlay").textContent = S.playing ? "❚❚" : "▶";
@@ -212,6 +218,12 @@
     });
   }
 
+  function gisFollowsYear() {
+    const g = GD.gis && GD.gis.state;
+    if (!g || !g.liveEnabled || !g.overlaysOn) return false;
+    return (g.layers || []).some((l) => l && g.overlaysOn[l.id] && /^(tiger|current-snapshot|current-weather)$/.test(l.yearKind || ""));
+  }
+
   function syncDataYearUi() {
     const yc = GD.yearClock;
     if (!yc) return;
@@ -220,14 +232,20 @@
     const chip = $("dataYearChip");
     const follow = $("followStoryDate");
     const badge = $("stageYearBadge");
+    const st = dataYearStatus();
+    // Dated imagery off and no year-driven GIS overlay on: the year changes nothing, so say so.
+    const idle = !!(st && st.datedOff) && !gisFollowsYear();
     if (sl) {
       sl.min = String(yc.YEAR_MIN);
       sl.max = String(yc.yearMax());
       sl.value = String(yc.getYear());
+      sl.disabled = idle;
+      sl.title = idle ? "Dated imagery is off. Turn on dated satellite in Layers to change the picture by year." : "";
     }
-    if (val) val.textContent = String(yc.getYear());
+    if (val) val.textContent = idle ? "Off" : String(yc.getYear());
+    const wrap = $("dataYearWrap");
+    if (wrap) wrap.classList.toggle("is-off", idle);
     if (follow) follow.checked = !!yc.isFollowStory();
-    const st = dataYearStatus();
     const kind = st && st.kind;
     const chipLabel = yc.chipText ? yc.chipText(st) : "";
     const badgeSpec = yc.yearBadgeSpec ? yc.yearBadgeSpec() : null;
@@ -235,7 +253,7 @@
       if (chipLabel) {
         chip.hidden = false;
         chip.textContent = chipLabel;
-        chip.setAttribute("data-kind", kind || "");
+        chip.setAttribute("data-kind", (st && st.datedOff) ? "off" : (kind || ""));
         chip.title = (st && (st.label || st.spoken)) || "";
       } else {
         chip.hidden = true;

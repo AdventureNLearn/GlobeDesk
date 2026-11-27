@@ -291,8 +291,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 73816,
-      "sha256": "c9ed4a0cfb04bea7fadfdb4408a3cfd4018b5055d303d091152f0034b60fc525"
+      "size": 74211,
+      "sha256": "00971da5d5eae3a1c18166be247f8ce2fc8b981d0bb443f543487581dabf24f2"
     },
     {
       "path": "data/atlas/ancient/ancient-caral.json",
@@ -991,8 +991,8 @@
     },
     {
       "path": "index.html",
-      "size": 20393,
-      "sha256": "2e00c66dd6035203fbd72329a1bd206d8f4d738c95766c42dc7f088144101bb5"
+      "size": 20562,
+      "sha256": "70602121e92acdeef6d9c625df676096a55f218d3d9d33ab5393965a23c7d6c2"
     },
     {
       "path": "js/archive.js",
@@ -1166,8 +1166,8 @@
     },
     {
       "path": "js/gis.js",
-      "size": 34343,
-      "sha256": "a924915fe2f260a41c1265ab102fd2dc5e8721ecd4ec131dbda8293c37436ef4"
+      "size": 34469,
+      "sha256": "592773aaf7f2f94b6b57e90f46707e0516dcb5ea634fdb98ad906f99797a2c7a"
     },
     {
       "path": "js/globe.js",
@@ -1181,8 +1181,8 @@
     },
     {
       "path": "js/layers.js",
-      "size": 19923,
-      "sha256": "7d742c418f970d3f659a5798ceb4a6f3ce2681e73a2b13b68b14b2864e362e47"
+      "size": 19947,
+      "sha256": "a2568aefe5b29b1b6a592a91ca45c424a7bc800827285f00a0d3454ddfa3fb14"
     },
     {
       "path": "js/layout.js",
@@ -1201,8 +1201,8 @@
     },
     {
       "path": "js/model.js",
-      "size": 13747,
-      "sha256": "bbbc25f6c673df107f18ede6fc9d2c2df3e46a63b617d031601156eadfb01ffe"
+      "size": 14291,
+      "sha256": "1ce977f544a85d6c72a0f104812aff684888c008caffbca13e2e2f0ccc2c96b5"
     },
     {
       "path": "js/newsdesk.js",
@@ -1301,8 +1301,8 @@
     },
     {
       "path": "js/ui.js",
-      "size": 85248,
-      "sha256": "81381e508602565fc0612efddb2f553af82bff934d99d2de698fb24084602a53"
+      "size": 86381,
+      "sha256": "d114b2e22cd0b9e74b58c327e2441617b8a56a081e55f2833b105f7a1fdc7f68"
     },
     {
       "path": "js/user-layers.js",
@@ -1321,8 +1321,8 @@
     },
     {
       "path": "js/year-clock.js",
-      "size": 26652,
-      "sha256": "03d9e8ef5e7e75530bfcd3f93933d9b83c99e1a0069d9682ecd67e42dd330e8c"
+      "size": 26695,
+      "sha256": "9b1ffe34ccb585a951fc55772ad47fe1049ed7457317d6e6f2f50cfb0f91876b"
     },
     {
       "path": "js/zip.js",
@@ -1391,8 +1391,8 @@
     },
     {
       "path": "package.json",
-      "size": 2095,
-      "sha256": "ce9387e0cb5ecf2281619868aab38c6eabb3f28f6c63bb68725c120b4bc45112"
+      "size": 2135,
+      "sha256": "09729e82496efe42f17de365db4ed4e4e2216dc71e0e362da1a734e8ad976814"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -1572,6 +1572,6 @@
   ],
   "totals": {
     "files": 312,
-    "bytes": 9556992
+    "bytes": 9559466
   }
 }

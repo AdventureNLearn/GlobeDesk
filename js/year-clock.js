@@ -553,6 +553,7 @@
 
   function chipText(st) {
     if (!st || !st.kind || st.kind === "none") return "";
+    if (st.datedOff) return "IMAGERY OFF";
     if (st.kind === "projected") return "PROJECTED";
     if (st.kind === "recorded") return "RECORDED";
     if (st.kind === "recorded-nearest") return "NEAREST";

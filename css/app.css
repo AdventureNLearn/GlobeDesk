@@ -581,6 +581,11 @@ body.gd-layout-dragging .map, body.gd-layout-dragging .map * { pointer-events: n
 .data-year-chip[data-kind="recorded"] { color: #04210f; background: #6ee7a8; border-color: #34d399; }
 .data-year-chip[data-kind="recorded-nearest"] { color: #04210f; background: #a7f3d0; border-color: #34d399; }
 .data-year-chip[data-kind="current-not-year-specific"] { color: #e6eef8; background: #1e3a5f; border-color: #3b6ea5; }
+.data-year-chip[data-kind="off"] { color: #e6eef8; background: transparent; border-color: #71717a; }
+.data-year.is-off input[type="range"] { opacity: 0.45; cursor: not-allowed; }
+.data-year.is-off .data-year-val { color: var(--gd-muted, #9aa4b2); font-weight: 600; }
+.tl-empty { flex: 1 1 200px; margin: 0; color: var(--gd-muted, #9aa4b2); }
+#transportBar [hidden] { display: none !important; }
 .data-year-chip[data-kind="unavailable"] { color: #f3f3f3; background: #3f3f46; border-color: #71717a; }
 .stage-year-badge { position:absolute; left: 12px; top: calc(var(--stage-header, 0%) + 8px); z-index: 6; font-size: 12px; font-weight: 800; letter-spacing: 0.06em; padding: 4px 10px; border-radius: 999px; pointer-events: none; }
 .stage-year-badge[data-kind="projected"] { color: #1a1204; background: rgba(245,193,74,0.94); box-shadow: 0 0 0 2px rgba(217,160,23,0.6); }

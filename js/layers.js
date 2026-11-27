@@ -304,7 +304,8 @@
         label: "EOX 2016 · dated imagery off",
         spoken: "Dated imagery is off. The satellite base is the recorded 2016 EOX Sentinel-2 cloudless mosaic, not year-stamped imagery.",
         sources: ["EOX 2016"],
-        stack: "eox"
+        stack: "eox",
+        datedOff: true
       }
     };
     if (!opts.forceLive && !isLiveImagery()) return fallback;
