@@ -291,8 +291,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 74211,
-      "sha256": "00971da5d5eae3a1c18166be247f8ce2fc8b981d0bb443f543487581dabf24f2"
+      "size": 74969,
+      "sha256": "bd1e20fd909bd7da67711a35046b74e100b64ec72c1bbb2552d947d9a3e726f2"
     },
     {
       "path": "data/atlas/ancient/ancient-caral.json",
@@ -991,8 +991,8 @@
     },
     {
       "path": "index.html",
-      "size": 20562,
-      "sha256": "70602121e92acdeef6d9c625df676096a55f218d3d9d33ab5393965a23c7d6c2"
+      "size": 21065,
+      "sha256": "af87e90f084aee6353d6ac9d21e26237d92759db1706a2891ed9878221a85c96"
     },
     {
       "path": "js/archive.js",
@@ -1155,6 +1155,11 @@
       "sha256": "6898f13c80313ff1cd2fded110e49ca354be58b65e75fc4fd42641326917c5a8"
     },
     {
+      "path": "js/flyover.js",
+      "size": 4391,
+      "sha256": "7c4312d5341297b5d4d8fc2f4608fb3716423cb1458bd1fe040370d4e5721b6b"
+    },
+    {
       "path": "js/frame-export.js",
       "size": 17265,
       "sha256": "c5b8d8162fa64939af6b91c2e8c1fd828dd480ba67efe2002271fcf8110f81fb"
@@ -1301,8 +1306,8 @@
     },
     {
       "path": "js/ui.js",
-      "size": 86381,
-      "sha256": "d114b2e22cd0b9e74b58c327e2441617b8a56a081e55f2833b105f7a1fdc7f68"
+      "size": 88766,
+      "sha256": "a36d4b86970987de0ff23271da1a182b8cace07fedfa184e21dc3fd0b7aad5ec"
     },
     {
       "path": "js/user-layers.js",
@@ -1391,8 +1396,8 @@
     },
     {
       "path": "package.json",
-      "size": 2135,
-      "sha256": "09729e82496efe42f17de365db4ed4e4e2216dc71e0e362da1a734e8ad976814"
+      "size": 2166,
+      "sha256": "ecb6f8d4b387abf634b556b06da1e544dab3a702ce89b494b5f0ddca952fc082"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -1571,7 +1576,7 @@
     }
   ],
   "totals": {
-    "files": 312,
-    "bytes": 9559466
+    "files": 313,
+    "bytes": 9567534
   }
 }

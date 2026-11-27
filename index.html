@@ -110,11 +110,15 @@
       <div class="transport" id="transportBar" role="region" aria-label="Playback">
         <button id="btnPlay" class="play" aria-label="Play">▶</button>
         <span id="time" class="time">0:00 / 0:00</span>
+        <button id="btnFlyover" type="button" class="flyover-btn" hidden>▶ Play a short flyover <span class="small muted">4 cited places</span></button>
         <p id="tlEmpty" class="tl-empty small" hidden>No timeline yet. Add a camera move to a story, or open the sample from the menu, and Play will move the globe.</p>
         <div class="scrub-wrap">
           <div id="segments" class="segments"></div>
           <input id="scrub" type="range" min="0" max="100" step="0.05" value="0" aria-label="Episode position">
+          <div id="segYears" class="seg-years" aria-hidden="true" hidden></div>
         </div>
+        <p id="nowPlaying" class="now-playing small" hidden aria-live="polite"></p>
+        <span id="evClockNow" class="ev-clock-now small" hidden title="Event clock: dated pins appear when playback reaches their date"></span>
         <div class="data-year" id="dataYearWrap">
           <label for="dataYear" class="data-year-label">Data year</label>
           <input id="dataYear" type="range" min="1983" max="2026" step="1" value="2026" aria-label="Data year">
@@ -242,6 +246,7 @@
   <script src="vendor/mediabunny-1.66.2.min.js"></script>
   <script src="js/frame-export.js"></script>
   <script src="js/playback.js"></script>
+  <script src="js/flyover.js"></script>
   <script src="js/events-ui.js"></script>
   <script src="js/outbound.js"></script>
   <script src="js/claims.js"></script>

@@ -186,7 +186,10 @@
     $("transportBar").classList.toggle("no-timeline", !live);
     $("btnPlay").hidden = !live; $("time").hidden = !live;
     document.querySelector("#transportBar .scrub-wrap").hidden = !live;
-    if ($("tlEmpty")) $("tlEmpty").hidden = live;
+    const fly = !live && !!(GD.flyover && GD.flyover.offerable(S.episode));
+    if ($("btnFlyover")) $("btnFlyover").hidden = !fly;
+    if ($("tlEmpty")) $("tlEmpty").hidden = live || fly;
+    renderNowPlaying(live);
     $("time").textContent = `${fmtT(S.t)} / ${fmtT(total)}`;
     const sc = $("scrub"); sc.max = String(total); sc.value = String(S.t);
     $("btnPlay").textContent = S.playing ? "❚❚" : "▶";
@@ -197,13 +200,55 @@
       d.style.flex = String(s.durationSec || 1);
       d.className = i === S.storyIdx && !S.ov.outro ? "on" : "";
       d.title = `${i + 1}. ${s.title}`;
+
       (s.camera || []).filter((k) => k.cut !== false && k.at > 0).forEach((k) => {
         const tick = document.createElement("i"); tick.style.left = `${(k.at / s.durationSec) * 100}%`; tick.title = "cut"; d.appendChild(tick);
       });
       seg.appendChild(d);
     });
+    // Year under each story on the bar, so the timeline reads as dates, not only seconds.
+    const yrs = $("segYears");
+    if (yrs) {
+      yrs.innerHTML = "";
+      const any = S.episode.stories.some((s) => /^\d{4}/.test(s.date || ""));
+      yrs.hidden = !any;
+      if (any) {
+        S.episode.stories.forEach((s, i) => {
+          const y = document.createElement("span"); y.style.flex = String(s.durationSec || 1);
+          y.textContent = /^\d{4}/.test(s.date || "") ? String(Number(s.date.slice(0, 4))) : "";
+          if (i === S.storyIdx && !S.ov.outro) y.className = "on";
+          yrs.appendChild(y);
+        });
+        if (S.episode.outro.enabled) { const y = document.createElement("span"); y.style.flex = String(S.episode.outro.durationSec); yrs.appendChild(y); }
+      }
+    }
     if (S.episode.outro.enabled) { const d = document.createElement("div"); d.className = "outro"; d.style.flex = String(S.episode.outro.durationSec); d.title = "Outro card"; seg.appendChild(d); }
     syncDataYearUi();
+  }
+
+  // Story position, its first source, and the event clock, shown with the transport
+  // so a phone does not need the Events tab to see why pins appear and disappear.
+  function renderNowPlaying(live) {
+    const np = $("nowPlaying"), ck = $("evClockNow");
+    const s = S.episode.stories[S.storyIdx];
+    const n = S.episode.stories.length;
+    const titled = live && s && s.title && s.title !== GD.model.U;
+    if (np) {
+      np.hidden = !titled;
+      if (titled) {
+        const src = (s.sources || []).find((x) => x && x.url && x.label && x.label !== GD.model.U);
+        np.innerHTML = `<span class="np-k">Now playing ${S.storyIdx + 1} of ${n}</span> ${esc(s.title)}` +
+          (src ? ` <span class="np-src">· Source: <a href="${esc(src.url)}" target="_blank" rel="noopener noreferrer">${esc(src.label)}</a></span>` : ` <span class="np-src">· Source: ${esc(GD.model.U)}</span>`);
+      } else np.textContent = "";
+    }
+    if (ck) {
+      const c = live && GD.eventsMap && GD.eventsMap.clock ? GD.eventsMap.clock() : null;
+      ck.hidden = c == null;
+      if (c != null) {
+        const vis = GD.eventsMap.visibleFeatures ? GD.eventsMap.visibleFeatures().length : 0;
+        ck.textContent = `Event clock ${new Date(c).toISOString().slice(0, 10)} · ${vis} on the map`;
+      }
+    }
   }
 
   function dataYearStatus() {
@@ -1029,6 +1074,7 @@
     $("asp169").addEventListener("click", () => applyAspect("16:9"));
     $("asp916").addEventListener("click", () => applyAspect("9:16"));
     $("btnPlay").addEventListener("click", () => (S.playing ? GD.playback.pause() : (S.paused ? GD.playback.resume() : GD.playback.play())));
+    if ($("btnFlyover")) $("btnFlyover").addEventListener("click", () => { if (GD.flyover) GD.flyover.play(); });
     $("scrub").addEventListener("input", (e) => { GD.playback.seek(Number(e.target.value)); renderTransport(); renderRundown(); });
     const yearEl = $("dataYear");
     if (yearEl && GD.yearClock) {
