@@ -1,0 +1,80 @@
+{
+  "schema": "globedesk.space-site/1",
+  "id": "jiuquan-launch-center",
+  "title": "Jiuquan Satellite Launch Center",
+  "body": "earth",
+  "kind": "launch-site",
+  "region": "Asia",
+  "country": "CN",
+  "place": {
+    "label": "Jiuquan Satellite Launch Center, Gansu, China",
+    "lat": 40.9675,
+    "lng": 100.2786,
+    "body": "earth",
+    "approximate": true,
+    "basis": "One Wikidata (CC0) coordinate for the whole site; a spaceport covers many square kilometres",
+    "coords_source_id": "wd-q692677",
+    "coords_text": "40.9675, 100.2786"
+  },
+  "dates": [
+    {
+      "date": "1970-04-24",
+      "precision": "day",
+      "label": "China's first satellite launched from here (CNSA)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "Construction started (CNSA)",
+      "value": "1958",
+      "source": "cnsa-launch-centres"
+    },
+    {
+      "label": "Area (CNSA)",
+      "value": "about 2,800 km²",
+      "source": "cnsa-launch-centres"
+    },
+    {
+      "label": "First satellite launch (CNSA)",
+      "value": "24 April 1970 (Dongfanghong-1, Long March 1)",
+      "source": "cnsa-dongfanghong-1"
+    }
+  ],
+  "facts": [
+    {
+      "text": "CNSA says Jiuquan was the first satellite launch site built in China, started in 1958 in the north-east of Jiuquan city, Gansu province.",
+      "source": "cnsa-launch-centres"
+    },
+    {
+      "text": "CNSA says a Long March 1 rocket launched on 24 April 1970 and put China's first satellite, Dongfanghong-1, into orbit; it was Jiuquan's first satellite launch.",
+      "source": "cnsa-dongfanghong-1"
+    },
+    {
+      "text": "CNSA says this made China the fifth country able to build and launch its own satellite, after the Soviet Union, the United States, France and Japan.",
+      "source": "cnsa-dongfanghong-1"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "Jiuquan Satellite Launch Center in Gansu, China, was the country's first satellite launch site. China's first satellite, Dongfanghong-1, was launched from here on 24 April 1970.",
+    "student": "China's space agency says the centre was started in 1958 and covers about 2,800 km². On 24 April 1970 a Long March 1 rocket carried Dongfanghong-1 into orbit, the centre's first satellite launch, which made China the fifth country to launch its own satellite."
+  },
+  "sources": [
+    "wd-q692677",
+    "cnsa-launch-centres",
+    "cnsa-dongfanghong-1"
+  ],
+  "official_sources": [
+    "cnsa-launch-centres",
+    "cnsa-dongfanghong-1"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "CNSA's English page on the centre has no text; the facts come from the Chinese-language pages [UNKNOWN] in English"
+  ],
+  "see_also_ids": [],
+  "confidence": "medium",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NASA and IAU values are public-domain US-hosted data; linked sources keep their own terms",
+  "subject_person_living": false
+}

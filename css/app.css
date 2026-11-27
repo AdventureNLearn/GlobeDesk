@@ -755,6 +755,14 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .dl-swatch { --c: #d2361e; }
 .dl-positions { margin: 2px 0 4px 1.1rem; }
 .dl-steps li { margin-bottom: 3px; }
+/* Space layer (js/atlas/space-layer.js): launch sites as a gold diamond; every pin is approximate. */
+.sp-pin, .sp-cluster { min-width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; padding: 0; cursor: pointer; }
+.sp-glyph { display: block; width: 18px; height: 18px; transform: rotate(45deg); border-radius: 3px; background: linear-gradient(135deg, #fff1b8, #e0a21a); border: 2px solid #1b2a52; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); }
+.sp-pin:focus-visible, .sp-cluster:focus-visible { outline: 2px solid var(--gd-gold); outline-offset: 2px; border-radius: 8px; }
+.sp-cluster { min-width: 34px; width: auto; height: 34px; border-radius: 17px; margin: 5px; padding: 0 8px; background: rgba(14, 26, 60, 0.9); border: 2px solid #e0a21a; color: #fff1b8; font-weight: 700; font-size: 12px; }
+.sp-swatch { --c: #e0a21a; }
+.sp-positions { margin: 2px 0 4px 1.1rem; }
+.sp-steps li { margin-bottom: 3px; }
 .at-ov h4 { margin: 10px 0 2px; }
 .at-timeline-list { padding-left: 18px; }
 .at-timeline-list li { margin: 2px 0; }

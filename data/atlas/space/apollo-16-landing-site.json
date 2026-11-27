@@ -1,0 +1,90 @@
+{
+  "schema": "globedesk.space-site/1",
+  "id": "apollo-16-landing-site",
+  "title": "Apollo 16 landing site (Moon)",
+  "body": "moon",
+  "kind": "lunar-landing",
+  "region": "Moon",
+  "country": "[UNKNOWN]",
+  "place": {
+    "label": "Descartes, the Moon",
+    "body": "moon",
+    "lat": -8.973,
+    "lng": 15.501,
+    "approximate": false,
+    "basis": "Latitude and longitude as published by NSSDCA, referenced to the DE421 Mean Earth/Polar Axis lunar reference frame",
+    "coords_source_id": "nssdca-apollo-landings",
+    "coords_text": "8.973 S, 15.501 E"
+  },
+  "dates": [
+    {
+      "date": "1972-04-20",
+      "precision": "day",
+      "label": "Apollo 16 landed (NSSDCA)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "Launch date",
+      "value": "16 April 1972",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Landing date",
+      "value": "20 April 1972",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Latitude and longitude on the Moon",
+      "value": "8.973 S, 15.501 E",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Landing region",
+      "value": "Descartes",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Moonwalk (EVA) time, hours",
+      "value": "20.23",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Traverse, km",
+      "value": "[UNKNOWN] (the page prints \"27.\")",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Samples returned, kg",
+      "value": "95.71",
+      "source": "nssdca-apollo-landings"
+    }
+  ],
+  "facts": [
+    {
+      "text": "NSSDCA's Apollo table lists Apollo 16: launched 16 April 1972, landed 20 April 1972 at Descartes (8.973 S, 15.501 E).",
+      "source": "nssdca-apollo-landings"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "Apollo 16 landed on the Moon on 20 April 1972 in Descartes. NASA lists the site at 8.973 S, 15.501 E on the Moon.",
+    "student": "NSSDCA's Apollo table lists a launch on 16 April 1972, 20.23 hours of moonwalk time, a traverse length [UNKNOWN] and 95.71 kg of samples. Coordinates use the DE421 Mean Earth/Polar Axis frame."
+  },
+  "sources": [
+    "nssdca-apollo-landings"
+  ],
+  "official_sources": [
+    "nssdca-apollo-landings"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "IAU Gazetteer name for this landing point: not looked up [UNKNOWN] (only the Apollo 11 name was checked)",
+    "Traverse length: the NSSDCA table prints it with the digits after the decimal point missing (the page prints \"27.\")"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NASA and IAU values are public-domain US-hosted data; linked sources keep their own terms",
+  "subject_person_living": false
+}

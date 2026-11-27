@@ -38,6 +38,7 @@
       "precision": "site",
       "entries": [
         "bianzhong-marquis-yi",
+        "jiuquan-launch-center",
         "yongle-bell"
       ]
     },
@@ -85,6 +86,13 @@
         "great-tom-oxford",
         "hms-hood-bell",
         "lutine-bell"
+      ]
+    },
+    {
+      "key": "GF",
+      "precision": "site",
+      "entries": [
+        "kourou-guiana-space-centre"
       ]
     },
     {
@@ -145,6 +153,13 @@
       "entries": [
         "sangwonsa-bell",
         "seongdeok-bell"
+      ]
+    },
+    {
+      "key": "KZ",
+      "precision": "site",
+      "entries": [
+        "baikonur-cosmodrome"
       ]
     },
     {
@@ -311,7 +326,8 @@
         "arpanet-1969",
         "gold-discovery-1848",
         "san-francisco-earthquake-1906",
-        "un-charter-1945"
+        "un-charter-1945",
+        "vandenberg-launch-base"
       ]
     },
     {
@@ -331,7 +347,8 @@
       "key": "US-FL",
       "precision": "site",
       "entries": [
-        "apollo-11-1969"
+        "apollo-11-1969",
+        "cape-canaveral-launch-site"
       ]
     },
     {
@@ -505,6 +522,11 @@
     "aluminium-element",
     "americium-element",
     "antimony-element",
+    "apollo-12-landing-site",
+    "apollo-14-landing-site",
+    "apollo-15-landing-site",
+    "apollo-16-landing-site",
+    "apollo-17-landing-site",
     "argon-element",
     "arsenic-element",
     "astatine-element",
@@ -565,6 +587,8 @@
     "lifepo4-vs-nmc",
     "lithium-element",
     "livermorium-element",
+    "luna-16-landing-site",
+    "luna-9-landing-site",
     "lutetium-element",
     "magnesium-element",
     "manganese-element",
@@ -613,6 +637,7 @@
     "silver-element",
     "sodium-element",
     "solar-resource-by-region",
+    "space-overview",
     "strontium-element",
     "sulfur-element",
     "tantalum-element",

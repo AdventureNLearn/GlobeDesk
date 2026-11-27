@@ -1,0 +1,84 @@
+{
+  "schema": "globedesk.space-site/1",
+  "id": "kourou-guiana-space-centre",
+  "title": "Kourou, Guiana Space Centre",
+  "body": "earth",
+  "kind": "launch-site",
+  "region": "South America",
+  "country": "GF",
+  "place": {
+    "label": "Guiana Space Centre near Kourou, French Guiana",
+    "lat": 5.2372,
+    "lng": -52.7606,
+    "body": "earth",
+    "approximate": true,
+    "basis": "One Wikidata (CC0) coordinate for the whole site; a spaceport covers many square kilometres",
+    "coords_source_id": "wd-q308987",
+    "coords_text": "5.2372, -52.7606"
+  },
+  "dates": [
+    {
+      "date": "1964",
+      "precision": "year",
+      "label": "Kourou chosen by the French government (ESA)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "Latitude (ESA)",
+      "value": "about 5°3′ N, just over 500 km north of the equator",
+      "source": "esa-europes-spaceport"
+    },
+    {
+      "label": "Chosen by France (ESA)",
+      "value": "1964, from 14 other sites",
+      "source": "esa-europes-spaceport"
+    },
+    {
+      "label": "First launch (ESA)",
+      "value": "1968 (Véronique)",
+      "source": "esa-europes-spaceport"
+    },
+    {
+      "label": "First Ariane launch (ESA)",
+      "value": "1979",
+      "source": "esa-europes-spaceport"
+    }
+  ],
+  "facts": [
+    {
+      "text": "ESA says France picked Kourou in 1964 as its satellite launch base, after weighing 14 other candidate sites.",
+      "source": "esa-europes-spaceport"
+    },
+    {
+      "text": "ESA's key dates list the first launch (a Véronique) in 1968, the first Diamant in 1970 and the first Ariane in 1979.",
+      "source": "esa-europes-spaceport"
+    },
+    {
+      "text": "ESA says the nearness to the equator saves fuel, and that the Atlantic coast opening lets rockets fly north and east without crossing populated land.",
+      "source": "esa-europes-spaceport"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "Europe's Spaceport at Kourou in French Guiana is a launch base close to the equator. France chose the site in 1964, and the first launch from it was in 1968.",
+    "student": "ESA says France picked Kourou in 1964 after weighing 14 other candidate sites, the first launch was a Véronique in 1968, and Ariane rockets have flown from there since 1979. At about 5°3′ N it is just over 500 km from the equator, which helps rockets flying east."
+  },
+  "sources": [
+    "wd-q308987",
+    "esa-europes-spaceport"
+  ],
+  "official_sources": [
+    "esa-europes-spaceport"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "CNES page: not opened, so not used [UNKNOWN]",
+    "ESA pages give the area as about 690 km² and about 700 km²; no single figure is shown [UNKNOWN]"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NASA and IAU values are public-domain US-hosted data; linked sources keep their own terms",
+  "subject_person_living": false
+}

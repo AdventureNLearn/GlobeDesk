@@ -159,6 +159,802 @@
       "checked": "2026-11-24",
       "current": false,
       "subject_person_living": false
+    },
+    {
+      "id": "space-overview",
+      "title": "Space race and launch sites",
+      "aliases": [
+        "Space race",
+        "Launch sites layer"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Launch sites on Earth and landing sites on the Moon from the space race. Earth sites are pins; Moon sites are listed with their published lunar coordinates, because the globe shows Earth.",
+        "student": "A first batch from NASA NSSDCA, the IAU Gazetteer of Planetary Nomenclature and official agency pages. Earth launch sites are approximate pins (one Wikidata coordinate each, CC0). Moon landing sites carry lunar coordinates as published and have no Earth pin. Apollo 11 and Cape Canaveral stay deliberately minimal."
+      },
+      "layer": "space",
+      "summary": "Launch sites on Earth and landing sites on the Moon from the space race. Earth sites are pins; Moon sites are listed with their published lunar coordinates, because the globe shows Earth.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "nssdca-apollo-landings",
+        "iau-statio-tranquillitatis",
+        "nssdca-apollo-11-lm",
+        "nasa-sputnik-1957",
+        "vsfb-history",
+        "esa-baikonur-steppes",
+        "cnsa-dongfanghong-1",
+        "esa-europes-spaceport"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "baikonur-cosmodrome"
+        },
+        {
+          "type": "see-also",
+          "to": "kourou-guiana-space-centre"
+        },
+        {
+          "type": "see-also",
+          "to": "jiuquan-launch-center"
+        },
+        {
+          "type": "see-also",
+          "to": "vandenberg-launch-base"
+        },
+        {
+          "type": "see-also",
+          "to": "cape-canaveral-launch-site"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-12-landing-site"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-14-landing-site"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-15-landing-site"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-16-landing-site"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-17-landing-site"
+        },
+        {
+          "type": "see-also",
+          "to": "luna-9-landing-site"
+        },
+        {
+          "type": "see-also",
+          "to": "luna-16-landing-site"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-11-1969"
+        }
+      ],
+      "record": "data/atlas/space/space-overview.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "baikonur-cosmodrome",
+      "title": "Baikonur Cosmodrome",
+      "aliases": [
+        "Baikonur",
+        "Tyuratam"
+      ],
+      "kind": "place",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Baikonur Cosmodrome in Kazakhstan is where the Soviet Union launched Sputnik, the first artificial satellite, on 4 October 1957. ESA says Yuri Gagarin's first human spaceflight left from here too.",
+        "student": "NASA says Sputnik was launched from the Baikonur Cosmodrome on 4 October 1957. ESA says construction began in 1955 and that Yuri Gagarin's 12 April 1961 flight left from Launch Pad 1. The name came from a mining town about 370 km away, used to hide the real site."
+      },
+      "layer": "space",
+      "summary": "Baikonur Cosmodrome in Kazakhstan is where the Soviet Union launched Sputnik, the first artificial satellite, on 4 October 1957. ESA says Yuri Gagarin's first human spaceflight left from here too.",
+      "places": [
+        {
+          "region": "KZ",
+          "lat": 45.9648,
+          "lng": 63.3051,
+          "precision": "site",
+          "note": "Baikonur Cosmodrome, Kazakhstan (approximate pin: One Wikidata (CC0) coordinate for the whole site; a spaceport covers many square kilometres)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1957-10-04",
+          "precision": "day",
+          "approximate": false,
+          "label": "Sputnik 1 launched from here (NASA)"
+        }
+      ],
+      "sources": [
+        "wd-q177477",
+        "nasa-sputnik-1957",
+        "esa-baikonur-steppes",
+        "esa-baikonur-cosmodrome"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        }
+      ],
+      "record": "data/atlas/space/baikonur-cosmodrome.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Earth launch site). Gaps: Roscosmos page: not opened (HTTP 500 on 2026-11-26), so not used [UNKNOWN]; ESA's older page gives 45.6 N, 63.4 E for the site, about 40 km from the pin; which is closer to the launch pads: [UNKNOWN]."
+    },
+    {
+      "id": "kourou-guiana-space-centre",
+      "title": "Kourou, Guiana Space Centre",
+      "aliases": [
+        "Europe's Spaceport",
+        "Centre Spatial Guyanais"
+      ],
+      "kind": "place",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Europe's Spaceport at Kourou in French Guiana is a launch base close to the equator. France chose the site in 1964, and the first launch from it was in 1968.",
+        "student": "ESA says France picked Kourou in 1964 after weighing 14 other candidate sites, the first launch was a Véronique in 1968, and Ariane rockets have flown from there since 1979. At about 5°3′ N it is just over 500 km from the equator, which helps rockets flying east."
+      },
+      "layer": "space",
+      "summary": "Europe's Spaceport at Kourou in French Guiana is a launch base close to the equator. France chose the site in 1964, and the first launch from it was in 1968.",
+      "places": [
+        {
+          "region": "GF",
+          "lat": 5.2372,
+          "lng": -52.7606,
+          "precision": "site",
+          "note": "Guiana Space Centre near Kourou, French Guiana (approximate pin: One Wikidata (CC0) coordinate for the whole site; a spaceport covers many square kilometres)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1964",
+          "precision": "year",
+          "approximate": false,
+          "label": "Kourou chosen by the French government (ESA)"
+        }
+      ],
+      "sources": [
+        "wd-q308987",
+        "esa-europes-spaceport"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        }
+      ],
+      "record": "data/atlas/space/kourou-guiana-space-centre.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Earth launch site). Gaps: CNES page: not opened, so not used [UNKNOWN]; ESA pages give the area as about 690 km² and about 700 km²; no single figure is shown [UNKNOWN]."
+    },
+    {
+      "id": "jiuquan-launch-center",
+      "title": "Jiuquan Satellite Launch Center",
+      "aliases": [
+        "Jiuquan"
+      ],
+      "kind": "place",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Jiuquan Satellite Launch Center in Gansu, China, was the country's first satellite launch site. China's first satellite, Dongfanghong-1, was launched from here on 24 April 1970.",
+        "student": "China's space agency says the centre was started in 1958 and covers about 2,800 km². On 24 April 1970 a Long March 1 rocket carried Dongfanghong-1 into orbit, the centre's first satellite launch, which made China the fifth country to launch its own satellite."
+      },
+      "layer": "space",
+      "summary": "Jiuquan Satellite Launch Center in Gansu, China, was the country's first satellite launch site. China's first satellite, Dongfanghong-1, was launched from here on 24 April 1970.",
+      "places": [
+        {
+          "region": "CN",
+          "lat": 40.9675,
+          "lng": 100.2786,
+          "precision": "site",
+          "note": "Jiuquan Satellite Launch Center, Gansu, China (approximate pin: One Wikidata (CC0) coordinate for the whole site; a spaceport covers many square kilometres)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1970-04-24",
+          "precision": "day",
+          "approximate": false,
+          "label": "China's first satellite launched from here (CNSA)"
+        }
+      ],
+      "sources": [
+        "wd-q692677",
+        "cnsa-launch-centres",
+        "cnsa-dongfanghong-1"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        }
+      ],
+      "record": "data/atlas/space/jiuquan-launch-center.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Earth launch site). Gaps: CNSA's English page on the centre has no text; the facts come from the Chinese-language pages [UNKNOWN] in English."
+    },
+    {
+      "id": "vandenberg-launch-base",
+      "title": "Vandenberg Space Force Base",
+      "aliases": [
+        "Vandenberg",
+        "Vandenberg AFB"
+      ],
+      "kind": "place",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Vandenberg Space Force Base in California began as an Army camp in 1941. Its first missile launch was in December 1958, and in February 1959 it launched Discoverer 1, which the base calls the first polar-orbiting satellite.",
+        "student": "The Space Force says Camp Cooke was set up in 1941, passed to the Air Force in 1957 and was renamed Vandenberg Air Force Base on 4 October 1958. The first missile launch, a Thor, was on 16 December 1958 and Discoverer 1 followed on 28 February 1959. It became a Space Force Base on 14 May 2021."
+      },
+      "layer": "space",
+      "summary": "Vandenberg Space Force Base in California began as an Army camp in 1941. Its first missile launch was in December 1958, and in February 1959 it launched Discoverer 1, which the base calls the first polar-orbiting satellite.",
+      "places": [
+        {
+          "region": "US-CA",
+          "lat": 34.7379,
+          "lng": -120.5374,
+          "precision": "site",
+          "note": "Vandenberg Space Force Base, California, United States (approximate pin: One Wikidata (CC0) coordinate for the whole site; a spaceport covers many square kilometres)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1959-02-28",
+          "precision": "day",
+          "approximate": false,
+          "label": "Discoverer 1 launched, the first polar-orbiting satellite (USSF)"
+        }
+      ],
+      "sources": [
+        "wd-q461492",
+        "vsfb-history"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        }
+      ],
+      "record": "data/atlas/space/vandenberg-launch-base.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Earth launch site). Gaps: The site's reuse notice: not opened (403 / 404), so its terms are [UNKNOWN]."
+    },
+    {
+      "id": "cape-canaveral-launch-site",
+      "title": "Cape Canaveral launch site",
+      "aliases": [
+        "Cape Canaveral"
+      ],
+      "kind": "place",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Cape Canaveral is a US launch site in Florida. NASA's catalogue lists it as the launch site of the Apollo 11 mission.",
+        "student": "NASA's NSSDCA catalogue lists the launch site of the Apollo 11 Lunar Module's mission as Cape Canaveral, United States, on 1969-07-16. This entry is one generic point for the site and adds no local detail; the Apollo 11 entry covers the mission."
+      },
+      "layer": "space",
+      "summary": "Cape Canaveral is a US launch site in Florida. NASA's catalogue lists it as the launch site of the Apollo 11 mission.",
+      "places": [
+        {
+          "region": "US-FL",
+          "lat": 28.4889,
+          "lng": -80.5778,
+          "precision": "site",
+          "note": "Cape Canaveral, Florida, United States (approximate pin: One Wikidata (CC0) coordinate for the whole site; a spaceport covers many square kilometres)"
+        }
+      ],
+      "dates": [],
+      "sources": [
+        "wd-q334465",
+        "nssdca-apollo-11-lm"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-11-1969"
+        }
+      ],
+      "record": "data/atlas/space/cape-canaveral-launch-site.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Earth launch site). Gaps: Everything else about the site: left out on purpose (owner pick: one generic point, no local detail)."
+    },
+    {
+      "id": "apollo-12-landing-site",
+      "title": "Apollo 12 landing site (Moon)",
+      "aliases": [
+        "Apollo 12"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Apollo 12 landed on the Moon on 19 November 1969 in Oceanus Procellarum. NASA lists the site at 3.013 S, 23.422 W on the Moon.",
+        "student": "NSSDCA's Apollo table lists a launch on 14 November 1969, 7.75 hours of moonwalk time, a 1.35 km traverse and 34.35 kg of samples. Coordinates use the DE421 Mean Earth/Polar Axis frame."
+      },
+      "layer": "space",
+      "summary": "Apollo 12 landed on the Moon on 19 November 1969 in Oceanus Procellarum. NASA lists the site at 3.013 S, 23.422 W on the Moon.",
+      "places": [],
+      "dates": [
+        {
+          "date": "1969-11-19",
+          "precision": "day",
+          "approximate": false,
+          "label": "Apollo 12 landed (NSSDCA)"
+        }
+      ],
+      "sources": [
+        "nssdca-apollo-landings"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-11-1969"
+        }
+      ],
+      "record": "data/atlas/space/apollo-12-landing-site.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Moon site, no Earth pin). Gaps: IAU Gazetteer name for this landing point: not looked up [UNKNOWN] (only the Apollo 11 name was checked)."
+    },
+    {
+      "id": "apollo-14-landing-site",
+      "title": "Apollo 14 landing site (Moon)",
+      "aliases": [
+        "Apollo 14",
+        "Fra Mauro"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Apollo 14 landed on the Moon on 5 February 1971 in Fra Mauro. NASA lists the site at 3.646 S, 17.472 W on the Moon.",
+        "student": "NSSDCA's Apollo table lists a launch on 31 January 1971, 9.38 hours of moonwalk time, a 3.45 km traverse and 42.28 kg of samples. Coordinates use the DE421 Mean Earth/Polar Axis frame."
+      },
+      "layer": "space",
+      "summary": "Apollo 14 landed on the Moon on 5 February 1971 in Fra Mauro. NASA lists the site at 3.646 S, 17.472 W on the Moon.",
+      "places": [],
+      "dates": [
+        {
+          "date": "1971-02-05",
+          "precision": "day",
+          "approximate": false,
+          "label": "Apollo 14 landed (NSSDCA)"
+        }
+      ],
+      "sources": [
+        "nssdca-apollo-landings"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-11-1969"
+        }
+      ],
+      "record": "data/atlas/space/apollo-14-landing-site.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Moon site, no Earth pin). Gaps: IAU Gazetteer name for this landing point: not looked up [UNKNOWN] (only the Apollo 11 name was checked)."
+    },
+    {
+      "id": "apollo-15-landing-site",
+      "title": "Apollo 15 landing site (Moon)",
+      "aliases": [
+        "Apollo 15",
+        "Hadley Rille"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Apollo 15 landed on the Moon on 30 July 1971 in Hadley Rille. NASA lists the site at 26.132 N, 3.633 E on the Moon.",
+        "student": "NSSDCA's Apollo table lists a launch on 26 July 1971, 19.13 hours of moonwalk time, a 27.9 km traverse and 77.31 kg of samples. Coordinates use the DE421 Mean Earth/Polar Axis frame."
+      },
+      "layer": "space",
+      "summary": "Apollo 15 landed on the Moon on 30 July 1971 in Hadley Rille. NASA lists the site at 26.132 N, 3.633 E on the Moon.",
+      "places": [],
+      "dates": [
+        {
+          "date": "1971-07-30",
+          "precision": "day",
+          "approximate": false,
+          "label": "Apollo 15 landed (NSSDCA)"
+        }
+      ],
+      "sources": [
+        "nssdca-apollo-landings"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-11-1969"
+        }
+      ],
+      "record": "data/atlas/space/apollo-15-landing-site.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Moon site, no Earth pin). Gaps: IAU Gazetteer name for this landing point: not looked up [UNKNOWN] (only the Apollo 11 name was checked)."
+    },
+    {
+      "id": "apollo-16-landing-site",
+      "title": "Apollo 16 landing site (Moon)",
+      "aliases": [
+        "Apollo 16",
+        "Descartes"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Apollo 16 landed on the Moon on 20 April 1972 in Descartes. NASA lists the site at 8.973 S, 15.501 E on the Moon.",
+        "student": "NSSDCA's Apollo table lists a launch on 16 April 1972, 20.23 hours of moonwalk time, a traverse length [UNKNOWN] and 95.71 kg of samples. Coordinates use the DE421 Mean Earth/Polar Axis frame."
+      },
+      "layer": "space",
+      "summary": "Apollo 16 landed on the Moon on 20 April 1972 in Descartes. NASA lists the site at 8.973 S, 15.501 E on the Moon.",
+      "places": [],
+      "dates": [
+        {
+          "date": "1972-04-20",
+          "precision": "day",
+          "approximate": false,
+          "label": "Apollo 16 landed (NSSDCA)"
+        }
+      ],
+      "sources": [
+        "nssdca-apollo-landings"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-11-1969"
+        }
+      ],
+      "record": "data/atlas/space/apollo-16-landing-site.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Moon site, no Earth pin). Gaps: IAU Gazetteer name for this landing point: not looked up [UNKNOWN] (only the Apollo 11 name was checked); Traverse length: the NSSDCA table prints it with the digits after the decimal point missing (the page prints \"27.\")."
+    },
+    {
+      "id": "apollo-17-landing-site",
+      "title": "Apollo 17 landing site (Moon)",
+      "aliases": [
+        "Apollo 17",
+        "Taurus-Littrow"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Apollo 17 landed on the Moon on 11 December 1972 in Taurus-Littrow. NASA lists the site at 20.191 N, 30.772 E on the Moon.",
+        "student": "NSSDCA's Apollo table lists a launch on 7 December 1972, 22.07 hours of moonwalk time, a traverse length [UNKNOWN] and 110.52 kg of samples. Coordinates use the DE421 Mean Earth/Polar Axis frame."
+      },
+      "layer": "space",
+      "summary": "Apollo 17 landed on the Moon on 11 December 1972 in Taurus-Littrow. NASA lists the site at 20.191 N, 30.772 E on the Moon.",
+      "places": [],
+      "dates": [
+        {
+          "date": "1972-12-11",
+          "precision": "day",
+          "approximate": false,
+          "label": "Apollo 17 landed (NSSDCA)"
+        }
+      ],
+      "sources": [
+        "nssdca-apollo-landings"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "apollo-11-1969"
+        }
+      ],
+      "record": "data/atlas/space/apollo-17-landing-site.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Moon site, no Earth pin). Gaps: IAU Gazetteer name for this landing point: not looked up [UNKNOWN] (only the Apollo 11 name was checked); Traverse length: the NSSDCA table prints it with the digits after the decimal point missing (the page prints \"35.\")."
+    },
+    {
+      "id": "luna-9-landing-site",
+      "title": "Luna 9 landing site (Moon)",
+      "aliases": [
+        "Luna 9"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Luna 9 landed on the Moon on 3 February 1966 in Oceanus Procellarum. NASA lists the site at 7.08 N, 295.63 E on the Moon.",
+        "student": "NSSDCA's Luna table lists Luna 9 as launched on 31 January 1966 and landed on 3 February 1966 at 18:44:52 UT, in Oceanus Procellarum, at 7.08 N, 295.63 E. The launch site is not on that page [UNKNOWN]."
+      },
+      "layer": "space",
+      "summary": "Luna 9 landed on the Moon on 3 February 1966 in Oceanus Procellarum. NASA lists the site at 7.08 N, 295.63 E on the Moon.",
+      "places": [],
+      "dates": [
+        {
+          "date": "1966-02-03",
+          "precision": "day",
+          "approximate": false,
+          "label": "Luna 9 landed (NSSDCA)"
+        }
+      ],
+      "sources": [
+        "nssdca-luna-zond"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        }
+      ],
+      "record": "data/atlas/space/luna-9-landing-site.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Moon site, no Earth pin). Gaps: Luna 9 launch site: not on the NSSDCA page, so [UNKNOWN]; IAU Gazetteer name for this landing point: not looked up [UNKNOWN]."
+    },
+    {
+      "id": "luna-16-landing-site",
+      "title": "Luna 16 landing site (Moon)",
+      "aliases": [
+        "Luna 16"
+      ],
+      "kind": "event",
+      "category_path": [
+        "science-history",
+        "space-race"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Luna 16 landed on the Moon on 20 September 1970 in Mare Fecunditatis. NASA lists the site at 0.68 S, 56.30 E on the Moon.",
+        "student": "NSSDCA's Luna table lists Luna 16 as launched on 12 September 1970 and landed on 20 September 1970 at 05:18:00 UT, in Mare Fecunditatis, at 0.68 S, 56.30 E. The table lists it as a lunar sample return. The launch site is not on that page [UNKNOWN]."
+      },
+      "layer": "space",
+      "summary": "Luna 16 landed on the Moon on 20 September 1970 in Mare Fecunditatis. NASA lists the site at 0.68 S, 56.30 E on the Moon.",
+      "places": [],
+      "dates": [
+        {
+          "date": "1970-09-20",
+          "precision": "day",
+          "approximate": false,
+          "label": "Luna 16 landed (NSSDCA)"
+        }
+      ],
+      "sources": [
+        "nssdca-luna-zond"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "space-overview"
+        }
+      ],
+      "record": "data/atlas/space/luna-16-landing-site.json",
+      "pack": "science-history",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Space layer (Moon site, no Earth pin). Gaps: Luna 16 launch site: not on the NSSDCA page, so [UNKNOWN]; IAU Gazetteer name for this landing point: not looked up [UNKNOWN]."
     }
   ]
 }

@@ -1,0 +1,80 @@
+{
+  "schema": "globedesk.space-site/1",
+  "id": "luna-16-landing-site",
+  "title": "Luna 16 landing site (Moon)",
+  "body": "moon",
+  "kind": "robotic-landing",
+  "region": "Moon",
+  "country": "[UNKNOWN]",
+  "place": {
+    "label": "Mare Fecunditatis, the Moon",
+    "body": "moon",
+    "lat": -0.68,
+    "lng": 56.3,
+    "approximate": false,
+    "basis": "Coordinates as printed in NSSDCA's Luna table; the table gives no reference frame",
+    "coords_source_id": "nssdca-luna-zond",
+    "coords_text": "0.68 S, 56.30 E"
+  },
+  "dates": [
+    {
+      "date": "1970-09-20",
+      "precision": "day",
+      "label": "Luna 16 landed (NSSDCA)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "Launch date",
+      "value": "12 September 1970",
+      "source": "nssdca-luna-zond"
+    },
+    {
+      "label": "Landing date",
+      "value": "20 September 1970 at 05:18:00 UT",
+      "source": "nssdca-luna-zond"
+    },
+    {
+      "label": "Latitude and longitude on the Moon",
+      "value": "0.68 S, 56.30 E",
+      "source": "nssdca-luna-zond"
+    },
+    {
+      "label": "Landing region",
+      "value": "Mare Fecunditatis",
+      "source": "nssdca-luna-zond"
+    },
+    {
+      "label": "Mission type",
+      "value": "Lunar sample return (as listed)",
+      "source": "nssdca-luna-zond"
+    }
+  ],
+  "facts": [
+    {
+      "text": "NSSDCA's Luna table lists Luna 16: launched 12 September 1970, landed 20 September 1970 at 05:18:00 UT, 0.68 S, 56.30 E, Mare Fecunditatis.",
+      "source": "nssdca-luna-zond"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "Luna 16 landed on the Moon on 20 September 1970 in Mare Fecunditatis. NASA lists the site at 0.68 S, 56.30 E on the Moon.",
+    "student": "NSSDCA's Luna table lists Luna 16 as launched on 12 September 1970 and landed on 20 September 1970 at 05:18:00 UT, in Mare Fecunditatis, at 0.68 S, 56.30 E. The table lists it as a lunar sample return. The launch site is not on that page [UNKNOWN]."
+  },
+  "sources": [
+    "nssdca-luna-zond"
+  ],
+  "official_sources": [
+    "nssdca-luna-zond"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Luna 16 launch site: not on the NSSDCA page, so [UNKNOWN]",
+    "IAU Gazetteer name for this landing point: not looked up [UNKNOWN]"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NASA and IAU values are public-domain US-hosted data; linked sources keep their own terms",
+  "subject_person_living": false
+}

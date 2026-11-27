@@ -1,0 +1,54 @@
+{
+  "schema": "globedesk.space-site/1",
+  "id": "cape-canaveral-launch-site",
+  "title": "Cape Canaveral launch site",
+  "body": "earth",
+  "kind": "launch-site",
+  "region": "North America",
+  "country": "US",
+  "place": {
+    "label": "Cape Canaveral, Florida, United States",
+    "lat": 28.4889,
+    "lng": -80.5778,
+    "body": "earth",
+    "approximate": true,
+    "basis": "One Wikidata (CC0) coordinate for the whole site; a spaceport covers many square kilometres",
+    "coords_source_id": "wd-q334465",
+    "coords_text": "28.4889, -80.5778"
+  },
+  "dates": [],
+  "measures": [
+    {
+      "label": "Launch site named in NASA's catalogue",
+      "value": "Cape Canaveral, United States",
+      "source": "nssdca-apollo-11-lm"
+    }
+  ],
+  "facts": [
+    {
+      "text": "NASA's catalogue lists Cape Canaveral, United States, as the launch site of the Apollo 11 Lunar Module's mission (launched 16 July 1969, on a Saturn 5).",
+      "source": "nssdca-apollo-11-lm"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "Cape Canaveral is a US launch site in Florida. NASA's catalogue lists it as the launch site of the Apollo 11 mission.",
+    "student": "NASA's NSSDCA catalogue lists the launch site of the Apollo 11 Lunar Module's mission as Cape Canaveral, United States, on 1969-07-16. This entry is one generic point for the site and adds no local detail; the Apollo 11 entry covers the mission."
+  },
+  "sources": [
+    "wd-q334465",
+    "nssdca-apollo-11-lm"
+  ],
+  "official_sources": [
+    "nssdca-apollo-11-lm"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Everything else about the site: left out on purpose (owner pick: one generic point, no local detail)"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NASA and IAU values are public-domain US-hosted data; linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "globedesk.space-site/1",
+  "id": "apollo-17-landing-site",
+  "title": "Apollo 17 landing site (Moon)",
+  "body": "moon",
+  "kind": "lunar-landing",
+  "region": "Moon",
+  "country": "[UNKNOWN]",
+  "place": {
+    "label": "Taurus-Littrow, the Moon",
+    "body": "moon",
+    "lat": 20.191,
+    "lng": 30.772,
+    "approximate": false,
+    "basis": "Latitude and longitude as published by NSSDCA, referenced to the DE421 Mean Earth/Polar Axis lunar reference frame",
+    "coords_source_id": "nssdca-apollo-landings",
+    "coords_text": "20.191 N, 30.772 E"
+  },
+  "dates": [
+    {
+      "date": "1972-12-11",
+      "precision": "day",
+      "label": "Apollo 17 landed (NSSDCA)"
+    }
+  ],
+  "measures": [
+    {
+      "label": "Launch date",
+      "value": "7 December 1972",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Landing date",
+      "value": "11 December 1972",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Latitude and longitude on the Moon",
+      "value": "20.191 N, 30.772 E",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Landing region",
+      "value": "Taurus-Littrow",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Moonwalk (EVA) time, hours",
+      "value": "22.07",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Traverse, km",
+      "value": "[UNKNOWN] (the page prints \"35.\")",
+      "source": "nssdca-apollo-landings"
+    },
+    {
+      "label": "Samples returned, kg",
+      "value": "110.52",
+      "source": "nssdca-apollo-landings"
+    }
+  ],
+  "facts": [
+    {
+      "text": "NSSDCA's Apollo table lists Apollo 17: launched 7 December 1972, landed 11 December 1972 at Taurus-Littrow (20.191 N, 30.772 E).",
+      "source": "nssdca-apollo-landings"
+    }
+  ],
+  "claims": [],
+  "tiers": {
+    "everyday": "Apollo 17 landed on the Moon on 11 December 1972 in Taurus-Littrow. NASA lists the site at 20.191 N, 30.772 E on the Moon.",
+    "student": "NSSDCA's Apollo table lists a launch on 7 December 1972, 22.07 hours of moonwalk time, a traverse length [UNKNOWN] and 110.52 kg of samples. Coordinates use the DE421 Mean Earth/Polar Axis frame."
+  },
+  "sources": [
+    "nssdca-apollo-landings"
+  ],
+  "official_sources": [
+    "nssdca-apollo-landings"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "IAU Gazetteer name for this landing point: not looked up [UNKNOWN] (only the Apollo 11 name was checked)",
+    "Traverse length: the NSSDCA table prints it with the digits after the decimal point missing (the page prints \"35.\")"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NASA and IAU values are public-domain US-hosted data; linked sources keep their own terms",
+  "subject_person_living": false
+}
