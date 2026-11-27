@@ -95,6 +95,14 @@
       ]
     },
     {
+      "key": "ID",
+      "precision": "site",
+      "entries": [
+        "krakatau-1883",
+        "tambora-1815"
+      ]
+    },
+    {
       "key": "IN",
       "precision": "country",
       "entries": [
@@ -114,7 +122,8 @@
       "precision": "country",
       "entries": [
         "bag-solar-kit-prices",
-        "galileo-telescopic-observations-1609"
+        "galileo-telescopic-observations-1609",
+        "vesuvius-79"
       ]
     },
     {
@@ -194,6 +203,13 @@
       "precision": "site",
       "entries": [
         "zygmunt-bell"
+      ]
+    },
+    {
+      "key": "PT",
+      "precision": "site",
+      "entries": [
+        "lisbon-1755"
       ]
     },
     {
@@ -612,6 +628,7 @@
     "tungsten-element",
     "uranium-element",
     "vanadium-element",
+    "disasters-overview",
     "xenon-element",
     "ytterbium-element",
     "yttrium-element",

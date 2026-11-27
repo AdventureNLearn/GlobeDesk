@@ -16,6 +16,12 @@
       "entry": "bianzhong-marquis-yi"
     },
     {
+      "date": "79",
+      "precision": "year",
+      "approximate": false,
+      "entry": "vesuvius-79"
+    },
+    {
       "date": "725",
       "precision": "year",
       "approximate": false,
@@ -286,6 +292,12 @@
       "precision": "year",
       "approximate": false,
       "entry": "magnesium-element"
+    },
+    {
+      "date": "1755-11-01",
+      "precision": "day",
+      "approximate": false,
+      "entry": "lisbon-1755"
     },
     {
       "date": "1762",
@@ -617,6 +629,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "fort-mchenry-1814"
+    },
+    {
+      "date": "1815-04-10",
+      "precision": "day",
+      "approximate": false,
+      "entry": "tambora-1815"
     },
     {
       "date": "1817",
@@ -1070,6 +1088,12 @@
       "precision": "day",
       "approximate": false,
       "entry": "brooklyn-bridge-1883"
+    },
+    {
+      "date": "1883-08-27",
+      "precision": "day",
+      "approximate": false,
+      "entry": "krakatau-1883"
     },
     {
       "date": "1883-11-18",
@@ -2434,6 +2458,7 @@
     "solar-resource-by-region",
     "tin-element",
     "us-census-and-building-permits",
+    "disasters-overview",
     "zinc-element"
   ]
 }

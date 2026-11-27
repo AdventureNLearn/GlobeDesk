@@ -19,6 +19,7 @@ export function buildData() {
   }));
   const records = {};
   entries.forEach((e) => [e.record, ...(e.records || [])].filter(Boolean).forEach((r) => { records[r] = JR(r); }));
+  Object.assign(A3, { ID: "IDN", PT: "PRT" }); // disasters layer (kept off the A3 line above to ease rebases)
   const places = J("packs/core/places.json");
   places.places.forEach((p) => { const c = p.key.slice(0, 2); p.a3 = A3[c] || "[UNKNOWN]"; p.parent = p.key.length > 2 ? c : null; });
   return {

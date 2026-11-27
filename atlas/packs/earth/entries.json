@@ -136,6 +136,366 @@
           "solar-resource"
         ]
       ]
+    },
+    {
+      "id": "disasters-overview",
+      "title": "Volcanoes, earthquakes and disasters",
+      "aliases": [
+        "Natural hazards",
+        "Disasters layer"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "earth",
+        "natural-hazards"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "earth",
+          "geology-minerals"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Each pin is the official published point from NOAA, and every number names its source.",
+        "student": "A curated first batch from the NOAA NCEI Significant Volcanic Eruptions and Significant Earthquake databases (doi:10.7289/V5JW8BSH, doi:10.7289/V5TD9V7K), with USGS pages for context. Where NCEI and USGS give different death tolls, both are shown. Pins are NCEI's published points, so they are approximate."
+      },
+      "layer": "disasters",
+      "summary": "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Each pin is the official published point from NOAA, and every number names its source.",
+      "places": [],
+      "dates": [],
+      "sources": [
+        "ncei-sig-volcanoes",
+        "ncei-sig-earthquakes",
+        "usgs-deadliest-eruptions",
+        "usgs-volcanoes-climate",
+        "usgs-hvo-krakatau",
+        "usgs-yvo-naples",
+        "usgs-pubs-lisbon-farfield",
+        "usgs-pubs-lisbon-source",
+        "usgs-earthquakes-faq"
+      ],
+      "related": [
+        {
+          "type": "see-also",
+          "to": "krakatau-1883"
+        },
+        {
+          "type": "see-also",
+          "to": "tambora-1815"
+        },
+        {
+          "type": "see-also",
+          "to": "vesuvius-79"
+        },
+        {
+          "type": "see-also",
+          "to": "lisbon-1755"
+        },
+        {
+          "type": "see-also",
+          "to": "mount-st-helens-1980"
+        },
+        {
+          "type": "see-also",
+          "to": "san-francisco-earthquake-1906"
+        }
+      ],
+      "record": "data/atlas/disasters/disasters-overview.json",
+      "pack": "earth",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false
+    },
+    {
+      "id": "krakatau-1883",
+      "title": "Krakatau eruption, 1883",
+      "aliases": [
+        "Krakatoa 1883",
+        "Krakatau 1883"
+      ],
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "natural-hazards"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "earth",
+          "geology-minerals"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "In August 1883 the Krakatau volcano in Indonesia blew apart. The explosions were heard about 5,000 km away, and the tsunami that followed killed tens of thousands of people.",
+        "student": "NOAA NCEI lists the 27 August 1883 eruption of Krakatau at VEI 6, with 36,417 deaths in total. USGS gives about 36,000 and names the tsunami as the main cause. A USGS Volcano Watch article says about 25 km³ of material was thrown out, the island nearly vanished, and dust in the stratosphere lowered global temperatures."
+      },
+      "layer": "disasters",
+      "summary": "In August 1883 the Krakatau volcano in Indonesia blew apart. The explosions were heard about 5,000 km away, and the tsunami that followed killed tens of thousands of people.",
+      "places": [
+        {
+          "region": "ID",
+          "lat": -6.101,
+          "lng": 105.423,
+          "precision": "site",
+          "note": "Krakatau volcano, Indonesia (approximate pin: NCEI published volcano point for event 2429; one point stands for a whole volcano)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1883-08-27",
+          "precision": "day",
+          "approximate": false,
+          "label": "Eruption date in the NCEI catalogue"
+        }
+      ],
+      "sources": [
+        "ncei-sig-volcanoes",
+        "usgs-deadliest-eruptions",
+        "usgs-hvo-krakatau",
+        "usgs-volcanoes-climate"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "disasters-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "tambora-1815"
+        }
+      ],
+      "record": "data/atlas/disasters/krakatau-1883.json",
+      "pack": "earth",
+      "status": "draft",
+      "confidence": "high",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Disasters layer (eruption). NCEI event 2429. Gaps: Hour-by-hour timeline of 26–27 August 1883: [UNKNOWN] in the sources checked; Present-day activity: [UNKNOWN] (Smithsonian GVP not used; its terms are [UNKNOWN])."
+    },
+    {
+      "id": "tambora-1815",
+      "title": "Tambora eruption, 1815",
+      "aliases": [
+        "Mount Tambora 1815"
+      ],
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "natural-hazards"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "earth",
+          "geology-minerals"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "In April 1815 Mount Tambora in Indonesia erupted. Tens of thousands of people died, many of them later from hunger, and USGS says its effect on the atmosphere was probably bigger than that of Pinatubo in 1991.",
+        "student": "NOAA NCEI rates the eruption of 10 April 1815 at VEI 7, the highest in this batch, and counts 11,000 direct deaths and 60,000 in total. The USGS deadliest-eruptions table gives 92,000, mainly from starvation. The two totals disagree, so both are shown."
+      },
+      "layer": "disasters",
+      "summary": "In April 1815 Mount Tambora in Indonesia erupted. Tens of thousands of people died, many of them later from hunger, and USGS says its effect on the atmosphere was probably bigger than that of Pinatubo in 1991.",
+      "places": [
+        {
+          "region": "ID",
+          "lat": -8.25,
+          "lng": 118,
+          "precision": "site",
+          "note": "Mount Tambora, Indonesia (approximate pin: NCEI published volcano point for event 367; one point stands for a whole volcano)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1815-04-10",
+          "precision": "day",
+          "approximate": false,
+          "label": "Eruption date in the NCEI catalogue"
+        }
+      ],
+      "sources": [
+        "ncei-sig-volcanoes",
+        "usgs-deadliest-eruptions",
+        "usgs-volcanoes-climate"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "disasters-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "krakatau-1883"
+        }
+      ],
+      "record": "data/atlas/disasters/tambora-1815.json",
+      "pack": "earth",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Disasters layer (eruption). NCEI event 367. Gaps: Why the death totals differ: [UNKNOWN]; Effects on harvests or weather in other countries in 1816: [UNKNOWN] in the sources checked."
+    },
+    {
+      "id": "vesuvius-79",
+      "title": "Vesuvius eruption, 79 CE",
+      "aliases": [
+        "Vesuvius 79",
+        "Pompeii eruption"
+      ],
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "natural-hazards"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "earth",
+          "geology-minerals"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "In 79 CE Mount Vesuvius in Italy erupted and buried the Roman towns of Pompeii and Herculaneum. The volcano is still active and is watched by the first volcano observatory in the world.",
+        "student": "NOAA NCEI lists the eruption at VEI 5, dated 25 August 79, with 2,100 deaths; the USGS deadliest-eruptions table gives 3,360, mainly from pyroclastic flows. USGS notes that Pliny the Younger described the eruption in letters, that eruptions were frequent from 1631 to 1944, and that the last one was in 1944."
+      },
+      "layer": "disasters",
+      "see_also_ids": [
+        "ancient-pompeii"
+      ],
+      "summary": "In 79 CE Mount Vesuvius in Italy erupted and buried the Roman towns of Pompeii and Herculaneum. The volcano is still active and is watched by the first volcano observatory in the world.",
+      "places": [
+        {
+          "region": "IT",
+          "lat": 40.821,
+          "lng": 14.426,
+          "precision": "site",
+          "note": "Mount Vesuvius, near Naples, Italy (approximate pin: NCEI published volcano point for event 1348; one point stands for a whole volcano)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "79",
+          "precision": "year",
+          "approximate": false,
+          "label": "79 CE eruption (NCEI lists 25 August)"
+        }
+      ],
+      "sources": [
+        "ncei-sig-volcanoes",
+        "usgs-deadliest-eruptions",
+        "usgs-yvo-naples"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "disasters-overview"
+        }
+      ],
+      "record": "data/atlas/disasters/vesuvius-79.json",
+      "pack": "earth",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Disasters layer (eruption). NCEI event 1348. Gaps: Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown; Deep-time clock: 79 CE sits before the America 250 clock; it joins the Ancient-world deep-time clock when that lands."
+    },
+    {
+      "id": "lisbon-1755",
+      "title": "Lisbon earthquake and tsunami, 1755",
+      "aliases": [
+        "Great Lisbon earthquake",
+        "1755 Lisbon earthquake"
+      ],
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "natural-hazards"
+      ],
+      "see_also_paths": [
+        [
+          "history-places",
+          "events-eras"
+        ],
+        [
+          "earth",
+          "geology-minerals"
+        ]
+      ],
+      "tier": "everyday",
+      "tiers": {
+        "everyday": "On 1 November 1755 a great earthquake struck under the Atlantic off Portugal. A study listed by USGS describes it as the most destructive quake Europe has known, and its tsunami reached coasts on both sides of the ocean.",
+        "student": "NOAA NCEI lists magnitude 8.5 (Mw), intensity XI on the Modified Mercalli scale and 50,000 deaths, and links a tsunami. A 2009 study estimated Mw 8.5–9.0 and put the tsunami at about 5–15 m on the shores of Portugal and Morocco, with accounts from Caribbean islands, Brazil and Newfoundland. Where the fault lies is still debated."
+      },
+      "layer": "disasters",
+      "summary": "On 1 November 1755 a great earthquake struck under the Atlantic off Portugal. A study listed by USGS describes it as the most destructive quake Europe has known, and its tsunami reached coasts on both sides of the ocean.",
+      "places": [
+        {
+          "region": "PT",
+          "lat": 37,
+          "lng": -10,
+          "precision": "site",
+          "note": "Epicentre at sea off Portugal (approximate pin: NCEI published epicentre for event 1339, given to whole degrees; the true source is debated)"
+        }
+      ],
+      "dates": [
+        {
+          "date": "1755-11-01",
+          "precision": "day",
+          "approximate": false,
+          "label": "Earthquake date in the NCEI catalogue"
+        }
+      ],
+      "sources": [
+        "ncei-sig-earthquakes",
+        "usgs-pubs-lisbon-farfield",
+        "usgs-pubs-lisbon-source"
+      ],
+      "related": [
+        {
+          "type": "part-of",
+          "to": "disasters-overview"
+        },
+        {
+          "type": "see-also",
+          "to": "earthquakes-and-plate-faults"
+        }
+      ],
+      "record": "data/atlas/disasters/lisbon-1755.json",
+      "pack": "earth",
+      "status": "draft",
+      "confidence": "medium",
+      "license": "CC BY 4.0",
+      "checked": "2026-11-26",
+      "current": false,
+      "subject_person_living": false,
+      "notes": "Disasters layer (earthquake). NCEI event 1339. Gaps: Exact epicentre: [UNKNOWN]; the pin is NCEI's whole-degree point; Death tolls from other sources: not reviewed [UNKNOWN]."
     }
   ]
 }

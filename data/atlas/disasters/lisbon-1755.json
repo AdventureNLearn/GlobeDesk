@@ -1,0 +1,112 @@
+{
+  "schema": "globedesk.disaster/1",
+  "id": "lisbon-1755",
+  "title": "Lisbon earthquake and tsunami, 1755",
+  "hazard": "earthquake",
+  "region": "Europe",
+  "country": "PT",
+  "place": {
+    "label": "Epicentre at sea off Portugal",
+    "lat": 37,
+    "lng": -10,
+    "approximate": true,
+    "basis": "NCEI published epicentre for event 1339, given to whole degrees; the true source is debated",
+    "coords_source": "NOAA NCEI Significant Earthquake Database, event 1339"
+  },
+  "date": {
+    "date": "1755-11-01",
+    "precision": "day",
+    "label": "Earthquake date in the NCEI catalogue",
+    "source": "ncei-sig-earthquakes"
+  },
+  "ncei": {
+    "dataset": "ncei-sig-earthquakes",
+    "event_id": 1339
+  },
+  "measures": [
+    {
+      "label": "Magnitude (Mw, NCEI)",
+      "value": "8.5",
+      "source": "ncei-sig-earthquakes"
+    },
+    {
+      "label": "Magnitude estimate (2009 study)",
+      "value": "Mw 8.5–9.0",
+      "source": "usgs-pubs-lisbon-farfield"
+    },
+    {
+      "label": "Modified Mercalli intensity (NCEI)",
+      "value": "XI",
+      "source": "ncei-sig-earthquakes"
+    },
+    {
+      "label": "Deaths (NCEI)",
+      "value": "50,000",
+      "source": "ncei-sig-earthquakes"
+    }
+  ],
+  "facts": [
+    {
+      "text": "NCEI links this earthquake to a tsunami record.",
+      "source": "ncei-sig-earthquakes"
+    },
+    {
+      "text": "The study reports that the tsunami climbed roughly 5 to 15 m up the shores of Portugal and Morocco, and that the Azores and Madeira also saw large waves.",
+      "source": "usgs-pubs-lisbon-farfield"
+    },
+    {
+      "text": "Accounts from far across the Atlantic, from Caribbean islands, Brazil and Newfoundland, show the waves travelled the whole ocean.",
+      "source": "usgs-pubs-lisbon-farfield"
+    }
+  ],
+  "claims": [
+    {
+      "text": "The earthquake was about magnitude 8.5 or larger.",
+      "status": "supported",
+      "sources": [
+        "ncei-sig-earthquakes",
+        "usgs-pubs-lisbon-farfield"
+      ]
+    },
+    {
+      "text": "Where the fault that broke lies.",
+      "status": "people-disagree",
+      "sources": [
+        "usgs-pubs-lisbon-farfield",
+        "usgs-pubs-lisbon-source"
+      ],
+      "positions": [
+        {
+          "text": "Simulations put the source south of Gorringe Bank, in the Horseshoe Plain area (2009 study).",
+          "source": "usgs-pubs-lisbon-farfield"
+        },
+        {
+          "text": "The exact source is still uncertain; the Marquês de Pombal fault fitted the geologic record best (2021 study).",
+          "source": "usgs-pubs-lisbon-source"
+        }
+      ]
+    }
+  ],
+  "tiers": {
+    "everyday": "On 1 November 1755 a great earthquake struck under the Atlantic off Portugal. A study listed by USGS describes it as the most destructive quake Europe has known, and its tsunami reached coasts on both sides of the ocean.",
+    "student": "NOAA NCEI lists magnitude 8.5 (Mw), intensity XI on the Modified Mercalli scale and 50,000 deaths, and links a tsunami. A 2009 study estimated Mw 8.5–9.0 and put the tsunami at about 5–15 m on the shores of Portugal and Morocco, with accounts from Caribbean islands, Brazil and Newfoundland. Where the fault lies is still debated."
+  },
+  "sources": [
+    "ncei-sig-earthquakes",
+    "usgs-pubs-lisbon-farfield",
+    "usgs-pubs-lisbon-source"
+  ],
+  "official_sources": [
+    "ncei-sig-earthquakes"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Exact epicentre: [UNKNOWN]; the pin is NCEI's whole-degree point",
+    "Death tolls from other sources: not reviewed [UNKNOWN]"
+  ],
+  "see_also_ids": [],
+  "confidence": "medium",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NOAA NCEI and USGS values are US government works; linked sources keep their own terms",
+  "subject_person_living": false
+}

@@ -1,0 +1,196 @@
+{
+  "schema": "globedesk.disaster-overview/1",
+  "id": "disasters-overview",
+  "title": "Volcanoes, earthquakes and disasters",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NOAA NCEI and USGS values are US government works; linked sources keep their own terms",
+  "tiers": {
+    "everyday": "Famous eruptions and earthquakes on the globe, from Vesuvius in 79 CE to Mount St. Helens in 1980. Each pin is the official published point from NOAA, and every number names its source.",
+    "student": "A curated first batch from the NOAA NCEI Significant Volcanic Eruptions and Significant Earthquake databases (doi:10.7289/V5JW8BSH, doi:10.7289/V5TD9V7K), with USGS pages for context. Where NCEI and USGS give different death tolls, both are shown. Pins are NCEI's published points, so they are approximate."
+  },
+  "hazards": [
+    {
+      "id": "eruption",
+      "label": "Volcanic eruptions"
+    },
+    {
+      "id": "earthquake",
+      "label": "Earthquakes"
+    }
+  ],
+  "members": [
+    {
+      "id": "krakatau-1883",
+      "hazard": "eruption",
+      "linked": false
+    },
+    {
+      "id": "tambora-1815",
+      "hazard": "eruption",
+      "linked": false
+    },
+    {
+      "id": "vesuvius-79",
+      "hazard": "eruption",
+      "linked": false
+    },
+    {
+      "id": "lisbon-1755",
+      "hazard": "earthquake",
+      "linked": false
+    },
+    {
+      "id": "mount-st-helens-1980",
+      "hazard": "eruption",
+      "linked": true
+    },
+    {
+      "id": "san-francisco-earthquake-1906",
+      "hazard": "earthquake",
+      "linked": true
+    }
+  ],
+  "counts": {
+    "eruption": 4,
+    "earthquake": 2
+  },
+  "linked": [
+    {
+      "id": "mount-st-helens-1980",
+      "hazard": "eruption",
+      "facts": [
+        {
+          "text": "NCEI rates the eruption VEI 5 and counts 57 direct deaths (61 in total).",
+          "source": "ncei-sig-volcanoes"
+        },
+        {
+          "text": "The USGS deadliest-eruptions table also gives 57 deaths, from ash asphyxiation.",
+          "source": "usgs-deadliest-eruptions"
+        }
+      ]
+    },
+    {
+      "id": "san-francisco-earthquake-1906",
+      "hazard": "earthquake",
+      "facts": [
+        {
+          "text": "NCEI lists magnitude 7.9 (Mw) and 700 deaths; other published tolls were not reviewed [UNKNOWN].",
+          "source": "ncei-sig-earthquakes"
+        }
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "id": "lisbon-three-coasts",
+      "title": "Lisbon 1755: one earthquake, three coasts",
+      "steps": [
+        {
+          "entry": "lisbon-1755",
+          "text": "On 1 November 1755 a great earthquake struck under the Atlantic off Portugal. NCEI lists magnitude 8.5 and 50,000 deaths.",
+          "sources": [
+            "ncei-sig-earthquakes"
+          ]
+        },
+        {
+          "entry": "lisbon-1755",
+          "text": "A tsunami followed. On the shores of Portugal and Morocco it climbed roughly 5 to 15 m, and the Azores and Madeira also saw large waves.",
+          "sources": [
+            "usgs-pubs-lisbon-farfield"
+          ]
+        },
+        {
+          "entry": "lisbon-1755",
+          "text": "The waves crossed the ocean: far-away accounts come from Caribbean islands, Brazil and Newfoundland.",
+          "sources": [
+            "usgs-pubs-lisbon-farfield"
+          ]
+        },
+        {
+          "entry": "lisbon-1755",
+          "text": "Scientists still disagree about which fault broke. One study modelled a source south of Gorringe Bank; a later one found the Marquês de Pombal fault fitted best.",
+          "sources": [
+            "usgs-pubs-lisbon-farfield",
+            "usgs-pubs-lisbon-source"
+          ]
+        },
+        {
+          "entry": "earthquakes-and-plate-faults",
+          "text": "Next: the Atlas entry on earthquakes and plate faults, for how faults break.",
+          "sources": [
+            "usgs-earthquakes-faq"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eruptions-felt-worldwide",
+      "title": "Tambora 1815 and Krakatau 1883: eruptions felt worldwide",
+      "steps": [
+        {
+          "entry": "tambora-1815",
+          "text": "April 1815: Tambora erupts. NCEI rates it VEI 7, the highest in this batch.",
+          "sources": [
+            "ncei-sig-volcanoes"
+          ]
+        },
+        {
+          "entry": "tambora-1815",
+          "text": "The death toll is disputed: NCEI counts 60,000 in total, USGS 92,000, mostly from starvation.",
+          "sources": [
+            "ncei-sig-volcanoes",
+            "usgs-deadliest-eruptions"
+          ]
+        },
+        {
+          "entry": "krakatau-1883",
+          "text": "August 1883: Krakatau explodes. The sound was heard about 5,000 km away.",
+          "sources": [
+            "usgs-hvo-krakatau"
+          ]
+        },
+        {
+          "entry": "krakatau-1883",
+          "text": "The tsunami killed most of the roughly 36,000 victims.",
+          "sources": [
+            "ncei-sig-volcanoes",
+            "usgs-deadliest-eruptions"
+          ]
+        },
+        {
+          "entry": "krakatau-1883",
+          "text": "Both eruptions put sulfate aerosols high into the atmosphere, and USGS says that cools the climate. Krakatau's dust lowered global temperatures and caused vivid sunsets.",
+          "sources": [
+            "usgs-volcanoes-climate",
+            "usgs-hvo-krakatau"
+          ]
+        },
+        {
+          "entry": "mount-st-helens-1980",
+          "text": "Compare a modern eruption: Mount St. Helens in 1980 was VEI 5, with 57 deaths.",
+          "sources": [
+            "ncei-sig-volcanoes",
+            "usgs-deadliest-eruptions"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ncei-sig-volcanoes",
+    "ncei-sig-earthquakes",
+    "usgs-deadliest-eruptions",
+    "usgs-volcanoes-climate",
+    "usgs-hvo-krakatau",
+    "usgs-yvo-naples",
+    "usgs-pubs-lisbon-farfield",
+    "usgs-pubs-lisbon-source",
+    "usgs-earthquakes-faq"
+  ],
+  "excluded": [
+    {
+      "name": "Smithsonian Global Volcanism Program",
+      "reason": "Reuse terms [UNKNOWN]; not bundled or linked"
+    }
+  ]
+}

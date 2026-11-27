@@ -1,0 +1,110 @@
+{
+  "schema": "globedesk.disaster/1",
+  "id": "krakatau-1883",
+  "title": "Krakatau eruption, 1883",
+  "hazard": "eruption",
+  "region": "Asia",
+  "country": "ID",
+  "place": {
+    "label": "Krakatau volcano, Indonesia",
+    "lat": -6.101,
+    "lng": 105.423,
+    "approximate": true,
+    "basis": "NCEI published volcano point for event 2429; one point stands for a whole volcano",
+    "coords_source": "NOAA NCEI Significant Volcanic Eruptions Database, event 2429"
+  },
+  "date": {
+    "date": "1883-08-27",
+    "precision": "day",
+    "label": "Eruption date in the NCEI catalogue",
+    "source": "ncei-sig-volcanoes"
+  },
+  "ncei": {
+    "dataset": "ncei-sig-volcanoes",
+    "event_id": 2429
+  },
+  "measures": [
+    {
+      "label": "Volcanic Explosivity Index (VEI)",
+      "value": "6",
+      "source": "ncei-sig-volcanoes"
+    },
+    {
+      "label": "Deaths from the eruption itself (NCEI)",
+      "value": "2,000",
+      "source": "ncei-sig-volcanoes"
+    },
+    {
+      "label": "Deaths in total, tsunami included (NCEI)",
+      "value": "36,417",
+      "source": "ncei-sig-volcanoes"
+    },
+    {
+      "label": "Deaths (USGS deadliest-eruptions table)",
+      "value": "36,000 (36,417); main cause: tsunami",
+      "source": "usgs-deadliest-eruptions"
+    }
+  ],
+  "facts": [
+    {
+      "text": "NCEI files this eruption as a caldera volcano and links it to a tsunami record.",
+      "source": "ncei-sig-volcanoes"
+    },
+    {
+      "text": "Explosions on 27 August 1883 were heard about 5,000 km away; USGS calls it the loudest and farthest-travelled sound in recorded history.",
+      "source": "usgs-hvo-krakatau"
+    },
+    {
+      "text": "The island, about 30 km² before the eruption, nearly vanished. About 25 km³ of material was thrown out and the eruption column rose above 30 km.",
+      "source": "usgs-hvo-krakatau"
+    },
+    {
+      "text": "Dust carried into the stratosphere lowered global temperatures and caused vivid sunsets.",
+      "source": "usgs-hvo-krakatau"
+    },
+    {
+      "text": "A new volcano, Anak Krakatau, appeared about 50 years later.",
+      "source": "usgs-hvo-krakatau"
+    },
+    {
+      "text": "USGS says the 1991 Pinatubo eruption disturbed the atmosphere probably less than Krakatau 1883 and Tambora 1815 did.",
+      "source": "usgs-volcanoes-climate"
+    }
+  ],
+  "claims": [
+    {
+      "text": "About 36,000 people died, most of them in the tsunami.",
+      "status": "supported",
+      "sources": [
+        "ncei-sig-volcanoes",
+        "usgs-deadliest-eruptions"
+      ]
+    }
+  ],
+  "tiers": {
+    "everyday": "In August 1883 the Krakatau volcano in Indonesia blew apart. The explosions were heard about 5,000 km away, and the tsunami that followed killed tens of thousands of people.",
+    "student": "NOAA NCEI lists the 27 August 1883 eruption of Krakatau at VEI 6, with 36,417 deaths in total. USGS gives about 36,000 and names the tsunami as the main cause. A USGS Volcano Watch article says about 25 km³ of material was thrown out, the island nearly vanished, and dust in the stratosphere lowered global temperatures."
+  },
+  "sources": [
+    "ncei-sig-volcanoes",
+    "usgs-deadliest-eruptions",
+    "usgs-hvo-krakatau",
+    "usgs-volcanoes-climate"
+  ],
+  "official_sources": [
+    "ncei-sig-volcanoes",
+    "usgs-deadliest-eruptions",
+    "usgs-hvo-krakatau",
+    "usgs-volcanoes-climate"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Hour-by-hour timeline of 26–27 August 1883: [UNKNOWN] in the sources checked",
+    "Present-day activity: [UNKNOWN] (Smithsonian GVP not used; its terms are [UNKNOWN])"
+  ],
+  "see_also_ids": [],
+  "confidence": "high",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NOAA NCEI and USGS values are US government works; linked sources keep their own terms",
+  "subject_person_living": false
+}

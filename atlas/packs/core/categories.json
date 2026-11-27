@@ -313,6 +313,10 @@
         {
           "id": "land-cover",
           "title": "Land cover"
+        },
+        {
+          "id": "natural-hazards",
+          "title": "Volcanoes, earthquakes and disasters"
         }
       ]
     },

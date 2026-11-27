@@ -4,6 +4,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { validateSchema } from "../../tests/jsonschema-lite.mjs";
 import { hygieneHits } from "./hygiene.mjs";
+import { validateDisasters } from "./disasters-rules.mjs";
 import { ATLAS, J, JR, MAX_BYTES, CATEGORY_PACKS, allEntries, fileInfo, packSha, exists, daysBetween, DATE_FORM, packCategory, categoryPacks } from "./lib.mjs";
 
 const NOW_MAX_DAYS = 92; // "about 90 days"
@@ -242,6 +243,7 @@ export function validateAtlas() {
   const bellRegions = entries.filter((e) => e.layer === "bells" && e.kind === "object" && e.record && exists(e.record)).map((e) => JR(e.record).region);
   entries.filter((e) => e.record && exists(e.record) && JR(e.record).schema === "globedesk.bell-overview/1")
     .forEach((e) => problems.push(...bellOverviewRules(e, JR(e.record), { ...ctx, overviewSchema, bellRegions })));
+  problems.push(...validateDisasters(entries, ctx));
   const index = J("packs/core/index.json").entries.map((e) => e.id).sort();
   if (JSON.stringify(index) !== JSON.stringify([...ids].sort())) problems.push("core index does not list exactly the pack entries");
   problems.push(...deskRules(JR("desks/work-desks.json")));
