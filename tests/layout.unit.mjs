@@ -125,7 +125,7 @@ await t("the static CSP matches the approved host list", () => {
   const cspMeta = html.match(/Content-Security-Policy" content="([^"]+)"/);
   assert.ok(cspMeta, "CSP meta is present");
   const policy = cspMeta[1];
-  const allow = ["api.maptiler.com", "basemap.nationalmap.gov", "gibs.earthdata.nasa.gov", "hydro.nationalmap.gov", "nowcoast.noaa.gov", "photon.komoot.io", "s3.amazonaws.com", "tigerweb.geo.census.gov", "tiles.maps.eox.at", "tiles.openfreemap.org", "www.youtube-nocookie.com"];
+  const allow = ["api.maptiler.com", "basemap.nationalmap.gov", "gibs.earthdata.nasa.gov", "hydro.nationalmap.gov", "mrdata.usgs.gov", "nowcoast.noaa.gov", "photon.komoot.io", "s3.amazonaws.com", "tigerweb.geo.census.gov", "tiles.maps.eox.at", "tiles.openfreemap.org", "www.youtube-nocookie.com"];
   const got = [...new Set([...policy.matchAll(/https:\/\/([^/\s;"']+)/g)].map((m) => m[1].split("/")[0]))].sort();
   assert.equal(JSON.stringify(got), JSON.stringify(allow));
 });

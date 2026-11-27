@@ -583,6 +583,28 @@
     return m ? m[1] : "";
   }
 
+  // An overlay switched off by the app (host down) must not look on. Uncheck its switch in the
+  // Layers panel and the Inspector right away, without waiting for a panel redraw.
+  function reflectSwitchOff(id) {
+    const doc = window.document;
+    if (!doc || typeof doc.querySelectorAll !== "function" || !/^[A-Za-z0-9_-]+$/.test(String(id))) return 0;
+    const layer = byId(id);
+    const text = layer ? statusLabel(tokenFor(layer)) : "";
+    let n = 0;
+    Array.prototype.forEach.call(doc.querySelectorAll('[data-lp-gis="' + id + '"], [data-gis="' + id + '"]'), (el) => {
+      el.checked = false;
+      if (el.setAttribute) el.setAttribute("aria-checked", "false");
+      const row = el.closest ? el.closest("label") : null;
+      if (row) {
+        if (row.classList) row.classList.remove("on");
+        const st = row.querySelector ? row.querySelector(".gis-status") : null;
+        if (st && text) st.textContent = text;
+      }
+      n++;
+    });
+    return n;
+  }
+
   function noteTileError(evt) {
     const err = evt && evt.error;
     const msg = (err && err.message) || "";
@@ -599,6 +621,7 @@
       setHealth(id, "error", "host is down");
       state.overlaysOn[id] = false;
       try { syncMap(); } catch (e) { /* ignore */ }
+      reflectSwitchOff(id);
       const label = (layer && layer.label) || id;
       if (GD.ui && GD.ui.toast) GD.ui.toast(label + " is unreachable. The overlay was switched off.");
     }
@@ -786,6 +809,6 @@
     serviceMetadataUrl, arcgisExport, wmsGetMap, featureQueryUrl, dropAttributes,
     rasterTileUrl, syncMap, hostnamesFrom, cspHosts, listed, gisStatus, setOverlay, setLiveEnabled, isLiveEnabled,
     refresh, refreshLayer, onMapMoveEnd, MOVEEND_DEBOUNCE_MS, classifyResponse, byId, tokenFor, statusLabel, editorRows,
-    storyLayers, mountNewsdesk, minZoomOf, yearStatusFor, noteTileError, noteSourceLoaded, TILE_ERROR_LIMIT
+    storyLayers, mountNewsdesk, minZoomOf, yearStatusFor, noteTileError, noteSourceLoaded, reflectSwitchOff, TILE_ERROR_LIMIT
   };
 })();

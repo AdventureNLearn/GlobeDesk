@@ -77,6 +77,21 @@
       "minzoom": 4
     },
     {
+      "id": "usgs-mrds",
+      "label": "USGS Mineral Resources Data System (MRDS): mineral deposits (live)",
+      "group": "overlay",
+      "kind": "raster",
+      "status": "working",
+      "runtime": true,
+      "wmsLayer": "mrds",
+      "credit": "U.S. Geological Survey, Mineral Resources Data System (MRDS). Live map service. USGS: \"As of 2011, USGS has ceased systematic updates to MRDS.\"",
+      "terms": "USGS metadata: \"Access_Constraints: none\" and \"Use_Constraints: none\"; WMS capabilities: Fees none, AccessConstraints none. Shown live from mrdata.usgs.gov only, never cached or bundled. A down or blocked host is shown as unavailable and skipped.",
+      "termsUrl": "https://mrdata.usgs.gov/metadata/mrds.faq.html",
+      "sourceUrl": "https://mrdata.usgs.gov/services/mrds",
+      "tiles": "https://mrdata.usgs.gov/services/mrds?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=mrds&STYLES=&SRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256&FORMAT=image/png&TRANSPARENT=true",
+      "minzoom": 4
+    },
+    {
       "id": "ohm",
       "label": "Historical map (OpenHistoricalMap)",
       "group": "overlay",

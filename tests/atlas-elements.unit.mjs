@@ -83,8 +83,15 @@ t("Group 3 La, Lu, Ac and Lr are unresolved; the pack does not pick a side", () 
   assert.match(y.summary, /IUPAC group 3/);
 });
 
-t("the pack does not cite PubChem or Bowserinator, and unknown weights stay \\[UNKNOWN\\]", () => {
-  const blob = JSON.stringify(chem) + JSON.stringify(sources.filter((s) => [
+t("the pack bundles nothing from PubChem or Bowserinator (PubChem is an outbound link id only), and unknown weights stay \\[UNKNOWN\\]", () => {
+  // Owner pick (chem index C1): withheld properties link out to PubChem; no PubChem value is bundled.
+  // The only exemption: the outbound source id inside each entry's own sources list. Anywhere else
+  // (a summary, a field, a record) it still fails the check below.
+  const OUTBOUND = "pubchem-elements-outbound";
+  const out = sources.find((s) => s.id === OUTBOUND);
+  assert.ok(out && /^Outbound link only\./.test(out.license), "the PubChem source is an outbound link only");
+  const chemNoOutbound = { ...chem, entries: chem.entries.map((e) => (Array.isArray(e.sources) ? { ...e, sources: e.sources.filter((id) => id !== OUTBOUND) } : e)) };
+  const blob = JSON.stringify(chemNoOutbound) + JSON.stringify(sources.filter((s) => [
     "nist-atomic-weights", "iupac-periodic-table-2022", "wikidata-chemical-elements"
   ].includes(s.id)));
   assert.equal(/pubchem/i.test(blob), false);

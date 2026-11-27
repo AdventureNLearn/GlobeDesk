@@ -1,0 +1,4132 @@
+{
+  "schema": "globedesk.chem/0-draft",
+  "id": "element-ores-by-country",
+  "title": "Where each element's ore or metal is produced, by country (USGS MCS 2026)",
+  "status": "draft",
+  "checked": "2026-11-26",
+  "source": "usgs-mcs-2026-data",
+  "licence": "CC0 1.0 / U.S. public domain (USGS Mineral Commodity Summaries 2026 data release)",
+  "note": "Country totals as USGS reports them (latest year in the release; USGS marks many as estimates). Values are copied as printed, including USGS symbols such as W or NA; their meaning is in the MCS 2026 notes. A pin is a reference point inside the country, not a mine or deposit. 'Other countries' and dash (no production) rows are not pinned.",
+  "left_out": [
+    "Rare Earths (mixed elements)",
+    "Salt (sodium chloride)",
+    "Boron (several reported forms)",
+    "Nitrogen (fixed)—ammonia (a compound)",
+    "Yttrium (reported as Y2O3 equivalent)",
+    "Scandium (global figure only)"
+  ],
+  "no_point": [],
+  "byElement": {
+    "aluminium-element": {
+      "commodity": "Bauxite",
+      "measure": "Bauxite (aluminium ore), mine production",
+      "unit": "thousand metric dry tons",
+      "year": "2025",
+      "world_total": "440,000",
+      "countries": [
+        {
+          "country": "Guinea",
+          "value": "150,000",
+          "n": 150000,
+          "a3": "GIN",
+          "lat": 10.448,
+          "lng": -11.062
+        },
+        {
+          "country": "Australia",
+          "value": "97,000",
+          "n": 97000,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "China",
+          "value": "87,000",
+          "n": 87000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Brazil",
+          "value": "33,000",
+          "n": 33000,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "India",
+          "value": "25,000",
+          "n": 25000,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "Indonesia",
+          "value": "10,000",
+          "n": 10000,
+          "a3": "IDN",
+          "lat": -0.254,
+          "lng": 114.023
+        },
+        {
+          "country": "Jamaica",
+          "value": "6,200",
+          "n": 6200,
+          "a3": "JAM",
+          "lat": 18.136,
+          "lng": -77.327
+        },
+        {
+          "country": "Russia",
+          "value": "5,700",
+          "n": 5700,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Saudi Arabia",
+          "value": "5,700",
+          "n": 5700,
+          "a3": "SAU",
+          "lat": 24.123,
+          "lng": 44.516
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "4,800",
+          "n": 4800,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Turkey",
+          "value": "3,800",
+          "n": 3800,
+          "a3": "TUR",
+          "lat": 38.991,
+          "lng": 35.391
+        },
+        {
+          "country": "Vietnam",
+          "value": "3,800",
+          "n": 3800,
+          "a3": "VNM",
+          "lat": 21.035,
+          "lng": 105.848
+        },
+        {
+          "country": "Greece",
+          "value": "960",
+          "n": 960,
+          "a3": "GRC",
+          "lat": 39.341,
+          "lng": 22.561
+        },
+        {
+          "country": "United States",
+          "value": "W",
+          "n": null,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "antimony-element": {
+      "commodity": "Antimony",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "110,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "40,000",
+          "n": 40000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Russia",
+          "value": "32,000",
+          "n": 32000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Tajikistan",
+          "value": "22,000",
+          "n": 22000,
+          "a3": "TJK",
+          "lat": 38.583,
+          "lng": 71.034
+        },
+        {
+          "country": "Bolivia",
+          "value": "5,000",
+          "n": 5000,
+          "a3": "BOL",
+          "lat": -16.728,
+          "lng": -64.642
+        },
+        {
+          "country": "Burma",
+          "value": "4,500",
+          "n": 4500,
+          "a3": "MMR",
+          "lat": 21.014,
+          "lng": 96.505
+        },
+        {
+          "country": "Turkey",
+          "value": "3,000",
+          "n": 3000,
+          "a3": "TUR",
+          "lat": 38.991,
+          "lng": 35.391
+        },
+        {
+          "country": "Australia",
+          "value": "1,300",
+          "n": 1300,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "800",
+          "n": 800,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Kyrgyzstan",
+          "value": "700",
+          "n": 700,
+          "a3": "KGZ",
+          "lat": 41.507,
+          "lng": 74.619
+        },
+        {
+          "country": "Mexico",
+          "value": "600",
+          "n": 600,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Pakistan",
+          "value": "260",
+          "n": 260,
+          "a3": "PAK",
+          "lat": 29.975,
+          "lng": 69.415
+        },
+        {
+          "country": "Vietnam",
+          "value": "220",
+          "n": 220,
+          "a3": "VNM",
+          "lat": 21.035,
+          "lng": 105.848
+        },
+        {
+          "country": "Laos",
+          "value": "200",
+          "n": 200,
+          "a3": "LAO",
+          "lat": 18.445,
+          "lng": 103.751
+        },
+        {
+          "country": "Iran",
+          "value": "90",
+          "n": 90,
+          "a3": "IRN",
+          "lat": 32.518,
+          "lng": 54.286
+        },
+        {
+          "country": "Guatemala",
+          "value": "50",
+          "n": 50,
+          "a3": "GTM",
+          "lat": 15.7,
+          "lng": -90.369
+        },
+        {
+          "country": "United States",
+          "value": "W",
+          "n": null,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "arsenic-element": {
+      "commodity": "Arsenic",
+      "measure": "Arsenic trioxide production (gross weight)",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "61,000",
+      "countries": [
+        {
+          "country": "Peru",
+          "value": "30,000",
+          "n": 30000,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "China",
+          "value": "24,000",
+          "n": 24000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Morocco",
+          "value": "5,000",
+          "n": 5000,
+          "a3": "MAR",
+          "lat": 29.885,
+          "lng": -8.419
+        },
+        {
+          "country": "Belgium",
+          "value": "1,000",
+          "n": 1000,
+          "a3": "BEL",
+          "lat": 50.656,
+          "lng": 4.579
+        },
+        {
+          "country": "Russia",
+          "value": "500",
+          "n": 500,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        }
+      ]
+    },
+    "beryllium-element": {
+      "commodity": "Beryllium",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "430",
+      "countries": [
+        {
+          "country": "United States",
+          "value": "230",
+          "n": 230,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Brazil",
+          "value": "80",
+          "n": 80,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "China",
+          "value": "77",
+          "n": 77,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Nigeria",
+          "value": "40",
+          "n": 40,
+          "a3": "NGA",
+          "lat": 9.549,
+          "lng": 7.996
+        },
+        {
+          "country": "Mozambique",
+          "value": "3",
+          "n": 3,
+          "a3": "MOZ",
+          "lat": -17.231,
+          "lng": 35.473
+        },
+        {
+          "country": "Madagascar",
+          "value": "1",
+          "n": 1,
+          "a3": "MDG",
+          "lat": -19.356,
+          "lng": 46.691
+        },
+        {
+          "country": "Rwanda",
+          "value": "1",
+          "n": 1,
+          "a3": "RWA",
+          "lat": -2.012,
+          "lng": 29.919
+        }
+      ]
+    },
+    "bismuth-element": {
+      "commodity": "Bismuth",
+      "measure": "Refinery production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "16,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "14,000",
+          "n": 14000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Korea, Republic of",
+          "value": "1,000",
+          "n": 1000,
+          "a3": "KOR",
+          "lat": 36.427,
+          "lng": 127.821
+        },
+        {
+          "country": "Japan",
+          "value": "500",
+          "n": 500,
+          "a3": "JPN",
+          "lat": 36.021,
+          "lng": 136.883
+        },
+        {
+          "country": "Laos",
+          "value": "500",
+          "n": 500,
+          "a3": "LAO",
+          "lat": 18.445,
+          "lng": 103.751
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "180",
+          "n": 180,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Bolivia",
+          "value": "50",
+          "n": 50,
+          "a3": "BOL",
+          "lat": -16.728,
+          "lng": -64.642
+        },
+        {
+          "country": "Bulgaria",
+          "value": "50",
+          "n": 50,
+          "a3": "BGR",
+          "lat": 42.752,
+          "lng": 25.196
+        }
+      ]
+    },
+    "bromine-element": {
+      "commodity": "Bromine",
+      "measure": "Production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "430,000",
+      "countries": [
+        {
+          "country": "Israel",
+          "value": "200,000",
+          "n": 200000,
+          "a3": "ISR",
+          "lat": 31.778,
+          "lng": 35.207
+        },
+        {
+          "country": "Jordan",
+          "value": "110,000",
+          "n": 110000,
+          "a3": "JOR",
+          "lat": 31.246,
+          "lng": 36.781
+        },
+        {
+          "country": "China",
+          "value": "90,000",
+          "n": 90000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Japan",
+          "value": "20,000",
+          "n": 20000,
+          "a3": "JPN",
+          "lat": 36.021,
+          "lng": 136.883
+        },
+        {
+          "country": "India",
+          "value": "7,000",
+          "n": 7000,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "Ukraine",
+          "value": "6,000",
+          "n": 6000,
+          "a3": "UKR",
+          "lat": 49.149,
+          "lng": 31.23
+        },
+        {
+          "country": "United States",
+          "value": "W",
+          "n": null,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "cadmium-element": {
+      "commodity": "Cadmium",
+      "measure": "Refinery production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "23,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "9,500",
+          "n": 9500,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Korea, Republic of",
+          "value": "4,300",
+          "n": 4300,
+          "a3": "KOR",
+          "lat": 36.427,
+          "lng": 127.821
+        },
+        {
+          "country": "Canada",
+          "value": "1,300",
+          "n": 1300,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Japan",
+          "value": "1,300",
+          "n": 1300,
+          "a3": "JPN",
+          "lat": 36.021,
+          "lng": 136.883
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "1,100",
+          "n": 1100,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Mexico",
+          "value": "1,000",
+          "n": 1000,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Russia",
+          "value": "1,000",
+          "n": 1000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Australia",
+          "value": "600",
+          "n": 600,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Netherlands",
+          "value": "600",
+          "n": 600,
+          "a3": "NLD",
+          "lat": 52.299,
+          "lng": 5.514
+        },
+        {
+          "country": "Peru",
+          "value": "600",
+          "n": 600,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "Norway",
+          "value": "430",
+          "n": 430,
+          "a3": "NOR",
+          "lat": 59.919,
+          "lng": 10.748
+        },
+        {
+          "country": "Poland",
+          "value": "400",
+          "n": 400,
+          "a3": "POL",
+          "lat": 52.148,
+          "lng": 19.311
+        },
+        {
+          "country": "Bulgaria",
+          "value": "380",
+          "n": 380,
+          "a3": "BGR",
+          "lat": 42.752,
+          "lng": 25.196
+        },
+        {
+          "country": "Uzbekistan",
+          "value": "230",
+          "n": 230,
+          "a3": "UZB",
+          "lat": 41.749,
+          "lng": 63.202
+        },
+        {
+          "country": "Germany",
+          "value": "220",
+          "n": 220,
+          "a3": "DEU",
+          "lat": 51.134,
+          "lng": 10.29
+        },
+        {
+          "country": "United States",
+          "value": "200",
+          "n": 200,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "carbon-element": {
+      "commodity": "Graphite (Natural)",
+      "measure": "Natural graphite, mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "1,800,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "1,400,000",
+          "n": 1400000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Madagascar",
+          "value": "80,000",
+          "n": 80000,
+          "a3": "MDG",
+          "lat": -19.356,
+          "lng": 46.691
+        },
+        {
+          "country": "Tanzania",
+          "value": "75,000",
+          "n": 75000,
+          "a3": "TZA",
+          "lat": -6.259,
+          "lng": 34.754
+        },
+        {
+          "country": "Brazil",
+          "value": "65,000",
+          "n": 65000,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "Mozambique",
+          "value": "60,000",
+          "n": 60000,
+          "a3": "MOZ",
+          "lat": -17.231,
+          "lng": 35.473
+        },
+        {
+          "country": "Russia",
+          "value": "25,000",
+          "n": 25000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "India",
+          "value": "17,000",
+          "n": 17000,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "Canada",
+          "value": "8,000",
+          "n": 8000,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Korea, North",
+          "value": "8,000",
+          "n": 8000,
+          "a3": "PRK",
+          "lat": 40.143,
+          "lng": 127.166
+        },
+        {
+          "country": "Norway",
+          "value": "6,600",
+          "n": 6600,
+          "a3": "NOR",
+          "lat": 59.919,
+          "lng": 10.748
+        },
+        {
+          "country": "Sri Lanka",
+          "value": "3,200",
+          "n": 3200,
+          "a3": "LKA",
+          "lat": 7.698,
+          "lng": 80.668
+        },
+        {
+          "country": "Turkey",
+          "value": "2,200",
+          "n": 2200,
+          "a3": "TUR",
+          "lat": 38.991,
+          "lng": 35.391
+        },
+        {
+          "country": "Ukraine",
+          "value": "800",
+          "n": 800,
+          "a3": "UKR",
+          "lat": 49.149,
+          "lng": 31.23
+        },
+        {
+          "country": "Mexico",
+          "value": "740",
+          "n": 740,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Korea, Republic of",
+          "value": "500",
+          "n": 500,
+          "a3": "KOR",
+          "lat": 36.427,
+          "lng": 127.821
+        },
+        {
+          "country": "Vietnam",
+          "value": "500",
+          "n": 500,
+          "a3": "VNM",
+          "lat": 21.035,
+          "lng": 105.848
+        },
+        {
+          "country": "Austria",
+          "value": "200",
+          "n": 200,
+          "a3": "AUT",
+          "lat": 47.615,
+          "lng": 14.076
+        },
+        {
+          "country": "Germany",
+          "value": "140",
+          "n": 140,
+          "a3": "DEU",
+          "lat": 51.134,
+          "lng": 10.29
+        }
+      ]
+    },
+    "chromium-element": {
+      "commodity": "Chromium",
+      "measure": "Mine production",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "51,000",
+      "countries": [
+        {
+          "country": "South Africa",
+          "value": "23,000",
+          "n": 23000,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Turkey",
+          "value": "9,000",
+          "n": 9000,
+          "a3": "TUR",
+          "lat": 38.991,
+          "lng": 35.391
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "7,000",
+          "n": 7000,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "India",
+          "value": "3,000",
+          "n": 3000,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "Brazil",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "Zimbabwe",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "ZWE",
+          "lat": -18.906,
+          "lng": 29.789
+        },
+        {
+          "country": "Finland",
+          "value": "1,900",
+          "n": 1900,
+          "a3": "FIN",
+          "lat": 64.502,
+          "lng": 26.213
+        }
+      ]
+    },
+    "cobalt-element": {
+      "commodity": "Cobalt",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "310,000",
+      "countries": [
+        {
+          "country": "Congo (Kinshasa)",
+          "value": "230,000",
+          "n": 230000,
+          "a3": "COD",
+          "lat": -2.85,
+          "lng": 23.583
+        },
+        {
+          "country": "Indonesia",
+          "value": "44,000",
+          "n": 44000,
+          "a3": "IDN",
+          "lat": -0.254,
+          "lng": 114.023
+        },
+        {
+          "country": "Russia",
+          "value": "7,700",
+          "n": 7700,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Madagascar",
+          "value": "3,900",
+          "n": 3900,
+          "a3": "MDG",
+          "lat": -19.356,
+          "lng": 46.691
+        },
+        {
+          "country": "Australia",
+          "value": "3,700",
+          "n": 3700,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Philippines",
+          "value": "3,700",
+          "n": 3700,
+          "a3": "PHL",
+          "lat": 15.751,
+          "lng": 121.545
+        },
+        {
+          "country": "Canada",
+          "value": "3,500",
+          "n": 3500,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Papua New Guinea",
+          "value": "2,800",
+          "n": 2800,
+          "a3": "PNG",
+          "lat": -6.646,
+          "lng": 144.331
+        },
+        {
+          "country": "China",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Cuba",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "CUB",
+          "lat": 21.632,
+          "lng": -78.96
+        },
+        {
+          "country": "Turkey",
+          "value": "1,900",
+          "n": 1900,
+          "a3": "TUR",
+          "lat": 38.991,
+          "lng": 35.391
+        },
+        {
+          "country": "United States",
+          "value": "300",
+          "n": 300,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "copper-element": {
+      "commodity": "Copper",
+      "measure": "Mine production",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "23,000",
+      "countries": [
+        {
+          "country": "Chile",
+          "value": "5,300",
+          "n": 5300,
+          "a3": "CHL",
+          "lat": -37.349,
+          "lng": -71.672
+        },
+        {
+          "country": "Congo (Kinshasa)",
+          "value": "3,200",
+          "n": 3200,
+          "a3": "COD",
+          "lat": -2.85,
+          "lng": 23.583
+        },
+        {
+          "country": "Peru",
+          "value": "2,700",
+          "n": 2700,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "China",
+          "value": "1,800",
+          "n": 1800,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Russia",
+          "value": "1,300",
+          "n": 1300,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "United States",
+          "value": "1,000",
+          "n": 1000,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Zambia",
+          "value": "940",
+          "n": 940,
+          "a3": "ZMB",
+          "lat": -13.395,
+          "lng": 27.727
+        },
+        {
+          "country": "Australia",
+          "value": "730",
+          "n": 730,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Indonesia",
+          "value": "710",
+          "n": 710,
+          "a3": "IDN",
+          "lat": -0.254,
+          "lng": 114.023
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "710",
+          "n": 710,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Mexico",
+          "value": "690",
+          "n": 690,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Canada",
+          "value": "500",
+          "n": 500,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Poland",
+          "value": "410",
+          "n": 410,
+          "a3": "POL",
+          "lat": 52.148,
+          "lng": 19.311
+        },
+        {
+          "country": "India",
+          "value": "23",
+          "n": 23,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        }
+      ]
+    },
+    "fluorine-element": {
+      "commodity": "Fluorspar",
+      "measure": "Fluorspar, mine production",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "10,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "6,000",
+          "n": 6000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Mexico",
+          "value": "1,500",
+          "n": 1500,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Mongolia",
+          "value": "1,500",
+          "n": 1500,
+          "a3": "MNG",
+          "lat": 46.824,
+          "lng": 102.947
+        },
+        {
+          "country": "South Africa",
+          "value": "410",
+          "n": 410,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Vietnam",
+          "value": "160",
+          "n": 160,
+          "a3": "VNM",
+          "lat": 21.035,
+          "lng": 105.848
+        },
+        {
+          "country": "Spain",
+          "value": "140",
+          "n": 140,
+          "a3": "ESP",
+          "lat": 40.348,
+          "lng": -3.617
+        },
+        {
+          "country": "Brazil",
+          "value": "100",
+          "n": 100,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "Iran",
+          "value": "70",
+          "n": 70,
+          "a3": "IRN",
+          "lat": 32.518,
+          "lng": 54.286
+        },
+        {
+          "country": "Thailand",
+          "value": "55",
+          "n": 55,
+          "a3": "THA",
+          "lat": 15.018,
+          "lng": 101.006
+        },
+        {
+          "country": "Pakistan",
+          "value": "50",
+          "n": 50,
+          "a3": "PAK",
+          "lat": 29.975,
+          "lng": 69.415
+        },
+        {
+          "country": "Germany",
+          "value": "35",
+          "n": 35,
+          "a3": "DEU",
+          "lat": 51.134,
+          "lng": 10.29
+        },
+        {
+          "country": "Tajikistan",
+          "value": "15",
+          "n": 15,
+          "a3": "TJK",
+          "lat": 38.583,
+          "lng": 71.034
+        },
+        {
+          "country": "United States",
+          "value": "NA",
+          "n": null,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "gallium-element": {
+      "commodity": "Gallium",
+      "measure": "Primary production",
+      "unit": "kilograms",
+      "year": "2025",
+      "world_total": "900,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "900,000",
+          "n": 900000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Russia",
+          "value": "6,000",
+          "n": 6000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Japan",
+          "value": "3,000",
+          "n": 3000,
+          "a3": "JPN",
+          "lat": 36.021,
+          "lng": 136.883
+        }
+      ]
+    },
+    "gold-element": {
+      "commodity": "Gold",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "3,300",
+      "countries": [
+        {
+          "country": "China",
+          "value": "380",
+          "n": 380,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Russia",
+          "value": "310",
+          "n": 310,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Australia",
+          "value": "280",
+          "n": 280,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Canada",
+          "value": "200",
+          "n": 200,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "United States",
+          "value": "160",
+          "n": 160,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Ghana",
+          "value": "150",
+          "n": 150,
+          "a3": "GHA",
+          "lat": 7.928,
+          "lng": -1.236
+        },
+        {
+          "country": "Mexico",
+          "value": "140",
+          "n": 140,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "130",
+          "n": 130,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Uzbekistan",
+          "value": "130",
+          "n": 130,
+          "a3": "UZB",
+          "lat": 41.749,
+          "lng": 63.202
+        },
+        {
+          "country": "Peru",
+          "value": "110",
+          "n": 110,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "Indonesia",
+          "value": "90",
+          "n": 90,
+          "a3": "IDN",
+          "lat": -0.254,
+          "lng": 114.023
+        },
+        {
+          "country": "South Africa",
+          "value": "90",
+          "n": 90,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Brazil",
+          "value": "80",
+          "n": 80,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        }
+      ]
+    },
+    "helium-element": {
+      "commodity": "Helium",
+      "measure": "Helium production",
+      "unit": "million cubic meters",
+      "year": "2025",
+      "world_total": "190",
+      "countries": [
+        {
+          "country": "United States",
+          "value": "81",
+          "n": 81,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Qatar",
+          "value": "63",
+          "n": 63,
+          "a3": "QAT",
+          "lat": 25.323,
+          "lng": 51.183
+        },
+        {
+          "country": "Russia",
+          "value": "18",
+          "n": 18,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Algeria",
+          "value": "11",
+          "n": 11,
+          "a3": "DZA",
+          "lat": 28.186,
+          "lng": 2.598
+        },
+        {
+          "country": "Canada",
+          "value": "6",
+          "n": 6,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "China",
+          "value": "3",
+          "n": 3,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Poland",
+          "value": "3",
+          "n": 3,
+          "a3": "POL",
+          "lat": 52.148,
+          "lng": 19.311
+        },
+        {
+          "country": "South Africa",
+          "value": "s",
+          "n": null,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        }
+      ]
+    },
+    "indium-element": {
+      "commodity": "Indium",
+      "measure": "Refinery production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "1,100",
+      "countries": [
+        {
+          "country": "China",
+          "value": "760",
+          "n": 760,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Korea, Republic of",
+          "value": "180",
+          "n": 180,
+          "a3": "KOR",
+          "lat": 36.427,
+          "lng": 127.821
+        },
+        {
+          "country": "Japan",
+          "value": "65",
+          "n": 65,
+          "a3": "JPN",
+          "lat": 36.021,
+          "lng": 136.883
+        },
+        {
+          "country": "Canada",
+          "value": "40",
+          "n": 40,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "France",
+          "value": "21",
+          "n": 21,
+          "a3": "FRA",
+          "lat": 46.607,
+          "lng": 2.339
+        },
+        {
+          "country": "Belgium",
+          "value": "19",
+          "n": 19,
+          "a3": "BEL",
+          "lat": 50.656,
+          "lng": 4.579
+        },
+        {
+          "country": "Russia",
+          "value": "5",
+          "n": 5,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Uzbekistan",
+          "value": "1",
+          "n": 1,
+          "a3": "UZB",
+          "lat": 41.749,
+          "lng": 63.202
+        }
+      ]
+    },
+    "iodine-element": {
+      "commodity": "Iodine",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "34,000",
+      "countries": [
+        {
+          "country": "Chile",
+          "value": "23,000",
+          "n": 23000,
+          "a3": "CHL",
+          "lat": -37.349,
+          "lng": -71.672
+        },
+        {
+          "country": "Japan",
+          "value": "9,000",
+          "n": 9000,
+          "a3": "JPN",
+          "lat": 36.021,
+          "lng": 136.883
+        },
+        {
+          "country": "Turkmenistan",
+          "value": "800",
+          "n": 800,
+          "a3": "TKM",
+          "lat": 39.091,
+          "lng": 59.274
+        },
+        {
+          "country": "Iran",
+          "value": "700",
+          "n": 700,
+          "a3": "IRN",
+          "lat": 32.518,
+          "lng": 54.286
+        },
+        {
+          "country": "Azerbaijan",
+          "value": "210",
+          "n": 210,
+          "a3": "AZE",
+          "lat": 40.279,
+          "lng": 47.681
+        },
+        {
+          "country": "Indonesia",
+          "value": "50",
+          "n": 50,
+          "a3": "IDN",
+          "lat": -0.254,
+          "lng": 114.023
+        },
+        {
+          "country": "Russia",
+          "value": "8",
+          "n": 8,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "United States",
+          "value": "W",
+          "n": null,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "iron-element": {
+      "commodity": "Iron Ore",
+      "measure": "Iron ore, mine production (iron content)",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "1,600,000",
+      "countries": [
+        {
+          "country": "Australia",
+          "value": "600,000",
+          "n": 600000,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Brazil",
+          "value": "260,000",
+          "n": 260000,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "India",
+          "value": "190,000",
+          "n": 190000,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "China",
+          "value": "180,000",
+          "n": 180000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Iran",
+          "value": "61,000",
+          "n": 61000,
+          "a3": "IRN",
+          "lat": 32.518,
+          "lng": 54.286
+        },
+        {
+          "country": "Russia",
+          "value": "50,000",
+          "n": 50000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "South Africa",
+          "value": "42,000",
+          "n": 42000,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Canada",
+          "value": "41,000",
+          "n": 41000,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Ukraine",
+          "value": "32,000",
+          "n": 32000,
+          "a3": "UKR",
+          "lat": 49.149,
+          "lng": 31.23
+        },
+        {
+          "country": "United States",
+          "value": "24,000",
+          "n": 24000,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Sweden",
+          "value": "18,000",
+          "n": 18000,
+          "a3": "SWE",
+          "lat": 62.812,
+          "lng": 16.598
+        },
+        {
+          "country": "Peru",
+          "value": "14,000",
+          "n": 14000,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "Chile",
+          "value": "12,000",
+          "n": 12000,
+          "a3": "CHL",
+          "lat": -37.349,
+          "lng": -71.672
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "11,000",
+          "n": 11000,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Turkey",
+          "value": "11,000",
+          "n": 11000,
+          "a3": "TUR",
+          "lat": 38.991,
+          "lng": 35.391
+        },
+        {
+          "country": "Mauritania",
+          "value": "9,300",
+          "n": 9300,
+          "a3": "MRT",
+          "lat": 20.21,
+          "lng": -10.326
+        },
+        {
+          "country": "Mexico",
+          "value": "4,800",
+          "n": 4800,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        }
+      ]
+    },
+    "krypton-element": {
+      "commodity": "Krypton",
+      "measure": "Rare-gas production",
+      "unit": "million liters",
+      "year": "2025",
+      "world_total": "110",
+      "countries": [
+        {
+          "country": "United States",
+          "value": "1.5",
+          "n": 1.5,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "lead-element": {
+      "commodity": "Lead",
+      "measure": "Mine production",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "4,500",
+      "countries": [
+        {
+          "country": "China",
+          "value": "1,900",
+          "n": 1900,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Australia",
+          "value": "480",
+          "n": 480,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Peru",
+          "value": "290",
+          "n": 290,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "United States",
+          "value": "280",
+          "n": 280,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Russia",
+          "value": "260",
+          "n": 260,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "India",
+          "value": "220",
+          "n": 220,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "Mexico",
+          "value": "200",
+          "n": 200,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Bolivia",
+          "value": "100",
+          "n": 100,
+          "a3": "BOL",
+          "lat": -16.728,
+          "lng": -64.642
+        },
+        {
+          "country": "Iran",
+          "value": "70",
+          "n": 70,
+          "a3": "IRN",
+          "lat": 32.518,
+          "lng": 54.286
+        },
+        {
+          "country": "Sweden",
+          "value": "70",
+          "n": 70,
+          "a3": "SWE",
+          "lat": 62.812,
+          "lng": 16.598
+        },
+        {
+          "country": "Turkey",
+          "value": "70",
+          "n": 70,
+          "a3": "TUR",
+          "lat": 38.991,
+          "lng": 35.391
+        },
+        {
+          "country": "Tajikistan",
+          "value": "40",
+          "n": 40,
+          "a3": "TJK",
+          "lat": 38.583,
+          "lng": 71.034
+        }
+      ]
+    },
+    "lithium-element": {
+      "commodity": "Lithium",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "290,000",
+      "countries": [
+        {
+          "country": "Australia",
+          "value": "92,000",
+          "n": 92000,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "China",
+          "value": "62,000",
+          "n": 62000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Chile",
+          "value": "56,000",
+          "n": 56000,
+          "a3": "CHL",
+          "lat": -37.349,
+          "lng": -71.672
+        },
+        {
+          "country": "Zimbabwe",
+          "value": "28,000",
+          "n": 28000,
+          "a3": "ZWE",
+          "lat": -18.906,
+          "lng": 29.789
+        },
+        {
+          "country": "Argentina",
+          "value": "23,000",
+          "n": 23000,
+          "a3": "ARG",
+          "lat": -35.22,
+          "lng": -65.15
+        },
+        {
+          "country": "Brazil",
+          "value": "12,000",
+          "n": 12000,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "Mali",
+          "value": "9,400",
+          "n": 9400,
+          "a3": "MLI",
+          "lat": 17.266,
+          "lng": -3.543
+        },
+        {
+          "country": "Canada",
+          "value": "5,600",
+          "n": 5600,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Portugal",
+          "value": "380",
+          "n": 380,
+          "a3": "PRT",
+          "lat": 39.633,
+          "lng": -8.057
+        },
+        {
+          "country": "United States",
+          "value": "W",
+          "n": null,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "magnesium-element": {
+      "commodity": "Magnesium Metal",
+      "measure": "Magnesium metal, smelter production",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "1,100",
+      "countries": [
+        {
+          "country": "China",
+          "value": "950",
+          "n": 950,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Russia",
+          "value": "60",
+          "n": 60,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Brazil",
+          "value": "20",
+          "n": 20,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "Israel",
+          "value": "20",
+          "n": 20,
+          "a3": "ISR",
+          "lat": 31.778,
+          "lng": 35.207
+        },
+        {
+          "country": "Turkey",
+          "value": "15",
+          "n": 15,
+          "a3": "TUR",
+          "lat": 38.991,
+          "lng": 35.391
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "13",
+          "n": 13,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Iran",
+          "value": "5",
+          "n": 5,
+          "a3": "IRN",
+          "lat": 32.518,
+          "lng": 54.286
+        }
+      ]
+    },
+    "manganese-element": {
+      "commodity": "Manganese",
+      "measure": "Mine production",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "20,000",
+      "countries": [
+        {
+          "country": "South Africa",
+          "value": "7,600",
+          "n": 7600,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Gabon",
+          "value": "5,000",
+          "n": 5000,
+          "a3": "GAB",
+          "lat": -0.647,
+          "lng": 11.689
+        },
+        {
+          "country": "Ghana",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "GHA",
+          "lat": 7.928,
+          "lng": -1.236
+        },
+        {
+          "country": "Australia",
+          "value": "1,600",
+          "n": 1600,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Brazil",
+          "value": "800",
+          "n": 800,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "India",
+          "value": "790",
+          "n": 790,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "China",
+          "value": "700",
+          "n": 700,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Côte d’Ivoire",
+          "value": "350",
+          "n": 350,
+          "a3": "CIV",
+          "lat": 7.553,
+          "lng": -5.611
+        }
+      ]
+    },
+    "mercury-element": {
+      "commodity": "Mercury",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "210",
+      "countries": [
+        {
+          "country": "China",
+          "value": "200",
+          "n": 200,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Kyrgyzstan",
+          "value": "5",
+          "n": 5,
+          "a3": "KGZ",
+          "lat": 41.507,
+          "lng": 74.619
+        },
+        {
+          "country": "Tajikistan",
+          "value": "4",
+          "n": 4,
+          "a3": "TJK",
+          "lat": 38.583,
+          "lng": 71.034
+        },
+        {
+          "country": "Morocco",
+          "value": "2",
+          "n": 2,
+          "a3": "MAR",
+          "lat": 29.885,
+          "lng": -8.419
+        },
+        {
+          "country": "Norway",
+          "value": "1",
+          "n": 1,
+          "a3": "NOR",
+          "lat": 59.919,
+          "lng": 10.748
+        },
+        {
+          "country": "United States",
+          "value": "NA",
+          "n": null,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "molybdenum-element": {
+      "commodity": "Molybdenum",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "260,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "97,000",
+          "n": 97000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Chile",
+          "value": "42,000",
+          "n": 42000,
+          "a3": "CHL",
+          "lat": -37.349,
+          "lng": -71.672
+        },
+        {
+          "country": "United States",
+          "value": "40,000",
+          "n": 40000,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Peru",
+          "value": "39,000",
+          "n": 39000,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "Mexico",
+          "value": "17,000",
+          "n": 17000,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Armenia",
+          "value": "5,300",
+          "n": 5300,
+          "a3": "ARM",
+          "lat": 40.217,
+          "lng": 45
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "4,300",
+          "n": 4300,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Mongolia",
+          "value": "4,200",
+          "n": 4200,
+          "a3": "MNG",
+          "lat": 46.824,
+          "lng": 102.947
+        },
+        {
+          "country": "Iran",
+          "value": "3,300",
+          "n": 3300,
+          "a3": "IRN",
+          "lat": 32.518,
+          "lng": 54.286
+        },
+        {
+          "country": "Canada",
+          "value": "2,200",
+          "n": 2200,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Uzbekistan",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "UZB",
+          "lat": 41.749,
+          "lng": 63.202
+        },
+        {
+          "country": "Russia",
+          "value": "1,300",
+          "n": 1300,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Australia",
+          "value": "1,000",
+          "n": 1000,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Korea, North",
+          "value": "800",
+          "n": 800,
+          "a3": "PRK",
+          "lat": 40.143,
+          "lng": 127.166
+        },
+        {
+          "country": "Korea, Republic of",
+          "value": "500",
+          "n": 500,
+          "a3": "KOR",
+          "lat": 36.427,
+          "lng": 127.821
+        }
+      ]
+    },
+    "neon-element": {
+      "commodity": "Neon",
+      "measure": "Rare-gas production",
+      "unit": "million liters",
+      "year": "2025",
+      "world_total": "800",
+      "countries": [
+        {
+          "country": "United States",
+          "value": "110",
+          "n": 110,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "nickel-element": {
+      "commodity": "Nickel",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "3,900,000",
+      "countries": [
+        {
+          "country": "Indonesia",
+          "value": "2,600,000",
+          "n": 2600000,
+          "a3": "IDN",
+          "lat": -0.254,
+          "lng": 114.023
+        },
+        {
+          "country": "Philippines",
+          "value": "270,000",
+          "n": 270000,
+          "a3": "PHL",
+          "lat": 15.751,
+          "lng": 121.545
+        },
+        {
+          "country": "Russia",
+          "value": "200,000",
+          "n": 200000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Canada",
+          "value": "140,000",
+          "n": 140000,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "New Caledonia",
+          "value": "140,000",
+          "n": 140000,
+          "a3": "NCL",
+          "lat": -21.263,
+          "lng": 165.537
+        },
+        {
+          "country": "China",
+          "value": "120,000",
+          "n": 120000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Brazil",
+          "value": "70,000",
+          "n": 70000,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "Australia",
+          "value": "45,000",
+          "n": 45000,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "United States",
+          "value": "10,000",
+          "n": 10000,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "niobium-element": {
+      "commodity": "Niobium (Columbium)",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "112,000",
+      "countries": [
+        {
+          "country": "Brazil",
+          "value": "104,000",
+          "n": 104000,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "Canada",
+          "value": "6,000",
+          "n": 6000,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Congo (Kinshasa)",
+          "value": "970",
+          "n": 970,
+          "a3": "COD",
+          "lat": -2.85,
+          "lng": 23.583
+        },
+        {
+          "country": "Russia",
+          "value": "300",
+          "n": 300,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Rwanda",
+          "value": "200",
+          "n": 200,
+          "a3": "RWA",
+          "lat": -2.012,
+          "lng": 29.919
+        },
+        {
+          "country": "China",
+          "value": "40",
+          "n": 40,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        }
+      ]
+    },
+    "palladium-element": {
+      "commodity": "Palladium",
+      "measure": "Mine production",
+      "unit": "kilograms",
+      "year": "2025",
+      "world_total": "190,000",
+      "countries": [
+        {
+          "country": "Russia",
+          "value": "84,000",
+          "n": 84000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "South Africa",
+          "value": "70,000",
+          "n": 70000,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Canada",
+          "value": "16,000",
+          "n": 16000,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Zimbabwe",
+          "value": "15,000",
+          "n": 15000,
+          "a3": "ZWE",
+          "lat": -18.906,
+          "lng": 29.789
+        },
+        {
+          "country": "United States",
+          "value": "6,200",
+          "n": 6200,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "phosphorus-element": {
+      "commodity": "Phosphate Rock",
+      "measure": "Phosphate rock, mine production (gross weight)",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "250,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "110,000",
+          "n": 110000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Morocco",
+          "value": "36,000",
+          "n": 36000,
+          "a3": "MAR",
+          "lat": 29.885,
+          "lng": -8.419
+        },
+        {
+          "country": "United States",
+          "value": "20,000",
+          "n": 20000,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Russia",
+          "value": "14,000",
+          "n": 14000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Jordan",
+          "value": "12,000",
+          "n": 12000,
+          "a3": "JOR",
+          "lat": 31.246,
+          "lng": 36.781
+        },
+        {
+          "country": "Saudi Arabia",
+          "value": "10,000",
+          "n": 10000,
+          "a3": "SAU",
+          "lat": 24.123,
+          "lng": 44.516
+        },
+        {
+          "country": "Egypt",
+          "value": "5,500",
+          "n": 5500,
+          "a3": "EGY",
+          "lat": 26.507,
+          "lng": 29.843
+        },
+        {
+          "country": "Brazil",
+          "value": "5,000",
+          "n": 5000,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "Peru",
+          "value": "4,800",
+          "n": 4800,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "Tunisia",
+          "value": "3,300",
+          "n": 3300,
+          "a3": "TUN",
+          "lat": 34.173,
+          "lng": 9.534
+        },
+        {
+          "country": "Vietnam",
+          "value": "3,000",
+          "n": 3000,
+          "a3": "VNM",
+          "lat": 21.035,
+          "lng": 105.848
+        },
+        {
+          "country": "Senegal",
+          "value": "2,800",
+          "n": 2800,
+          "a3": "SEN",
+          "lat": 14.355,
+          "lng": -14.512
+        },
+        {
+          "country": "Australia",
+          "value": "2,500",
+          "n": 2500,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Israel",
+          "value": "2,400",
+          "n": 2400,
+          "a3": "ISR",
+          "lat": 31.778,
+          "lng": 35.207
+        },
+        {
+          "country": "South Africa",
+          "value": "2,200",
+          "n": 2200,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Algeria",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "DZA",
+          "lat": 28.186,
+          "lng": 2.598
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "1,900",
+          "n": 1900,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Togo",
+          "value": "1,600",
+          "n": 1600,
+          "a3": "TGO",
+          "lat": 8.439,
+          "lng": 0.997
+        },
+        {
+          "country": "India",
+          "value": "1,500",
+          "n": 1500,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "Turkey",
+          "value": "1,200",
+          "n": 1200,
+          "a3": "TUR",
+          "lat": 38.991,
+          "lng": 35.391
+        },
+        {
+          "country": "Finland",
+          "value": "980",
+          "n": 980,
+          "a3": "FIN",
+          "lat": 64.502,
+          "lng": 26.213
+        },
+        {
+          "country": "Uzbekistan",
+          "value": "950",
+          "n": 950,
+          "a3": "UZB",
+          "lat": 41.749,
+          "lng": 63.202
+        },
+        {
+          "country": "Syria",
+          "value": "800",
+          "n": 800,
+          "a3": "SYR",
+          "lat": 35.012,
+          "lng": 38.544
+        },
+        {
+          "country": "Mexico",
+          "value": "450",
+          "n": 450,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        }
+      ]
+    },
+    "platinum-element": {
+      "commodity": "Platinum",
+      "measure": "Mine production",
+      "unit": "kilograms",
+      "year": "2025",
+      "world_total": "170,000",
+      "countries": [
+        {
+          "country": "South Africa",
+          "value": "120,000",
+          "n": 120000,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Russia",
+          "value": "20,000",
+          "n": 20000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Zimbabwe",
+          "value": "18,000",
+          "n": 18000,
+          "a3": "ZWE",
+          "lat": -18.906,
+          "lng": 29.789
+        },
+        {
+          "country": "Canada",
+          "value": "5,000",
+          "n": 5000,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "United States",
+          "value": "1,800",
+          "n": 1800,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "potassium-element": {
+      "commodity": "Potash",
+      "measure": "Potash, mine production",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "49,000",
+      "countries": [
+        {
+          "country": "Canada",
+          "value": "15,000",
+          "n": 15000,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Russia",
+          "value": "10,000",
+          "n": 10000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "China",
+          "value": "6,300",
+          "n": 6300,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Belarus",
+          "value": "6,000",
+          "n": 6000,
+          "a3": "BLR",
+          "lat": 53.506,
+          "lng": 27.981
+        },
+        {
+          "country": "Germany",
+          "value": "3,000",
+          "n": 3000,
+          "a3": "DEU",
+          "lat": 51.134,
+          "lng": 10.29
+        },
+        {
+          "country": "Laos",
+          "value": "2,400",
+          "n": 2400,
+          "a3": "LAO",
+          "lat": 18.445,
+          "lng": 103.751
+        },
+        {
+          "country": "Israel",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "ISR",
+          "lat": 31.778,
+          "lng": 35.207
+        },
+        {
+          "country": "Jordan",
+          "value": "1,800",
+          "n": 1800,
+          "a3": "JOR",
+          "lat": 31.246,
+          "lng": 36.781
+        },
+        {
+          "country": "Chile",
+          "value": "600",
+          "n": 600,
+          "a3": "CHL",
+          "lat": -37.349,
+          "lng": -71.672
+        },
+        {
+          "country": "United States",
+          "value": "500",
+          "n": 500,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Spain",
+          "value": "450",
+          "n": 450,
+          "a3": "ESP",
+          "lat": 40.348,
+          "lng": -3.617
+        },
+        {
+          "country": "Brazil",
+          "value": "300",
+          "n": 300,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        }
+      ]
+    },
+    "rhenium-element": {
+      "commodity": "Rhenium",
+      "measure": "Mine production",
+      "unit": "kilograms",
+      "year": "2025",
+      "world_total": "81,000",
+      "countries": [
+        {
+          "country": "Chile",
+          "value": "30,000",
+          "n": 30000,
+          "a3": "CHL",
+          "lat": -37.349,
+          "lng": -71.672
+        },
+        {
+          "country": "China",
+          "value": "20,000",
+          "n": 20000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Poland",
+          "value": "10,000",
+          "n": 10000,
+          "a3": "POL",
+          "lat": 52.148,
+          "lng": 19.311
+        },
+        {
+          "country": "United States",
+          "value": "9,800",
+          "n": 9800,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Uzbekistan",
+          "value": "7,000",
+          "n": 7000,
+          "a3": "UZB",
+          "lat": 41.749,
+          "lng": 63.202
+        },
+        {
+          "country": "Korea, Republic of",
+          "value": "3,000",
+          "n": 3000,
+          "a3": "KOR",
+          "lat": 36.427,
+          "lng": 127.821
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "1,000",
+          "n": 1000,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Armenia",
+          "value": "200",
+          "n": 200,
+          "a3": "ARM",
+          "lat": 40.217,
+          "lng": 45
+        },
+        {
+          "country": "Russia",
+          "value": "NA",
+          "n": null,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        }
+      ]
+    },
+    "selenium-element": {
+      "commodity": "Selenium",
+      "measure": "Refinery production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "3,800",
+      "countries": [
+        {
+          "country": "China",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Japan",
+          "value": "640",
+          "n": 640,
+          "a3": "JPN",
+          "lat": 36.021,
+          "lng": 136.883
+        },
+        {
+          "country": "Russia",
+          "value": "320",
+          "n": 320,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Belgium",
+          "value": "200",
+          "n": 200,
+          "a3": "BEL",
+          "lat": 50.656,
+          "lng": 4.579
+        },
+        {
+          "country": "Canada",
+          "value": "130",
+          "n": 130,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "India",
+          "value": "90",
+          "n": 90,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "Mexico",
+          "value": "88",
+          "n": 88,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Serbia",
+          "value": "71",
+          "n": 71,
+          "a3": "SRB",
+          "lat": 44.232,
+          "lng": 20.82
+        },
+        {
+          "country": "Poland",
+          "value": "67",
+          "n": 67,
+          "a3": "POL",
+          "lat": 52.148,
+          "lng": 19.311
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "50",
+          "n": 50,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Peru",
+          "value": "48",
+          "n": 48,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "Germany",
+          "value": "47",
+          "n": 47,
+          "a3": "DEU",
+          "lat": 51.134,
+          "lng": 10.29
+        },
+        {
+          "country": "Turkey",
+          "value": "43",
+          "n": 43,
+          "a3": "TUR",
+          "lat": 38.991,
+          "lng": 35.391
+        },
+        {
+          "country": "Finland",
+          "value": "39",
+          "n": 39,
+          "a3": "FIN",
+          "lat": 64.502,
+          "lng": 26.213
+        },
+        {
+          "country": "South Africa",
+          "value": "10",
+          "n": 10,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Uzbekistan",
+          "value": "2",
+          "n": 2,
+          "a3": "UZB",
+          "lat": 41.749,
+          "lng": 63.202
+        }
+      ]
+    },
+    "silicon-element": {
+      "commodity": "Silicon",
+      "measure": "Silicon metal production",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "4,600",
+      "countries": [
+        {
+          "country": "China",
+          "value": "4,000",
+          "n": 4000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Brazil",
+          "value": "180",
+          "n": 180,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "Norway",
+          "value": "130",
+          "n": 130,
+          "a3": "NOR",
+          "lat": 59.919,
+          "lng": 10.748
+        },
+        {
+          "country": "France",
+          "value": "68",
+          "n": 68,
+          "a3": "FRA",
+          "lat": 46.607,
+          "lng": 2.339
+        },
+        {
+          "country": "Australia",
+          "value": "47",
+          "n": 47,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Russia",
+          "value": "35",
+          "n": 35,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Canada",
+          "value": "34",
+          "n": 34,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Iceland",
+          "value": "16",
+          "n": 16,
+          "a3": "ISL",
+          "lat": 65.074,
+          "lng": -18.759
+        },
+        {
+          "country": "Germany",
+          "value": "13",
+          "n": 13,
+          "a3": "DEU",
+          "lat": 51.134,
+          "lng": 10.29
+        },
+        {
+          "country": "South Africa",
+          "value": "10",
+          "n": 10,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "7",
+          "n": 7,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Spain",
+          "value": "4",
+          "n": 4,
+          "a3": "ESP",
+          "lat": 40.348,
+          "lng": -3.617
+        },
+        {
+          "country": "United States",
+          "value": "W",
+          "n": null,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "silver-element": {
+      "commodity": "Silver",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "26,000",
+      "countries": [
+        {
+          "country": "Mexico",
+          "value": "6,300",
+          "n": 6300,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Peru",
+          "value": "3,600",
+          "n": 3600,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "China",
+          "value": "3,400",
+          "n": 3400,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Bolivia",
+          "value": "1,500",
+          "n": 1500,
+          "a3": "BOL",
+          "lat": -16.728,
+          "lng": -64.642
+        },
+        {
+          "country": "Chile",
+          "value": "1,400",
+          "n": 1400,
+          "a3": "CHL",
+          "lat": -37.349,
+          "lng": -71.672
+        },
+        {
+          "country": "Poland",
+          "value": "1,300",
+          "n": 1300,
+          "a3": "POL",
+          "lat": 52.148,
+          "lng": 19.311
+        },
+        {
+          "country": "Russia",
+          "value": "1,200",
+          "n": 1200,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "United States",
+          "value": "1,100",
+          "n": 1100,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Australia",
+          "value": "1,000",
+          "n": 1000,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Argentina",
+          "value": "800",
+          "n": 800,
+          "a3": "ARG",
+          "lat": -35.22,
+          "lng": -65.15
+        },
+        {
+          "country": "India",
+          "value": "800",
+          "n": 800,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "630",
+          "n": 630,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Canada",
+          "value": "400",
+          "n": 400,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Sweden",
+          "value": "400",
+          "n": 400,
+          "a3": "SWE",
+          "lat": 62.812,
+          "lng": 16.598
+        }
+      ]
+    },
+    "strontium-element": {
+      "commodity": "Strontium",
+      "measure": "Mine production (celestite)",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "450,000",
+      "countries": [
+        {
+          "country": "Iran",
+          "value": "250,000",
+          "n": 250000,
+          "a3": "IRN",
+          "lat": 32.518,
+          "lng": 54.286
+        },
+        {
+          "country": "Spain",
+          "value": "100,000",
+          "n": 100000,
+          "a3": "ESP",
+          "lat": 40.348,
+          "lng": -3.617
+        },
+        {
+          "country": "China",
+          "value": "80,000",
+          "n": 80000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Mexico",
+          "value": "20,000",
+          "n": 20000,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "Argentina",
+          "value": "700",
+          "n": 700,
+          "a3": "ARG",
+          "lat": -35.22,
+          "lng": -65.15
+        }
+      ]
+    },
+    "sulfur-element": {
+      "commodity": "Sulfur",
+      "measure": "Production, all forms",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "84,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "19,000",
+          "n": 19000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "United States",
+          "value": "8,100",
+          "n": 8100,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Russia",
+          "value": "7,500",
+          "n": 7500,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Saudi Arabia",
+          "value": "7,200",
+          "n": 7200,
+          "a3": "SAU",
+          "lat": 24.123,
+          "lng": 44.516
+        },
+        {
+          "country": "United Arab Emirates",
+          "value": "6,300",
+          "n": 6300,
+          "a3": "ARE",
+          "lat": 23.87,
+          "lng": 54.208
+        },
+        {
+          "country": "Canada",
+          "value": "5,000",
+          "n": 5000,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "4,800",
+          "n": 4800,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "India",
+          "value": "3,700",
+          "n": 3700,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "Korea, Republic of",
+          "value": "3,100",
+          "n": 3100,
+          "a3": "KOR",
+          "lat": 36.427,
+          "lng": 127.821
+        },
+        {
+          "country": "Qatar",
+          "value": "3,100",
+          "n": 3100,
+          "a3": "QAT",
+          "lat": 25.323,
+          "lng": 51.183
+        },
+        {
+          "country": "Japan",
+          "value": "2,700",
+          "n": 2700,
+          "a3": "JPN",
+          "lat": 36.021,
+          "lng": 136.883
+        },
+        {
+          "country": "Iran",
+          "value": "2,100",
+          "n": 2100,
+          "a3": "IRN",
+          "lat": 32.518,
+          "lng": 54.286
+        },
+        {
+          "country": "Chile",
+          "value": "1,400",
+          "n": 1400,
+          "a3": "CHL",
+          "lat": -37.349,
+          "lng": -71.672
+        },
+        {
+          "country": "Kuwait",
+          "value": "1,300",
+          "n": 1300,
+          "a3": "KWT",
+          "lat": 29.308,
+          "lng": 47.599
+        },
+        {
+          "country": "Poland",
+          "value": "1,100",
+          "n": 1100,
+          "a3": "POL",
+          "lat": 52.148,
+          "lng": 19.311
+        },
+        {
+          "country": "Australia",
+          "value": "900",
+          "n": 900,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Turkmenistan",
+          "value": "870",
+          "n": 870,
+          "a3": "TKM",
+          "lat": 39.091,
+          "lng": 59.274
+        }
+      ]
+    },
+    "tantalum-element": {
+      "commodity": "Tantalum",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "2,500",
+      "countries": [
+        {
+          "country": "Congo (Kinshasa)",
+          "value": "1,300",
+          "n": 1300,
+          "a3": "COD",
+          "lat": -2.85,
+          "lng": 23.583
+        },
+        {
+          "country": "Rwanda",
+          "value": "400",
+          "n": 400,
+          "a3": "RWA",
+          "lat": -2.012,
+          "lng": 29.919
+        },
+        {
+          "country": "Nigeria",
+          "value": "390",
+          "n": 390,
+          "a3": "NGA",
+          "lat": 9.549,
+          "lng": 7.996
+        },
+        {
+          "country": "Brazil",
+          "value": "190",
+          "n": 190,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "China",
+          "value": "80",
+          "n": 80,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Australia",
+          "value": "50",
+          "n": 50,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Ethiopia",
+          "value": "40",
+          "n": 40,
+          "a3": "ETH",
+          "lat": 8.655,
+          "lng": 39.552
+        },
+        {
+          "country": "Russia",
+          "value": "30",
+          "n": 30,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Bolivia",
+          "value": "2",
+          "n": 2,
+          "a3": "BOL",
+          "lat": -16.728,
+          "lng": -64.642
+        },
+        {
+          "country": "Burundi",
+          "value": "2",
+          "n": 2,
+          "a3": "BDI",
+          "lat": -3.377,
+          "lng": 29.916
+        },
+        {
+          "country": "Mozambique",
+          "value": "1",
+          "n": 1,
+          "a3": "MOZ",
+          "lat": -17.231,
+          "lng": 35.473
+        }
+      ]
+    },
+    "tellurium-element": {
+      "commodity": "Tellurium",
+      "measure": "Refinery production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "1,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "800",
+          "n": 800,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Russia",
+          "value": "67",
+          "n": 67,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Japan",
+          "value": "61",
+          "n": 61,
+          "a3": "JPN",
+          "lat": 36.021,
+          "lng": 136.883
+        },
+        {
+          "country": "Canada",
+          "value": "28",
+          "n": 28,
+          "a3": "CAN",
+          "lat": 57.749,
+          "lng": -101.57
+        },
+        {
+          "country": "Uzbekistan",
+          "value": "18",
+          "n": 18,
+          "a3": "UZB",
+          "lat": 41.749,
+          "lng": 63.202
+        },
+        {
+          "country": "South Africa",
+          "value": "5",
+          "n": 5,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Bulgaria",
+          "value": "1",
+          "n": 1,
+          "a3": "BGR",
+          "lat": 42.752,
+          "lng": 25.196
+        }
+      ]
+    },
+    "tin-element": {
+      "commodity": "Tin",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "290,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "71,000",
+          "n": 71000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Indonesia",
+          "value": "61,000",
+          "n": 61000,
+          "a3": "IDN",
+          "lat": -0.254,
+          "lng": 114.023
+        },
+        {
+          "country": "Peru",
+          "value": "33,000",
+          "n": 33000,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "Brazil",
+          "value": "28,000",
+          "n": 28000,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "Congo (Kinshasa)",
+          "value": "27,000",
+          "n": 27000,
+          "a3": "COD",
+          "lat": -2.85,
+          "lng": 23.583
+        },
+        {
+          "country": "Bolivia",
+          "value": "15,000",
+          "n": 15000,
+          "a3": "BOL",
+          "lat": -16.728,
+          "lng": -64.642
+        },
+        {
+          "country": "Australia",
+          "value": "12,000",
+          "n": 12000,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Burma",
+          "value": "12,000",
+          "n": 12000,
+          "a3": "MMR",
+          "lat": 21.014,
+          "lng": 96.505
+        },
+        {
+          "country": "Vietnam",
+          "value": "11,000",
+          "n": 11000,
+          "a3": "VNM",
+          "lat": 21.035,
+          "lng": 105.848
+        },
+        {
+          "country": "Malaysia",
+          "value": "5,000",
+          "n": 5000,
+          "a3": "MYS",
+          "lat": 3.547,
+          "lng": 114.673
+        },
+        {
+          "country": "Rwanda",
+          "value": "4,600",
+          "n": 4600,
+          "a3": "RWA",
+          "lat": -2.012,
+          "lng": 29.919
+        },
+        {
+          "country": "Russia",
+          "value": "4,500",
+          "n": 4500,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Nigeria",
+          "value": "3,500",
+          "n": 3500,
+          "a3": "NGA",
+          "lat": 9.549,
+          "lng": 7.996
+        },
+        {
+          "country": "Laos",
+          "value": "1,800",
+          "n": 1800,
+          "a3": "LAO",
+          "lat": 18.445,
+          "lng": 103.751
+        }
+      ]
+    },
+    "titanium-element": {
+      "commodity": "Titanium Sponge Metal",
+      "measure": "Titanium sponge metal production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "370,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "260,000",
+          "n": 260000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Japan",
+          "value": "53,000",
+          "n": 53000,
+          "a3": "JPN",
+          "lat": 36.021,
+          "lng": 136.883
+        },
+        {
+          "country": "Russia",
+          "value": "25,000",
+          "n": 25000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "16,000",
+          "n": 16000,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Saudi Arabia",
+          "value": "12,000",
+          "n": 12000,
+          "a3": "SAU",
+          "lat": 24.123,
+          "lng": 44.516
+        },
+        {
+          "country": "India",
+          "value": "300",
+          "n": 300,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        }
+      ]
+    },
+    "tungsten-element": {
+      "commodity": "Tungsten",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "85,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "67,000",
+          "n": 67000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Vietnam",
+          "value": "3,000",
+          "n": 3000,
+          "a3": "VNM",
+          "lat": 21.035,
+          "lng": 105.848
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "2,400",
+          "n": 2400,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Korea, North",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "PRK",
+          "lat": 40.143,
+          "lng": 127.166
+        },
+        {
+          "country": "Russia",
+          "value": "2,000",
+          "n": 2000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Bolivia",
+          "value": "1,700",
+          "n": 1700,
+          "a3": "BOL",
+          "lat": -16.728,
+          "lng": -64.642
+        },
+        {
+          "country": "Rwanda",
+          "value": "1,300",
+          "n": 1300,
+          "a3": "RWA",
+          "lat": -2.012,
+          "lng": 29.919
+        },
+        {
+          "country": "Australia",
+          "value": "1,000",
+          "n": 1000,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "Austria",
+          "value": "840",
+          "n": 840,
+          "a3": "AUT",
+          "lat": 47.615,
+          "lng": 14.076
+        },
+        {
+          "country": "Spain",
+          "value": "800",
+          "n": 800,
+          "a3": "ESP",
+          "lat": 40.348,
+          "lng": -3.617
+        },
+        {
+          "country": "Portugal",
+          "value": "700",
+          "n": 700,
+          "a3": "PRT",
+          "lat": 39.633,
+          "lng": -8.057
+        }
+      ]
+    },
+    "vanadium-element": {
+      "commodity": "Vanadium",
+      "measure": "Mine production",
+      "unit": "metric tons",
+      "year": "2025",
+      "world_total": "110,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "82,000",
+          "n": 82000,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Russia",
+          "value": "21,000",
+          "n": 21000,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Brazil",
+          "value": "5,300",
+          "n": 5300,
+          "a3": "BRA",
+          "lat": -10.807,
+          "lng": -53.053
+        },
+        {
+          "country": "South Africa",
+          "value": "5,000",
+          "n": 5000,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        }
+      ]
+    },
+    "xenon-element": {
+      "commodity": "Xenon",
+      "measure": "Rare-gas production",
+      "unit": "million liters",
+      "year": "2025",
+      "world_total": "12",
+      "countries": [
+        {
+          "country": "United States",
+          "value": "0.1",
+          "n": 0.1,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        }
+      ]
+    },
+    "zinc-element": {
+      "commodity": "Zinc",
+      "measure": "Mine production",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "13,000",
+      "countries": [
+        {
+          "country": "China",
+          "value": "4,100",
+          "n": 4100,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "Peru",
+          "value": "1,500",
+          "n": 1500,
+          "a3": "PER",
+          "lat": -9.191,
+          "lng": -74.393
+        },
+        {
+          "country": "Australia",
+          "value": "1,100",
+          "n": 1100,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "India",
+          "value": "870",
+          "n": 870,
+          "a3": "IND",
+          "lat": 22.925,
+          "lng": 79.594
+        },
+        {
+          "country": "Mexico",
+          "value": "780",
+          "n": 780,
+          "a3": "MEX",
+          "lat": 23.936,
+          "lng": -102.578
+        },
+        {
+          "country": "United States",
+          "value": "670",
+          "n": 670,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Bolivia",
+          "value": "500",
+          "n": 500,
+          "a3": "BOL",
+          "lat": -16.728,
+          "lng": -64.642
+        },
+        {
+          "country": "Russia",
+          "value": "430",
+          "n": 430,
+          "a3": "RUS",
+          "lat": 61.693,
+          "lng": 99.219
+        },
+        {
+          "country": "Kazakhstan",
+          "value": "360",
+          "n": 360,
+          "a3": "KAZ",
+          "lat": 48.192,
+          "lng": 67.285
+        },
+        {
+          "country": "Sweden",
+          "value": "230",
+          "n": 230,
+          "a3": "SWE",
+          "lat": 62.812,
+          "lng": 16.598
+        }
+      ]
+    },
+    "zirconium-element": {
+      "commodity": "Zirconium",
+      "measure": "Zirconium mineral concentrates (gross weight)",
+      "unit": "thousand metric tons",
+      "year": "2025",
+      "world_total": "1,200",
+      "countries": [
+        {
+          "country": "Australia",
+          "value": "400",
+          "n": 400,
+          "a3": "AUS",
+          "lat": -25.561,
+          "lng": 134.377
+        },
+        {
+          "country": "South Africa",
+          "value": "270",
+          "n": 270,
+          "a3": "ZAF",
+          "lat": -28.962,
+          "lng": 25.116
+        },
+        {
+          "country": "Mozambique",
+          "value": "160",
+          "n": 160,
+          "a3": "MOZ",
+          "lat": -17.231,
+          "lng": 35.473
+        },
+        {
+          "country": "China",
+          "value": "100",
+          "n": 100,
+          "a3": "CHN",
+          "lat": 36.609,
+          "lng": 103.865
+        },
+        {
+          "country": "United States",
+          "value": "100",
+          "n": 100,
+          "a3": "USA",
+          "lat": 39.502,
+          "lng": -99.06
+        },
+        {
+          "country": "Senegal",
+          "value": "70",
+          "n": 70,
+          "a3": "SEN",
+          "lat": 14.355,
+          "lng": -14.512
+        },
+        {
+          "country": "Indonesia",
+          "value": "52",
+          "n": 52,
+          "a3": "IDN",
+          "lat": -0.254,
+          "lng": 114.023
+        },
+        {
+          "country": "Madagascar",
+          "value": "26",
+          "n": 26,
+          "a3": "MDG",
+          "lat": -19.356,
+          "lng": 46.691
+        },
+        {
+          "country": "Sierra Leone",
+          "value": "25",
+          "n": 25,
+          "a3": "SLE",
+          "lat": 8.532,
+          "lng": -11.796
+        }
+      ]
+    }
+  }
+}

@@ -24,7 +24,7 @@ Rebuild and check from the repo root:
     node tools/atlas/build-object.mjs && node tools/atlas/build-bells.mjs && node tools/atlas/build-packs.mjs && node tools/atlas/build-js.mjs
     node tools/atlas/validate.mjs
 
-`build-elements.mjs` rebuilds the 118 element entries in the chemistry pack from NIST, IUPAC and Wikidata snapshots kept outside the repo (sibling `globedesk-plans/source-cache`, or `GLOBEDESK_ELEMENTS_CACHE`). It merges `lithium-element` and `copper-element` and does not fetch the network. Run it only when refreshing those derived records; the usual pack rebuild below does not need the cache.
+`build-elements.mjs` rebuilds the 118 element entries in the chemistry pack from NIST, IUPAC and Wikidata snapshots kept in `.cache/sources` at the repo root (gitignored), or `GLOBEDESK_ELEMENTS_CACHE`. It merges `lithium-element` and `copper-element` and does not fetch the network. Run it only when refreshing those derived records; the usual pack rebuild below does not need the cache.
 
 `build-object.mjs` only regenerates the bag solar kit sample; skip it when you are adding a different object. To check one object record on its own: `node tools/atlas/validate.mjs data/atlas/objects/<id>.json`. To add your own buildable 3D object or kit layer, copy the bag solar kit sample and follow [docs/BUILD-YOUR-OWN-OBJECT.md](../docs/BUILD-YOUR-OWN-OBJECT.md).
 

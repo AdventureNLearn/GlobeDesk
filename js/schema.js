@@ -427,7 +427,7 @@
     }
   }
 
-  const BUNDLED_GIS_OVERLAY_IDS = ["usgs-topo", "usgs-imagery", "usgs-nhd", "tiger-boundaries", "nowcoast-radar", "ohm"];
+  const BUNDLED_GIS_OVERLAY_IDS = ["usgs-topo", "usgs-imagery", "usgs-nhd", "tiger-boundaries", "nowcoast-radar", "usgs-mrds", "ohm"];
 
   function gisOverlayIdKnown(id) {
     if (BUNDLED_GIS_OVERLAY_IDS.indexOf(id) >= 0) return true;

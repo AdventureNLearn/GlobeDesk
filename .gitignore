@@ -18,3 +18,6 @@ __pycache__/
 # claims/, research/, records/, layouts/, settings/, and CATALOG.md.
 # The public tree ships only generic SAMPLE sidecars; personal files stay here.
 globedesk-data/
+
+# Local source cache for chemistry (and other) rebuilds; override with GLOBEDESK_ELEMENTS_CACHE
+.cache/

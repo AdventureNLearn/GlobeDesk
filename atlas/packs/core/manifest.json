@@ -7,9 +7,9 @@
   "version": "0.1.0-draft",
   "license": "CC BY 4.0",
   "checked": "2026-11-24",
-  "sha256": "18ff8e5410f2b4bdf5af0586ea04c626b7cb741d495e303a8f2e773835e4110c",
+  "sha256": "917efa77354030ecc39995d82f1fcaa6b27be318053e86b2e52f34914fb76276",
   "entry_count": 294,
-  "size_bytes": 324100,
+  "size_bytes": 327466,
   "max_bytes": 52428800,
   "promote": "owner-yes-required",
   "status": "draft",
@@ -36,8 +36,8 @@
     },
     {
       "path": "sources.json",
-      "bytes": 150141,
-      "sha256": "7ada484e34c9cec242cc5959ebb758736324caed053baf2c50ecc10e266a46b8"
+      "bytes": 153507,
+      "sha256": "c34670d83ba8458180030cee28c42cd1a50b3f58f13d6332b4eebf485055c147"
     }
   ]
 }

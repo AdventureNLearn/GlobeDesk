@@ -2591,6 +2591,58 @@
       "license": "Reclassified from SRD 145 to non-SRD information compilation. NIST states: \"Pursuant to title 17 United States Code Section 105, works of NIST employees are not subject to copyright protection in the United States.\" and grants \"the non-exclusive irrevocable and unconditional right to print, publish, prepare derivative works and distribute the NIST data, in any medium... on a royalty-free basis throughout the world.\"",
       "description": "Ground-state electron configurations for Z=1-108 (Z=104-108 theoretical/calculated in NIST ASD references; Z=109-118 blank). Cross-checked against Wikidata P8000 (CC0).",
       "terms_url": "https://www.nist.gov/open/license"
+    },
+    {
+      "id": "nist-sp966-ionization",
+      "title": "NIST Periodic Table: Atomic Properties of the Elements (SP 966, June 2024), first ionization energy",
+      "url": "https://www.nist.gov/pml/periodic-table-elements",
+      "checked": "2026-11-26",
+      "class": "official",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "license": "NIST states: \"Pursuant to title 17 United States Code Section 105, works of NIST employees are not subject to copyright protection in the United States.\"",
+      "terms_url": "https://www.nist.gov/open/license",
+      "description": "Ionization Energy (eV) cell for Z=1-108, parsed from the June 2024 PDF. Not taken from NIST ASD (SRD 78), whose values are not bundled."
+    },
+    {
+      "id": "ciaaw-atomic-weights",
+      "title": "IUPAC Commission on Isotopic Abundances and Atomic Weights (CIAAW): standard atomic weights",
+      "url": "https://www.ciaaw.org/atomic-weights.htm",
+      "checked": "2026-11-26",
+      "class": "official",
+      "publisher": "IUPAC Commission on Isotopic Abundances and Atomic Weights (CIAAW)",
+      "license": "Outbound citation only. No redistribution grant found on the CIAAW site; no CIAAW values are bundled.",
+      "description": "Cited as the body that recommends standard atomic weights. Bundled weights are NIST's."
+    },
+    {
+      "id": "pubchem-elements-outbound",
+      "title": "PubChem Periodic Table and element pages",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "checked": "2026-11-26",
+      "class": "official",
+      "publisher": "National Center for Biotechnology Information (NCBI), U.S. National Library of Medicine",
+      "license": "Outbound link only. Element properties on PubChem are attributed to third parties (Jefferson Lab, LANL, PubChem Elements) whose reuse terms are not confirmed; nothing is bundled.",
+      "terms_url": "https://www.nlm.nih.gov/web_policies.html"
+    },
+    {
+      "id": "wikidata-element-sites",
+      "title": "Wikidata structured data: element namesakes (P138), discovery locations (P189), discovering institutions (P61) and place coordinates (P625)",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Copyright",
+      "checked": "2026-11-26",
+      "class": "official",
+      "publisher": "Wikidata",
+      "license": "Structured data in the main, Property, Lexeme and EntitySchema namespaces is CC0 (Wikidata:Copyright). Text in other namespaces is CC BY-SA and is not used here.",
+      "description": "Place labels and coordinates only: places, no people. No biographical details."
+    },
+    {
+      "id": "usgs-mcs-2026-data",
+      "title": "USGS Mineral Commodity Summaries 2026 Data Release (world production by country)",
+      "url": "https://doi.org/10.5066/P1WKQ63T",
+      "checked": "2026-11-26",
+      "class": "official",
+      "publisher": "U.S. Geological Survey (USGS), National Minerals Information Center",
+      "license": "Metadata Use_Constraints: \"These data are marked with a Creative Common CC0 1.0 Universal License. These data are in the public domain and do not have any use constraints.\"",
+      "terms_url": "https://data.usgs.gov/datacatalog/metadata/USGS.69837e43b66b01367d7ec7c7.xml",
+      "description": "MCS2026_Commodities_Data.csv, World production rows. Publication: https://doi.org/10.3133/mcs2026"
     }
   ]
 }

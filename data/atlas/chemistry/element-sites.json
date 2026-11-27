@@ -1,0 +1,3137 @@
+{
+  "schema": "globedesk.chem/0-draft",
+  "id": "element-sites",
+  "title": "Element discovery sites and namesake places (Wikidata)",
+  "status": "draft",
+  "checked": "2026-11-26",
+  "licence": "Wikidata structured data, CC0 1.0",
+  "fetched": "2026-11-26T23:34:06-0500",
+  "note": "Each pin is the place's own Wikidata coordinate (P625). Scale: 'site' is a lab, institution, mine or building; 'city' is a town or city's reference point; 'area' is a country or region's reference point, not a site. People are never pinned; a discoverer credit becomes a pin only for a laboratory or institution.",
+  "relations": {
+    "namesake": "Named after this place",
+    "discovery-location": "Discovery location",
+    "discoverer": "Discovering laboratory or institution"
+  },
+  "places": [
+    {
+      "id": "wd-Q142",
+      "qid": "Q142",
+      "label": "France",
+      "lat": 47,
+      "lng": 2,
+      "scale": "area",
+      "kinds": [
+        "sovereign state",
+        "colonial power",
+        "Mediterranean country",
+        "republic"
+      ],
+      "country": [
+        "France"
+      ],
+      "coordinate": "Wikidata P625 of Q142",
+      "url": "https://www.wikidata.org/wiki/Q142",
+      "links": [
+        {
+          "z": 1,
+          "id": "hydrogen-element",
+          "symbol": "H",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 4,
+          "id": "beryllium-element",
+          "symbol": "Be",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 9,
+          "id": "fluorine-element",
+          "symbol": "F",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 35,
+          "id": "bromine-element",
+          "symbol": "Br",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 87,
+          "id": "francium-element",
+          "symbol": "Fr",
+          "rel": "namesake",
+          "label": "Named after this place"
+        },
+        {
+          "z": 87,
+          "id": "francium-element",
+          "symbol": "Fr",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q34266",
+      "qid": "Q34266",
+      "label": "Russian Empire",
+      "lat": 58.65,
+      "lng": 70.1167,
+      "scale": "area",
+      "kinds": [
+        "empire",
+        "sovereign state",
+        "historical country",
+        "transcontinental country"
+      ],
+      "country": [
+        "Russian Empire"
+      ],
+      "coordinate": "Wikidata P625 of Q34266",
+      "url": "https://www.wikidata.org/wiki/Q34266",
+      "links": [
+        {
+          "z": 1,
+          "id": "hydrogen-element",
+          "symbol": "H",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q145",
+      "qid": "Q145",
+      "label": "United Kingdom",
+      "lat": 54.6,
+      "lng": -2,
+      "scale": "area",
+      "kinds": [
+        "sovereign state",
+        "country",
+        "colonial power",
+        "island country"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "coordinate": "Wikidata P625 of Q145",
+      "url": "https://www.wikidata.org/wiki/Q145",
+      "links": [
+        {
+          "z": 1,
+          "id": "hydrogen-element",
+          "symbol": "H",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 7,
+          "id": "nitrogen-element",
+          "symbol": "N",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 10,
+          "id": "neon-element",
+          "symbol": "Ne",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 11,
+          "id": "sodium-element",
+          "symbol": "Na",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 12,
+          "id": "magnesium-element",
+          "symbol": "Mg",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 36,
+          "id": "krypton-element",
+          "symbol": "Kr",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 38,
+          "id": "strontium-element",
+          "symbol": "Sr",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 41,
+          "id": "niobium-element",
+          "symbol": "Nb",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q34",
+      "qid": "Q34",
+      "label": "Sweden",
+      "lat": 61,
+      "lng": 15,
+      "scale": "area",
+      "kinds": [
+        "sovereign state",
+        "country",
+        "unitary state",
+        "country bordering the Baltic Sea"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "coordinate": "Wikidata P625 of Q34",
+      "url": "https://www.wikidata.org/wiki/Q34",
+      "links": [
+        {
+          "z": 3,
+          "id": "lithium-element",
+          "symbol": "Li",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 8,
+          "id": "oxygen-element",
+          "symbol": "O",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 42,
+          "id": "molybdenum-element",
+          "symbol": "Mo",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q1235307",
+      "qid": "Q1235307",
+      "label": "Calne",
+      "lat": 51.4353,
+      "lng": -2.00427,
+      "scale": "city",
+      "kinds": [
+        "town",
+        "civil parish"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "coordinate": "Wikidata P625 of Q1235307",
+      "url": "https://www.wikidata.org/wiki/Q1235307",
+      "links": [
+        {
+          "z": 8,
+          "id": "oxygen-element",
+          "symbol": "O",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q21195",
+      "qid": "Q21195",
+      "label": "Scandinavia",
+      "lat": 64.77964,
+      "lng": 14.76094,
+      "scale": "area",
+      "kinds": [
+        "region"
+      ],
+      "country": [
+        "Denmark",
+        "Norway"
+      ],
+      "coordinate": "Wikidata P625 of Q21195",
+      "url": "https://www.wikidata.org/wiki/Q21195",
+      "links": [
+        {
+          "z": 21,
+          "id": "scandium-element",
+          "symbol": "Sc",
+          "rel": "namesake",
+          "label": "Named after this place"
+        },
+        {
+          "z": 69,
+          "id": "thulium-element",
+          "symbol": "Tm",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q205668",
+      "qid": "Q205668",
+      "label": "Magnesia Prefecture",
+      "lat": 39.35,
+      "lng": 22.98333,
+      "scale": "area",
+      "kinds": [
+        "prefecture of Greece"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "coordinate": "Wikidata P625 of Q205668",
+      "url": "https://www.wikidata.org/wiki/Q205668",
+      "links": [
+        {
+          "z": 25,
+          "id": "manganese-element",
+          "symbol": "Mn",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q644636",
+      "qid": "Q644636",
+      "label": "Cyprus",
+      "lat": 35,
+      "lng": 33,
+      "scale": "area",
+      "kinds": [
+        "island"
+      ],
+      "country": [
+        "Cyprus",
+        "British Empire"
+      ],
+      "coordinate": "Wikidata P625 of Q644636",
+      "url": "https://www.wikidata.org/wiki/Q644636",
+      "links": [
+        {
+          "z": 29,
+          "id": "copper-element",
+          "symbol": "Cu",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q38060",
+      "qid": "Q38060",
+      "label": "Gaul",
+      "lat": 46.5,
+      "lng": 2.9,
+      "scale": "area",
+      "kinds": [
+        "historical region",
+        "ancient civilization",
+        "former administrative territorial entity"
+      ],
+      "country": [
+        "France",
+        "Germany"
+      ],
+      "coordinate": "Wikidata P625 of Q38060",
+      "url": "https://www.wikidata.org/wiki/Q38060",
+      "links": [
+        {
+          "z": 31,
+          "id": "gallium-element",
+          "symbol": "Ga",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q183",
+      "qid": "Q183",
+      "label": "Germany",
+      "lat": 51,
+      "lng": 10,
+      "scale": "area",
+      "kinds": [
+        "sovereign state",
+        "social state",
+        "Rechtsstaat",
+        "country bordering the Baltic Sea"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "coordinate": "Wikidata P625 of Q183",
+      "url": "https://www.wikidata.org/wiki/Q183",
+      "links": [
+        {
+          "z": 32,
+          "id": "germanium-element",
+          "symbol": "Ge",
+          "rel": "namesake",
+          "label": "Named after this place"
+        },
+        {
+          "z": 32,
+          "id": "germanium-element",
+          "symbol": "Ge",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 37,
+          "id": "rubidium-element",
+          "symbol": "Rb",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 40,
+          "id": "zirconium-element",
+          "symbol": "Zr",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q1754",
+      "qid": "Q1754",
+      "label": "Stockholm",
+      "lat": 59.32944,
+      "lng": 18.06861,
+      "scale": "city",
+      "kinds": [
+        "city",
+        "big city",
+        "Hanseatic city",
+        "port city"
+      ],
+      "country": [
+        "Sweden",
+        "Kalmar Union"
+      ],
+      "coordinate": "Wikidata P625 of Q1754",
+      "url": "https://www.wikidata.org/wiki/Q1754",
+      "links": [
+        {
+          "z": 34,
+          "id": "selenium-element",
+          "symbol": "Se",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 65,
+          "id": "terbium-element",
+          "symbol": "Tb",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 67,
+          "id": "holmium-element",
+          "symbol": "Ho",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q503042",
+      "qid": "Q503042",
+      "label": "Strontian",
+      "lat": 56.69302,
+      "lng": -5.56666,
+      "scale": "city",
+      "kinds": [
+        "human settlement"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "coordinate": "Wikidata P625 of Q503042",
+      "url": "https://www.wikidata.org/wiki/Q503042",
+      "links": [
+        {
+          "z": 38,
+          "id": "strontium-element",
+          "symbol": "Sr",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q33",
+      "qid": "Q33",
+      "label": "Finland",
+      "lat": 65,
+      "lng": 27,
+      "scale": "area",
+      "kinds": [
+        "sovereign state",
+        "country",
+        "unitary state",
+        "country bordering the Baltic Sea"
+      ],
+      "country": [
+        "Finland"
+      ],
+      "coordinate": "Wikidata P625 of Q33",
+      "url": "https://www.wikidata.org/wiki/Q33",
+      "links": [
+        {
+          "z": 39,
+          "id": "yttrium-element",
+          "symbol": "Y",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q631733",
+      "qid": "Q631733",
+      "label": "Ytterby mine",
+      "lat": 59.4265,
+      "lng": 18.35353,
+      "scale": "site",
+      "kinds": [
+        "mine",
+        "historic landmark",
+        "working life museum"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "coordinate": "Wikidata P625 of Q631733",
+      "url": "https://www.wikidata.org/wiki/Q631733",
+      "links": [
+        {
+          "z": 39,
+          "id": "yttrium-element",
+          "symbol": "Y",
+          "rel": "namesake",
+          "label": "Named after this place"
+        },
+        {
+          "z": 65,
+          "id": "terbium-element",
+          "symbol": "Tb",
+          "rel": "namesake",
+          "label": "Named after this place"
+        },
+        {
+          "z": 68,
+          "id": "erbium-element",
+          "symbol": "Er",
+          "rel": "namesake",
+          "label": "Named after this place"
+        },
+        {
+          "z": 70,
+          "id": "ytterbium-element",
+          "symbol": "Yb",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q2656",
+      "qid": "Q2656",
+      "label": "Palermo",
+      "lat": 38.11566,
+      "lng": 13.36126,
+      "scale": "city",
+      "kinds": [
+        "comune of Italy",
+        "city",
+        "big city"
+      ],
+      "country": [
+        "Italy",
+        "Kingdom of the Two Sicilies"
+      ],
+      "coordinate": "Wikidata P625 of Q2656",
+      "url": "https://www.wikidata.org/wiki/Q2656",
+      "links": [
+        {
+          "z": 43,
+          "id": "technetium-element",
+          "symbol": "Tc",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q16898081",
+      "qid": "Q16898081",
+      "label": "Zlatna",
+      "lat": 46.10633,
+      "lng": 23.23162,
+      "scale": "city",
+      "kinds": [
+        "constituent locality",
+        "township seat"
+      ],
+      "country": [
+        "Romania",
+        "Socialist Republic of Romania"
+      ],
+      "coordinate": "Wikidata P625 of Q16898081",
+      "url": "https://www.wikidata.org/wiki/Q16898081",
+      "links": [
+        {
+          "z": 52,
+          "id": "tellurium-element",
+          "symbol": "Te",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q90",
+      "qid": "Q90",
+      "label": "Paris",
+      "lat": 48.85667,
+      "lng": 2.35222,
+      "scale": "city",
+      "kinds": [
+        "commune of France",
+        "territorial collectivity of France with special status",
+        "metropolis",
+        "tourist destination"
+      ],
+      "country": [
+        "France",
+        "Kingdom of France"
+      ],
+      "coordinate": "Wikidata P625 of Q90",
+      "url": "https://www.wikidata.org/wiki/Q90",
+      "links": [
+        {
+          "z": 53,
+          "id": "iodine-element",
+          "symbol": "I",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 62,
+          "id": "samarium-element",
+          "symbol": "Sm",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 66,
+          "id": "dysprosium-element",
+          "symbol": "Dy",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q193196",
+      "qid": "Q193196",
+      "label": "University College London",
+      "lat": 51.52472,
+      "lng": -0.13361,
+      "scale": "site",
+      "kinds": [
+        "university college",
+        "academic institution",
+        "higher education institution",
+        "educational organization"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "coordinate": "Wikidata P625 of Q193196",
+      "url": "https://www.wikidata.org/wiki/Q193196",
+      "links": [
+        {
+          "z": 54,
+          "id": "xenon-element",
+          "symbol": "Xe",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q2966",
+      "qid": "Q2966",
+      "label": "Heidelberg",
+      "lat": 49.40936,
+      "lng": 8.69472,
+      "scale": "city",
+      "kinds": [
+        "big city",
+        "residenz",
+        "Lutherstadt",
+        "urban municipality in Germany"
+      ],
+      "country": [
+        "Germany",
+        "West Germany"
+      ],
+      "coordinate": "Wikidata P625 of Q2966",
+      "url": "https://www.wikidata.org/wiki/Q2966",
+      "links": [
+        {
+          "z": 55,
+          "id": "caesium-element",
+          "symbol": "Cs",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q2171086",
+      "qid": "Q2171086",
+      "label": "Royal Institution",
+      "lat": 51.5098,
+      "lng": -0.1425,
+      "scale": "site",
+      "kinds": [
+        "scientific society"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "coordinate": "Wikidata P625 of Q2171086",
+      "url": "https://www.wikidata.org/wiki/Q2171086",
+      "links": [
+        {
+          "z": 56,
+          "id": "barium-element",
+          "symbol": "Ba",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q219564",
+      "qid": "Q219564",
+      "label": "Karolinska Institutet",
+      "lat": 59.34889,
+      "lng": 18.02667,
+      "scale": "site",
+      "kinds": [
+        "university",
+        "organization",
+        "Swedish government agency"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "coordinate": "Wikidata P625 of Q219564",
+      "url": "https://www.wikidata.org/wiki/Q219564",
+      "links": [
+        {
+          "z": 57,
+          "id": "lanthanum-element",
+          "symbol": "La",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q1741",
+      "qid": "Q1741",
+      "label": "Vienna",
+      "lat": 48.20833,
+      "lng": 16.3725,
+      "scale": "city",
+      "kinds": [
+        "federal capital",
+        "statutory city of Austria",
+        "federal state of Austria",
+        "metropolis"
+      ],
+      "country": [
+        "Austria",
+        "First Republic of Austria"
+      ],
+      "coordinate": "Wikidata P625 of Q1741",
+      "url": "https://www.wikidata.org/wiki/Q1741",
+      "links": [
+        {
+          "z": 60,
+          "id": "neodymium-element",
+          "symbol": "Nd",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q714439",
+      "qid": "Q714439",
+      "label": "Oak Ridge National Laboratory",
+      "lat": 35.93333,
+      "lng": -84.31667,
+      "scale": "site",
+      "kinds": [
+        "United States national laboratory"
+      ],
+      "country": [
+        "United States"
+      ],
+      "coordinate": "Wikidata P625 of Q714439",
+      "url": "https://www.wikidata.org/wiki/Q714439",
+      "links": [
+        {
+          "z": 61,
+          "id": "promethium-element",
+          "symbol": "Pm",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q46",
+      "qid": "Q46",
+      "label": "Europe",
+      "lat": 48.69096,
+      "lng": 9.14062,
+      "scale": "area",
+      "kinds": [
+        "part of the world",
+        "continent",
+        "region",
+        "geographic location"
+      ],
+      "country": [],
+      "coordinate": "Wikidata P625 of Q46",
+      "url": "https://www.wikidata.org/wiki/Q46",
+      "links": [
+        {
+          "z": 63,
+          "id": "europium-element",
+          "symbol": "Eu",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q71",
+      "qid": "Q71",
+      "label": "Geneva",
+      "lat": 46.2,
+      "lng": 6.15,
+      "scale": "city",
+      "kinds": [
+        "cantonal capital of Switzerland",
+        "college town",
+        "city of Switzerland",
+        "big city"
+      ],
+      "country": [
+        "Switzerland",
+        "Republic of Geneva"
+      ],
+      "coordinate": "Wikidata P625 of Q71",
+      "url": "https://www.wikidata.org/wiki/Q71",
+      "links": [
+        {
+          "z": 67,
+          "id": "holmium-element",
+          "symbol": "Ho",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q25286",
+      "qid": "Q25286",
+      "label": "Uppsala",
+      "lat": 59.84976,
+      "lng": 17.63895,
+      "scale": "city",
+      "kinds": [
+        "urban area in Sweden",
+        "city"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "coordinate": "Wikidata P625 of Q25286",
+      "url": "https://www.wikidata.org/wiki/Q25286",
+      "links": [
+        {
+          "z": 67,
+          "id": "holmium-element",
+          "symbol": "Ho",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q270273",
+      "qid": "Q270273",
+      "label": "Lutetia",
+      "lat": 48.85472,
+      "lng": 2.3475,
+      "scale": "site",
+      "kinds": [
+        "Roman archaeological site",
+        "Roman city"
+      ],
+      "country": [
+        "Ancient Rome"
+      ],
+      "coordinate": "Wikidata P625 of Q270273",
+      "url": "https://www.wikidata.org/wiki/Q270273",
+      "links": [
+        {
+          "z": 71,
+          "id": "lutetium-element",
+          "symbol": "Lu",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q1748",
+      "qid": "Q1748",
+      "label": "Copenhagen",
+      "lat": 55.67611,
+      "lng": 12.56889,
+      "scale": "city",
+      "kinds": [
+        "largest city",
+        "cycling city",
+        "city",
+        "big city"
+      ],
+      "country": [
+        "Denmark",
+        "Kingdom of Denmark"
+      ],
+      "coordinate": "Wikidata P625 of Q1748",
+      "url": "https://www.wikidata.org/wiki/Q1748",
+      "links": [
+        {
+          "z": 72,
+          "id": "hafnium-element",
+          "symbol": "Hf",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q35",
+      "qid": "Q35",
+      "label": "Denmark",
+      "lat": 56,
+      "lng": 10,
+      "scale": "area",
+      "kinds": [
+        "state",
+        "colonial power",
+        "country bordering the Baltic Sea",
+        "country"
+      ],
+      "country": [
+        "Kingdom of Denmark"
+      ],
+      "coordinate": "Wikidata P625 of Q35",
+      "url": "https://www.wikidata.org/wiki/Q35",
+      "links": [
+        {
+          "z": 72,
+          "id": "hafnium-element",
+          "symbol": "Hf",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q29",
+      "qid": "Q29",
+      "label": "Spain",
+      "lat": 40.2,
+      "lng": -3.5,
+      "scale": "area",
+      "kinds": [
+        "sovereign state",
+        "realm",
+        "country",
+        "Mediterranean country"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "coordinate": "Wikidata P625 of Q29",
+      "url": "https://www.wikidata.org/wiki/Q29",
+      "links": [
+        {
+          "z": 74,
+          "id": "tungsten-element",
+          "symbol": "W",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q584",
+      "qid": "Q584",
+      "label": "Rhine",
+      "lat": 51.98083,
+      "lng": 4.09306,
+      "scale": "area",
+      "kinds": [
+        "river",
+        "main stem",
+        "waterway",
+        "national waterways in Germany"
+      ],
+      "country": [
+        "Switzerland",
+        "Austria"
+      ],
+      "coordinate": "Wikidata P625 of Q584",
+      "url": "https://www.wikidata.org/wiki/Q584",
+      "links": [
+        {
+          "z": 75,
+          "id": "rhenium-element",
+          "symbol": "Re",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q84",
+      "qid": "Q84",
+      "label": "London",
+      "lat": 51.50722,
+      "lng": -0.1275,
+      "scale": "city",
+      "kinds": [
+        "metropolis",
+        "financial center",
+        "city",
+        "global city"
+      ],
+      "country": [
+        "Roman Empire",
+        "Kingdom of Essex"
+      ],
+      "coordinate": "Wikidata P625 of Q84",
+      "url": "https://www.wikidata.org/wiki/Q84",
+      "links": [
+        {
+          "z": 77,
+          "id": "iridium-element",
+          "symbol": "Ir",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q36",
+      "qid": "Q36",
+      "label": "Poland",
+      "lat": 52,
+      "lng": 19,
+      "scale": "area",
+      "kinds": [
+        "sovereign state",
+        "country",
+        "country bordering the Baltic Sea",
+        "successor state"
+      ],
+      "country": [
+        "Poland"
+      ],
+      "coordinate": "Wikidata P625 of Q36",
+      "url": "https://www.wikidata.org/wiki/Q36",
+      "links": [
+        {
+          "z": 84,
+          "id": "polonium-element",
+          "symbol": "Po",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q30",
+      "qid": "Q30",
+      "label": "United States",
+      "lat": 39.82818,
+      "lng": -98.5795,
+      "scale": "area",
+      "kinds": [
+        "sovereign state",
+        "superpower",
+        "country",
+        "historical unrecognized state"
+      ],
+      "country": [
+        "United States"
+      ],
+      "coordinate": "Wikidata P625 of Q30",
+      "url": "https://www.wikidata.org/wiki/Q30",
+      "links": [
+        {
+          "z": 85,
+          "id": "astatine-element",
+          "symbol": "At",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q828",
+      "qid": "Q828",
+      "label": "Americas",
+      "lat": 19,
+      "lng": -96,
+      "scale": "area",
+      "kinds": [
+        "supercontinent",
+        "part of the world",
+        "continent"
+      ],
+      "country": [],
+      "coordinate": "Wikidata P625 of Q828",
+      "url": "https://www.wikidata.org/wiki/Q828",
+      "links": [
+        {
+          "z": 95,
+          "id": "americium-element",
+          "symbol": "Am",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q484678",
+      "qid": "Q484678",
+      "label": "Berkeley",
+      "lat": 37.87028,
+      "lng": -122.26806,
+      "scale": "city",
+      "kinds": [
+        "city of California",
+        "college town",
+        "sanctuary city",
+        "big city"
+      ],
+      "country": [
+        "United States"
+      ],
+      "coordinate": "Wikidata P625 of Q484678",
+      "url": "https://www.wikidata.org/wiki/Q484678",
+      "links": [
+        {
+          "z": 97,
+          "id": "berkelium-element",
+          "symbol": "Bk",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q168756",
+      "qid": "Q168756",
+      "label": "University of California, Berkeley",
+      "lat": 37.87194,
+      "lng": -122.25833,
+      "scale": "site",
+      "kinds": [
+        "public research university",
+        "land-grant university",
+        "public educational institution of the United States",
+        "United Nations Depository Library"
+      ],
+      "country": [
+        "United States"
+      ],
+      "coordinate": "Wikidata P625 of Q168756",
+      "url": "https://www.wikidata.org/wiki/Q168756",
+      "links": [
+        {
+          "z": 97,
+          "id": "berkelium-element",
+          "symbol": "Bk",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 98,
+          "id": "californium-element",
+          "symbol": "Cf",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 103,
+          "id": "lawrencium-element",
+          "symbol": "Lr",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q99",
+      "qid": "Q99",
+      "label": "California",
+      "lat": 37,
+      "lng": -120,
+      "scale": "area",
+      "kinds": [
+        "U.S. state"
+      ],
+      "country": [
+        "United States"
+      ],
+      "coordinate": "Wikidata P625 of Q99",
+      "url": "https://www.wikidata.org/wiki/Q99",
+      "links": [
+        {
+          "z": 98,
+          "id": "californium-element",
+          "symbol": "Cf",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q135466",
+      "qid": "Q135466",
+      "label": "Dubna",
+      "lat": 56.73639,
+      "lng": 37.1625,
+      "scale": "city",
+      "kinds": [
+        "city or town",
+        "city of federal subject significance of Russia"
+      ],
+      "country": [
+        "Russia",
+        "Soviet Union"
+      ],
+      "coordinate": "Wikidata P625 of Q135466",
+      "url": "https://www.wikidata.org/wiki/Q135466",
+      "links": [
+        {
+          "z": 104,
+          "id": "rutherfordium-element",
+          "symbol": "Rf",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 105,
+          "id": "dubnium-element",
+          "symbol": "Db",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q259517",
+      "qid": "Q259517",
+      "label": "Joint Institute for Nuclear Research",
+      "lat": 56.74654,
+      "lng": 37.18953,
+      "scale": "site",
+      "kinds": [
+        "research institute",
+        "intergovernmental organization"
+      ],
+      "country": [
+        "Russia",
+        "Soviet Union"
+      ],
+      "coordinate": "Wikidata P625 of Q259517",
+      "url": "https://www.wikidata.org/wiki/Q259517",
+      "links": [
+        {
+          "z": 105,
+          "id": "dubnium-element",
+          "symbol": "Db",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        },
+        {
+          "z": 113,
+          "id": "nihonium-element",
+          "symbol": "Nh",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        },
+        {
+          "z": 114,
+          "id": "flerovium-element",
+          "symbol": "Fl",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 114,
+          "id": "flerovium-element",
+          "symbol": "Fl",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        },
+        {
+          "z": 115,
+          "id": "moscovium-element",
+          "symbol": "Mc",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 115,
+          "id": "moscovium-element",
+          "symbol": "Mc",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        },
+        {
+          "z": 116,
+          "id": "livermorium-element",
+          "symbol": "Lv",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        },
+        {
+          "z": 117,
+          "id": "tennessine-element",
+          "symbol": "Ts",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 118,
+          "id": "oganesson-element",
+          "symbol": "Og",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q1133630",
+      "qid": "Q1133630",
+      "label": "Lawrence Berkeley National Laboratory",
+      "lat": 37.87583,
+      "lng": -122.24861,
+      "scale": "site",
+      "kinds": [
+        "laboratory",
+        "United States national laboratory"
+      ],
+      "country": [
+        "United States"
+      ],
+      "coordinate": "Wikidata P625 of Q1133630",
+      "url": "https://www.wikidata.org/wiki/Q1133630",
+      "links": [
+        {
+          "z": 105,
+          "id": "dubnium-element",
+          "symbol": "Db",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q703993",
+      "qid": "Q703993",
+      "label": "GSI Helmholtz Centre for Heavy Ion Research",
+      "lat": 49.93139,
+      "lng": 8.67917,
+      "scale": "site",
+      "kinds": [
+        "research institute"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "coordinate": "Wikidata P625 of Q703993",
+      "url": "https://www.wikidata.org/wiki/Q703993",
+      "links": [
+        {
+          "z": 108,
+          "id": "hassium-element",
+          "symbol": "Hs",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        },
+        {
+          "z": 109,
+          "id": "meitnerium-element",
+          "symbol": "Mt",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 109,
+          "id": "meitnerium-element",
+          "symbol": "Mt",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        },
+        {
+          "z": 110,
+          "id": "darmstadtium-element",
+          "symbol": "Ds",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 110,
+          "id": "darmstadtium-element",
+          "symbol": "Ds",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        },
+        {
+          "z": 111,
+          "id": "roentgenium-element",
+          "symbol": "Rg",
+          "rel": "discovery-location",
+          "label": "Discovery location"
+        },
+        {
+          "z": 111,
+          "id": "roentgenium-element",
+          "symbol": "Rg",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        },
+        {
+          "z": 112,
+          "id": "copernicium-element",
+          "symbol": "Cn",
+          "rel": "discoverer",
+          "label": "Discovering laboratory or institution"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q1199",
+      "qid": "Q1199",
+      "label": "Hesse",
+      "lat": 50.60803,
+      "lng": 9.02847,
+      "scale": "area",
+      "kinds": [
+        "federated state of Germany",
+        "country"
+      ],
+      "country": [
+        "Germany",
+        "German Reich"
+      ],
+      "coordinate": "Wikidata P625 of Q1199",
+      "url": "https://www.wikidata.org/wiki/Q1199",
+      "links": [
+        {
+          "z": 108,
+          "id": "hassium-element",
+          "symbol": "Hs",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q2973",
+      "qid": "Q2973",
+      "label": "Darmstadt",
+      "lat": 49.86667,
+      "lng": 8.65,
+      "scale": "city",
+      "kinds": [
+        "urban municipality in Germany"
+      ],
+      "country": [
+        "Germany",
+        "German Empire"
+      ],
+      "coordinate": "Wikidata P625 of Q2973",
+      "url": "https://www.wikidata.org/wiki/Q2973",
+      "links": [
+        {
+          "z": 110,
+          "id": "darmstadtium-element",
+          "symbol": "Ds",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q17",
+      "qid": "Q17",
+      "label": "Japan",
+      "lat": 35,
+      "lng": 136,
+      "scale": "area",
+      "kinds": [
+        "sovereign state",
+        "island country",
+        "country"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "coordinate": "Wikidata P625 of Q17",
+      "url": "https://www.wikidata.org/wiki/Q17",
+      "links": [
+        {
+          "z": 113,
+          "id": "nihonium-element",
+          "symbol": "Nh",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q1697",
+      "qid": "Q1697",
+      "label": "Moscow Oblast",
+      "lat": 55.628,
+      "lng": 37.738,
+      "scale": "area",
+      "kinds": [
+        "oblast of Russia",
+        "federal subject of Russia"
+      ],
+      "country": [
+        "Russia",
+        "Soviet Union"
+      ],
+      "coordinate": "Wikidata P625 of Q1697",
+      "url": "https://www.wikidata.org/wiki/Q1697",
+      "links": [
+        {
+          "z": 115,
+          "id": "moscovium-element",
+          "symbol": "Mc",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q519826",
+      "qid": "Q519826",
+      "label": "Lawrence Livermore National Laboratory",
+      "lat": 37.686,
+      "lng": -121.7095,
+      "scale": "site",
+      "kinds": [
+        "research institute",
+        "science park",
+        "United States national laboratory"
+      ],
+      "country": [
+        "United States"
+      ],
+      "coordinate": "Wikidata P625 of Q519826",
+      "url": "https://www.wikidata.org/wiki/Q519826",
+      "links": [
+        {
+          "z": 116,
+          "id": "livermorium-element",
+          "symbol": "Lv",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    },
+    {
+      "id": "wd-Q1509",
+      "qid": "Q1509",
+      "label": "Tennessee",
+      "lat": 36,
+      "lng": -86,
+      "scale": "area",
+      "kinds": [
+        "U.S. state"
+      ],
+      "country": [
+        "United States"
+      ],
+      "coordinate": "Wikidata P625 of Q1509",
+      "url": "https://www.wikidata.org/wiki/Q1509",
+      "links": [
+        {
+          "z": 117,
+          "id": "tennessine-element",
+          "symbol": "Ts",
+          "rel": "namesake",
+          "label": "Named after this place"
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "qid": "Q283",
+      "label": "water",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        1,
+        80
+      ]
+    },
+    {
+      "qid": "Q131733",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        1
+      ]
+    },
+    {
+      "qid": "Q58720",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        1
+      ]
+    },
+    {
+      "qid": "Q39607",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        1,
+        6,
+        16
+      ]
+    },
+    {
+      "qid": "Q134270",
+      "label": "Helios",
+      "reason": "not a real-world place",
+      "zs": [
+        2
+      ]
+    },
+    {
+      "qid": "Q298581",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        2
+      ]
+    },
+    {
+      "qid": "Q127959",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        2
+      ]
+    },
+    {
+      "qid": "Q950726",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        2,
+        10,
+        18,
+        36,
+        54
+      ]
+    },
+    {
+      "qid": "Q22731",
+      "label": "stone",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        3
+      ]
+    },
+    {
+      "qid": "Q313568",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        3
+      ]
+    },
+    {
+      "qid": "Q103480",
+      "label": "beryl",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        4
+      ]
+    },
+    {
+      "qid": "Q333438",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        4,
+        24
+      ]
+    },
+    {
+      "qid": "Q58575",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        4,
+        22,
+        39
+      ]
+    },
+    {
+      "qid": "Q585780",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        4
+      ]
+    },
+    {
+      "qid": "Q3513011",
+      "label": "borax",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        5
+      ]
+    },
+    {
+      "qid": "Q153185",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        5
+      ]
+    },
+    {
+      "qid": "Q327722",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        5
+      ]
+    },
+    {
+      "qid": "Q131761",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        5,
+        11,
+        13,
+        19,
+        20,
+        56
+      ]
+    },
+    {
+      "qid": "Q102804",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        5,
+        9
+      ]
+    },
+    {
+      "qid": "Q24489",
+      "label": "coal",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        6
+      ]
+    },
+    {
+      "qid": "Q11183742",
+      "label": "nitre",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        7
+      ]
+    },
+    {
+      "qid": "Q3",
+      "label": "life",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        7
+      ]
+    },
+    {
+      "qid": "Q313067",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        7
+      ]
+    },
+    {
+      "qid": "Q11158",
+      "label": "acid",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        8
+      ]
+    },
+    {
+      "qid": "Q70538",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        8,
+        17,
+        42,
+        56
+      ]
+    },
+    {
+      "qid": "Q159636",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        8
+      ]
+    },
+    {
+      "qid": "Q209569",
+      "label": "hydrofluoric acid",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        9
+      ]
+    },
+    {
+      "qid": "Q675",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        9
+      ]
+    },
+    {
+      "qid": "Q12544101",
+      "label": "novelty",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        10,
+        60
+      ]
+    },
+    {
+      "qid": "Q380209",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        10,
+        36,
+        54
+      ]
+    },
+    {
+      "qid": "Q190227",
+      "label": "sodium carbonate",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        11
+      ]
+    },
+    {
+      "qid": "Q86",
+      "label": "headache",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        11
+      ]
+    },
+    {
+      "qid": "Q102769",
+      "label": "sodium hydroxide",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        11
+      ]
+    },
+    {
+      "qid": "Q427329",
+      "label": "natron",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        11
+      ]
+    },
+    {
+      "qid": "Q214769",
+      "label": "magnesium oxide",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        12
+      ]
+    },
+    {
+      "qid": "Q272512",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        12
+      ]
+    },
+    {
+      "qid": "Q190527",
+      "label": "alum",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        13
+      ]
+    },
+    {
+      "qid": "Q44412",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        13
+      ]
+    },
+    {
+      "qid": "Q83087",
+      "label": "flint",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        14
+      ]
+    },
+    {
+      "qid": "Q151911",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        14,
+        34,
+        40,
+        58,
+        90
+      ]
+    },
+    {
+      "qid": "Q1775444",
+      "label": "Phosphorus",
+      "reason": "not a real-world place",
+      "zs": [
+        15
+      ]
+    },
+    {
+      "qid": "Q77306",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        15
+      ]
+    },
+    {
+      "qid": "Q3133",
+      "label": "green",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        17,
+        59
+      ]
+    },
+    {
+      "qid": "Q484",
+      "label": "laziness",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        18
+      ]
+    },
+    {
+      "qid": "Q83297",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        18
+      ]
+    },
+    {
+      "qid": "Q10564271",
+      "label": "potash",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        19
+      ]
+    },
+    {
+      "qid": "Q250423",
+      "label": "lime",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        20
+      ]
+    },
+    {
+      "qid": "Q447875",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        21
+      ]
+    },
+    {
+      "qid": "Q45713",
+      "label": "titan",
+      "reason": "not a real-world place",
+      "zs": [
+        22
+      ]
+    },
+    {
+      "qid": "Q498817",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        22
+      ]
+    },
+    {
+      "qid": "Q160196",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        22,
+        40,
+        58,
+        92
+      ]
+    },
+    {
+      "qid": "Q2070100",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        22
+      ]
+    },
+    {
+      "qid": "Q1647325",
+      "label": "Freyja",
+      "reason": "not a real-world place",
+      "zs": [
+        23
+      ]
+    },
+    {
+      "qid": "Q524465",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        23
+      ]
+    },
+    {
+      "qid": "Q2948548",
+      "label": "color field",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        24
+      ]
+    },
+    {
+      "qid": "Q353490",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        25,
+        34
+      ]
+    },
+    {
+      "qid": "Q1064669",
+      "label": "kobold",
+      "reason": "not a real-world place",
+      "zs": [
+        27
+      ]
+    },
+    {
+      "qid": "Q473225",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        27
+      ]
+    },
+    {
+      "qid": "Q419197",
+      "label": "nickeline",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        28
+      ]
+    },
+    {
+      "qid": "Q468351",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        28
+      ]
+    },
+    {
+      "qid": "Q15043709",
+      "label": "tine",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        30
+      ]
+    },
+    {
+      "qid": "Q366827",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        31,
+        62,
+        66
+      ]
+    },
+    {
+      "qid": "Q73523",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        32
+      ]
+    },
+    {
+      "qid": "Q208045",
+      "label": "gold",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        33
+      ]
+    },
+    {
+      "qid": "Q419183",
+      "label": "orpiment",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        33
+      ]
+    },
+    {
+      "qid": "Q3093051",
+      "label": "virility",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        33
+      ]
+    },
+    {
+      "qid": "Q60059",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        33
+      ]
+    },
+    {
+      "qid": "Q405",
+      "label": "Moon",
+      "reason": "coordinate is not on Earth",
+      "zs": [
+        34
+      ]
+    },
+    {
+      "qid": "Q1519476",
+      "label": "stink",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        35
+      ]
+    },
+    {
+      "qid": "Q65517",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        35
+      ]
+    },
+    {
+      "qid": "Q314306",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        35
+      ]
+    },
+    {
+      "qid": "Q30301727",
+      "label": "hiding",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        36,
+        57
+      ]
+    },
+    {
+      "qid": "Q3142",
+      "label": "red",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        37
+      ]
+    },
+    {
+      "qid": "Q71031",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        37,
+        55
+      ]
+    },
+    {
+      "qid": "Q60052",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        37,
+        55
+      ]
+    },
+    {
+      "qid": "Q902388",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        38
+      ]
+    },
+    {
+      "qid": "Q312571",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        39,
+        64
+      ]
+    },
+    {
+      "qid": "Q178928",
+      "label": "zircon",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        40
+      ]
+    },
+    {
+      "qid": "Q902921",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        40
+      ]
+    },
+    {
+      "qid": "Q705255",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        40
+      ]
+    },
+    {
+      "qid": "Q213621",
+      "label": "Niobe",
+      "reason": "not a real-world place",
+      "zs": [
+        41
+      ]
+    },
+    {
+      "qid": "Q378065",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        41
+      ]
+    },
+    {
+      "qid": "Q708",
+      "label": "lead",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        42
+      ]
+    },
+    {
+      "qid": "Q2695280",
+      "label": "technique",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        43
+      ]
+    },
+    {
+      "qid": "Q173028",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        43,
+        85
+      ]
+    },
+    {
+      "qid": "Q2939237",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        43
+      ]
+    },
+    {
+      "qid": "Q1147883",
+      "label": "Ruthenia",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        44
+      ]
+    },
+    {
+      "qid": "Q56007908",
+      "label": "[UNKNOWN]",
+      "reason": "no English label on Wikidata",
+      "zs": [
+        44
+      ]
+    },
+    {
+      "qid": "Q554178",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        44
+      ]
+    },
+    {
+      "qid": "Q533047",
+      "label": "rose",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        45
+      ]
+    },
+    {
+      "qid": "Q312975",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        45,
+        46,
+        76
+      ]
+    },
+    {
+      "qid": "Q3002",
+      "label": "2 Pallas",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        46
+      ]
+    },
+    {
+      "qid": "Q23444",
+      "label": "white",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        47
+      ]
+    },
+    {
+      "qid": "Q27613",
+      "label": "Cadmus",
+      "reason": "not a real-world place",
+      "zs": [
+        48
+      ]
+    },
+    {
+      "qid": "Q77309",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        48
+      ]
+    },
+    {
+      "qid": "Q69080",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        48
+      ]
+    },
+    {
+      "qid": "Q5967009",
+      "label": "indigo",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        49
+      ]
+    },
+    {
+      "qid": "Q77307",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        49
+      ]
+    },
+    {
+      "qid": "Q77308",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        49
+      ]
+    },
+    {
+      "qid": "Q270867",
+      "label": "Terra",
+      "reason": "not a real-world place",
+      "zs": [
+        52
+      ]
+    },
+    {
+      "qid": "Q112012",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        52
+      ]
+    },
+    {
+      "qid": "Q428124",
+      "label": "violet",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        53
+      ]
+    },
+    {
+      "qid": "Q468330",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        53
+      ]
+    },
+    {
+      "qid": "Q13197964",
+      "label": "stranger",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        54
+      ]
+    },
+    {
+      "qid": "Q373160",
+      "label": "sky blue",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        55
+      ]
+    },
+    {
+      "qid": "Q25288",
+      "label": "weight",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        56
+      ]
+    },
+    {
+      "qid": "Q468316",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        57,
+        59,
+        65,
+        68
+      ]
+    },
+    {
+      "qid": "Q596",
+      "label": "Ceres",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        58
+      ]
+    },
+    {
+      "qid": "Q159979",
+      "label": "twin",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        59,
+        60
+      ]
+    },
+    {
+      "qid": "Q89390",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        60,
+        71
+      ]
+    },
+    {
+      "qid": "Q83160",
+      "label": "Prometheus",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        61
+      ]
+    },
+    {
+      "qid": "Q904506",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        61
+      ]
+    },
+    {
+      "qid": "Q904562",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        61
+      ]
+    },
+    {
+      "qid": "Q260328",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        61
+      ]
+    },
+    {
+      "qid": "Q417648",
+      "label": "samarskite-(Y)",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        62
+      ]
+    },
+    {
+      "qid": "Q725850",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        63
+      ]
+    },
+    {
+      "qid": "Q124045",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        64,
+        70
+      ]
+    },
+    {
+      "qid": "Q73019188",
+      "label": "inaccessibility",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        66
+      ]
+    },
+    {
+      "qid": "Q377822",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        67,
+        69
+      ]
+    },
+    {
+      "qid": "Q124122",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        67
+      ]
+    },
+    {
+      "qid": "Q124083",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        67
+      ]
+    },
+    {
+      "qid": "Q671008",
+      "label": "Thule",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        69
+      ]
+    },
+    {
+      "qid": "Q560404",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        71
+      ]
+    },
+    {
+      "qid": "Q76951",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        72
+      ]
+    },
+    {
+      "qid": "Q775969",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        72
+      ]
+    },
+    {
+      "qid": "Q182101",
+      "label": "Tantalus",
+      "reason": "not a real-world place",
+      "zs": [
+        73
+      ]
+    },
+    {
+      "qid": "Q468303",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        73
+      ]
+    },
+    {
+      "qid": "Q18498",
+      "label": "grey wolf",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        74
+      ]
+    },
+    {
+      "qid": "Q728386",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        74
+      ]
+    },
+    {
+      "qid": "Q182745",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        74
+      ]
+    },
+    {
+      "qid": "Q62714",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        75
+      ]
+    },
+    {
+      "qid": "Q77529",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        75
+      ]
+    },
+    {
+      "qid": "Q85727",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        75
+      ]
+    },
+    {
+      "qid": "Q485537",
+      "label": "odor",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        76
+      ]
+    },
+    {
+      "qid": "Q377800",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        76,
+        77
+      ]
+    },
+    {
+      "qid": "Q184570",
+      "label": "Iris",
+      "reason": "not a real-world place",
+      "zs": [
+        77
+      ]
+    },
+    {
+      "qid": "Q1090",
+      "label": "silver",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        78,
+        80
+      ]
+    },
+    {
+      "qid": "Q441066",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        78
+      ]
+    },
+    {
+      "qid": "Q470306",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        78
+      ]
+    },
+    {
+      "qid": "Q1150",
+      "label": "Mercury",
+      "reason": "not a real-world place",
+      "zs": [
+        80
+      ]
+    },
+    {
+      "qid": "Q207495",
+      "label": "thallus",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        81
+      ]
+    },
+    {
+      "qid": "Q189552",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        81
+      ]
+    },
+    {
+      "qid": "Q7186",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        84,
+        88,
+        96
+      ]
+    },
+    {
+      "qid": "Q37463",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        84,
+        88,
+        96
+      ]
+    },
+    {
+      "qid": "Q405372",
+      "label": "instability",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        85
+      ]
+    },
+    {
+      "qid": "Q1128",
+      "label": "radium",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        86
+      ]
+    },
+    {
+      "qid": "Q65191",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        86
+      ]
+    },
+    {
+      "qid": "Q9123",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        86,
+        104
+      ]
+    },
+    {
+      "qid": "Q7342248",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        86
+      ]
+    },
+    {
+      "qid": "Q241822",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        87
+      ]
+    },
+    {
+      "qid": "Q11448",
+      "label": "radioactivity",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        88
+      ]
+    },
+    {
+      "qid": "Q2493660",
+      "label": "light beam",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        89
+      ]
+    },
+    {
+      "qid": "Q468371",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        89
+      ]
+    },
+    {
+      "qid": "Q42952",
+      "label": "Thor",
+      "reason": "not a real-world place",
+      "zs": [
+        90
+      ]
+    },
+    {
+      "qid": "Q1121",
+      "label": "actinium",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        91
+      ]
+    },
+    {
+      "qid": "Q213667",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        91
+      ]
+    },
+    {
+      "qid": "Q57065",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        91
+      ]
+    },
+    {
+      "qid": "Q56189",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        91,
+        109
+      ]
+    },
+    {
+      "qid": "Q324",
+      "label": "Uranus",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        92
+      ]
+    },
+    {
+      "qid": "Q903801",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        92
+      ]
+    },
+    {
+      "qid": "Q332",
+      "label": "Neptune",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        93
+      ]
+    },
+    {
+      "qid": "Q19009",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        93,
+        94
+      ]
+    },
+    {
+      "qid": "Q377815",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        93
+      ]
+    },
+    {
+      "qid": "Q152262",
+      "label": "Pluto",
+      "reason": "not a real-world place",
+      "zs": [
+        94
+      ]
+    },
+    {
+      "qid": "Q48973",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        106
+      ]
+    },
+    {
+      "qid": "Q472997",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        94
+      ]
+    },
+    {
+      "qid": "Q1708246",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        94
+      ]
+    },
+    {
+      "qid": "Q468345",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        97,
+        98,
+        99,
+        103,
+        104
+      ]
+    },
+    {
+      "qid": "Q3068373",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        97,
+        98
+      ]
+    },
+    {
+      "qid": "Q1989591",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        98
+      ]
+    },
+    {
+      "qid": "Q937",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        99
+      ]
+    },
+    {
+      "qid": "Q8753",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        100
+      ]
+    },
+    {
+      "qid": "Q9106",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        101
+      ]
+    },
+    {
+      "qid": "Q23810",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        102
+      ]
+    },
+    {
+      "qid": "Q169577",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        103
+      ]
+    },
+    {
+      "qid": "Q7085",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        105,
+        107
+      ]
+    },
+    {
+      "qid": "Q1144326",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        106,
+        107,
+        117,
+        118
+      ]
+    },
+    {
+      "qid": "Q35149",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        111
+      ]
+    },
+    {
+      "qid": "Q619",
+      "label": "[person not named]",
+      "reason": "a person (people are never pinned)",
+      "zs": [
+        112
+      ]
+    },
+    {
+      "qid": "Q27929175",
+      "label": "Flerov Laboratory of Nuclear Reactions",
+      "reason": "no Wikidata coordinate",
+      "zs": [
+        114
+      ]
+    }
+  ]
+}
