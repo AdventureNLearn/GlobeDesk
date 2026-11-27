@@ -2232,6 +2232,23 @@
       "current": false
     },
     {
+      "id": "krakatau-1883",
+      "title": "Krakatau eruption, 1883",
+      "aliases": [
+        "Krakatoa 1883",
+        "Krakatau 1883"
+      ],
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "natural-hazards"
+      ],
+      "tier": "everyday",
+      "pack": "earth",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "krypton-element",
       "title": "Krypton (Kr, element 36)",
       "aliases": [
@@ -2338,6 +2355,23 @@
       ],
       "tier": "student",
       "pack": "chemistry",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "lisbon-1755",
+      "title": "Lisbon earthquake and tsunami, 1755",
+      "aliases": [
+        "Great Lisbon earthquake",
+        "1755 Lisbon earthquake"
+      ],
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "natural-hazards"
+      ],
+      "tier": "everyday",
+      "pack": "earth",
       "status": "draft",
       "current": false
     },
@@ -3789,6 +3823,22 @@
       "current": false
     },
     {
+      "id": "tambora-1815",
+      "title": "Tambora eruption, 1815",
+      "aliases": [
+        "Mount Tambora 1815"
+      ],
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "natural-hazards"
+      ],
+      "tier": "everyday",
+      "pack": "earth",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "tantalum-element",
       "title": "Tantalum (Ta, element 73)",
       "aliases": [
@@ -4253,6 +4303,23 @@
       "current": false
     },
     {
+      "id": "vesuvius-79",
+      "title": "Vesuvius eruption, 79 CE",
+      "aliases": [
+        "Vesuvius 79",
+        "Pompeii eruption"
+      ],
+      "kind": "event",
+      "category_path": [
+        "earth",
+        "natural-hazards"
+      ],
+      "tier": "everyday",
+      "pack": "earth",
+      "status": "draft",
+      "current": false
+    },
+    {
       "id": "vietnam-veterans-memorial-1982",
       "title": "Vietnam Veterans Memorial dedicated",
       "aliases": [],
@@ -4263,6 +4330,23 @@
       ],
       "tier": "student",
       "pack": "history-places",
+      "status": "draft",
+      "current": false
+    },
+    {
+      "id": "disasters-overview",
+      "title": "Volcanoes, earthquakes and disasters",
+      "aliases": [
+        "Natural hazards",
+        "Disasters layer"
+      ],
+      "kind": "topic",
+      "category_path": [
+        "earth",
+        "natural-hazards"
+      ],
+      "tier": "everyday",
+      "pack": "earth",
       "status": "draft",
       "current": false
     },

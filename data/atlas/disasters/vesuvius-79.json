@@ -1,0 +1,116 @@
+{
+  "schema": "globedesk.disaster/1",
+  "id": "vesuvius-79",
+  "title": "Vesuvius eruption, 79 CE",
+  "hazard": "eruption",
+  "region": "Europe",
+  "country": "IT",
+  "place": {
+    "label": "Mount Vesuvius, near Naples, Italy",
+    "lat": 40.821,
+    "lng": 14.426,
+    "approximate": true,
+    "basis": "NCEI published volcano point for event 1348; one point stands for a whole volcano",
+    "coords_source": "NOAA NCEI Significant Volcanic Eruptions Database, event 1348"
+  },
+  "date": {
+    "date": "79",
+    "precision": "year",
+    "label": "79 CE eruption (NCEI lists 25 August)",
+    "source": "ncei-sig-volcanoes"
+  },
+  "ncei": {
+    "dataset": "ncei-sig-volcanoes",
+    "event_id": 1348
+  },
+  "measures": [
+    {
+      "label": "Volcanic Explosivity Index (VEI)",
+      "value": "5",
+      "source": "ncei-sig-volcanoes"
+    },
+    {
+      "label": "Deaths (NCEI)",
+      "value": "2,100",
+      "source": "ncei-sig-volcanoes"
+    },
+    {
+      "label": "Deaths (USGS deadliest-eruptions table)",
+      "value": "3,360; main cause: pyroclastic flow",
+      "source": "usgs-deadliest-eruptions"
+    },
+    {
+      "label": "Date in the NCEI catalogue",
+      "value": "25 August 79",
+      "source": "ncei-sig-volcanoes"
+    }
+  ],
+  "facts": [
+    {
+      "text": "The 79 CE eruption buried Herculaneum and Pompeii and was described in letters by Pliny the Younger.",
+      "source": "usgs-yvo-naples"
+    },
+    {
+      "text": "USGS counts eight major explosive eruptions since a caldera formed about 17,000 years ago.",
+      "source": "usgs-yvo-naples"
+    },
+    {
+      "text": "Eruptions were frequent from 1631 to 1944; the most recent eruption was in 1944.",
+      "source": "usgs-yvo-naples"
+    },
+    {
+      "text": "The INGV Vesuvius Observatory, founded in 1841, is the first volcano observatory in the world.",
+      "source": "usgs-yvo-naples"
+    },
+    {
+      "text": "NCEI links this eruption to an earthquake record and a tsunami record.",
+      "source": "ncei-sig-volcanoes"
+    }
+  ],
+  "claims": [
+    {
+      "text": "How many people died.",
+      "status": "people-disagree",
+      "sources": [
+        "ncei-sig-volcanoes",
+        "usgs-deadliest-eruptions"
+      ],
+      "positions": [
+        {
+          "text": "2,100 (NCEI).",
+          "source": "ncei-sig-volcanoes"
+        },
+        {
+          "text": "3,360, mainly from pyroclastic flow (USGS table).",
+          "source": "usgs-deadliest-eruptions"
+        }
+      ]
+    }
+  ],
+  "tiers": {
+    "everyday": "In 79 CE Mount Vesuvius in Italy erupted and buried the Roman towns of Pompeii and Herculaneum. The volcano is still active and is watched by the first volcano observatory in the world.",
+    "student": "NOAA NCEI lists the eruption at VEI 5, dated 25 August 79, with 2,100 deaths; the USGS deadliest-eruptions table gives 3,360, mainly from pyroclastic flows. USGS notes that Pliny the Younger described the eruption in letters, that eruptions were frequent from 1631 to 1944, and that the last one was in 1944."
+  },
+  "sources": [
+    "ncei-sig-volcanoes",
+    "usgs-deadliest-eruptions",
+    "usgs-yvo-naples"
+  ],
+  "official_sources": [
+    "ncei-sig-volcanoes",
+    "usgs-deadliest-eruptions",
+    "usgs-yvo-naples"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Other published dates for the eruption: not reviewed [UNKNOWN]; only the NCEI date is shown",
+    "Deep-time clock: 79 CE sits before the America 250 clock; it joins the Ancient-world deep-time clock when that lands"
+  ],
+  "see_also_ids": [
+    "ancient-pompeii"
+  ],
+  "confidence": "medium",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NOAA NCEI and USGS values are US government works; linked sources keep their own terms",
+  "subject_person_living": false
+}

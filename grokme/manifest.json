@@ -91,13 +91,13 @@
     },
     {
       "path": "atlas/README.md",
-      "size": 5070,
-      "sha256": "919d37b2aa892c91b9f7d68b10e537cf99a0831e4040f1b4b19a5566ecb1fc7e"
+      "size": 5400,
+      "sha256": "f2ade81354999af2d349a3a0a75d9dfdcfc4f070cba10c076af5f7c339a09cbe"
     },
     {
       "path": "atlas/categories.json",
-      "size": 6657,
-      "sha256": "e50d5529d66f2a35c19094a7b37c3719c9035430f5ffdf30d5ccff4825979cfb"
+      "size": 6743,
+      "sha256": "4bb9105ca436449a3b0ce1faf05972f3ca6cde677117d8f245a3e3bcacbb5cd4"
     },
     {
       "path": "atlas/community/community.json",
@@ -136,43 +136,43 @@
     },
     {
       "path": "atlas/packs/core/categories.json",
-      "size": 8883,
-      "sha256": "6e70d92d4c079841e89de6124ce8b13cf3674accf497d38b57deb6a5b1499e56"
+      "size": 8997,
+      "sha256": "40418e96845911b0682ef69c93ee87df32cd67dc4fb34b985d1ca4dd7ccbe914"
     },
     {
       "path": "atlas/packs/core/index.json",
-      "size": 99469,
-      "sha256": "36cab531d3bac9dc1ff399260811cd5111bd1619f2756053606e7191d9f78c6c"
+      "size": 101288,
+      "sha256": "a4bd51c2ba8d3a78985cdb76f1bd41c73abe1507dd4e520a69d435409126b220"
     },
     {
       "path": "atlas/packs/core/manifest.json",
-      "size": 1218,
-      "sha256": "32b219e4081fc379d3b56250144817f6a2956d2718d9d3ebb64030976baa9a5c"
+      "size": 1219,
+      "sha256": "d67c39de815eb59d6d6fe395bf04acb5ea50370e261fe592d9143b93916e8b3c"
     },
     {
       "path": "atlas/packs/core/places.json",
-      "size": 13344,
-      "sha256": "70a9f2293d766599fbdc50dc5b0a9ab5c0f09d2f55bf2677518e5733256c59e1"
+      "size": 13635,
+      "sha256": "2b6f182e0debcb5db256d59c6e7562693bacbf0d886df6788d8fbe3646c42168"
     },
     {
       "path": "atlas/packs/core/sources.json",
-      "size": 153507,
-      "sha256": "c34670d83ba8458180030cee28c42cd1a50b3f58f13d6332b4eebf485055c147"
+      "size": 158976,
+      "sha256": "ac69a21358a6d42da4c27b5c47080fa551bf748ae98cdd9b95c1f9cc6bbb53ef"
     },
     {
       "path": "atlas/packs/core/years.json",
-      "size": 52263,
-      "sha256": "4f02a8119f121a0cbe9cf053b8abc7835e122ea10d3be2ed93a47fd9bc638f64"
+      "size": 52781,
+      "sha256": "f4b2d12942a2b7073577f9a72500867373bcc36d75ae8e8abc3fa866f2e3937f"
     },
     {
       "path": "atlas/packs/earth/entries.json",
-      "size": 4246,
-      "sha256": "317365bccc59c0c038ec8277dfacb76ff799c40568af7b911be613650f7dcda4"
+      "size": 17076,
+      "sha256": "a450c14e289c63fec302962e8a052089a45b611ed25ff722e5b26d5bf8bc479e"
     },
     {
       "path": "atlas/packs/earth/manifest.json",
-      "size": 625,
-      "sha256": "04100cd38a99f62cbf527c18d87b1e0fcf2d1692a776c0d50acacd2faeed7a73"
+      "size": 627,
+      "sha256": "09dc50fda375e027ff693b861ec7f2e5019393508480f72e6f3d72a1b25536a9"
     },
     {
       "path": "atlas/packs/economics/entries.json",
@@ -216,13 +216,13 @@
     },
     {
       "path": "atlas/packs/history-places/entries.json",
-      "size": 124432,
-      "sha256": "22d965f3f386724fcb21eed76f948ee27996427de173f344a075201e0a68149d"
+      "size": 124528,
+      "sha256": "0289f57d09d5e2c47599f4deae0d53ee42d338375ae12ed768baef3ecf923698"
     },
     {
       "path": "atlas/packs/history-places/manifest.json",
       "size": 645,
-      "sha256": "cb50b678046a94c5e2624a4ebfc7de15382eb593a5580f6d29c1d0c352c23444"
+      "sha256": "7bf35abe29200316038bc6c38e20cbcaedd317ed434865508b47cb942cae759d"
     },
     {
       "path": "atlas/packs/now/entries.json",
@@ -271,8 +271,8 @@
     },
     {
       "path": "css/app.css",
-      "size": 69308,
-      "sha256": "acf5010ea479a73cdb31df0488065cad67eab18f8be0e8f1ceb060101ff7e20c"
+      "size": 70562,
+      "sha256": "ee6b8e0373f077381a8a298d564aaac66099af095d54ec9bff3517a0fda7850b"
     },
     {
       "path": "data/atlas/artifacts/constitution-1787.json",
@@ -595,6 +595,31 @@
       "sha256": "68fd946126e828fc2360bbf5caf3d94b4a844bf4376e1dd6d70981cdc9672800"
     },
     {
+      "path": "data/atlas/disasters/disasters-overview.json",
+      "size": 6095,
+      "sha256": "641dd80c94826bd68ba1b8cd63d3646ef9e3f20ddb331ba6dd4ca437d2eaad8a"
+    },
+    {
+      "path": "data/atlas/disasters/krakatau-1883.json",
+      "size": 3842,
+      "sha256": "4d77e689bccbd2bac37fabfac42ffe42ddf430efff88d820bec74d97a0b1a3c7"
+    },
+    {
+      "path": "data/atlas/disasters/lisbon-1755.json",
+      "size": 3824,
+      "sha256": "8182857844d95b1a7aee8c1674a959c5a6c3eab99433b910d8ba79027f22b74a"
+    },
+    {
+      "path": "data/atlas/disasters/tambora-1815.json",
+      "size": 3320,
+      "sha256": "6b2a3a51ba56b56799affe8710167629c1555db55a17e32c90ddb645ca1b0385"
+    },
+    {
+      "path": "data/atlas/disasters/vesuvius-79.json",
+      "size": 3785,
+      "sha256": "50d30936f044e145441b6c80f0a330998c04b64e9885dcff9281ee1dd3572a9c"
+    },
+    {
       "path": "data/atlas/objects/bag-solar-kit.json",
       "size": 15810,
       "sha256": "6b23fe8558c54f2f4b12b6fb0376a92b8974f8a1f55d302182893aebb73a1080"
@@ -756,8 +781,8 @@
     },
     {
       "path": "index.html",
-      "size": 19987,
-      "sha256": "6347c6fb96d226840301f7cf4da6f98053ea3a5d05ad4ae071791cb9feccb201"
+      "size": 20094,
+      "sha256": "a24f2905b653362515d62cb02ff1f7d4892044bc67d8eb2ec61f87a0b8a758e8"
     },
     {
       "path": "js/archive.js",
@@ -776,8 +801,8 @@
     },
     {
       "path": "js/atlas/atlas-data.js",
-      "size": 995579,
-      "sha256": "4c415e493bb5dafed491c7d70ff6ef83cece00d51f442f8c685b865db205b349"
+      "size": 1028824,
+      "sha256": "db171de0dec107b76b73792fcc1c064dbf818aa260861ed6a8ccfca11e102448"
     },
     {
       "path": "js/atlas/atlas-model.js",
@@ -786,8 +811,8 @@
     },
     {
       "path": "js/atlas/atlas-view.js",
-      "size": 72151,
-      "sha256": "752b7ad8c0001cdd3b9d712d784280be650e7757daf0f22b2cb31f5f08bfb1cf"
+      "size": 72247,
+      "sha256": "a80ae14af72f01e2ae5e85508f85aff863eab2fa6596570e0a4fc557fd319d1a"
     },
     {
       "path": "js/atlas/bells-layer.js",
@@ -803,6 +828,16 @@
       "path": "js/atlas/chem-sites-layer.js",
       "size": 10850,
       "sha256": "8d9f381f16c423e26db9b2912e4bb3df01407e2549bb66437eb220358e089be8"
+    },
+    {
+      "path": "js/atlas/disasters-card.js",
+      "size": 4127,
+      "sha256": "b189bc4baccb86aa04cae1a8e25d3b955bc6fdf953a7236461c985c4299240ed"
+    },
+    {
+      "path": "js/atlas/disasters-layer.js",
+      "size": 7215,
+      "sha256": "837e6c230a89d2e8091f2f84c929ab02ae1f3e6bd98e491cff6a266aa1f16b9b"
     },
     {
       "path": "js/atlas/models/bag-solar-kit.js",
@@ -896,8 +931,8 @@
     },
     {
       "path": "js/layers-panel.js",
-      "size": 17517,
-      "sha256": "2cd7b48bb4fa18ffaf28b358175e571888778fa76932a6059c28e5fd82795c0d"
+      "size": 17734,
+      "sha256": "82eeaffc255c9feeb2a7c92a899babbbad86304b3d3bed9b87838d8789d0d977"
     },
     {
       "path": "js/layers.js",
@@ -1111,8 +1146,8 @@
     },
     {
       "path": "package.json",
-      "size": 1856,
-      "sha256": "70184c821d3eb765f494fa28d67a9f38c817af67dcb79d458677cbc8ba5186d2"
+      "size": 1889,
+      "sha256": "7cc0ed5aef40e96ca31c6eb8c3637e9a4e02dae44becd6969597dbc93e810619"
     },
     {
       "path": "schema/atlas-entry.schema.json",
@@ -1153,6 +1188,16 @@
       "path": "schema/globedesk-contributor-card.schema.json",
       "size": 1766,
       "sha256": "46d110915b5fd88f766e41ef08cadfa82a6d42a0c07b3ec4d4fa220ce4d65951"
+    },
+    {
+      "path": "schema/globedesk-disaster-overview.schema.json",
+      "size": 6159,
+      "sha256": "87ad845766f670cf5b581558c364c91f4798db4dcdae770cf053c40d8504c85a"
+    },
+    {
+      "path": "schema/globedesk-disaster.schema.json",
+      "size": 6335,
+      "sha256": "3224fac4c50dbb2a86d03a534bcf8def713b754215081df4639e200329709eaf"
     },
     {
       "path": "schema/globedesk-object.schema.json",
@@ -1256,7 +1301,7 @@
     }
   ],
   "totals": {
-    "files": 249,
-    "bytes": 7914107
+    "files": 258,
+    "bytes": 8015317
   }
 }

@@ -745,6 +745,16 @@ dialog.export-dialog::backdrop { background: rgba(2, 4, 12, .62); }
 .co-swatch { --c: #d68c3c; }
 .co-mrds { margin: 4px 0 0; }
 .bl-filters select { max-width: 11rem; }
+/* Disasters layer (js/atlas/disasters-layer.js): eruption triangle, earthquake rings; all pins approximate. */
+.dl-pin, .dl-cluster { min-width: 44px; height: 44px; display: grid; place-items: center; background: transparent; border: 0; padding: 0; cursor: pointer; }
+.dl-glyph { display: block; width: 22px; height: 20px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); }
+.dl-eruption .dl-glyph { clip-path: polygon(50% 0, 100% 100%, 0 100%); background: linear-gradient(180deg, #ffb347, #d2361e); box-shadow: none; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8)); }
+.dl-earthquake .dl-glyph { width: 20px; height: 20px; border-radius: 50%; background: radial-gradient(circle, #f3e8ff 0 18%, #8b5cf6 19% 38%, transparent 39% 55%, #8b5cf6 56% 72%, transparent 73%); border: 2px solid #ede4ff; }
+.dl-pin:focus-visible, .dl-cluster:focus-visible { outline: 2px solid var(--gd-gold); outline-offset: 2px; border-radius: 8px; }
+.dl-cluster { min-width: 34px; width: auto; height: 34px; border-radius: 17px; margin: 5px; padding: 0 8px; background: rgba(70, 14, 10, 0.9); border: 2px solid #ff8a5c; color: #ffe0d0; font-weight: 700; font-size: 12px; }
+.dl-swatch { --c: #d2361e; }
+.dl-positions { margin: 2px 0 4px 1.1rem; }
+.dl-steps li { margin-bottom: 3px; }
 .at-ov h4 { margin: 10px 0 2px; }
 .at-timeline-list { padding-left: 18px; }
 .at-timeline-list li { margin: 2px 0; }

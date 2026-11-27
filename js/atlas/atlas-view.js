@@ -465,6 +465,7 @@
     const bell = bellRecord(e), ov = overviewRecord(e);
     if (bell) h += bellHtml(e, bell);
     if (ov) h += overviewHtml(ov);
+    if (GD.disastersCard) h += GD.disastersCard.html(recordOf(e), { esc, srcLink, entryLink });
     return h + personalHtml(e);
   }
 

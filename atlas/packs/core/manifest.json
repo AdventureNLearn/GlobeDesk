@@ -7,37 +7,37 @@
   "version": "0.1.0-draft",
   "license": "CC BY 4.0",
   "checked": "2026-11-24",
-  "sha256": "917efa77354030ecc39995d82f1fcaa6b27be318053e86b2e52f34914fb76276",
-  "entry_count": 294,
-  "size_bytes": 327466,
+  "sha256": "ecb81cc7038211f890fcd6b8d2e2d1e4d7188427da88a57c1d36fa53b5ff7ebd",
+  "entry_count": 299,
+  "size_bytes": 335677,
   "max_bytes": 52428800,
   "promote": "owner-yes-required",
   "status": "draft",
   "files": [
     {
       "path": "index.json",
-      "bytes": 99469,
-      "sha256": "36cab531d3bac9dc1ff399260811cd5111bd1619f2756053606e7191d9f78c6c"
+      "bytes": 101288,
+      "sha256": "a4bd51c2ba8d3a78985cdb76f1bd41c73abe1507dd4e520a69d435409126b220"
     },
     {
       "path": "categories.json",
-      "bytes": 8883,
-      "sha256": "6e70d92d4c079841e89de6124ce8b13cf3674accf497d38b57deb6a5b1499e56"
+      "bytes": 8997,
+      "sha256": "40418e96845911b0682ef69c93ee87df32cd67dc4fb34b985d1ca4dd7ccbe914"
     },
     {
       "path": "places.json",
-      "bytes": 13344,
-      "sha256": "70a9f2293d766599fbdc50dc5b0a9ab5c0f09d2f55bf2677518e5733256c59e1"
+      "bytes": 13635,
+      "sha256": "2b6f182e0debcb5db256d59c6e7562693bacbf0d886df6788d8fbe3646c42168"
     },
     {
       "path": "years.json",
-      "bytes": 52263,
-      "sha256": "4f02a8119f121a0cbe9cf053b8abc7835e122ea10d3be2ed93a47fd9bc638f64"
+      "bytes": 52781,
+      "sha256": "f4b2d12942a2b7073577f9a72500867373bcc36d75ae8e8abc3fa866f2e3937f"
     },
     {
       "path": "sources.json",
-      "bytes": 153507,
-      "sha256": "c34670d83ba8458180030cee28c42cd1a50b3f58f13d6332b4eebf485055c147"
+      "bytes": 158976,
+      "sha256": "ac69a21358a6d42da4c27b5c47080fa551bf748ae98cdd9b95c1f9cc6bbb53ef"
     }
   ]
 }

@@ -14,14 +14,15 @@ GlobeDesk's own encyclopedia: 12 categories, an index entry schema, packs with m
       globedesk-contributor-card, globedesk-community, globedesk-personal-layer, globedesk-work-desks, globedesk-artifact, globedesk-bell
     ../data/atlas/                        object, chemistry, price and bell (data/atlas/bells/) records referenced by entries
     ../data/atlas/artifacts/              historic object records (globedesk.artifact/1): facts, parts, materials, dated timeline
-    ../tools/atlas/                       build-object, build-bells (bells-*.mjs content and sources), build-elements (118 chemistry/elements entries from an external source cache), build-packs, build-js (generated js/atlas/atlas-data.js), validate
+    ../tools/atlas/                       build-object, build-bells (bells-*.mjs content and sources), build-disasters (disasters-*.mjs: NOAA NCEI + USGS subset, earth/natural-hazards), build-elements (118 chemistry/elements entries from an external source cache), build-packs, build-js (generated js/atlas/atlas-data.js), validate
     ../js/atlas/atlas-model.js, atlas-view.js   Atlas browse views (including Elements 18-column constellation and table fallback)
     ../js/atlas/bells-layer.js, models/bell.js  the Bells layer (pins, clusters, era and region filters) and the parametric 3D bell
+    ../js/atlas/disasters-layer.js, disasters-card.js  the disasters layer (NCEI eruption and earthquake pins, hazard filter; reuses the Bells clusters; off by default) and its Atlas card with cited stories
     ../desks/work-desks.json              the ten desks
 
 Rebuild and check from the repo root:
 
-    node tools/atlas/build-object.mjs && node tools/atlas/build-bells.mjs && node tools/atlas/build-packs.mjs && node tools/atlas/build-js.mjs
+    node tools/atlas/build-object.mjs && node tools/atlas/build-bells.mjs && node tools/atlas/build-disasters.mjs && node tools/atlas/build-packs.mjs && node tools/atlas/build-js.mjs
     node tools/atlas/validate.mjs
 
 `build-elements.mjs` rebuilds the 118 element entries in the chemistry pack from NIST, IUPAC and Wikidata snapshots kept in `.cache/sources` at the repo root (gitignored), or `GLOBEDESK_ELEMENTS_CACHE`. It merges `lithium-element` and `copper-element` and does not fetch the network. Run it only when refreshing those derived records; the usual pack rebuild below does not need the cache.

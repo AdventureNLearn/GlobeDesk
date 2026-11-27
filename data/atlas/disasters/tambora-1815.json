@@ -1,0 +1,102 @@
+{
+  "schema": "globedesk.disaster/1",
+  "id": "tambora-1815",
+  "title": "Tambora eruption, 1815",
+  "hazard": "eruption",
+  "region": "Asia",
+  "country": "ID",
+  "place": {
+    "label": "Mount Tambora, Indonesia",
+    "lat": -8.25,
+    "lng": 118,
+    "approximate": true,
+    "basis": "NCEI published volcano point for event 367; one point stands for a whole volcano",
+    "coords_source": "NOAA NCEI Significant Volcanic Eruptions Database, event 367"
+  },
+  "date": {
+    "date": "1815-04-10",
+    "precision": "day",
+    "label": "Eruption date in the NCEI catalogue",
+    "source": "ncei-sig-volcanoes"
+  },
+  "ncei": {
+    "dataset": "ncei-sig-volcanoes",
+    "event_id": 367
+  },
+  "measures": [
+    {
+      "label": "Volcanic Explosivity Index (VEI)",
+      "value": "7",
+      "source": "ncei-sig-volcanoes"
+    },
+    {
+      "label": "Deaths from the eruption itself (NCEI)",
+      "value": "11,000",
+      "source": "ncei-sig-volcanoes"
+    },
+    {
+      "label": "Deaths in total (NCEI)",
+      "value": "60,000",
+      "source": "ncei-sig-volcanoes"
+    },
+    {
+      "label": "Deaths (USGS deadliest-eruptions table)",
+      "value": "92,000; main cause: starvation",
+      "source": "usgs-deadliest-eruptions"
+    }
+  ],
+  "facts": [
+    {
+      "text": "NCEI files Tambora as a stratovolcano and links this eruption to a tsunami record.",
+      "source": "ncei-sig-volcanoes"
+    },
+    {
+      "text": "USGS says the 1991 Pinatubo eruption disturbed the atmosphere probably less than Krakatau 1883 and Tambora 1815 did; sulfate aerosols from big eruptions cool the climate.",
+      "source": "usgs-volcanoes-climate"
+    }
+  ],
+  "claims": [
+    {
+      "text": "How many people died.",
+      "status": "people-disagree",
+      "sources": [
+        "ncei-sig-volcanoes",
+        "usgs-deadliest-eruptions"
+      ],
+      "positions": [
+        {
+          "text": "60,000 in total, 11,000 of them directly (NCEI).",
+          "source": "ncei-sig-volcanoes"
+        },
+        {
+          "text": "92,000, mainly from starvation (USGS table).",
+          "source": "usgs-deadliest-eruptions"
+        }
+      ]
+    }
+  ],
+  "tiers": {
+    "everyday": "In April 1815 Mount Tambora in Indonesia erupted. Tens of thousands of people died, many of them later from hunger, and USGS says its effect on the atmosphere was probably bigger than that of Pinatubo in 1991.",
+    "student": "NOAA NCEI rates the eruption of 10 April 1815 at VEI 7, the highest in this batch, and counts 11,000 direct deaths and 60,000 in total. The USGS deadliest-eruptions table gives 92,000, mainly from starvation. The two totals disagree, so both are shown."
+  },
+  "sources": [
+    "ncei-sig-volcanoes",
+    "usgs-deadliest-eruptions",
+    "usgs-volcanoes-climate"
+  ],
+  "official_sources": [
+    "ncei-sig-volcanoes",
+    "usgs-deadliest-eruptions",
+    "usgs-volcanoes-climate"
+  ],
+  "official_status": "listed",
+  "unknowns": [
+    "Why the death totals differ: [UNKNOWN]",
+    "Effects on harvests or weather in other countries in 1816: [UNKNOWN] in the sources checked"
+  ],
+  "see_also_ids": [],
+  "confidence": "medium",
+  "checked": "2026-11-26",
+  "license": "CC BY 4.0 (our record text); NOAA NCEI and USGS values are US government works; linked sources keep their own terms",
+  "subject_person_living": false
+}

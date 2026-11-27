@@ -76,7 +76,8 @@
         { "id": "solar-resource", "title": "Solar resource" },
         { "id": "geology-minerals", "title": "Geology and minerals" },
         { "id": "oceans-rivers", "title": "Oceans and rivers" },
-        { "id": "land-cover", "title": "Land cover" } ] },
+        { "id": "land-cover", "title": "Land cover" },
+        { "id": "natural-hazards", "title": "Volcanoes, earthquakes and disasters" } ] },
     { "n": 11, "id": "science-history", "title": "Science and technology history", "scope": "How key discoveries and inventions came about.", "pack": "science-history", "refresh": "quarterly",
       "subcategories": [
         { "id": "discoveries", "title": "Discoveries by year" },
